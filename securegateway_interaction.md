@@ -35,6 +35,7 @@ The following table describes all of the available options that can be provided 
 | -t, -\-sectoken &lt;security token&gt; | The security token to use for this gateway connection |
 | -P, -\-port &lt;port&gt; | The port for the UI to run on.  Defaults to port 9003 |
 | -w, -\-password &lt;password&gt; | The password to protect the UI with.  Defaults to no password |
+| -x, -\-proxy &lt;proxy agent&gt; | The proxy for the port 9000 connection |
 | -\-noUI | Prevent the UI from starting up automatically |
 | -\-allow | Allows all connections to the client. Is overridden by the ACL file, if provided |
 | -\-service | After an initial connection, the parent will restart within 60s if all child clients are terminated |
