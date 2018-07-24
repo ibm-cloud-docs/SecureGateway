@@ -170,9 +170,7 @@ If a client has been provided an ID, then it can be remotely terminated via the 
 ### Connection Limitations
 {: #limits-conn}
 
-Our plans have the following concurrent limitations:
-
-- Standard: 250 concurrent connections per client
+The SG client can only handle 250 concurrent connections per gateway. If the number for requests at any point goes over this value it can result in the connection attempts being rejected. This can lead to latency. An easy way to fix this is to use connection pooling on the calling app. Please note that the limit of 250 concurrent connections is on the gateway and not destination. This limit will be shared across all the destinations on the gateway.
 
 ### DataPower Client Limitations
 {: #limits-datapower}
