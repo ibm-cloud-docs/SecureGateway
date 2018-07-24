@@ -34,7 +34,127 @@ The Secure Gateway Client is supported in the following environments:
 ## Network Requirements
 {: #network}
 
-The client uses outbound port 443 and port 9000 to connect to the {{site.data.keyword.Bluemix}} environment. Ensure you check or modify additional firewall and IP Table rules that might apply.  If your network administrators require specific IPs, please [contact support to request these for your environment](./securegateway_troubleshooting.html#support).
+The Secure Gateway Client uses outbound port 443 and port 9000 to connect to the {{site.data.keyword.Bluemix}} environment:
+
+<table>
+    <thead>
+        <tr>
+            <th>Rigon</th>
+            <th>Port</th>
+            <th>Host</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td rowspan=6>US South</td>
+            <td rowspan=5>9000</td>
+            <td>cap-sg-prd-1.integration.ibmcloud.com</td>
+        </tr>
+        <tr>
+            <td>cap-sg-prd-2.integration.ibmcloud.com</td>
+        </tr>
+        <tr>
+            <td>cap-sg-prd-3.integration.ibmcloud.com</td>
+        </tr>
+        <tr>
+            <td>cap-sg-prd-4.integration.ibmcloud.com</td>
+        </tr>
+        <tr>
+            <td>cap-sg-prd-5.integration.ibmcloud.com</td>
+        </tr>
+        <tr>
+            <td>443</td>
+            <td>sgmanager.ng.bluemix.net</td>
+        </tr>
+        <tr>
+            <td rowspan=6>US East</td>
+            <td rowspan=5>9000</td>
+            <td>cap-us-east-prd-sg-bm-01.integration.ibmcloud.com</td>
+        </tr>
+        <tr>
+            <td>cap-us-east-prd-sg-bm-02.integration.ibmcloud.com</td>
+        </tr>
+        <tr>
+            <td>cap-us-east-prd-sg-bm-03.integration.ibmcloud.com</td>
+        </tr>
+        <tr>
+            <td>cap-us-east-prd-sg-bm-04.integration.ibmcloud.com</td>
+        </tr>
+        <tr>
+            <td>cap-us-east-prd-sg-bm-05.integration.ibmcloud.com</td>
+        </tr>
+        <tr>
+            <td>443</td>
+            <td>sgmanager.us-east.bluemix.net</td>
+        </tr>
+        <tr>
+            <td rowspan=6>United Kingdom</td>
+            <td rowspan=5>9000</td>
+            <td>caplonsgprd-1.integration.ibmcloud.com</td>
+        </tr>
+        <tr>
+            <td>caplonsgprd-2.integration.ibmcloud.com</td>
+        </tr>
+        <tr>
+            <td>caplonsgprd-3.integration.ibmcloud.com</td>
+        </tr>
+        <tr>
+            <td>caplonsgprd-4.integration.ibmcloud.com</td>
+        </tr>
+        <tr>
+            <td>caplonsgprd-5.integration.ibmcloud.com</td>
+        </tr>
+        <tr>
+            <td>443</td>
+            <td>sgmanager.eu-gb.bluemix.net</td>
+        </tr>
+        <tr>
+            <td rowspan=6>Germany</td>
+            <td rowspan=5>9000</td>
+            <td>cap-eu-de-prd-sg-bm-01.integration.ibmcloud.com</td>
+        </tr>
+        <tr>
+            <td>cap-eu-de-prd-sg-bm-02.integration.ibmcloud.com</td>
+        </tr>
+        <tr>
+            <td>cap-eu-de-prd-sg-bm-03.integration.ibmcloud.com</td>
+        </tr>
+        <tr>
+            <td>cap-eu-de-prd-sg-bm-04.integration.ibmcloud.com</td>
+        </tr>
+        <tr>
+            <td>cap-eu-de-prd-sg-bm-05.integration.ibmcloud.com</td>
+        </tr>
+        <tr>
+            <td>443</td>
+            <td>sgmanager.eu-de.bluemix.net</td>
+        </tr>
+        <tr>
+            <td rowspan=6>Sydney</td>
+            <td rowspan=5>9000</td>
+            <td>cap-eu-de-prd-sg-bm-01.integration.ibmcloud.com</td>
+        </tr>
+        <tr>
+            <td>cap-eu-de-prd-sg-bm-02.integration.ibmcloud.com</td>
+        </tr>
+        <tr>
+            <td>cap-eu-de-prd-sg-bm-03.integration.ibmcloud.com</td>
+        </tr>
+        <tr>
+            <td>cap-eu-de-prd-sg-bm-04.integration.ibmcloud.com</td>
+        </tr>
+        <tr>
+            <td>cap-eu-de-prd-sg-bm-05.integration.ibmcloud.com</td>
+        </tr>
+        <tr>
+            <td>443</td>
+            <td>sgmanager.au-syd.bluemix.net</td>
+        </tr>
+    </tbody>
+</table>
+
+Ensure you check or modify additional firewall and IP Table rules that might apply. If your network administrators require specific IPs, please [contact support to request these for your environment](./securegateway_troubleshooting.html#support).
+
 
 ## Determining Hardware Requirements
 {: #hardware}
