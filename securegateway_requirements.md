@@ -39,7 +39,7 @@ The Secure Gateway Client uses outbound port 443 and port 9000 to connect to the
 <table>
     <thead>
         <tr>
-            <th>Rigon</th>
+            <th>Region</th>
             <th>Port</th>
             <th>Host</th>
         </tr>
@@ -132,19 +132,19 @@ The Secure Gateway Client uses outbound port 443 and port 9000 to connect to the
         <tr>
             <td rowspan=6>Sydney</td>
             <td rowspan=5>9000</td>
-            <td>cap-eu-de-prd-sg-bm-01.integration.ibmcloud.com</td>
+            <td>cap-au-sg-prd-01.integration.ibmcloud.com</td>
         </tr>
         <tr>
-            <td>cap-eu-de-prd-sg-bm-02.integration.ibmcloud.com</td>
+            <td>cap-au-sg-prd-02.integration.ibmcloud.com</td>
         </tr>
         <tr>
-            <td>cap-eu-de-prd-sg-bm-03.integration.ibmcloud.com</td>
+            <td>cap-au-sg-prd-03.integration.ibmcloud.com</td>
         </tr>
         <tr>
-            <td>cap-eu-de-prd-sg-bm-04.integration.ibmcloud.com</td>
+            <td>cap-au-sg-prd-04.integration.ibmcloud.com</td>
         </tr>
         <tr>
-            <td>cap-eu-de-prd-sg-bm-05.integration.ibmcloud.com</td>
+            <td>cap-au-sg-prd-05.integration.ibmcloud.com</td>
         </tr>
         <tr>
             <td>443</td>
