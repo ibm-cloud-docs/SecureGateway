@@ -61,7 +61,7 @@ If gateway IDs are provided that require different arguments, then the keyword `
 Single client connection, custom loglevel, no UI:
 
 ```
-<gateway_id> -t <security_token> -l <loglevel> --noUI
+node lib/secgwclient.js <gateway_id> -t <security_token> -l <loglevel> --noUI
 ```
 {: pre}
 
@@ -75,7 +75,7 @@ node lib/secgwclient.js <gateway_id_1> <gateway_id_2> -t <security_token_1>--<se
 Multiple client connections, all custom settings:
 
 ```
-myGatewayID_1 myGatewayID_2 -t none--<token for gateway 2> -l DEBUG--TRACE -p <full path to log file for gateway 1>--<full path to log file for gateway 2> -F <full path to ACL file for gateway 1>
+node lib/secgwclient.js <myGatewayID_1> <myGatewayID_2> -t none--<token for gateway 2> -l DEBUG--TRACE -p <full path to log file for gateway 1>--<full path to log file for gateway 2> -F <full path to ACL file for gateway 1>
 ```
 {: pre}
 
