@@ -183,3 +183,4 @@ The {{site.data.keyword.SecureGateway}} DataPower Client is in the process of be
 - Connection status polling for real-time connected and disconnected gateway status updates is not supported.
 - Full certificate chains with destination-side TLS are not supported prior to DataPower version 7.5.1.0
 - Cloud destinations are not supported prior to DataPower version 7.5.1.0
+- The log level can't be changed to TRACE level
