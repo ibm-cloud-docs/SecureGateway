@@ -35,6 +35,7 @@ The following table describes all of the available options that can be provided 
 | -t, -\-sectoken &lt;security token&gt; | The security token to use for this gateway connection |
 | -P, -\-port &lt;port&gt; | The port for the UI to run on.  Defaults to port 9003 |
 | -w, -\-password &lt;password&gt; | The password to protect the UI with.  Defaults to no password |
+| -x, -\-proxy &lt;proxy agent&gt; | The proxy for the port 9000 connection |
 | -\-noUI | Prevent the UI from starting up automatically |
 | -\-allow | Allows all connections to the client. Is overridden by the ACL file, if provided |
 | -\-service | After an initial connection, the parent will restart within 60s if all child clients are terminated |
@@ -60,7 +61,7 @@ If gateway IDs are provided that require different arguments, then the keyword `
 Single client connection, custom loglevel, no UI:
 
 ```
-<gateway_id> -t <security_token> -l <loglevel> --noUI
+node lib/secgwclient.js <gateway_id> -t <security_token> -l <loglevel> --noUI
 ```
 {: pre}
 
@@ -74,7 +75,7 @@ node lib/secgwclient.js <gateway_id_1> <gateway_id_2> -t <security_token_1>--<se
 Multiple client connections, all custom settings:
 
 ```
-myGatewayID_1 myGatewayID_2 -t none--<token for gateway 2> -l DEBUG--TRACE -p <full path to log file for gateway 1>--<full path to log file for gateway 2> -F <full path to ACL file for gateway 1>
+node lib/secgwclient.js <myGatewayID_1> <myGatewayID_2> -t none--<token for gateway 2> -l DEBUG--TRACE -p <full path to log file for gateway 1>--<full path to log file for gateway 2> -F <full path to ACL file for gateway 1>
 ```
 {: pre}
 
@@ -170,9 +171,7 @@ If a client has been provided an ID, then it can be remotely terminated via the 
 ### Connection Limitations
 {: #limits-conn}
 
-Our plans have the following concurrent limitations:
-
-- Standard: 250 concurrent connections per client
+The SG client can only handle 250 concurrent connections per gateway. If the number of concurrent requests exceeds the limit, it can result in the connection attempts being rejected and lead to latency. An easy way to fix this is to use connection pooling on the calling app. Please note that the limit of 250 concurrent connections is on the gateway and not destination. This limit will be shared across all the destinations on the gateway.
 
 ### DataPower Client Limitations
 {: #limits-datapower}
@@ -184,3 +183,4 @@ The {{site.data.keyword.SecureGateway}} DataPower Client is in the process of be
 - Connection status polling for real-time connected and disconnected gateway status updates is not supported.
 - Full certificate chains with destination-side TLS are not supported prior to DataPower version 7.5.1.0
 - Cloud destinations are not supported prior to DataPower version 7.5.1.0
+- The log level can't be changed to TRACE level

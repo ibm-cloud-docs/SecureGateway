@@ -34,7 +34,25 @@ The Secure Gateway Client is supported in the following environments:
 ## Network Requirements
 {: #network}
 
-The client uses outbound port 443 and port 9000 to connect to the {{site.data.keyword.Bluemix}} environment. Ensure you check or modify additional firewall and IP Table rules that might apply.  If your network administrators require specific IPs, please [contact support to request these for your environment](./securegateway_troubleshooting.html#support).
+The Secure Gateway Client uses outbound port 443 and port 9000 to connect to the {{site.data.keyword.Bluemix}} environment:
+
+- Port 443
+
+  | Region  | Host  |
+  | --  | --  |
+  | US South  | sgmanager.ng.bluemix.net  |
+  | US East  | sgmanager.us-east.bluemix.net  |
+  | United Kingdom  | sgmanager.eu-gb.bluemix.net  |
+  | Germany  | sgmanager.eu-de.bluemix.net  |
+  | Sydney  | sgmanager.au-syd.bluemix.net  |
+
+- Port 9000
+
+  The node of the SG gateway, which can be found in the configuration of the gateway, each gateway will not be on the same node, please confirm the hostname of the node every time you create the gateway
+
+
+Ensure you check or modify additional firewall and IP Table rules that might apply. If your network administrators require specific IPs, please [contact support to request these for your environment](./securegateway_troubleshooting.html#support).
+
 
 ## Determining Hardware Requirements
 {: #hardware}
