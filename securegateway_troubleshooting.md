@@ -32,6 +32,11 @@ ECONNREFUSED | The client has resolved the hostname/ip to connect to but is unab
 ECONNRESET | The client has established a connection to the destination but something went wrong either during the handshake (a TLS handshake error might result in different errors, as well) or while the request was being handled by the on-prem resource. | The logs of the on-prem resource should be checked to confirm no error has caused the connection to be interrupted.  If nothing is found in the on-prem logs, then the destination configuration should be examined to ensure the appropriate protocols (and certificates, if necessary) are being provided to the client for the connection.
 REMOTE_RST | There is error occurred in SG Server side. <br><br> For on-prem destination, there is error when the requesting app connecting to the SG Server, or the timeout error when receiving data from the on-prem resource. <br><br> For cloud destination, it could be anything from TLS handshake failure, to errors in the cloud resource | For on-prem destination, please ensure the requesting app using the appropriate protocols to establish the connection with SG Server, if the error occurs when receiving data from on-prem resource, please try to extend/disable the timeout. <br><br> For cloud destination, the logs of the cloud resource should be checked to confirm no error has caused the connection to be interrupted.  If nothing is found in the cloud resource logs, then the destination configuration should be examined to ensure the appropriate protocols (and certificates, if necessary) are being provided to the client for the connection.
 
+Many applications experience "hangs" after an ECONNRESET occurring on the other end of the tunnel. This is expected. Secure 
+Gateway can not replay the RST packet on the other end of the tunnel since the TCP packets have already been ACKed for that
+side of the tunnel. Application level timeouts, the application never receives an acknowledging response, are the only
+method to end the hang.
+
 ## Configure your Docker client to restart when your server restarts
 {: #docker}
 
