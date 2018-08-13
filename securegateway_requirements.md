@@ -38,6 +38,7 @@ The Secure Gateway Client uses outbound port 443 and port 9000 to connect to the
 
 - Port 443
 
+
   | Region  | Host  |
   | --  | --  |
   | US South  | sgmanager.ng.bluemix.net  |
