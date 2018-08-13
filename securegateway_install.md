@@ -265,11 +265,13 @@ Return to [Getting Started - Adding a Client](./securegateway_client.html).
 
 DataPower has an embedded version of the {{site.data.keyword.SecureGateway}} Client.  Depending on the DataPower version, you may have a different version of the {{site.data.keyword.SecureGateway}} Client.  Be aware of any applicable [DataPower Client Limitations](./securegateway_interaction.html#limits-datapower).
 
-DataPower Version | {{site.data.keyword.SecureGateway}} Client Version
--- | --
-Pre-7.5.1.0 | Client v1.2.1
-7.5.1.0 - Pre-7.6.0.0 | Client v1.4.2
-7.6.0.0+ | Client v1.6.1
+| DataPower Version | {{site.data.keyword.SecureGateway}} Client Version  |
+| -- | --  |
+| 7.2.0.0, 7.5.0.0 | 1.1.0  |
+| 7.5.1.0 | 1.4.2  |
+| 7.5.2.4 | 1.6.1  |
+| 7.5.2.6, 7.6.0.0 | 1.7.0  |
+| 7.5.2.14, 7.6.0.7, 7.7.1.0 |  1.8.0fp6  |
 
 ### Starting a client session
 {: #datapower-run}
