@@ -260,6 +260,14 @@ Alternatively, navigate to `<Installation_directory>\ibm\securegateway\client` a
 
 Return to [Getting Started - Adding a Client](./securegateway_client.html).
 
+## Installation Requirements
+
+During the installation, the installer will connect to npm registry and run `npm install` to install the dependencies required by Secure Gateway Client. Before the installation, please make sure the machine which the client will be installed on can connect to a npm registry website. npm is configured to use npm, Inc.'s public registry at https://registry.npmjs.org by default, or you can configure npm to use your own registry by running the following command:
+```
+npm config set registry <registry url>
+```
+{: codeblock}
+
 ## DataPower
 {: #datapower}
 
