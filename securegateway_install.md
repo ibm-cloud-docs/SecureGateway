@@ -268,7 +268,7 @@ DataPower has an embedded version of the {{site.data.keyword.SecureGateway}} Cli
 | DataPower Version | {{site.data.keyword.SecureGateway}} Client Version  |
 | -- | --  |
 | 7.2.0.0, 7.5.0.0 | 1.1.0  |
-| 7.5.1.0 | 1.4.2  |
+| 7.5.1.0, 7.7.0 | 1.4.2  |
 | 7.5.2.4 | 1.6.1  |
 | 7.5.2.6, 7.6.0.0 | 1.7.0  |
 | 7.5.2.14, 7.6.0.7, 7.7.1.0 |  1.8.0fp6  |
