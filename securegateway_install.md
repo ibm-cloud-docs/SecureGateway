@@ -263,7 +263,7 @@ Return to [Getting Started - Adding a Client](./securegateway_client.html).
 ## DataPower
 {: #datapower}
 
-DataPower has an embedded version of the {{site.data.keyword.SecureGateway}} Client.  Depending on the DataPower version, you may have a different version of the {{site.data.keyword.SecureGateway}} Client.  Be aware of any applicable [DataPower Client Limitations](./securegateway_interaction.html#limits-datapower).
+DataPower has an embedded version of the {{site.data.keyword.SecureGateway}} Client.  Depending on the DataPower version, you may have a different version of the {{site.data.keyword.SecureGateway}} Client.  Be aware of any applicable [DataPower Client Limitations](./securegateway_interaction.html#limits-datapower). Using the old Secure Gateway Client might experience unexpected errors.
 
 | DataPower Version | {{site.data.keyword.SecureGateway}} Client Version  |
 | -- | --  |
