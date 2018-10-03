@@ -180,7 +180,6 @@ License: http://www.ibm.com/software/sla/sladb.nsf/lilookup/986C7686F22D4D358525
    ```
    {: pre}
 
-   <b>Note:</b> On Red Hat Version 7 and above you will have to use the '--force' option as well.
 
    The client installer starts and installs the client, it will create a sgenvironment.conf file in /etc/ibm.
 
