@@ -206,7 +206,6 @@ To start the client, run the following commands:
 
 ```
 cd /opt/ibm/securegateway/client
-npm install
 node lib/secgwclient.js <gateway ID> -t <security token>
 ```
 {: codeblock}
