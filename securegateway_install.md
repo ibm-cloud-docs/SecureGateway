@@ -183,7 +183,7 @@ License: http://www.ibm.com/software/sla/sladb.nsf/lilookup/986C7686F22D4D358525
 
    The client installer starts and installs the client, it will create a sgenvironment.conf file in /etc/ibm.
 
-2. Optional: If you want to use the system's upstart process you must edit this file and provide the following for the client to start correctly. See [Using Upstart](#using-systemv) for more information on editing this configuration file.
+2. Optional: If you want to use the system's upstart process you must edit this file and provide the following for the client to start correctly. See [Using Upstart](./securegateway_auto-start.html#linux) for more information on editing this configuration file.
 
 3. If you started the client using upstart, check the log file to make sure it is running correctly.
 
@@ -206,6 +206,7 @@ To start the client, run the following commands:
 
 ```
 cd /opt/ibm/securegateway/client
+npm install
 node lib/secgwclient.js <gateway ID> -t <security token>
 ```
 {: codeblock}
