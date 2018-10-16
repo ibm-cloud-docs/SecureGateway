@@ -107,11 +107,11 @@ When a gateway or destination is marked active it will be billed. Active states 
     - Gateways - clients will be unable to flow data to the disabled gateway.
     - Destinations - clients will be unable to create connections to these disabled destinations.
 
-## How do I know the data size received on the Secure Gateway Client?
+## How do I know the data activities on the Secure Gateway Client?
 {: #data-size}
 
 ### Question
-How do I know the data size received or transmitted through Secure Gateway Client?
+How do I know the data activities through Secure Gateway Client?
 
 ### Answer
 On SecureGateway Client, change the log level to TRACE. The following information will be displayed after requests are sent.
@@ -139,4 +139,8 @@ Type `s` to print the connection status details.
 
 - On Secure Gateway client UI, click the Connection Information menu
 
-The following connection statistics would be displayed: Overall data size transmitted, overall data size received, the number of total connections and realotime active connections.
+The following connection statistics would be displayed: 
+- Overall data size transmitted.
+- Overall data size received.
+- The number of total connections.
+- Real-time active connections.
