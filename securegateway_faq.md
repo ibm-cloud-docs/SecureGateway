@@ -136,7 +136,6 @@ How do I get the real-time connection information, the data size sent and receiv
 
 - On Secure Gateway client interactive command line:
 Type `s` to print the connection status details. 
-
 - On Secure Gateway client UI, click the Connection Information menu
 
 The following connection statistics would be displayed: 
@@ -144,3 +143,5 @@ The following connection statistics would be displayed:
 - Overall data size received.
 - The number of total connections.
 - Real-time active connections.
+
+Note: The number of Current Connections on Secure Gateway UI is not rendered in real-time. Please use the above ways on Secure Gateway client to retrieve the real-time connection information.
