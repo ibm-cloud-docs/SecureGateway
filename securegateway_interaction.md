@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-08-10"
+lastupdated: "2018-10-04"
 
 ---
 {:screen: .screen}
@@ -171,7 +171,7 @@ If a client has been provided an ID, then it can be remotely terminated via the 
 ### Connection Limitations
 {: #limits-conn}
 
-The SG client can only handle 250 concurrent connections per gateway. If the number of concurrent requests exceeds the limit, it can result in the connection attempts being rejected and lead to latency. An easy way to fix this is to use connection pooling on the calling app. Please note that the limit of 250 concurrent connections is on the gateway and not destination. This limit will be shared across all the destinations on the gateway.
+The SG gatewway can only handle 250 concurrent connections. If the number of concurrent requests exceeds the limit, it can result in the connection attempts being rejected and lead to latency. An easy way to fix this is to use connection pooling on the calling app. Please note that the limit of 250 concurrent connections is on the gateway and not client or destination. This limit will be shared across all the client and destinations on the gateway.
 
 ### DataPower Client Limitations
 {: #limits-datapower}

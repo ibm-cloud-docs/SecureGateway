@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-08-10"
+lastupdated: "2018-10-11"
 
 ---
 {:screen: .screen}
@@ -180,11 +180,10 @@ License: http://www.ibm.com/software/sla/sladb.nsf/lilookup/986C7686F22D4D358525
    ```
    {: pre}
 
-   <b>Note:</b> On Red Hat Version 7 and above you will have to use the '--force' option as well.
 
    The client installer starts and installs the client, it will create a sgenvironment.conf file in /etc/ibm.
 
-2. Optional: If you want to use the system's upstart process you must edit this file and provide the following for the client to start correctly. See [Using Upstart](#using-systemv) for more information on editing this configuration file.
+2. Optional: If you want to use the system's upstart process you must edit this file and provide the following for the client to start correctly. See [Using Upstart](./securegateway_auto-start.html#linux) for more information on editing this configuration file.
 
 3. If you started the client using upstart, check the log file to make sure it is running correctly.
 
@@ -263,12 +262,12 @@ Return to [Getting Started - Adding a Client](./securegateway_client.html).
 ## DataPower
 {: #datapower}
 
-DataPower has an embedded version of the {{site.data.keyword.SecureGateway}} Client.  Depending on the DataPower version, you may have a different version of the {{site.data.keyword.SecureGateway}} Client.  Be aware of any applicable [DataPower Client Limitations](./securegateway_interaction.html#limits-datapower).
+DataPower has an embedded version of the {{site.data.keyword.SecureGateway}} Client.  Depending on the DataPower version, you may have a different version of the {{site.data.keyword.SecureGateway}} Client.  Be aware of any applicable [DataPower Client Limitations](./securegateway_interaction.html#limits-datapower). Using the old Secure Gateway Client might experience unexpected errors.
 
 | DataPower Version | {{site.data.keyword.SecureGateway}} Client Version  |
 | -- | --  |
 | 7.2.0.0, 7.5.0.0 | 1.1.0  |
-| 7.5.1.0 | 1.4.2  |
+| 7.5.1.0, 7.7.0 | 1.4.2  |
 | 7.5.2.4 | 1.6.1  |
 | 7.5.2.6, 7.6.0.0 | 1.7.0  |
 | 7.5.2.14, 7.6.0.7, 7.7.1.0 |  1.8.0fp6  |
