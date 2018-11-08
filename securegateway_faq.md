@@ -159,7 +159,7 @@ Enable Mutual Authentication for both sides of on-premise destinations makes Sec
 
 #### Set IP Table Rules (For on-premise destination)
 The Secure Gateway cloud host and port of an on-premise destination is in the public space; therefore it is allowed everyone to access by default.
-To control the traffic accessing on Secure Gateway, set iptable rules to only allow access by a specific range of IPs and ports to secure on-premise resources. Please see [IP Table Rules](./securegateway_iptables.html#ip-table-rules) for more information about how to configure the iptable rules on Secure Gateway.
+To control the traffic accessing on Secure Gateway, set iptable rules to only allow access by a specific range of IPs and ports to secure on-premise resources. Please see [IP Table Rules](./securegateway_destination.html#configuring-network-security) for more information about how to configure the iptable rules on Secure Gateway.
 
 #### Configure Access Control List (For on-premise destination)
 Configure Access Control List support to allow or restrict access to on-premises resources would make the on-premises destinations more secure by specifying the access right on the specific destination host and port. It is recommended to define the allowed or restrict HTTP/S routes on the ACL entries as well to enhance the security of on-premises destination. Please see [Access Control List](./securegateway_acl.html#access-control-list) and [HTTPS/Route Control using the ACL](./securegateway_acl.html#routes) for more information.
