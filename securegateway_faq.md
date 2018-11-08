@@ -145,3 +145,24 @@ The following connection statistics would be displayed:
 - Real-time active connections.
 
 Note: The number of Current Connections on Secure Gateway UI is not rendered in real-time. Please use the above ways on Secure Gateway client to retrieve the real-time connection information.
+
+## What are the recommended configurations to make my connections more secure?
+{: #secure-app}
+
+### Question
+What are the recommended configurations to make my connections more secure?
+
+### Answer
+
+#### Use Mutual Authentication
+Enable Mutual Authentication for both sides of on-premise destinations makes Secure Gateway more secure. On User Authentication side, enable mutual authentication to restrict the access of Secure Gateway cloud node by authenticating using a client certificate when the request is over TLS/HTTPS. On Resource Authentication side, enable mutual authentication to provide appropriate credential when connecting to destination endpoint, ensure secure/encrypted access to on-premise resource. Please see [Configuring Mutual Authentication](./securegateway_destination.html#mutual-auth) and [Node.js TLS Mutual Authentication](./securegateway_tls-ma.html#node-js-tls-mutual-authentication) for more information.
+
+#### Set IP Table Rules (For on-premise destination)
+The Secure Gateway cloud host and port of an on-premise destination is in the public space; therefore it is allowed everyone to access by default.
+To control the traffic accessing on Secure Gateway, set iptable rules to only allow access by a specific range of IPs and ports to secure on-premise resources. Please see [IP Table Rules](./securegateway_destination.html#configuring-network-security) for more information about how to configure the iptable rules on Secure Gateway.
+
+#### Configure Access Control List (For on-premise destination)
+Configure Access Control List support to allow or restrict access to on-premises resources would make the on-premises destinations more secure by specifying the access right on the specific destination host and port. It is recommended to define the allowed or restrict HTTP/S routes on the ACL entries as well to enhance the security of on-premises destination. Please see [Access Control List](./securegateway_acl.html#access-control-list) and [HTTPS/Route Control using the ACL](./securegateway_acl.html#routes) for more information.
+
+#### Set password on the Secure Gateway Client UI
+It is recommended to set the UI password to restrict the access of Secure Gateway Client UI. Please see [Interacting with the Client](./securegateway_interaction.html#interacting-with-the-client) for more details about how to set the password using startup configuration or interactive commands on Secure Gateway Client terminal command line.
