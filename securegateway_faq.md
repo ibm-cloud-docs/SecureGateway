@@ -179,7 +179,7 @@ After 2018 December maintenance, the cloud host of Secure Gateway is getting ren
 
 After the migration, the cloud host of the on-premise destinations will change to use the new domain, the users/applications will need to update to send the reqeust to the new cloud host.
 
-Currently the migration is not mandatory and there is not an exact date about when the old domain will be out of support, but once this is settled, the customer who are still using the old domain name will be noticed.
+Currently the migration is not mandatory and there is not an exact date about when the old domain will be out of support, but once this is settled, the customer who are still using the old domain name will be notified.
 
 ## Where can we receive notifications?
 {: #notification}
