@@ -181,3 +181,12 @@ After the migration, the cloud host of the on-premise destinations will change t
 
 Currently the migration is not mandatory and there is not an exact date about when the old domain will be out of support, but once this is settled, the customer who are still using the old domain name will be noticed.
 
+## Where can we receive notifications?
+{: #notification}
+
+### Question
+Where can we receive Secure Gateway notifications, especially for disruptive maintenance?
+
+### Answer
+
+You can get notifications via our [status page](https://cloud.ibm.com/status)
