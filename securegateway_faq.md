@@ -189,4 +189,4 @@ Where can we receive Secure Gateway notifications, especially for disruptive mai
 
 ### Answer
 
-You can get notifications via our [status page](https://cloud.ibm.com/status)
+You can get notifications via our [status page](https://console.bluemix.net/status), please search `Secure Gateway` in that page.
