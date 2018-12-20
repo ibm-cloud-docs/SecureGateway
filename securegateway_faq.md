@@ -190,3 +190,5 @@ Where can we receive Secure Gateway notifications, especially for disruptive mai
 ### Answer
 
 You can get notifications via our [status page](https://console.bluemix.net/status), please search `Secure Gateway` in that page.
+
+When the Secure Gateway client disconnected unexpectedly, please go to the status page to check whether there is disruptive maintenance at that time.
