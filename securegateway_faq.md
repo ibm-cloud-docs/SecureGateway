@@ -175,7 +175,7 @@ After 2018 December maintenance, there is a migrate button on the gateway panel,
 
 ### Answer
 
-After 2018 December maintenance, the cloud host of Secure Gateway is getting renamed to use the `securegateway.appdomain.cloud instead` of `integration.ibmcloud.com`. For backward compatibility, the existing gateway will keep using the old domain until the gateway is migrated.
+After 2018 December maintenance, the cloud host of Secure Gateway is getting renamed to use the `securegateway.appdomain.cloud` instead of `integration.ibmcloud.com`. For backward compatibility, the existing gateway will keep using the old domain until the gateway is migrated.
 
 After the migration, the cloud host of the on-premise destinations will change to use the new domain, the users/applications will need to update to send the reqeust to the new cloud host.
 
