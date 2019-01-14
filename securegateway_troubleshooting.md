@@ -23,18 +23,18 @@ lastupdated: "2018-08-10"
 - Initiate the failing request from the requesting application
 - Check the Secure Gateway Client logs
 - If no client logs have been generated from the request, the issue is between the requesting application and the Secure Gateway Servers.  This could range from network reliability to mismatched request protocols to an improper TLS mutual authentication handshake.
-- If the client has generated error logs from the request, then the issue is between the SG Client and the on-prem resource.  Below is a table containing common errors, the issues that typically cause them, and potential methods to troubleshoot them.
+- If the client has generated error level logs from the request, then the issue is between the SG Client and the on-prem resource.  Below is a table containing common errors, the issues that typically cause them, and potential methods to troubleshoot them.
 
 Error | Typical Cause | Troubleshooting Methods
 --- | --- | ---
 ETIMEDOUT | The client is unable to find the hostname/ip to connect to due to network constraints. | Attempt to ping the destination's hostname/ip from the host running the client to ensure network connectivity.  If running the Docker version of the client, bridging the container with the host OS  with `--net=host` may resolve the issue.
 ECONNREFUSED | The client has resolved the hostname/ip to connect to but is unable to begin the connection handshake | This is typically caused by a mismatched protocol between the SG Client and the on-prem resource (e.g., the client is attempting a TCP connection to a host:port that is expecting a TLS connection).  In some cases, a firewall rule may cause this error instead of ETIMEDOUT.
 ECONNRESET | The client has established a connection to the destination but something went wrong either during the handshake (a TLS handshake error might result in different errors, as well) or while the request was being handled by the on-prem resource. | The logs of the on-prem resource should be checked to confirm no error has caused the connection to be interrupted.  If nothing is found in the on-prem logs, then the destination configuration should be examined to ensure the appropriate protocols (and certificates, if necessary) are being provided to the client for the connection.
-REMOTE_RST | There is error occurred in SG Server side. <br><br> For on-prem destination, there is error when the requesting app connecting to the SG Server, or the timeout error when receiving data from the on-prem resource. <br><br> For cloud destination, it could be anything from TLS handshake failure, to errors in the cloud resource | For on-prem destination, please ensure the requesting app using the appropriate protocols to establish the connection with SG Server, if the error occurs when receiving data from on-prem resource, please try to extend/disable the timeout. <br><br> For cloud destination, the logs of the cloud resource should be checked to confirm no error has caused the connection to be interrupted.  If nothing is found in the cloud resource logs, then the destination configuration should be examined to ensure the appropriate protocols (and certificates, if necessary) are being provided to the client for the connection.
+REMOTE_RST | There is error occurred in SG Server side. <br><br> For on-prem destination, there is error during the requesting app connecting to the SG Server, or a timeout error when receiving data from the on-prem resource. <br><br> For cloud destination, it could be anything from TLS handshake failure, to errors in the cloud resource | For on-prem destination, please ensure the requesting app using the appropriate protocols to establish the connection with SG Server, if the error occurs when receiving data from on-prem resource, please try to extend/disable the timeout. <br><br> For cloud destination, the logs of the cloud resource should be checked to confirm no error has caused the connection to be interrupted.  If nothing is found in the cloud resource logs, then the destination configuration should be examined to ensure the appropriate protocols (and certificates, if necessary) are being provided to the client for the connection.
 
 Many applications experience "hangs" after an ECONNRESET occurring on the other end of the tunnel. This is expected. Secure 
 Gateway can not replay the RST packet on the other end of the tunnel since the TCP packets have already been ACKed for that
-side of the tunnel. Application level timeouts, the application never receives an acknowledging response, are the only
+side of the tunnel. Define the timeouts on the application, which never receives an acknowledging response, are the only
 method to end the hang.
 
 ## Configure your Docker client to restart when your server restarts
@@ -106,7 +106,7 @@ You have created a destination using TLS, but instead of using the destination&a
 What is going on is that the SSL verification code in the gateway client is treating this destination differently because it uses an IP address rather than a hostname.  Instead of matching with the cert's CN, it is looking in the cert's SAN for a match of the IP address.  Since there is no SAN in the cert, it sees it as a bad connection and fails the SSL handshake.
 
 ### How to fix it
-If you look at the error message it does not say CN, (e.g. [ERROR] Connection ## had error: Host: . is not cert&apos;s CN: ), but the cert&apos;s list, which leads me to believe you have generated your self-signed cert incorrectly. The problem is generating the cert using an FQDN or CN with an IP_Address. This will not work since IP addresses are only supported when using SAN.
+If you look at the error message it does not say CN, (e.g. [ERROR] Connection ## had error: Host: . is not cert&apos;s CN: ), but the cert&apos;s list, which leads me to believe you have generated your self-signed cert incorrectly. The problem is that the cert was generated using an FQDN or CN with an IP_Address, this will not work since IP addresses are only supported when using SAN.
 
 Method for generating a certificate with an IP as the CN with openssl:
 
@@ -134,14 +134,14 @@ Method for generating a certificate with an IP as the CN with openssl:
     ```
     {: pre}
 
-5. Gen private key
+5. Generate the private key
 
     ```
     openssl genrsa -out private.key 3072
     ```
     {: pre}
 
-6. Gen certificate with options about organization
+6. Generate the certificate with options about organization
 
     ```
     openssl req -new -x509 -key private.key -sha256 -out certificate.pem -days 730 -config
@@ -206,7 +206,7 @@ Since Docker is a container or virtualized environment, it does not have direct 
 ### How to fix it
 This is what you can do:
 
-- Created a Dockerfile to include the aclfile.txt
+- Create a Dockerfile to include the aclfile.txt
 
 ```
 FROM ibmcom/secure-gateway-client
@@ -228,7 +228,7 @@ docker run -t -i ads-secure-gateway-client1  --F /tmp/aclfile.txt
 ```
 {: pre}
 
-- Got the following output:
+- You should get the following output:
 
 ```
 [2015-09-30 16:50:32.084] [INFO] The current access control list is being reset and replaced by the user provided file: /tmp/aclfile.txt
@@ -259,4 +259,4 @@ Please provide as much of the following information as possible when submitting 
    - Destination ID
    - Protocol
    - Destination-side Authentication
-   - Uploaded certificates (just names and which box they were uploaded to)
+   - Uploaded certificates (just names and which Box folder or link they were uploaded to)

@@ -16,11 +16,11 @@ From within your new gateway and on the Destinations tab, click the Add Destinat
 
 The guided setup <b>does not</b> allow for the configuration of proxy information, server name indicators, or the upload of a destination-specific cert/key pair.  After creation, all fields are available via the Edit Destination panel.
 
-## Guided Panel
+## Guided Setup Panel
 
 ![Guided Setup](./images/guidedLanding.png?raw=true "Guided Setup landing panel")
 
-## Advanced Panel
+## Advanced Setup Panel
 
 ![Advanced Setup](./images/advancedLanding.png?raw=true "Advanced Setup landing panel")
 
@@ -94,14 +94,14 @@ For an on-premises destination, it will appear under Resource Authentication if 
 For a cloud destination, it will appear under User Authentication if a TLS protocol has been selected.  In this case, the client will use this certificate/key pair to establish TLS listeners with the file uploaded to the [User Authentication](#user-auth) in the CA.  
 
 ## Configuring Network Security
-To prevent all but specific IP addresses from connecting to your cloud host and port, you can choose to enforce iptable rules on your on-premises destination.
+To prevent all but specific IP addresses from connecting to your cloud hosts and ports, you can choose to enforce iptables rules on your on-premises destination.
 ![Network Security Panel](./images/networkSecurity.png?raw=true "Network Security panel")
 
-To enforce iptable rules, check the box <b>Restrict cloud access to this destination with iptable rules</b> from the Network Security panel.  Once the box is checked, you can begin adding the IPs that should be allowed to connect.  If no IPs are provided, all connections to this cloud host and port will be rejected as long as the <b>Restrict cloud access</b> box is checked.
+To enforce iptables rules, check the box <b>Restrict cloud access to this destination with iptables rules</b> from the Network Security panel.  Once the box is checked, you can begin adding the IPs that should be allowed to connect.  If no IPs are provided, all connections to this cloud hosts and ports will be rejected as long as the <b>Restrict cloud access</b> box is checked.
 
 <b>Note</b>: The IPs or ports provided must be the external IP address that the {{site.data.keyword.SecureGateway}} servers will see, not the local IP address of the machine making the request.
 
-### Adding iptable rules
+### Adding iptables rules
 When adding rules to iptables, you can provide individual IPs or an IP range along with either a single port or a port range.  All ranges provided are inclusive.  The following table has some examples as well as how they will resolve within iptables:
 
 IP Addresses | Ports | Results
@@ -113,7 +113,7 @@ IP Addresses | Ports | Results
 1.2.3.4 | | Only IP 1.2.3.4 from any port will be allowed.
 | 5000 | Any IP from port 5000 will be allowed.
 
-Specific rules can also be associated with an application.  For more information on creating associated rules, see [how to create iptable rules for your app](./iptables.html).
+Specific rules can also be associated with an application.  For more information on creating associated rules, see [how to create iptables rules for your app](./iptables.html).
 
 ## Configuring Proxy Options
 If your on-premises destination is located behind a SOCKS proxy, you can configure the proxy settings for your destination in the Proxy Options panel.

@@ -23,7 +23,7 @@ openssl req -new -newkey rsa:2048 -days 365 -nodes -x509 -keyout serverKey.pem -
 
 ## Uploading a cert/key pair to the browser
 
-To access a destination enforcing mutual authentication, you must convert your cert/key pair to a PKCS#12 file and upload it to your browser.
+To access a destination which enforcing mutual authentication, you must convert your cert/key pair to a PKCS#12 file and upload it to your browser.
 
 To create the PKCS#12 file, use the following command:
 

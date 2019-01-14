@@ -19,8 +19,8 @@ When you change plans, your new plan will be considered to be either an upgrade 
 
 
 ## Notification for limit exceeded
-When you create the maximum allowed amount of gateway/destination, there will be a warning log shown in the dashboard of the gateway/destination.
+When you create the maximum allowed amount of gateway/destination, there will be a warning level log shown in the dashboard of the gateway/destination.
 
-When the amount of client is reached, and there is a new client attempt to connect to the gateway, there will be an error log shown in the client log, and the new client will be exited by the gateway.
+When the amount of client is reached, and there is a new client attempt to connect to the gateway, there will be an error level log shown in the client log, and the new client will be exited by the gateway.
 
-When the data usage exceeds the data transfer allowance, there will be an error log shown in the client log, and the client will be exited by the gateway.
+When the data usage exceeds the data transfer allowance, there will be an error level log shown in the client log, and the client will be exited by the gateway.

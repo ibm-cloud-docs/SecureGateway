@@ -46,7 +46,7 @@ For more information on disabling a gateway or a destination, see [how to manage
 {: #automation-spaces}
 
 ### Question
-A customer environment has one org and three spaces.  One space is for development, another for staging, and the final one for production.  Should the customer create a single Secure Gateway instance or multiple (e.g., one for each space).  If the customer can create multiple gateways, are there any considerations for reusing a Node.js application to create a gateway and destination in each space?
+A customer environment has one org and three spaces.  One space is for development, another for staging, and the final one for production.  Should the customer create a single Secure Gateway instance or multiple (e.g., one for each space)?  If the customer can create multiple gateways, are there any considerations for reusing a Node.js application to create a gateway and destination in each space?
 
 ### Answer
 
@@ -69,7 +69,7 @@ A customer environment has three orgs: one for development, one for staging, and
 {: #app-space}
 
 ### Question
-Do you need to run the Node.js app in the same {{site.data.keyword.Bluemix_notm}} space as the Secure Gateway service?
+Do I need to run the Node.js app in the same {{site.data.keyword.Bluemix_notm}} space as the Secure Gateway service?
 
 ### Answer
 No, you do not need to run your app in the same {{site.data.keyword.Bluemix_notm}} space as the Secure Gateway service.
@@ -78,10 +78,10 @@ No, you do not need to run your app in the same {{site.data.keyword.Bluemix_notm
 {: #server-logs}
 
 ### Question
-Can you retrieve error logs for the Secure Gateway server?
+Can I retrieve error level logs for the Secure Gateway server?
 
 ### Answer
-Error logs on the server cannot be retrieved.  Only errors that are made at the time of the request can be seen.
+Error level logs on the server cannot be retrieved.  Only errors that are made at the time of the request can be seen.
 
 ## What are the functional states of Secure Gateway?
 {: #states}
@@ -97,7 +97,7 @@ The 1.7.0 release introduced a new tiered plan pricing model. With this model ca
 - Inactive items are not billed
 - Inactive Destinations do not have a provisioned cloud port.
 - All Destinations within an inactive gateway will also be inactive and cannot be reactivated until their Gateway is also set Active.
-- Inactive items are considered Non Functional. Inactive items cannot be in the any of the Functional states.
+- Inactive items are considered Non Functional. Inactive items cannot be in any of the Functional states.
 
 #### Functional States
 When a gateway or destination is marked active it will be billed. Active states for Gateways and Destinations are below:
@@ -126,11 +126,11 @@ Data size sent from destination:
 [TRACE] Connection #<connection ID> received data: <size> bytes
 ```
 
-## How do I get the real-time connection number on Secure Gateway?
+## How do I get the amount of the real-time connections on Secure Gateway?
 {: #connect-num}
 
 ### Question
-How do I get the real-time connection information, the data size sent and received from Secure Gateway Client?
+How do I get connections information such as the amount of the real-time connections, the data size sent and received from Secure Gateway Client?
 
 ### Answer
 
@@ -141,10 +141,10 @@ Type `s` to print the connection status details.
 The following connection statistics would be displayed: 
 - Overall data size transmitted.
 - Overall data size received.
-- The number of total connections.
+- The amount of total connections.
 - Real-time active connections.
 
-Note: The number of Current Connections on Secure Gateway UI is not rendered in real-time. Please use the above ways on Secure Gateway client to retrieve the real-time connection information.
+Note: This connections information is on Client level, not in Gateway level. If you need connections information in Gateway level, please check each Client which connected to that Gateway.
 
 ## What are the recommended configurations to make my connections more secure?
 {: #secure-app}
@@ -155,17 +155,17 @@ What are the recommended configurations to make my connections more secure?
 ### Answer
 
 #### Use Mutual Authentication
-Enable Mutual Authentication for both sides of on-premise destinations makes Secure Gateway more secure. On User Authentication side, enable mutual authentication to restrict the access of Secure Gateway cloud node by authenticating using a client certificate when the request is over TLS/HTTPS. On Resource Authentication side, enable mutual authentication to provide appropriate credential when connecting to destination endpoint, ensure secure/encrypted access to on-premise resource. Please see [Configuring Mutual Authentication](./securegateway_destination.html#mutual-auth) and [Node.js TLS Mutual Authentication](./securegateway_tls-ma.html#node-js-tls-mutual-authentication) for more information.
+Enable Mutual Authentication for both sides of on-premise destinations makes Secure Gateway more secure. On User Authentication side, enable mutual authentication to restrict the access of Secure Gateway cloud node by authenticating using a client certificate when the request is over TLS/HTTPS. On Resource Authentication side, enable mutual authentication to provide appropriate credential when connecting to destination endpoint, and ensure secure/encrypted access to on-premise resource. Please see [Configuring Mutual Authentication](./securegateway_destination.html#mutual-auth) and [Node.js TLS Mutual Authentication](./securegateway_tls-ma.html#node-js-tls-mutual-authentication) for more information.
 
 #### Set IP Table Rules (For on-premise destination)
 The Secure Gateway cloud host and port of an on-premise destination is in the public space; therefore it is allowed everyone to access by default.
-To control the traffic accessing on Secure Gateway, set iptable rules to only allow access by a specific range of IPs and ports to secure on-premise resources. Please see [IP Table Rules](./securegateway_destination.html#configuring-network-security) for more information about how to configure the iptable rules on Secure Gateway.
+To control the traffic accessing on Secure Gateway, set iptables rules to only allow access by a specific range of IPs and ports to secure on-premise resources. Please see [IP Table Rules](./securegateway_destination.html#configuring-network-security) for more information about how to configure the iptables rules on Secure Gateway.
 
 #### Configure Access Control List (For on-premise destination)
-Configure Access Control List support to allow or restrict access to on-premises resources would make the on-premises destinations more secure by specifying the access right on the specific destination host and port. It is recommended to define the allowed or restrict HTTP/S routes on the ACL entries as well to enhance the security of on-premises destination. Please see [Access Control List](./securegateway_acl.html#access-control-list) and [HTTPS/Route Control using the ACL](./securegateway_acl.html#routes) for more information.
+Configure Access Control List support to allow or restrict access to on-premises resources would make the on-premises destinations more secure by specifying the access right on the specific destination host and port. It is recommended to define the allowed or restricted HTTP/S routes on the ACL entries as well to enhance the security of on-premises destination. Please see [Access Control List](./securegateway_acl.html#access-control-list) and [HTTP/S Route Control using the ACL](./securegateway_acl.html#routes) for more information.
 
 #### Set password on the Secure Gateway Client UI
-It is recommended to set the UI password to restrict the access of Secure Gateway Client UI. Please see [Interacting with the Client](./securegateway_interaction.html#interacting-with-the-client) for more details about how to set the password using startup configuration or interactive commands on Secure Gateway Client terminal command line.
+It is recommended to set the UI password to restrict the access of the Secure Gateway Client UI. Please see [Interacting with the Client](./securegateway_interaction.html#interacting-with-the-client) for more details about how to set the password using startup configuration or interactive commands on Secure Gateway Client terminal command line.
 
 ## What is gateway migration?
 {: #gateway-migration}
@@ -181,11 +181,11 @@ After the migration, the cloud host of the on-premise destinations will change t
 
 Currently the migration is not mandatory and there is not an exact date about when the old domain will be out of support, but once this is settled, the customer who are still using the old domain name will be notified.
 
-## Where can we receive notifications?
+## Where can I receive notifications?
 {: #notification}
 
 ### Question
-Where can we receive Secure Gateway notifications, especially for disruptive maintenance?
+Where can I receive Secure Gateway notifications, especially for disruptive maintenance?
 
 ### Answer
 

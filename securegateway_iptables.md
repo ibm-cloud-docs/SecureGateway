@@ -11,7 +11,7 @@ lastupdated: "2018-08-10"
 
 # IP Table Rules
 
-To allow the enforcement of iptable rules on your destination, you must have the `Restrict network access` option checked under the Network Security panel of your destination.  At that point you can add the rules you want enforced, such as: 192.0.0.1 9000 (single IP and port),  192.0.0.1-192.0.0.5 5000:5005 (range of IPs and range of ports), or any combination therein. Please see [Configuring Network Security](./securegateway_destination.html#configuring-network-security) for more information.
+To allow the enforcement of iptables rules on your destination, you must have the `Restrict network access` option checked under the Network Security panel of your destination.  At that point you can add the rules you want enforced, such as: 192.0.0.1 9000 (single IP and port),  192.0.0.1-192.0.0.5 5000:5005 (range of IPs and range of ports), or any combination of these rules. Please see [Configuring Network Security](./securegateway_destination.html#configuring-network-security) for more information.
 
 If you are creating your private destinations with cURL, you could use a command like:
 
@@ -68,8 +68,8 @@ request({
   }, console.log.bind(console)) 
 ```
 
-This must run on application startup and will reconfigure the IP table rule on application startup. Each IP table rule
-uniquely identifies each instance of the application using the `application_id` and `CF_INSTANCE_INDEX`. The fronting IP address
+This should be run when starting up the application, any IP tables rule which is defined before will be overwritten. Each IP table rule
+uniquely identifies each instance of the application using the `application_id` and `CF_INSTANCE_INDEX`. The external IP address
 is retrieved from the `CF_INSTANCE_IP` variable and applied to the IP table rule.
 
 

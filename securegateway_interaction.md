@@ -141,7 +141,7 @@ This page will be displayed if the UI has been password protected.  If this page
 ### Dashboard
 {: #ui-dashboard}
 
-This is the main page once a client has been connected.  From here, you can access the View Logs page, the Access Control List page, and the Connection Info page.  At the bottom, you can also choose to disconnect one/many of the connected clients.  On the top of the page, the currently selected client will be displayed as well as an option to connect additional clients.
+This is the main page once a client has been connected.  From here, you can access the View Logs page, the Access Control List page, and the Connection Info page.  At the bottom, you can also choose to disconnect one/many of the connected clients.  On the top of the page, the currently selected client will be displayed, and there will be an option to connect additional clients. 
 
 ### View Logs
 {: #ui-logs}

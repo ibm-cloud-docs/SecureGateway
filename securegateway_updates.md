@@ -12,7 +12,7 @@ lastupdated: "2017-04-25"
 
 ### Fixes
 
-- Fixes `EADDRINUSE` error caused by listeners not tearing down appropriately on destination deletion.
+- Fixes `EADDRINUSE` error caused by listeners that do not execute a teardown appropriately when a destination is deleted.
 - Resolves issue where service instances bound to an application could not be deleted.
 
 ## v1.7.0
@@ -70,7 +70,7 @@ lastupdated: "2017-04-25"
 ### Features
 
 - Clients are now assigned an ID when connecting to the SG server.
-- Clients an now be terminated remotely via API or the Secure Gateway UI.
+- Clients are now terminated remotely via API or the Secure Gateway UI.
 - The connected status of a client can be checked via API.
 - Destination-side TLS now supports Mutual Authentication.
 - Cloud destinations now support Mutual Authentication protocols.

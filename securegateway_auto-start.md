@@ -29,7 +29,7 @@ This file includes the following important variables to set:
 | ------------- | ----------- |
 | RESTART_CLIENT | Stop and Restart the client during install or upgrade (Yes or No) |
 | GATEWAY_ID | Your gateway ID as created on the Secure Gateway for Bluemix UI |
-| SECTOKEN | Security Token for this Gateway ID, if you choose to enforce security when creating it |
+| SECTOKEN | Security Token for this Gateway ID, if you choose to enforce security when creating the gateway |
 | ACL_FILE | Access Control List File you want to use to restrict on-premises access to resources |
 | LOGLEVEL | The log level you want to set for your service (default is INFO) |
 | USE_UI   | Set this to 'N' if you don't want to launch the client UI |
@@ -106,8 +106,8 @@ systemctl stop securegateway_client
 ```
 {: pre}
 
-### SystemV
-{: #systemv}
+### System V
+{: #system-v}
 
 System V is not setup during installation like the other auto-start facilities. Scripts are available in the installation directory /opt/ibm/securegateway/client/upstart, they are:
 
@@ -119,7 +119,7 @@ securegateway_clientd
 
 <b>Note:</b> This section will affect users of SuSE/SLES 11.
 
-Optional: If you are running SuSE version 11 that uses systemV auto-start, scripts are provided that can be used to configure this process. Follow the below procedure:
+Optional: If you are running SuSE version 11 that uses System V auto-start, scripts are provided that can be used to configure this process. Follow the below procedure:
 
 ```
 cd /opt/ibm/securegateway/client/upstart/systemV
@@ -134,7 +134,7 @@ vi /etc/ibm/sgenvironment.conf
 ```
 {: codeblock}
 
-Once these steps have been executed, the YasT and systemV commands can be used to start/stop the daemon.
+Once these steps have been executed, the YasT and System V commands can be used to start/stop the daemon.
 
 Return to [Getting Started - Adding a Client](./securegateway_client.html).
 

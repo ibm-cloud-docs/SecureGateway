@@ -60,7 +60,7 @@ The following pre-requisites are required prior to running the client on Mac OS 
 You may require administrative privileges to perform this installation, depending on your system's security setup.
 
  1. Mount the DMG image that was downloaded from the {{site.data.keyword.SecureGateway}} UI, normally by 'double-clicking' it.
- 2. A new 'finder' window should appear.  This window should contain an Applications "shortcut" icon, drag and drop the application onto the shortcut.  If not, 'double-click' the mounted volume and drag and drop the application icon to the Applications icon in the Finder sidebar.
+ 2. A new 'finder' window should appear. If not, 'double-click' the mounted volume. This window should contain an "ibm" folder icon and an Applications "shortcut" icon, drag and drop the "ibm" folder onto the shortcut.
 
 ### Starting an interactive client session
 {: #mac-run}

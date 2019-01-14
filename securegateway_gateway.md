@@ -18,7 +18,7 @@ From the Secure Gateway Dashboard, click the Add Gateway button to open the Add 
 
 The only required input on this panel is your Gateway Name.  By default, both `Require security token` and `Token Expiration` are selected.
 
-By requiring the security token to connect clients, each time you start a Secure Gateway client, you will have to provide both the Gateway ID and the Security Token.  If you uncheck the `Require security token` box, you will only have to provide the Gateway ID for the client to connect.
+By requiring the security token to connect clients, each time you start a Secure Gateway client, you will have to provide both the Gateway ID and the Security Token.  If you uncheck the `Require security token` box, you will only have to provide the Gateway ID to the client when starting the connection to the gateway.
 
 The default expiration date for the Security Token is 90 days from when it is created.  To change the expiration date, keep the `Token Expiration` box checked and edit the text field with the number of days you would like the token to expire in (minimum 1, maximum 365).  To create a token that does not expire, uncheck the `Token Expiration` box.  
 

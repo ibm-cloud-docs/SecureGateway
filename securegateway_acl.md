@@ -88,7 +88,7 @@ Return to [Getting Started - Adding a Client](./securegateway_client.html).
 ## Copying your ACL file into the {{site.data.keyword.SecureGateway}} Docker client
 {: #docker}
 
-The {{site.data.keyword.SecureGateway}} docker client essentially runs in it's own virtualization container.  The filesystem of the hosting machine is therefore not directly accessible to processes that run inside the container, including the {{site.data.keyword.SecureGateway}} client.  Starting with version 1.8.0 of the Docker Engine, you can use the 'docker cp' command to push files that exist on your host into the container while it is running or stopped.  This must be done in order to use the {{site.data.keyword.SecureGateway}} client's ACL FILE interactive command.
+The {{site.data.keyword.SecureGateway}} docker client essentially runs in it's own virtualization container.  The filesystem of the hosting machine is therefore not directly accessible to processes that run inside the container, including the {{site.data.keyword.SecureGateway}} client.  Starting with version 1.8.0 of the Docker Engine, you can use the 'docker cp' command to import files that exist on your host into the container while it is running or stopped, this must be done in order to use the {{site.data.keyword.SecureGateway}} client's ACL FILE interactive command.
 
 To use the interactive 'cp' support in docker from your host to the docker instance you must be at docker 1.8.0. You can check this using `docker --version`
 
@@ -113,7 +113,7 @@ Server:
 ```
 {: screen}
 
-Then to push out your acl file list to the docker image follow these steps:
+Then to import your acl file list to the docker image follow these steps:
 
 - Run 'docker ps' command to find your container ID
 
