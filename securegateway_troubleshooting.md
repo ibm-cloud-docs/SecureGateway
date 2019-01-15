@@ -253,8 +253,8 @@ Please provide as much of the following information as possible when submitting 
 - What OS is the client running on?
 - What version of the client is being used (this can be found using the 'C' command on the client)?
 - If this is a UI issue, paste or attach any associated browser console logs and screenshots
-- Paste or attach any associated requesting application logs
-- Paste or attach any associated Secure Gateway Client logs
+- Paste or attach any associated requesting application logs and timezone
+- Paste or attach any associated Secure Gateway Client logs and timezone
 - Provide the details of the destination being used (either a screenshot or fill out the fields below):
    - Destination ID
    - Protocol
