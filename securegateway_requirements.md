@@ -43,24 +43,24 @@ If there's npm Enterprise server in your environment, please whitelist all of th
   - For SG client `v180fp9 and former`
 
 
-      | Region  | Host  |
-      | --  | --  |
-      | US South  | sgmanager.ng.bluemix.net  |
-      | US East  | sgmanager.us-east.bluemix.net  |
-      | United Kingdom  | sgmanager.eu-gb.bluemix.net  |
-      | Germany  | sgmanager.eu-de.bluemix.net  |
-      | Sydney  | sgmanager.au-syd.bluemix.net  |
+    | Region  | Host  |
+    | --  | --  |
+    | US South  | sgmanager.ng.bluemix.net  |
+    | US East  | sgmanager.us-east.bluemix.net  |
+    | United Kingdom  | sgmanager.eu-gb.bluemix.net  |
+    | Germany  | sgmanager.eu-de.bluemix.net  |
+    | Sydney  | sgmanager.au-syd.bluemix.net  |
 
   - For SG client `v181 and later`
   
   
-      | Region  | Host  |
-      | --  | --  |
-      | US South  | sgmanager.us-south.securegateway.cloud.ibm.com  |
-      | US East  | sgmanager.us-east.securegateway.cloud.ibm.com  |
-      | United Kingdom  | sgmanager.eu-gb.securegateway.cloud.ibm.com  |
-      | Germany  | sgmanager.eu-de.securegateway.cloud.ibm.com  |
-      | Sydney  | sgmanager.au-syd.securegateway.cloud.ibm.com  |
+    | Region  | Host  |
+    | --  | --  |
+    | US South  | sgmanager.us-south.securegateway.cloud.ibm.com  |
+    | US East  | sgmanager.us-east.securegateway.cloud.ibm.com  |
+    | United Kingdom  | sgmanager.eu-gb.securegateway.cloud.ibm.com  |
+    | Germany  | sgmanager.eu-de.securegateway.cloud.ibm.com  |
+    | Sydney  | sgmanager.au-syd.securegateway.cloud.ibm.com  |
 
 - Port 9000
 
