@@ -40,7 +40,8 @@ The Secure Gateway Client uses outbound port 443 and port 9000 to connect to npm
 If there's npm Enterprise server in your environment, please whitelist all of the dependencies of Secure Gateway Client on the npm Enterprise server. For the list of dependencies, please refer to `<Installation_directory>\ibm\securegateway\client\package.json` file.<br><br>
 
 - Port 443 for gateway authentication
-  - For SG client v180fp9 and former
+  - For SG client `v180fp9 and former`
+
 
       | Region  | Host  |
       | --  | --  |
@@ -50,7 +51,8 @@ If there's npm Enterprise server in your environment, please whitelist all of th
       | Germany  | sgmanager.eu-de.bluemix.net  |
       | Sydney  | sgmanager.au-syd.bluemix.net  |
 
-  - For SG client v181 and later
+  - For SG client `v181 and later`
+  
   
       | Region  | Host  |
       | --  | --  |
