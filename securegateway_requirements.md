@@ -40,16 +40,25 @@ The Secure Gateway Client uses outbound port 443 and port 9000 to connect to npm
 If there's npm Enterprise server in your environment, please whitelist all of the dependencies of Secure Gateway Client on the npm Enterprise server. For the list of dependencies, please refer to `<Installation_directory>\ibm\securegateway\client\package.json` file.<br><br>
 
 - Port 443 for gateway authentication
+  - For SG client v180fp9 and former
 
+      | Region  | Host  |
+      | --  | --  |
+      | US South  | sgmanager.ng.bluemix.net  |
+      | US East  | sgmanager.us-east.bluemix.net  |
+      | United Kingdom  | sgmanager.eu-gb.bluemix.net  |
+      | Germany  | sgmanager.eu-de.bluemix.net  |
+      | Sydney  | sgmanager.au-syd.bluemix.net  |
 
-  | Region  | Host  |
-  | --  | --  |
-  | US South  | sgmanager.ng.bluemix.net  |
-  | US East  | sgmanager.us-east.bluemix.net  |
-  | United Kingdom  | sgmanager.eu-gb.bluemix.net  |
-  | Germany  | sgmanager.eu-de.bluemix.net  |
-  | Sydney  | sgmanager.au-syd.bluemix.net  |
-
+  - For SG client v181 and later
+  
+      | Region  | Host  |
+      | --  | --  |
+      | US South  | sgmanager.us-south.securegateway.cloud.ibm.com  |
+      | US East  | sgmanager.us-east.securegateway.cloud.ibm.com  |
+      | United Kingdom  | sgmanager.eu-gb.securegateway.cloud.ibm.com  |
+      | Germany  | sgmanager.eu-de.securegateway.cloud.ibm.com  |
+      | Sydney  | sgmanager.au-syd.securegateway.cloud.ibm.com  |
 
 - Port 9000
 
