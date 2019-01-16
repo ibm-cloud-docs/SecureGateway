@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-12-20"
+lastupdated: "2018-01-16"
 
 ---
 
@@ -167,15 +167,15 @@ Configure Access Control List support to allow or restrict access to on-premises
 #### Set password on the Secure Gateway Client UI
 It is recommended to set the UI password to restrict the access of the Secure Gateway Client UI. Please see [Interacting with the Client](./securegateway_interaction.html#interacting-with-the-client) for more details about how to set the password using startup configuration or interactive commands on Secure Gateway Client terminal command line.
 
-## What is gateway migration?
+## What is gateway migration? Why the domain is changed after 2018 December?
 {: #gateway-migration}
 
 ### Question
-After 2018 December maintenance, there is a migrate button on the gateway panel, what is the usage of that button?
+After 2018 December maintenance, there is a migrate button on the gateway panel, what is the usage of that button? Why the domain is changed?
 
 ### Answer
 
-After 2018 December maintenance, the cloud host of Secure Gateway is getting renamed to use the `securegateway.appdomain.cloud` instead of `integration.ibmcloud.com`. For backward compatibility, the existing gateway will keep using the old domain until the gateway is migrated.
+After 2018 December maintenance, the cloud host of Secure Gateway is getting renamed to use the `securegateway.appdomain.cloud` instead of `integration.ibmcloud.com`, and use the `securegateway.cloud.ibm.com` for gateway authentication instead of `bluemix.net`. For backward compatibility, the existing gateway will keep using the old domain until the gateway is migrated, and the SG client v180fp9 and former will keep using `bluemix.net` for gateway authentication.
 
 After the migration, the cloud host of the on-premise destinations will change to use the new domain, the users/applications will need to update to send the reqeust to the new cloud host.
 
