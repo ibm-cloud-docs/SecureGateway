@@ -81,17 +81,17 @@ Enabling TLS on the connection to your resource is separate from the TLS used fo
 
 #### Cloud/On-Premises Authentication
 
-This option becomes available by selecting TLS or Mutual Auth for your Resource Authentication.  The name of the field will match the [type of destination](#dest-types) you have chosen.  This field allows for up to 6 certificates to be uploaded in order to validate the certificate of the resource you are connecting to.  These files will be added to the CA of connection to the resource and should contain the certificate or certificate chain that your resource will be presenting.
+This option becomes available by selecting TLS or Mutual Auth for your [Resource Authentication](#resource-auth).  The name of the field will match the [type of destination](#dest-types) you have chosen.  This field allows for up to 6 certificates to be uploaded in order to validate the certificate of the resource you are connecting to.  These files will be added to the CA of connection to the resource and should contain the certificate or certificate chain that your resource will be presenting.
 
 #### Server Name Indicator (SNI)
-This option becomes available by selecting TLS or Mutual Auth for your Resource Authentication.  This is used to allow a separate hostname to be provided to the TLS handshake of the resource connection.
+This option becomes available by selecting TLS or Mutual Auth for your [Resource Authentication](#resource-auth).  This is used to allow a separate hostname to be provided to the TLS handshake of the resource connection.
 
 ### Client Certificate and Key
 Where the Client Certificate and Key fields appears depends on the [type of destination](#dest-types) you have chosen.  In both situations, the files provided here will be used by the SG Client to identify itself for TLS connections.  If no files are uploaded, the {{site.data.keyword.SecureGateway}} servers will automatically generate a self-signed pair with a CN of `localhost`.  For instructions on how to generate a certificate/key pair, [click here](./securegateway_keygen.html).
 
-For an on-premises destination, it will appear under Resource Authentication if Resource Authentication: Mutual Auth has been selected.  In this case, the client will use this certificate/key pair for its outbound connection to the defined resource.  The CA of this connection will contain the certificates provided in the [Cloud/On-prem Authentication](#resource-auth) field.
+For an on-premises destination, it will appear under [Resource Authentication](#resource-auth) if `Resource Authentication: Mutual Auth` has been selected.  In this case, the SG Client will use this certificate/key pair for its outbound connection to the defined resource, the On-prem resource needs to add this certificate to its CA to communicate with the SG Client.
 
-For a cloud destination, it will appear under User Authentication if a TLS protocol has been selected.  In this case, the client will use this certificate/key pair to establish TLS listeners with the file uploaded to the [User Authentication](#user-auth) in the CA.  
+For a cloud destination, it will appear under [User Authentication](#user-auth) if a TLS protocol has been selected.  In this case, the SG Client will use this certificate/key pair to create TLS listeners, the On-prem app needs to add this certificate to its CA to communicate with the SG Client.
 
 ## Configuring Network Security
 To prevent all but specific IP addresses from connecting to your cloud hosts and ports, you can choose to enforce iptables rules on your on-premises destination.
