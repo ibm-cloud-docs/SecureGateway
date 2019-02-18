@@ -184,3 +184,4 @@ The {{site.data.keyword.SecureGateway}} DataPower Client is in the process of be
 - Full certificate chains with destination-side TLS are not supported prior to DataPower version 7.5.1.0
 - Cloud destinations are not supported prior to DataPower version 7.5.1.0
 - The log level can't be changed to TRACE level
+- The latest Secure Gateway version in DataPower is 1.8.0fp6, [for more info](./securegateway_install.html#installing-the-client)
