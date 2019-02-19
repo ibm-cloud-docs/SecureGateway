@@ -10,9 +10,10 @@ lastupdated: "2017-04-25"
 {:pre: .pre}
 
 # Uninstalling the Client
+{: #client-uninstall}
 
 ## Docker
-{: #docker}
+{: #docker-uninstall}
 
 To remove the {{site.data.keyword.SecureGateway}} Client Docker image, run the following command:
 
@@ -22,7 +23,7 @@ docker rmi ibmcom/secure-gateway-client
 {: pre}
 
 ## Mac OS X
-{: #mac}
+{: #mac-uninstall}
 
 To remove the {{site.data.keyword.SecureGateway}} Client from Mac OS X, run the following commands from the terminal:
 
@@ -33,7 +34,7 @@ rm -rf ./ibm
 {: codeblock}
 
 ## Linux
-{: #linux}
+{: #linux-uninstall}
 
 ### Ubuntu/PowerPC
 {: #debian-uninstall}
@@ -86,7 +87,7 @@ yum remove ibm-securegateway-client
 {: pre}
 
 ## Windows
-{: #windows}
+{: #windows-uninstall}
 
 There are two ways to remove Windows installation for {{site.data.keyword.SecureGateway}} client:
 

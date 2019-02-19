@@ -7,6 +7,7 @@ lastupdated: "2017-04-10"
 ---
 
 # Adding a Destination
+{: #add-dest}
 
 A destination is a definition of how to connect to a specific on-premises or cloud resource. Once the destination has been created, the {{site.data.keyword.SecureGateway}} servers will provide it with a unique public endpoint where it will listen for connections while the gateway is connected.
 
@@ -17,10 +18,12 @@ From within your new gateway and on the Destinations tab, click the Add Destinat
 The guided setup <b>does not</b> allow for the configuration of proxy information, server name indicators, or the upload of a destination-specific cert/key pair.  After creation, all fields are available via the Edit Destination panel.
 
 ## Guided Setup Panel
+{: #add-dest-guided-setup}
 
 ![Guided Setup](./images/guidedLanding.png?raw=true "Guided Setup landing panel")
 
 ## Advanced Setup Panel
+{: #add-dest-advanced-setup}
 
 ![Advanced Setup](./images/advancedLanding.png?raw=true "Advanced Setup landing panel")
 
@@ -30,24 +33,27 @@ The guided setup <b>does not</b> allow for the configuration of proxy informatio
 The first question to answer when creating your destination is where the resource resides that you need to connect to.
 
 ### On-premises Destination
+{: #dest-types-on-prem}
 The on-premises destination is for the use case where an application in the public space needs access to a restricted resource located on-premises.
 ![On Premises destination](./images/onPremDestination.png?raw=true "On-premises Destination")
 
 ### Cloud Destination
+{: #dest-types-on-cloud}
 The cloud destination is for the use case where an application located in a restricted network needs access to a resource that is available in a public space.
 ![Reverse Destination](./images/reverseDestination.png?raw=true "Cloud Destination")
 
 ## Defining your Destination
+{: #define-dest}
 For both types of destinations, the following information is required:
 
 - <b>Resource Hostname</b>: This is the IP or hostname of the resource you need to connect to.
 - <b>Resource Port</b>: This is the port that your resource is listening on.
-- <b>Protocol</b>: This is the type of connection your application will be making.  See the table below for the various [protocol options](#protocols).  For configuring the type of connection your resource is expecting, check the [Resource authentication](#resource-auth) section.
+- <b>Protocol</b>: This is the type of connection your application will be making.  See the table below for the various [protocol options](#protocols-options).  For configuring the type of connection your resource is expecting, check the [Resource authentication](#dest-resource-auth) section.
 
 If you have selected a cloud destination you will also need to provide a <b>Client Port</b>.  This is the port that the {{site.data.keyword.SecureGateway}} Client will listen on to allow connections to the associated resource hostname and port.
 
 ## Protocol options
-{: #protocols}
+{: #protocols-options}
 
 This table provides all of the available options for how your application can initiate connections/requests with {{site.data.keyword.SecureGateway}}.
 
@@ -62,38 +68,42 @@ HTTPS: Mutual Auth | TLS: Mutual Auth connection where the host header is rewrit
 
 
 ## Configuring Mutual Authentication
-{: #mutual-auth}
+{: #dest-mutual-auth}
 
 For protocols enforcing mutual authentication, you will need to upload your own certificate or the server will automatically create a self-signed certificate/key pair for your application to use.  This pair can be downloaded alongside the server certificate.
 ![Mutual Authentication Panels](./images/mutualAuth.png?raw=true "Mutual Authentication panels")
 
 ### User Authentication
-{: #user-auth}
+{: #dest-user-auth}
 
 The user authentication section is for managing the authorization of your requesting/connecting application with {{site.data.keyword.SecureGateway}}.  This field accepts a single certificate which should be the certificate your application will be presenting alongside any connection/request.
 
 ### Resource Authentication
-{: #resource-auth}
+{: #dest-resource-auth}
 
 Resource authentication determines how {{site.data.keyword.SecureGateway}} will attempt to connect to the defined resource.  Three options are available:  None, TLS (server-side), and Mutual Auth.  Depending on your choice, different authentication options become available.
 
 Enabling TLS on the connection to your resource is separate from the TLS used for User Authentication.  TLS for User Authentication secures the access between your initial requesting application and {{site.data.keyword.SecureGateway}} (e.g., between your {{site.data.keyword.Bluemix_notm}} app and the {{site.data.keyword.SecureGateway}} servers) while TLS for Resource Authentication secures the connection between {{site.data.keyword.SecureGateway}} and your defined resource (e.g., between the {{site.data.keyword.SecureGateway}} client and your on-premises database).
 
 #### Cloud/On-Premises Authentication
+{: #cloud-or-on-prem-auth}
 
-This option becomes available by selecting TLS or Mutual Auth for your [Resource Authentication](#resource-auth).  The name of the field will match the [type of destination](#dest-types) you have chosen.  This field allows for up to 6 certificates to be uploaded in order to validate the certificate of the resource you are connecting to.  These files will be added to the CA of connection to the resource and should contain the certificate or certificate chain that your resource will be presenting.
+This option becomes available by selecting TLS or Mutual Auth for your [Resource Authentication](#dest-resource-auth).  The name of the field will match the [type of destination](#dest-types) you have chosen.  This field allows for up to 6 certificates to be uploaded in order to validate the certificate of the resource you are connecting to.  These files will be added to the CA of connection to the resource and should contain the certificate or certificate chain that your resource will be presenting.
 
 #### Server Name Indicator (SNI)
-This option becomes available by selecting TLS or Mutual Auth for your [Resource Authentication](#resource-auth).  This is used to allow a separate hostname to be provided to the TLS handshake of the resource connection.
+{: #dest-sni}
+This option becomes available by selecting TLS or Mutual Auth for your [Resource Authentication](#dest-resource-auth).  This is used to allow a separate hostname to be provided to the TLS handshake of the resource connection.
 
 ### Client Certificate and Key
+{: #dest-client-cert-key}
 Where the Client Certificate and Key fields appears depends on the [type of destination](#dest-types) you have chosen.  In both situations, the files provided here will be used by the SG Client to identify itself for TLS connections.  If no files are uploaded, the {{site.data.keyword.SecureGateway}} servers will automatically generate a self-signed pair with a CN of `localhost`.  For instructions on how to generate a certificate/key pair, [click here](/docs/services/SecureGateway/securegateway_keygen.html).
 
-For an on-premises destination, it will appear under [Resource Authentication](#resource-auth) if `Resource Authentication: Mutual Auth` has been selected.  In this case, the SG Client will use this certificate/key pair for its outbound connection to the defined resource, the On-prem resource needs to add this certificate to its CA to communicate with the SG Client.
+For an on-premises destination, it will appear under [Resource Authentication](#dest-resource-auth) if `Resource Authentication: Mutual Auth` has been selected.  In this case, the SG Client will use this certificate/key pair for its outbound connection to the defined resource, the On-prem resource needs to add this certificate to its CA to communicate with the SG Client.
 
-For a cloud destination, it will appear under [User Authentication](#user-auth) if a TLS protocol has been selected.  In this case, the SG Client will use this certificate/key pair to create TLS listeners, the On-prem app needs to add this certificate to its CA to communicate with the SG Client.
+For a cloud destination, it will appear under [User Authentication](#dest-user-auth) if a TLS protocol has been selected.  In this case, the SG Client will use this certificate/key pair to create TLS listeners, the On-prem app needs to add this certificate to its CA to communicate with the SG Client.
 
 ## Configuring Network Security
+{: #dest-network-security}
 To prevent all but specific IP addresses from connecting to your cloud hosts and ports, you can choose to enforce iptables rules on your on-premises destination.
 ![Network Security Panel](./images/networkSecurity.png?raw=true "Network Security panel")
 
@@ -102,6 +112,7 @@ To enforce iptables rules, check the box <b>Restrict cloud access to this destin
 <b>Note</b>: The IPs or ports provided must be the external IP address that the {{site.data.keyword.SecureGateway}} servers will see, not the local IP address of the machine making the request.
 
 ### Adding iptables rules
+{: #dest-iptables}
 When adding rules to iptables, you can provide individual IPs or an IP range along with either a single port or a port range.  All ranges provided are inclusive.  The following table has some examples as well as how they will resolve within iptables:
 
 IP Addresses | Ports | Results
@@ -116,12 +127,14 @@ IP Addresses | Ports | Results
 Specific rules can also be associated with an application.  For more information on creating associated rules, see [how to create iptables rules for your app](/docs/services/SecureGateway/iptables.html).
 
 ## Configuring Proxy Options
+{: #dest-proxy}
 If your on-premises destination is located behind a SOCKS proxy, you can configure the proxy settings for your destination in the Proxy Options panel.
 ![Proxy Options Panel](./images/proxyOptions.png?raw=true "Proxy Options panel")
 
 To configure the proxy settings, you only need to provide the hostname and port that the proxy is listening on as well as the SOCKS protocol that is being used (4, 4a, 5).
 
 ## Destination Settings
+{: #dest-settings}
 Once your destination has been created, click the settings icon to see the following information:
 
 - The destination ID required to use the API.

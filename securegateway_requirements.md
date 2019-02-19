@@ -7,9 +7,10 @@ lastupdated: "2019-01-16"
 ---
 
 # Requirements to run the Client
+{: #client-requirements}
 
 ## System Requirements
-{: #system}
+{: #system-requirements}
 
 The Secure Gateway Client is supported in the following environments:
 
@@ -32,7 +33,7 @@ The Secure Gateway Client is supported in the following environments:
 <b>Note:</b> Only 64-bit environments are currently supported for native client installation.
 
 ## Network Requirements
-{: #network}
+{: #network-requirements}
 
 The Secure Gateway Client uses outbound port 443 and port 9000 to connect to npm registry and the {{site.data.keyword.Bluemix}} environment :
 - Port `443` for npm installation
@@ -67,11 +68,11 @@ If there's npm Enterprise server in your environment, please whitelist all of th
   The node of the SG gateway, which can be found in the configuration of the gateway. Since each gateway will not be on the same node, please confirm the hostname of the node every time you create the gateway
 
 
-Ensure you check or modify additional firewall and IP Table rules that might apply. However, we do not recommend setting rules by IP, rules should be set specific to host name and port as the IPs for gateway authentication and SG gateway are controlled by Bluemix and are subject to change. If your network administrators require current IPs for specific hostname, please [contact support to request these for your environment](/docs/services/SecureGateway/securegateway_troubleshooting.html#support).
+Ensure you check or modify additional firewall and IP Table rules that might apply. However, we do not recommend setting rules by IP, rules should be set specific to host name and port as the IPs for gateway authentication and SG gateway are controlled by Bluemix and are subject to change. If your network administrators require current IPs for specific hostname, please [contact support to request these for your environment](/docs/services/SecureGateway/securegateway_troubleshooting.html#getting-help-and-support).
 
 
 ## Determining Hardware Requirements
-{: #hardware}
+{: #hardware-requirements}
 
 The specifications of the machine running the Secure Gateway Client is largely dependent on the traffic that will be passing through each connection.  Each client instance is an individual process that provides up to 250 concurrent connections.  To estimate an average maximum that the machine would need to support, determine the average size of a transaction across the client (both request and response) and then scale that to 250 concurrent transactions.  Given that this number has combined both request and response sizes, the client should not exceed this memory footprint.  For more precise estimates, a mixture of request sizes and response sizes should be used to better simulate a real-world transaction scenario.
 

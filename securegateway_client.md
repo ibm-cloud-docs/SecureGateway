@@ -7,6 +7,7 @@ lastupdated: "2017-04-25"
 ---
 
 # Adding a Client
+{: #add-client}
 
 The {{site.data.keyword.SecureGateway}} Client is the piece of the puzzle that makes the magic happen.  The client establishes the initial connection between the on-premises network and a gateway on the {{site.data.keyword.SecureGateway}} servers and allows for communication to pass through to the defined destinations.
 

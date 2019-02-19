@@ -10,8 +10,10 @@ lastupdated: "2017-04-25"
 {:pre: .pre}
 
 # Cert/Key Management
+{: #cert-key-management}
 
 ## Generating a self-signed certifiate/key pair
+{: #self-signed-cert-gen}
 
 To generate a self-signed certificate/key pair, run the following command:
 
@@ -22,6 +24,7 @@ openssl req -new -newkey rsa:2048 -days 365 -nodes -x509 -keyout serverKey.pem -
 
 
 ## Uploading a cert/key pair to the browser
+{: #upload-cert-to-browser}
 
 To access a destination which enforcing mutual authentication, you must convert your cert/key pair to a PKCS#12 file and upload it to your browser.
 
