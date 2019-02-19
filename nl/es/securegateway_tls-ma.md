@@ -26,7 +26,7 @@ Voy a crear una nueva aplicación, por lo que no tengo ningún par de certificad
 Para que el cliente de Secure Gateway autentique el recurso al que se está conectando, tengo que proporcionar al cliente el certificado (o cadena de certificados) que el recurso presentará.  Mi recurso no tiene una cadena de certificados completa, por lo que solo tengo que cargar su certificado en el campo Autenticación local.  Este campo acepta hasta 6 archivos de certificados independientes (.pem, .cer, .der, .crt).
 
 ### Certificado y clave de cliente
-Si tengo que especificar cómo se identificará el cliente de Secure Gateway en mi recurso, puedo cargar un certificado y una clave aquí para que los utilice el cliente.  Puesto que el cliente y el recurso se ejecutan en la misma máquina, puedo dejar este campo vacío y dejar que los servidores de Secure Gateway generen un par automáticamente.  Si mi recurso estuviera en otro host, tendría que [generar un par de certificado/clave que cargar](./securegateway_keygen.html).
+Si tengo que especificar cómo se identificará el cliente de Secure Gateway en mi recurso, puedo cargar un certificado y una clave aquí para que los utilice el cliente.  Puesto que el cliente y el recurso se ejecutan en la misma máquina, puedo dejar este campo vacío y dejar que los servidores de Secure Gateway generen un par automáticamente.  Si mi recurso estuviera en otro host, tendría que [generar un par de certificado/clave que cargar](/docs/services/SecureGateway/securegateway_keygen.html).
 
 ![Autenticación mutua de TLS local](./images/localTLSma.png?raw=true "Autenticación mutua de TLS local")
 

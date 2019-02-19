@@ -87,7 +87,7 @@ Essa opção se torna disponível selecionando TLS ou Autenticação mútua para
 Essa opção se torna disponível selecionando TLS ou Autenticação mútua para a Autenticação do recurso. Isso é usado para permitir que um nome do host separado seja fornecido para o handshake TLS da conexão de recurso.
 
 ### Certificado de cliente e Chave
-O local em que os campos Certificado de cliente e Chave aparecem depende do [tipo de destino](#dest-types) escolhido. Em ambas as situações, os arquivos fornecidos aqui serão usados pelo cliente SG para identificar-se para conexões TLS. Se nenhum arquivo for transferido por upload, os servidores {{site.data.keyword.SecureGateway}} gerarão automaticamente um par autoassinado com um CN de `localhost`. Para obter instruções sobre como gerar um par certificado/chave, [clique aqui](./securegateway_keygen.html).
+O local em que os campos Certificado de cliente e Chave aparecem depende do [tipo de destino](#dest-types) escolhido. Em ambas as situações, os arquivos fornecidos aqui serão usados pelo cliente SG para identificar-se para conexões TLS. Se nenhum arquivo for transferido por upload, os servidores {{site.data.keyword.SecureGateway}} gerarão automaticamente um par autoassinado com um CN de `localhost`. Para obter instruções sobre como gerar um par certificado/chave, [clique aqui](/docs/services/SecureGateway/securegateway_keygen.html).
 
 Para um destino no local, ele aparecerá sob Autenticação do recurso se Autenticação do recurso: autenticação mútua tiver sido selecionada. Nesse caso, o cliente usará esse par certificado/chave para sua conexão de saída com o recurso definido. A CA dessa conexão conterá os certificados fornecidos no campo [Autenticação em nuvem/no local](#resource-auth).
 

@@ -47,7 +47,7 @@ Di norma utilizza due parametri, il tuo ID gateway {{site.data.keyword.SecureGat
 
 Il client {{site.data.keyword.SecureGateway}} supporta solo i comandi `pull` e `run` per la gestione del contenitore.
 
-Ritorna a [Introduzione - Aggiunta di un client](./securegateway_client.html).
+Ritorna a [Introduzione - Aggiunta di un client](/docs/services/SecureGateway/securegateway_client.html).
 
 ## Mac OS X
 {: #mac}
@@ -71,7 +71,7 @@ Potresti aver bisogno di privilegi amministrativi per eseguire questa installazi
 
 Per avviare il client, esegui il file `secgw.command` che si trova nell'ubicazione di installazione predefinita: `/Applications/ibm/`.
 
-Ritorna a [Introduzione - Aggiunta di un client](./securegateway_client.html).
+Ritorna a [Introduzione - Aggiunta di un client](/docs/services/SecureGateway/securegateway_client.html).
 
 ## Linux
 {: #linux}
@@ -188,7 +188,7 @@ License: http://www.ibm.com/software/sla/sladb.nsf/lilookup/986C7686F22D4D358525
 
    Il programma di installazione del client avvia e installa il client; creerà un file sgenvironment.conf in /etc/ibm.
 
-2. Facoltativo: se vuoi usare il processo upstart del sistema, devi modificare questo file e fornire quanto segue perché il client venga avviato correttamente. Vedi la sezione relativa all'[utilizzo di upstart](./securegateway_auto-start.html#linux) per ulteriori informazioni sulla modifica di questo file di configurazione.
+2. Facoltativo: se vuoi usare il processo upstart del sistema, devi modificare questo file e fornire quanto segue perché il client venga avviato correttamente. Vedi la sezione relativa all'[utilizzo di upstart](/docs/services/SecureGateway/securegateway_auto-start.html#linux) per ulteriori informazioni sulla modifica di questo file di configurazione.
 
 3. Se hai avviato il client usando upstart, controlla il file di log per assicurarti che sia in esecuzione correttamente.
 
@@ -218,7 +218,7 @@ node lib/secgwclient.js <gateway ID> -t <security token>
 
 Di norma utilizza due parametri, un ID gateway {{site.data.keyword.SecureGateway}} e il token di sicurezza del gateway, entrambi disponibili mediante il dashboard {{site.data.keyword.SecureGateway}}.
 
-Ritorna a [Introduzione - Aggiunta di un client](./securegateway_client.html).
+Ritorna a [Introduzione - Aggiunta di un client](/docs/services/SecureGateway/securegateway_client.html).
 
 ## Windows
 {: #windows}
@@ -265,12 +265,12 @@ In alternativa, vai a `<Installation_directory>\ibm\securegateway\client` e fai 
 
 <b>Nota:</b>puoi scegliere di utilizzare la configurazione archiviata nel file `<Installation_directory>\ibm\securegateway\client\securegw_service.config` o fornire i dettagli in modo interattivo.
 
-Ritorna a [Introduzione - Aggiunta di un client](./securegateway_client.html).
+Ritorna a [Introduzione - Aggiunta di un client](/docs/services/SecureGateway/securegateway_client.html).
 
 ## DataPower
 {: #datapower}
 
-DataPower ha una versione integrata del client {{site.data.keyword.SecureGateway}}.  A seconda della versione di DataPower, potresti avere una versione differente del client {{site.data.keyword.SecureGateway}}.  Tieni presente le eventuali [limitazioni del client DataPower](./securegateway_interaction.html#limits-datapower) applicabili. Se utilizzi il vecchio client Secure Gateway, potresti riscontrare degli errori imprevisti.
+DataPower ha una versione integrata del client {{site.data.keyword.SecureGateway}}.  A seconda della versione di DataPower, potresti avere una versione differente del client {{site.data.keyword.SecureGateway}}.  Tieni presente le eventuali [limitazioni del client DataPower](/docs/services/SecureGateway/securegateway_interaction.html#limits-datapower) applicabili. Se utilizzi il vecchio client Secure Gateway, potresti riscontrare degli errori imprevisti.
 
 | Versione di DataPower | Versione del client {{site.data.keyword.SecureGateway}}  |
 | -- | --  |
@@ -288,4 +288,4 @@ DataPower ha una versione integrata del client {{site.data.keyword.SecureGateway
 3. Fai clic su `Add` per configurare una nuova connessione client
 4. Fornisci un nome (Name), l'ID gateway (Gateway ID) e il token di sicurezza (Security Token) (se applicabile) e applica quindi le modifiche.
 
-Ritorna a [Introduzione - Aggiunta di un client](./securegateway_client.html).
+Ritorna a [Introduzione - Aggiunta di un client](/docs/services/SecureGateway/securegateway_client.html).

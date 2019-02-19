@@ -136,7 +136,7 @@ vi /etc/ibm/sgenvironment.conf
 
 이러한 단계가 실행되면 YasT 및 systemV 명령을 사용하여 디먼을 시작/중지할 수 있습니다.
 
-[시작하기 - 클라이언트 추가](./securegateway_client.html)로 돌아가십시오.
+[시작하기 - 클라이언트 추가](/docs/services/SecureGateway/securegateway_client.html)로 돌아가십시오.
 
 ## Windows
 {: #windows}
@@ -178,4 +178,4 @@ Windows 서비스에 대한 애플리케이션 로그는 다음 위치에 저장
 
  로그는 매일 새 파일로 합쳐집니다.
 
-[시작하기 - 클라이언트 추가](./securegateway_client.html)로 돌아가십시오.
+[시작하기 - 클라이언트 추가](/docs/services/SecureGateway/securegateway_client.html)로 돌아가십시오.

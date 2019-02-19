@@ -17,6 +17,6 @@ El servicio {{site.data.keyword.SecureGatewayfull}} proporciona una solución r�
 
 Después de crear una instancia del servicio {{site.data.keyword.SecureGateway}}, conéctese con unos pocos pasos.
 
-1. [Añada una pasarela](./securegateway_gateway.html).
-2. [Añada un cliente](./securegateway_client.html).
-3. [Añada un destino](./securegateway_destination.html).
+1. [Añada una pasarela](/docs/services/SecureGateway/securegateway_gateway.html).
+2. [Añada un cliente](/docs/services/SecureGateway/securegateway_client.html).
+3. [Añada un destino](/docs/services/SecureGateway/securegateway_destination.html).

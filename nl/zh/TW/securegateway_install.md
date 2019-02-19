@@ -45,7 +45,7 @@ docker run -it ibmcom/secure-gateway-client <gateway ID> -t <security token>
 
 「{{site.data.keyword.SecureGateway}} 用戶端」只支援用於操作容器的 `pull` 及 `run` 指令。
 
-回到[開始使用 - 新增用戶端](./securegateway_client.html)。
+回到[開始使用 - 新增用戶端](/docs/services/SecureGateway/securegateway_client.html)。
 
 ## Mac OS X
 {: #mac}
@@ -69,7 +69,7 @@ docker run -it ibmcom/secure-gateway-client <gateway ID> -t <security token>
 
 若要啟動用戶端，請執行位於預設安裝位置 `/Applications/ibm/` 的 `secgw.command` 檔案。
 
-回到[開始使用 - 新增用戶端](./securegateway_client.html)。
+回到[開始使用 - 新增用戶端](/docs/services/SecureGateway/securegateway_client.html)。
 
 ## Linux
 {: #linux}
@@ -178,7 +178,7 @@ License: http://www.ibm.com/software/sla/sladb.nsf/lilookup/986C7686F22D4D358525
 
    用戶端安裝程式會啟動並安裝用戶端，並在 /etc/ibm 中建立 sgenvironment.conf 檔案。
 
-2. 選用項目：如果您要使用系統的 Upstart 處理程序，則必須編輯此檔案並提供下列內容，用戶端才能正確啟動。如需編輯此配置檔的相關資訊，請參閱[使用 Upstart](./securegateway_auto-start.html#linux)。
+2. 選用項目：如果您要使用系統的 Upstart 處理程序，則必須編輯此檔案並提供下列內容，用戶端才能正確啟動。如需編輯此配置檔的相關資訊，請參閱[使用 Upstart](/docs/services/SecureGateway/securegateway_auto-start.html#linux)。
 
 3. 如果您已使用 Upstart 來啟動用戶端，請檢查日誌檔，確定其正確執行中。
 
@@ -207,7 +207,7 @@ node lib/secgwclient.js <gateway ID> -t <security token>
 
 通常，它會接受兩個參數：{{site.data.keyword.SecureGateway}} 閘道 ID 及閘道的安全記號，這兩者都可以透過「{{site.data.keyword.SecureGateway}} 儀表板」取得。
 
-回到[開始使用 - 新增用戶端](./securegateway_client.html)。
+回到[開始使用 - 新增用戶端](/docs/services/SecureGateway/securegateway_client.html)。
 
 ## Windows
 {: #windows}
@@ -252,12 +252,12 @@ secgw.cmd
 
 <b>附註：</b>您可以選擇使用 `<Installation_directory>\ibm\securegateway\client\securegw_service.config` 檔案中所儲存的配置，或以互動方式提供詳細資料。
 
-回到[開始使用 - 新增用戶端](./securegateway_client.html)。
+回到[開始使用 - 新增用戶端](/docs/services/SecureGateway/securegateway_client.html)。
 
 ## DataPower
 {: #datapower}
 
-DataPower 具有內嵌版的「{{site.data.keyword.SecureGateway}} 用戶端」。視 DataPower 版本而定，您可能有不同的「{{site.data.keyword.SecureGateway}} 用戶端」版本。請注意任何適用的 [DataPower 用戶端限制](./securegateway_interaction.html#limits-datapower)。使用舊的「Secure Gateway 用戶端」可能會遇到非預期的錯誤。
+DataPower 具有內嵌版的「{{site.data.keyword.SecureGateway}} 用戶端」。視 DataPower 版本而定，您可能有不同的「{{site.data.keyword.SecureGateway}} 用戶端」版本。請注意任何適用的 [DataPower 用戶端限制](/docs/services/SecureGateway/securegateway_interaction.html#limits-datapower)。使用舊的「Secure Gateway 用戶端」可能會遇到非預期的錯誤。
 
 | DataPower 版本 | {{site.data.keyword.SecureGateway}} 用戶端版本 |
 | -- | --  |
@@ -275,4 +275,4 @@ DataPower 具有內嵌版的「{{site.data.keyword.SecureGateway}} 用戶端」�
 3. 按一下`新增`，以配置新的用戶端連線。
 4. 提供「名稱」、「閘道 ID」及「安全記號」（適用時），然後套用變更。
 
-回到[開始使用 - 新增用戶端](./securegateway_client.html)。
+回到[開始使用 - 新增用戶端](/docs/services/SecureGateway/securegateway_client.html)。

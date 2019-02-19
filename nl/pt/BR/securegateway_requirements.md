@@ -57,7 +57,7 @@ Se houver o servidor npm Enterprise em seu ambiente, inclua na lista de desbloqu
 
 
 Assegure-se de verificar ou modificar
-regras adicionais de firewall e de Tabela de IP que possam se aplicar. Se os seus administradores de rede requerem IPs específicos, [entre em contato com o suporte para solicitá-los para seu ambiente](./securegateway_troubleshooting.html#support).
+regras adicionais de firewall e de Tabela de IP que possam se aplicar. Se os seus administradores de rede requerem IPs específicos, [entre em contato com o suporte para solicitá-los para seu ambiente](/docs/services/SecureGateway/securegateway_troubleshooting.html#support).
 
 
 ## Determinando requisitos de hardware

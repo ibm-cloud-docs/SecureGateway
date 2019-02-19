@@ -45,7 +45,7 @@ acl allow :
 
 `show acl` 명령은 현재 설정되어 있는 ACL을 보여주거나 전체 설정에 대한 메시지를 제공합니다.
 
-[시작하기 - 클라이언트 추가](./securegateway_client.html)로 돌아가십시오.
+[시작하기 - 클라이언트 추가](/docs/services/SecureGateway/securegateway_client.html)로 돌아가십시오.
 
 ## ACL을 사용한 HTTP/S 라우트 제어
 {: #routes}
@@ -81,9 +81,9 @@ no acl
 
 <b>참고:</b> 다른 매개변수 없이 `no acl`을 사용하는 경우 ACL 테이블이 재설정되고 액세스 권한이 DENY ALL로 설정됩니다.
 
-[여기](./securegateway_acl-file.html)에서 샘플 ACL 파일을 찾을 수 있습니다.
+[여기](/docs/services/SecureGateway/securegateway_acl-file.html)에서 샘플 ACL 파일을 찾을 수 있습니다.
 
-[시작하기 - 클라이언트 추가](./securegateway_client.html)로 돌아가십시오.
+[시작하기 - 클라이언트 추가](/docs/services/SecureGateway/securegateway_client.html)로 돌아가십시오.
 
 ## ACL 파일을 {{site.data.keyword.SecureGateway}} Docker 클라이언트에 복사
 {: #docker}
@@ -155,4 +155,4 @@ cli> S
 ```
 {: screen}
 
-[시작하기 - 클라이언트 추가](./securegateway_client.html)로 돌아가십시오.
+[시작하기 - 클라이언트 추가](/docs/services/SecureGateway/securegateway_client.html)로 돌아가십시오.

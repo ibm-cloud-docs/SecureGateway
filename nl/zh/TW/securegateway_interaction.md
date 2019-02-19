@@ -79,7 +79,7 @@ node lib/secgwclient.js <myGatewayID_1> <myGatewayID_2> -t none--<token for gate
 ```
 {: pre}
 
-回到[開始使用 - 新增用戶端](./securegateway_client.html)。
+回到[開始使用 - 新增用戶端](/docs/services/SecureGateway/securegateway_client.html)。
 
 ## 互動式配置
 {: #interactive}
@@ -117,9 +117,9 @@ node lib/secgwclient.js <myGatewayID_1> <myGatewayID_2> -t none--<token for gate
 
 <b>附註：</b>如果已使用 `select` 指令指定連線，並在未提供工作者節點 ID 的情況下呼叫另一個指令，則會嘗試對 `select` 所指定的連線執行指令。
 
-如需配置「存取控制清單」的詳細資料，[請按一下這裡](./securegateway_acl.html)。
+如需配置「存取控制清單」的詳細資料，[請按一下這裡](/docs/services/SecureGateway/securegateway_acl.html)。
 
-回到[開始使用 - 新增用戶端](./securegateway_client.html)。
+回到[開始使用 - 新增用戶端](/docs/services/SecureGateway/securegateway_client.html)。
 
 ## 用戶端使用者介面
 {: #ui}
@@ -158,7 +158,7 @@ node lib/secgwclient.js <myGatewayID_1> <myGatewayID_2> -t none--<token for gate
 
 此頁面將顯示選取之用戶端（顯示在頁面右上方）的現行連線資訊。在這裡可以看到閘道說明、現行連線數及反向目的地接聽器之類的資訊。
 
-回到[開始使用 - 新增用戶端](./securegateway_client.html)。
+回到[開始使用 - 新增用戶端](/docs/services/SecureGateway/securegateway_client.html)。
 
 ## 遠端用戶端終止
 {: #remote}

@@ -40,7 +40,7 @@ You might want to disable a destination or gateway for one of the following reas
 - You do not want the service to be available to users because you are making some updates to the service.  In this case, you might temporarily disable the necessary gateways and wait for the service to be updated.
 - You have set up all your gateways and destinations on the front end, but your backend is still building.  In this case, you would disable your gateways or destinations until the backend build is complete.
 
-For more information on disabling a gateway or a destination, see [how to manage your Secure Gateway service instance](./securegateway_managing.html).
+For more information on disabling a gateway or a destination, see [how to manage your Secure Gateway service instance](/docs/services/SecureGateway/securegateway_managing.html).
 
 ## What is the recommended approach to creation automation across multiple spaces?
 {: #automation-spaces}
@@ -50,7 +50,7 @@ A customer environment has one org and three spaces.  One space is for developme
 
 ### Answer
 
-- You can create a single Secure Gateway instance for all three spaces.  However, you must remember the gateway and destination [limitations for your specific plan](./securegateway_plans.html).
+- You can create a single Secure Gateway instance for all three spaces.  However, you must remember the gateway and destination [limitations for your specific plan](/docs/services/SecureGateway/securegateway_plans.html).
 - There are no additional considerations for reusing a Node.js application as no service bindings are required by Secure Gateway.
 
 
@@ -62,7 +62,7 @@ A customer environment has three orgs: one for development, one for staging, and
 
 ### Answer
 
-- You are not required to have a Secure Gateway service instance in each org.  You could have an instance in one org and use the gateways within that instance from all of your other environments.  With this setup, you must remember the gateway and destination [limitations for your specific plan](./securegateway_plans.html).
+- You are not required to have a Secure Gateway service instance in each org.  You could have an instance in one org and use the gateways within that instance from all of your other environments.  With this setup, you must remember the gateway and destination [limitations for your specific plan](/docs/services/SecureGateway/securegateway_plans.html).
 - You can have a Secure Gateway service instance in each org and the configuration will be available to all your spaces.
 
 ## Does my app need to be in the same space?
@@ -155,17 +155,17 @@ What are the recommended configurations to make my connections more secure?
 ### Answer
 
 #### Use Mutual Authentication
-Enable Mutual Authentication for both sides of on-premise destinations makes Secure Gateway more secure. On User Authentication side, enable mutual authentication to restrict the access of Secure Gateway cloud node by authenticating using a client certificate when the request is over TLS/HTTPS. On Resource Authentication side, enable mutual authentication to provide appropriate credential when connecting to destination endpoint, and ensure secure/encrypted access to on-premise resource. Please see [Configuring Mutual Authentication](./securegateway_destination.html#mutual-auth) and [Node.js TLS Mutual Authentication](./securegateway_tls-ma.html#node-js-tls-mutual-authentication) for more information.
+Enable Mutual Authentication for both sides of on-premise destinations makes Secure Gateway more secure. On User Authentication side, enable mutual authentication to restrict the access of Secure Gateway cloud node by authenticating using a client certificate when the request is over TLS/HTTPS. On Resource Authentication side, enable mutual authentication to provide appropriate credential when connecting to destination endpoint, and ensure secure/encrypted access to on-premise resource. Please see [Configuring Mutual Authentication](/docs/services/SecureGateway/securegateway_destination.html#mutual-auth) and [Node.js TLS Mutual Authentication](/docs/services/SecureGateway/securegateway_tls-ma.html#node-js-tls-mutual-authentication) for more information.
 
 #### Set IP Table Rules (For on-premise destination)
 The Secure Gateway cloud host and port of an on-premise destination is in the public space; therefore it is allowed everyone to access by default.
-To control the traffic accessing on Secure Gateway, set iptables rules to only allow access by a specific range of IPs and ports to secure on-premise resources. Please see [IP Table Rules](./securegateway_destination.html#configuring-network-security) for more information about how to configure the iptables rules on Secure Gateway.
+To control the traffic accessing on Secure Gateway, set iptables rules to only allow access by a specific range of IPs and ports to secure on-premise resources. Please see [IP Table Rules](/docs/services/SecureGateway/securegateway_destination.html#configuring-network-security) for more information about how to configure the iptables rules on Secure Gateway.
 
 #### Configure Access Control List (For on-premise destination)
-Configure Access Control List support to allow or restrict access to on-premises resources would make the on-premises destinations more secure by specifying the access right on the specific destination host and port. It is recommended to define the allowed or restricted HTTP/S routes on the ACL entries as well to enhance the security of on-premises destination. Please see [Access Control List](./securegateway_acl.html#access-control-list) and [HTTP/S Route Control using the ACL](./securegateway_acl.html#routes) for more information.
+Configure Access Control List support to allow or restrict access to on-premises resources would make the on-premises destinations more secure by specifying the access right on the specific destination host and port. It is recommended to define the allowed or restricted HTTP/S routes on the ACL entries as well to enhance the security of on-premises destination. Please see [Access Control List](/docs/services/SecureGateway/securegateway_acl.html#access-control-list) and [HTTP/S Route Control using the ACL](/docs/services/SecureGateway/securegateway_acl.html#routes) for more information.
 
 #### Set password on the Secure Gateway Client UI
-It is recommended to set the UI password to restrict the access of the Secure Gateway Client UI. Please see [Interacting with the Client](./securegateway_interaction.html#interacting-with-the-client) for more details about how to set the password using startup configuration or interactive commands on Secure Gateway Client terminal command line.
+It is recommended to set the UI password to restrict the access of the Secure Gateway Client UI. Please see [Interacting with the Client](/docs/services/SecureGateway/securegateway_interaction.html#interacting-with-the-client) for more details about how to set the password using startup configuration or interactive commands on Secure Gateway Client terminal command line.
 
 ## What is gateway migration? Why the domain is changed after 2018 December?
 {: #gateway-migration}

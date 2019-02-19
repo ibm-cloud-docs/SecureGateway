@@ -40,7 +40,7 @@ Es kann aus den folgenden Gründen sinnvoll sein, ein Ziel oder Gateway zu inakt
 - Der Service soll für die Benutzer nicht verfügbar sein, weil Sie gerade Aktualisierungen am Service vornehmen. In diesem Fall können Sie die erforderlichen Gateways vorübergehend inaktivieren und warten, bis der Service aktualisiert wurde.
 - Sie haben alle Gateways und Ziele am Front-End eingerichtet, aber das Back-End wurde noch nicht erstellt. In diesem Fall ist es sinnvoll, die Gateways oder Ziele zu inaktivieren und erst dann zu aktivieren, wenn die Erstellung des Back-Ends abgeschlossen ist.
 
-Weitere Informationen zum Inaktivieren eines Gateways oder Ziels finden Sie unter [Vorgehensweise zum Verwalten der Secure Gateway-Serviceinstanz](./securegateway_managing.html).
+Weitere Informationen zum Inaktivieren eines Gateways oder Ziels finden Sie unter [Vorgehensweise zum Verwalten der Secure Gateway-Serviceinstanz](/docs/services/SecureGateway/securegateway_managing.html).
 
 ## Welcher Ansatz wird für die Erstellungsautomatisierung für mehrere Bereiche empfohlen?
 {: #automation-spaces}
@@ -50,7 +50,7 @@ Eine Kundenumgebung verfügt über eine Organisation und drei Bereiche. Ein Bere
 
 ### Antwort
 
-- Sie können für alle drei Bereiche eine einzige Secure Gateway-Instanz erstellen. Sie müssen hierbei jedoch die [Einschränkungen für den jeweiligen Plan](./securegateway_plans.html) in Bezug auf Gateways und Ziele berücksichtigen.
+- Sie können für alle drei Bereiche eine einzige Secure Gateway-Instanz erstellen. Sie müssen hierbei jedoch die [Einschränkungen für den jeweiligen Plan](/docs/services/SecureGateway/securegateway_plans.html) in Bezug auf Gateways und Ziele berücksichtigen.
 - Hinsichtlich einer Wiederverwendung der Node.js-Anwendung müssen keine weiteren Überlegungen berücksichtigt werden, da für Secure Gateway keine Servicebindungen erforderlich sind.
 
 
@@ -62,7 +62,7 @@ Eine Kundenumgebung weist drei Organisationen auf: eine für die Entwicklung, ei
 
 ### Antwort
 
-- Es muss nicht in jeder Secure Gateway-Serviceinstanz eine Organisation vorhanden sein. In einer Organisation kann eine Instanz vorhanden sein und Sie können die Gateways in dieser Instanz von allen anderen Umgebungen aus verwenden. Bei Verwendung dieser Konfiguration müssen Sie jedoch die [Einschränkungen für den jeweiligen Plan](./securegateway_plans.html) in Bezug auf Gateways und Ziele berücksichtigen.
+- Es muss nicht in jeder Secure Gateway-Serviceinstanz eine Organisation vorhanden sein. In einer Organisation kann eine Instanz vorhanden sein und Sie können die Gateways in dieser Instanz von allen anderen Umgebungen aus verwenden. Bei Verwendung dieser Konfiguration müssen Sie jedoch die [Einschränkungen für den jeweiligen Plan](/docs/services/SecureGateway/securegateway_plans.html) in Bezug auf Gateways und Ziele berücksichtigen.
 - In einzelnen Organisation kann eine Secure Gateway-Serviceinstanz vorhanden sein und die Konfiguration ist in allen Bereichen verfügbar.
 
 ## Muss sich meine App in demselben Bereich befinden?
@@ -155,13 +155,13 @@ Welche Konfigurationen werden zum Schützen von Verbindungen empfohlen?
 ### Antwort
 
 #### Gegenseitige Authentifizierung verwenden
-Die Aktivierung der gegenseitigen Authentifizierung für beide Seiten der lokalen Ziele erhöht die Sicherheit in Secure Gateway. Aktivieren Sie auf der Seite 'Benutzerauthentifizierung' die gegenseitige Authentifizierung, um den Zugriff auf den Secure Gateway-Cloudknoten durch die Authentifizierung mithilfe eines Clientzertifikats zu beschränken, wenn die Anforderung über TLS/HTTPS gesendet wird. Aktivieren Sie auf der Seite 'Ressourcenauthentifizierung' die gegenseitige Authentifizierung, um einen entsprechenden Berechtigungsnachweis bereitzustellen, wenn eine Verbindung zum Zielendpunkt hergestellt wird, und stellen Sie den sicheren bzw. verschlüsselten Zugriff auf die lokale Ressource sicher. Weitere Informationen finden Sie in [Gegenseitige Authentifizierung konfigurieren](./securegateway_destination.html#mutual-auth) und [Gegenseitige TLS-Authentifizierung mit Node.js](./securegateway_tls-ma.html#node-js-tls-mutual-authentication).
+Die Aktivierung der gegenseitigen Authentifizierung für beide Seiten der lokalen Ziele erhöht die Sicherheit in Secure Gateway. Aktivieren Sie auf der Seite 'Benutzerauthentifizierung' die gegenseitige Authentifizierung, um den Zugriff auf den Secure Gateway-Cloudknoten durch die Authentifizierung mithilfe eines Clientzertifikats zu beschränken, wenn die Anforderung über TLS/HTTPS gesendet wird. Aktivieren Sie auf der Seite 'Ressourcenauthentifizierung' die gegenseitige Authentifizierung, um einen entsprechenden Berechtigungsnachweis bereitzustellen, wenn eine Verbindung zum Zielendpunkt hergestellt wird, und stellen Sie den sicheren bzw. verschlüsselten Zugriff auf die lokale Ressource sicher. Weitere Informationen finden Sie in [Gegenseitige Authentifizierung konfigurieren](/docs/services/SecureGateway/securegateway_destination.html#mutual-auth) und [Gegenseitige TLS-Authentifizierung mit Node.js](/docs/services/SecureGateway/securegateway_tls-ma.html#node-js-tls-mutual-authentication).
 
 #### Regeln für IP-Tabelle festlegen (für lokales Ziel)
-Da sich Host und Port der Secure Gateway-Cloud eines lokalen Ziels im öffentlichen Bereich befinden, ist der Zugriff standardmäßig nicht begrenzt. Wenn Sie den Datenverkehr kontrollieren möchten, über den auf Secure Gateway zugegriffen wird, legen Sie iptable-Regeln fest, damit nur von bestimmten IPs und Ports aus zugegriffen werden kann, um die lokalen Ressourcen zu schützen. Weitere Informationen zum Konfigurieren der iptable-Regeln für Secure Gateway finden Sie in [IP-Tabellenregeln](./securegateway_destination.html#configuring-network-security).
+Da sich Host und Port der Secure Gateway-Cloud eines lokalen Ziels im öffentlichen Bereich befinden, ist der Zugriff standardmäßig nicht begrenzt. Wenn Sie den Datenverkehr kontrollieren möchten, über den auf Secure Gateway zugegriffen wird, legen Sie iptable-Regeln fest, damit nur von bestimmten IPs und Ports aus zugegriffen werden kann, um die lokalen Ressourcen zu schützen. Weitere Informationen zum Konfigurieren der iptable-Regeln für Secure Gateway finden Sie in [IP-Tabellenregeln](/docs/services/SecureGateway/securegateway_destination.html#configuring-network-security).
 
 #### Zugriffssteuerungsliste konfigurieren (für lokales Ziel)
-Konfigurieren Sie die Unterstützung für die Zugriffssteuerungsliste, um den Zugriff auf lokale Ressourcen zu erteilen oder zu beschränken; durch das Angeben einer Zugriffsberechtigung für Host und Port eines bestimmten Ziels werden die lokalen Ziele sicherer. Es wird empfohlen, die zulässigen oder einschränkten HTTP- bzw. HTTPS-Routen in den ACL-Einträgen zu definieren, um die Sicherheit von lokalen Zielen zu erhöhen. Weitere Informationen hierzu finden Sie in [Zugriffssteuerungsliste](./securegateway_acl.html#access-control-list) und [HTTP- und HTTPS-Routensteuerung mithilfe der Zugriffssteuerungsliste](./securegateway_acl.html#routes).
+Konfigurieren Sie die Unterstützung für die Zugriffssteuerungsliste, um den Zugriff auf lokale Ressourcen zu erteilen oder zu beschränken; durch das Angeben einer Zugriffsberechtigung für Host und Port eines bestimmten Ziels werden die lokalen Ziele sicherer. Es wird empfohlen, die zulässigen oder einschränkten HTTP- bzw. HTTPS-Routen in den ACL-Einträgen zu definieren, um die Sicherheit von lokalen Zielen zu erhöhen. Weitere Informationen hierzu finden Sie in [Zugriffssteuerungsliste](/docs/services/SecureGateway/securegateway_acl.html#access-control-list) und [HTTP- und HTTPS-Routensteuerung mithilfe der Zugriffssteuerungsliste](/docs/services/SecureGateway/securegateway_acl.html#routes).
 
 #### Kennwort für Secure Gateway-Clientbenutzerschnittstelle festlegen
-Es wird empfohlen, ein Benutzerschnittstellenkennwort festzulegen, um den Zugriff auf die Benutzerschnittstelle des Secure Gateway-Clients zu beschränken. Weitere Details um Festlegen des Kennworts mithilfe der Startkonfiguration oder interaktiver Befehle in der Terminalbefehlszeile des Secure Gateway-Clients finden Sie in [Interaktion mit dem Client](./securegateway_interaction.html#interacting-with-the-client).
+Es wird empfohlen, ein Benutzerschnittstellenkennwort festzulegen, um den Zugriff auf die Benutzerschnittstelle des Secure Gateway-Clients zu beschränken. Weitere Details um Festlegen des Kennworts mithilfe der Startkonfiguration oder interaktiver Befehle in der Terminalbefehlszeile des Secure Gateway-Clients finden Sie in [Interaktion mit dem Client](/docs/services/SecureGateway/securegateway_interaction.html#interacting-with-the-client).

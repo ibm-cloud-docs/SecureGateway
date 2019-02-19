@@ -17,6 +17,6 @@ lastupdated: "2017-04-10"
 
 {{site.data.keyword.SecureGateway}} 서비스의 인스턴스를 작성한 후 몇 단계만 더 수행하면 연결됩니다.
 
-1. [게이트웨이 추가](./securegateway_gateway.html)
-2. [클라이언트 추가](./securegateway_client.html)
-3. [대상 추가](./securegateway_destination.html)
+1. [게이트웨이 추가](/docs/services/SecureGateway/securegateway_gateway.html)
+2. [클라이언트 추가](/docs/services/SecureGateway/securegateway_client.html)
+3. [대상 추가](/docs/services/SecureGateway/securegateway_destination.html)

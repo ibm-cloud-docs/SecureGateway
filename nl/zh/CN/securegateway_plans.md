@@ -13,7 +13,7 @@ lastupdated: "2018-08-10"
 ![分层套餐模型](./images/planDetails.png?raw=true "分层套餐模型")
 
 ## 更改套餐
-更改套餐时，新套餐会被视为升级或降级。这由每个套餐所允许的缺省网关数来确定（例如，从 Professional (5) 更改为 Enterprise (25) 是升级）。升级时，不会中断服务；但是，降级会将所有网关更新为[不活动](./securegateway_faq.html#states)，这需要您在复原服务之前重新激活网关和目标（不超过新的套餐限制）。
+更改套餐时，新套餐会被视为升级或降级。这由每个套餐所允许的缺省网关数来确定（例如，从 Professional (5) 更改为 Enterprise (25) 是升级）。升级时，不会中断服务；但是，降级会将所有网关更新为[不活动](/docs/services/SecureGateway/securegateway_faq.html#states)，这需要您在复原服务之前重新激活网关和目标（不超过新的套餐限制）。
 
 <b>注</b>：从标准套餐转换为任何新套餐时，都会被视为降级。
 

@@ -136,7 +136,7 @@ vi /etc/ibm/sgenvironment.conf
 
 執行這些步驟之後，可以使用 YasT 及 System V 指令來啟動/停止常駐程式。
 
-回到[開始使用 - 新增用戶端](./securegateway_client.html)。
+回到[開始使用 - 新增用戶端](/docs/services/SecureGateway/securegateway_client.html)。
 
 ## Windows
 {: #windows}
@@ -178,4 +178,4 @@ Windows 服務的應用程式日誌將儲存在：
 
  日誌會每日合成為一個新的檔案。
 
-回到[開始使用 - 新增用戶端](./securegateway_client.html)。
+回到[開始使用 - 新增用戶端](/docs/services/SecureGateway/securegateway_client.html)。

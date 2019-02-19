@@ -79,7 +79,7 @@ node lib/secgwclient.js <myGatewayID_1> <myGatewayID_2> -t none--<token for gate
 ```
 {: pre}
 
-Kehren Sie zu [Einführung - Client hinzufügen](./securegateway_client.html) zurück.
+Kehren Sie zu [Einführung - Client hinzufügen](/docs/services/SecureGateway/securegateway_client.html) zurück.
 
 ## Interaktive Konfiguration
 {: #interactive}
@@ -117,9 +117,9 @@ Der {{site.data.keyword.SecureGateway}}-Client verfügt zur leichteren Konfigura
 
 <b>Anmerkung:</b> Wenn eine Verbindung mit dem Befehl `select` angegeben wurde und ein weiterer Befehl ohne Angabe der Worker-ID aufgerufen wird, wird versucht, den Befehl für die Verbindung auszuführen, die mithilfe von `select` angegeben wurde.
 
-Weitere Informationen zum Konfigurieren der Zugriffssteuerungsliste erhalten Sie, wenn Sie [hier klicken](./securegateway_acl.html).
+Weitere Informationen zum Konfigurieren der Zugriffssteuerungsliste erhalten Sie, wenn Sie [hier klicken](/docs/services/SecureGateway/securegateway_acl.html).
 
-Kehren Sie zu [Einführung - Client hinzufügen](./securegateway_client.html) zurück.
+Kehren Sie zu [Einführung - Client hinzufügen](/docs/services/SecureGateway/securegateway_client.html) zurück.
 
 ## Clientbenutzerschnittstelle
 {: #ui}
@@ -158,7 +158,7 @@ Auf dieser Seite können Sie die Zugriffssteuerungsliste für den ausgewählten 
 
 Auf dieser Seite werden die aktuellen Verbindungsinformationen für den ausgewählten Client (der in der rechten oberen Ecke der Seite angezeigt wird) angezeigt. Hier werden Informationen wie die Beschreibung des Gateways, die Anzahl der aktuellen Verbindungen und die Listener für umgekehrte Verbindungen angezeigt.
 
-Kehren Sie zu [Einführung - Client hinzufügen](./securegateway_client.html) zurück.
+Kehren Sie zu [Einführung - Client hinzufügen](/docs/services/SecureGateway/securegateway_client.html) zurück.
 
 ## Beendigung des fernen Clients
 {: #remote}

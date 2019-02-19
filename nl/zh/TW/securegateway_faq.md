@@ -40,7 +40,7 @@ Secure Gateway 服務支援 TLS 1.2 版。
 - 您不想要讓使用者能夠使用服務，因為您正在對服務進行一些更新。在此情況下，您可能會暫時停用必要的閘道，並等待更新服務。
 - 您已設定前端的所有閘道及目的地，但仍在建置後端。在此情況下，您將在後端建置完成之前先停用閘道或目的地。
 
-如需停用閘道或目的地的相關資訊，請參閱[如何管理 Secure Gateway 服務實例](./securegateway_managing.html)。
+如需停用閘道或目的地的相關資訊，請參閱[如何管理 Secure Gateway 服務實例](/docs/services/SecureGateway/securegateway_managing.html)。
 
 ## 在多個空間之間建立自動化時，建議採用哪種方法？
 {: #automation-spaces}
@@ -50,7 +50,7 @@ Secure Gateway 服務支援 TLS 1.2 版。
 
 ### 回答
 
-- 您可以為全部三個空間建立單一 Secure Gateway 實例。不過，您必須記住[特定方案的閘道及目的地限制](./securegateway_plans.html)。
+- 您可以為全部三個空間建立單一 Secure Gateway 實例。不過，您必須記住[特定方案的閘道及目的地限制](/docs/services/SecureGateway/securegateway_plans.html)。
 - 重複使用 Node.js 應用程式時沒有其他考量事項，因為 Secure Gateway 不需要任何服務連結。
 
 
@@ -62,7 +62,7 @@ Secure Gateway 服務支援 TLS 1.2 版。
 
 ### 回答
 
-- 您不需要在每個組織中都具有 Secure Gateway 服務實例。您可以在某個組織中有一個實例，然後從所有其他環境使用該實例內的閘道。使用此設定時，您必須記住[特定方案的閘道及目的地限制](./securegateway_plans.html)。
+- 您不需要在每個組織中都具有 Secure Gateway 服務實例。您可以在某個組織中有一個實例，然後從所有其他環境使用該實例內的閘道。使用此設定時，您必須記住[特定方案的閘道及目的地限制](/docs/services/SecureGateway/securegateway_plans.html)。
 - 您可以在每個組織中具有一個 Secure Gateway 服務實例，配置將可供您的所有空間使用。
 
 ## 我的應用程式需要位於相同的空間嗎？
@@ -155,14 +155,14 @@ Secure Gateway 服務支援 TLS 1.2 版。
 ### 回答
 
 #### 使用交互鑑別
-為內部部署目的地的兩端都啟用「交互鑑別」能讓 Secure Gateway 更安全。在「使用者鑑別」端，請啟用交互鑑別來限制對 Secure Gateway 雲端節點的存取，方法是在要求是透過 TLS/HTTPS 傳送時，使用用戶端憑證來進行鑑別。在「資源鑑別」端，請啟用交互鑑別以在連接至目的地端點時提供適當的認證，以確保對內部部署資源的安全/加密存取。如需相關資訊，請參閱[配置交互鑑別](./securegateway_destination.html#mutual-auth)及 [Node.js TLS 交互鑑別](./securegateway_tls-ma.html#node-js-tls-mutual-authentication)。
+為內部部署目的地的兩端都啟用「交互鑑別」能讓 Secure Gateway 更安全。在「使用者鑑別」端，請啟用交互鑑別來限制對 Secure Gateway 雲端節點的存取，方法是在要求是透過 TLS/HTTPS 傳送時，使用用戶端憑證來進行鑑別。在「資源鑑別」端，請啟用交互鑑別以在連接至目的地端點時提供適當的認證，以確保對內部部署資源的安全/加密存取。如需相關資訊，請參閱[配置交互鑑別](/docs/services/SecureGateway/securegateway_destination.html#mutual-auth)及 [Node.js TLS 交互鑑別](/docs/services/SecureGateway/securegateway_tls-ma.html#node-js-tls-mutual-authentication)。
 
 #### 設定 IP 表格規則（適用於內部部署目的地）
 內部部署目的地的 Secure Gateway 雲端主機及埠位於公用空間中；因此，依預設會容許每個人進行存取。
-若要控制 Secure Gateway 上的資料流量存取，請將 iptables 規則設為僅容許特定範圍的 IP 及埠進行存取，以保護內部部署資源的安全。如需如何在 Secure Gateway 上配置 iptables 規則的相關資訊，請參閱 [IP 表格規則](./securegateway_destination.html#configuring-network-security)。
+若要控制 Secure Gateway 上的資料流量存取，請將 iptables 規則設為僅容許特定範圍的 IP 及埠進行存取，以保護內部部署資源的安全。如需如何在 Secure Gateway 上配置 iptables 規則的相關資訊，請參閱 [IP 表格規則](/docs/services/SecureGateway/securegateway_destination.html#configuring-network-security)。
 
 #### 配置存取控制清單（適用於內部部署目的地）
-配置「存取控制清單」支援以容許或限制對內部部署資源的存取，會透過在特定目的地主機及埠上指定存取權限，讓內部部署目的地更為安全。建議在 ACL 項目上也定義容許或限制 HTTP/S 路徑，以加強內部部署目的地的安全。如需相關資訊，請參閱[存取控制清單](./securegateway_acl.html#access-control-list)及[使用 ACL 的 HTTPS/路徑控制](./securegateway_acl.html#routes)。
+配置「存取控制清單」支援以容許或限制對內部部署資源的存取，會透過在特定目的地主機及埠上指定存取權限，讓內部部署目的地更為安全。建議在 ACL 項目上也定義容許或限制 HTTP/S 路徑，以加強內部部署目的地的安全。如需相關資訊，請參閱[存取控制清單](/docs/services/SecureGateway/securegateway_acl.html#access-control-list)及[使用 ACL 的 HTTPS/路徑控制](/docs/services/SecureGateway/securegateway_acl.html#routes)。
 
 #### 在 Secure Gateway 用戶端使用者介面上設定密碼
-建議設定使用者介面密碼，以限制對「Secure Gateway 用戶端」使用者介面的存取。如需有關如何在「Secure Gateway 用戶端」終端機指令行上使用啟動配置或互動式指令來設定密碼的詳細資料，請參閱[與用戶端互動](./securegateway_interaction.html#interacting-with-the-client)。
+建議設定使用者介面密碼，以限制對「Secure Gateway 用戶端」使用者介面的存取。如需有關如何在「Secure Gateway 用戶端」終端機指令行上使用啟動配置或互動式指令來設定密碼的詳細資料，請參閱[與用戶端互動](/docs/services/SecureGateway/securegateway_interaction.html#interacting-with-the-client)。

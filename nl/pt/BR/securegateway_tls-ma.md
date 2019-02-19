@@ -26,7 +26,7 @@ Estou criando um novo aplicativo, então não tenho nenhum par certificado/chave
 Para que o cliente Secure Gateway autentique o recurso ao qual ele está se conectando, eu tenho que fornecer ao cliente o certificado (ou cadeia de certificados) que o recurso apresentará. Meu recurso não tem uma cadeia de certificados integral, portanto, apenas preciso fazer upload de seu certificado para o campo Autenticação no local. Esse campo aceita até 6 arquivos de certificado separados (.pem, .cer, .der, .crt).
 
 ### Certificado de cliente e Chave
-Se precisar especificar como o cliente Secure Gateway se identificará para o meu recurso, eu poderei fazer upload de um certificado e uma chave aqui para que o Cliente use. Como o Cliente e o recurso estão em execução na mesma máquina, eu posso deixá-los vazios e deixar que os servidores Secure Gateway gerem automaticamente um par para mim. Se meu recurso estivesse em um host separado, eu precisaria [gerar um par certificado/chave para fazer upload](./securegateway_keygen.html).
+Se precisar especificar como o cliente Secure Gateway se identificará para o meu recurso, eu poderei fazer upload de um certificado e uma chave aqui para que o Cliente use. Como o Cliente e o recurso estão em execução na mesma máquina, eu posso deixá-los vazios e deixar que os servidores Secure Gateway gerem automaticamente um par para mim. Se meu recurso estivesse em um host separado, eu precisaria [gerar um par certificado/chave para fazer upload](/docs/services/SecureGateway/securegateway_keygen.html).
 
 ![Autenticação mútua TLS local](./images/localTLSma.png?raw=true "Autenticação mútua TLS local")
 

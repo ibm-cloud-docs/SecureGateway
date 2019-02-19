@@ -44,7 +44,7 @@ En général, elle contient deux paramètres, votre ID de passerelle {{site.data
 
 Le client {{site.data.keyword.SecureGateway}} prend uniquement en charge les commandes `pull` et `run` pour la manipulation du conteneur.
 
-Retour à [Initiation - Ajout d'un client](./securegateway_client.html).
+Retour à [Initiation - Ajout d'un client](/docs/services/SecureGateway/securegateway_client.html).
 
 ## Mac OS X
 {: #mac}
@@ -68,7 +68,7 @@ Selon la configuration de sécurité de votre système, vous devez disposer des 
 
 Pour démarrer le client, exécutez le fichier `secgw.command` qui se trouve dans le répertoire d'installation par défaut : `/Applications/ibm/`.
 
-Retour à [Initiation - Ajout d'un client](./securegateway_client.html).
+Retour à [Initiation - Ajout d'un client](/docs/services/SecureGateway/securegateway_client.html).
 
 ## Linux
 {: #linux}
@@ -184,7 +184,7 @@ License: http://www.ibm.com/software/sla/sladb.nsf/lilookup/986C7686F22D4D358525
 
    Le programme d'installation du client démarre et installe le client ; il crée un fichier sgenvironment.conf dans /etc/ibm.
 
-2. Facultatif : si vous voulez utiliser le processus upstart du système, vous devez éditer ce fichier et fournir les informations suivantes pour que le client démarre correctement. Pour plus d'informations sur l'édition de ce fichier de configuration, voir [Utilisation d'upstart](./securegateway_auto-start.html#linux).
+2. Facultatif : si vous voulez utiliser le processus upstart du système, vous devez éditer ce fichier et fournir les informations suivantes pour que le client démarre correctement. Pour plus d'informations sur l'édition de ce fichier de configuration, voir [Utilisation d'upstart](/docs/services/SecureGateway/securegateway_auto-start.html#linux).
 
 3. Si vous avez démarré le client à l'aide de upstart, consultez le fichier journal pour vous assurer qu'il fonctionne correctement.
 
@@ -213,7 +213,7 @@ node lib/secgwclient.js <ID passerelle> -t <jeton de sécurité>
 
 En général, elle contient deux paramètres, un ID de passerelle {{site.data.keyword.SecureGateway}} et le jeton de sécurité de la passerelle, tous deux disponibles via le tableau de bord {{site.data.keyword.SecureGateway}}.
 
-Retour à [Initiation - Ajout d'un client](./securegateway_client.html).
+Retour à [Initiation - Ajout d'un client](/docs/services/SecureGateway/securegateway_client.html).
 
 ## Windows
 {: #windows}
@@ -259,12 +259,12 @@ Vous pouvez également accéder à `<Installation_directory>\ibm\securegateway\c
 
 <b>Remarque :</b> vous pouvez choisir d'utiliser les configurations enregistrées dans le fichier `<Installation_directory>\ibm\securegateway\client\securegw_service.config` ou fournir les détails interactivement.
 
-Retour à [Initiation - Ajout d'un client](./securegateway_client.html).
+Retour à [Initiation - Ajout d'un client](/docs/services/SecureGateway/securegateway_client.html).
 
 ## DataPower
 {: #datapower}
 
-DataPower dispose d'une version intégrée du client {{site.data.keyword.SecureGateway}}.  La version du client {{site.data.keyword.SecureGateway}} dont vous disposez dépend de la version de DataPower.  Tenez compte des éventuelles [limitations du client DataPower](./securegateway_interaction.html#limits-datapower) applicables. L'utilisation de l'ancien client Secure Gateway peut engendrer des erreurs inattendues.
+DataPower dispose d'une version intégrée du client {{site.data.keyword.SecureGateway}}.  La version du client {{site.data.keyword.SecureGateway}} dont vous disposez dépend de la version de DataPower.  Tenez compte des éventuelles [limitations du client DataPower](/docs/services/SecureGateway/securegateway_interaction.html#limits-datapower) applicables. L'utilisation de l'ancien client Secure Gateway peut engendrer des erreurs inattendues.
 
 | Version de DataPower | Version du client {{site.data.keyword.SecureGateway}}  |
 | -- | --  |
@@ -282,4 +282,4 @@ DataPower dispose d'une version intégrée du client {{site.data.keyword.SecureG
 3. Cliquez sur `Add` pour configurer une nouvelle connexion client.
 4. Entrez un nom, l'ID de passerelle et le jeton de sécurité (le cas échéant) et appliquez les modifications.
 
-Retour à [Initiation - Ajout d'un client](./securegateway_client.html).
+Retour à [Initiation - Ajout d'un client](/docs/services/SecureGateway/securegateway_client.html).

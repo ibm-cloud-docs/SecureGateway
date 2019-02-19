@@ -79,7 +79,7 @@ node lib/secgwclient.js <myGatewayID_1> <myGatewayID_2> -t none--<token for gate
 ```
 {: pre}
 
-Return to [Getting Started - Adding a Client](./securegateway_client.html).
+Return to [Getting Started - Adding a Client](/docs/services/SecureGateway/securegateway_client.html).
 
 ## Interactive Configuration
 {: #interactive}
@@ -117,9 +117,9 @@ The {{site.data.keyword.SecureGateway}} client has a command line interface (cli
 
 <b>Note:</b> If a connection has been specified with the `select` command and another command is called without providing a worker ID, the command will attempt to run on the connection specified by `select`.
 
-For more details on configuring the Access Control List, [click here](./securegateway_acl.html).
+For more details on configuring the Access Control List, [click here](/docs/services/SecureGateway/securegateway_acl.html).
 
-Return to [Getting Started - Adding a Client](./securegateway_client.html).
+Return to [Getting Started - Adding a Client](/docs/services/SecureGateway/securegateway_client.html).
 
 ## Client UI
 {: #ui}
@@ -158,7 +158,7 @@ This page will allow you to manipulate the Access Control List for the selected 
 
 This page will show the current connection information for the selected client (shown in the upper right of the page).  Information such as gateway description, number of current connections, and reverse destination listeners can be seen here.
 
-Return to [Getting Started - Adding a Client](./securegateway_client.html).
+Return to [Getting Started - Adding a Client](/docs/services/SecureGateway/securegateway_client.html).
 
 ## Remote Client Termination
 {: #remote}
@@ -184,4 +184,4 @@ The {{site.data.keyword.SecureGateway}} DataPower Client is in the process of be
 - Full certificate chains with destination-side TLS are not supported prior to DataPower version 7.5.1.0
 - Cloud destinations are not supported prior to DataPower version 7.5.1.0
 - The log level can't be changed to TRACE level
-- The latest Secure Gateway version in DataPower is 1.8.0fp6, [for more info](./securegateway_install.html#installing-the-client)
+- The latest Secure Gateway version in DataPower is 1.8.0fp6, [for more info](/docs/services/SecureGateway/securegateway_install.html#datapower)

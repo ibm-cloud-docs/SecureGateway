@@ -43,7 +43,7 @@ servizio.  In questo caso, potresti disabilitare temporaneamente i gateway neces
 - Hai configurato tutti i tuoi gateway e tutte le tue destinazioni sul front-end, ma il tuo backend è ancora in fase di creazione. In questo caso, potresti disabilitare i gateway o le destinazioni finché la creazione del backend non
 sarà completata.
 
-Per ulteriori informazioni sulla disabilitazione di un gateway o di una destinazione, vedi il documento relativo alla [modalità di gestione della tua istanza del servizio Secure Gateway](./securegateway_managing.html).
+Per ulteriori informazioni sulla disabilitazione di un gateway o di una destinazione, vedi il documento relativo alla [modalità di gestione della tua istanza del servizio Secure Gateway](/docs/services/SecureGateway/securegateway_managing.html).
 
 ## Qual è l'approccio consigliato all'automazione della creazione su più spazi?
 {: #automation-spaces}
@@ -53,7 +53,7 @@ Un ambiente del cliente ha un'organizzazione e tre spazi. Uno spazio è per lo s
 
 ### Risposta
 
-- Puoi creare una singola istanza Secure Gateway per tutti e tre gli spazi. Devi tuttavia ricordarti delle [limitazioni per il tuo specifico piano](./securegateway_plans.html) relative a gateway e destinazione.
+- Puoi creare una singola istanza Secure Gateway per tutti e tre gli spazi. Devi tuttavia ricordarti delle [limitazioni per il tuo specifico piano](/docs/services/SecureGateway/securegateway_plans.html) relative a gateway e destinazione.
 - Non ci sono ulteriori considerazioni per il riutilizzo di un'applicazione Node.js poiché Secure Gateway non richiede alcun bind di servizio.
 
 
@@ -65,7 +65,7 @@ Un ambiente del cliente ha tre organizzazioni: una per lo sviluppo, una per la p
 
 ### Risposta
 
-- Non è obbligatorio che tu abbia un'istanza del servizio Secure Gateway in ciascuna organizzazione. Puoi avere un'istanza in un'organizzazione e utilizzare i gateway all'interno di tale istanza da tutti gli altri tuoi ambienti. Con questa configurazione, devi ricordarti delle [limitazioni per il tuo specifico piano](./securegateway_plans.html) relative a gateway e destinazione.
+- Non è obbligatorio che tu abbia un'istanza del servizio Secure Gateway in ciascuna organizzazione. Puoi avere un'istanza in un'organizzazione e utilizzare i gateway all'interno di tale istanza da tutti gli altri tuoi ambienti. Con questa configurazione, devi ricordarti delle [limitazioni per il tuo specifico piano](/docs/services/SecureGateway/securegateway_plans.html) relative a gateway e destinazione.
 - Puoi avere un'istanza del servizio Secure Gateway in ciascuna organizzazione e la configurazione sarà disponibile per tutti i tuoi spazi.
 
 ## La mia applicazione si deve trovare nello stesso spazio?
@@ -158,14 +158,14 @@ Quali sono le configurazioni consigliate per rendere le mie connessioni più sic
 ### Risposta
 
 #### Utilizza l'autenticazione reciproca
-Abilitare l'autenticazione reciproca per entrambi i lati delle destinazioni in loco rende Secure Gateway più sicuro. Sul lato dell'autenticazione utente (User Authentication), abilita l'autenticazione reciproca per limitare l'accesso del nodo cloud Secure Gateway autenticando l'utilizzo di un certificato client quando la richiesta è su TLS/HTTPS. Sul lato dell'autenticazione risorsa (Resource Authentication), abilita l'autenticazione reciproca per fornire delle credenziali appropriate in fase di connessione all'endpoint di destinazione e garantire un accesso protetto/crittografato alla risorsa in loco. Per ulteriori informazioni, vedi [Configurazione dell'autenticazione reciproca](./securegateway_destination.html#mutual-auth) e [Autenticazione reciproca TLS di Node.js](./securegateway_tls-ma.html#node-js-tls-mutual-authentication).
+Abilitare l'autenticazione reciproca per entrambi i lati delle destinazioni in loco rende Secure Gateway più sicuro. Sul lato dell'autenticazione utente (User Authentication), abilita l'autenticazione reciproca per limitare l'accesso del nodo cloud Secure Gateway autenticando l'utilizzo di un certificato client quando la richiesta è su TLS/HTTPS. Sul lato dell'autenticazione risorsa (Resource Authentication), abilita l'autenticazione reciproca per fornire delle credenziali appropriate in fase di connessione all'endpoint di destinazione e garantire un accesso protetto/crittografato alla risorsa in loco. Per ulteriori informazioni, vedi [Configurazione dell'autenticazione reciproca](/docs/services/SecureGateway/securegateway_destination.html#mutual-auth) e [Autenticazione reciproca TLS di Node.js](/docs/services/SecureGateway/securegateway_tls-ma.html#node-js-tls-mutual-authentication).
 
 #### Imposta le regole tabella IP (per la destinazione in loco)
 Host e porta cloud Secure Gateway di una destinazione in loco si trovano nello spazio pubblico e pertanto, per impostazione predefinita, tutti possono accedervi.
-Per controllare il traffico che accede su Secure Gateway, imposta le regole iptable per consentire l'accesso solo a uno specifico intervallo di IP e porte per proteggere le risorse in loco. Per ulteriori informazioni su come configurare le regole iptable su Secure Gateway, vedi [Regole tabella IP](./securegateway_destination.html#configuring-network-security).
+Per controllare il traffico che accede su Secure Gateway, imposta le regole iptable per consentire l'accesso solo a uno specifico intervallo di IP e porte per proteggere le risorse in loco. Per ulteriori informazioni su come configurare le regole iptable su Secure Gateway, vedi [Regole tabella IP](/docs/services/SecureGateway/securegateway_destination.html#configuring-network-security).
 
 #### Configura l'ACL (Access Control List) (per la destinazione in loco)
-Configurare il supporto ACL (Access Control List) per consentire o limitare l'accesso alle risorse in loco renderà le destinazioni in loco più sicure specificando il diritto di accesso sull'host e sulla porta di destinazione specifici. Si consiglia di definire le rotte HTTP/S consentite o limitate anche sulle voci ACL per migliorare la sicurezza della destinazione in loco. Per ulteriori informazioni, vedi [Access Control List](./securegateway_acl.html#access-control-list) e [Controllo delle rotte HTTP/S](./securegateway_acl.html#routes).
+Configurare il supporto ACL (Access Control List) per consentire o limitare l'accesso alle risorse in loco renderà le destinazioni in loco più sicure specificando il diritto di accesso sull'host e sulla porta di destinazione specifici. Si consiglia di definire le rotte HTTP/S consentite o limitate anche sulle voci ACL per migliorare la sicurezza della destinazione in loco. Per ulteriori informazioni, vedi [Access Control List](/docs/services/SecureGateway/securegateway_acl.html#access-control-list) e [Controllo delle rotte HTTP/S](/docs/services/SecureGateway/securegateway_acl.html#routes).
 
 #### Imposta la password sull'IU del client Secure Gateway
-Si consiglia di impostare la password dell'IU per limitare l'accesso dell'IU del client Secure Gateway. Vedi [Interazione con il client](./securegateway_interaction.html#interacting-with-the-client) per ulteriori dettagli su come impostare la password utilizzando la configurazione di avvio o i comandi interattivi sulla riga di comando del terminale client Secure Gateway.
+Si consiglia di impostare la password dell'IU per limitare l'accesso dell'IU del client Secure Gateway. Vedi [Interazione con il client](/docs/services/SecureGateway/securegateway_interaction.html#interacting-with-the-client) per ulteriori dettagli su come impostare la password utilizzando la configurazione di avvio o i comandi interattivi sulla riga di comando del terminale client Secure Gateway.

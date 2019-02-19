@@ -16,12 +16,12 @@ Dall'interno del tuo nuovo gateway e nella scheda Clients, fai clic sul pulsante
 
 ![Connect Client](./images/connectClient.png?raw=true "Connect Client")
 
-Dopo che hai selezionato il tuo client preferito, [fai clic qui per vedere come installarlo](./securegateway_install.html).
+Dopo che hai selezionato il tuo client preferito, [fai clic qui per vedere come installarlo](/docs/services/SecureGateway/securegateway_install.html).
 
-Dopo che hai installato il tuo client, puoi configurarlo per un [avvio automatico](./securegateway_auto-start.html) o un'[esecuzione interattiva](./securegateway_interaction.html).
+Dopo che hai installato il tuo client, puoi configurarlo per un [avvio automatico](/docs/services/SecureGateway/securegateway_auto-start.html) o un'[esecuzione interattiva](/docs/services/SecureGateway/securegateway_interaction.html).
 
 ![Connected Client](./images/connectedClient.png?raw=true "Connected Client")
 
-Se vuoi configurare l'ACL (Access Control List) per il tuo client ora, [fai clic qui per ulteriori dettagli](./securegateway_acl.html).
+Se vuoi configurare l'ACL (Access Control List) per il tuo client ora, [fai clic qui per ulteriori dettagli](/docs/services/SecureGateway/securegateway_acl.html).
 
-Ora che hai il tuo client connesso, puoi [creare la tua prima destinazione](./securegateway_destination.html).
+Ora che hai il tuo client connesso, puoi [creare la tua prima destinazione](/docs/services/SecureGateway/securegateway_destination.html).

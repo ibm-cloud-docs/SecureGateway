@@ -47,7 +47,7 @@ acl allow :
 
 Il comando `show acl` mostrerà l'ACL attualmente impostato oppure fornirà un messaggio relativo all'impostazione complessiva.
 
-Ritorna a [Introduzione - Aggiunta di un client](./securegateway_client.html).
+Ritorna a [Introduzione - Aggiunta di un client](/docs/services/SecureGateway/securegateway_client.html).
 
 ## Controllo della rotta HTTP/S utilizzando l'ACL
 {: #routes}
@@ -90,9 +90,9 @@ no acl
 
 <b>Nota:</b> `no acl` senza alcun altro parametro REIMPOSTA la tabella ACL e imposta l'accesso su DENY ALL.
 
-Puoi trovare un file ACL di esempio [qui](./securegateway_acl-file.html).
+Puoi trovare un file ACL di esempio [qui](/docs/services/SecureGateway/securegateway_acl-file.html).
 
-Ritorna a [Introduzione - Aggiunta di un client](./securegateway_client.html).
+Ritorna a [Introduzione - Aggiunta di un client](/docs/services/SecureGateway/securegateway_client.html).
 
 ## Copia del file ACL nel client Docker {{site.data.keyword.SecureGateway}}
 {: #docker}
@@ -165,4 +165,4 @@ cli> S
 ```
 {: screen}
 
-Ritorna a [Introduzione - Aggiunta di un client](./securegateway_client.html).
+Ritorna a [Introduzione - Aggiunta di un client](/docs/services/SecureGateway/securegateway_client.html).

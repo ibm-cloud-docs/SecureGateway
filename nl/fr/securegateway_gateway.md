@@ -26,4 +26,4 @@ Pour finaliser la création de votre passerelle, cliquez sur Ajouter une passere
 
 ![Nouvelle passerelle](./images/newGateway.png?raw=true "Nouvelle passerelle")
 
-Maintenant que votre nouvelle passerelle a été créée, vous pouvez [connecter votre premier client](./securegateway_client.html).
+Maintenant que votre nouvelle passerelle a été créée, vous pouvez [connecter votre premier client](/docs/services/SecureGateway/securegateway_client.html).

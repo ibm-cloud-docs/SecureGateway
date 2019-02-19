@@ -40,7 +40,7 @@ Secure Gateway サービスは、TLS バージョン 1.2 をサポートしま�
 - サービスを更新中のため、サービスをユーザーに対して利用不可にしたい。  この場合、必要なゲートウェイを一時的に使用不可にして、サービスが更新されるまで待つことがあります。
 - フロントエンドにはゲートウェイおよび宛先をすべてセットアップしたが、バックエンドはまだ構築中である。  この場合、バックエンドの構築が完了するまで、ゲートウェイまたは宛先を使用不可にします。
 
-ゲートウェイまたは宛先を使用不可にする方法について詳しくは、[Secure Gateway サービス・インスタンスの管理方法](./securegateway_managing.html)を参照してください。
+ゲートウェイまたは宛先を使用不可にする方法について詳しくは、[Secure Gateway サービス・インスタンスの管理方法](/docs/services/SecureGateway/securegateway_managing.html)を参照してください。
 
 ## 複数のスペースにわたる自動化を作成するために推奨される手法は、どのようなものですか?
 {: #automation-spaces}
@@ -50,7 +50,7 @@ Secure Gateway サービスは、TLS バージョン 1.2 をサポートしま�
 
 ### 答え
 
-- 3 つのすべてのスペースに対して単一 Secure Gateway インスタンスを作成することができます。  ただし、ゲートウェイおよび宛先についての[特定のプランでの制限](./securegateway_plans.html)を考慮する必要があります。
+- 3 つのすべてのスペースに対して単一 Secure Gateway インスタンスを作成することができます。  ただし、ゲートウェイおよび宛先についての[特定のプランでの制限](/docs/services/SecureGateway/securegateway_plans.html)を考慮する必要があります。
 - Secure Gateway はサービス・バインディングを必要としないため、Node.js アプリケーションの再使用に関する追加の考慮事項はありません。
 
 
@@ -62,7 +62,7 @@ Secure Gateway サービスは、TLS バージョン 1.2 をサポートしま�
 
 ### 答え
 
-- 各組織に Secure Gateway サービス・インスタンスがある必要はありません。いずれかの組織に 1 つのインスタンスを作成すれば、他のすべての環境からそのインスタンス内のゲートウェイを使用できます。このセットアップの場合は、ゲートウェイおよび宛先についての[特定のプランでの制限](./securegateway_plans.html)を考慮する必要があります。
+- 各組織に Secure Gateway サービス・インスタンスがある必要はありません。いずれかの組織に 1 つのインスタンスを作成すれば、他のすべての環境からそのインスタンス内のゲートウェイを使用できます。このセットアップの場合は、ゲートウェイおよび宛先についての[特定のプランでの制限](/docs/services/SecureGateway/securegateway_plans.html)を考慮する必要があります。
 - 各組織に 1 つずつ Secure Gateway サービス・インスタンスがあるようにできます。その構成はすべてのスペースで使用可能になります。
 
 ## アプリは同じスペース内にある必要がありますか?
@@ -154,14 +154,14 @@ SecureGateway クライアントで、ログ・レベルを TRACE に変更し�
 ### 答え
 
 #### 相互認証の使用
-オンプレミス宛先の両サイドで相互認証を有効にすると、Secure Gateway がよりセキュアになります。ユーザー認証サイドでは、要求が TLS/HTTPS 経由の場合にクライアント証明書を使用して認証することによって Secure Gateway クラウド・ノードのアクセスを制限するために、相互認証を有効にします。リソース認証サイドでは、宛先エンドポイントに接続するときに適切な資格情報を提示し、オンプレミス・リソースへのアクセスを暗号化されたセキュアなものにするために、相互認証を有効にします。詳しくは、[相互認証の構成](./securegateway_destination.html#mutual-auth)および [Node.js TLS 相互認証](./securegateway_tls-ma.html#node-js-tls-mutual-authentication)を参照してください。
+オンプレミス宛先の両サイドで相互認証を有効にすると、Secure Gateway がよりセキュアになります。ユーザー認証サイドでは、要求が TLS/HTTPS 経由の場合にクライアント証明書を使用して認証することによって Secure Gateway クラウド・ノードのアクセスを制限するために、相互認証を有効にします。リソース認証サイドでは、宛先エンドポイントに接続するときに適切な資格情報を提示し、オンプレミス・リソースへのアクセスを暗号化されたセキュアなものにするために、相互認証を有効にします。詳しくは、[相互認証の構成](/docs/services/SecureGateway/securegateway_destination.html#mutual-auth)および [Node.js TLS 相互認証](/docs/services/SecureGateway/securegateway_tls-ma.html#node-js-tls-mutual-authentication)を参照してください。
 
 #### IP テーブル・ルールの設定 (オンプレミス宛先用)
 オンプレミス宛先の Secure Gateway クラウド・ホストおよびポートは、パブリック・スペースにあります。したがって、デフォルトでは誰でもアクセスできます。
-Secure Gateway のトラフィック・アクセスを制御するには、特定の範囲の IP およびポートによるアクセスのみを許可してオンプレミス・リソースを保護するように IP テーブル・ルールを設定します。Secure Gateway の IP テーブル・ルールの構成方法について詳しくは、[IP テーブル・ルール](./securegateway_destination.html#configuring-network-security)を参照してください。
+Secure Gateway のトラフィック・アクセスを制御するには、特定の範囲の IP およびポートによるアクセスのみを許可してオンプレミス・リソースを保護するように IP テーブル・ルールを設定します。Secure Gateway の IP テーブル・ルールの構成方法について詳しくは、[IP テーブル・ルール](/docs/services/SecureGateway/securegateway_destination.html#configuring-network-security)を参照してください。
 
 #### アクセス制御リストの構成 (オンプレミス宛先用)
-オンプレミス・リソースへのアクセスを許可または制限するアクセス制御リストの構成がサポートされることにより、特定の宛先ホストおよびポートに対するアクセス権限を指定することによって、オンプレミス宛先がよりセキュアになります。オンプレミス宛先のセキュリティーを強化するために、許可または制限される HTTP/S 経路も ACL 項目に定義することをお勧めします。詳しくは、[アクセス制御リスト](./securegateway_acl.html#access-control-list)および [ACL を使用した HTTP/S の経路制御](./securegateway_acl.html#routes)を参照してください。
+オンプレミス・リソースへのアクセスを許可または制限するアクセス制御リストの構成がサポートされることにより、特定の宛先ホストおよびポートに対するアクセス権限を指定することによって、オンプレミス宛先がよりセキュアになります。オンプレミス宛先のセキュリティーを強化するために、許可または制限される HTTP/S 経路も ACL 項目に定義することをお勧めします。詳しくは、[アクセス制御リスト](/docs/services/SecureGateway/securegateway_acl.html#access-control-list)および [ACL を使用した HTTP/S の経路制御](/docs/services/SecureGateway/securegateway_acl.html#routes)を参照してください。
 
 #### Secure Gateway クライアント UI のパスワードの設定
-UI パスワードを設定して、Secure Gateway クライアント UI のアクセスを制限することをお勧めします。開始構成を使用してパスワードを設定する方法、または Secure Gateway クライアント端末コマンド・ラインで対話式コマンドを使用してパスワードを設定する方法について詳しくは、[クライアントとの対話](./securegateway_interaction.html#interacting-with-the-client)を参照してください。
+UI パスワードを設定して、Secure Gateway クライアント UI のアクセスを制限することをお勧めします。開始構成を使用してパスワードを設定する方法、または Secure Gateway クライアント端末コマンド・ラインで対話式コマンドを使用してパスワードを設定する方法について詳しくは、[クライアントとの対話](/docs/services/SecureGateway/securegateway_interaction.html#interacting-with-the-client)を参照してください。

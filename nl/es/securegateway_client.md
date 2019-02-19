@@ -16,12 +16,12 @@ Desde dentro de la nueva pasarela y en el separador Clientes, pulse el botón Co
 
 ![Conectar cliente](./images/connectClient.png?raw=true "Conectar cliente")
 
-Después de seleccionar el cliente que desee, [pulse aquí para ver cómo instalarlo](./securegateway_install.html).
+Después de seleccionar el cliente que desee, [pulse aquí para ver cómo instalarlo](/docs/services/SecureGateway/securegateway_install.html).
 
-Cuando haya instalado el cliente, puede configurarlo para que [se inicie automáticamente](./securegateway_auto-start.html) o para que [se ejecute interactivamente](./securegateway_interaction.html).
+Cuando haya instalado el cliente, puede configurarlo para que [se inicie automáticamente](/docs/services/SecureGateway/securegateway_auto-start.html) o para que [se ejecute interactivamente](/docs/services/SecureGateway/securegateway_interaction.html).
 
 ![Cliente conectado](./images/connectedClient.png?raw=true "Cliente conectado")
 
-Si desea configurar la lista de control de accesos para el cliente ahora, [pulse aquí para obtener más información](./securegateway_acl.html).
+Si desea configurar la lista de control de accesos para el cliente ahora, [pulse aquí para obtener más información](/docs/services/SecureGateway/securegateway_acl.html).
 
-Ahora que tiene el cliente conectado, puede [crear su primer destino](./securegateway_destination.html).
+Ahora que tiene el cliente conectado, puede [crear su primer destino](/docs/services/SecureGateway/securegateway_destination.html).

@@ -56,7 +56,7 @@ lastupdated: "2018-08-10"
   可在閘道配置中找到之 SG 閘道的節點，每個閘道不在相同節點上，請在每次建立閘道時，確認節點的主機名稱
 
 
-請務必檢查或修改可能會適用的其他防火牆及「IP 表格」規則。如果您的網路管理者需要特定 IP，請[與支援中心聯絡，以為您的環境要求這些項目](./securegateway_troubleshooting.html#support)。
+請務必檢查或修改可能會適用的其他防火牆及「IP 表格」規則。如果您的網路管理者需要特定 IP，請[與支援中心聯絡，以為您的環境要求這些項目](/docs/services/SecureGateway/securegateway_troubleshooting.html#support)。
 
 
 ## 判定硬體需求

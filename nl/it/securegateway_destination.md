@@ -87,7 +87,7 @@ Questa opzione diventa disponibile selezionando TLS o Mutual Auth per Resource A
 Questa opzione diventa disponibile selezionando TLS o Mutual Auth per Resource Authentication. Viene utilizzata per consentire di fornire un nome host separato all'handshake TLS della connessione della risorsa.
 
 ### Client Cert and Key
-La visualizzazione o meno dei campi Client Certificate e Key dipende dal [tipo di destinazione](#dest-types) che hai scelto. In entrambe le situazioni, i file qui forniti verranno utilizzati dal client SG per identificarsi per le connessioni TLS. Se non viene caricato alcun file, i server {{site.data.keyword.SecureGateway}} genereranno automaticamente una coppia autofirmata con un CN `localhost`.  Per istruzioni su come generare una coppia certificato/chiave, [fai clic qui](./securegateway_keygen.html).
+La visualizzazione o meno dei campi Client Certificate e Key dipende dal [tipo di destinazione](#dest-types) che hai scelto. In entrambe le situazioni, i file qui forniti verranno utilizzati dal client SG per identificarsi per le connessioni TLS. Se non viene caricato alcun file, i server {{site.data.keyword.SecureGateway}} genereranno automaticamente una coppia autofirmata con un CN `localhost`.  Per istruzioni su come generare una coppia certificato/chiave, [fai clic qui](/docs/services/SecureGateway/securegateway_keygen.html).
 
 Per una destinazione in loco, comparirà sotto Resource Authentication, se è stata selezionata Resource Authentication: Mutual Auth. In questo caso, il client utilizzerà questa coppia certificato/chiave per la sua connessione in uscita alla risorsa definita. La CA di questa connessione conterrà i certificati forniti nel campo [Cloud/On-prem Authentication](#resource-auth).
 

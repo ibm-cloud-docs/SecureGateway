@@ -11,7 +11,7 @@ lastupdated: "2018-08-10"
 
 # Regras de tabela de IPs
 
-Para permitir o cumprimento de regras de iptable em seu destino, deve-se ter a opção `Restrict network access` marcada no painel Segurança de rede de seu destino. Nesse ponto, é possível incluir as regras que você deseja cumprir, como: 192.0.0.1 9000 (IP e porta únicos), 192.0.0.1-192.0.0.5 5000:5005 (intervalo de IPs e intervalo de portas) ou qualquer combinação. Veja [Configurando a segurança de rede](./securegateway_destination.html#configuring-network-security) para obter mais informações.
+Para permitir o cumprimento de regras de iptable em seu destino, deve-se ter a opção `Restrict network access` marcada no painel Segurança de rede de seu destino. Nesse ponto, é possível incluir as regras que você deseja cumprir, como: 192.0.0.1 9000 (IP e porta únicos), 192.0.0.1-192.0.0.5 5000:5005 (intervalo de IPs e intervalo de portas) ou qualquer combinação. Veja [Configurando a segurança de rede](/docs/services/SecureGateway/securegateway_destination.html#configuring-network-security) para obter mais informações.
 
 Se estiver criando seus destinos privados com cURL, você poderá usar um comando como:
 

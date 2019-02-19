@@ -47,7 +47,7 @@ porque está fazendo algumas atualizações no serviço.  Nesse caso, você pode
 desativar seus gateways ou destinos até que a construção de backend
 esteja completa.
 
-Para obter mais informações sobre a desativação de um gateway ou um destino, veja [como gerenciar sua instância de serviço do Secure Gateway](./securegateway_managing.html).
+Para obter mais informações sobre a desativação de um gateway ou um destino, veja [como gerenciar sua instância de serviço do Secure Gateway](/docs/services/SecureGateway/securegateway_managing.html).
 
 ## Qual é a abordagem recomendada para a automação de criação entre múltiplos espaços?
 {: #automation-spaces}
@@ -57,7 +57,7 @@ Um ambiente do cliente tem uma organização e três espaços. Um espaço é par
 
 ### Resposta
 
-- É possível criar uma única instância do Secure Gateway para todos os três espaços. No entanto, deve-se lembrar das [limitações de gateway e de destino para seu plano específico](./securegateway_plans.html).
+- É possível criar uma única instância do Secure Gateway para todos os três espaços. No entanto, deve-se lembrar das [limitações de gateway e de destino para seu plano específico](/docs/services/SecureGateway/securegateway_plans.html).
 - Não há considerações adicionais para reutilizar um aplicativo Node.js, pois nenhuma ligação de serviço é requerida pelo Secure Gateway.
 
 
@@ -69,7 +69,7 @@ Um ambiente do cliente tem três organizações: uma para desenvolvimento, uma p
 
 ### Resposta
 
-- Você não precisa ter uma instância de serviço do Secure Gateway em cada organização. É possível ter uma instância em uma organização e usar os gateways nessa instância por meio de todos os outros ambientes. Com essa configuração, deve-se lembrar as [limitações de gateway e de destino para seu plano específico](./securegateway_plans.html).
+- Você não precisa ter uma instância de serviço do Secure Gateway em cada organização. É possível ter uma instância em uma organização e usar os gateways nessa instância por meio de todos os outros ambientes. Com essa configuração, deve-se lembrar as [limitações de gateway e de destino para seu plano específico](/docs/services/SecureGateway/securegateway_plans.html).
 - É possível ter uma instância de serviço do Secure Gateway em cada organização e a configuração estará disponível para todos os seus espaços.
 
 ## Meu app precisa estar no mesmo espaço?
@@ -162,14 +162,14 @@ Quais são as configurações recomendadas para tornar minhas conexões mais seg
 ### Resposta
 
 #### Usar autenticação mútua
-Ativar a Autenticação mútua para ambos os lados dos destinos no local torna o Secure Gateway mais seguro. No lado Autenticação do usuário, ative a autenticação mútua para restringir o acesso do nó em nuvem do Secure Gateway por meio da autenticação usando um certificado de cliente quando a solicitação é por meio de TLS/HTTPS. No lado Autenticação do recurso, ative a autenticação mútua para fornecer a credencial apropriada ao conectar-se ao terminal de destino, assegure acesso seguro/criptografado para o recurso no local. Veja [Configurando a autenticação mútua](./securegateway_destination.html#mutual-auth) e [Autenticação mútua TLS do Node.js](./securegateway_tls-ma.html#node-js-tls-mutual-authentication) para obter mais informações.
+Ativar a Autenticação mútua para ambos os lados dos destinos no local torna o Secure Gateway mais seguro. No lado Autenticação do usuário, ative a autenticação mútua para restringir o acesso do nó em nuvem do Secure Gateway por meio da autenticação usando um certificado de cliente quando a solicitação é por meio de TLS/HTTPS. No lado Autenticação do recurso, ative a autenticação mútua para fornecer a credencial apropriada ao conectar-se ao terminal de destino, assegure acesso seguro/criptografado para o recurso no local. Veja [Configurando a autenticação mútua](/docs/services/SecureGateway/securegateway_destination.html#mutual-auth) e [Autenticação mútua TLS do Node.js](/docs/services/SecureGateway/securegateway_tls-ma.html#node-js-tls-mutual-authentication) para obter mais informações.
 
 #### Configurar regras de tabela de IPs (para o destino no local)
 O host e a porta em nuvem do Secure Gateway de um destino no local estão no espaço público; portanto, é permitido que todos acessem por padrão.
-Para controlar o tráfego acessando no Secure Gateway, configure as regras de iptable para permitir acesso somente por um intervalo específico de IPs e portas para proteger recursos no local. Veja [Regras de tabela de IPs](./securegateway_destination.html#configuring-network-security) para obter mais informações sobre como configurar as regras de iptable no Secure Gateway.
+Para controlar o tráfego acessando no Secure Gateway, configure as regras de iptable para permitir acesso somente por um intervalo específico de IPs e portas para proteger recursos no local. Veja [Regras de tabela de IPs](/docs/services/SecureGateway/securegateway_destination.html#configuring-network-security) para obter mais informações sobre como configurar as regras de iptable no Secure Gateway.
 
 #### Configurar Lista de Controle de Acesso (para o destino no local)
-Configure o suporte à Lista de Controle de Acesso para permitir ou restringir o acesso aos recursos no local para tornar os destinos no local mais seguros, especificando o direito de acesso no host e na porta de destino específicos. É recomendável definir as rotas HTTP/S permitidas ou restritas nas entradas ACL, bem como aprimorar a segurança do destino no local. Veja [Lista de Controle de Acesso](./securegateway_acl.html#access-control-list) e [Controle de HTTPS/Rota usando a ACL](./securegateway_acl.html#routes) para obter mais informações.
+Configure o suporte à Lista de Controle de Acesso para permitir ou restringir o acesso aos recursos no local para tornar os destinos no local mais seguros, especificando o direito de acesso no host e na porta de destino específicos. É recomendável definir as rotas HTTP/S permitidas ou restritas nas entradas ACL, bem como aprimorar a segurança do destino no local. Veja [Lista de Controle de Acesso](/docs/services/SecureGateway/securegateway_acl.html#access-control-list) e [Controle de HTTPS/Rota usando a ACL](/docs/services/SecureGateway/securegateway_acl.html#routes) para obter mais informações.
 
 #### Configurar a senha na IU do cliente Secure Gateway
-É recomendável configurar a senha da IU para restringir o acesso da IU do cliente Secure Gateway. Veja [Interagindo com o cliente](./securegateway_interaction.html#interacting-with-the-client) para obter mais detalhes sobre como configurar a senha usando a configuração de inicialização ou os comandos interativos na linha de comandos do terminal do cliente Secure Gateway.
+É recomendável configurar a senha da IU para restringir o acesso da IU do cliente Secure Gateway. Veja [Interagindo com o cliente](/docs/services/SecureGateway/securegateway_interaction.html#interacting-with-the-client) para obter mais detalhes sobre como configurar a senha usando a configuração de inicialização ou os comandos interativos na linha de comandos do terminal do cliente Secure Gateway.

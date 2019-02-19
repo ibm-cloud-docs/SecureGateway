@@ -26,4 +26,4 @@ Per terminare la creazione del tuo gateway, fai clic su Add Gateway. Una volta c
 
 ![New Gateway](./images/newGateway.png?raw=true "New Gateway")
 
-Ora che hai il tuo gateway appena creato, puoi [connettere il tuo primo client](./securegateway_client.html).
+Ora che hai il tuo gateway appena creato, puoi [connettere il tuo primo client](/docs/services/SecureGateway/securegateway_client.html).

@@ -79,7 +79,7 @@ node lib/secgwclient.js <monID_passerelle_1> <;monID_passerelle_2> -t none--<jet
 ```
 {: pre}
 
-Retour à [Initiation - Ajout d'un client](./securegateway_client.html).
+Retour à [Initiation - Ajout d'un client](/docs/services/SecureGateway/securegateway_client.html).
 
 ## Configuration interactive
 {: #interactive}
@@ -118,9 +118,9 @@ shell qui facilitent la configuration et le contrôle. L'environnement interacti
 
 <b>Remarque :</b> si une connexion a été spécifiée avec la commande `select` et qu'une autre commande est appelée sans fournir d'ID travailleur, la commande tente de s'exécuter sur la connexion spécifiée par `select`.
 
-Pour plus d'informations sur la configuration de la liste de contrôle d'accès, [cliquez ici](./securegateway_acl.html).
+Pour plus d'informations sur la configuration de la liste de contrôle d'accès, [cliquez ici](/docs/services/SecureGateway/securegateway_acl.html).
 
-Retour à [Initiation - Ajout d'un client](./securegateway_client.html).
+Retour à [Initiation - Ajout d'un client](/docs/services/SecureGateway/securegateway_client.html).
 
 ## Interface utilisateur client
 {: #ui}
@@ -159,7 +159,7 @@ Cette page vous permet de liste de contrôle d'accès la liste de contrôle d'ac
 
 Cette page affiche des informations sur la connexion en cours pour le client sélectionné (indiqué en haut à droite de la page).  Des informations comme la description de la passerelle, le nombre de connexions actuelles ou les programmes d'écoute des destinations inverses peuvent être visualisées ici.
 
-Retour à [Initiation - Ajout d'un client](./securegateway_client.html).
+Retour à [Initiation - Ajout d'un client](/docs/services/SecureGateway/securegateway_client.html).
 
 ## Arrêt du client distant
 {: #remote}

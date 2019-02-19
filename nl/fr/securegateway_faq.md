@@ -40,7 +40,7 @@ Vous pouvez avoir besoin de désactiver une destination ou une passerelle pour l
 - Vous ne voulez pas que le service soit disponible pour les utilisateurs car vous êtes en train d'effectuer des mises à jour dans le service.  Dans ce cas, vous pouvez désactiver temporairement les passerelles nécessaires et attendre que le service soit mis à jour.
 - Vous avez configuré toutes vos passerelles et destinations sur le système frontal mais votre système en arrière-plan est toujours en train de compiler.  Dans ce cas, vous désactiverez vos passerelles ou destinations jusqu'à ce que la compilation en arrière-plan soit terminée.
 
-Pour plus d'informations sur la désactivation d'une passerelle ou une destination, voir [gestion de votre instance de service Secure Gateway](./securegateway_managing.html).
+Pour plus d'informations sur la désactivation d'une passerelle ou une destination, voir [gestion de votre instance de service Secure Gateway](/docs/services/SecureGateway/securegateway_managing.html).
 
 ## Quelle est l'approche recommandée pour la mise en oeuvre de l'automatisation dans plusieurs espaces ?
 {: #automation-spaces}
@@ -50,7 +50,7 @@ Un environnement client dispose d'une organisation et de trois espaces.  L'un de
 
 ### Réponse
 
-- Vous pouvez créer une instance Secure Gateway unique pour chacun des trois espaces.  Toutefois, n'oubliez pas les [limitations applicables à votre plan spécifique](./securegateway_plans.html) de passerelle et de destination.
+- Vous pouvez créer une instance Secure Gateway unique pour chacun des trois espaces.  Toutefois, n'oubliez pas les [limitations applicables à votre plan spécifique](/docs/services/SecureGateway/securegateway_plans.html) de passerelle et de destination.
 - Il n'existe pas de considérations supplémentaires liées à la réutilisation d'une application Node.js car Secure Gateway ne requiert aucune liaison de service.
 
 
@@ -62,7 +62,7 @@ Un environnement client dispose de trois organisations : une pour le développem
 
 ### Réponse
 
-- Vous n'avez pas besoin d'avoir une instance de service Secure Gateway dans chaque organisation. Il suffit d'avoir une instance dans une organisation et d'utiliser les passerelles au sein de cette instance à partir de tous vos autres environnements.  Avec cette configuration, vous devez vous souvenir des [limitations applicables à votre plan spécifique](./securegateway_plans.html) de passerelle et de destination.
+- Vous n'avez pas besoin d'avoir une instance de service Secure Gateway dans chaque organisation. Il suffit d'avoir une instance dans une organisation et d'utiliser les passerelles au sein de cette instance à partir de tous vos autres environnements.  Avec cette configuration, vous devez vous souvenir des [limitations applicables à votre plan spécifique](/docs/services/SecureGateway/securegateway_plans.html) de passerelle et de destination.
 - Vous pouvez avoir une instance de service Secure Gateway dans chaque organisation et la configuration sera disponible pour tous vos espaces.
 
 ## Mon application doit-elle se trouver dans le même espace ?
@@ -155,14 +155,14 @@ Quelles sont les configurations recommandées pour mieux sécuriser mes connexio
 ### Réponse
 
 #### Utiliser l'authentification mutuelle
-L'activation de l'authentification mutuelle des deux côtés des destinations sur site renforce la sécurité de Secure Gateway. Du côté de l'authentification de l'utilisateur, activez l'authentification mutuelle afin de restreindre l'accès au noeud de cloud Secure Gateway par une authentification à l'aide d'un certificat client lorsque la demande s'effectue via TLS/HTTPS. Du côté de l'authentification de la ressource, activez l'authentification mutuelle avec entrée des données d'identification appropriées lors de la connexion au noeud final de destination, de manière à garantir un accès chiffré/sécurisé à une ressource sur site. Voir [Configuration de l'authentification mutuelle](./securegateway_destination.html#mutual-auth) et [Authentification mutuelle TLS Node.js](./securegateway_tls-ma.html#node-js-tls-mutual-authentication) pour plus d'informations.
+L'activation de l'authentification mutuelle des deux côtés des destinations sur site renforce la sécurité de Secure Gateway. Du côté de l'authentification de l'utilisateur, activez l'authentification mutuelle afin de restreindre l'accès au noeud de cloud Secure Gateway par une authentification à l'aide d'un certificat client lorsque la demande s'effectue via TLS/HTTPS. Du côté de l'authentification de la ressource, activez l'authentification mutuelle avec entrée des données d'identification appropriées lors de la connexion au noeud final de destination, de manière à garantir un accès chiffré/sécurisé à une ressource sur site. Voir [Configuration de l'authentification mutuelle](/docs/services/SecureGateway/securegateway_destination.html#mutual-auth) et [Authentification mutuelle TLS Node.js](/docs/services/SecureGateway/securegateway_tls-ma.html#node-js-tls-mutual-authentication) pour plus d'informations.
 
 #### Définir des règles de table d'IP (pour une destination sur site)
 L'hôte et le port de cloud Secure Gateway d'une destination sur site se trouvent dans l'espace public ; par conséquent, l'accès est, par défaut, autorisé à tous.
-Pour contrôler le trafic qui accède à Secure Gateway, définissez des règles de table d'IP pour n'autoriser l'accès qu'à une plage spécifique de ports et d'adresses IP afin de sécuriser des ressources sur site. Voir [Règles de table d'IP](./securegateway_destination.html#configuring-network-security) pour plus d'informations sur la configuration de règles de table d'IP sur Secure Gateway.
+Pour contrôler le trafic qui accède à Secure Gateway, définissez des règles de table d'IP pour n'autoriser l'accès qu'à une plage spécifique de ports et d'adresses IP afin de sécuriser des ressources sur site. Voir [Règles de table d'IP](/docs/services/SecureGateway/securegateway_destination.html#configuring-network-security) pour plus d'informations sur la configuration de règles de table d'IP sur Secure Gateway.
 
 #### Configurer une liste de contrôle d'accès (pour une destination sur site)
-Configurez la prise en charge des listes de contrôle d'accès pour autoriser ou refuser l'accès à des ressources sur site de manière à mieux sécuriser les destinations sur site en spécifiant des droits d'accès sur le port et l'hôte d'une destination spécifique. Il est recommandé de définir les routes HTTP/S autorisées ou d'en interdire sur les entrées de liste de contrôle d'accès afin d'augmenter la sécurité de la destination sur site. Voir [Liste de contrôle d'accès](./securegateway_acl.html#access-control-list) et [Contrôle des routes et de HTTPS à l'aide de listes de contrôle d'accès](./securegateway_acl.html#routes) pour plus d'informations.
+Configurez la prise en charge des listes de contrôle d'accès pour autoriser ou refuser l'accès à des ressources sur site de manière à mieux sécuriser les destinations sur site en spécifiant des droits d'accès sur le port et l'hôte d'une destination spécifique. Il est recommandé de définir les routes HTTP/S autorisées ou d'en interdire sur les entrées de liste de contrôle d'accès afin d'augmenter la sécurité de la destination sur site. Voir [Liste de contrôle d'accès](/docs/services/SecureGateway/securegateway_acl.html#access-control-list) et [Contrôle des routes et de HTTPS à l'aide de listes de contrôle d'accès](/docs/services/SecureGateway/securegateway_acl.html#routes) pour plus d'informations.
 
 #### Définir un mot de passe sur l'interface utilisateur du client Secure Gateway
-Il est recommandé de définir un mot de passe pour l'interface utilisateur afin de restreindre l'accès à l'interface utilisateur du client Secure Gateway. Voir [Interaction avec le client](./securegateway_interaction.html#interacting-with-the-client) pour plus d'informations sur la définition du mot de passe à l'aide d'une configuration de démarrage ou des commandes interactives sur la ligne de commande du terminal client Secure Gateway.
+Il est recommandé de définir un mot de passe pour l'interface utilisateur afin de restreindre l'accès à l'interface utilisateur du client Secure Gateway. Voir [Interaction avec le client](/docs/services/SecureGateway/securegateway_interaction.html#interacting-with-the-client) pour plus d'informations sur la définition du mot de passe à l'aide d'une configuration de démarrage ou des commandes interactives sur la ligne de commande du terminal client Secure Gateway.

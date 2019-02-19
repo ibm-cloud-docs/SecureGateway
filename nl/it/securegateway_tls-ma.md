@@ -26,7 +26,7 @@ Sto creando una nuova applicazione e quindi non ho alcuna coppia certificato/chi
 Per consentire al client Secure Gateway di autenticare la risorsa a cui si sta connettendo, devo fornire al client il certificato (o la catena di certificati) che la risorsa presenterà.  La mia risorsa non ha una catena di certificati completa, quindi devo solo caricare il suo certificato nel campo On-Premises Authentication. Questo campo accetta fino a 6 file di certificato separati (.pem, .cer, .der, .crt).
 
 ### Client Cert and Key
-Se devo specificare il modo in cui il client Secure Gateway si identificherà presso la mia risorsa, posso caricare un certificato e una chiave qui per l'utilizzo da parte del client. Poiché il Client e la risorsa sono in esecuzione sulla stessa macchina, posso lasciarli vuoti e lasciare che i server Secure Gateway generino automaticamente una coppia per me. Se la mia risorsa si trovasse su un host separato, dovrei [generare una coppia certificato/chiave da caricare](./securegateway_keygen.html).
+Se devo specificare il modo in cui il client Secure Gateway si identificherà presso la mia risorsa, posso caricare un certificato e una chiave qui per l'utilizzo da parte del client. Poiché il Client e la risorsa sono in esecuzione sulla stessa macchina, posso lasciarli vuoti e lasciare che i server Secure Gateway generino automaticamente una coppia per me. Se la mia risorsa si trovasse su un host separato, dovrei [generare una coppia certificato/chiave da caricare](/docs/services/SecureGateway/securegateway_keygen.html).
 
 ![Autenticazione reciproca TLS locale](./images/localTLSma.png?raw=true "Autenticazione reciproca TLS locale")
 

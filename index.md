@@ -17,6 +17,6 @@ lastupdated: "2017-04-10"
 
 After creating an instance of the {{site.data.keyword.SecureGateway}} service, get connected in just a few steps.
 
-1. [Add a gateway](./securegateway_gateway.html).
-2. [Add a Client](./securegateway_client.html).
-3. [Add a destination](./securegateway_destination.html).
+1. [Add a gateway](/docs/services/SecureGateway/securegateway_gateway.html).
+2. [Add a Client](/docs/services/SecureGateway/securegateway_client.html).
+3. [Add a destination](/docs/services/SecureGateway/securegateway_destination.html).
