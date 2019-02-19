@@ -10,6 +10,7 @@ lastupdated: "2017-04-25"
 {:pre: .pre}
 
 # 証明書/鍵の管理
+{: #cert-key-management}
 
 ## 自己署名証明書/鍵ペアの生成
 

@@ -10,6 +10,7 @@ lastupdated: "2017-04-25"
 {:pre: .pre}
 
 # Zertifikats- und Schlüsselverwaltung
+{: #cert-key-management}
 
 ## Selbst signiertes Zertifikats-/Schlüsselpaar generieren
 

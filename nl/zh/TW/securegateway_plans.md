@@ -7,6 +7,7 @@ lastupdated: "2018-08-10"
 ---
 
 # {{site.data.keyword.SecureGateway}} 服務方案
+{: #secure-gateway-service-plans}
 
 隨著 1.7.0 版的發行，已引進新的分層方案定價模型，以容許 {{site.data.keyword.SecureGateway}} 根據任何公司的需求而調整。下表提供與每個公開可用方案相關聯的限制：
 

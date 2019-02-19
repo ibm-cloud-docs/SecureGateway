@@ -7,6 +7,7 @@ lastupdated: "2018-11-08"
 ---
 
 # 常见问题
+{: #sg-faq}
 
 ## OSI 模型层
 {: #osi}

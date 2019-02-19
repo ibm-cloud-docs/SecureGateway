@@ -7,6 +7,7 @@ lastupdated: "2018-08-10"
 ---
 
 # Requisitos para executar o cliente
+{: #system-requirements}
 
 ## Requisitos do sistema
 {: #system}

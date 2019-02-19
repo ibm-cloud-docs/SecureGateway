@@ -7,6 +7,7 @@ lastupdated: "2017-04-10"
 ---
 
 # Gestion de votre service {{site.data.keyword.SecureGateway}}
+{: #manage-sg-service}
 
 ## {{site.data.keyword.SecureGateway}} Tableau de bord
 A partir de votre tableau de bord {{site.data.keyword.SecureGateway}}, vous pouvez rapidement visualiser les informations suivantes :

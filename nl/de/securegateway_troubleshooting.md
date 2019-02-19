@@ -10,6 +10,7 @@ lastupdated: "2018-08-10"
 {:pre: .pre}
 
 # Fehlerbehebung
+{: #troubleshooting}
 
 ## Bewährte Verfahren für die Ausführung des Secure Gateway-Clients
 {: #best}

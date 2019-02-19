@@ -10,6 +10,7 @@ lastupdated: "2017-04-25"
 {:pre: .pre}
 
 # 证书/密钥管理
+{: #cert-key-management}
 
 ## 生成自签名证书/密钥对
 

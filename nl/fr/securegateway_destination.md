@@ -7,6 +7,7 @@ lastupdated: "2017-04-10"
 ---
 
 # Ajout d'une destination
+{: #add-dest}
 
 Une destination définit comment se connecter à une ressource sur site ou sur le cloud spécifique. Une fois la destination créée, les serveurs {{site.data.keyword.SecureGateway}} lui fournissent un noeud final public unique où elle sera en mode écoute pour les connexions pendant que la passerelle est connectée.
 

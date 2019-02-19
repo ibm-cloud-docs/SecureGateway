@@ -7,6 +7,7 @@ lastupdated: "2017-04-10"
 ---
 
 # Ziel hinzufügen
+{: #add-dest}
 
 Ein Ziel ist eine Definition für die Vorgehensweise zur Herstellung einer Verbindung zu einer bestimmten lokalen Ressource oder Cloudressource. Sobald das Ziel erstellt ist, wird es von den {{site.data.keyword.SecureGateway}}-Servern mit einem eindeutigen öffentlichen Endpunkt bereitgestellt, an dem es für Verbindungen empfangsbereit ist, während eine Verbindung zum Gateway besteht.
 

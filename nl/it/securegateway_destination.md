@@ -7,6 +7,7 @@ lastupdated: "2017-04-10"
 ---
 
 # Aggiunta di una destinazione
+{: #add-dest}
 
 Una destinazione è una definizione di come stabilire una connessione a una specifica risorsa in loco o cloud. Dopo che la destinazione è stata creata, i server {{site.data.keyword.SecureGateway}} forniranno ad essa un endpoint pubblico univoco dove sarà in ascolto per le connessioni mentre il gateway è connesso.
 

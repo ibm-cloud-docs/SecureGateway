@@ -7,6 +7,7 @@ lastupdated: "2017-04-10"
 ---
 
 # {{site.data.keyword.SecureGateway}} サービスの管理
+{: #manage-sg-service}
 
 ## {{site.data.keyword.SecureGateway}} ダッシュボード
 {{site.data.keyword.SecureGateway}} ダッシュボードでは、以下の詳細を素早く確認できます。

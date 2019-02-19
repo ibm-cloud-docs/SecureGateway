@@ -10,6 +10,7 @@ lastupdated: "2017-04-25"
 {:pre: .pre}
 
 # 配置用戶端的自動啟動
+{: #auto-start-conf}
 
 ## Linux
 {: #linux}

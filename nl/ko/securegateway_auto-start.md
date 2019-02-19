@@ -10,6 +10,7 @@ lastupdated: "2017-04-25"
 {:pre: .pre}
 
 # 클라이언트 자동 시작 구성
+{: #auto-start-conf}
 
 ## Linux
 {: #linux}

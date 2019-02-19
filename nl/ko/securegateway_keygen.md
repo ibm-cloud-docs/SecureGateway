@@ -10,6 +10,7 @@ lastupdated: "2017-04-25"
 {:pre: .pre}
 
 # 인증서/키 관리
+{: #cert-key-management}
 
 ## 자체 서명 인증서/키 쌍 생성
 

@@ -10,6 +10,7 @@ lastupdated: "2017-04-10"
 {:pre: .pre}
 
 # Authentification mutuelle TLS de Node.js
+{: #nodejs-tls-ma}
 
 Cette exemple montre comment configurer l'authentification mutuelle des deux côtés d'une destination sur site : authentification des utilisateurs et authentification des ressources.
 

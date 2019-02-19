@@ -10,6 +10,7 @@ lastupdated: "2017-04-25"
 {:pre: .pre}
 
 # Gestion des certifications et des clés
+{: #cert-key-management}
 
 ## Génération d'une paire certificat-clé autosignée
 

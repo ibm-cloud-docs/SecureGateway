@@ -7,6 +7,7 @@ lastupdated: "2017-04-25"
 ---
 
 # {{site.data.keyword.SecureGateway}} 変更ログ
+{: #secure-gateway-change-log}
 
 ## v1.7.0 フィックスパック 1
 

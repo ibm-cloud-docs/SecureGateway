@@ -10,6 +10,7 @@ lastupdated: "2017-04-25"
 {:pre: .pre}
 
 # 憑證/金鑰管理
+{: #cert-key-management}
 
 ## 產生自簽憑證/金鑰配對
 

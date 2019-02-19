@@ -10,6 +10,7 @@ lastupdated: "2017-04-10"
 {:pre: .pre}
 
 # Autenticación mutua de TLS de Node.js
+{: #nodejs-tls-ma}
 
 En este ejemplo se muestra cómo configurar la autenticación mutua en ambos lados de un destino local: autenticación de usuarios y autenticación de recursos.
 

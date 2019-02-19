@@ -10,6 +10,7 @@ lastupdated: "2017-04-25"
 {:pre: .pre}
 
 # 클라이언트 설치 제거
+{: #client-uninstall}
 
 ## Docker
 {: #docker}

@@ -10,6 +10,7 @@ lastupdated: "2017-04-25"
 {:pre: .pre}
 
 # Desinstalación del cliente
+{: #client-uninstall}
 
 ## Docker
 {: #docker}

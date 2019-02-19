@@ -7,6 +7,7 @@ lastupdated: "2018-11-08"
 ---
 
 # 자주 묻는 질문(FAQ)
+{: #sg-faq}
 
 ## OSI 모델 계층
 {: #osi}

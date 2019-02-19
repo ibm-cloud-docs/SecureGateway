@@ -7,6 +7,7 @@ lastupdated: "2018-11-08"
 ---
 
 # Foire aux questions
+{: #sg-faq}
 
 ## Couche du modèle OSI
 {: #osi}

@@ -10,6 +10,7 @@ lastupdated: "2018-10-11"
 {:pre: .pre}
 
 # 安裝用戶端
+{: #client-install}
 
 ## Docker
 {: #docker}

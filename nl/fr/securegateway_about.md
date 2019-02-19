@@ -7,6 +7,7 @@ lastupdated: "2017-04-10"
 ---
 
 # A propos de {{site.data.keyword.SecureGateway}}
+{: #about-sg}
 
 ## Comment la sécurité est-elle assurée ?
 {{site.data.keyword.SecureGatewayfull}} gère une unique connexion chiffrée persistante (TLS v1.2) entre le client {{site.data.keyword.SecureGateway}} (dans le réseau sur site) et les serveurs {{site.data.keyword.SecureGateway}}.  Cette connexion bidirectionnelle vous permet de transmettre des données en toute sécurité entre vos ressources de cloud et vos ressources sur site.  Pour les connexions sur l'une ou l'autre extrémité (entre une ressource de cloud et des serveurs SG et entre des ressources sur site et un client SG), l'utilisateur définit le protocole (TCP, TLS, HTTP, HTTPS, UDP) et des mesures de sécurité (authentification mutuelle, tables d'IP) à leur appliquer.  

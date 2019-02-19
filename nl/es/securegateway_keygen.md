@@ -10,6 +10,7 @@ lastupdated: "2017-04-25"
 {:pre: .pre}
 
 # Gestión de certificados/claves
+{: #cert-key-management}
 
 ## Generación de un par certificado/clave autofirmado
 

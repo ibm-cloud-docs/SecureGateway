@@ -7,6 +7,7 @@ lastupdated: "2018-08-10"
 ---
 
 # Planos do serviço {{site.data.keyword.SecureGateway}}
+{: #secure-gateway-service-plans}
 
 Com a liberação da v1.7.0, um novo modelo de precificação de plano em camadas foi introduzido que permite que o {{site.data.keyword.SecureGateway}} escala de acordo com as necessidades de qualquer empresa. A tabela a seguir fornece as limitações associadas a cada um dos planos publicamente disponíveis:
 

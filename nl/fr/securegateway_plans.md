@@ -7,6 +7,7 @@ lastupdated: "2018-08-10"
 ---
 
 # Plans de service {{site.data.keyword.SecureGateway}}
+{: #secure-gateway-service-plans}
 
 Avec la version 1.7.0, un nouveau modèle de tarification des plans par niveau, qui permet d'adapter {{site.data.keyword.SecureGateway}} aux besoin de votre entreprise, a été introduit.  Le tableau ci-dessous indique les limitations associées à chacun des plans disponibles publiquement :
 

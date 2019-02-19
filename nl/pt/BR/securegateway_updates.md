@@ -7,6 +7,7 @@ lastupdated: "2017-04-25"
 ---
 
 # Log de mudanças do {{site.data.keyword.SecureGateway}}
+{: #secure-gateway-change-log}
 
 ## v1.7.0 Fix Pack 1
 

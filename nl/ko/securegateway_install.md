@@ -10,6 +10,7 @@ lastupdated: "2018-10-11"
 {:pre: .pre}
 
 # 클라이언트 설치
+{: #client-install}
 
 ## Docker
 {: #docker}

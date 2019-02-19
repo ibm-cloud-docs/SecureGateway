@@ -7,6 +7,7 @@ lastupdated: "2017-04-10"
 ---
 
 # Incluindo um destino
+{: #add-dest}
 
 Um destino é uma definição de como se conectar a um recurso no local ou em nuvem específico. Depois que o destino tiver sido criado, os servidores {{site.data.keyword.SecureGateway}} fornecerão a ele um terminal público exclusivo no qual ele atenderá as conexões enquanto o gateway estiver conectado.
 

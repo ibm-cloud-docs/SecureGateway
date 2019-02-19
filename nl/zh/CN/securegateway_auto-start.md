@@ -10,6 +10,7 @@ lastupdated: "2017-04-25"
 {:pre: .pre}
 
 # 为客户机配置自动启动
+{: #auto-start-conf}
 
 ## Linux
 {: #linux}

@@ -10,6 +10,7 @@ lastupdated: "2018-10-04"
 {:pre: .pre}
 
 # 与客户机进行交互
+{: #client-interacting}
 
 有多种方法可与客户机交互：
 

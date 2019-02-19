@@ -7,6 +7,7 @@ lastupdated: "2018-08-10"
 ---
 
 # Planes de servicio de {{site.data.keyword.SecureGateway}}
+{: #secure-gateway-service-plans}
 
 Con el release v1.7.0, se a incorporado un nuevo modelo de precios de plan por niveles que permite escalar {{site.data.keyword.SecureGateway}} para adaptarlo a las necesidades de cualquier empresa.  En la tabla siguiente se muestran las limitaciones asociadas a cada uno de los planes de disponibilidad pública:
 

@@ -7,6 +7,7 @@ lastupdated: "2017-04-10"
 ---
 
 # 关于 {{site.data.keyword.SecureGateway}}
+{: #about-sg}
 
 ## 它的安全程度如何？
 {{site.data.keyword.SecureGatewayfull}} 在 {{site.data.keyword.SecureGateway}} 客户机（在内部部署网络中）和 {{site.data.keyword.SecureGateway}} 服务器之间维护一个持久加密 (TLS V1.2) 连接。通过此双向连接，可以安全地在云资源和内部部署资源之间传输数据。对于任一端上的连接（云资源与 SG 服务器之间的连接以及内部部署资源与 SG 客户机之间的连接），用户可定义对其实施的协议（TCP、TLS、HTTP、HTTPS 或 UDP）和安全措施（相互认证或 iptables）。  

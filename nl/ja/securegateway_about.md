@@ -7,6 +7,7 @@ lastupdated: "2017-04-10"
 ---
 
 # {{site.data.keyword.SecureGateway}} の概要
+{: #about-sg}
 
 ## セキュアである仕組み
 {{site.data.keyword.SecureGatewayfull}} は、{{site.data.keyword.SecureGateway}} クライアント (オンプレミス・ネットワークにある) と {{site.data.keyword.SecureGateway}} サーバーとの間に、単一の暗号化された持続的な接続 (TLS v1.2) を保持します。この双方向接続により、クラウド・リソースとオンプレミス・リソースとの間でデータを安全に送信できます。どちら側の接続に対しても (クラウド・リソースと SG サーバーとの間、およびオンプレミス・リソースと SG クライアントとの間)、ユーザーは適用されるプロトコル (TCP、TLS、HTTP、HTTPS、UDP) およびセキュリティー方式 (相互認証、IP テーブル) を定義します。  

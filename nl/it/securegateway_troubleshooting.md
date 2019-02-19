@@ -10,6 +10,7 @@ lastupdated: "2018-08-10"
 {:pre: .pre}
 
 # Risoluzione dei problemi
+{: #troubleshooting}
 
 ## Prassi ottimali per l'esecuzione del client Secure Gateway
 {: #best}

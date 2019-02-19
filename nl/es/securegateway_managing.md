@@ -7,6 +7,7 @@ lastupdated: "2017-04-10"
 ---
 
 # Gestión del servicio {{site.data.keyword.SecureGateway}}
+{: #manage-sg-service}
 
 ## Panel de control de {{site.data.keyword.SecureGateway}}
 Desde el panel de control de {{site.data.keyword.SecureGateway}}, puede ver rápidamente los detalles siguientes:

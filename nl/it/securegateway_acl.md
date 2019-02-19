@@ -10,6 +10,7 @@ lastupdated: "2017-04-10"
 {:pre: .pre}
 
 # ACL (Access Control List)
+{: #acl}
 
 Il client {{site.data.keyword.SecureGateway}} fornisce il supporto ACL (Accesss Control List) integrato. Puoi consentire o limitare (rifiutare) l'accesso alle risorse in loco apportando modifiche all'ACL per il client. Tale operazione può essere eseguita interattivamente utilizzando i comandi client oppure specificando un file che contiene gli ACL che desideri siano implementati.
 

@@ -10,6 +10,7 @@ lastupdated: "2018-08-10"
 {:pre: .pre}
 
 # Resolver problemas
+{: #troubleshooting}
 
 ## Melhores práticas para executar o cliente Secure Gateway
 {: #best}

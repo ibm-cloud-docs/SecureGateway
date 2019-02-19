@@ -7,6 +7,7 @@ lastupdated: "2017-04-10"
 ---
 
 # Adición de una pasarela
+{: #add-sg-gw}
 
 Una pasarela se puede considerar un método para identificar una determinada red o entorno.  Es lo que utiliza un cliente de Secure Gateway para establecer conectividad con los servidores de Secure Gateway y puede contener varias definiciones de recursos o destinos.
 

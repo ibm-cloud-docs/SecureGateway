@@ -10,6 +10,7 @@ lastupdated: "2018-08-10"
 {:pre: .pre}
 
 # トラブルシューティング
+{: #troubleshooting}
 
 ## Secure Gateway クライアントの実行のベスト・プラクティス
 {: #best}

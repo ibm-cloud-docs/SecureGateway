@@ -7,6 +7,7 @@ lastupdated: "2017-04-10"
 ---
 
 # {{site.data.keyword.SecureGateway}} 서비스 관리
+{: #manage-sg-service}
 
 ## {{site.data.keyword.SecureGateway}} 대시보드
 {{site.data.keyword.SecureGateway}} 대시보드에서 신속하게 다음과 같은 세부사항을 확인할 수 있습니다.

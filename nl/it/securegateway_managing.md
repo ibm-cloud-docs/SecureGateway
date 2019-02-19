@@ -7,6 +7,7 @@ lastupdated: "2017-04-10"
 ---
 
 # Gestione del tuo servizio {{site.data.keyword.SecureGateway}}
+{: #manage-sg-service}
 
 ## {{site.data.keyword.SecureGateway}} Dashboard
 Dal tuo dashboard {{site.data.keyword.SecureGateway}}, puoi rapidamente vedere i seguenti dettagli:

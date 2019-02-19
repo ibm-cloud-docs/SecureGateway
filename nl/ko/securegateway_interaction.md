@@ -10,6 +10,7 @@ lastupdated: "2018-10-04"
 {:pre: .pre}
 
 # 클라이언트와 상호작용
+{: #client-interacting}
 
 클라이언트와 상호작용하는 몇 가지 방법이 존재합니다.
 

@@ -7,6 +7,7 @@ lastupdated: "2017-04-10"
 ---
 
 # Aggiunta di un gateway
+{: #add-sg-gw}
 
 Puoi pensare a un gateway come a un modo per identificare una rete o un ambiente specifici. Si tratta di ciò che un client Secure Gateway utilizzerà per stabilire la connettività con i server Secure Gateway e può contenere più definizioni di risorse o destinazioni.
 

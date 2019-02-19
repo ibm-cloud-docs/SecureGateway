@@ -10,6 +10,7 @@ lastupdated: "2018-10-04"
 {:pre: .pre}
 
 # Interacción con el cliente
+{: #client-interacting}
 
 Hay varias formas de interactuar con el cliente:
 

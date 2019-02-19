@@ -10,6 +10,7 @@ lastupdated: "2017-04-25"
 {:pre: .pre}
 
 # Gestione certificato/chiave
+{: #cert-key-management}
 
 ## Generazione di una coppia certificato/chiave autofirmata
 

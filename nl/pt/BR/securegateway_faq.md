@@ -7,6 +7,7 @@ lastupdated: "2018-11-08"
 ---
 
 # Perguntas mais frequentes
+{: #sg-faq}
 
 ## Camada de modelo OSI
 {: #osi}

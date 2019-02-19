@@ -7,6 +7,7 @@ lastupdated: "2017-04-25"
 ---
 
 # Aggiunta di un client
+{: #add-client}
 
 Il client {{site.data.keyword.SecureGateway}} è il tassello chiave che rende possibile il tutto. Il client stabilisce la connessione iniziale tra la rete in loco e un gateway sui server {{site.data.keyword.SecureGateway}} e consente il transito delle comunicazioni verso le destinazioni definite.
 

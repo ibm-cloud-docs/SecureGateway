@@ -10,6 +10,7 @@ lastupdated: "2018-10-04"
 {:pre: .pre}
 
 # 與用戶端互動
+{: #client-interacting}
 
 有幾種方法可以與用戶端互動：
 

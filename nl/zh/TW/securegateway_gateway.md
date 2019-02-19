@@ -7,6 +7,7 @@ lastupdated: "2017-04-10"
 ---
 
 # 新增閘道
+{: #add-sg-gw}
 
 閘道可以視為識別特定網路或環境的方式。「Secure Gateway 用戶端」將用它來建立與「Secure Gateway 伺服器」的連線，而且它可以包含多個資源定義或目的地。
 

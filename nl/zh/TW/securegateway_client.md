@@ -7,6 +7,7 @@ lastupdated: "2017-04-25"
 ---
 
 # 新增用戶端
+{: #add-client}
 
 「{{site.data.keyword.SecureGateway}} 用戶端」是讓奇蹟成真的那片重要拼圖。用戶端會在內部部署網路與 {{site.data.keyword.SecureGateway}} 伺服器上的閘道之間建立起始連線，並容許通訊通過到達已定義的目的地。
 

@@ -7,6 +7,7 @@ lastupdated: "2018-08-10"
 ---
 
 # Piani di servizio {{site.data.keyword.SecureGateway}}
+{: #secure-gateway-service-plans}
 
 Con la release della v1.7.0, è stato introdotto un nuovo modello di prezzo dei piani a livelli, che consente il ridimensionamento di {{site.data.keyword.SecureGateway}} in base alle esigenze di qualsiasi azienda.  La tabella di seguito fornisce le limitazioni associate a ciascuno dei piani pubblicamente disponibili:
 

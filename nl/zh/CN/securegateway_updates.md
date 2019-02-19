@@ -7,6 +7,7 @@ lastupdated: "2017-04-25"
 ---
 
 # {{site.data.keyword.SecureGateway}} 更改日志
+{: #secure-gateway-change-log}
 
 ## V1.7.0 FP1
 

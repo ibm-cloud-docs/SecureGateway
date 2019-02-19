@@ -10,6 +10,7 @@ lastupdated: "2018-08-10"
 {:pre: .pre}
 
 # 疑難排解
+{: #troubleshooting}
 
 ## 執行 Secure Gateway 用戶端的最佳作法
 {: #best}

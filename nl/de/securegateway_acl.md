@@ -10,6 +10,7 @@ lastupdated: "2017-04-10"
 {:pre: .pre}
 
 # Zugriffssteuerungsliste
+{: #acl}
 
 Vom {{site.data.keyword.SecureGateway}}-Client wird Unterstützung für eine eingebettete Zugriffssteuerungsliste (Accesss Control List, ACL) bereitgestellt. Sie können den Zugriff auf lokale Ressourcen durch Änderungen an der Zugriffssteuerungsliste für den Client zulassen oder beschränken (verweigern). Dies ist interaktiv mithilfe von Clientbefehlen oder durch Angeben einer Datei mit Zugriffssteuerungslisten möglich, die angewendet werden sollen.
 

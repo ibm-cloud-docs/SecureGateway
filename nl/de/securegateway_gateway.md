@@ -7,6 +7,7 @@ lastupdated: "2017-04-10"
 ---
 
 # Gateway hinzufügen
+{: #add-sg-gw}
 
 Ein Gateway kann als Möglichkeit zum Identifizieren eines bestimmten Netzes oder einer bestimmten Umgebung betrachtet werden. Mit seiner Hilfe werden vom Secure Gateway-Client Verbindungen zu den Secure Gateway-Servern hergestellt und es kann mehrere Ressourcendefinitionen oder Ziele enthalten.
 
