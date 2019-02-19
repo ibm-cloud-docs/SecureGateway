@@ -10,15 +10,17 @@ lastupdated: "2018-08-10"
 {:pre: .pre}
 
 # Troubleshooting
+{: #troubleshooting}
 
 ## Best practices for running the Secure Gateway Client
-{: #best}
+{: #best-practices}
 
 - Run the Secure Gateway client on an operating system (OS) partition that has network visibility of the services that are bridged by the client itself. For instance, some hosted virtualization environments support multiple network connectivity modes, including NAT and Bridged. Be sure to choose the correct connection type that provides you with access to the {{site.data.keyword.Bluemix}} services from the internet.
 - Install the Secure Gateway into your IT environment where your corporate security policy allows. This would typically be in a protected yellow zone or DMZ where your company can institute the appropriate security controls to protect on-premises assets. Always follow your corporate security policies and instructions when you install the Secure Gateway client.
 - Before you install a client into your environment, ensure that both the internet and your on-premises assets are accessible and all host names are resolvable by a DNS.
 
 ## Initial Troubleshooting Steps
+{: #initial-troubleshooting}
 
 - Initiate the failing request from the requesting application
 - Check the Secure Gateway Client logs
@@ -38,12 +40,14 @@ side of the tunnel. Define the timeouts on the application, which never receives
 method to end the hang.
 
 ## Configure your Docker client to restart when your server restarts
-{: #docker}
+{: #docker-auto-restart}
 
 ### What is happening
+{: #docker-auto-restart-what-is-happening}
 When you restart the server where your Secure Gateway client runs, you must manually restart the Secure Gateway Docker client. How can you get the client to start automatically after a restart of the system?
 
 ### How to fix it
+{: #docker-auto-restart-how-to-fix-it}
 
 - On Linux or UNIX systems:
 - Integrate the Docker command into a script that can be called as a result of a CRON job.
@@ -59,6 +63,7 @@ for /L %i in (0,0,0) do docker run -it ibmcom/secure-gateway-client <gateway_id>
 {: #not-in-cn}
 
 ### What is happening
+{: #not-in-cn-what-is-happening}
 You are trying to implement on-premises client-side TLS by using the Secure Gateway client and you receive the following error message.
 
 ```
@@ -72,6 +77,7 @@ Where:
 {: screen}
 
 ### Why it is happening
+{: #not-in-cn-why-it-is-happening}
 The Common Name, for example, the server FQDN or YOUR name, between your on-premises application and the certificate that you uploaded into {{site.data.keyword.Bluemix_notm}} for this destination do not match.
 
 - Check the following items:
@@ -79,6 +85,7 @@ The Common Name, for example, the server FQDN or YOUR name, between your on-prem
 - You uploaded the correct certificate into your {{site.data.keyword.Bluemix_notm}} destination for this client.
 
 ### How to fix it
+{: #not-in-cn-how-to-fix-it}
 
  1. In the {{site.data.keyword.Bluemix_notm}} UI, go to the Secure Gateway Dashboard.
  2. Select your destination and click the Edit icon.
@@ -89,6 +96,7 @@ The Common Name, for example, the server FQDN or YOUR name, between your on-prem
 {: #san}
 
 ### What is happening
+{: #san-what-is-happening}
 The CN in the certificate presented is the IP address of the gateway, but the certificate does not have a SAN matching the IP address and the client fails to connect.  
 
 Due to hostname resolution issues we are using the IP address in our destination.  The CN in the certificate presented is the IP address of the gateway, but the certificate does not have a SAN matching the IP address and the client fails to connect
@@ -103,9 +111,11 @@ You have created a destination using TLS, but instead of using the destination&a
 {: screen}
 
 ### Why it is happening
+{: #san-why-it-is-happening}
 What is going on is that the SSL verification code in the gateway client is treating this destination differently because it uses an IP address rather than a hostname.  Instead of matching with the cert's CN, it is looking in the cert's SAN for a match of the IP address.  Since there is no SAN in the cert, it sees it as a bad connection and fails the SSL handshake.
 
 ### How to fix it
+{: #san-how-to-fix-it}
 If you look at the error message it does not say CN, (e.g. [ERROR] Connection ## had error: Host: . is not cert&apos;s CN: ), but the cert&apos;s list, which leads me to believe you have generated your self-signed cert incorrectly. The problem is that the cert was generated using an FQDN or CN with an IP_Address, this will not work since IP addresses are only supported when using SAN.
 
 Method for generating a certificate with an IP as the CN with openssl:
@@ -178,6 +188,7 @@ to the default:
 {: #depth-zero}
 
 ### What is happening
+{: #depth-zero-what-is-happening}
 You are trying to implement on-premises client-side TLS by using the Secure Gateway client and you receive the following error message.
 
 ```
@@ -188,9 +199,11 @@ You are trying to implement on-premises client-side TLS by using the Secure Gate
 {: screen}
 
 ### Why it is happening
+{: #depth-zero-why-it-is-happening}
 The destination you defined is missing a client-side certificate.
 
 ### How to fix it
+{: #depth-zero-how-to-fix-it}
  1. In the {{site.data.keyword.Bluemix_notm}} UI, go to the Secure Gateway Dashboard.
  2. Select your destination and click the Edit icon.
  3. Click Upload certificate.
@@ -198,12 +211,14 @@ The destination you defined is missing a client-side certificate.
 
 
 ## How can I interactively load an ACL file in the Docker client?
-{: #docker-acl}
+{: #docker-load-acl}
 
 ### What is happening
+{: #docker-load-acl-what-is-happening}
 Since Docker is a container or virtualized environment, it does not have direct access to your filesystem until the container is actually launched.  This prevents it from reading your host machines filesystem until it is actually launched and running.
 
 ### How to fix it
+{: #docker-load-acl-how-to-fix-it}
 This is what you can do:
 
 - Create a Dockerfile to include the aclfile.txt
@@ -238,7 +253,7 @@ docker run -t -i ads-secure-gateway-client1  --F /tmp/aclfile.txt
 {: screen}
 
 ## Getting additional help and support
-{: #support}
+{: #getting-help-and-support}
 
 If you have technical questions about developing or deploying an application with Secure Gateway, post your question on [Stack Overflow ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://stackoverflow.com/search?q=securegateway+ibm-bluemix).  Tag your question with "ibm-bluemix" and "secure-gateway" so that it can be found more readily by {{site.data.keyword.Bluemix_notm}} development teams.
 

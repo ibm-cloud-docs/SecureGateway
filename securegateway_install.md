@@ -10,9 +10,10 @@ lastupdated: "2018-10-11"
 {:pre: .pre}
 
 # Installing the Client
+{: #client-install}
 
 ## Docker
-{: #docker}
+{: #installing-docker}
 
 Docker is a third-party platform that provides a container approach to installing applications quickly and easily with little or no configuration necessary. The {{site.data.keyword.SecureGateway}} service provides a Docker image to be used after the Docker utility is installed on your workstation.  To install Docker see the Docker install web site and follow the instructions for your system.
 
@@ -46,7 +47,7 @@ The {{site.data.keyword.SecureGateway}} Client only supports the `pull` and `run
 Return to [Getting Started - Adding a Client](/docs/services/SecureGateway/securegateway_client.html).
 
 ## Mac OS X
-{: #mac}
+{: #installing-mac}
 
 ### Requirements for running on Mac OS X
 {: #mac-requirements}
@@ -70,7 +71,7 @@ To start the client, run the `secgw.command` file located in the default install
 Return to [Getting Started - Adding a Client](/docs/services/SecureGateway/securegateway_client.html).
 
 ## Linux
-{: #linux}
+{: #installing-linux}
 
 The installation includes the {{site.data.keyword.SecureGatewayfull}} client as well as a secure version of IBM's nodejs package.  Both are installed under the /opt/ibm directory on the system.  The installer will create or update the following:
 
@@ -183,7 +184,7 @@ License: http://www.ibm.com/software/sla/sladb.nsf/lilookup/986C7686F22D4D358525
 
    The client installer starts and installs the client, it will create a sgenvironment.conf file in /etc/ibm.
 
-2. Optional: If you want to use the system's upstart process you must edit this file and provide the following for the client to start correctly. See [Using Upstart](/docs/services/SecureGateway/securegateway_auto-start.html#linux) for more information on editing this configuration file.
+2. Optional: If you want to use the system's upstart process you must edit this file and provide the following for the client to start correctly. See [Using Upstart](/docs/services/SecureGateway/securegateway_auto-start.html#auto-start-linux) for more information on editing this configuration file.
 
 3. If you started the client using upstart, check the log file to make sure it is running correctly.
 
@@ -215,7 +216,7 @@ Normally it takes two parameters, a {{site.data.keyword.SecureGateway}} gateway 
 Return to [Getting Started - Adding a Client](/docs/services/SecureGateway/securegateway_client.html).
 
 ## Windows
-{: #windows}
+{: #installing-windows}
 
 ### Installing the Client
 {: #windows-install}
@@ -260,7 +261,7 @@ Alternatively, navigate to `<Installation_directory>\ibm\securegateway\client` a
 Return to [Getting Started - Adding a Client](/docs/services/SecureGateway/securegateway_client.html).
 
 ## DataPower
-{: #datapower}
+{: #installing-datapower}
 
 DataPower has an embedded version of the {{site.data.keyword.SecureGateway}} Client.  Depending on the DataPower version, you may have a different version of the {{site.data.keyword.SecureGateway}} Client.  Be aware of any applicable [DataPower Client Limitations](/docs/services/SecureGateway/securegateway_interaction.html#limits-datapower). Using the old Secure Gateway Client might experience unexpected errors.
 

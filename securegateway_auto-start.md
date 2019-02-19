@@ -10,9 +10,10 @@ lastupdated: "2017-04-25"
 {:pre: .pre}
 
 # Configuring Auto-start for the Client
+{: #auto-start-conf}
 
 ## Linux
-{: #linux}
+{: #auto-start-linux}
 
 If you have chosen to use you system's auto-start facility, use one of the methods below to start the client.  The configuration file that will be used by the client can be found at:
 
@@ -39,7 +40,7 @@ This file includes the following important variables to set:
 <b>Note:</b> This file is only read if you are using your system's auto-start facility.  If you are running the client manually this file is ignored.
 
 ### Upstart
-{: #upstart}
+{: #auto-start-upstart}
 
 ### Starting the client
 {: #upstart-start}
@@ -69,7 +70,7 @@ sudo initctl stop securegateway_client
 {: pre}
 
 ### SystemD
-{: #systemd}
+{: #auto-start-systemd}
 
 
 ### Starting the client
@@ -107,7 +108,7 @@ systemctl stop securegateway_client
 {: pre}
 
 ### System V
-{: #system-v}
+{: #auto-start-system-v}
 
 System V is not setup during installation like the other auto-start facilities. Scripts are available in the installation directory /opt/ibm/securegateway/client/upstart, they are:
 
@@ -139,7 +140,7 @@ Once these steps have been executed, the YasT and System V commands can be used 
 Return to [Getting Started - Adding a Client](/docs/services/SecureGateway/securegateway_client.html).
 
 ## Windows
-{: #windows}
+{: #auto-start-windows}
 
 To alter the state of the windows service, open a command window with administrator privileges.
 

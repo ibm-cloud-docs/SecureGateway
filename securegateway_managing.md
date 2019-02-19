@@ -7,8 +7,10 @@ lastupdated: "2017-04-10"
 ---
 
 # Managing your {{site.data.keyword.SecureGateway}} Service
+{: #manage-sg-service}
 
 ## {{site.data.keyword.SecureGateway}} Dashboard
+{: #secure-gateway-dashboard}
 From your {{site.data.keyword.SecureGateway}} dashboard, you can quickly see the following details:
 
 - The current number of connections to your destinations across all of your gateways.
@@ -20,6 +22,7 @@ From your {{site.data.keyword.SecureGateway}} dashboard, you can quickly see the
 ![{{site.data.keyword.SecureGateway}} Dashboard with Usage](./images/dashboardUsage.png?raw=true "{{site.data.keyword.SecureGateway}} Dashboard with Usage")
 
 ### Service Profile
+{: #dashboard-service-profile}
 By clicking the Profile button, you can see:
 
 Field | Description
@@ -33,6 +36,7 @@ Gateway Overages | The current number of gateway overages you are being charged 
 Data Overages | The number of data overages incurred for the current month's billing cycle.
 
 ### Gateway Info Panel
+{: #dashboard-gw-info-panel}
 By clicking the Settings button on any of the gateway tiles, you can see:
 
 - The security token required to use the API or to connect a client, depending on whether the token is being enforced on client connections.
@@ -49,6 +53,7 @@ The following tasks can also be completed from the Gateway Info panel:
 - Delete the gateway.
 
 ## Dashboard for a particular gateway
+{: #dashboard-particular-gateway}
 By clicking on one of the gateway tiles, the dashboard for that particular gateway is displayed.  Similar to the main {{site.data.keyword.SecureGateway}} dashboard, you can quickly see the following details:
 
 - The current number of connections to the destinations on this gateway.
@@ -60,6 +65,7 @@ By clicking on one of the gateway tiles, the dashboard for that particular gatew
 ![Dashboard for a particular gateway](./images/viewGateway.png?raw=true "Dashboard for a particular gateway")
 
 ### Destination Info Panel
+{: #dashboard-dest-info-panel}
 By clicking the Settings button on any of the destination tiles, you can see:
 
 - The destination ID required to use the API.

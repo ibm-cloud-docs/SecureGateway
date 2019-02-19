@@ -8,8 +8,10 @@ lastupdated: "2018-08-10"
 {:new_window: target="_blank"}
 
 # Resources
+{: #secure-gateway-resource}
 
 ## Blogs and other resources
+{: #blogs-and-others}
 
 - [Securing Destinations with TLS in Bluemix Secure Gateway ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/bluemix/2015/04/17/securing-destinations-tls-bluemix-secure-gateway/){: new_window}
 - [Bluemix Secure Gateway - Yes I Can Get It ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/bluemix/2015/03/27/bluemix-secure-gateway-yes-can-get/){: new_window}
@@ -20,6 +22,7 @@ lastupdated: "2018-08-10"
 
 
 ## Using the IBM {{site.data.keyword.SecureGateway}} SDK for Bluemix
+{: #ibm-sg-sdk}
 If you want to manage your {{site.data.keyword.SecureGateway}} from a node.js app, you can use the JavaScript SDK. So if you work in JavaScript and want to interact with the {{site.data.keyword.SecureGateway}} REST interface, there is no need for you to make the REST calls. The JavaScript SDK sets up the HTTP calls and puts them into easy to use functions.  It is available as an NPM project here:
 
 - [IBM Secure Gateway SDK for Bluemix NPM Project ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.npmjs.com/package/bluemix-secure-gateway){: new_window}

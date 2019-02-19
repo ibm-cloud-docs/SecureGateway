@@ -10,6 +10,7 @@ lastupdated: "2018-10-04"
 {:pre: .pre}
 
 # Interacting with the Client
+{: #client-interacting}
 
 There are a few ways to interact with the client:
 
@@ -122,7 +123,7 @@ For more details on configuring the Access Control List, [click here](/docs/serv
 Return to [Getting Started - Adding a Client](/docs/services/SecureGateway/securegateway_client.html).
 
 ## Client UI
-{: #ui}
+{: #client-ui}
 
 <b>Note:</b> The Client UI is not supported when using Docker on Windows or MacOS.
 
@@ -161,7 +162,7 @@ This page will show the current connection information for the selected client (
 Return to [Getting Started - Adding a Client](/docs/services/SecureGateway/securegateway_client.html).
 
 ## Remote Client Termination
-{: #remote}
+{: #client-remote}
 
 If a client has been provided an ID, then it can be remotely terminated via the SG UI or through the SG API.  If you terminate a client that is running as a service, the client will restart and obtain a new client ID; however, if the service has multiple clients connected, the terminated client will not restart until all of the remaining clients have been terminated.
 
@@ -184,4 +185,4 @@ The {{site.data.keyword.SecureGateway}} DataPower Client is in the process of be
 - Full certificate chains with destination-side TLS are not supported prior to DataPower version 7.5.1.0
 - Cloud destinations are not supported prior to DataPower version 7.5.1.0
 - The log level can't be changed to TRACE level
-- The latest Secure Gateway version in DataPower is 1.8.0fp6, [for more info](/docs/services/SecureGateway/securegateway_install.html#datapower)
+- The latest Secure Gateway Client version in DataPower is 1.8.0fp6, please check [here](/docs/services/SecureGateway/securegateway_install.html#installing-datapower) for more information
