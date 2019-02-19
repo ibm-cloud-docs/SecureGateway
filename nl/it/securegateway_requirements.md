@@ -56,7 +56,7 @@ Se nel tuo ambiente è presente il server Enterprise di npm, inserisci in whitel
   Il nodo del gateway SC, disponibile nella configurazione del gateway; ciascun gateway non sarà sullo stesso nodo; conferma il nome host del nodo ogni volta che crei il gateway.
 
 
-Accertati di verificare o modificare le regole supplementari della tabella IP del firewall eventualmente applicabili.Se i tuoi amministratori di rete richiedono degli IP specifici, [contatta il supporto per richiederli per il tuo ambiente](./securegateway_troubleshooting.html#support).
+Accertati di verificare o modificare le regole supplementari della tabella IP del firewall eventualmente applicabili.Se i tuoi amministratori di rete richiedono degli IP specifici, [contatta il supporto per richiederli per il tuo ambiente](/docs/services/SecureGateway/securegateway_troubleshooting.html#support).
 
 
 ## Determinazione dei requisiti hardware

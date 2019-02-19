@@ -40,7 +40,7 @@ Secure Gateway 서비스에서는 TLS 버전 1.2를 지원합니다.
 - 서비스에 업데이트를 작성 중이어서 사용자가 서비스를 사용하는 것을 원하지 않습니다.  이 경우 임시로 필요한 게이트웨이를 사용 안함으로 설정하고 서비스가 업데이트될 때까지 대기할 수 있습니다.
 - 모든 게이트웨이 및 대상이 프론트 엔드에 설정되도록 했지만 여전히 백엔드에서 빌드 중입니다. 이 경우 백엔드 빌드가 완료될 때까지 게이트웨이나 대상을 사용 안함으로 설정할 수 있습니다.
 
-게이트웨이 또는 대상을 사용 안함으로 설정하는 방법에 대한 자세한 정보는 [Secure Gateway 서비스 인스턴스를 관리하는 방법](./securegateway_managing.html)을 참조하십시오.
+게이트웨이 또는 대상을 사용 안함으로 설정하는 방법에 대한 자세한 정보는 [Secure Gateway 서비스 인스턴스를 관리하는 방법](/docs/services/SecureGateway/securegateway_managing.html)을 참조하십시오.
 
 ## 복수의 영역에서 작성을 자동화하기 위해 권장하는 접근법은 무엇입니까?
 {: #automation-spaces}
@@ -50,7 +50,7 @@ Secure Gateway 서비스에서는 TLS 버전 1.2를 지원합니다.
 
 ### 답변
 
-- 세 개의 영역 모두에 대해 하나의 Secure Gateway 인스턴스를 작성할 수 있습니다. 하지만 [특정 플랜에 대한 게이트웨이 및 대상 제한사항](./securegateway_plans.html)을 기억해야 합니다.
+- 세 개의 영역 모두에 대해 하나의 Secure Gateway 인스턴스를 작성할 수 있습니다. 하지만 [특정 플랜에 대한 게이트웨이 및 대상 제한사항](/docs/services/SecureGateway/securegateway_plans.html)을 기억해야 합니다.
 - Secure Gateway의 경우 서비스 바인딩이 필요하지 않기 때문에 Node.js 애플리케이션을 재사용하기 위한 추가적인 고려사항은 존재하지 않습니다.
 
 
@@ -62,7 +62,7 @@ Secure Gateway 서비스에서는 TLS 버전 1.2를 지원합니다.
 
 ### 답변
 
-- 각각의 조직에 Secure Gateway 서비스 인스턴스를 포함시킬 필요는 없습니다. 하나의 조직에 인스턴스가 포함되어 있는 경우 다른 모든 환경에서 해당 인스턴스 내에 있는 게이트웨이를 사용할 수 있습니다. 이 설정을 사용하는 경우 [특정 플랜에 대한 게이트웨이 및 대상 제한사항](./securegateway_plans.html)을 기억해야 합니다.
+- 각각의 조직에 Secure Gateway 서비스 인스턴스를 포함시킬 필요는 없습니다. 하나의 조직에 인스턴스가 포함되어 있는 경우 다른 모든 환경에서 해당 인스턴스 내에 있는 게이트웨이를 사용할 수 있습니다. 이 설정을 사용하는 경우 [특정 플랜에 대한 게이트웨이 및 대상 제한사항](/docs/services/SecureGateway/securegateway_plans.html)을 기억해야 합니다.
 - 각각의 조직에 Secure Gateway 서비스 인스턴스를 포함시킬 수 있으며 모든 영역에서 해당 구성을 사용할 수 있습니다.
 
 ## 내 앱이 동일한 영역에 있어야 합니까?
@@ -155,14 +155,14 @@ Secure Gateway 클라이언트에서 실시간 연결 정보, 전송된 데이�
 ### 답변
 
 #### 상호 인증 사용
-온프레미스 대상의 양쪽 측면에 대한 상호 인증을 사용으로 설정하여 Secure Gateway를 더욱 안전하게 만들 수 있습니다. 사용자 인증 측에서는 상호 인증을 사용으로 설정하여 TLS/HTTPS를 통해 요청이 수행될 때 클라이언트 인증서를 사용하여 인증함으로써 Secure Gateway 클라우드 노드에 대한 액세스를 제한하십시오. 리소스 인증 측에서는 상호 인증을 사용으로 설정하여 대상 엔드포인트에 연결할 때 적절한 신임 정보를 제공하도록 함으로써 온프레미스 리소스에 대한 보안/암호화 액세스를 보증하십시오. 자세한 정보는 [상호 인증 구성](./securegateway_destination.html#mutual-auth) 및 [Node.js TLS 상호 인증](./securegateway_tls-ma.html#node-js-tls-mutual-authentication)을 참조하십시오.
+온프레미스 대상의 양쪽 측면에 대한 상호 인증을 사용으로 설정하여 Secure Gateway를 더욱 안전하게 만들 수 있습니다. 사용자 인증 측에서는 상호 인증을 사용으로 설정하여 TLS/HTTPS를 통해 요청이 수행될 때 클라이언트 인증서를 사용하여 인증함으로써 Secure Gateway 클라우드 노드에 대한 액세스를 제한하십시오. 리소스 인증 측에서는 상호 인증을 사용으로 설정하여 대상 엔드포인트에 연결할 때 적절한 신임 정보를 제공하도록 함으로써 온프레미스 리소스에 대한 보안/암호화 액세스를 보증하십시오. 자세한 정보는 [상호 인증 구성](/docs/services/SecureGateway/securegateway_destination.html#mutual-auth) 및 [Node.js TLS 상호 인증](/docs/services/SecureGateway/securegateway_tls-ma.html#node-js-tls-mutual-authentication)을 참조하십시오.
 
 #### IP 테이블 규칙 설정(온프레미스 대상의 경우)
 온프레미스 대상의 Secure Gateway 클라우드 호스트 및 포트는 공용 영역에 존재하기 때문에 기본적으로 모든 사용자가 액세스할 수 있도록 허용됩니다.
-온프레미스 리소스에 보안을 적용하기 위해 Secure Gateway에 대한 트래픽 액세스를 제어하려면 특정 범위의 IP 및 포트에서만 액세스할 수 있도록 허용하는 iptable 규칙을 설정하십시오. Secure Gateway에서 iptable 규칙을 구성하는 방법에 대한 자세한 정보는 [IP 테이블 규칙](./securegateway_destination.html#configuring-network-security)을 참조하십시오.
+온프레미스 리소스에 보안을 적용하기 위해 Secure Gateway에 대한 트래픽 액세스를 제어하려면 특정 범위의 IP 및 포트에서만 액세스할 수 있도록 허용하는 iptable 규칙을 설정하십시오. Secure Gateway에서 iptable 규칙을 구성하는 방법에 대한 자세한 정보는 [IP 테이블 규칙](/docs/services/SecureGateway/securegateway_destination.html#configuring-network-security)을 참조하십시오.
 
 #### 액세스 제어 목록 구성(온프레미스 대상의 경우)
-온프레미스 리소스에 대한 액세스를 허용하거나 제한하는 액세스 제어 목록 지원을 구성하여 특정 대상 호스트 및 포트에 대한 액세스 권한을 지정함으로써 온프레미스 대상을 더욱 안전하게 만들 수 있습니다. 온프레미스 대상의 보안을 강화하기 위해 ACL 항목에 대해 허용되거나 제한된 HTTP/S 라우트도 정의하는 것이 좋습니다. 자세한 정보는 [액세스 제어 목록](./securegateway_acl.html#access-control-list) 및 [ACL을 사용한 HTTPS/라우트 제어](./securegateway_acl.html#routes)를 참조하십시오.
+온프레미스 리소스에 대한 액세스를 허용하거나 제한하는 액세스 제어 목록 지원을 구성하여 특정 대상 호스트 및 포트에 대한 액세스 권한을 지정함으로써 온프레미스 대상을 더욱 안전하게 만들 수 있습니다. 온프레미스 대상의 보안을 강화하기 위해 ACL 항목에 대해 허용되거나 제한된 HTTP/S 라우트도 정의하는 것이 좋습니다. 자세한 정보는 [액세스 제어 목록](/docs/services/SecureGateway/securegateway_acl.html#access-control-list) 및 [ACL을 사용한 HTTPS/라우트 제어](/docs/services/SecureGateway/securegateway_acl.html#routes)를 참조하십시오.
 
 #### Secure Gateway 클라이언트 UI에 비밀번호 설정
-Secure Gateway 클라이언트 UI에 대한 액세스를 제한하기 위해 UI 비밀번호를 설정하는 것이 좋습니다. Secure Gateway 터미널 명령행에서 스타트업 구성 또는 대화식 명령을 사용하여 비밀번호를 설정하는 방법에 대한 자세한 정보는 [클라이언트와 상호작용](./securegateway_interaction.html#interacting-with-the-client)을 참조하십시오.
+Secure Gateway 클라이언트 UI에 대한 액세스를 제한하기 위해 UI 비밀번호를 설정하는 것이 좋습니다. Secure Gateway 터미널 명령행에서 스타트업 구성 또는 대화식 명령을 사용하여 비밀번호를 설정하는 방법에 대한 자세한 정보는 [클라이언트와 상호작용](/docs/services/SecureGateway/securegateway_interaction.html#interacting-with-the-client)을 참조하십시오.

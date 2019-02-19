@@ -45,7 +45,7 @@ acl allow :
 
 La commande `show acl` affiche la liste de contrôle d'accès actuellement définie ou un message relatif au paramétrage global.
 
-Retour à [Initiation - Ajout d'un client](./securegateway_client.html).
+Retour à [Initiation - Ajout d'un client](/docs/services/SecureGateway/securegateway_client.html).
 
 ## Contrôle de route HTTP/S à l'aide d'une liste de contrôle d'accès
 {: #routes}
@@ -81,9 +81,9 @@ no acl
 
 <b>Remarque :</b> `no acl` sans autres paramètres réinitialise la table LCA et définit l'accès à DENY ALL.
 
-Pour un exemple de fichier de liste de contrôle d'accès, cliquez [ici](./securegateway_acl-file.html).
+Pour un exemple de fichier de liste de contrôle d'accès, cliquez [ici](/docs/services/SecureGateway/securegateway_acl-file.html).
 
-Retour à [Initiation - Ajout d'un client](./securegateway_client.html).
+Retour à [Initiation - Ajout d'un client](/docs/services/SecureGateway/securegateway_client.html).
 
 ## Copie de votre fichier LCA dans le client {{site.data.keyword.SecureGateway}} Docker
 {: #docker}
@@ -155,4 +155,4 @@ cli> S
 ```
 {: screen}
 
-Retour à [Initiation - Ajout d'un client](./securegateway_client.html).
+Retour à [Initiation - Ajout d'un client](/docs/services/SecureGateway/securegateway_client.html).

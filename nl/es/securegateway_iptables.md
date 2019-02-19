@@ -11,7 +11,7 @@ lastupdated: "2018-08-10"
 
 # Reglas de iptable
 
-Para permitir la imposición de reglas de iptable en el destino, debe tener la opción `Restringir acceso a la red` marcada en el panel de seguridad de red del destino.  En este punto, puede añadir las reglas que desea imponer, como por ejemplo 192.0.0.1 9000 (una sola IP y un solo puerto), 192.0.0.1-192.0.0.5 5000:5005 (rango de IP y rango de puertos) o cualquier combinación posible. Consulte [Configuración de la seguridad de la red](./securegateway_destination.html#configuring-network-security) para obtener más información.
+Para permitir la imposición de reglas de iptable en el destino, debe tener la opción `Restringir acceso a la red` marcada en el panel de seguridad de red del destino.  En este punto, puede añadir las reglas que desea imponer, como por ejemplo 192.0.0.1 9000 (una sola IP y un solo puerto), 192.0.0.1-192.0.0.5 5000:5005 (rango de IP y rango de puertos) o cualquier combinación posible. Consulte [Configuración de la seguridad de la red](/docs/services/SecureGateway/securegateway_destination.html#configuring-network-security) para obtener más información.
 
 Si va a crear sus destinos privados con cURL, puede utilizar una línea de mandatos:
 

@@ -136,7 +136,7 @@ vi /etc/ibm/sgenvironment.conf
 
 Sobald diese Schritte ausgeführt wurden, können die Befehle 'YasT' und 'systemV' verwendet werden, um den Dämon zu starten bzw. zu stoppen.
 
-Kehren Sie zu [Einführung - Client hinzufügen](./securegateway_client.html) zurück.
+Kehren Sie zu [Einführung - Client hinzufügen](/docs/services/SecureGateway/securegateway_client.html) zurück.
 
 ## Windows
 {: #windows}
@@ -178,4 +178,4 @@ Die Anwendungsprotokolle für den Windows-Dienst werden an der folgenden Positio
 
  Die Protokolle rollieren täglich in eine neue Datei.
 
-Kehren Sie zu [Einführung - Client hinzufügen](./securegateway_client.html) zurück.
+Kehren Sie zu [Einführung - Client hinzufügen](/docs/services/SecureGateway/securegateway_client.html) zurück.

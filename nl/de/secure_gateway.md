@@ -16,6 +16,6 @@ Der {{site.data.keyword.SecureGatewayfull}}-Service stellt eine schnelle, einfac
 
 Nach dem Erstellen einer Instanz des {{site.data.keyword.SecureGateway}}-Service wird in nur wenigen Schritten eine Verbindung hergestellt. 
 
-1. [Fügen Sie ein Gateway hinzu](./securegateway_gateway.html).
-2. [Fügen Sie einen Client hinzu](./securegateway_client.html).
-3. [Fügen Sie ein Ziel hinzu](./securegateway_destination.html).
+1. [Fügen Sie ein Gateway hinzu](/docs/services/SecureGateway/securegateway_gateway.html).
+2. [Fügen Sie einen Client hinzu](/docs/services/SecureGateway/securegateway_client.html).
+3. [Fügen Sie ein Ziel hinzu](/docs/services/SecureGateway/securegateway_destination.html).

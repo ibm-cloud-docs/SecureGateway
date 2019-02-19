@@ -26,4 +26,4 @@ Para concluir a criação de seu gateway, clique em Incluir gateway. Depois que 
 
 ![Novo gateway](./images/newGateway.png?raw=true "Novo gateway")
 
-Agora que você tem seu gateway recém-criado, é possível [conectar seu primeiro cliente](./securegateway_client.html).
+Agora que você tem seu gateway recém-criado, é possível [conectar seu primeiro cliente](/docs/services/SecureGateway/securegateway_client.html).

@@ -89,7 +89,7 @@ node lib/secgwclient.js <myGatewayID_1> <myGatewayID_2> -t none--<token for gate
 ```
 {: pre}
 
-Volver a [Iniciación - Adición de un cliente](./securegateway_client.html).
+Volver a [Iniciación - Adición de un cliente](/docs/services/SecureGateway/securegateway_client.html).
 
 ## Configuración interactiva
 {: #interactive}
@@ -131,9 +131,9 @@ otro |
 
 <b>Nota:</b> si se ha especificado una conexión con el mandato `select` y se llama a otro mandato sin proporcionar un ID de nodo trabajador, el mandato intentará ejecutarse en la conexión especificada por `select`.
 
-Para obtener más información sobre cómo configurar la lista de control de accesos, [pulse aquí](./securegateway_acl.html).
+Para obtener más información sobre cómo configurar la lista de control de accesos, [pulse aquí](/docs/services/SecureGateway/securegateway_acl.html).
 
-Volver a [Iniciación - Adición de un cliente](./securegateway_client.html).
+Volver a [Iniciación - Adición de un cliente](/docs/services/SecureGateway/securegateway_client.html).
 
 ## Interfaz de usuario de cliente
 {: #ui}
@@ -172,7 +172,7 @@ Esta página le permitirá manipular la lista de control de accesos para el clie
 
 Esta página mostrará información de la conexión actual para el cliente seleccionado (que se muestra en la parte superior derecha de la página).  La información como la descripción de contraseña, el número de conexiones actuales y los escuchas de destino inverso puede verse aquí.
 
-Volver a [Iniciación - Adición de un cliente](./securegateway_client.html).
+Volver a [Iniciación - Adición de un cliente](/docs/services/SecureGateway/securegateway_client.html).
 
 ## Terminación de un cliente remoto
 {: #remote}

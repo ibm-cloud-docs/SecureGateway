@@ -13,7 +13,7 @@ Mit Release 1.7.0 wurde ein neues Preismodell mit einem Stufenplan eingeführt, 
 ![Stufenplanmodell](./images/planDetails.png?raw=true "Stufenplanmodell")
 
 ## Pläne ändern
-Wenn Sie Pläne ändern, wird der neue Plan entweder als Upgrade oder Downgrade betrachtet. Dies ergibt sich aus der Standardanzahl der Gateways, die für jeden Plan zulässig sind (ein Wechsel von Professional (5) zu Enterprise (25) ist zum Beispiel ein Upgrade). Bei einem Upgrade kommt es nicht zu einer Serviceunterbrechung; bei einem Downgrade werden dagegen alle Gateways auf [inaktiv](./securegateway_faq.html#states) aktualisiert, worauf Sie die Gateways und Ziele reaktivieren müssen (bis zur Obergrenze des neuen Plans), damit der Service wiederhergestellt wird.
+Wenn Sie Pläne ändern, wird der neue Plan entweder als Upgrade oder Downgrade betrachtet. Dies ergibt sich aus der Standardanzahl der Gateways, die für jeden Plan zulässig sind (ein Wechsel von Professional (5) zu Enterprise (25) ist zum Beispiel ein Upgrade). Bei einem Upgrade kommt es nicht zu einer Serviceunterbrechung; bei einem Downgrade werden dagegen alle Gateways auf [inaktiv](/docs/services/SecureGateway/securegateway_faq.html#states) aktualisiert, worauf Sie die Gateways und Ziele reaktivieren müssen (bis zur Obergrenze des neuen Plans), damit der Service wiederhergestellt wird.
 
 <b>Anmerkung:</b> Ein Wechseln vom Standardplan zu einem neuen Plan wird als Downgrade betrachtet.
 

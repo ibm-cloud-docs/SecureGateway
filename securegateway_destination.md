@@ -87,7 +87,7 @@ This option becomes available by selecting TLS or Mutual Auth for your [Resource
 This option becomes available by selecting TLS or Mutual Auth for your [Resource Authentication](#resource-auth).  This is used to allow a separate hostname to be provided to the TLS handshake of the resource connection.
 
 ### Client Certificate and Key
-Where the Client Certificate and Key fields appears depends on the [type of destination](#dest-types) you have chosen.  In both situations, the files provided here will be used by the SG Client to identify itself for TLS connections.  If no files are uploaded, the {{site.data.keyword.SecureGateway}} servers will automatically generate a self-signed pair with a CN of `localhost`.  For instructions on how to generate a certificate/key pair, [click here](./securegateway_keygen.html).
+Where the Client Certificate and Key fields appears depends on the [type of destination](#dest-types) you have chosen.  In both situations, the files provided here will be used by the SG Client to identify itself for TLS connections.  If no files are uploaded, the {{site.data.keyword.SecureGateway}} servers will automatically generate a self-signed pair with a CN of `localhost`.  For instructions on how to generate a certificate/key pair, [click here](/docs/services/SecureGateway/securegateway_keygen.html).
 
 For an on-premises destination, it will appear under [Resource Authentication](#resource-auth) if `Resource Authentication: Mutual Auth` has been selected.  In this case, the SG Client will use this certificate/key pair for its outbound connection to the defined resource, the On-prem resource needs to add this certificate to its CA to communicate with the SG Client.
 
@@ -113,7 +113,7 @@ IP Addresses | Ports | Results
 1.2.3.4 | | Only IP 1.2.3.4 from any port will be allowed.
 | 5000 | Any IP from port 5000 will be allowed.
 
-Specific rules can also be associated with an application.  For more information on creating associated rules, see [how to create iptables rules for your app](./iptables.html).
+Specific rules can also be associated with an application.  For more information on creating associated rules, see [how to create iptables rules for your app](/docs/services/SecureGateway/iptables.html).
 
 ## Configuring Proxy Options
 If your on-premises destination is located behind a SOCKS proxy, you can configure the proxy settings for your destination in the Proxy Options panel.

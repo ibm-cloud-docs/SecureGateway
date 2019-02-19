@@ -17,6 +17,6 @@ lastupdated: "2017-04-25"
 
 建立 {{site.data.keyword.SecureGateway}} 服務實例之後，只要幾個步驟就能連接。
 
-1. [新增閘道](./securegateway_gateway.html)。
-2. [新增用戶端](./securegateway_client.html)。
-3. [新增目的地](./securegateway_destination.html)。
+1. [新增閘道](/docs/services/SecureGateway/securegateway_gateway.html)。
+2. [新增用戶端](/docs/services/SecureGateway/securegateway_client.html)。
+3. [新增目的地](/docs/services/SecureGateway/securegateway_destination.html)。

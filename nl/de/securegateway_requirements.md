@@ -56,7 +56,7 @@ Falls in Ihrer Umgebung ein npm-Unternehmensserver vorhanden ist, nehmen Sie all
   Der Knoten des SG-Gateways, der in der Konfiguration des Gateways enthalten ist; die Gateways befinden sich nicht alle auf demselben Knoten; bei jedem Erstellen eines Gateways muss der Hostname des Knotens bestätigt werden.
 
 
-Stellen Sie sicher, dass Sie zusätzliche Firewallregeln und IP-Tabellenregeln überprüfen oder ändern, falls diese zutreffen. Wenn die Netzadministratoren bestimmte IPs benötigen, [setzen Sie sich mit dem Support in Verbindung, um diese für Ihre Umgebung anzufordern](./securegateway_troubleshooting.html#support).
+Stellen Sie sicher, dass Sie zusätzliche Firewallregeln und IP-Tabellenregeln überprüfen oder ändern, falls diese zutreffen. Wenn die Netzadministratoren bestimmte IPs benötigen, [setzen Sie sich mit dem Support in Verbindung, um diese für Ihre Umgebung anzufordern](/docs/services/SecureGateway/securegateway_troubleshooting.html#support).
 
 
 ## Hardwarevoraussetzungen ermitteln

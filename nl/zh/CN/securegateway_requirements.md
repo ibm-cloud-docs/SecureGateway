@@ -56,7 +56,7 @@ Secure Gateway 客户机使用出站端口 443 和端口 9000 来连接到 npm �
   SG 网关的节点可在网关配置中找到，每个网关不会位于同一节点上，请在每次创建网关时确认节点的主机名。
 
 
-确保检查或修改可能适用的其他防火墙和 IP 表规则。如果网络管理员需要特定 IP，请[联系支持人员以请求用于您环境的 IP](./securegateway_troubleshooting.html#support)。
+确保检查或修改可能适用的其他防火墙和 IP 表规则。如果网络管理员需要特定 IP，请[联系支持人员以请求用于您环境的 IP](/docs/services/SecureGateway/securegateway_troubleshooting.html#support)。
 
 
 ## 确定硬件需求

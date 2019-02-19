@@ -11,7 +11,7 @@ lastupdated: "2018-08-10"
 
 # IP 表规则
 
-要允许在目标上实施 iptable 规则，必须在目标的“网络安全性”面板下选中`限制网络访问`选项。此时，可以添加要强制实施的规则，例如：192.0.0.1 9000（单个 IP 和端口）、192.0.0.1-192.0.0.5 5000:5005（IP 范围和端口范围），或者其中的任意组合。请参阅[配置网络安全性](./securegateway_destination.html#configuring-network-security)以获取更多信息。
+要允许在目标上实施 iptable 规则，必须在目标的“网络安全性”面板下选中`限制网络访问`选项。此时，可以添加要强制实施的规则，例如：192.0.0.1 9000（单个 IP 和端口）、192.0.0.1-192.0.0.5 5000:5005（IP 范围和端口范围），或者其中的任意组合。请参阅[配置网络安全性](/docs/services/SecureGateway/securegateway_destination.html#configuring-network-security)以获取更多信息。
 
 如果要使用 cURL 创建专用目标，那么可以使用类似下面的命令：
 

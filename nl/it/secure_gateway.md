@@ -17,6 +17,6 @@ Il servizio {{site.data.keyword.SecureGatewayfull}} fornisce una soluzione rapid
 
 Dopo aver creato un'istanza del servizio {{site.data.keyword.SecureGateway}}, connettiti eseguendo solo pochi passi.
 
-1. [Aggiungi un gateway](./securegateway_gateway.html).
-2. [Aggiungi un client](./securegateway_client.html).
-3. [Aggiungi una destinazione](./securegateway_destination.html).
+1. [Aggiungi un gateway](/docs/services/SecureGateway/securegateway_gateway.html).
+2. [Aggiungi un client](/docs/services/SecureGateway/securegateway_client.html).
+3. [Aggiungi una destinazione](/docs/services/SecureGateway/securegateway_destination.html).

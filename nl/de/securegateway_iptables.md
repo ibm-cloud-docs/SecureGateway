@@ -11,7 +11,7 @@ lastupdated: "2018-08-10"
 
 # IP-Tabellenregeln
 
-Damit die Regeln einer IP-Tabelle (iptable) für ein Ziel erzwungen werden, muss die Option `Netzzugriff beschränken` in der Anzeige 'Netzsicherheit' des Ziels ausgewählt sein. An diesem Punkt können Sie Regeln hinzufügen, die erzwungen werden sollen, zum Beispiel 192.0.0.1 9000 (einzelne IP und einzelner Port), 192.0.0.1-192.0.0.5 5000:5005 (IP-Bereich und Portbereich) oder eine Kombination solcher Angaben. Weitere Informationen finden Sie unter [Netzsicherheit konfigurieren](./securegateway_destination.html#configuring-network-security).
+Damit die Regeln einer IP-Tabelle (iptable) für ein Ziel erzwungen werden, muss die Option `Netzzugriff beschränken` in der Anzeige 'Netzsicherheit' des Ziels ausgewählt sein. An diesem Punkt können Sie Regeln hinzufügen, die erzwungen werden sollen, zum Beispiel 192.0.0.1 9000 (einzelne IP und einzelner Port), 192.0.0.1-192.0.0.5 5000:5005 (IP-Bereich und Portbereich) oder eine Kombination solcher Angaben. Weitere Informationen finden Sie unter [Netzsicherheit konfigurieren](/docs/services/SecureGateway/securegateway_destination.html#configuring-network-security).
 
 Wenn Sie private Ziele mit cURL erstellen, können Sie einen Befehl wie den folgenden verwenden:
 

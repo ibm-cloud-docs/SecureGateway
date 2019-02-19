@@ -26,4 +26,4 @@ lastupdated: "2017-04-10"
 
 ![新网关](./images/newGateway.png?raw=true "新网关")
 
-既然您已新创建了网关，那么现在可以[连接第一个客户机](./securegateway_client.html)。
+既然您已新创建了网关，那么现在可以[连接第一个客户机](/docs/services/SecureGateway/securegateway_client.html)。

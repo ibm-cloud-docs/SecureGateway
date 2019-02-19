@@ -82,7 +82,7 @@ node lib/secgwclient.js <myGatewayID_1> <myGatewayID_2> -t none--<token for gate
 ```
 {: pre}
 
-[概説 - クライアントの追加](./securegateway_client.html)に戻ります。
+[概説 - クライアントの追加](/docs/services/SecureGateway/securegateway_client.html)に戻ります。
 
 ## 対話式構成
 {: #interactive}
@@ -120,9 +120,9 @@ node lib/secgwclient.js <myGatewayID_1> <myGatewayID_2> -t none--<token for gate
 
 <b>注:</b> `select` コマンドで接続が指定されていて、別のコマンドがワーカー ID を指定せずに呼び出された場合、そのコマンドは、`select` で指定された接続で実行されます。
 
-アクセス制御リストの構成について詳しくは、[ここをクリック](./securegateway_acl.html)してください。
+アクセス制御リストの構成について詳しくは、[ここをクリック](/docs/services/SecureGateway/securegateway_acl.html)してください。
 
-[概説 - クライアントの追加](./securegateway_client.html)に戻ります。
+[概説 - クライアントの追加](/docs/services/SecureGateway/securegateway_client.html)に戻ります。
 
 ## クライアント UI
 {: #ui}
@@ -161,7 +161,7 @@ node lib/secgwclient.js <myGatewayID_1> <myGatewayID_2> -t none--<token for gate
 
 このページには、選択したクライアント (ページの右上に表示されます) の現行接続情報が表示されます。ここには、ゲートウェイの説明、現行接続の数、逆方向の宛先のリスナーなどの情報を表示できます。
 
-[概説 - クライアントの追加](./securegateway_client.html)に戻ります。
+[概説 - クライアントの追加](/docs/services/SecureGateway/securegateway_client.html)に戻ります。
 
 ## リモート・クライアントの終了
 {: #remote}

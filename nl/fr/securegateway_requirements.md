@@ -57,7 +57,7 @@ Si votre environnement dispose d'un serveur d'entreprise npm, placez en liste bl
 
 
 Vérifiez et modifiez si nécessaire les règles de pare-feu et de table d'IP supplémentaires
-pouvant s'appliquer. Si vos administrateurs de réseau exigent des adresses IP spécifiques, [prenez contact avec le support pour demander ces adresses pour votre environnement](./securegateway_troubleshooting.html#support).
+pouvant s'appliquer. Si vos administrateurs de réseau exigent des adresses IP spécifiques, [prenez contact avec le support pour demander ces adresses pour votre environnement](/docs/services/SecureGateway/securegateway_troubleshooting.html#support).
 
 
 ## Détermination de la configuration matérielle

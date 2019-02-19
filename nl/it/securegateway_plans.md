@@ -13,7 +13,7 @@ Con la release della v1.7.0, è stato introdotto un nuovo modello di prezzo dei 
 ![Modello di piani a livelli](./images/planDetails.png?raw=true "Modello di piani a livelli")
 
 ## Modifica dei piani 
-Quando modifichi i piani, il tuo nuovo piano verrà considerato essere un upgrade o un downgrade. Ciò è determinato dal numero predefinito di gateway consentito da ciascun piano (ad es. da Professional (5) e Enterprise (25) è un upgrade). Quando esegui un upgrade, non ci sarà alcuna interruzione del servizio; tuttavia, un downgrade aggiornerà tutti i gateway perché siano [inattivi](./securegateway_faq.html#states), il che richiederà che riattivi i tuoi gateway e la destinazione (fino al tuo nuovo limite del piano) prima che il servizio venga ripristinato.
+Quando modifichi i piani, il tuo nuovo piano verrà considerato essere un upgrade o un downgrade. Ciò è determinato dal numero predefinito di gateway consentito da ciascun piano (ad es. da Professional (5) e Enterprise (25) è un upgrade). Quando esegui un upgrade, non ci sarà alcuna interruzione del servizio; tuttavia, un downgrade aggiornerà tutti i gateway perché siano [inattivi](/docs/services/SecureGateway/securegateway_faq.html#states), il che richiederà che riattivi i tuoi gateway e la destinazione (fino al tuo nuovo limite del piano) prima che il servizio venga ripristinato.
 
 <b>Nota</b>: quando esegui la transizione dal piano Standard a uno qualsiasi dei nuovi piani, tale passaggio verrà considerato un downgrade.
 

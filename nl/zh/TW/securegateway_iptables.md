@@ -11,7 +11,7 @@ lastupdated: "2018-08-10"
 
 # IP 表格規則
 
-若要容許在目的地上強制執行 iptables 規則，您必須在目的地的「網路安全」畫面下勾選`限制網路存取`選項。此時，您可以新增要強制執行的規則，例如：192.0.0.1 9000（單一 IP 及埠）、192.0.0.1-192.0.0.5 5000:5005（某範圍的 IP 及某範圍的埠）或這其中的任意組合。如需相關資訊，請參閱[配置網路安全](./securegateway_destination.html#configuring-network-security)。
+若要容許在目的地上強制執行 iptables 規則，您必須在目的地的「網路安全」畫面下勾選`限制網路存取`選項。此時，您可以新增要強制執行的規則，例如：192.0.0.1 9000（單一 IP 及埠）、192.0.0.1-192.0.0.5 5000:5005（某範圍的 IP 及某範圍的埠）或這其中的任意組合。如需相關資訊，請參閱[配置網路安全](/docs/services/SecureGateway/securegateway_destination.html#configuring-network-security)。
 
 如果您要使用 cURL 建立專用目的地，則可以使用類似如下的指令：
 

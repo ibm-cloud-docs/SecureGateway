@@ -26,7 +26,7 @@ lastupdated: "2017-04-10"
 为了使 Secure Gateway 客户机能够对其连接的资源进行认证，我必须向该客户机提供资源将要呈现的证书（或证书链）。我的资源没有完整的证书链，因此我只需要将其证书上传到“内部部署认证”字段即可。此字段最多可接受 6 个不同的证书文件（.pem、.cer、.der 和 .crt）。
 
 ### 客户机证书和密钥
-如果需要指定 Secure Gateway 客户机如何向资源表明自己的身份，那么可以在此上传证书和密钥以供客户机使用。由于客户机和资源是在同一台机器上运行，因此可以使这些信息保留为空，而让 Secure Gateway 服务器自动生成证书/密钥对。如果资源位于单独的主机上，那么需要[生成要上传的证书/密钥对](./securegateway_keygen.html)。
+如果需要指定 Secure Gateway 客户机如何向资源表明自己的身份，那么可以在此上传证书和密钥以供客户机使用。由于客户机和资源是在同一台机器上运行，因此可以使这些信息保留为空，而让 Secure Gateway 服务器自动生成证书/密钥对。如果资源位于单独的主机上，那么需要[生成要上传的证书/密钥对](/docs/services/SecureGateway/securegateway_keygen.html)。
 
 ![本地 TLS 相互认证](./images/localTLSma.png?raw=true "本地 TLS 相互认证")
 

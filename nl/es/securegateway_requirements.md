@@ -57,7 +57,7 @@ Si hay un servidor de npm Enterprise en el entorno, coloque en la lista blanca t
 
 
 Asegúrese de comprobar o modificar
-las reglas de Tabla de IP y cortafuegos adicionales que puedan aplicarse. Si los administradores de red necesitan IP específicas, [póngase en contacto con el equipo de soporte para solicitar estos datos para su entorno](./securegateway_troubleshooting.html#support).
+las reglas de Tabla de IP y cortafuegos adicionales que puedan aplicarse. Si los administradores de red necesitan IP específicas, [póngase en contacto con el equipo de soporte para solicitar estos datos para su entorno](/docs/services/SecureGateway/securegateway_troubleshooting.html#support).
 
 
 ## Determinación de los requisitos de hardware

@@ -56,7 +56,7 @@ Secure Gateway 클라이언트는 포트 443 및 포트 9000을 사용하여 npm
   게이트웨이 구성에 있는 SG 게이트웨이 노드의 경우 각각의 게이트웨이가 동일한 노드에 존재하지 않습니다. 게이트웨이를 작성할 때마다 노드의 호스트 이름을 확인하십시오.
 
 
-적용되는 추가 방화벽 및 IP 테이블 규칙을 검사하거나 수정하는지 확인하십시오. 네트워크 관리자가 특정 IP를 요구하는 경우 [지원 센터에 문의](./securegateway_troubleshooting.html#support)하여 사용자 환경에 해당하는 IP를 요청하십시오.
+적용되는 추가 방화벽 및 IP 테이블 규칙을 검사하거나 수정하는지 확인하십시오. 네트워크 관리자가 특정 IP를 요구하는 경우 [지원 센터에 문의](/docs/services/SecureGateway/securegateway_troubleshooting.html#support)하여 사용자 환경에 해당하는 IP를 요청하십시오.
 
 
 ## 하드웨어 요구사항 판별

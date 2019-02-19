@@ -136,7 +136,7 @@ vi /etc/ibm/sgenvironment.conf
 
 Une fois cette procédure exécutée, les commandes YasT et systemV peuvent être utilisées pour démarrer et arrêter le démon.
 
-Retour à [Initiation - Ajout d'un client](./securegateway_client.html).
+Retour à [Initiation - Ajout d'un client](/docs/services/SecureGateway/securegateway_client.html).
 
 ## Windows
 {: #windows}
@@ -178,4 +178,4 @@ Les journaux d'application du service Windows sont enregistrés dans :
 
  Ces journaux sont enregistrés chaque jour dans un nouveau fichier.
 
-Retour à [Initiation - Ajout d'un client](./securegateway_client.html).
+Retour à [Initiation - Ajout d'un client](/docs/services/SecureGateway/securegateway_client.html).

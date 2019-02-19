@@ -46,7 +46,7 @@ Normalmente, ele usa dois parâmetros, seu ID do gateway do {{site.data.keyword.
 
 O cliente {{site.data.keyword.SecureGateway}} suporta somente os comandos `pull` e `run` para manipular o contêiner.
 
-Retorne para [Introdução - Incluindo um cliente](./securegateway_client.html).
+Retorne para [Introdução - Incluindo um cliente](/docs/services/SecureGateway/securegateway_client.html).
 
 ## Mac OS X
 {: #mac}
@@ -70,7 +70,7 @@ Você pode requerer privilégios administrativos para executar essa instalação
 
 Para iniciar o cliente, execute o arquivo `secgw.command` localizado no local de instalação padrão: `/Applications/ibm/`.
 
-Retorne para [Introdução - Incluindo um cliente](./securegateway_client.html).
+Retorne para [Introdução - Incluindo um cliente](/docs/services/SecureGateway/securegateway_client.html).
 
 ## Linux
 {: #linux}
@@ -188,7 +188,7 @@ License: http://www.ibm.com/software/sla/sladb.nsf/lilookup/986C7686F22D4D358525
 
    O instalador do cliente inicia e instala o cliente, ele criará um arquivo sgenvironment.conf em /etc/ibm.
 
-2. Opcional: caso deseje usar o processo upstart do sistema, deve-se editar esse arquivo e fornecer o seguinte para que o cliente seja iniciado corretamente. Veja [Usando o upstart](./securegateway_auto-start.html#linux) para obter mais informações sobre a edição desse arquivo de configuração.
+2. Opcional: caso deseje usar o processo upstart do sistema, deve-se editar esse arquivo e fornecer o seguinte para que o cliente seja iniciado corretamente. Veja [Usando o upstart](/docs/services/SecureGateway/securegateway_auto-start.html#linux) para obter mais informações sobre a edição desse arquivo de configuração.
 
 3. Se você iniciou o cliente usando o upstart, verifique o arquivo de log para certificar-se de que ele esteja sendo executado corretamente.
 
@@ -218,7 +218,7 @@ node lib/secgwclient.js <gateway ID> -t <security token>
 
 Normalmente, ele usa dois parâmetros, um ID do gateway do {{site.data.keyword.SecureGateway}} e o token de segurança do gateway, ambos disponíveis por meio do Painel do {{site.data.keyword.SecureGateway}}.
 
-Retorne para [Introdução - Incluindo um cliente](./securegateway_client.html).
+Retorne para [Introdução - Incluindo um cliente](/docs/services/SecureGateway/securegateway_client.html).
 
 ## Windows
 {: #windows}
@@ -263,12 +263,12 @@ Alternativamente, navegue para `<Installation_directory>\ibm\securegateway\clien
 
 <b>Nota:</b> é possível escolher usar as configurações armazenadas no arquivo `<Installation_directory>\ibm\securegateway\client\securegw_service.config` ou fornecer os detalhes interativamente.
 
-Retorne para [Introdução - Incluindo um cliente](./securegateway_client.html).
+Retorne para [Introdução - Incluindo um cliente](/docs/services/SecureGateway/securegateway_client.html).
 
 ## DataPower
 {: #datapower}
 
-O DataPower tem uma versão integrada do cliente {{site.data.keyword.SecureGateway}}. Dependendo da versão do DataPower, você pode ter uma versão diferente do cliente {{site.data.keyword.SecureGateway}}.  Esteja ciente de quaisquer [Limitações do cliente DataPower](./securegateway_interaction.html#limits-datapower) aplicáveis. O uso do cliente Secure Gateway antigo pode apresentar erros inesperados.
+O DataPower tem uma versão integrada do cliente {{site.data.keyword.SecureGateway}}. Dependendo da versão do DataPower, você pode ter uma versão diferente do cliente {{site.data.keyword.SecureGateway}}.  Esteja ciente de quaisquer [Limitações do cliente DataPower](/docs/services/SecureGateway/securegateway_interaction.html#limits-datapower) aplicáveis. O uso do cliente Secure Gateway antigo pode apresentar erros inesperados.
 
 | Versão do DataPower | Versão do cliente {{site.data.keyword.SecureGateway}} |
 | -- | --  |
@@ -286,4 +286,4 @@ O DataPower tem uma versão integrada do cliente {{site.data.keyword.SecureGatew
 3. Clique em `Add` para configurar uma nova conexão do cliente
 4. Forneça um Nome, o ID do gateway e o Token de segurança (se aplicável) e, em seguida, aplique as mudanças.
 
-Retorne para [Introdução - Incluindo um cliente](./securegateway_client.html).
+Retorne para [Introdução - Incluindo um cliente](/docs/services/SecureGateway/securegateway_client.html).

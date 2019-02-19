@@ -18,6 +18,6 @@ O serviço {{site.data.keyword.SecureGatewayfull}} fornece uma solução rápida
 
 Depois de criar uma instância do serviço {{site.data.keyword.SecureGateway}}, conecte-se em apenas algumas etapas.
 
-1. [Inclua um gateway](./securegateway_gateway.html).
-2. [Inclua um cliente](./securegateway_client.html).
-3. [Inclua um destino](./securegateway_destination.html).
+1. [Inclua um gateway](/docs/services/SecureGateway/securegateway_gateway.html).
+2. [Inclua um cliente](/docs/services/SecureGateway/securegateway_client.html).
+3. [Inclua um destino](/docs/services/SecureGateway/securegateway_destination.html).

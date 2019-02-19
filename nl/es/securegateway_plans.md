@@ -13,7 +13,7 @@ Con el release v1.7.0, se a incorporado un nuevo modelo de precios de plan por n
 ![Modelo de plan por niveles](./images/planDetails.png?raw=true "Modelo de plan por niveles")
 
 ## Cambio de planes
-Si cambia su plan, el nuevo plan se considerará una actualización o una degradación.  Lo que lo determina es el número predeterminado de pasarelas permitidas por cada plan (por ejemplo, pasar de Professional (5) a Enterprise (25) es una actualización).  Cuando se actualiza, no hay interrupción en el servicio; sin embargo, una degradación actualiza todas las pasarelas para que estén [inactivas](./securegateway_faq.html#states), lo que requiere que reactive sus pasarelas y destinos (hasta el límite del nuevo plan) antes de que se restablezca el servicio.
+Si cambia su plan, el nuevo plan se considerará una actualización o una degradación.  Lo que lo determina es el número predeterminado de pasarelas permitidas por cada plan (por ejemplo, pasar de Professional (5) a Enterprise (25) es una actualización).  Cuando se actualiza, no hay interrupción en el servicio; sin embargo, una degradación actualiza todas las pasarelas para que estén [inactivas](/docs/services/SecureGateway/securegateway_faq.html#states), lo que requiere que reactive sus pasarelas y destinos (hasta el límite del nuevo plan) antes de que se restablezca el servicio.
 
 <b>Nota</b>: cuando se pasa del plan Estándar a cualquiera de los planes nuevos, se considera una degradación.
 

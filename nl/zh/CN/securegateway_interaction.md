@@ -79,7 +79,7 @@ node lib/secgwclient.js <myGatewayID_1> <myGatewayID_2> -t none--<token for gate
 ```
 {: pre}
 
-返回到[入门 - 添加客户机](./securegateway_client.html)。
+返回到[入门 - 添加客户机](/docs/services/SecureGateway/securegateway_client.html)。
 
 ## 交互式配置
 {: #interactive}
@@ -117,9 +117,9 @@ node lib/secgwclient.js <myGatewayID_1> <myGatewayID_2> -t none--<token for gate
 
 <b>注：</b>如果使用 `select` 命令指定了连接，然后在未提供工作程序标识的情况下调用了其他命令，那么该命令会尝试在 `select` 指定的连接上运行。
 
-有关配置访问控制表的更多详细信息，请[单击此处](./securegateway_acl.html)。
+有关配置访问控制表的更多详细信息，请[单击此处](/docs/services/SecureGateway/securegateway_acl.html)。
 
-返回到[入门 - 添加客户机](./securegateway_client.html)。
+返回到[入门 - 添加客户机](/docs/services/SecureGateway/securegateway_client.html)。
 
 ## 客户机 UI
 {: #ui}
@@ -159,7 +159,7 @@ node lib/secgwclient.js <myGatewayID_1> <myGatewayID_2> -t none--<token for gate
 
 此页面将显示所选客户机（显示在页面右上角）的当前连接信息。在此处可查看网关描述、当前连接数和逆向目标侦听器等信息。
 
-返回到[入门 - 添加客户机](./securegateway_client.html)。
+返回到[入门 - 添加客户机](/docs/services/SecureGateway/securegateway_client.html)。
 
 ## 远程客户机终止
 {: #remote}

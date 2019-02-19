@@ -11,7 +11,7 @@ lastupdated: "2018-08-10"
 
 # Regole tabella IP
 
-Per consentire l'implementazione di regole iptable sulla tua destinazione, è necessario che l'opzione `Restrict network access` sia selezionata nel pannello Network Security della tua destinazione. A questo punto, puoi aggiungere le regole che vuoi che vengano implementate, come ad esempio: 192.0.0.1 9000 (IP e porta singoli),  192.0.0.1-192.0.0.5 5000:5005 (intervallo di IP e intervallo di porte) oppure una qualsiasi combinazione al loro interno. Per ulteriori informazioni, vedi [Configurazione della sicurezza di rete](./securegateway_destination.html#configuring-network-security).
+Per consentire l'implementazione di regole iptable sulla tua destinazione, è necessario che l'opzione `Restrict network access` sia selezionata nel pannello Network Security della tua destinazione. A questo punto, puoi aggiungere le regole che vuoi che vengano implementate, come ad esempio: 192.0.0.1 9000 (IP e porta singoli),  192.0.0.1-192.0.0.5 5000:5005 (intervallo di IP e intervallo di porte) oppure una qualsiasi combinazione al loro interno. Per ulteriori informazioni, vedi [Configurazione della sicurezza di rete](/docs/services/SecureGateway/securegateway_destination.html#configuring-network-security).
 
 Se stai creando le tue destinazioni private con cURL, puoi utilizzare un comando come:
 

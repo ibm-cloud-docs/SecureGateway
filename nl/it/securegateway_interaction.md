@@ -84,7 +84,7 @@ node lib/secgwclient.js <myGatewayID_1> <myGatewayID_2> -t none--<token for gate
 ```
 {: pre}
 
-Ritorna a [Introduzione - Aggiunta di un client](./securegateway_client.html).
+Ritorna a [Introduzione - Aggiunta di un client](/docs/services/SecureGateway/securegateway_client.html).
 
 ## Configurazione interattiva
 {: #interactive}
@@ -130,9 +130,9 @@ connessioni |
 
 <b>Nota:</b> se una connessione è stata specificata con il comando `select` e viene richiamato un altro comando senza fornire un ID nodo di lavoro, il comando tenterà l'esecuzione sulla connessione specificata da `select`.
 
-Per ulteriori dettagli sulla configurazione dell'ACL (Access Control List), [fai clic qui](./securegateway_acl.html).
+Per ulteriori dettagli sulla configurazione dell'ACL (Access Control List), [fai clic qui](/docs/services/SecureGateway/securegateway_acl.html).
 
-Ritorna a [Introduzione - Aggiunta di un client](./securegateway_client.html).
+Ritorna a [Introduzione - Aggiunta di un client](/docs/services/SecureGateway/securegateway_client.html).
 
 ## IU client
 {: #ui}
@@ -172,7 +172,7 @@ Questa pagina ti consentirà di gestire l'ACL (Access Control List) per il clien
 Questa pagina visualizzerà le informazioni sulla connessione corrente per il client selezionato (visualizzato nella parte superiore destra della pagina).  Qui possono essere visualizzate informazioni come la descrizione del gateway, il numero di connessioni
 correnti e i listener di destinazione inversa.
 
-Ritorna a [Introduzione - Aggiunta di un client](./securegateway_client.html).
+Ritorna a [Introduzione - Aggiunta di un client](/docs/services/SecureGateway/securegateway_client.html).
 
 ## Terminazione del client remoto
 {: #remote}

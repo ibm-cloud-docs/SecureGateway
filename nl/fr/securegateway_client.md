@@ -16,12 +16,12 @@ Dans votre nouvelle passerelle, sur l'onglet Clients, cliquez sur le bouton Conn
 
 ![Connecter un client](./images/connectClient.png?raw=true "Connecter un client")
 
-Après avoir sélectionné votre client préféré, [cliquez ici pour voir comment l'installer](./securegateway_install.html).
+Après avoir sélectionné votre client préféré, [cliquez ici pour voir comment l'installer](/docs/services/SecureGateway/securegateway_install.html).
 
-Une fois le client installé, vous pouvez le configurer pour [démarrer automatiquement](./securegateway_auto-start.html) ou pour s'[exécuter en mode interactif](./securegateway_interaction.html).
+Une fois le client installé, vous pouvez le configurer pour [démarrer automatiquement](/docs/services/SecureGateway/securegateway_auto-start.html) ou pour s'[exécuter en mode interactif](/docs/services/SecureGateway/securegateway_interaction.html).
 
 ![Client connecté](./images/connectedClient.png?raw=true "Client connecté")
 
-Si vous voulez configurer maintenant la liste de contrôle d'accès pour votre client, [cliquez ici pour plus d'informations](./securegateway_acl.html).
+Si vous voulez configurer maintenant la liste de contrôle d'accès pour votre client, [cliquez ici pour plus d'informations](/docs/services/SecureGateway/securegateway_acl.html).
 
-Maintenant que votre client est connecté, vous pouvez [créer votre première destination](./securegateway_destination.html).
+Maintenant que votre client est connecté, vous pouvez [créer votre première destination](/docs/services/SecureGateway/securegateway_destination.html).

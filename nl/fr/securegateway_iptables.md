@@ -11,7 +11,7 @@ lastupdated: "2018-08-10"
 
 # Règles de table d'IP
 
-Pour autoriser l'application de règles de table d'IP (iptable) à votre destination, l'option `Restreindre l'accès réseau` doit être sélectionnée dans le panneau Sécurité du réseau de votre destination.  Ensuite, vous pouvez ajouter les règles que vous voulez appliquer, telles que 192.0.0.1 9000 (IP et port uniques),  192.0.0.1-192.0.0.5 5000:5005 (plage d'adresses IP et plage de ports) ou toute combinaison de celles-ci. Pour plus d'informations, voir [Configuration de la sécurité du réseau](./securegateway_destination.html#configuring-network-security).
+Pour autoriser l'application de règles de table d'IP (iptable) à votre destination, l'option `Restreindre l'accès réseau` doit être sélectionnée dans le panneau Sécurité du réseau de votre destination.  Ensuite, vous pouvez ajouter les règles que vous voulez appliquer, telles que 192.0.0.1 9000 (IP et port uniques),  192.0.0.1-192.0.0.5 5000:5005 (plage d'adresses IP et plage de ports) ou toute combinaison de celles-ci. Pour plus d'informations, voir [Configuration de la sécurité du réseau](/docs/services/SecureGateway/securegateway_destination.html#configuring-network-security).
 
 Si vous créez vos destinations privées avec cURL, vous pouvez utiliser une commande telle que :
 

@@ -136,7 +136,7 @@ vi /etc/ibm/sgenvironment.conf
 
 これらのステップが実行された後、YasT および systemV コマンドを使用してデーモンを開始/停止できます。
 
-[概説 - クライアントの追加](./securegateway_client.html)に戻ります。
+[概説 - クライアントの追加](/docs/services/SecureGateway/securegateway_client.html)に戻ります。
 
 ## Windows
 {: #windows}
@@ -178,4 +178,4 @@ Windows サービスのアプリケーション・ログは次の場所に保管
 
  ログは日次ベースで新しいファイルに切り替えられます。
 
-[概説 - クライアントの追加](./securegateway_client.html)に戻ります。
+[概説 - クライアントの追加](/docs/services/SecureGateway/securegateway_client.html)に戻ります。
