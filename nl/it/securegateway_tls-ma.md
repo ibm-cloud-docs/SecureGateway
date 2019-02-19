@@ -10,6 +10,7 @@ lastupdated: "2017-04-10"
 {:pre: .pre}
 
 # Autenticazione reciproca TLS di Node.js
+{: #nodejs-tls-ma}
 
 Questo esempio coprirà la modalità di configurazione dell'autenticazione reciproca (Mutual Authentication) per entrambi i lati di una destinazione in loco: autenticazione utente (User Authentication) e autenticazione risorsa (Resource Authentication).
 

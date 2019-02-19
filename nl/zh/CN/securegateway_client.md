@@ -7,6 +7,7 @@ lastupdated: "2017-04-25"
 ---
 
 # 添加客户机
+{: #add-client}
 
 {{site.data.keyword.SecureGateway}} 客户机是创造奇迹的最后一块拼图。客户机在内部部署网络与 {{site.data.keyword.SecureGateway}} 服务器上的网关之间建立初始连接，并支持通信传递到定义的目标。
 

@@ -7,6 +7,7 @@ lastupdated: "2018-08-10"
 ---
 
 # 运行客户机的需求
+{: #system-requirements}
 
 ## 系统需求
 {: #system}

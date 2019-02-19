@@ -7,6 +7,7 @@ lastupdated: "2017-04-25"
 ---
 
 # Adición de un cliente
+{: #add-client}
 
 El cliente de {{site.data.keyword.SecureGateway}} es la pieza del puzzle que hace que se produzca la magia.  El cliente establece la conexión inicial entre la red local y una pasarela en los servidores de {{site.data.keyword.SecureGateway}} y permite que la comunicación pase a los destinos definidos.
 

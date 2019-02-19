@@ -10,6 +10,7 @@ lastupdated: "2017-04-25"
 {:pre: .pre}
 
 # Configuration du démarrage automatique pour le client
+{: #auto-start-conf}
 
 ## Linux
 {: #linux}

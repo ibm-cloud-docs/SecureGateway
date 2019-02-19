@@ -7,6 +7,7 @@ lastupdated: "2017-04-10"
 ---
 
 # Ajout d'une passerelle
+{: #add-sg-gw}
 
 Une passerelle peut être considérée comme un moyen d'identifier un réseau ou un environnement particulier.  C'est l'élément utilisé par un client Secure Gateway pour établir la connectivité aux serveurs Secure Gateway et qui peut contenir plusieurs destinations ou définitions de ressource.
 

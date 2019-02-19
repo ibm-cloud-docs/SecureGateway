@@ -8,6 +8,7 @@ lastupdated: "2018-08-10"
 {:new_window: target="_blank"}
 
 # 資源
+{: #secure-gateway-resource}
 
 ## 部落格及其他資源
 

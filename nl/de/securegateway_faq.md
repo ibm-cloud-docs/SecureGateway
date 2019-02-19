@@ -7,6 +7,7 @@ lastupdated: "2018-11-08"
 ---
 
 # Häufig gestellte Fragen (FAQs)
+{: #sg-faq}
 
 ## OSI-Modellschicht
 {: #osi}

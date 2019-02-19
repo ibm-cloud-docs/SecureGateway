@@ -7,6 +7,7 @@ lastupdated: "2017-04-10"
 ---
 
 # Adición de un destino
+{: #add-dest}
 
 Un destino es una definición de cómo conectar con un determinado recurso local o en la nube. Una vez creado el destino, los servidores de {{site.data.keyword.SecureGateway}} le proporcionarán un punto final público exclusivo donde escuchará si hay conexiones mientras la pasarela esté conectada.
 

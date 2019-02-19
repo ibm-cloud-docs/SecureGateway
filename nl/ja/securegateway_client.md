@@ -7,6 +7,7 @@ lastupdated: "2017-04-25"
 ---
 
 # クライアントの追加
+{: #add-client}
 
 {{site.data.keyword.SecureGateway}} クライアントは素晴らしい機能を提供します。クライアントは、オンプレミス・ネットワークと {{site.data.keyword.SecureGateway}} サーバー上のゲートウェイの間の初期接続を確立し、定義された宛先まで通信が通過できるようにします。
 

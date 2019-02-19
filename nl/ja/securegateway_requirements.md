@@ -7,6 +7,7 @@ lastupdated: "2018-08-10"
 ---
 
 # クライアントを実行するための要件
+{: #system-requirements}
 
 ## システム要件
 {: #system}

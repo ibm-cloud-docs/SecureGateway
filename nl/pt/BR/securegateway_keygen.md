@@ -10,6 +10,7 @@ lastupdated: "2017-04-25"
 {:pre: .pre}
 
 # Gerenciamento de certificado/chave
+{: #cert-key-management}
 
 ## Gerando um par certificado autoassinado/chave
 

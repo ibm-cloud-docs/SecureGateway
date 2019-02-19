@@ -10,6 +10,7 @@ lastupdated: "2017-04-10"
 {:pre: .pre}
 
 # Lista de control de accesos
+{: #acl}
 
 El cliente de {{site.data.keyword.SecureGateway}} proporciona soporte integrado de ACL (lista de control de accesos). Puede permitir o restringir (denegar) el acceso a los recursos locales realizando modificaciones en la ACL para el cliente.  Esto se puede llevar a cabo de forma interactiva utilizando los mandatos del cliente o especificando un archivo que contenga las ACL que desea tener en vigor.
 

@@ -7,6 +7,7 @@ lastupdated: "2018-08-10"
 ---
 
 # {{site.data.keyword.SecureGateway}}-Servicepläne
+{: #secure-gateway-service-plans}
 
 Mit Release 1.7.0 wurde ein neues Preismodell mit einem Stufenplan eingeführt, das eine Skalierung von {{site.data.keyword.SecureGateway}} abhängig von den Anforderungen des jeweiligen Unternehmens ermöglicht. In der folgenden Tabelle werden die Einschränkungen aufgeführt, die für jeden der öffentlich verfügbaren Plänen gelten:
 

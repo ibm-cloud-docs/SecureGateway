@@ -10,6 +10,7 @@ lastupdated: "2017-04-25"
 {:pre: .pre}
 
 # 卸载客户机
+{: #client-uninstall}
 
 ## Docker
 {: #docker}

@@ -7,6 +7,7 @@ lastupdated: "2018-08-10"
 ---
 
 # 執行用戶端的需求
+{: #system-requirements}
 
 ## 系統需求
 {: #system}

@@ -8,6 +8,7 @@ lastupdated: "2018-08-10"
 {:new_window: target="_blank"}
 
 # Resources
+{: #secure-gateway-resource}
 
 ## Blogs e outros recursos
 

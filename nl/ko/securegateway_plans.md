@@ -7,6 +7,7 @@ lastupdated: "2018-08-10"
 ---
 
 # {{site.data.keyword.SecureGateway}} 서비스 플랜
+{: #secure-gateway-service-plans}
 
 v1.7.0 릴리스의 경우 모든 회사의 요구사항에 맞게 {{site.data.keyword.SecureGateway}}를 스케일링할 수 있도록 해주는 새로운 계층 지정 가격 모델이 도입되었습니다. 다음 표에서는 공개적으로 사용 가능한 각각의 플랜과 연관된 제한사항을 제공합니다.
 

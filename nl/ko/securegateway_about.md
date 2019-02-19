@@ -7,6 +7,7 @@ lastupdated: "2017-04-10"
 ---
 
 # {{site.data.keyword.SecureGateway}} 정보
+{: #about-sg}
 
 ## 보안 적용 방법
 {{site.data.keyword.SecureGatewayfull}}는 {{site.data.keyword.SecureGateway}} 클라이언트(온프레미스 네트워크)와 {{site.data.keyword.SecureGateway}} 서버 간의 단일 지속적 암호화(TLS v1.2) 연결을 유지합니다. 이 양방향 연결을 통해 클라우드 리소스와 온프레미스 리소스 사이에서 안전하게 데이터를 전송할 수 있습니다. 한쪽 끝에서 연결(클라우드 리소스와 SG 서버 간 및 온프레미스 리소스와 SG 클라이언트 간)하는 경우 사용자는 프로토콜(TCP, TLS, HTTP, HTTPS, UDP) 및 해당 연결에 배치되는 보안 조치(상호 인증, iptable)를 정의합니다.  

@@ -10,6 +10,7 @@ lastupdated: "2017-04-10"
 {:pre: .pre}
 
 # Node.js TLS 相互认证
+{: #nodejs-tls-ma}
 
 此样本将说明如何为内部部署目标的两端配置相互认证：用户认证和资源认证。
 

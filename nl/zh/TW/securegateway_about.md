@@ -7,6 +7,7 @@ lastupdated: "2017-04-10"
 ---
 
 # 關於 {{site.data.keyword.SecureGateway}}
+{: #about-sg}
 
 ## 如何保護它的安全？
 {{site.data.keyword.SecureGatewayfull}} 會維護「{{site.data.keyword.SecureGateway}} 用戶端」（在內部部署網路中）與「{{site.data.keyword.SecureGateway}} 伺服器」之間的單一持續性加密（TLS 1.2 版）連線。使用此雙向連線，我們能夠安全地在您的雲端資源與內部部署資源之間傳輸資料。針對任一端的連線（雲端資源與「SG 伺服器」之間，以及內部部署資源與「SG 用戶端」之間），使用者會定義通訊協定（TCP、TLS、HTTP、HTTPS、UDP）及對它們採取的安全措施（交互鑑別、iptables）。  

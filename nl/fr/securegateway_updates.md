@@ -7,6 +7,7 @@ lastupdated: "2017-04-25"
 ---
 
 # Journal des modifications de {{site.data.keyword.SecureGateway}}
+{: #secure-gateway-change-log}
 
 ## Version 1.7.0 Groupe de correctifs 1
 

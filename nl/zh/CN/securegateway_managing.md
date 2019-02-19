@@ -7,6 +7,7 @@ lastupdated: "2017-04-10"
 ---
 
 # 管理 {{site.data.keyword.SecureGateway}} 服务
+{: #manage-sg-service}
 
 ## {{site.data.keyword.SecureGateway}} 仪表板
 在 {{site.data.keyword.SecureGateway}}“仪表板”中，可以快速查看以下详细信息：

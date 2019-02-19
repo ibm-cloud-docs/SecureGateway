@@ -7,6 +7,7 @@ lastupdated: "2018-11-08"
 ---
 
 # Preguntas frecuentes
+{: #sg-faq}
 
 ## Capa del modelo OSI
 {: #osi}

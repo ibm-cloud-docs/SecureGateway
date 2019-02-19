@@ -7,6 +7,7 @@ lastupdated: "2017-04-25"
 ---
 
 # Ajout d'un client
+{: #add-client}
 
 Le client {{site.data.keyword.SecureGateway}} est une pièce du puzzle qui fait que la magie opère.  Le client établit une connexion initiale entre le réseau sur site et une passerelle sur les serveurs {{site.data.keyword.SecureGateway}} et permet le passage des communications via les destinations définies.
 

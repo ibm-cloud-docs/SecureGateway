@@ -10,6 +10,7 @@ lastupdated: "2018-08-10"
 {:pre: .pre}
 
 # 故障诊断
+{: #troubleshooting}
 
 ## 运行 Secure Gateway 客户机的最佳实践
 {: #best}

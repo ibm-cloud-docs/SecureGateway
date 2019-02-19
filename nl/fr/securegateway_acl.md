@@ -10,6 +10,7 @@ lastupdated: "2017-04-10"
 {:pre: .pre}
 
 # Liste de contrôle d'accès
+{: #acl}
 
 Le client {{site.data.keyword.SecureGateway}} offre une prise en charge intégrée des listes de contrôle. Vous pouvez autoriser ou interdire (refuser) l'accès aux ressources sur site en modifiant la liste de contrôle d'accès du client.  Cette opération peut s'effectuer de manière interactive à l'aide de commandes du client ou en spécifiant un fichier qui contient les listes de contrôle d'accès que vous voulez appliquer.
 

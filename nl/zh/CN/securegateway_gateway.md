@@ -7,6 +7,7 @@ lastupdated: "2017-04-10"
 ---
 
 # 添加网关
+{: #add-sg-gw}
 
 网关可视为识别特定网络或环境的方法。Secure Gateway 客户机将使用网关来建立与 Secure Gateway 服务器的连接，并且可以包含多个资源定义或目标。
 

@@ -7,6 +7,7 @@ lastupdated: "2017-04-25"
 ---
 
 # 클라이언트 추가
+{: #add-client}
 
 {{site.data.keyword.SecureGateway}} 클라이언트는 고도의 작업을 수행할 수 있도록 해주는 퍼즐의 일부입니다. 이 클라이언트는 온프레미스 네트워크와 {{site.data.keyword.SecureGateway}} 서버의 게이트웨이 사이에 초기 연결을 설정하고 정의된 대상으로 통신이 통과할 수 있도록 해줍니다.
 

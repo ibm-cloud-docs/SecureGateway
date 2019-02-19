@@ -7,6 +7,7 @@ lastupdated: "2018-08-10"
 ---
 
 # {{site.data.keyword.SecureGateway}} サービス・プラン
+{: #secure-gateway-service-plans}
 
 {{site.data.keyword.SecureGateway}} の v1.7.0 のリリースで、あらゆる企業のニーズに対応できる階層型プラン料金モデルが導入されました。以下の表に、公開された各プランに関連する制限を示します。
 

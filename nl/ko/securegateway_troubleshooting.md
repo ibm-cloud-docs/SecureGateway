@@ -10,6 +10,7 @@ lastupdated: "2018-08-10"
 {:pre: .pre}
 
 # 문제점 해결
+{: #troubleshooting}
 
 ## Secure Gateway 클라이언트 실행 우수 사례
 {: #best}

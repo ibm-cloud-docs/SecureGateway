@@ -10,6 +10,7 @@ lastupdated: "2018-08-10"
 {:pre: .pre}
 
 # Traitement des incidents
+{: #troubleshooting}
 
 ## Meilleures pratiques pour l'exécution du client Secure Gateway
 {: #best}

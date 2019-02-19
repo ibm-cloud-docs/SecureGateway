@@ -7,6 +7,7 @@ lastupdated: "2018-08-10"
 ---
 
 # 클라이언트를 실행하기 위한 요구사항
+{: #system-requirements}
 
 ## 시스템 요구사항
 {: #system}

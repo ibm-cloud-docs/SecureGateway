@@ -7,6 +7,7 @@ lastupdated: "2017-04-10"
 ---
 
 # Informazioni su {{site.data.keyword.SecureGateway}}
+{: #about-sg}
 
 ## In che modo è sicuro?
 {{site.data.keyword.SecureGatewayfull}} mantiene una singola connessione crittografata (TLS v1.2) persistente tra il client {{site.data.keyword.SecureGateway}} (nella rete in loco) e i server {{site.data.keyword.SecureGateway}}. Con questa connessione bidirezionale, possiamo trasmettere in modo protetto i dati tra le tue risorse cloud e le tue risorse in loco. Per le connessioni su entrambe le estremità (tra la risorsa cloud e i server SG e tra le risorse in loco e il client SG), l'utente definisce il protocollo (TCP, TLS, HTTP, HTTPS, UDP) e le misure di sicurezza (autenticazione reciproca, iptable) su di esse implementati.  

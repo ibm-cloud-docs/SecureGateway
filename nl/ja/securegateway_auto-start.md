@@ -10,6 +10,7 @@ lastupdated: "2017-04-25"
 {:pre: .pre}
 
 # クライアントの自動開始の構成
+{: #auto-start-conf}
 
 ## Linux
 {: #linux}

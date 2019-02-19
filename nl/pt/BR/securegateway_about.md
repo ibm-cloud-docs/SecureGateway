@@ -7,6 +7,7 @@ lastupdated: "2017-04-10"
 ---
 
 # Sobre o {{site.data.keyword.SecureGateway}}
+{: #about-sg}
 
 ## Como ele é seguro?
 O {{site.data.keyword.SecureGatewayfull}} mantém uma conexão única criptografada persistente (TLS v1.2) entre o cliente {{site.data.keyword.SecureGateway}} (na rede no local) e os servidores {{site.data.keyword.SecureGateway}}. Com essa conexão bidirecional, somos capazes de transmitir com segurança dados entre seus recursos em nuvem e seus recursos no local. Para as conexões em cada extremidade (entre o recurso em nuvem e os servidores SG e entre os recursos no local e o cliente SG), o usuário define o protocolo (TCP, TLS, HTTP, HTTPS, UDP) e as medidas de segurança (autenticação mútua, iptables) colocadas nelas.  

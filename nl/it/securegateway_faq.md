@@ -7,6 +7,7 @@ lastupdated: "2018-11-08"
 ---
 
 # Domande frequenti (FAQ - Frequently Asked Questions)
+{: #sg-faq}
 
 ## Livello modello OSI
 {: #osi}

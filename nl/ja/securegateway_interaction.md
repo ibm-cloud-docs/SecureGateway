@@ -10,6 +10,7 @@ lastupdated: "2018-10-04"
 {:pre: .pre}
 
 # クライアントとの対話
+{: #client-interacting}
 
 クライアントと対話する方法はいくつかあります。
 

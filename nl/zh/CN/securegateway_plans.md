@@ -7,6 +7,7 @@ lastupdated: "2018-08-10"
 ---
 
 # {{site.data.keyword.SecureGateway}} 服务套餐
+{: #secure-gateway-service-plans}
 
 在 V1.7.0 发行版中，引入了新的分层套餐定价模型，支持 {{site.data.keyword.SecureGateway}} 按任何公司的需求进行扩展。下表提供了与每个公开可用套餐关联的限制：
 

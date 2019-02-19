@@ -7,6 +7,7 @@ lastupdated: "2017-04-25"
 ---
 
 # {{site.data.keyword.SecureGateway}} 변경 로그
+{: #secure-gateway-change-log}
 
 ## v1.7.0 수정팩 1
 

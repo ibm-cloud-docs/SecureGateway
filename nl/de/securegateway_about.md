@@ -7,6 +7,7 @@ lastupdated: "2017-04-10"
 ---
 
 # Informationen zu {{site.data.keyword.SecureGateway}}
+{: #about-sg}
 
 ## Verbindungssicherheit
 Von {{site.data.keyword.SecureGatewayfull}} wird eine einzige persistente verschlüsselte Verbindung (TLS Version 1.2) zwischen dem {{site.data.keyword.SecureGateway}}-Client (im lokalen Netz) und den {{site.data.keyword.SecureGateway}}-Servern bereitgestellt. Diese bidirektionale Verbindung ermöglicht das sichere Übertragen von Daten zwischen den Cloudressourcen und den Vor-Ort-Ressourcen. Für die Verbindungen an den beiden Enden (zwischen Cloudressource und SG-Servern und zwischen lokalen Ressourcen und SG-Client) legt der Benutzer das Protokoll (TCP, TLS, HTTP, HTTPS, UDP) und die geltenden Sicherheitsmaßnahmen (gegenseitige Authentifizierung, iptable) fest.  
