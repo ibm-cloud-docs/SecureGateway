@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-10-11"
+  years: 2015, 2019
+lastupdated: "2019-02-25"
 
 ---
 {:screen: .screen}
@@ -199,6 +199,21 @@ License: http://www.ibm.com/software/sla/sladb.nsf/lilookup/986C7686F22D4D358525
    rpm -q ibm-securegateway-client
    ```
    {: pre}
+
+### AIX Installation
+{: #aix-install}
+
+1. Ensure that executable permission is set for the package. If necessary, change the file permissions by issuing the following command:
+    ```
+    chmod a+x <secure-gateway-bin-package>
+    ```
+2. Extract the package by issuing the following command:
+    ```
+    ./<secure-gateway-bin-package>
+    ```
+
+Note:
+Please ensure whether your AIX system satisfy the requirement for running Node.js and ksh installed.
 
 ### Starting an interactive client session
 {: #linux-run}
