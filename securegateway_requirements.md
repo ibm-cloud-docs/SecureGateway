@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-01-16"
+lastupdated: "2019-03-07"
 
 ---
 
@@ -18,17 +18,15 @@ The Secure Gateway Client is supported in the following environments:
 | ------------- | ----------- |
 | Windows Desktop | 7, 8.1, 10 and greater |
 | Windows Server | 2012 R2 and greater |
-| Red Hat Linux | 6.5 and greater |
-| CentOS | 7.2 and greater |
-| SuSE Linux | 11.0<sup>*</sup> and greater |
+| Red Hat Linux | 7.3 and greater |
+| CentOS | 7.3 and greater |
+| SuSE Linux | 12 and greater |
 | Ubuntu Linux | 14.04 (LTS) and greater |
 | Power Machine | ppc64el architecture |
 | Ubuntu Z-Linux | - |
-| AIX | 7.1 and greater |
+| AIX | 7.1 TL4 and greater |
 | Mac OS X | 10.10 (Yosemite) and greater |
 | Docker | 1.7.0 and greater, all supported operating systems |
-
-<sup> * </sup>- SLES 11 support is only with Service Pack 4
 
 <b>Note:</b> Only 64-bit environments are currently supported for native client installation.
 
