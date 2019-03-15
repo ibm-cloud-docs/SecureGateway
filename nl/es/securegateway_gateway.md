@@ -19,7 +19,7 @@ En el panel de control de Secure Gateway, pulse el botón Añadir pasarela para 
 
 Lo único que tiene que especificar necesariamente en este panel es el nombre de la pasarela.  De forma predeterminada, tanto `Requerir señal de seguridad` como `Caducidad de la señal` están seleccionados.
 
-Al requerir la señal de seguridad para conectar a los clientes, cada vez que inicie un cliente de Secure Gateway deberá especificar tanto el ID de pasarela como la señal de seguridad.  Si elimina la marca del recuadro `Requerir señal de seguridad`, solo tendrá que especificar el ID de pasarela para que el cliente se pueda conectar.
+Al requerir la señal de seguridad para conectar a los clientes, cada vez que inicie un cliente de Secure Gateway deberá especificar tanto el ID de pasarela como la señal de seguridad.  Si elimina la marca del recuadro `Requerir señal de seguridad`, solo tendrá que especificar el ID de pasarela con el cliente cuando inicie la conexión con la pasarela.
 
 La fecha de caducidad predeterminada de la señal de seguridad es de 90 días a partir del día en que se crea.  Para cambiar la fecha de caducidad, mantenga marcado el recuadro `Caducidad de la señal` y edite el campo de texto con el número de días en que desea que la señal caduque (el mínimo es 1, el máximo es 365).  Para crear una señal que no caduque, elimine la marca del recuadro `Caducidad de la señal`.  
 

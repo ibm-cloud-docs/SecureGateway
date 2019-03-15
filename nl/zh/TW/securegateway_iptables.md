@@ -12,7 +12,7 @@ lastupdated: "2018-08-10"
 # IP 表格規則
 {: #iptables-rulles}
 
-若要容許在目的地上強制執行 iptables 規則，您必須在目的地的「網路安全」畫面下勾選`限制網路存取`選項。此時，您可以新增要強制執行的規則，例如：192.0.0.1 9000（單一 IP 及埠）、192.0.0.1-192.0.0.5 5000:5005（某範圍的 IP 及某範圍的埠）或這其中的任意組合。如需相關資訊，請參閱[配置網路安全](/docs/services/SecureGateway/securegateway_destination.html#configuring-network-security)。
+若要容許在目的地上強制執行 iptables 規則，您必須在目的地的「網路安全」畫面下勾選`限制網路存取`選項。此時，您可以新增要強制執行的規則，例如：192.0.0.1 9000（單一 IP 及埠）、192.0.0.1-192.0.0.5 5000:5005（某範圍的 IP 及某範圍的埠）或這些規則的任意組合。如需相關資訊，請參閱[配置網路安全](/docs/services/SecureGateway/securegateway_destination.html#dest-network-security)。
 
 如果您要使用 cURL 建立專用目的地，則可以使用類似如下的指令：
 
@@ -38,6 +38,7 @@ curl -X PUT "https://sgmanager.ng.bluemix.net/v1/sgconfig/<gateway_id>/destinati
 請注意，第一個指令使用 `src` 來提供單一 IP，而第二個指令使用 `src_range` 來提供某範圍的 IP。
 
 ## 動態 IP 的 IP 表格規則
+{: #iptables-dynamic-ips}
 
 如果您的應用程式有一組動態 IP，但您不知道，則可以運用 {{site.data.keyword.SecureGateway}} REST API 即時更新 IP 表格規則。
 
@@ -68,7 +69,7 @@ request({
   }, console.log.bind(console)) 
 ```
 
-這必須在應用程式啟動時執行，且會在應用程式啟動時重新配置 IP 表格規則。每個 IP 表格規則都可以使用 `application_id` 及 `CF_INSTANCE_INDEX` 來唯一地識別每一個應用程式實例。前端 IP 位址擷取自 `CF_INSTANCE_IP` 變數，並套用至 IP 表格規則。
+這應該在啟動應用程式時執行，先前定義的任何 iptables 規則都將改寫。每個 iptables 規則都可以使用 `application_id` 及 `CF_INSTANCE_INDEX` 來唯一地識別每一個應用程式實例。外部 IP 位址擷取自 `CF_INSTANCE_IP` 變數，並套用至 iptables 規則。
 
 
 {: pre}

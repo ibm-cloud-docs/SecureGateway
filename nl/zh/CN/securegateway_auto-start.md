@@ -13,7 +13,7 @@ lastupdated: "2017-04-25"
 {: #auto-start-conf}
 
 ## Linux
-{: #linux}
+{: #auto-start-linux}
 
 如果已选择使用系统的自动启动工具，请使用下列其中一种方法来启动客户机。客户机将使用的配置文件可在以下位置找到：
 
@@ -29,8 +29,8 @@ lastupdated: "2017-04-25"
 |环境变量|描述|
 | ------------- | ----------- |
 |RESTART_CLIENT|安装或升级期间停止并重新启动客户机（Yes 或 No）|
-|GATEWAY_ID|在 Secure Gateway for Bluemix UI 上创建的网关标识|
-|SECTOKEN|此网关标识的安全性令牌（如果创建时选择了强制实施安全性）|
+|GATEWAY_ID|在 Bluemix Secure Gateway UI 上创建的网关标识|
+|SECTOKEN|此网关标识的安全性令牌（如果在创建网关时选择了强制实施安全性）|
 |ACL_FILE|要用于限制对资源的内部部署访问的访问控制表文件|
 |LOGLEVEL|要为服务设置的日志级别（缺省值为 INFO）|
 |USE_UI|如果不想启动客户机 UI，请将此项设置为“N”|
@@ -40,7 +40,7 @@ lastupdated: "2017-04-25"
 <b>注：</b>仅当使用系统的自动启动工具时，才会读取此文件。如果是手动运行客户机的，那么将忽略此文件。
 
 ### Upstart
-{: #upstart}
+{: #auto-start-upstart}
 
 ### 启动客户机
 {: #upstart-start}
@@ -69,8 +69,8 @@ sudo initctl stop securegateway_client
 ```
 {: pre}
 
-### systemD
-{: #systemd}
+### SystemD
+{: #auto-start-systemd}
 
 
 ### 启动客户机
@@ -107,8 +107,8 @@ systemctl stop securegateway_client
 ```
 {: pre}
 
-### System V
-{: #systemv}
+### 系统 V
+{: #auto-start-system-v}
 
 在安装期间不会设置 System V，这与其他自动启动工具不同。安装目录 /opt/ibm/securegateway/client/upstart 中提供了脚本，这些脚本包括：
 
@@ -120,7 +120,7 @@ securegateway_clientd
 
 <b>注：</b>此部分将影响 SuSE/SLES 11 的用户。
 
-可选：如果运行的是使用 system V 自动启动的 SuSE V11，那么提供了可用于配置此过程的脚本。请遵循以下过程：
+可选：如果运行的是使用系统 V 自动启动的 SuSE V11，那么提供了可用于配置此过程的脚本。请遵循以下过程：
 
 ```
 cd /opt/ibm/securegateway/client/upstart/systemV
@@ -135,12 +135,12 @@ vi /etc/ibm/sgenvironment.conf
 ```
 {: codeblock}
 
-执行了这些步骤后，就可以使用 YasT 和 system V 命令来启动/停止守护程序。
+执行了这些步骤后，就可以使用 YasT 和系统 V 命令来启动/停止守护程序。
 
 返回到[入门 - 添加客户机](/docs/services/SecureGateway/securegateway_client.html)。
 
 ## Windows
-{: #windows}
+{: #auto-start-windows}
 
 要变更 Windows 服务的状态，请以管理员特权打开命令窗口。
 

@@ -13,6 +13,7 @@ lastupdated: "2017-04-25"
 {: #cert-key-management}
 
 ## Génération d'une paire certificat-clé autosignée
+{: #self-signed-cert-gen}
 
 Pour générer une paire certificat-clé autosignée, exécutez la commande suivante :
 
@@ -23,6 +24,7 @@ openssl req -new -newkey rsa:2048 -days 365 -nodes -x509 -keyout serverKey.pem -
 
 
 ## Téléchargement d'une paire certificat-clé dans le navigateur
+{: #upload-cert-to-browser}
 
 Pour accéder à une destination qui exige l'authentification mutuelle, vous devez convertir votre paire certificat-clé en fichier PKCS#12 et le télécharger dans votre navigateur.
 

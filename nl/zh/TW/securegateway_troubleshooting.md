@@ -13,18 +13,19 @@ lastupdated: "2018-08-10"
 {: #troubleshooting}
 
 ## 執行 Secure Gateway 用戶端的最佳作法
-{: #best}
+{: #best-practices}
 
 - 在用戶端本身所橋接之服務可以透過網路看到的作業系統 (OS) 分割區上執行 Secure Gateway 用戶端。例如，部分管理的虛擬化環境支援多個網路連線功能模式，包括 NAT 及橋接器。請務必選擇讓您能從網際網路存取 {{site.data.keyword.Bluemix}} 服務的正確連線類型。
 - 將 Secure Gateway 安裝至您企業安全原則所容許的 IT 環境中。這通常會在受保護的黃色管制區或 DMZ 中，在這裡，貴公司可以制定適當的安全控制措施來保護內部部署資產。安裝 Secure Gateway 用戶端時，請一律遵循您的企業安全原則及指示。
 - 在將用戶端安裝至您的環境之前，請確定網際網路及您的內部部署資產都是可存取的，且 DNS 可解析所有主機名稱。
 
 ## 起始疑難排解步驟
+{: #initial-troubleshooting}
 
 - 從要求端應用程式起始失敗的要求
 - 檢查「Secure Gateway 用戶端」日誌
 - 如果尚未從要求產生任何用戶端日誌，則該問題介於要求端應用程式與「Secure Gateway 伺服器」之間。其範圍可能會從網路可靠性、不相符的要求通訊協定，到不適當的 TLS 交互鑑別信號交換。
-- 如果用戶端已從要求產生錯誤日誌，則問題介於「SG 用戶端」與內部部署資源之間。以下是包含一般錯誤的表格、一般造成它們的問題，以及用來進行疑難排解的潛在方法。
+- 如果用戶端已從要求產生錯誤層次日誌，則問題介於「SG 用戶端」與內部部署資源之間。以下是包含一般錯誤的表格、一般造成它們的問題，以及用來進行疑難排解的潛在方法。
 
 錯誤 | 一般原因 | 疑難排解方法
 --- | --- | ---
@@ -33,15 +34,17 @@ ECONNREFUSED | 用戶端已解析要連接的主機名稱/IP，但無法開始�
 ECONNRESET | 用戶端已建立與目的地的連線，但在信號交換期間發生錯誤（TLS 信號交換錯誤也可能會導致不同的錯誤），或內部部署資源正在處理要求時發生錯誤。| 應該檢查內部部署資源的日誌，確認未發生任何錯誤導致連線中斷。如果在內部部署日誌中找不到任何內容，則應該檢查目的地配置，確保提供適當的通訊協定（並視需要提供憑證）給用戶端進行連線。
 REMOTE_RST |「SG 伺服器」端發生錯誤。<br><br> 若為內部部署目的地，要求端應用程式連接至「SG 伺服器」時發生錯誤，或從內部部署資源接收資料時發生逾時錯誤。<br><br> 若為雲端目的地，可能是從 TLS 信號交換失敗到雲端資源發生錯誤的任何原因| 若為內部部署目的地，請確定要求端應用程式使用適當的通訊協定來建立與「SG 伺服器」的連線；如果從內部部署資源接收資料時發生錯誤，則請嘗試延長/停用逾時。<br><br> 若為雲端目的地，應該檢查雲端資源的日誌，確認未發生任何錯誤導致連線中斷。如果在雲端資源日誌中找不到任何內容，則應該檢查目的地配置，確保提供適當的通訊協定（並視需要提供憑證）給用戶端進行連線。
 
-在通道的另一端發生 ECONNRESET 之後，許多應用程式都會「停滯」。這是預期狀況。Secure Gateway 無法在通道另一端重播 RST 封包，因為通道那端已確認 TCP 封包。應用程式層次逾時（即應用程式未曾接收到確認回應）是結束停滯的唯一方法。
+在通道的另一端發生 ECONNRESET 之後，許多應用程式都會「停滯」。這是預期狀況。Secure Gateway 無法在通道另一端重播 RST 封包，因為通道那端已確認 TCP 封包。在應用程式上定義逾時，使其絕不會收到確認回應，是結束停滯的唯一方法。
 
 ## 將 Docker 用戶端配置為在伺服器重新啟動時重新啟動
-{: #docker}
+{: #docker-auto-restart}
 
 ### 發生的狀況
+{: #docker-auto-restart-what-is-happening}
 當您重新啟動 Secure Gateway 用戶端執行所在的伺服器時，必須手動重新啟動 Secure Gateway Docker 用戶端。如何讓用戶端在系統重新啟動之後自動啟動？
 
 ### 修正方式
+{: #docker-auto-restart-how-to-fix-it}
 
 - 在 Linux 或 UNIX 系統上：
 - 將 Docker 指令整合到可以藉由 CRON 工作呼叫的 Script。
@@ -57,6 +60,7 @@ for /L %i in (0,0,0) do docker run -it ibmcom/secure-gateway-client <gateway_id>
 {: #not-in-cn}
 
 ### 發生的狀況
+{: #not-in-cn-what-is-happening}
 您嘗試使用 Secure Gateway 用戶端實作內部部署的用戶端 TLS，並且收到下列錯誤訊息。
 
 ```
@@ -70,6 +74,7 @@ Where:
 {: screen}
 
 ### 發生的原因
+{: #not-in-cn-why-it-is-happening}
 內部部署應用程式與您針對此目的地而上傳至 {{site.data.keyword.Bluemix_notm}} 之憑證中的「通用名稱」（例如，伺服器 FQDN 或 YOUR 名稱）不相符。
 
 - 請檢查下列項目：
@@ -77,6 +82,7 @@ Where:
 - 您已針對此用戶端將正確憑證上傳至 {{site.data.keyword.Bluemix_notm}} 目的地。
 
 ### 修正方式
+{: #not-in-cn-how-to-fix-it}
 
  1. 在 {{site.data.keyword.Bluemix_notm}} 使用者介面中，移至「Secure Gateway 儀表板」。
  2. 選取目的地，然後按一下「編輯」圖示。
@@ -87,6 +93,7 @@ Where:
 {: #san}
 
 ### 發生的狀況
+{: #san-what-is-happening}
 所提出之憑證中的 CN 是閘道的 IP 位址，但憑證沒有與 IP 位址相符的 SAN，因此用戶端無法連接。  
 
 基於主機名稱解析問題，我們在目的地中使用 IP 位址。所提出之憑證中的 CN 是閘道的 IP 位址，但憑證沒有與 IP 位址相符的 SAN，因此用戶端無法連接。
@@ -101,10 +108,12 @@ Where:
 {: screen}
 
 ### 發生的原因
+{: #san-why-it-is-happening}
 發生的狀況是閘道用戶端中的 SSL 驗證碼會以不同的方式處理此目的地，因為它使用 IP 位址，而非主機名稱。它會在憑證的 SAN 中尋找 IP 位址的相符項，而非使用憑證的 CN 進行比對。由於憑證中沒有 SAN，因此將它視為不正確的連線，並讓 SSL 信號交換失敗。
 
 ### 修正方式
-如果您查看錯誤訊息並不會看到 CN（例如 [ERROR] Connection ## had error: Host: . is not cert&apos;s CN:），但憑證的清單讓我相信您已不正確地產生自簽憑證。此問題將會搭配使用 FQDN 或 CN 與 IP_Address 來產生憑證。這不會有任何作用，因為只有在使用 SAN 時才支援 IP 位址。
+{: #san-how-to-fix-it}
+如果您查看錯誤訊息並不會看到 CN（例如 [ERROR] Connection ## had error: Host: . is not cert&apos;s CN:），但憑證的清單讓我相信您已不正確地產生自簽憑證。問題在於憑證是使用 FQDN 或 CN 搭配 IP 位址而產生，這不會有任何作用，因為只有在使用 SAN 時才支援 IP 位址。
 
 使用 openssl 來產生以 IP 作為 CN 之憑證的方法：
 
@@ -176,6 +185,7 @@ Where:
 {: #depth-zero}
 
 ### 發生的狀況
+{: #depth-zero-what-is-happening}
 您嘗試使用 Secure Gateway 用戶端實作內部部署的用戶端 TLS，並且收到下列錯誤訊息。
 
 ```
@@ -186,22 +196,26 @@ Where:
 {: screen}
 
 ### 發生的原因
+{: #depth-zero-why-it-is-happening}
 所定義的目的地遺漏用戶端憑證。
 
 ### 修正方式
+{: #depth-zero-how-to-fix-it}
  1. 在 {{site.data.keyword.Bluemix_notm}} 使用者介面中，移至「Secure Gateway 儀表板」。
- 2. 選取您的目的地，然後按一下「編輯」圖示。
+ 2. 選取目的地，然後按一下「編輯」圖示。
  3. 按一下「上傳憑證」。
  4. 上傳要用來連接至內部部署系統的 PEM 憑證檔案。
 
 
 ## 如何在 Docker 用戶端中以互動方式載入 ACL 檔案？
-{: #docker-acl}
+{: #docker-load-acl}
 
 ### 發生的狀況
+{: #docker-load-acl-what-is-happening}
 由於 Docker 是容器或虛擬化環境，因此在實際啟動容器之前，無法直接存取您的檔案系統。這會讓它無法讀取主機檔案系統，直到它實際啟動並執行為止。
 
 ### 修正方式
+{: #docker-load-acl-how-to-fix-it}
 您可以採取的動作如下：
 
 - 建立 Dockerfile 以包含 aclfile.txt
@@ -226,7 +240,7 @@ docker run -t -i ads-secure-gateway-client1  --F /tmp/aclfile.txt
 ```
 {: pre}
 
-- 取得下列輸出：
+- 您應該得到下列輸出：
 
 ```
 [2015-09-30 16:50:32.084] [INFO] The current access control list is being reset and replaced by the user provided file: /tmp/aclfile.txt
@@ -236,7 +250,7 @@ docker run -t -i ads-secure-gateway-client1  --F /tmp/aclfile.txt
 {: screen}
 
 ## 取得其他說明及支援
-{: #support}
+{: #getting-help-and-support}
 
 如果您有使用 Secure Gateway 開發或部署應用程式的相關技術問題，請將問題張貼在 [Stack Overflow ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](http://stackoverflow.com/search?q=securegateway+ibm-bluemix)。請使用 "ibm-bluemix" 和 "secure-gateway" 來標記問題，讓 {{site.data.keyword.Bluemix_notm}} 開發團隊可以更輕鬆地找到。
 
@@ -251,10 +265,10 @@ docker run -t -i ads-secure-gateway-client1  --F /tmp/aclfile.txt
 - 用戶端執行所在的 OS 為何？
 - 使用的用戶端版本（這可以在用戶端上使用 'C' 指令來找到）為何？
 - 如果這是使用者介面問題，則請貼上或附加任何相關聯的瀏覽器主控台日誌及擷取畫面
-- 貼上或附加任何相關聯的要求端應用程式日誌
-- 貼上或附加任何相關聯的「Secure Gateway 用戶端」日誌
+- 貼上或附加任何相關聯的要求端應用程式日誌及時區
+- 貼上或附加任何相關聯的「Secure Gateway 用戶端」日誌及時區
 - 提供所使用目的地詳細資料（擷取畫面或填寫下列欄位）：
    - 目的地 ID
    - 通訊協定
    - 目的地端的鑑別
-   - 已上傳的憑證（只要名稱以及它們上傳至其中的方框）
+   - 已上傳的憑證（只要名稱以及它們上傳到哪個 Box 資料夾或鏈結）

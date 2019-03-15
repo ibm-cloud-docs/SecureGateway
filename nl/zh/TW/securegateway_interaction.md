@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-10-04"
+  years: 2015, 2019
+lastupdated: "2019-02-19"
 
 ---
 {:screen: .screen}
@@ -29,17 +29,17 @@ lastupdated: "2018-10-04"
 |參數及引數|說明|
 | ------------- | ----------- |
 | &lt;gateway ID&gt; |使用所提供的閘道 ID 連接至 {{site.data.keyword.Bluemix_notm}}|
-| -F, -\-aclfile &lt;file&gt; | 存取控制清單檔案 |
-| -g, -\-gateway &lt;hostname:port&gt; | 用來手動選取特定的閘道目的地（僅限進階使用）|
-| -l, -\-loglevel &lt;level&gt; | 將記載層次變更為 ERROR、INFO、DEBUG 或 TRACE |
-| -p, -\-logpath &lt;file&gt; | 直接記載至特定的檔案 |
-| -t, -\-sectoken &lt;security token&gt; | 用於此閘道連線的安全記號 |
-| -P, -\-port &lt;port&gt; | 使用者介面執行所在的埠。預設為埠 9003 |
-| -w, -\-password &lt;password&gt; | 用來保護使用者介面的密碼。預設為無密碼 |
-| -x, -\-proxy &lt;proxy agent&gt; | 埠 9000 連線的 Proxy 代理程式 |
-| -\-noUI | 避免使用者介面自動啟動 |
-| -\-allow | 容許對用戶端的所有連線。會被提供的 ACL 檔案所置換 |
-| -\-service | 起始連線之後，母項會在所有子項用戶端都終止之後 60 秒內重新啟動 |
+| -F, -\-aclfile &lt;file&gt; |存取控制清單檔案|
+| -g, -\-gateway &lt;hostname:port&gt; |用來手動選取特定的閘道目的地（僅限進階使用）|
+| -l, -\-loglevel &lt;level&gt; |將記載層次變更為 ERROR、INFO、DEBUG 或 TRACE|
+| -p, -\-logpath &lt;file&gt; |直接記載至特定檔案|
+| -t, -\-sectoken &lt;security token&gt; |用於此閘道連線的安全記號|
+| -P, -\-port &lt;port&gt; |使用者介面執行所在的埠。預設為埠 9003 |
+| -w, -\-password &lt;password&gt; | 要用來保護使用者介面的密碼。預設為無密碼|
+| -x, -\-proxy &lt;proxy agent&gt; |埠 9000 連線的 Proxy 代理程式|
+| -\-noUI |避免使用者介面自動啟動|
+| -\-allow |允許對用戶端的所有連線。會被提供的 ACL 檔案所置換|
+| -\-service |起始連線之後，母項會在所有子項用戶端都終止之後 60 秒內重新啟動|
 
 <b>附註：</b>`--service`、`--allow` 及 `--noUI` 旗標應該是指令行引數中的最後幾個參數。
 
@@ -88,7 +88,7 @@ node lib/secgwclient.js <myGatewayID_1> <myGatewayID_2> -t none--<token for gate
 ### 互動式指令
 {: #interactive-commands}
 
-{{site.data.keyword.SecureGateway}} 用戶端具有指令行介面 (cli) 及 Shell 提示，可輕鬆地進行配置及控制。互動式環境所支援的功能集比指令行引數更豐富，這是為了要更妥當地協助進行用戶端的互動式控制。
+{{site.data.keyword.SecureGateway}} 用戶端具有指令行介面 (cli) 及 Shell 提示，可輕鬆地進行配置及控制。互動式環境所支援的功能集比指令行引數更豐富，這是為了協助對用戶端進行更佳的互動式控制。
 
 |互動式指令|說明|
 | ------------- | ----------- |
@@ -123,7 +123,7 @@ node lib/secgwclient.js <myGatewayID_1> <myGatewayID_2> -t none--<token for gate
 回到[開始使用 - 新增用戶端](/docs/services/SecureGateway/securegateway_client.html)。
 
 ## 用戶端使用者介面
-{: #ui}
+{: #client-ui}
 
 <b>附註：</b>在 Windows 或 MacOS 上使用 Docker 時，不支援「用戶端使用者介面」。
 
@@ -142,7 +142,7 @@ node lib/secgwclient.js <myGatewayID_1> <myGatewayID_2> -t none--<token for gate
 ### 儀表板
 {: #ui-dashboard}
 
-這是用戶端已連接之後的主頁面。從這裡，您可以存取「檢視日誌」頁面、「存取控制清單」頁面及「連線資訊」頁面。在底端，您也可以選擇中斷與某個/多個已連接用戶端的連線。在頁面頂端，會顯示目前已選取的用戶端，以及用來連接其他用戶端的選項。
+這是用戶端已連接之後的主頁面。從這裡，您可以存取「檢視日誌」頁面、「存取控制清單」頁面及「連線資訊」頁面。在底端，您也可以選擇中斷與某個/多個已連接用戶端的連線。在頁面頂端，會顯示目前已選取的用戶端，且會有用來連接其他用戶端的選項。 
 
 ### 檢視日誌
 {: #ui-logs}
@@ -162,7 +162,7 @@ node lib/secgwclient.js <myGatewayID_1> <myGatewayID_2> -t none--<token for gate
 回到[開始使用 - 新增用戶端](/docs/services/SecureGateway/securegateway_client.html)。
 
 ## 遠端用戶端終止
-{: #remote}
+{: #client-remote}
 
 如果已提供用戶端的 ID，則可以透過 SG 使用者介面或 SG API 從遠端終止用戶端。如果您終止正在以服務方式執行的用戶端，則用戶端會重新啟動，並取得新的用戶端 ID；不過，如果服務已有多個連接的用戶端，則在所有剩餘用戶端都被終止之前，不會重新啟動終止的用戶端。
 
@@ -180,8 +180,9 @@ SG 閘道只能處理 250 個並行連線。如果並行要求數目超出限制
 {{site.data.keyword.SecureGateway}} DataPower Client 正在進行更新，以符合其餘用戶端的功能。它目前有下列限制：
 
 - ACL 將預設為 ALLOW ALL
-- 不支援從 {{site.data.keyword.SecureGateway}} 使用者介面啟用及停用閘道或目的地。不過，DataPower 使用者介面中的「管理狀態」選項，其功能等同於該特定用戶端的 on/off 開關。
+- 不支援從 {{site.data.keyword.SecureGateway}} 使用者介面啟用及停用閘道或目的地。不過，DataPower 使用者介面中的「管理狀態」選項，其功能等同於該特定用戶端的開關。
 - 不支援連線狀態輪詢，無法取得即時連接及斷線的閘道狀態更新。
 - DataPower 7.5.1.0 版之前不支援具有目的地端 TLS 的完整憑證鏈
 - DataPower 7.5.1.0 版之前不支援雲端目的地
 - 記載層次無法變更為 TRACE 層次
+- DataPower 中最新的 Secure Gateway 用戶端版本是 1.8.0fp6，如需相關資訊，請檢查[這裡](/docs/services/SecureGateway/securegateway_install.html#installing-datapower)。

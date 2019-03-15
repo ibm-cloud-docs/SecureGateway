@@ -13,6 +13,7 @@ lastupdated: "2017-04-25"
 {: #cert-key-management}
 
 ## 產生自簽憑證/金鑰配對
+{: #self-signed-cert-gen}
 
 若要產生自簽憑證/金鑰配對，請執行下列指令：
 
@@ -23,6 +24,7 @@ openssl req -new -newkey rsa:2048 -days 365 -nodes -x509 -keyout serverKey.pem -
 
 
 ## 將憑證/金鑰配對上傳至瀏覽器
+{: #upload-cert-to-browser}
 
 若要存取強制執行交互鑑別的目的地，您必須將憑證/金鑰配對轉換為 PKCS#12 檔案，並將其上傳至瀏覽器。
 

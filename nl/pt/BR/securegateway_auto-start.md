@@ -13,9 +13,9 @@ lastupdated: "2017-04-25"
 {: #auto-start-conf}
 
 ## Linux
-{: #linux}
+{: #auto-start-linux}
 
-Se você escolheu usar o recurso de autoinicialização do sistema, use um dos métodos abaixo para iniciar o cliente. O arquivo de configuração que será usado pelo cliente pode ser localizado em:
+Se você escolheu usar o recurso de autoinicialização do sistema, use um dos métodos abaixo para iniciar o cliente.  O arquivo de configuração que será usado pelo cliente pode ser localizado em:
 
 ```
 /etc/ibm/sgenvironment.conf
@@ -30,22 +30,22 @@ Esse arquivo inclui as variáveis importantes a seguir a serem configuradas:
 | ------------- | ----------- |
 | RESTART_CLIENT | Parar e reiniciar o cliente durante a instalação ou o upgrade (Sim ou Não) |
 | GATEWAY_ID | Seu ID do gateway conforme criado na IU do Secure Gateway for Bluemix |
-| SECTOKEN | Token de segurança para esse ID do gateway, se você escolher cumprir a segurança ao criá-la |
+| SECTOKEN | Token de segurança para esse ID de gateway, se você escolher impor segurança ao criar o gateway |
 | ACL_FILE | Arquivo de Lista de Controle de Acesso que você deseja usar para restringir o acesso no local aos recursos |
 | LOGLEVEL | O nível de log que você deseja configurar para seu serviço (o padrão é INFO) |
 | USE_UI   | Configure isso como 'N' se não desejar ativar a IU do cliente |
 | UI_PORT  | A porta na qual você deseja ativar a IU do cliente (o padrão é 9003) |
 | LANGUAGE | O idioma no qual você deseja que o cliente efetue login (o padrão é en) |
 
-<b>Nota:</b> esse arquivo será lido somente se você estiver usando o recurso de autoinicialização do sistema. Se você estiver executando o cliente manualmente, esse arquivo será ignorado.
+<b>Nota:</b> esse arquivo será lido somente se você estiver usando o recurso de autoinicialização do sistema.  Se você estiver executando o cliente manualmente, esse arquivo será ignorado.
 
 ### Upstart
-{: #upstart}
+{: #auto-start-upstart}
 
 ### Iniciando o cliente
 {: #upstart-start}
 
-Se estiver usando o recurso upstart para que o cliente Secure Gateway seja executado automaticamente na inicialização do sistema, você precisará verificar sua configuração primeiro (/etc/ibm/sgenambiment.conf). Depois de ter configurado o serviço upstart, será possível usar o comando a seguir para iniciá-lo:
+Se estiver usando o recurso upstart para que o cliente Secure Gateway seja executado automaticamente na inicialização do sistema, você precisará verificar sua configuração primeiro (/etc/ibm/sgenambiment.conf).  Depois de ter configurado o serviço upstart, será possível usar o comando a seguir para iniciá-lo:
 
 ```
 sudo initctl start securegateway_client
@@ -70,13 +70,13 @@ sudo initctl stop securegateway_client
 {: pre}
 
 ### SystemD
-{: #systemd}
+{: #auto-start-systemd}
 
 
 ### Iniciando o cliente
 {: #systemd-start}
 
-Se estiver usando o recurso systemD para que o cliente Secure Gateway seja executado automaticamente na inicialização do sistema, você talvez precise verificar sua configuração primeiro (/etc/ibm/sgenvironment.conf). Depois de ter configurado o serviço upstart, será possível usar o comando a seguir para iniciá-lo:
+Se estiver usando o recurso systemD para que o cliente Secure Gateway seja executado automaticamente na inicialização do sistema, você talvez precise verificar sua configuração primeiro (/etc/ibm/sgenvironment.conf).  Depois de ter configurado o serviço upstart, será possível usar o comando a seguir para iniciá-lo:
 
 ```
 systemctl start securegateway_client
@@ -107,8 +107,8 @@ systemctl stop securegateway_client
 ```
 {: pre}
 
-### SystemV
-{: #systemv}
+### System V
+{: #auto-start-system-v}
 
 O System V não é configurado durante a instalação, como as outras instalações de autoinicialização. Os Scripts estão disponíveis no diretório de instalação /opt/ibm/securegateway/client/upstart, eles são:
 
@@ -120,7 +120,8 @@ securegateway_clientd
 
 <b>Nota:</b> esta seção afetará os usuários do SuSE/SLES 11.
 
-Opcional: se você estiver executando o SuSE versão 11 que usa a autoinicialização do systemV, serão fornecidos scripts que podem ser usados para configurar esse processo. Siga o procedimento abaixo:
+Opcional: se você estiver executando o SuSE versão 11 que usa a autoinicialização do
+System V, serão fornecidos scripts que podem ser usados para configurar esse processo. Siga o procedimento abaixo:
 
 ```
 cd /opt/ibm/securegateway/client/upstart/systemV
@@ -135,12 +136,13 @@ vi /etc/ibm/sgenvironment.conf
 ```
 {: codeblock}
 
-Depois que estas etapas tiverem sido executadas, os comandos YasT e systemV poderão ser usados para iniciar/parar o daemon.
+Depois que essas etapas tiverem sido executadas, os comandos do YasT e do System V poderão ser usados
+para iniciar/parar o daemon.
 
 Retorne para [Introdução - Incluindo um cliente](/docs/services/SecureGateway/securegateway_client.html).
 
 ## Windows
-{: #windows}
+{: #auto-start-windows}
 
 Para alterar o estado do serviço do Windows, abra uma janela de comando com privilégios de administrador.
 

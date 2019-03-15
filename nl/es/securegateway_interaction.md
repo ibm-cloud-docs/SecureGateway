@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-10-04"
+  years: 2015, 2019
+lastupdated: "2019-02-19"
 
 ---
 {:screen: .screen}
@@ -29,17 +29,17 @@ En la tabla siguiente se describen todas las opciones disponibles que se pueden 
 | Parámetro y argumentos | Descripción |
 | ------------- | ----------- |
 | &lt;gateway ID&gt; | Conectar a {{site.data.keyword.Bluemix_notm}} mediante el ID de pasarela especificado |
-| -F, -\-aclfile &lt;file&gt; | Access control List file |
-| -g, -\-gateway &lt;hostname:port&gt; | Used to manually select a specific gateway destination (advanced use only) |
-| -l, -\-loglevel &lt;level&gt; | Change the log level to ERROR, INFO, DEBUG or TRACE |
-| -p, -\-logpath &lt;file&gt; | Direct logging to a specific file |
-| -t, -\-sectoken &lt;security token&gt; | The security token to use for this gateway connection |
-| -P, -\-port &lt;port&gt; | The port for the UI to run on.  Defaults to port 9003 |
-| -w, -\-password &lt;password&gt; | The password to protect the UI with.  Defaults to no password |
-| -x, -\-proxy &lt;proxy agent&gt; | The proxy for the port 9000 connection |
-| -\-noUI | Prevent the UI from starting up automatically |
-| -\-allow | Allows all connections to the client. Is overridden by the ACL file, if provided |
-| -\-service | After an initial connection, the parent will restart within 60s if all child clients are terminated |
+| -F, -\-aclfile &lt;file&gt; | Archivo de lista de control de accesos |
+| -g, -\-gateway &lt;hostname:port&gt; | Se utiliza para seleccionar manualmente un destino de pasarela específico (solo para uso avanzado) |
+| -l, -\-loglevel &lt;level&gt; | Cambiar el nivel de registro a ERROR, INFO, DEBUG o TRACE |
+| -p, -\-logpath &lt;file&gt; | Registro directo en un archivo específico |
+| -t, -\-sectoken &lt;security token&gt; | La señal de seguridad que se debe utilizar para esta conexión de pasarela |
+| -P, -\-port &lt;port&gt; | El puerto en el que se ejecutará la IU.  El valor predeterminado es el puerto 9003 |
+| -w, -\-password &lt;password&gt; | La contraseña con la que proteger la interfaz de usuario.  El valor predeterminado es ninguna contraseña |
+| -x, -\-proxy &lt;proxy agent&gt; | El proxy para la conexión al puerto 9000 |
+| -\-noUI | Impide que la interfaz de usuario se inicie automáticamente |
+| -\-allow | Permite todas las conexiones con el cliente. El archivo ACL lo sustituye, si se especifica |
+| -\-service | Después de una conexión inicial, el padre se reiniciará dentro de 60 segundos si todos los clientes hijo han terminado |
 
 <b>Nota:</b> los distintivos `--service`, `--allow` y `--noUI` deben ser los últimos parámetros de los argumentos de la línea de mandatos.
 
@@ -137,7 +137,7 @@ Para obtener más información sobre cómo configurar la lista de control de acc
 Volver a [Iniciación - Adición de un cliente](/docs/services/SecureGateway/securegateway_client.html).
 
 ## Interfaz de usuario de cliente
-{: #ui}
+{: #client-ui}
 
 <b>Nota:</b> la IU de cliente no recibe soporte cuando se utiliza Docker en Windows o MacOS.
 
@@ -156,7 +156,7 @@ Esta página se mostrará si la interfaz de usuario ha sido protegida mediante c
 ### Panel de control
 {: #ui-dashboard}
 
-Esta es la página principal una vez que se ha conectado un cliente.  Desde aquí puede acceder a la página Ver registros, a la página Lista de control de accesos y a la página Información de conexión.  En la parte inferior, también puede optar por desconectar uno o muchos de los clientes conectados.  En la parte superior de la página se muestra el cliente seleccionado actualmente, así como una opción para conectar más clientes.
+Esta es la página principal una vez que se ha conectado un cliente.  Desde aquí puede acceder a la página Ver registros, a la página Lista de control de accesos y a la página Información de conexión.  En la parte inferior, también puede optar por desconectar uno o muchos de los clientes conectados.  En la parte superior de la página se muestra el cliente seleccionado actualmente, y hay una opción para conectar más clientes. 
 
 ### Ver registros
 {: #ui-logs}
@@ -176,7 +176,7 @@ Esta página mostrará información de la conexión actual para el cliente selec
 Volver a [Iniciación - Adición de un cliente](/docs/services/SecureGateway/securegateway_client.html).
 
 ## Terminación de un cliente remoto
-{: #remote}
+{: #client-remote}
 
 Si se ha proporcionado un ID a un cliente, se puede terminar de forma remota a través de la IU de SG o a través de la API de SG.  Si termina un cliente que se ejecuta como un servicio, el cliente se reiniciará y obtendrá un nuevo ID de cliente; sin embargo, si el servicio tiene varios clientes conectados, el cliente terminado no se reiniciará hasta que todos los clientes restantes se hayan terminado.
 
@@ -186,7 +186,7 @@ Si se ha proporcionado un ID a un cliente, se puede terminar de forma remota a t
 ### Limitaciones de conexión
 {: #limits-conn}
 
-La pasarela de SG solo puede gestionar 250 conexiones simultáneas. Si el número de solicitudes simultáneas sobrepasa el límite, puede dar lugar a que se rechacen los intentos de conexión y que eso lleve a un estado de latencia. Una forma fácil de solucionar esto es utilizar la agrupación de conexiones en la app de llamada. Tenga en cuenta que el límite de 250 conexiones simultáneas se encuentra en la pasarela, no en el cliente ni en el destino. Este límite se compartirá entre todos los clientes y destinos de la pasarela.
+La pasarela SG solo puede gestionar 250 conexiones simultáneas. Si el número de solicitudes simultáneas sobrepasa el límite, puede dar lugar a que se rechacen los intentos de conexión y que eso lleve a un estado de latencia. Una forma fácil de solucionar esto es utilizar la agrupación de conexiones en la app de llamada. Tenga en cuenta que el límite de 250 conexiones simultáneas se encuentra en la pasarela, no en el cliente ni en el destino. Este límite se compartirá entre todos los clientes y destinos de la pasarela.
 
 ### Limitaciones de cliente de DataPower
 {: #limits-datapower}
@@ -199,3 +199,4 @@ El cliente de {{site.data.keyword.SecureGateway}} DataPower está en el proceso 
 - No se admiten cadenas de certificados completos con TLS del lado de destino antes de DataPower versión 7.5.1.0.
 - Los destinos de nube no reciben soporte antes de DataPower versión 7.5.1.0.
 - El nivel de registro no se puede cambiar por nivel TRACE
+- La última versión de Secure Gateway Client en DataPower es 1.8.0fp6; consulte [aquí](/docs/services/SecureGateway/securegateway_install.html#installing-datapower) para obtener más información

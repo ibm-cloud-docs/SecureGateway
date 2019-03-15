@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-10-11"
+  years: 2015, 2019
+lastupdated: "2019-02-25"
 
 ---
 {:screen: .screen}
@@ -13,7 +13,7 @@ lastupdated: "2018-10-11"
 {: #client-install}
 
 ## Docker
-{: #docker}
+{: #installing-docker}
 
 Docker é uma plataforma
 de terceiro que fornece uma abordagem de contêiner para instalar aplicativos
@@ -50,7 +50,7 @@ O cliente {{site.data.keyword.SecureGateway}} suporta somente os comandos `pull`
 Retorne para [Introdução - Incluindo um cliente](/docs/services/SecureGateway/securegateway_client.html).
 
 ## Mac OS X
-{: #mac}
+{: #installing-mac}
 
 ### Requisitos para execução no Mac OS X
 {: #mac-requirements}
@@ -64,7 +64,9 @@ Os pré-requisitos a seguir são necessários antes de executar o cliente no Mac
 Você pode requerer privilégios administrativos para executar essa instalação, dependendo da configuração de segurança de seu sistema.
 
  1. Monte a imagem DMG que foi transferida por download por meio da IU do {{site.data.keyword.SecureGateway}}, normalmente 'clicando duas vezes' nela.
- 2. Uma nova janela 'localizador' deve aparecer. Essa janela deve conter um ícone "atalho" de Aplicativos, arraste e solte o aplicativo no atalho. Se não, 'clique duas vezes' no volume montado e arraste e solte o ícone do aplicativo para o ícone Aplicativos na barra lateral do Localizador.
+ 2. Uma nova janela 'localizador' deve aparecer. Se não, 'clique duas vezes' no volume montado. Essa
+janela deve conter um ícone de pasta "ibm" e um ícone de "atalho" Aplicativos. Arraste e solte a pasta
+"ibm" no atalho.
 
 ### Iniciando uma sessão interativa do cliente
 {: #mac-run}
@@ -74,9 +76,9 @@ Para iniciar o cliente, execute o arquivo `secgw.command` localizado no local de
 Retorne para [Introdução - Incluindo um cliente](/docs/services/SecureGateway/securegateway_client.html).
 
 ## Linux
-{: #linux}
+{: #installing-linux}
 
-A instalação inclui o cliente {{site.data.keyword.SecureGatewayfull}}, bem como uma versão segura do pacote nodejs da IBM. Ambos são instalados sob o diretório /opt/ibm no sistema. O instalador criará ou atualizará o seguinte:
+A instalação inclui o cliente {{site.data.keyword.SecureGatewayfull}}, bem como uma versão segura do pacote nodejs da IBM.  Ambos são instalados sob o diretório /opt/ibm no sistema.  O instalador criará ou atualizará o seguinte:
 
 | Diretório | Nome de arquivo | Descrição          |
 | ------------- | ------------- | ----------- |
@@ -189,7 +191,7 @@ License: http://www.ibm.com/software/sla/sladb.nsf/lilookup/986C7686F22D4D358525
 
    O instalador do cliente inicia e instala o cliente, ele criará um arquivo sgenvironment.conf em /etc/ibm.
 
-2. Opcional: caso deseje usar o processo upstart do sistema, deve-se editar esse arquivo e fornecer o seguinte para que o cliente seja iniciado corretamente. Veja [Usando o upstart](/docs/services/SecureGateway/securegateway_auto-start.html#linux) para obter mais informações sobre a edição desse arquivo de configuração.
+2. Opcional: caso deseje usar o processo upstart do sistema, deve-se editar esse arquivo e fornecer o seguinte para que o cliente seja iniciado corretamente. Veja [Usando o upstart](/docs/services/SecureGateway/securegateway_auto-start.html#auto-start-linux) para obter mais informações sobre a edição desse arquivo de configuração.
 
 3. Se você iniciou o cliente usando o upstart, verifique o arquivo de log para certificar-se de que ele esteja sendo executado corretamente.
 
@@ -205,6 +207,22 @@ o comando a seguir:
    rpm -q ibm-securegateway-client
    ```
    {: pre}
+
+### Instalação do AIX
+{: #aix-install}
+
+1. Assegure-se de que a permissão executável esteja configurada para o pacote. Se necessário, mude
+as permissões de arquivo emitindo o comando a seguir:
+    ```
+    chmod a+x <secure-gateway-bin-package>
+    ```
+2. Extraia o pacote emitindo o comando a seguir:
+    ```
+    ./<secure-gateway-bin-package>
+    ```
+
+Nota:
+assegure-se de que seu sistema AIX atenda ao requisito para executar o Node.js e o ksh instalados.
 
 ### Iniciando uma sessão interativa do cliente
 {: #linux-run}
@@ -222,7 +240,7 @@ Normalmente, ele usa dois parâmetros, um ID do gateway do {{site.data.keyword.S
 Retorne para [Introdução - Incluindo um cliente](/docs/services/SecureGateway/securegateway_client.html).
 
 ## Windows
-{: #windows}
+{: #installing-windows}
 
 ### Instalando o cliente
 {: #windows-install}
@@ -267,11 +285,11 @@ Alternativamente, navegue para `<Installation_directory>\ibm\securegateway\clien
 Retorne para [Introdução - Incluindo um cliente](/docs/services/SecureGateway/securegateway_client.html).
 
 ## DataPower
-{: #datapower}
+{: #installing-datapower}
 
-O DataPower tem uma versão integrada do cliente {{site.data.keyword.SecureGateway}}. Dependendo da versão do DataPower, você pode ter uma versão diferente do cliente {{site.data.keyword.SecureGateway}}.  Esteja ciente de quaisquer [Limitações do cliente DataPower](/docs/services/SecureGateway/securegateway_interaction.html#limits-datapower) aplicáveis. O uso do cliente Secure Gateway antigo pode apresentar erros inesperados.
+O DataPower tem uma versão integrada do cliente {{site.data.keyword.SecureGateway}}.  Dependendo da versão do DataPower, você pode ter uma versão diferente do cliente {{site.data.keyword.SecureGateway}}.  Esteja ciente de quaisquer [Limitações do cliente DataPower](/docs/services/SecureGateway/securegateway_interaction.html#limits-datapower) aplicáveis. O uso do cliente Secure Gateway antigo pode apresentar erros inesperados.
 
-| Versão do DataPower | Versão do cliente {{site.data.keyword.SecureGateway}} |
+| Versão do DataPower | Versão do cliente {{site.data.keyword.SecureGateway}}  |
 | -- | --  |
 | 7.2.0.0, 7.5.0.0 | 1.1.0  |
 | 7.5.1.0, 7.7.0 | 1.4.2  |

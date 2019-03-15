@@ -19,14 +19,18 @@ lastupdated: "2017-04-10"
 ![初始 TLS 相互认证](./images/tlsMA.png?raw=true "初始 TLS 相互认证")
 
 ## 用户认证
+{: #tls-ma-user-auth}
 我将创建全新的应用程序，所以我没有任何预先存在的证书/密钥对可供应用程序使用，因此将由 Secure Gateway 服务器自动为我生成证书/密钥对。为此，我只需要将“用户认证上传”字段保留为空即可。如果我已有可供应用程序使用的证书/密钥对，那么可改为将证书上传到此字段中。
 
 ## 资源认证
+{: #tls-ma-resource-auth}
 
 ### 内部部署认证
+{: #tls-ma-on-prem-auth}
 为了使 Secure Gateway 客户机能够对其连接的资源进行认证，我必须向该客户机提供资源将要呈现的证书（或证书链）。我的资源没有完整的证书链，因此我只需要将其证书上传到“内部部署认证”字段即可。此字段最多可接受 6 个不同的证书文件（.pem、.cer、.der 和 .crt）。
 
 ### 客户机证书和密钥
+{: #tls-ma-client-cert-and-key}
 如果需要指定 Secure Gateway 客户机如何向资源表明自己的身份，那么可以在此上传证书和密钥以供客户机使用。由于客户机和资源是在同一台机器上运行，因此可以使这些信息保留为空，而让 Secure Gateway 服务器自动生成证书/密钥对。如果资源位于单独的主机上，那么需要[生成要上传的证书/密钥对](/docs/services/SecureGateway/securegateway_keygen.html)。
 
 ![本地 TLS 相互认证](./images/localTLSma.png?raw=true "本地 TLS 相互认证")
@@ -36,6 +40,7 @@ lastupdated: "2017-04-10"
 ![本地 TLS 相互认证详细信息](./images/editLocalTLSma.png?raw=true "本地 TLS 相互认证详细信息")
 
 ## 下载安全文件
+{: #tls-ma-download-files}
 在目标的目标信息面板中，有一个链接可用于下载 .zip 文件，该文件包含与我的目标关联的所有证书和密钥：
 
 ![相互认证信息面板](./images/infoPanelMA.png?raw=true "相互认证信息面板")
@@ -55,6 +60,7 @@ Nn5TJ34LyVQ_clientCert.pem|从网关自动生成的证书，供 SG 客户机在�
 localServerCert.pem|本地资源的证书，供在 Secure Gateway 客户机的 CA 中使用
 
 ## 创建应用程序
+{: #tls-ma-app-example}
 既然我已有了用于目标的云主机和端口以及各种证书和密钥，现在我可以开始编写应用程序以连接到 Secure Gateway。下面是一个简单的 Node.js 应用程序，将连接到本地 TLS 服务器，接收少量数据，然后关闭连接。
 
 ```javascript
@@ -89,6 +95,7 @@ so.on('close', function() {
 {: codeblock}
 
 ## 创建 TLS 服务器
+{: #tls-ma-server-example}
 我具有本地 TLS 服务器，这是一个简单的 Node.js 应用程序，将侦听连接，在连接成功时写入消息，然后关闭该连接。
 
 ```javascript
@@ -129,6 +136,7 @@ server.listen(8999);
 {: codeblock}
 
 ## 更新客户机访问控制表
+{: #tls-ma-acl}
 测试应用程序之前，我需要确保在客户机上正确配置了 ACL。我已向 ACL 添加了 `localhost:8999`：
 
 ```
@@ -144,9 +152,11 @@ server.listen(8999);
 {: screen}
 
 ## 测试连接
+{: #tls-ma-testing}
 既然我的应用程序、本地服务器和客户机都已配置好，现在我可从应用程序和客户机获得以下输出：
 
 ### 应用程序
+{: #tls-ma-testing-app}
 
 ```
 Client connected, authorized: true
@@ -156,6 +166,7 @@ Client connection closing
 {: screen}
 
 ### Secure Gateway 客户机
+{: #tls-ma-testing-client}
 
 ```
 [2017-04-07 12:22:42.363] [INFO] (Client ID Nn5TJ34LyVQ_qCB) Connection #1 is being established to localhost:8999
@@ -164,4 +175,5 @@ Client connection closing
 {: screen}
 
 ## 成功！
+{: #tls-ma-testing-result}
 我们已为用户认证和资源认证成功配置相互认证！

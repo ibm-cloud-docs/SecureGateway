@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-10-11"
+  years: 2015, 2019
+lastupdated: "2019-02-25"
 
 ---
 {:screen: .screen}
@@ -13,9 +13,9 @@ lastupdated: "2018-10-11"
 {: #client-install}
 
 ## Docker
-{: #docker}
+{: #installing-docker}
 
-Docker는 써드파티 플랫폼이며 몇 가지 구성만으로 또는 구성 작업을 수행하지 않고 애플리케이션을 빠르고 쉽게 설치하는 컨테이너 접근 방식을 제공합니다. {{site.data.keyword.SecureGateway}} 서비스는 Docker 유틸리티가 사용자 워크스테이션에 설치된 후에 사용할 Docker 이미지를 제공합니다.  Docker를 설치하려면 Docker 설치 웹 사이트를 참조하여 사용자 시스템에 해당하는 지시사항을 수행하십시오.
+Docker는 서드파티 플랫폼이며 몇 가지 구성만으로 또는 구성 작업을 수행하지 않고 애플리케이션을 빠르고 쉽게 설치하는 컨테이너 접근 방식을 제공합니다. {{site.data.keyword.SecureGateway}} 서비스는 Docker 유틸리티가 사용자 워크스테이션에 설치된 후에 사용할 Docker 이미지를 제공합니다.  Docker를 설치하려면 Docker 설치 웹 사이트를 참조하여 사용자 시스템에 해당하는 지시사항을 수행하십시오.
 
 ### 클라이언트 설치 및 업데이트
 {: #docker-install}
@@ -47,7 +47,7 @@ docker run -it ibmcom/secure-gateway-client <gateway ID> -t <security token>
 [시작하기 - 클라이언트 추가](/docs/services/SecureGateway/securegateway_client.html)로 돌아가십시오.
 
 ## Mac OS X
-{: #mac}
+{: #installing-mac}
 
 ### Mac OS X에서 실행하기 위한 요구사항
 {: #mac-requirements}
@@ -61,7 +61,7 @@ Mac OS X에서 클라이언트를 실행하려면 먼저 다음과 같은 전제
 시스템의 보안 설정에 따라 이 설치를 수행하기 위해 관리 권한이 필요할 수도 있습니다.
 
  1. {{site.data.keyword.SecureGateway}} UI에서 다운로드한 DMG 이미지를 일반적으로 '두 번 클릭'하여 마운트하십시오.
- 2. 새 '파인더' 창이 표시됩니다. 이 창에는 애플리케이션 "바로 가기" 아이콘이 포함되어 있어야 합니다. 애플리케이션을 끌어서 바로 가기에 놓으십시오. 그렇지 않을 경우 마운트된 볼륨을 '두 번 클릭'한 후 애플리케이션 아이콘을 끌어서 파인더 사이드바에 있는 애플리케이션 아이콘에 놓으십시오.
+ 2. 새 '파인더' 창이 표시됩니다. 그렇지 않을 경우 마운트된 볼륨을 '두 번 클릭'하십시오. 이 창에는 "ibm" 폴더 아이콘 및 애플리케이션 "바로 가기" 아이콘이 포함되어 있어야 합니다. "ibm" 폴더를 끌어서 바로 가기에 놓으십시오. 
 
 ### 대화식 클라이언트 세션 시작
 {: #mac-run}
@@ -71,9 +71,9 @@ Mac OS X에서 클라이언트를 실행하려면 먼저 다음과 같은 전제
 [시작하기 - 클라이언트 추가](/docs/services/SecureGateway/securegateway_client.html)로 돌아가십시오.
 
 ## Linux
-{: #linux}
+{: #installing-linux}
 
-이 설치에는 {{site.data.keyword.SecureGatewayfull}} 클라이언트 및 보안 버전의 IBM nodejs 패키지가 포함되어 있습니다. 둘 다 시스템의 /opt/ibm 디렉토리에 설치됩니다. 설치 프로그램에서는 다음과 같은 항목을 작성하거나 업데이트합니다.
+이 설치에는 {{site.data.keyword.SecureGatewayfull}} 클라이언트 및 보안 버전의 IBM nodejs 패키지가 포함되어 있습니다.  둘 다 시스템의 /opt/ibm 디렉토리에 설치됩니다.  설치 프로그램에서는 다음과 같은 항목을 작성하거나 업데이트합니다.
 
 |디렉토리 | 파일 이름 |설명          |
 | ------------- | ------------- | ----------- |
@@ -185,7 +185,7 @@ License: http://www.ibm.com/software/sla/sladb.nsf/lilookup/986C7686F22D4D358525
 
    클라이언트 설치 프로그램이 시작되어 클라이언트를 설치하고 /etc/ibm에 sgenvironment.conf 파일을 작성합니다.
 
-2. 선택사항: 시스템의 시작 프로세스를 사용하려는 경우 클라이언트가 올바르게 시작되도록 이 파일을 편집하여 다음 항목을 제공해야 합니다. 이 구성 파일을 편집하는 방법에 대한 자세한 정보는 [시작 사용](/docs/services/SecureGateway/securegateway_auto-start.html#linux)을 참조하십시오.
+2. 선택사항: 시스템의 시작 프로세스를 사용하려는 경우 클라이언트가 올바르게 시작되도록 이 파일을 편집하여 다음 항목을 제공해야 합니다. 이 구성 파일을 편집하는 방법에 대한 자세한 정보는 [시작 사용](/docs/services/SecureGateway/securegateway_auto-start.html#auto-start-linux)을 참조하십시오.
 
 3. 시작을 사용하여 클라이언트를 시작한 경우 올바르게 실행 중인지 확인하기 위해 로그 파일을 확인하십시오.
 
@@ -200,6 +200,21 @@ cat /var/log/securegateway/client_console.log
    rpm -q ibm-securegateway-client
    ```
    {: pre}
+
+### AIX 설치
+{: #aix-install}
+
+1. 실행 가능 권한이 패키지에 대해 설정되어 있는지 확인하십시오. 필요한 경우 다음 명령을 실행하여 파일 권한을 변경하십시오.
+    ```
+    chmod a+x <secure-gateway-bin-package>
+    ```
+2. 다음 명령을 실행하여 패키지를 추출하십시오.
+    ```
+    ./<secure-gateway-bin-package>
+    ```
+
+참고:
+AIX 시스템이 설치된 Node.js 및 ksh를 실행하기 위한 요구사항이 충족되어 있는지 확인하십시오. 
 
 ### 대화식 클라이언트 세션 시작
 {: #linux-run}
@@ -217,7 +232,7 @@ node lib/secgwclient.js <gateway ID> -t <security token>
 [시작하기 - 클라이언트 추가](/docs/services/SecureGateway/securegateway_client.html)로 돌아가십시오.
 
 ## Windows
-{: #windows}
+{: #installing-windows}
 
 ### 클라이언트 설치
 {: #windows-install}
@@ -263,9 +278,9 @@ secgw.cmd
 [시작하기 - 클라이언트 추가](/docs/services/SecureGateway/securegateway_client.html)로 돌아가십시오.
 
 ## DataPower
-{: #datapower}
+{: #installing-datapower}
 
-DataPower에는 임베디드 버전의 {{site.data.keyword.SecureGateway}} 클라이언트가 포함되어 있습니다. DataPower 버전에 따라 서로 다른 버전의 {{site.data.keyword.SecureGateway}} 클라이언트가 포함되어 있을 수 있습니다. 적용 가능한 [DataPower 클라이언트 제한사항](/docs/services/SecureGateway/securegateway_interaction.html#limits-datapower)을 파악하십시오. 기존 Secure Gateway 클라이언트를 사용하는 경우 예기치 않은 오류가 발생할 수 있습니다.
+DataPower에는 임베디드 버전의 {{site.data.keyword.SecureGateway}} 클라이언트가 포함되어 있습니다.  DataPower 버전에 따라 서로 다른 버전의 {{site.data.keyword.SecureGateway}} 클라이언트가 포함되어 있을 수 있습니다.  적용 가능한 [DataPower 클라이언트 제한사항](/docs/services/SecureGateway/securegateway_interaction.html#limits-datapower)을 파악하십시오. 기존 Secure Gateway 클라이언트를 사용하는 경우 예기치 않은 오류가 발생할 수 있습니다.
 
 | DataPower 버전 | {{site.data.keyword.SecureGateway}} 클라이언트 버전  |
 | -- | --  |

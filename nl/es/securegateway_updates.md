@@ -10,36 +10,46 @@ lastupdated: "2017-04-25"
 {: #secure-gateway-change-log}
 
 ## v1.7.0 Fixpack 1
+{: #v171fp1}
 
 ### Arreglos
+{: #v171fp1-fixes}
 
-- Soluciona el error `EADDRINUSE` causado porque los escuchas no se eliminan correctamente tras la supresión del destino.
+- Resuelve el error `EADDRINUSE` que se genera cuando los escuchas no ejecutan una eliminación correctamente cuando se suprime un destino.
 - Resuelve el problema por el que las instancias de servicio enlazadas a una aplicación no se pueden suprimir.
 
 ## v1.7.0
+{: #v170}
 
 ### Características
+{: #v170-features}
 
 - Incorpora nuevos planes de servicio: Essentials, Professional y Enterprise.
 - Ahora el cliente de Secure Gateway admite el proxy SOCKS entre sí mismo y el destino local.
 
 ## v1.6.0 Fixpack 1
+{: #v160fp1}
 
 ### Arreglos
+{: #v160fp1-fixes}
 
 - Corrige el problema por el que la desconexión de varios clientes da lugar a procesos huérfanos de la matriz de clientes conectados.
 - Ahora se limpian las conexiones huérfanas que hacían que se colocaran en pausa escuchas de forma incorrecta.
 
 ## v1.6.0
+{: #v160}
 
 ### Características
+{: #v160-features}
 
 - Ahora la lista de control de accesos da soporte al direccionamiento de vía de acceso específico para solicitudes HTTP/S.
 - Ahora los destinos dan soporte a indicadores de nombre de servidor para conexiones TLS.
 
 ## v1.5.1
+{: #v151}
 
 ### Características
+{: #v151-features}
 
 - Se ha añadido un asistente de destinos para la creación de destinos.
 - Ahora las pasarelas permiten cargar un par de certificado/clave personalizado.
@@ -48,8 +58,10 @@ lastupdated: "2017-04-25"
 - Se pueden ejecutar pruebas de latencia entre el cliente y el servidor desde la interfaz de usuario de Secure Gateway.
 
 ## v1.5.0 Fixpack 1
+{: #v150fp1}
 
 ### Arreglos
+{: #v150fp1-fixes}
 
 - Limpia los procesos de túnel huérfanos tras la desconexión de la red.
 - Resuelve la asignación de puertos duplicados causada por la supresión errónea de destinos.
@@ -57,8 +69,10 @@ lastupdated: "2017-04-25"
 - Resuelve los manejadores IPC que faltan en los procesos de sustitución.
 
 ## v1.5.0
+{: #v150}
 
 ### Características
+{: #v150-features}
 
 - Ahora el cliente tiene una interfaz de usuario interactiva local.
 - Las conexiones UDP ahora están soportadas.
@@ -67,8 +81,10 @@ lastupdated: "2017-04-25"
 - La lista de control de accesos se sincroniza entre los clientes conectados a la misma pasarela.
 
 ## v1.4.2
+{: #v142}
 
 ### Características
+{: #v142-features}
 
 - Ahora se asigna a los clientes un ID al conectar con el servidor de SG.
 - Ahora los clientes se pueden terminar de forma remota mediante la API o la interfaz de usuario de Secure Gateway.

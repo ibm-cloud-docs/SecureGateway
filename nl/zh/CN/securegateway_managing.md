@@ -10,6 +10,7 @@ lastupdated: "2017-04-10"
 {: #manage-sg-service}
 
 ## {{site.data.keyword.SecureGateway}} 仪表板
+{: #secure-gateway-dashboard}
 在 {{site.data.keyword.SecureGateway}}“仪表板”中，可以快速查看以下详细信息：
 
 - 所有网关上与目标的当前连接数。
@@ -21,6 +22,7 @@ lastupdated: "2017-04-10"
 ![显示使用情况的 {{site.data.keyword.SecureGateway}}“仪表板”](./images/dashboardUsage.png?raw=true "显示使用情况的 {{site.data.keyword.SecureGateway}}“仪表板”")
 
 ### 服务概要文件
+{: #dashboard-service-profile}
 通过单击“概要文件”按钮，可以查看以下内容：
 
 字段|描述
@@ -34,6 +36,7 @@ lastupdated: "2017-04-10"
 数据超额数|当月计费周期内发生的数据超额数。
 
 ### 网关信息面板
+{: #dashboard-gw-info-panel}
 通过单击任一网关磁贴上的“设置”按钮，可以查看以下信息：
 
 - 使用 API 或连接客户机所需的安全性令牌，这取决于是否在对客户机连接强制实施安全性令牌。
@@ -50,6 +53,7 @@ lastupdated: "2017-04-10"
 - 删除网关。
 
 ## 特定网关的仪表板
+{: #dashboard-particular-gateway}
 通过单击某个网关磁贴，将显示该特定网关的仪表板。与 {{site.data.keyword.SecureGateway}} 主仪表板类似，您可以快速查看以下详细信息：
 
 - 此网关上与目标的当前连接数。
@@ -61,6 +65,7 @@ lastupdated: "2017-04-10"
 ![特定网关的仪表板](./images/viewGateway.png?raw=true "特定网关的仪表板")
 
 ### 目标信息面板
+{: #dashboard-dest-info-panel}
 通过单击任一目标磁贴上的“设置”按钮，可以查看以下信息：
 
 - 使用 API 所需的目标标识。

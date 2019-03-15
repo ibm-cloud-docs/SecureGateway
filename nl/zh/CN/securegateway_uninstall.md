@@ -13,7 +13,7 @@ lastupdated: "2017-04-25"
 {: #client-uninstall}
 
 ## Docker
-{: #docker}
+{: #docker-uninstall}
 
 要除去 {{site.data.keyword.SecureGateway}} 客户机 Docker 映像，请运行以下命令：
 
@@ -23,7 +23,7 @@ docker rmi ibmcom/secure-gateway-client
 {: pre}
 
 ## Mac OS X
-{: #mac}
+{: #mac-uninstall}
 
 要从 Mac OS X 中除去 {{site.data.keyword.SecureGateway}} 客户机，请在终端中运行以下命令：
 
@@ -34,7 +34,7 @@ rm -rf ./ibm
 {: codeblock}
 
 ## Linux
-{: #linux}
+{: #linux-uninstall}
 
 ### Ubuntu/PowerPC
 {: #debian-uninstall}
@@ -85,7 +85,7 @@ yum remove ibm-securegateway-client
 {: pre}
 
 ## Windows
-{: #windows}
+{: #windows-uninstall}
 
 有两种方法可以除去 Windows 上安装的 {{site.data.keyword.SecureGateway}} 客户机：
 

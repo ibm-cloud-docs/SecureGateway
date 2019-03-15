@@ -13,6 +13,7 @@ lastupdated: "2017-04-25"
 {: #cert-key-management}
 
 ## 자체 서명 인증서/키 쌍 생성
+{: #self-signed-cert-gen}
 
 자체 서명 인증서/키 쌍을 생성하려면 다음 명령을 실행하십시오.
 
@@ -23,6 +24,7 @@ openssl req -new -newkey rsa:2048 -days 365 -nodes -x509 -keyout serverKey.pem -
 
 
 ## 브라우저에 인증서/키 쌍 업로드
+{: #upload-cert-to-browser}
 
 상호 인증을 적용하는 대상에 액세스하려면 인증서/키 쌍을 PKCS#12 파일로 변환하여 브라우저에 업로드해야 합니다.
 

@@ -17,7 +17,7 @@ El cliente de {{site.data.keyword.SecureGateway}} proporciona soporte integrado 
 A partir de la versión 1.5.0, las reglas de lista de control de accesos se sincronizarán entre todos los clientes conectados a la misma pasarela.  De este modo, solo tiene que establecer/actualizar su ACL desde un solo cliente y se compartirá entre todos los clientes en ejecución conectados a dicha pasarela.  La ACL también persistirá en todas las sesiones, como por ejemplo conectando un nuevo cliente también aplicará las mismas reglas de ACL.
 
 ## Mandatos de lista de control de accesos
-{: #commands}
+{: #acl-commands}
 
 Los mandatos de ACL soportados son:
 
@@ -49,7 +49,7 @@ El mandato `show acl` mostrará la ACL establecida actualmente o proporcionará 
 Volver a [Iniciación - Adición de un cliente](/docs/services/SecureGateway/securegateway_client.html).
 
 ## Control de rutas HTTP/S mediante la ACL
-{: #routes}
+{: #acl-route-control}
 
 A partir de la versión 1.6.0, los destinos HTTP/S también pueden imponer rutas específicas en las entradas de ACL.  Estas se añaden del mismo modo que las entradas de ACL típicas, pero se añade la vía de acceso al final de la regla. Por ejemplo, esto solo permitirá el paso de las solicitudes que sigan la vía de acceso /my/api:
 
@@ -63,12 +63,12 @@ Con esta regla en vigor, se permitirá el paso a las solicitudes destinadas a `<
 Las rutas solo reciben soporte en los mandatos `acl allow`.
 
 ## Precedencia de lista de control de accesos
-{: #precedence}
+{: #acl-precedence}
 
 Después de especificar el mandato `acl allow :`, si se especifican otros mandatos `acl allow`, la regla para permitir `ALL:ALL` (procedente de `acl allow :`) se eliminará de la lista ya que se presupondrá que ya no desea permitir el acceso ilimitado.  Después de especificar el mandato `acl deny :`, si se especifica otro mandato `acl deny`, la regla para denegar `ALL:ALL` (procedente de `acl deny :`) se eliminará de la lista ya que se presupondrá que ya no desea restringir todo el acceso.  Si lista las reglas de ACL actuales mediante el mandato `show acl` en la CLI, habrá un indicador para visualizar si las reglas no listadas se permiten o deniegan.
 
 ## Importación de un archivo ACL
-{: #import}
+{: #import-acl-file}
 
 Puede proporcionar un nombre de archivo al mandato `acl file` que contenga los mandatos de ACL soportados que el cliente leerá cuando se inicie. Este archivo debe contener mandatos con el formato siguiente:
 
@@ -80,18 +80,18 @@ no acl
 ```
 {: screen}
 
-<b>Nota:</b> `noacl ` sin ningún otro parámetro RESTABLECE la tabla de ACL y establece el acceso en DENY ALL.
+<b>Nota:</b> `no acl` sin ningún otro parámetro RESTABLECE la tabla de ACL y establece el acceso en DENY ALL.
 
 [Aquí](/docs/services/SecureGateway/securegateway_acl-file.html) encontrará un archivo ACL de ejemplo.
 
 Volver a [Iniciación - Adición de un cliente](/docs/services/SecureGateway/securegateway_client.html).
 
 ## Copia del archivo ACL en el cliente de Docker de {{site.data.keyword.SecureGateway}}
-{: #docker}
+{: #copy-acl-to-docker}
 
 El cliente docker de {{site.data.keyword.SecureGateway}} se ejecuta básicamente en su propio contenedor de virtualización.  Por lo tanto, el sistema de archivos de la máquina que lo aloja no es directamente accesible para los procesos que se ejecutan dentro del contenedor, incluido el cliente de {{site.data.keyword.SecureGateway}}.  A partir de la versión 1.8.0 del Motor de Docker, puede utilizar el mandato
-'docker cp' para enviar por push archivos existentes en el host en el contenedor
-mientras se está ejecutando o se está detenido.  Esto se debe llevar a cabo para poder utilizar el mandato interactivo FILE de ACL del cliente de {{site.data.keyword.SecureGateway}}.
+'docker cp' para importar archivos existentes en el host en el contenedor
+mientras se está ejecutando o está detenido; esto es necesario para utilizar el mandato interactivo ACL FILE del cliente de {{site.data.keyword.SecureGateway}}.
 
 Para utilizar el soporte interactivo de 'cp' en el docker desde el host a la instancia de docker, debe tener docker 1.8.0. Para comprobarlo, utilice `docker --version`
 
@@ -116,7 +116,7 @@ Server:
 ```
 {: screen}
 
-Luego, para extraer la lista de archivos acl a la imagen del docker, siga los pasos siguientes:
+Luego, para importar la lista de archivos acl a la imagen del docker, siga los pasos siguientes:
 
 - Ejecute el mandato 'docker ps' para buscar el ID del contenedor.
 

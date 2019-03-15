@@ -12,7 +12,7 @@ lastupdated: "2018-08-10"
 # Règles de table d'IP
 {: #iptables-rulles}
 
-Pour autoriser l'application de règles de table d'IP (iptable) à votre destination, l'option `Restreindre l'accès réseau` doit être sélectionnée dans le panneau Sécurité du réseau de votre destination.  Ensuite, vous pouvez ajouter les règles que vous voulez appliquer, telles que 192.0.0.1 9000 (IP et port uniques),  192.0.0.1-192.0.0.5 5000:5005 (plage d'adresses IP et plage de ports) ou toute combinaison de celles-ci. Pour plus d'informations, voir [Configuration de la sécurité du réseau](/docs/services/SecureGateway/securegateway_destination.html#configuring-network-security).
+Pour autoriser l'application de règles de table d'IP (iptables) à votre destination, l'option `Restreindre l'accès réseau` doit être sélectionnée dans le panneau Sécurité du réseau de votre destination. Ensuite, vous pouvez ajouter les règles que vous voulez appliquer, par exemple 192.0.0.1 9000 (IP et port uniques), 192.0.0.1-192.0.0.5 5000:5005 (plage d'adresses IP et de ports) ou toute autre combinaison de ces règles. Pour plus d'informations, voir [Configuration de la sécurité du réseau](/docs/services/SecureGateway/securegateway_destination.html#dest-network-security).
 
 Si vous créez vos destinations privées avec cURL, vous pouvez utiliser une commande telle que :
 
@@ -38,6 +38,7 @@ curl -X PUT "https://sgmanager.ng.bluemix.net/v1/sgconfig/<ID_passerelle>/destin
 Notez que la première commande utilise `src` pour fournir une unique adresse IP tandis que la seconde utilise `src_range` pour fournir une plage d'adresses IP.
 
 ## Règles de table d'IP pour des adresses IP dynamiques
+{: #iptables-dynamic-ips}
 
 Si votre application dispose d'un ensemble dynamique d'adresses IP mais que vous ne les connaissez pas, vous pouvez optimiser l'API REST {{site.data.keyword.SecureGateway}} afin de mettre à jour les règles de table d'IP à mesure des besoin.
 
@@ -68,7 +69,7 @@ request({
   }, console.log.bind(console)) 
 ```
 
-Ce programme doit s'exécuter au démarrage de l'application et reconfigurera alors la règle de table d'IP lors de ce démarrage. Chaque règle de table d'IP identifie de manière unique chaque instance de l'application à l'aide de l'`ID_application` et de `CF_INSTANCE_INDEX`. La première adresse IP est extraite de la variable `CF_INSTANCE_IP` et appliquée à la règle de table d'IP.
+Cette action doit être exécutée au démarrage de l'application. Toutes les règles de table d'IP définies avant seront écrasées. Chaque règle de table d'IP identifie de manière unique chaque instance de l'application à l'aide de l'`ID_application` et de `CF_INSTANCE_INDEX`. L'adresse IP externe est extraite de la variable `CF_INSTANCE_IP` et appliquée à la règle de table d'IP.
 
 
 {: pre}

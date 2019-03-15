@@ -10,6 +10,7 @@ lastupdated: "2017-04-10"
 {: #manage-sg-service}
 
 ## {{site.data.keyword.SecureGateway}} 儀表板
+{: #secure-gateway-dashboard}
 從 {{site.data.keyword.SecureGateway}} 儀表板中，您可以快速查看下列詳細資料：
 
 - 目前連接到所有閘道之目的地的連線數目。
@@ -21,6 +22,7 @@ lastupdated: "2017-04-10"
 ![含使用情形的 {{site.data.keyword.SecureGateway}} 儀表板](./images/dashboardUsage.png?raw=true "含使用情形的 {{site.data.keyword.SecureGateway}} 儀表板")
 
 ### 服務設定檔
+{: #dashboard-service-profile}
 藉由按一下「設定檔」按鈕，您可以看到：
 
 欄位|說明
@@ -34,6 +36,7 @@ lastupdated: "2017-04-10"
 資料超額 | 當月計費週期所發生的資料超額數目。
 
 ### 閘道資訊畫面
+{: #dashboard-gw-info-panel}
 藉由按一下任何閘道磚上的「設定」按鈕，您可以看到：
 
 - 使用 API 或連接用戶端所需的安全記號，視是否在用戶端連線上強制執行記號而定。
@@ -50,6 +53,7 @@ lastupdated: "2017-04-10"
 - 刪除閘道。
 
 ## 特定閘道的儀表板
+{: #dashboard-particular-gateway}
 藉由按一下其中一個閘道磚，即會顯示該特定閘道的儀表板。與主要 {{site.data.keyword.SecureGateway}} 儀表板類似，您可以快速查看下列詳細資料：
 
 - 目前連接到此閘道上目的地的連線數目。
@@ -61,6 +65,7 @@ lastupdated: "2017-04-10"
 ![特定閘道的儀表板](./images/viewGateway.png?raw=true "特定閘道的儀表板")
 
 ### 目的地資訊畫面
+{: #dashboard-dest-info-panel}
 藉由按一下任何目的地磚上的「設定」按鈕，您可以看到：
 
 - 使用 API 所需的目的地 ID。

@@ -13,9 +13,9 @@ lastupdated: "2017-04-25"
 {: #auto-start-conf}
 
 ## Linux
-{: #linux}
+{: #auto-start-linux}
 
-Wenn Sie sich für die Verwendung der automatischen Startfunktion des Systems entschieden haben, verwenden Sie eine der folgenden Methoden, um den Client zu starten. Die vom Client verwendete Konfigurationsdatei befindet sich im folgenden Pfad:
+Wenn Sie sich für die Verwendung der automatischen Startfunktion des Systems entschieden haben, verwenden Sie eine der folgenden Methoden, um den Client zu starten.  Die vom Client verwendete Konfigurationsdatei befindet sich im folgenden Pfad:
 
 ```
 /etc/ibm/sgenvironment.conf
@@ -26,26 +26,26 @@ Wenn Sie sich für die Verwendung der automatischen Startfunktion des Systems en
 
 In dieser Datei sind wichtige Variablen enthalten, die festgelegt werden sollten:
 
-| Umgebungsvariable | Beschreibung |
+| Umgebungsvariable | Beschreibung       |
 | ------------- | ----------- |
 | RESTART_CLIENT | Client während Installation oder Upgrade stoppen oder erneut starten (Ja oder Nein) |
 | GATEWAY_ID | Gateway-ID, die für Secure Gateway für die Bluemix-Benutzerschnittstelle erstellt wurde |
-| SECTOKEN | Sicherheitstoken für diese Gateway-ID, falls bei der Erstellung festgelegt wurde, dass die Sicherheit erzwungen werden soll |
+| SECTOKEN | Sicherheitstoken für diese Gateway-ID, falls bei der Erstellung des Gateways festgelegt wurde, dass die Sicherheit erzwungen werden soll |
 | ACL_FILE | ACL-Datei, die verwendet werden soll, um den lokalen Zugriff auf die Ressourcen zu begrenzen |
 | LOGLEVEL | Die Protokollebene, die für den Service festgelegt werden soll (Standardeinstellung ist INFO) |
 | USE_UI   | Den Wert 'N' festlegen, wenn die Benutzerschnittstelle des Clients nicht gestartet werden soll |
 | UI_PORT  | Der Port, an dem die Benutzerschnittstelle des Clients gestartet werden soll (Standardwert ist 9003) |
 | LANGUAGE | Die Sprache, die für die Protokolle des Clients verwendet werden soll (Standardeinstellung ist en) |
 
-<b>Anmerkung:</b> Diese Datei wird nur gelesen, wenn Sie die Funktion für den automatischen Start des Systems verwenden. Wenn Sie den Client manuell ausführen, wird diese Datei ignoriert.
+<b>Anmerkung:</b> Diese Datei wird nur gelesen, wenn Sie die Funktion für den automatischen Start des Systems verwenden.  Wenn Sie den Client manuell ausführen, wird diese Datei ignoriert.
 
 ### Upstart
-{: #upstart}
+{: #auto-start-upstart}
 
 ### Client starten
 {: #upstart-start}
 
-Falls Sie die Funktion 'upstart' verwenden, damit der Secure Gateway-Client beim Systemstart automatisch ausgeführt wird, müssen Sie zunächst die Konfiguration dieser Funktion überprüfen (/etc/ibm/sgenvironment.conf). Sobald Sie den Service 'upstart' konfiguriert haben, können Sie ihn mit dem folgenden Befehl starten:
+Falls Sie die Funktion 'upstart' verwenden, damit der Secure Gateway-Client beim Systemstart automatisch ausgeführt wird, müssen Sie zunächst die Konfiguration dieser Funktion überprüfen (/etc/ibm/sgenvironment.conf).  Sobald Sie den Service 'upstart' konfiguriert haben, können Sie ihn mit dem folgenden Befehl starten:
 
 ```
 sudo initctl start securegateway_client
@@ -70,13 +70,13 @@ sudo initctl stop securegateway_client
 {: pre}
 
 ### SystemD
-{: #systemd}
+{: #auto-start-systemd}
 
 
 ### Client starten
 {: #systemd-start}
 
-Falls Sie die Funktion 'systemD' verwenden, damit der Secure Gateway-Client beim Systemstart automatisch ausgeführt wird, müssen Sie möglicherweise zunächst die Konfiguration dieser Funktion überprüfen (/etc/ibm/sgenvironment.conf). Sobald Sie den Service 'upstart' konfiguriert haben, können Sie ihn mit dem folgenden Befehl starten:
+Falls Sie die Funktion 'systemD' verwenden, damit der Secure Gateway-Client beim Systemstart automatisch ausgeführt wird, müssen Sie möglicherweise zunächst die Konfiguration dieser Funktion überprüfen (/etc/ibm/sgenvironment.conf).  Sobald Sie den Service 'upstart' konfiguriert haben, können Sie ihn mit dem folgenden Befehl starten:
 
 ```
 systemctl start securegateway_client
@@ -107,8 +107,8 @@ systemctl stop securegateway_client
 ```
 {: pre}
 
-### SystemV
-{: #systemv}
+### System V
+{: #auto-start-system-v}
 
 System V wird während der Installation nicht wie die anderen Funktionen für den automatischen Start konfiguriert. Im Installationsverzeichnis '/opt/ibm/securegateway/client/upstart' sind hierfür folgende Scripts verfügbar:
 
@@ -120,7 +120,7 @@ securegateway_clientd
 
 <b>Anmerkung:</b> Dieser Abschnitt betrifft die Benutzer von SuSE/SLES 11.
 
-Optional: Wenn Sie die SuSE-Version 11 ausführen, von der für den automatischen Start 'systemV' verwendet wird, werden Scripts bereitgestellt, die zum Konfigurieren dieses Prozesses verwendet werden können. Gehen Sie gemäß den folgenden Anweisungen vor:
+Optional: Wenn Sie die SuSE-Version 11 ausführen, die die automatischen System V-Startfunktion verwendet, werden Scripts bereitgestellt, die zum Konfigurieren dieses Prozesses verwendet werden können. Gehen Sie gemäß den folgenden Anweisungen vor:
 
 ```
 cd /opt/ibm/securegateway/client/upstart/systemV
@@ -135,12 +135,12 @@ vi /etc/ibm/sgenvironment.conf
 ```
 {: codeblock}
 
-Sobald diese Schritte ausgeführt wurden, können die Befehle 'YasT' und 'systemV' verwendet werden, um den Dämon zu starten bzw. zu stoppen.
+Sobald diese Schritte ausgeführt wurden, können die YasT- und System V-Befehle verwendet werden, um den Dämon zu starten bzw. zu stoppen.
 
 Kehren Sie zu [Einführung - Client hinzufügen](/docs/services/SecureGateway/securegateway_client.html) zurück.
 
 ## Windows
-{: #windows}
+{: #auto-start-windows}
 
 Öffnen Sie zum Ändern des Status des Windows-Diensts ein Befehlsfenster mit Administratorberechtigungen.
 

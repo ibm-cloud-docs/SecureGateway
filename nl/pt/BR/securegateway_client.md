@@ -9,7 +9,7 @@ lastupdated: "2017-04-25"
 # Incluindo um cliente
 {: #add-client}
 
-O cliente {{site.data.keyword.SecureGateway}} é a peça do quebra-cabeça que faz a mágica acontecer. O cliente estabelece a conexão inicial entre a rede no local e um gateway nos servidores {{site.data.keyword.SecureGateway}} e permite que a comunicação passe para os destinos definidos.
+O cliente {{site.data.keyword.SecureGateway}} é a peça do quebra-cabeça que faz a mágica acontecer.  O cliente estabelece a conexão inicial entre a rede no local e um gateway nos servidores {{site.data.keyword.SecureGateway}} e permite que a comunicação passe para os destinos definidos.
 
 ![Novo gateway](./images/newGateway.png?raw=true "Novo gateway")
 

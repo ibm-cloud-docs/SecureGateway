@@ -12,12 +12,12 @@ lastupdated: "2017-04-10"
 # 액세스 제어 목록
 {: #acl}
 
-{{site.data.keyword.SecureGateway}} 클라이언트는 임베디드 액세스 제어 목록(ACL) 지원을 제공합니다. 클라이언트의 ACL을 수정하여 온프레미스 리소스에 대한 액세스를 허용하거나 제한(거부)할 수 있습니다. 이 작업은 클라이언트 명령을 사용하거나 적용하려는 ACL이 포함된 파일을 지정하여 대화식으로 수행할 수 있습니다.
+{{site.data.keyword.SecureGateway}} 클라이언트는 임베디드 액세스 제어 목록(ACL) 지원을 제공합니다. 클라이언트의 ACL을 수정하여 온프레미스 리소스에 대한 액세스를 허용하거나 제한(거부)할 수 있습니다.  이 작업은 클라이언트 명령을 사용하거나 적용하려는 ACL이 포함된 파일을 지정하여 대화식으로 수행할 수 있습니다.
 
-v1.5.0부터는 동일한 게이트웨이에 연결된 모든 클라이언트에서 액세스 제어 목록 규칙이 동기화됩니다. 이 경우 단일 클라이언트에서만 ACL을 설정/업데이트하면 해당 게이트웨이에 연결된 실행 중인 모든 클라이언트에서 해당 설정/업데이트가 공유됩니다. ACL은 또한 세션 간에 지속되므로 새 클라이언트 연결 역시 동일한 ACL 규칙이 적용됩니다.
+v1.5.0부터는 동일한 게이트웨이에 연결된 모든 클라이언트에서 액세스 제어 목록 규칙이 동기화됩니다.  이 경우 단일 클라이언트에서만 ACL을 설정/업데이트하면 해당 게이트웨이에 연결된 실행 중인 모든 클라이언트에서 해당 설정/업데이트가 공유됩니다.  ACL은 또한 세션 간에 지속되므로 새 클라이언트 연결 역시 동일한 ACL 규칙이 적용됩니다.
 
 ## 액세스 제어 목록 명령
-{: #commands}
+{: #acl-commands}
 
 지원되는 ACL 명령은 다음과 같습니다.
 
@@ -30,7 +30,7 @@ show acl
 ```
 {: screen}
 
-호스트 이름 또는 포트를 비워둔 양식의 경우 모든 호스트 이름 또는 포트를 의미합니다. 예를 들어 다음은 포트 22에 대한 모든 호스트 이름을 허용하는 ACL 규칙입니다.
+호스트 이름 또는 포트를 비워둔 양식의 경우 모든 호스트 이름 또는 포트를 의미합니다.  예를 들어 다음은 포트 22에 대한 모든 호스트 이름을 허용하는 ACL 규칙입니다.
 
 ```
 acl allow :22
@@ -49,9 +49,9 @@ acl allow :
 [시작하기 - 클라이언트 추가](/docs/services/SecureGateway/securegateway_client.html)로 돌아가십시오.
 
 ## ACL을 사용한 HTTP/S 라우트 제어
-{: #routes}
+{: #acl-route-control}
 
-v1.6.0부터는 HTTP/S 대상에서도 ACL 항목에 있는 특정 라우트를 적용할 수 있습니다. 이러한 라우트는 일반 ACL 항목과 동일한 방식으로 추가되지만 규칙의 끝 부분에 경로가 추가됩니다. 예를 들어 다음 명령은 /my/api 경로 다음에 오는 요청만 통과하도록 허용합니다.
+v1.6.0부터는 HTTP/S 대상에서도 ACL 항목에 있는 특정 라우트를 적용할 수 있습니다.  이러한 라우트는 일반 ACL 항목과 동일한 방식으로 추가되지만 규칙의 끝 부분에 경로가 추가됩니다. 예를 들어 다음 명령은 /my/api 경로 다음에 오는 요청만 통과하도록 허용합니다.
 
 ```
 acl allow localhost:80/my/api
@@ -63,12 +63,12 @@ acl allow localhost:80/my/api
 라우트는 `acl allow` 명령에서만 지원됩니다.
 
 ## 액세스 제어 목록 우선순위
-{: #precedence}
+{: #acl-precedence}
 
-`acl allow :` 명령을 제공한 후 추가적인 `acl allow` 명령을 입력하는 경우 사용자가 더 이상 바인딩 해제된 액세스를 허용하지 않으려는 것으로 간주하여 `ALL:ALL` 허용 규칙(`acl allow :`)이 목록에서 제거됩니다. `acl deny :` 명령을 제공한 후 다른 `acl deny` 명령을 입력하는 경우 사용자가 더 이상 모든 액세스를 제한하지 않으려는 것으로 간주하여 `ALL:ALL` 거부 규칙(`acl deny :`)이 목록에서 제거됩니다. 현재 ACL 규칙을 CLI에 `show acl` 명령을 통해 나열하면 표시기가 나열되지 않은 규칙이 허용되는지 또는 거부되는지를 표시합니다.
+`acl allow :` 명령을 제공한 후 추가적인 `acl allow` 명령을 입력하는 경우 사용자가 더 이상 바인딩 해제된 액세스를 허용하지 않으려는 것으로 간주하여 `ALL:ALL` 허용 규칙(`acl allow :`)이 목록에서 제거됩니다.  `acl deny :` 명령을 제공한 후 다른 `acl deny` 명령을 입력하는 경우 사용자가 더 이상 모든 액세스를 제한하지 않으려는 것으로 간주하여 `ALL:ALL` 거부 규칙(`acl deny :`)이 목록에서 제거됩니다.  현재 ACL 규칙을 CLI에 `show acl` 명령을 통해 나열하면 표시기가 나열되지 않은 규칙이 허용되는지 또는 거부되는지를 표시합니다.
 
 ## ACL 파일 가져오기
-{: #import}
+{: #import-acl-file}
 
 스타트업 시 클라이언트에서 읽어들일 지원되는 ACL 명령이 포함된 `acl file` 명령에 파일 이름을 제공할 수 있습니다. 이 파일에는 다음과 같은 형식의 명령이 포함되어야 합니다.
 
@@ -87,9 +87,9 @@ no acl
 [시작하기 - 클라이언트 추가](/docs/services/SecureGateway/securegateway_client.html)로 돌아가십시오.
 
 ## ACL 파일을 {{site.data.keyword.SecureGateway}} Docker 클라이언트에 복사
-{: #docker}
+{: #copy-acl-to-docker}
 
-{{site.data.keyword.SecureGateway}} Docker 클라이언트는 기본적으로 자체 가상화 컨테이너 내에서 실행됩니다. 따라서 호스팅 시스템의 파일 시스템은 {{site.data.keyword.SecureGateway}} 클라이언트를 포함하여 컨테이너 내에서 실행되는 프로세스에 직접 액세스할 수 없습니다. Docker 엔진 버전 1.8.0부터는 실행 중이거나 중지된 동안 'docker cp' 명령을 사용하여 호스트에 있는 파일을 컨테이너에 푸시할 수 있습니다. {{site.data.keyword.SecureGateway}} 클라이언트의 ACL FILE 대화식 명령을 사용하려면 이 작업을 수행해야 합니다.
+{{site.data.keyword.SecureGateway}} Docker 클라이언트는 기본적으로 자체 가상화 컨테이너 내에서 실행됩니다.  따라서 호스팅 시스템의 파일 시스템은 {{site.data.keyword.SecureGateway}} 클라이언트를 포함하여 컨테이너 내에서 실행되는 프로세스에 직접 액세스할 수 없습니다.  Docker 엔진 버전 1.8.0부터는 실행 중이거나 중지된 동안 'docker cp' 명령을 사용하여 호스트에 있는 파일을 컨테이너에 가져올 수 있으며, {{site.data.keyword.SecureGateway}} 클라이언트의 ACL FILE 대화식 명령을 사용하려면 이 작업을 수행해야 합니다.
 
 호스트에서 Docker 인스턴스에 대한 Docker의 대화식 'cp' 지원을 사용하려면 Docker 1.8.0을 사용해야 합니다. `docker --version`을 사용하여 이 내용을 확인할 수 있습니다.
 
@@ -114,7 +114,7 @@ Server:
 ```
 {: screen}
 
-그런 다음 acl 파일 목록을 Docker 이미지로 푸시하기 위해 다음 단계를 수행하십시오.
+그런 다음 acl 파일 목록을 Docker 이미지로 가져오기 위해 다음 단계를 수행하십시오.
 
 - 'docker ps' 명령을 실행하여 컨테이너 ID를 찾으십시오.
 
@@ -147,7 +147,7 @@ cli F /root/01_client.list
 ```
 cli> S
  -------------------------------------------------------------------
-           -- Secure Gateway Client Access Control List --
+           -- Secure Gateway Client Access Control List --          
 
   hostname                               port                  value
   127.0.0.1                             27017                  Allow

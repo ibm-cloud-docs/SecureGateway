@@ -13,7 +13,7 @@ lastupdated: "2017-04-25"
 {: #client-uninstall}
 
 ## Docker
-{: #docker}
+{: #docker-uninstall}
 
 {{site.data.keyword.SecureGateway}} クライアント Docker イメージを削除するには、以下のコマンドを実行します。
 
@@ -23,7 +23,7 @@ docker rmi ibmcom/secure-gateway-client
 {: pre}
 
 ## Mac OS X
-{: #mac}
+{: #mac-uninstall}
 
 Mac OS X から {{site.data.keyword.SecureGateway}} クライアントを削除するには、端末から以下のコマンドを実行します。
 
@@ -34,7 +34,7 @@ rm -rf ./ibm
 {: codeblock}
 
 ## Linux
-{: #linux}
+{: #linux-uninstall}
 
 ### Ubuntu/PowerPC
 {: #debian-uninstall}
@@ -85,7 +85,7 @@ yum remove ibm-securegateway-client
 {: pre}
 
 ## Windows
-{: #windows}
+{: #windows-uninstall}
 
 Windows で {{site.data.keyword.SecureGateway}} クライアントのインストールを削除するには、次の 2 つの方法があります。
 

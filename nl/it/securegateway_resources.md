@@ -7,10 +7,11 @@ lastupdated: "2018-08-10"
 ---
 {:new_window: target="_blank"}
 
-# Risorse 
+# Risorse
 {: #secure-gateway-resource}
 
 ## Blog e altre risorse
+{: #blogs-and-others}
 
 - [Securing Destinations with TLS in Bluemix Secure Gateway ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://developer.ibm.com/bluemix/2015/04/17/securing-destinations-tls-bluemix-secure-gateway/){: new_window}
 - [Bluemix Secure Gateway - Yes I Can Get It![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://developer.ibm.com/bluemix/2015/03/27/bluemix-secure-gateway-yes-can-get/){: new_window}
@@ -21,6 +22,7 @@ lastupdated: "2018-08-10"
 
 
 ## Utilizzo di {{site.data.keyword.SecureGateway}} SDK for Bluemix
-Se vuoi gestire il tuo {{site.data.keyword.SecureGateway}} da un'applicazione node.js, puoi utilizzare l'SDK JavaScript. Quindi, se lavori in JavaScript e vuoi interagire con l'interfaccia {{site.data.keyword.SecureGateway}} REST, non hai bisogno di effettuare le chiamate REST. L'SDK JavaScript imposta le chiamate HTTP e le inserisce in funzioni facili da utilizzare.È disponibile come un progetto NPM qui:
+{: #ibm-sg-sdk}
+Se vuoi gestire il tuo {{site.data.keyword.SecureGateway}} da un'applicazione node.js, puoi utilizzare l'SDK JavaScript. Quindi, se lavori in JavaScript e vuoi interagire con l'interfaccia {{site.data.keyword.SecureGateway}} REST, non hai bisogno di effettuare le chiamate REST. L'SDK JavaScript imposta le chiamate HTTP e le inserisce in funzioni facili da utilizzare.  È disponibile come un progetto NPM qui:
 
 - [Progetto NPM di IBM Secure Gateway SDK for Bluemix ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://www.npmjs.com/package/bluemix-secure-gateway){: new_window}

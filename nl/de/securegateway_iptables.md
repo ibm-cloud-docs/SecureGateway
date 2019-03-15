@@ -12,7 +12,7 @@ lastupdated: "2018-08-10"
 # IP-Tabellenregeln
 {: #iptables-rulles}
 
-Damit die Regeln einer IP-Tabelle (iptable) für ein Ziel erzwungen werden, muss die Option `Netzzugriff beschränken` in der Anzeige 'Netzsicherheit' des Ziels ausgewählt sein. An diesem Punkt können Sie Regeln hinzufügen, die erzwungen werden sollen, zum Beispiel 192.0.0.1 9000 (einzelne IP und einzelner Port), 192.0.0.1-192.0.0.5 5000:5005 (IP-Bereich und Portbereich) oder eine Kombination solcher Angaben. Weitere Informationen finden Sie unter [Netzsicherheit konfigurieren](/docs/services/SecureGateway/securegateway_destination.html#configuring-network-security).
+Damit die Regeln einer IP-Tabelle (iptables) für ein Ziel erzwungen werden, muss die Option `Netzzugriff beschränken` in der Anzeige 'Netzsicherheit' des Ziels ausgewählt sein. An diesem Punkt können Sie Regeln hinzufügen, die erzwungen werden sollen, zum Beispiel 192.0.0.1 9000 (einzelne IP und einzelner Port), 192.0.0.1-192.0.0.5 5000:5005 (IP-Bereich und Portbereich) oder eine Kombination dieser Regeln. Weitere Informationen finden Sie unter [Netzsicherheit konfigurieren](/docs/services/SecureGateway/securegateway_destination.html#dest-network-security).
 
 Wenn Sie private Ziele mit cURL erstellen, können Sie einen Befehl wie den folgenden verwenden:
 
@@ -38,6 +38,7 @@ curl -X PUT "https://sgmanager.ng.bluemix.net/v1/sgconfig/<gateway_id>/destinati
 Beachten Sie, dass vom ersten Befehl `src` zum Angeben einer einzelnen IP verwendet wird, während vom zweiten Befehl `src_range` zum Angeben eines IP-Bereichs verwendet wird.
 
 ## IP-Tabellenregeln für dynamische IPs
+{: #iptables-dynamic-ips}
 
 Wenn die Anwendung über dynamische IPs verfügt, Sie sie jedoch nicht kennen, können Sie die IP-Tabellenregeln während der Verarbeitung mithilfe der {{site.data.keyword.SecureGateway}}-REST-API aktualisieren.
 
@@ -56,7 +57,7 @@ const IP_TABLE_BODY = {
   app: APP_ID + ':' + process.env.CF_INSTANCE_INDEX // Gibt eindeutig die App und Instanz für die IP-Tabellenregel an.
   src: process.env.CF_INSTANCE_IP
  }
-
+ 
 request({
   method: 'PUT',
   uri: `https://sgmanager.ng.bluemix.net/v1/sgconfig/$GATEWAY_ID/destinations/$DEST_ID/ipTableRule`
@@ -65,10 +66,11 @@ request({
   }
   json: true, // Content-Type: application/json
   body: IP_TABLE_BODY
-  }, console.log.bind(console))
+  }, console.log.bind(console)) 
 ```
 
-Dies muss beim Anwendungsstart ausgeführt werden; auf diese Art werden die IP-Tabellenregeln beim Anwendungsstart neu konfiguriert. Von jeder einzelnen IP-Tabellenregel wird eindeutig eine einzelne Instanz der Anwendung mithilfe der Angaben für `application_id` und `CF_INSTANCE_INDEX` ermittelt. Die vorangestellte IP-Adresse wird von der Variablen `CF_INSTANCE_IP` abgerufen und auf die IP-Tabellenregel angewendet.
+Die Ausführung sollte beim Start der Anwendung stattfinden; alle zuvor definierten IP-Tabellenregeln werden überschrieben. Von jeder einzelnen IP-Tabellenregel wird eindeutig eine einzelne Instanz der Anwendung mithilfe der Angaben für `application_id` und `CF_INSTANCE_INDEX` ermittelt. Die externe
+IP-Adresse wird von der Variablen `CF_INSTANCE_IP` abgerufen und auf die IP-Tabellenregel angewendet.
 
 
 {: pre}

@@ -9,7 +9,8 @@ lastupdated: "2017-04-10"
 # Gestión del servicio {{site.data.keyword.SecureGateway}}
 {: #manage-sg-service}
 
-## Panel de control de {{site.data.keyword.SecureGateway}}
+## {{site.data.keyword.SecureGateway}} Panel de control
+{: #secure-gateway-dashboard}
 Desde el panel de control de {{site.data.keyword.SecureGateway}}, puede ver rápidamente los detalles siguientes:
 
 - El número actual de conexiones con sus destinos en todas las pasarelas.
@@ -21,6 +22,7 @@ Desde el panel de control de {{site.data.keyword.SecureGateway}}, puede ver ráp
 ![Panel de control de {{site.data.keyword.SecureGateway}} con uso](./images/dashboardUsage.png?raw=true "Panel de control de {{site.data.keyword.SecureGateway}} con uso")
 
 ### Perfil del servicio
+{: #dashboard-service-profile}
 Si pulsa el botón Perfil, verá lo siguiente:
 
 Campo | Descripción
@@ -34,6 +36,7 @@ Excedentes de pasarelas | El número actual de excedentes de pasarela por las qu
 Excedentes de datos | El número de excedentes de datos en los que ha incurrido durante el ciclo de facturación del mes actual.
 
 ### Panel de información de pasarela
+{: #dashboard-gw-info-panel}
 Si pulsa el botón Valores de cualquiera de los mosaicos de pasarela, puede ver:
 
 - La señal de seguridad necesaria para utilizar la API o para conectar un cliente, en función de si la señal se está aplicando en las conexiones de cliente.
@@ -50,6 +53,7 @@ Desde el panel de información de la pasarela también se pueden llevar a cabo l
 - Suprimir la pasarela.
 
 ## Panel de control para una pasarela determinada
+{: #dashboard-particular-gateway}
 Si pulsa en uno de los mosaicos de pasarela, se visualiza el panel de control de dicha pasarela en concreto.  Al igual que sucede con el panel de control principal de {{site.data.keyword.SecureGateway}}, puede ver rápidamente los detalles siguientes:
 
 - El número actual de conexiones con los destinos de esta pasarela.
@@ -61,6 +65,7 @@ Si pulsa en uno de los mosaicos de pasarela, se visualiza el panel de control de
 ![Panel de control de una pasarela en concreto](./images/viewGateway.png?raw=true "Panel de control de una pasarela en concreto")
 
 ### Panel Información del destino
+{: #dashboard-dest-info-panel}
 Si pulsa el botón Valores de cualquiera de los mosaicos de destino, puede ver:
 
 - El ID de destino necesario para utilizar la API.

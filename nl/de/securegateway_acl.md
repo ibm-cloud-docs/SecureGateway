@@ -12,12 +12,12 @@ lastupdated: "2017-04-10"
 # Zugriffssteuerungsliste
 {: #acl}
 
-Vom {{site.data.keyword.SecureGateway}}-Client wird Unterstützung für eine eingebettete Zugriffssteuerungsliste (Accesss Control List, ACL) bereitgestellt. Sie können den Zugriff auf lokale Ressourcen durch Änderungen an der Zugriffssteuerungsliste für den Client zulassen oder beschränken (verweigern). Dies ist interaktiv mithilfe von Clientbefehlen oder durch Angeben einer Datei mit Zugriffssteuerungslisten möglich, die angewendet werden sollen.
+Vom {{site.data.keyword.SecureGateway}}-Client wird Unterstützung für eine eingebettete Zugriffssteuerungsliste (Access Control List, ACL) bereitgestellt. Sie können den Zugriff auf lokale Ressourcen durch Änderungen an der Zugriffssteuerungsliste für den Client zulassen oder beschränken (verweigern).  Dies ist interaktiv mithilfe von Clientbefehlen oder durch Angeben einer Datei mit Zugriffssteuerungslisten möglich, die angewendet werden sollen.
 
-Ab Version 1.5.0 werden die ACL-Regeln für alle Clients synchronisiert, die mit demselben Gateway verbunden sind. Somit müssen Sie nur die Zugriffssteuerungsliste (ACL) eines einzigen Clients erstellen bzw. aktualisieren, damit diese Aktion auf allen aktiven Clients synchron ausgeführt wird, die mit diesem Gateway verbunden sind. Da die ACL auch für mehrere Sitzungen erhalten bleibt, gelten dieselben ACL-Regeln auch für die Verbindung zu einem neuen Client.
+Ab Version 1.5.0 werden die ACL-Regeln für alle Clients synchronisiert, die mit demselben Gateway verbunden sind.  Somit müssen Sie nur die Zugriffssteuerungsliste (ACL) eines einzigen Clients erstellen bzw. aktualisieren, damit diese Aktion auf allen aktiven Clients synchron ausgeführt wird, die mit diesem Gateway verbunden sind.  Da die ACL auch für mehrere Sitzungen erhalten bleibt, gelten dieselben ACL-Regeln auch für die Verbindung zu einem neuen Client.
 
 ## Befehle für die Zugriffssteuerungsliste
-{: #commands}
+{: #acl-commands}
 
 Für die Zugriffssteuerungsliste werden folgende Befehle unterstützt:
 
@@ -30,7 +30,7 @@ show acl
 ```
 {: screen}
 
-Wenn weder ein Hostname noch ein Port angegeben ist, sind alle Hostnamen und Ports eingeschlossen. Die folgende ACL-Regel lässt zum Beispiel für Port 22 alle Hostnamen zu.
+Wenn weder ein Hostname noch ein Port angegeben ist, sind alle Hostnamen und Ports eingeschlossen.  Die folgende ACL-Regel lässt zum Beispiel für Port 22 alle Hostnamen zu.
 
 ```
 acl allow :22
@@ -49,9 +49,9 @@ Mit dem Befehl `show acl` wird die aktuell festgelegte ACL angezeigt oder eine N
 Kehren Sie zu [Einführung - Client hinzufügen](/docs/services/SecureGateway/securegateway_client.html) zurück.
 
 ## HTTP- und HTTPS-Routensteuerung mithilfe der Zugriffssteuerungsliste
-{: #routes}
+{: #acl-route-control}
 
-Ab Version 1.6.0 können von HTTP- und HTTPS-Zielen auch bestimmte Routen für ACL-Einträge erzwungen werden. Diese werden auf dieselbe Art wie herkömmliche ACL-Einträge hinzugefügt, am Ende der Regel wird jedoch noch der Pfad angehängt. Im folgenden Beispiel werden nur Anforderungen zugelassen, auf die der Pfad /my/api folgt:
+Ab Version 1.6.0 können von HTTP- und HTTPS-Zielen auch bestimmte Routen für ACL-Einträge erzwungen werden.  Diese werden auf dieselbe Art wie herkömmliche ACL-Einträge hinzugefügt, am Ende der Regel wird jedoch noch der Pfad angehängt. Im folgenden Beispiel werden nur Anforderungen zugelassen, auf die der Pfad /my/api folgt:
 
 ```
 acl allow localhost:80/my/api
@@ -63,12 +63,12 @@ Wenn diese Regel wirksam ist, sind Anforderungen an `<cloud host>:<cloud port>/m
 Routen werden nur für Befehle des Typs `acl allow` unterstützt.
 
 ## Rangfolge der Zugriffssteuerungsliste
-{: #precedence}
+{: #acl-precedence}
 
-Nach dem Angeben des Befehls `acl allow :` und dem Eingeben weiterer Befehle des Typs `acl allow` wird die Zulassungsliste `ALL:ALL` (von `acl allow :`) aus der Liste entfernt, da davon ausgegangen wird, dass unbegrenzter Zugriff nicht mehr zulässig sein soll. Nach dem Angeben des Befehls `acl deny :` und dem Eingeben des Befehls `acl deny` wird die Ablehnungsliste `ALL:ALL` (von `acl deny :`) aus der Liste entfernt, da davon ausgegangen wird, dass der Zugriff nicht länger vollständig beschränkt werden soll. Falls Sie die aktuellen ACL-Regeln mithilfe des Befehls `show acl` in der Befehlszeilenschnittstelle auflisten, wird anhand eines Indikators angezeigt, ob nicht aufgelistete Regeln zulässig sind oder verweigert werden.
+Nach dem Angeben des Befehls `acl allow :` und dem Eingeben weiterer Befehle des Typs `acl allow` wird die Zulassungsliste `ALL:ALL` (von `acl allow :`) aus der Liste entfernt, da davon ausgegangen wird, dass unbegrenzter Zugriff nicht mehr zulässig sein soll.  Nach dem Angeben des Befehls `acl deny :` und dem Eingeben des Befehls `acl deny` wird die Ablehnungsliste `ALL:ALL` (von `acl deny :`) aus der Liste entfernt, da davon ausgegangen wird, dass der Zugriff nicht länger vollständig beschränkt werden soll.  Falls Sie die aktuellen ACL-Regeln mithilfe des Befehls `show acl` in der Befehlszeilenschnittstelle auflisten, wird anhand eines Indikators angezeigt, ob nicht aufgelistete Regeln zulässig sind oder verweigert werden.
 
 ## ACL-Datei importieren
-{: #import}
+{: #import-acl-file}
 
 Sie können mit dem Befehl `acl file` den Namen einer Datei angeben, in der unterstützte ACL-Befehle enthalten sind, die vom Client beim Start gelesen werden. Die Befehle in dieser Datei müssen das folgenden Format aufweisen:
 
@@ -87,9 +87,9 @@ Ein einfaches Beispiel für eine ACL-Datei finden Sie [hier](/docs/services/Secu
 Kehren Sie zu [Einführung - Client hinzufügen](/docs/services/SecureGateway/securegateway_client.html) zurück.
 
 ## ACL-Datei in {{site.data.keyword.SecureGateway}}-Docker-Client kopieren
-{: #docker}
+{: #copy-acl-to-docker}
 
-Vom {{site.data.keyword.SecureGateway}}-Docker-Client wird im Wesentlichen der eigene Virtualisierungscontainer ausgeführt. Auf das Dateisystem der Hostmaschine kann somit nicht direkt von Prozessen zugegriffen werden, die im Container ausgeführt werden, einschließlich des {{site.data.keyword.SecureGateway}}-Clients. Ab Version 1.8.0 der Docker-Engine können Sie den Befehl 'docker cp' verwenden, um Dateien, die auf dem Host vorhanden sind, in den Container zu übertragen, während er aktiv oder gestoppt ist. Diese Aktion ist erforderlich, damit der interaktive Befehl ACL FILE des {{site.data.keyword.SecureGateway}}-Clients verwendet wird.
+Vom {{site.data.keyword.SecureGateway}}-Docker-Client wird im Wesentlichen der eigene Virtualisierungscontainer ausgeführt.  Auf das Dateisystem der Hostmaschine kann somit nicht direkt von Prozessen zugegriffen werden, die im Container ausgeführt werden, einschließlich des {{site.data.keyword.SecureGateway}}-Clients.  Ab Version 1.8.0 der Docker-Engine können Sie den Befehl 'docker cp' verwenden, um Dateien, die auf dem Host vorhanden sind, in den Container zu importieren, während er aktiv oder gestoppt ist; dieser Vorgang ist notwendig, damit der interaktive Befehl ACL FILE des {{site.data.keyword.SecureGateway}}-Clients verwendet werden kann.
 
 Damit die interaktive Unterstützung von 'cp' in Docker durch den Host für die Docker-Instanz gewährleistet ist, muss die Docker-Version 1.8.0 verwendet werden. Sie können dies mit `docker -- version` überprüfen.
 
@@ -114,7 +114,7 @@ Server:
 ```
 {: screen}
 
-Führen Sie anschließend die folgenden Schritte aus, um die ACL-Dateiliste zum Docker-Image hinzuzufügen:
+Führen Sie anschließend die folgenden Schritte aus, um die ACL-Dateiliste in das Docker-Image zu importieren:
 
 - Befehl 'docker ps' zum Suchen der Container-ID ausführen
 
@@ -147,7 +147,7 @@ cli F /root/01_client.list
 ```
 cli> S
  -------------------------------------------------------------------
-           -- Secure Gateway Client Access Control List --
+           -- Secure Gateway Client Access Control List --          
 
   hostname                               port                  value
   127.0.0.1                             27017                  Allow

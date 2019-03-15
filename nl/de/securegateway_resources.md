@@ -11,6 +11,7 @@ lastupdated: "2018-08-10"
 {: #secure-gateway-resource}
 
 ## Blogs und weitere Ressourcen
+{: #blogs-and-others}
 
 - [Ziele mit TLS in Bluemix Secure Gateway sichern ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://developer.ibm.com/bluemix/2015/04/17/securing-destinations-tls-bluemix-secure-gateway/){: new_window}
 - [Bluemix Secure Gateway - Informationen![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://developer.ibm.com/bluemix/2015/03/27/bluemix-secure-gateway-yes-can-get/){: new_window}
@@ -21,6 +22,7 @@ lastupdated: "2018-08-10"
 
 
 ## IBM {{site.data.keyword.SecureGateway}}-SDK für Bluemix verwenden
-Fall Sie {{site.data.keyword.SecureGateway}} unter Verwendung einer Node.js-App verwalten möchten, können Sie ein JavaScript-SDK verwenden. Wenn Sie in JavaScript arbeiten und mit der REST-Schnittstelle von {{site.data.keyword.SecureGateway}} interagieren möchten, ist es nicht erforderlich, REST-Aufrufe zu verwenden. Die HTTP-Aufrufe werden vom JavaScript-SDK konfiguriert und in benutzerfreundliche Funktionen umgesetzt. Dies ist als NPM-Projekt an folgender Position verfügbar:
+{: #ibm-sg-sdk}
+Fall Sie {{site.data.keyword.SecureGateway}} unter Verwendung einer Node.js-App verwalten möchten, können Sie ein JavaScript-SDK verwenden. Wenn Sie in JavaScript arbeiten und mit der REST-Schnittstelle von {{site.data.keyword.SecureGateway}} interagieren möchten, ist es nicht erforderlich, REST-Aufrufe zu verwenden. Die HTTP-Aufrufe werden vom JavaScript-SDK konfiguriert und in benutzerfreundliche Funktionen umgesetzt.  Dies ist als NPM-Projekt an folgender Position verfügbar:
 
 - [IBM Secure Gateway-SDK für Bluemix-NPM-Projekt ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.npmjs.com/package/bluemix-secure-gateway){: new_window}

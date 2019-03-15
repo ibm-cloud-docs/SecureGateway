@@ -13,7 +13,7 @@ lastupdated: "2018-08-10"
 {: #troubleshooting}
 
 ## Melhores práticas para executar o cliente Secure Gateway
-{: #best}
+{: #best-practices}
 
 - Execute o cliente Secure Gateway em uma partição do sistema operacional (S.O.) que tenha visibilidade de rede dos serviços que são vinculados pelo próprio cliente. Por exemplo,
 alguns ambientes de virtualização hospedados suportam vários modos de conectividade de
@@ -29,32 +29,37 @@ ativos no local estejam acessíveis e de que todos os nomes de host possam ser
 resolvidos por um DNS.
 
 ## Etapas iniciais de resolução de problemas
+{: #initial-troubleshooting}
 
 - Inicie a solicitação com falha por meio do aplicativo solicitante
 - Verifique os logs do cliente Secure Gateway
-- Se nenhum log de cliente foi gerado por meio da solicitação, o problema é entre o aplicativo solicitante e os servidores Secure Gateway. Isso pode variar desde a confiabilidade de rede a protocolos de solicitação incompatíveis para um handshake de autenticação mútua TLS incorreto.
-- Se o cliente gerou logs de erro por meio da solicitação, o problema é entre o cliente SG e o recurso no local. Abaixo está uma tabela contendo erros comuns, os problemas que normalmente os causam e os potenciais métodos para solucioná-los.
+- Se nenhum log de cliente foi gerado por meio da solicitação, o problema é entre o aplicativo solicitante e os servidores Secure Gateway.  Isso pode variar desde a confiabilidade de rede a protocolos de solicitação incompatíveis para um handshake de autenticação mútua TLS incorreto.
+- Se o cliente tiver gerado logs de nível de erro por meio de solicitação, o problema será entre
+o cliente SG e o recurso no local. Abaixo está uma tabela contendo erros comuns, os problemas que normalmente os causam e os potenciais métodos para solucioná-los.
 
 Erro | Causa típica | Métodos de resolução de problemas
 --- | --- | ---
-ETIMEDOUT | O cliente é incapaz de localizar o nome do host/ip ao qual se conectar devido a restrições de rede. | Tente executar ping do nome do host/ip do destino por meio do host que está executando o cliente para assegurar a conectividade de rede. Se estiver executando a versão Docker do cliente, vincular o contêiner ao S.O. do host com `--net=host` poderá resolver o problema.
-ECONNREFUSED | O cliente resolveu o nome do host/ip ao qual se conectar, mas é incapaz de iniciar o handshake da conexão | Isso é geralmente causado por um protocolo incompatível entre o cliente SG e o recurso no local (por exemplo, o cliente está tentando uma conexão TCP com um host:porta que está esperando uma conexão TLS). Em alguns casos, uma regra de firewall pode causar esse erro, em vez de ETIMEDOUT.
-ECONNRESET | O cliente estabeleceu uma conexão com o destino, mas algo deu errado durante o handshake (um erro de handshake TLS também pode resultar em erros diferentes) ou enquanto a solicitação estava sendo manipulada pelo recurso no local. | Os logs do recurso no local devem ser verificados para confirmar que nenhum erro causou a interrupção da conexão. Se nada for localizado nos logs no local, a configuração de destino deverá ser examinada para assegurar que os protocolos (e certificados, se necessário) apropriados estejam sendo fornecidos ao cliente para a conexão.
-REMOTE_RST | Ocorreu um erro no lado do servidor SG. <br><br> Para o destino no local, ocorre erro quando o app solicitante se conecta ao servidor SG ou o erro de tempo limite ao receber dados do recurso no local. <br><br> Para o destino em nuvem, isso pode ser qualquer coisa, desde falha de handshake TLS até erros no recurso em nuvem | Para o destino no local, assegure que o app solicitante que usa os protocolos apropriados estabeleça a conexão com o servidor SG. Se o erro ocorrer ao receber dados do recurso no local, tente estender/desativar o tempo limite. <br><br> Para o destino em nuvem, os logs do recurso em nuvem devem ser verificados para confirmar que nenhum erro causou a interrupção da conexão. Se nada for localizado nos logs de recurso em nuvem, a configuração de destino deverá ser examinada para assegurar que os protocolos (e certificados, se necessário) apropriados estejam sendo fornecidos ao cliente para a conexão.
+ETIMEDOUT | O cliente é incapaz de localizar o nome do host/ip ao qual se conectar devido a restrições de rede. | Tente executar ping do nome do host/ip do destino por meio do host que está executando o cliente para assegurar a conectividade de rede.  Se estiver executando a versão Docker do cliente, vincular o contêiner ao S.O. do host com `--net=host` poderá resolver o problema.
+ECONNREFUSED | O cliente resolveu o nome do host/ip ao qual se conectar, mas é incapaz de iniciar o handshake da conexão | Isso é geralmente causado por um protocolo incompatível entre o cliente SG e o recurso no local (por exemplo, o cliente está tentando uma conexão TCP com um host:porta que está esperando uma conexão TLS).  Em alguns casos, uma regra de firewall pode causar esse erro, em vez de ETIMEDOUT.
+ECONNRESET | O cliente estabeleceu uma conexão com o destino, mas algo deu errado durante o handshake (um erro de handshake TLS também pode resultar em erros diferentes) ou enquanto a solicitação estava sendo manipulada pelo recurso no local. | Os logs do recurso no local devem ser verificados para confirmar que nenhum erro causou a interrupção da conexão.  Se nada for localizado nos logs no local, a configuração de destino deverá ser examinada para assegurar que os protocolos (e certificados, se necessário) apropriados estejam sendo fornecidos ao cliente para a conexão.
+REMOTE_RST | Ocorreu um erro no lado do servidor SG. <br><br> Para o destino no local, ocorre um erro quando o
+app solicitante conecta-se ao servidor SG ou um erro de tempo limite ao receber dados do recurso no local.<br><br> Para o destino em nuvem, isso pode ser qualquer coisa, desde falha de handshake TLS até erros no recurso em nuvem | Para o destino no local, assegure que o app solicitante que usa os protocolos apropriados estabeleça a conexão com o servidor SG. Se o erro ocorrer ao receber dados do recurso no local, tente estender/desativar o tempo limite. <br><br> Para o destino em nuvem, os logs do recurso em nuvem devem ser verificados para confirmar que nenhum erro causou a interrupção da conexão.  Se nada for localizado nos logs de recurso em nuvem, a configuração de destino deverá ser examinada para assegurar que os protocolos (e certificados, se necessário) apropriados estejam sendo fornecidos ao cliente para a conexão.
 
 Muitos aplicativos experimentam "interrupções" depois que um ECONNRESET ocorre na outra extremidade do túnel. Isso é esperado. O Secure
 Gateway não pode reproduzir o pacote RST na outra extremidade do túnel, uma vez que os pacotes TCP já foram confirmados para esse
-lado do túnel. Os tempos limite de nível do aplicativo, o aplicativo nunca recebe uma resposta de reconhecimento, são o único
-método para terminar a interrupção.
+lado do túnel. Definir os tempos limite no aplicativo, que nunca recebe uma resposta de reconhecimento,
+é o único método para encerrar a interrupção.
 
 ## Configurar o cliente Docker para ser reiniciado durante e reinicialização de servidor
-{: #docker}
+{: #docker-auto-restart}
 
 ### O que está acontecendo?
+{: #docker-auto-restart-what-is-happening}
 Ao reiniciar o servidor no qual o cliente Secure Gateway é executado, deve-se reiniciar manualmente o cliente Docker do Secure Gateway. Como o cliente pode ser iniciado automaticamente depois de uma
 reinicialização do sistema?
 
 ### Como corrigir isso
+{: #docker-auto-restart-how-to-fix-it}
 
 - Em sistemas Linux ou UNIX:
 - Integre o comando do Docker a um script que possa ser chamado
@@ -71,6 +76,7 @@ for /L %i in (0,0,0) do docker run -it ibmcom/secure-gateway-client <gateway_id>
 {: #not-in-cn}
 
 ### O que está acontecendo?
+{: #not-in-cn-what-is-happening}
 Você está tentando implementar o TLS do lado do cliente no local usando o cliente Secure Gateway e recebe a mensagem de erro a seguir.
 
 ```
@@ -84,6 +90,7 @@ Where:
 {: screen}
 
 ### Por que está acontecendo?
+{: #not-in-cn-why-it-is-happening}
 O Nome comum, por exemplo, o nome FQDN do servidor ou SEU nome,
 entre o aplicativo no local e o certificado transferido por
 upload para o {{site.data.keyword.Bluemix_notm}} para
@@ -96,6 +103,7 @@ FQDN ou o nome do host correto do servidor.
 para esse cliente.
 
 ### Como corrigir isso
+{: #not-in-cn-how-to-fix-it}
 
  1. Na IU do {{site.data.keyword.Bluemix_notm}}, acesse o Painel do Secure Gateway.
  2. Selecione seu destino e clique no ícone Editar.
@@ -107,11 +115,12 @@ ao sistema no local.
 {: #san}
 
 ### O que está acontecendo?
+{: #san-what-is-happening}
 O CN no certificado apresentado é o endereço IP do gateway, mas o certificado não tem uma SAN correspondente ao endereço IP e o cliente falha ao se conectar.  
 
-Devido a problemas de resolução do nome do host, estamos usando o endereço IP em nosso destino. O CN no certificado apresentado é o endereço IP do gateway, mas o certificado não tem uma SAN correspondente ao endereço IP e o cliente falha ao se conectar
+Devido a problemas de resolução do nome do host, estamos usando o endereço IP em nosso destino.  O CN no certificado apresentado é o endereço IP do gateway, mas o certificado não tem uma SAN correspondente ao endereço IP e o cliente falha ao se conectar
 
-Um destino usando TLS foi criado, mas em vez de usar o nome do host do destino, você usou seu endereço IP. Ao conectar o cliente, o erro a seguir está sendo lançado.
+Um destino usando TLS foi criado, mas em vez de usar o nome do host do destino, você usou seu endereço IP.  Ao conectar o cliente, o erro a seguir está sendo lançado.
 
 ```
 [2015-10-15 13:00:04.866] [INFO] Connection #0 is being established to 10.3.20.31:443
@@ -121,10 +130,13 @@ Um destino usando TLS foi criado, mas em vez de usar o nome do host do destino, 
 {: screen}
 
 ### Por que está acontecendo?
-O que está acontecendo é que o código de verificação SSL no cliente de gateway está tratando esse destino de forma diferente porque ele usa um endereço IP em vez de um nome do host. Em vez de corresponder com o CN do certificado, ele está examinando a SAN do certificado para uma correspondência do endereço IP. Como não há SAN no certificado, ele vê isso como uma conexão inválida e falha o handshake SSL.
+{: #san-why-it-is-happening}
+O que está acontecendo é que o código de verificação SSL no cliente de gateway está tratando esse destino de forma diferente porque ele usa um endereço IP em vez de um nome do host.  Em vez de corresponder com o CN do certificado, ele está examinando a SAN do certificado para uma correspondência do endereço IP.  Como não há SAN no certificado, ele vê isso como uma conexão inválida e falha o handshake SSL.
 
 ### Como corrigir isso
-Se você observa a mensagem de erro, ela não diz CN, (por exemplo, [ERROR] Connection ## had error: Host: . is not cert&apos;s CN:), mas cert&apos;s list, o que leva a crer que você gerou seu certificado autoassinado incorretamente. O problema está gerando o certificado usando um FQDN ou CN com um IP_Address. Isso não funcionará, pois os endereços IP são suportados somente ao usar a SAN.
+{: #san-how-to-fix-it}
+Se você observa a mensagem de erro, ela não diz CN, (por exemplo, [ERROR] Connection ## had error: Host: . is not cert&apos;s CN:), mas cert&apos;s list, o que leva a crer que você gerou seu certificado autoassinado incorretamente. O problema é que o certificado foi gerado usando um FQDN ou um CN com um IP_Address e isso
+não funcionará porque os endereços IP são suportados somente quando usam a SAN.
 
 Método para gerar um certificado com um IP como o CN com openssl:
 
@@ -159,7 +171,7 @@ Método para gerar um certificado com um IP como o CN com openssl:
     ```
     {: pre}
 
-6. Gere o certificado com opções sobre organização
+6. Gere o certificado com opções sobre a organização
 
     ```
     openssl req -new -x509 -key private.key -sha256 -out certificate.pem -days 730 -config
@@ -196,6 +208,7 @@ para o padrão:
 {: #depth-zero}
 
 ### O que está acontecendo?
+{: #depth-zero-what-is-happening}
 Você está tentando implementar o TLS do lado do cliente no local usando o cliente Secure Gateway e recebe a mensagem de erro a seguir.
 
 ```
@@ -206,9 +219,11 @@ Você está tentando implementar o TLS do lado do cliente no local usando o clie
 {: screen}
 
 ### Por que está acontecendo?
+{: #depth-zero-why-it-is-happening}
 Há um certificado de lado do cliente ausente no destino definido.
 
 ### Como corrigir isso
+{: #depth-zero-how-to-fix-it}
  1. Na IU do {{site.data.keyword.Bluemix_notm}}, acesse o Painel do Secure Gateway.
  2. Selecione seu destino e clique no ícone Editar.
  3. Clique em Fazer upload de certificado.
@@ -217,15 +232,17 @@ ao sistema no local.
 
 
 ## Como posso carregar de forma interativa um arquivo ACL no cliente Docker?
-{: #docker-acl}
+{: #docker-load-acl}
 
 ### O que está acontecendo?
-Como o Docker é um contêiner ou ambiente virtualizado, ele não tem acesso direto ao seu sistema de arquivos até que o contêiner seja realmente ativado. Isso evita que ele leia o sistema de arquivos de máquinas host até que seja realmente ativado e esteja em execução.
+{: #docker-load-acl-what-is-happening}
+Como o Docker é um contêiner ou ambiente virtualizado, ele não tem acesso direto ao seu sistema de arquivos até que o contêiner seja realmente ativado.  Isso evita que ele leia o sistema de arquivos de máquinas host até que seja realmente ativado e esteja em execução.
 
 ### Como corrigir isso
+{: #docker-load-acl-how-to-fix-it}
 Isso é o que pode ser feito:
 
-- Crie um Dockerfile para incluir o aclfile.txt
+- Crie um Dockerfile para incluir aclfile.txt
 
 ```
 FROM ibmcom/secure-gateway-client
@@ -247,7 +264,7 @@ docker run -t -i ads-secure-gateway-client1 --F /tmp/aclfile.txt
 ```
 {: pre}
 
-- Obtenha a saída a seguir:
+- É necessário obter a saída a seguir:
 
 ```
 [2015-09-30 16:50:32.084] [INFO] The current access control list is being reset and replaced by the user provided file: /tmp/aclfile.txt
@@ -257,9 +274,9 @@ docker run -t -i ads-secure-gateway-client1 --F /tmp/aclfile.txt
 {: screen}
 
 ## Obtendo ajuda e suporte adicionais
-{: #support}
+{: #getting-help-and-support}
 
-Se você tiver perguntas técnicas sobre como desenvolver ou implementar um aplicativo com o Secure Gateway, poste sua pergunta no [Stack Overflow ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](http://stackoverflow.com/search?q=securegateway+ibm-bluemix). Identifique sua pergunta com "ibm-bluemix" e "secure-gateway" para que ela possa ser localizada mais prontamente pelas equipes de desenvolvimento do {{site.data.keyword.Bluemix_notm}}.
+Se você tiver perguntas técnicas sobre como desenvolver ou implementar um aplicativo com o Secure Gateway, poste sua pergunta no [Stack Overflow ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](http://stackoverflow.com/search?q=securegateway+ibm-bluemix).  Identifique sua pergunta com "ibm-bluemix" e "secure-gateway" para que ela possa ser localizada mais prontamente pelas equipes de desenvolvimento do {{site.data.keyword.Bluemix_notm}}.
 
 Se você tiver alguma pergunta sobre o serviço ou instruções sobre como começar, use o fórum do [IBM developerWorks dW Answers ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://developer.ibm.com/answers/topics/securegateway/?smartspace=bluemix) com as tags "bluemix" e "Secure Gateway".
 
@@ -275,10 +292,11 @@ Forneça o máximo possível das informações a seguir ao enviar um chamado:
 - Em qual S.O. o cliente está em execução?
 - Qual versão do cliente está sendo usada (isso pode ser localizado usando o comando 'C' no cliente)?
 - Se esse for um problema de IU, cole ou anexe quaisquer logs e capturas de tela do console do navegador associados
-- Cole ou anexe quaisquer logs do aplicativo solicitante associados
-- Cole ou anexe quaisquer logs do cliente Secure Gateway associados
+- Cole ou anexe quaisquer logs e o fuso horário do aplicativo solicitante associado
+- Cole ou anexe quaisquer logs e o fuso horário do cliente Secure Gateway
 - Forneça os detalhes do destino que está sendo usado (uma captura de tela ou preencha os campos a seguir):
    - ID de destino
    - Protocol
    - Autenticação do lado do destino
-   - Certificados transferidos por upload (apenas nomes e a caixa em que foram transferidos por upload)
+   - Certificados transferidos por upload (somente os nomes e para qual pasta ou link do Box
+eles foram enviados)

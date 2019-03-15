@@ -13,7 +13,7 @@ lastupdated: "2018-08-10"
 {: #troubleshooting}
 
 ## Meilleures pratiques pour l'exécution du client Secure Gateway
-{: #best}
+{: #best-practices}
 
 - Exécutez le client Secure Gateway sur une partition de système d'exploitation qui offre une visibilité réseau des services reliés par le client lui-même. Par exemple, certains environnements de virtualisation hébergés prennent en charge plusieurs modes de connectivité du réseau, notamment la conversion NAT et
 l'utilisation d'un pont. Veillez à choisir le type de connexion approprié qui permet d'accéder aux services
@@ -24,11 +24,12 @@ entreprise peut appliquer les contrôles de sécurité appropriés afin de prot�
 accessibles et que les tous les noms d'hôte peuvent être résolus par un serveur de noms de domaine (DNS).
 
 ## Etapes initiales de traitement des incidents
+{: #initial-troubleshooting}
 
 - Initiez la demande en échec depuis l'application demandeuse
 - Consultez les journaux du client Secure Gateway
 - Si aucun journal de client n'a été généré à partir de la demande, le problème se situe entre l'application demandeuse et les serveurs Secure Gateway.  Le problème peut aller de la fiabilité du réseau à des protocoles de requête non concordants, en passant par un établissement de liaison d'authentification mutuelle TLS inapproprié.
-- Si le client a généré des journaux d'erreurs à partir de la requête, le problème se situe entre le client SG et la ressource sur site.  Le tableau ci-dessous répertorie les erreurs communes, les problèmes généralement à l'origine de ces erreurs et les méthodes susceptibles de les résoudre.
+- Si le client a généré des journaux de niveau d'erreur à partir de la requête, le problème se situe entre le client SG et la ressource sur site. Le tableau ci-dessous répertorie les erreurs communes, les problèmes généralement à l'origine de ces erreurs et les méthodes susceptibles de les résoudre.
 
 Erreur | Cause typique | Méthodes de traitement
 --- | --- | ---
@@ -39,16 +40,18 @@ REMOTE_RST | Une erreur s'est produite côté serveur SG. <br><br> Pour une dest
 
 Un grand nombre d'applications "se bloquent" après qu'une erreur ECONNRESET s'est produite à l'autre extrémité du tunnel. Ce comportement est normal. Secure
 Gateway ne peut pas réexécuter le paquet RST à l'autre extrémité du tunnel car les paquets TCP ont déjà bénéficié d'un accusé de réception de ce côté
-du tunnel. Les délais d'attente au niveau de l'application, l'application ne recevant jamais de réponse d'accusé de réception, sont la seule méthode pour mettre fin au blocage.
+du tunnel. La définition de délais d'attente au niveau de l'application, qui ne reçoit jamais d'accusé de réception, constitue la seule méthode pour mettre fin au blocage.
 
 ## Configuration de votre client Docker de sorte qu'il redémarre lorsque votre serveur redémarre
-{: #docker}
+{: #docker-auto-restart}
 
 ### Symptôme
+{: #docker-auto-restart-what-is-happening}
 Lorsque vous redémarrez le serveur sur lequel s'exécute votre client Secure Gateway, vous devez redémarrer manuellement le client Docker de Secure Gateway. Comment configurer le client pour qu'il démarre automatiquement après le
 redémarrage du système ?
 
 ### Procédure de résolution du problème
+{: #docker-auto-restart-how-to-fix-it}
 
 - Sur les systèmes Linux et UNIX :
 - Intégrez la commande Docker dans un script pouvant être appelé suite à l'exécution d'un travail CRON.
@@ -64,6 +67,7 @@ for /L %i in (0,0,0) do docker run -it ibmcom/secure-gateway-client <id_passerel
 {: #not-in-cn}
 
 ### Symptôme
+{: #not-in-cn-what-is-happening}
 Vous tentez d'implémenter une connexion TLS côté client sur site à l'aide du client Secure Gateway et recevez le message d'erreur suivant :
 
 ```
@@ -77,6 +81,7 @@ Où :
 {: screen}
 
 ### Cause
+{: #not-in-cn-why-it-is-happening}
 Les noms usuels, par exemple le nom de domaine complet du serveur ou votre nom,
 pour votre application sur site et le certificat que vous avez téléchargé dans
 {{site.data.keyword.Bluemix_notm}} pour cette destination ne correspondent pas.
@@ -87,6 +92,7 @@ pour votre application sur site et le certificat que vous avez téléchargé dan
 client.
 
 ### Procédure de résolution du problème
+{: #not-in-cn-how-to-fix-it}
 
  1. Dans l'interface utilisateur {{site.data.keyword.Bluemix_notm}}, accédez au tableau de bord Secure Gateway.
  2. Sélectionnez votre destination, puis cliquez sur l'icône Editer.
@@ -97,6 +103,7 @@ client.
 {: #san}
 
 ### Symptôme
+{: #san-what-is-happening}
 Le nom usuel dans le certificat présenté est l'adresse IP de la passerelle, mais le certificat n'a pas de réseau SAN correspondant à l'adresse IP et le client n'arrive pas à se connecter.  
 
 En raison de problèmes de résolution des noms d'hôte, nous utilisons l'adresse IP dans notre destination.  Le nom usuel dans le certificat présenté est l'adresse IP de la passerelle, mais le certificat n'a pas de réseau SAN correspondant à l'adresse IP et le client n'arrive pas à se connecter.
@@ -111,10 +118,12 @@ Vous avez créé une destination en utilisant TLS, mais au lieu d'utiliser le no
 {: screen}
 
 ### Cause
+{: #san-why-it-is-happening}
 Le code de vérification SSL dans le client de la passerelle traite la destination différemment car il utilise une adresse IP plutôt qu'un nom d'hôte.  Au lieu d'établir une correspondance avec le nom usuel du certificat, il recherche une correspondance avec l'adresse IP dans le réseau SAN du certificat.  Comme le certificat ne comporte pas de réseau SAN, le code de vérification considère la connexion comme incorrecte et l'établissement de liaison SSL échoue.
 
 ### Procédure de résolution du problème
-Si vous examinez le message d'erreur, vous constatez qu'il ne mentionne pas le nom usuel ou CN, (exemple, [ERROR] Connection ## had error: Host: . is not cert&apos;s CN: ), mais la liste des certificats, ce qui laisse supposer que vous avez généré votre certificat autosigné de manière incorrecte. Le problème est lié au fait que le certificat a été généré à l'aide d'un nom de domaine ou d'un nom usuel avec une adresse IP. Cela ne fonctionnera pas car les adresses IP ne sont prises en charge que si vous utilisez un réseau SAN.
+{: #san-how-to-fix-it}
+Si vous examinez le message d'erreur, vous constatez qu'il ne mentionne pas le nom usuel ou CN, (exemple, [ERROR] Connection ## had error: Host: . is not cert&apos;s CN: ), mais la liste des certificats, ce qui laisse supposer que vous avez généré votre certificat autosigné de manière incorrecte. Le problème est lié au fait que le certificat a été généré à l'aide d'un nom de domaine complet (FQDN) ou d'un nom usuel (CN) avec une adresse IP, ce qui ne fonctionne pas, car les adresses IP ne sont prises en charge que si vous utilisez un réseau SAN.
 
 Génération d'un certificat avec une adresse IP comme nom usuel avec openssl :
 
@@ -142,7 +151,7 @@ Génération d'un certificat avec une adresse IP comme nom usuel avec openssl :
     ```
     {: pre}
 
-5. Générez une clé privée
+5. Générez la clé privée
 
     ```
     openssl genrsa -out private.key 3072
@@ -186,6 +195,7 @@ avec la valeur par défaut :
 {: #depth-zero}
 
 ### Symptôme
+{: #depth-zero-what-is-happening}
 Vous tentez d'implémenter une connexion TLS côté client sur site à l'aide du client Secure Gateway et recevez le message d'erreur suivant :
 
 ```
@@ -196,9 +206,11 @@ Vous tentez d'implémenter une connexion TLS côté client sur site à l'aide du
 {: screen}
 
 ### Cause
+{: #depth-zero-why-it-is-happening}
 Un certificat côté client manque dans la destination que vous avez définie.
 
 ### Procédure de résolution du problème
+{: #depth-zero-how-to-fix-it}
  1. Dans l'interface utilisateur {{site.data.keyword.Bluemix_notm}}, accédez au tableau de bord Secure Gateway.
  2. Sélectionnez votre destination, puis cliquez sur l'icône Editer.
  3. Cliquez sur Télécharger le certificat.
@@ -206,15 +218,17 @@ Un certificat côté client manque dans la destination que vous avez définie.
 
 
 ## Comment puis-je charger un fichier ACL dans le client Docker de manière interactive ?
-{: #docker-acl}
+{: #docker-load-acl}
 
 ### Symptôme
+{: #docker-load-acl-what-is-happening}
 Etant donné que Docker est un conteneur ou un environnement virtualisé, il ne dispose pas d'un accès direct à votre système de fichiers tant que le conteneur n'est pas démarré.  Il ne peut donc pas lire le système de fichier de vos machines hôte tant qu'il n'est pas effectivement démarré et en cours d'exécution.
 
 ### Procédure de résolution du problème
+{: #docker-load-acl-how-to-fix-it}
 Votre intervention :
 
-- Créez un fichier Dockerfile pour inclure le fichier aclfile.txt
+- Créez un fichier Dockerfile pour inclure aclfile.txt
 
 ```
 FROM ibmcom/secure-gateway-client
@@ -236,7 +250,7 @@ docker run -t -i ads-secure-gateway-client1 --F /tmp/aclfile.txt
 ```
 {: pre}
 
-- Accédez à la sortie suivante :
+- Vous devriez obtenir la sortie suivante :
 
 ```
 [2015-09-30 16:50:32.084] [INFO] The current access control list is being reset and replaced by the user provided file: /tmp/aclfile.txt
@@ -246,7 +260,7 @@ docker run -t -i ads-secure-gateway-client1 --F /tmp/aclfile.txt
 {: screen}
 
 ## Aide et assistance supplémentaires
-{: #support}
+{: #getting-help-and-support}
 
 Si vous avez des questions techniques sur le développement ou le déploiement d'une application avec Secure Gateway, soumettez votre question sur le site [Stack Overflow ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](http://stackoverflow.com/search?q=securegateway+ibm-bluemix).  Marquez votre question avec les étiquettes "ibm-bluemix" et "secure-gateway" pour que les équipes de développement {{site.data.keyword.Bluemix_notm}} la repère plus facilement.
 
@@ -261,10 +275,10 @@ Lors de la soumission d'un ticket, fournissez le maximum des informations suivan
 - Sous quel système d'exploitation le client s'exécute
 - Quelle version du client est utilisée (la commande 'C' sur le client permet d'obtenir cette information)
 - S'il s'agit d'un problème d'interface utilisateur, collez ou mettez en pièce jointe tous les journaux et captures d'écran associés de la console du navigateur
-- Collez ou mettez en pièce jointe tous les journaux associés à de l'application demandeuse
-- Collez ou mettez en pièce jointe tous les journaux associés au client Secure Gateway
+- Collez ou mettez en pièce jointe tous les journaux et fuseaux horaires liés à l'application demandeuse
+- Collez ou mettez en pièce jointe tous les journaux et fuseaux horaires liés au client Secure Gateway
 - Donnez des détails concernant la destination utilisée (une capture d'écran ou renseignez les zones suivantes) :
    - ID de la destination
    - Protocole
    - Authentification côté destination
-   - Certificats chargés (uniquement leurs noms et la zone dans laquelle ils ont été chargés)
+   - Certificats chargés (uniquement leurs noms et le dossier Box dans lesquels ils ont été téléchargés) 

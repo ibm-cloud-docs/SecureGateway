@@ -13,6 +13,7 @@ lastupdated: "2017-04-25"
 {: #cert-key-management}
 
 ## Generazione di una coppia certificato/chiave autofirmata
+{: #self-signed-cert-gen}
 
 Per generare una coppia certificato/chiave autofirmata, esegui questo comando:
 
@@ -23,6 +24,7 @@ openssl req -new -newkey rsa:2048 -days 365 -nodes -x509 -keyout serverKey.pem -
 
 
 ## Caricamento di una coppia certificato/chiave sul browser
+{: #upload-cert-to-browser}
 
 Per accedere a una destinazione che implementa l'autenticazione reciproca, devi convertire la tua coppia certificato/chiave in un file PKCS#12 e caricarlo sul tuo browser.
 

@@ -13,6 +13,7 @@ lastupdated: "2017-04-25"
 {: #cert-key-management}
 
 ## 自己署名証明書/鍵ペアの生成
+{: #self-signed-cert-gen}
 
 自己署名証明書/鍵ペアを生成するには、以下のコマンドを実行します。
 
@@ -23,6 +24,7 @@ openssl req -new -newkey rsa:2048 -days 365 -nodes -x509 -keyout serverKey.pem -
 
 
 ## ブラウザーへの証明書/鍵ペアのアップロード
+{: #upload-cert-to-browser}
 
 相互認証を実施する宛先にアクセスするには、証明書/鍵ペアを PKCS#12 ファイルに変換し、それをブラウザーにアップロードする必要があります。
 

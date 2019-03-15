@@ -11,6 +11,7 @@ lastupdated: "2018-08-10"
 {: #secure-gateway-resource}
 
 ## ブログおよびその他のリソース
+{: #blogs-and-others}
 
 - [Securing Destinations with TLS in Bluemix Secure Gateway ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://developer.ibm.com/bluemix/2015/04/17/securing-destinations-tls-bluemix-secure-gateway/){: new_window}
 - [Bluemix Secure Gateway - Yes I Can Get It ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://developer.ibm.com/bluemix/2015/03/27/bluemix-secure-gateway-yes-can-get/){: new_window}
@@ -21,6 +22,7 @@ lastupdated: "2018-08-10"
 
 
 ## IBM {{site.data.keyword.SecureGateway}} SDK for Bluemix の使用
+{: #ibm-sg-sdk}
 {{site.data.keyword.SecureGateway}} を node.js アプリから管理する場合は、JavaScript SDK を使用できます。 したがって、JavaScript で作業していて、{{site.data.keyword.SecureGateway}} REST インターフェースと対話する場合は、REST 呼び出しを行う必要はありません。 JavaScript SDK が HTTP 呼び出しをセットアップし、それらを使いやすい関数に入れます。  これは NPM プロジェクトとして以下で入手できます。
 
 - [IBM Secure Gateway SDK for Bluemix NPM Project ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.npmjs.com/package/bluemix-secure-gateway){: new_window}

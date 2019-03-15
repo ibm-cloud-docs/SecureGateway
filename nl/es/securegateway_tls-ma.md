@@ -19,14 +19,18 @@ Sé que el recurso con el que quiero conectar se alojará en la misma máquina q
 ![Autenticación mutua de TLS inicial](./images/tlsMA.png?raw=true "Autenticación mutua de TLS inicial")
 
 ## Autenticación de usuarios
+{: #tls-ma-user-auth}
 Voy a crear una nueva aplicación, por lo que no tengo ningún par de certificado/clave existente para que utilice mi aplicación, de modo que dejaré que los servidores de Secure Gateway generen un par automáticamente.  Para ello, solo tengo que dejar vacío el campo de carga de autenticación de usuarios.  Si ya tuviera un par que pudiera utilizar mi aplicación, cargaría mi certificado en este campo.
 
 ## Autenticación de recursos
+{: #tls-ma-resource-auth}
 
 ### Autenticación local
+{: #tls-ma-on-prem-auth}
 Para que el cliente de Secure Gateway autentique el recurso al que se está conectando, tengo que proporcionar al cliente el certificado (o cadena de certificados) que el recurso presentará.  Mi recurso no tiene una cadena de certificados completa, por lo que solo tengo que cargar su certificado en el campo Autenticación local.  Este campo acepta hasta 6 archivos de certificados independientes (.pem, .cer, .der, .crt).
 
 ### Certificado y clave de cliente
+{: #tls-ma-client-cert-and-key}
 Si tengo que especificar cómo se identificará el cliente de Secure Gateway en mi recurso, puedo cargar un certificado y una clave aquí para que los utilice el cliente.  Puesto que el cliente y el recurso se ejecutan en la misma máquina, puedo dejar este campo vacío y dejar que los servidores de Secure Gateway generen un par automáticamente.  Si mi recurso estuviera en otro host, tendría que [generar un par de certificado/clave que cargar](/docs/services/SecureGateway/securegateway_keygen.html).
 
 ![Autenticación mutua de TLS local](./images/localTLSma.png?raw=true "Autenticación mutua de TLS local")
@@ -36,6 +40,7 @@ Cuando cree este destino, los servidores de Secure Gateway generarán automátic
 ![Detalles de la autenticación mutua de TLS local](./images/editLocalTLSma.png?raw=true "Detalles de la autenticación mutua de TLS local")
 
 ## Descarga de los archivos de seguridad
+{: #tls-ma-download-files}
 En el panel de información de mi destino, hay un enlace para descargar un archivo .zip que contiene todos los certificados y claves asociados con mi destino:
 
 ![Panel de información de autenticación mutua](./images/infoPanelMA.png?raw=true "Panel de información de autenticación mutua")
@@ -55,6 +60,7 @@ Nn5TJ34LyVQ_clientCert.pem | Certificado generado automáticamente desde la pasa
 localServerCert.pem | El certificado de mi recurso local que se va a utilizar en la CA del cliente de Secure Gateway
 
 ## Creación de la aplicación
+{: #tls-ma-app-example}
 Ahora que tengo mi puerto y host de nube para mi destino, así como los distintos certificados y claves, puedo empezar a escribir mi aplicación para que se conecte a Secure Gateway.  Se trata de una sencilla aplicación Node.js que se conectará a mi servidor TLS local, recibirá una pequeña cantidad de datos y luego cerrará la conexión.
 
 ```javascript
@@ -89,6 +95,7 @@ so.on('close', function() {
 {: codeblock}
 
 ## Creación del servidor TLS
+{: #tls-ma-server-example}
 Tengo mi servidor TLS local, que es una simple aplicación Node.js que escuchará las conexiones, escribirá un mensaje sobre una conexión correcta y luego cerrará dicha conexión.
 
 ```javascript
@@ -129,6 +136,7 @@ server.listen(8999);
 {: codeblock}
 
 ## Actualización de la lista de control de accesos
+{: #tls-ma-acl}
 Antes de probar mi aplicación, tengo que asegurarme de que la ACL de mi cliente esté configurada correctamente.  He añadido `localhost:8999` a mi ACL:
 
 ```
@@ -144,9 +152,11 @@ Antes de probar mi aplicación, tengo que asegurarme de que la ACL de mi cliente
 {: screen}
 
 ## Prueba de la conexión
+{: #tls-ma-testing}
 Ahora que mi aplicación, mi servidor local y mi cliente se han configurado, obtengo la salida siguiente de mi aplicación y de mi cliente:
 
 ### Aplicación
+{: #tls-ma-testing-app}
 
 ```
 Client connected, authorized: true
@@ -156,6 +166,7 @@ Client connection closing
 {: screen}
 
 ### Cliente de Secure Gateway
+{: #tls-ma-testing-client}
 
 ```
 [2017-04-07 12:22:42.363] [INFO] (Client ID Nn5TJ34LyVQ_qCB) Connection #1 is being established to localhost:8999
@@ -164,4 +175,5 @@ Client connection closing
 {: screen}
 
 ## ¡Configuración correcta!
+{: #tls-ma-testing-result}
 Hemos configurado correctamente la autenticación mutua para la autenticación de usuarios y la autenticación de recursos.

@@ -12,7 +12,7 @@ lastupdated: "2018-08-10"
 # Reglas de iptable
 {: #iptables-rulles}
 
-Para permitir la imposición de reglas de iptable en el destino, debe tener la opción `Restringir acceso a la red` marcada en el panel de seguridad de red del destino.  En este punto, puede añadir las reglas que desea imponer, como por ejemplo 192.0.0.1 9000 (una sola IP y un solo puerto), 192.0.0.1-192.0.0.5 5000:5005 (rango de IP y rango de puertos) o cualquier combinación posible. Consulte [Configuración de la seguridad de la red](/docs/services/SecureGateway/securegateway_destination.html#configuring-network-security) para obtener más información.
+Para permitir la imposición de reglas de iptables en el destino, debe tener la opción `Restringir acceso a la red` marcada en el panel de seguridad de red del destino.  En este punto, puede añadir las reglas que desea imponer, como por ejemplo 192.0.0.1 9000 (una sola IP y un solo puerto), 192.0.0.1-192.0.0.5 5000:5005 (rango de IP y rango de puertos) o cualquier combinación de estas reglas. Consulte [Configuración de la seguridad de la red](/docs/services/SecureGateway/securegateway_destination.html#dest-network-security) para obtener más información.
 
 Si va a crear sus destinos privados con cURL, puede utilizar una línea de mandatos:
 
@@ -38,6 +38,7 @@ curl -X PUT "https://sgmanager.ng.bluemix.net/v1/sgconfig/<gateway_id>/destinati
 Observe que el primer mandato utiliza `src` para proporcionar una sola IP, mientras que el segundo utiliza `src_range` para proporcionar un rango de IP.
 
 ## Reglas de iptable para IP dinámicas
+{: #iptables-dynamic-ips}
 
 Si la aplicación tiene un conjunto dinámico de IP, pero no las conoce, puede aprovechar la API REST de {{site.data.keyword.SecureGateway}} para actualizar las reglas de iptable sobre la marcha.
 
@@ -68,7 +69,7 @@ request({
   }, console.log.bind(console)) 
 ```
 
-Esto se debe ejecutar durante el inicio de la aplicación y reconfigurará la regla de iptable durante el inicio de la aplicación. Cada regla de iptable identifica de forma exclusiva cada instancia de la aplicación utilizando los valores de `application_id` y de `CF_INSTANCE_INDEX`. La dirección IP frontal se recupera de la variable `CF_INSTANCE_IP` y se aplica a la regla de iptable.
+Se debe ejecutar al iniciar la aplicación; las reglas de IPtables definidas antes se sobrescribirán. Cada regla de iptable identifica de forma exclusiva cada instancia de la aplicación utilizando los valores de `application_id` y de `CF_INSTANCE_INDEX`. La dirección IP externa se recupera de la variable `CF_INSTANCE_IP` y se aplica a la regla de iptable.
 
 
 {: pre}

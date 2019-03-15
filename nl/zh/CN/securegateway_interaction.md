@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-10-04"
+  years: 2015, 2019
+lastupdated: "2019-02-19"
 
 ---
 {:screen: .screen}
@@ -29,17 +29,17 @@ lastupdated: "2018-10-04"
 |参数和自变量|描述|
 | ------------- | ----------- |
 |&lt;gateway ID&gt;|使用提供的网关标识连接到 {{site.data.keyword.Bluemix_notm}}|
-|-F, -\-aclfile &lt;file&gt;|访问控制表文件|
-|-g, -\-gateway &lt;hostname:port&gt;|用于手动选择特定网关目标（仅限高级使用）|
-|-l, -\-loglevel &lt;level&gt;|将日志级别更改为 ERROR、INFO、DEBUG 或 TRACE|
-|-p, -\-logpath &lt;file&gt;|将日志记录定向到特定文件|
-|-t, -\-sectoken &lt;security token&gt;|用于此网关连接的安全性令牌|
-|-P, -\-port &lt;port&gt;|运行 UI 的端口。缺省为端口 9003|
-|-w, -\-password &lt;password&gt;|用于保护 UI 的密码。缺省情况下无密码|
-|-x, -\-proxy &lt;proxy agent&gt;|用于端口 9000 连接的代理|
-|-\-noUI |阻止 UI 自动启动|
-|-\-allow|允许与客户机的所有连接。如果提供了 ACL 文件，那么会被该文件覆盖|
-|-\-service|建立初始连接后，如果所有子客户机终止，那么父代将在 60 秒内重新启动|
+| -F, -\-aclfile &lt;file&gt; |访问控制表文件|
+| -g, -\-gateway &lt;hostname:port&gt; |用于手动选择特定网关目标（仅限高级使用）|
+| -l, -\-loglevel &lt;level&gt; |将日志级别更改为 ERROR、INFO、DEBUG 或 TRACE|
+| -p, -\-logpath &lt;file&gt; |将日志直接记录到特定文件|
+| -t, -\-sectoken &lt;security token&gt; |用于此网关连接的安全性令牌|
+| -P, -\-port &lt;port&gt; |用于运行 UI 的端口。缺省为端口 9003 |
+| -w, -\-password &lt;password&gt; |用于保护 UI 的密码。缺省为无密码|
+| -x, -\-proxy &lt;proxy agent&gt; |端口 9000 连接的代理|
+| -\-noUI |阻止 UI 自动启动|
+| -\-allow |允许与客户机的所有连接。将被 ACL 文件（如果提供）覆盖|
+| -\-service |建立初始连接后，如果终止了所有子客户机，父代将在 60 秒内重新启动|
 
 <b>注：</b>`--service`、`--allow` 和 `--noUI` 标志应该是命令行自变量中位于最后的参数。
 
@@ -123,7 +123,7 @@ node lib/secgwclient.js <myGatewayID_1> <myGatewayID_2> -t none--<token for gate
 返回到[入门 - 添加客户机](/docs/services/SecureGateway/securegateway_client.html)。
 
 ## 客户机 UI
-{: #ui}
+{: #client-ui}
 
 <b>注：</b>在 Windows 或 Mac OS 上使用 Docker 时，不支持客户机 UI。
 
@@ -143,7 +143,7 @@ node lib/secgwclient.js <myGatewayID_1> <myGatewayID_2> -t none--<token for gate
 ### 仪表板
 {: #ui-dashboard}
 
-这是客户机连接后显示的主页。在此页面中，可以访问“查看日志”页面、“访问控制表”页面和“连接信息”页面。在底部，还可以选择将一个/多个连接的客户机断开连接。在页面顶部，将显示当前所选客户机以及用于连接更多客户机的选项。
+这是客户机连接后显示的主页。在此页面中，可以访问“查看日志”页面、“访问控制表”页面和“连接信息”页面。在底部，还可以选择将一个/多个连接的客户机断开连接。在页面顶部，将显示当前所选客户机，并且将提供用于连接更多客户机的选项。 
 
 ### 查看日志
 {: #ui-logs}
@@ -163,7 +163,7 @@ node lib/secgwclient.js <myGatewayID_1> <myGatewayID_2> -t none--<token for gate
 返回到[入门 - 添加客户机](/docs/services/SecureGateway/securegateway_client.html)。
 
 ## 远程客户机终止
-{: #remote}
+{: #client-remote}
 
 如果已为客户机提供标识，那么可通过 SG UI 或 SG API 远程终止该客户机。如果终止作为服务运行的客户机，那么客户机将重新启动并获取新的客户机标识；但是，如果有多个客户机连接到该服务，那么仅当所有其余的客户机均已终止后，终止的客户机才会重新启动。
 
@@ -186,3 +186,4 @@ SG 网关只能处理 250 个并发连接。如果并发请求数超过限制，
 - DataPower V7.5.1.0 之前的版本不支持使用目标端 TLS 的完整证书链
 - DataPower V7.5.1.0 之前的版本不支持云目标
 - 日志级别不能更改为 TRACE 级别
+- DataPower 中最新的 Secure Gateway 客户机版本为 1.8.0fp6，请检查[此处](/docs/services/SecureGateway/securegateway_install.html#installing-datapower)以获取更多信息

@@ -13,6 +13,7 @@ lastupdated: "2017-04-25"
 {: #cert-key-management}
 
 ## Selbst signiertes Zertifikats-/Schlüsselpaar generieren
+{: #self-signed-cert-gen}
 
 Führen Sie den folgenden Befehl aus, um ein selbst signiertes Zertifikats-/Schlüsselpaar zu generieren:
 
@@ -23,6 +24,7 @@ openssl req -new -newkey rsa:2048 -days 365 -nodes -x509 -keyout serverKey.pem -
 
 
 ## Zertifikats-/Schlüsselpaar in den Browser hochladen
+{: #upload-cert-to-browser}
 
 Wenn Sie auf ein Ziel zugreifen möchten, von dem eine gegenseitige Authentifizierung erzwungen wird, müssen Sie das Zertifikats-/Schlüsselpaar in eine Datei im PKCS#12-Format umwandeln und diese in den Browser hochladen.
 

@@ -13,35 +13,39 @@ lastupdated: "2018-08-10"
 {: #troubleshooting}
 
 ## Bewährte Verfahren für die Ausführung des Secure Gateway-Clients
-{: #best}
+{: #best-practices}
 
 - Führen Sie den Secure Gateway-Client in einer Betriebssystempartition aus, in der die Services im Netz erkannt werden, die mit dem Client über Bridges verwendet werden. Von einigen gehosteten Virtualisierungsumgebungen werden zum Beispiel mehreren Modi für Netzkonnektivität unterstützt, unter anderem auch 'NAT' und 'Bridged'. Stellen Sie sicher, dass Sie den richtigen Verbindungstyp verwenden, der den Zugriff auf die {{site.data.keyword.Bluemix}}-Services im Internet bereitstellt.
 - Installieren Sie Secure Gateway in einer IT-Umgebung, in der die unternehmensweite Sicherheitsrichtlinie dies erlaubt. In der Regel ist dies die eine geschützte gelbe Zone (Yellow Zone) oder DMZ, in der das Unternehmen die entsprechenden Sicherheitsmaßnahmen zum Schutz der lokalen Assets verwenden kann. Gehen Sie immer gemäß den unternehmensweiten Sicherheitsrichtlinien und Anweisungen vor, wenn Sie den Secure Gateway-Client installieren.
 - Stellen Sie vor der Installation eines Clients in einer Umgebung sicher, dass sowohl auf das Internet als auch auf die lokalen Assets zugegriffen werden kann und dass alle Hostnamen über ein DNS aufgelöst werden können.
 
 ## Erste Schritte zur Fehlerbehebung
+{: #initial-troubleshooting}
 
 - Fehlgeschlagene Anforderung von anfordernder Anwendung starten
 - Protokolle des Secure Gateway-Clients überprüfen
-- Falls für die Anforderung keine Clientprotokolle generiert wurden, tritt das Problem zwischen der anfordernden Anwendung und den Secure Gateway-Servern auf. Hierbei kann es sich um ein Problem bei der Netzzuverlässigkeit, ein nicht übereinstimmendes Anforderungsprotokoll bis hin zu einem falschen TLS-Handshake bei der gegenseitigen Authentifizierung handeln.
-- Falls vom Client Fehlerprotokolle für die Anforderung generiert wurden, tritt das Problem zwischen dem SG-Client und der lokalen Ressource auf. In der unten folgenden Tabelle werden gängige Fehler, die Ursachen für diese Fehler und die Möglichkeiten zu ihrer Behebung aufgeführt.
+- Falls für die Anforderung keine Clientprotokolle generiert wurden, tritt das Problem zwischen der anfordernden Anwendung und den Secure Gateway-Servern auf.  Hierbei kann es sich um ein Problem bei der Netzzuverlässigkeit, ein nicht übereinstimmendes Anforderungsprotokoll bis hin zu einem falschen TLS-Handshake bei der gegenseitigen Authentifizierung handeln.
+- Falls vom Client Protokoll auf Fehlerebene für die Anforderung generiert wurden, tritt das Problem zwischen dem SG-Client und der lokalen Ressource auf. In der unten folgenden Tabelle werden gängige Fehler, die Ursachen für diese Fehler und die Möglichkeiten zu ihrer Behebung aufgeführt.
 
 Fehler | Typische Ursache | Verfahren zur Fehlerbehebung
 --- | --- | ---
-ETIMEDOUT | Der Client kann den Hostnamen bzw. die IP-Adresse zum Aufbauen einer Verbindung aufgrund von Netzeinschränkungen nicht finden. | Versuchen Sie, den Hostnamen bzw. die IP-Adresse des Ziels von dem Host, auf dem der Client ausgeführt wird, mit Ping zu überprüfen, um die Netzkonnektivität sicherzustellen. Wenn die Docker-Version des Clients ausgeführt wird, kann das Problem durch die Überbrückung des Containers mit dem Hostbetriebssystem unter Verwendung von `--net=host` behoben werden.
-ECONNREFUSED | Der Client hat den Hostnamen bzw. die IP-Adresse zum Aufbauen der Verbindung aufgelöst, aber der Verbindungshandshake kann nicht gestartet werden. | Dies wird in der Regel durch nicht übereinstimmende Protokolle des SG-Clients und der lokalen Ressource verursacht (Beispiel: der Client versucht, eine TCP-Verbindung zu einem Host/Port herzustellen, von dem eine TLS-Verbindung erwartet wird). In manchen Fällen kann eine Firewallregel diesen Fehler anstatt ETIMEDOUT verursachen.
-ECONNRESET | Vom Client wurde eine Verbindung zum Ziel hergestellt, aber während des Handshakes (ein TLS-Handshakefehler kann auch zu unterschiedlichen Fehlern führen) oder während der Verarbeitung der Anforderung durch die lokale Ressource ist ein Fehler aufgetreten. | Die Protokolle der lokalen Ressource müssen überprüft werden, um sicherzustellen, dass die Unterbrechung der Verbindung nicht durch einen Fehler verursacht wurde. Falls in den lokalen Protokollen nichts gefunden wird, muss durch eine Überprüfung der Zielkonfiguration sichergestellt werden, dass die entsprechenden Protokolle (und Zertifikate, sofern erforderlich) dem Client für die Verbindung zur Verfügung gestellt werden.
-REMOTE_RST | Auf einem Secure Gateway-Server ist ein Fehler aufgetreten. <br><br> Bei einem lokalen Ziel kann es sich um einen Fehler handeln, der auftritt, wenn die anfordernde App eine Verbindung zum SG-Server aufbaut oder wenn eine Zeitüberschreitung beim Empfangen von Daten von einer lokalen Ressource auftritt.<br><br> Bei einem Ziel in der Cloud kann es sich um Fehler im Zusammenhang mit einem TLS-Handshake bis zu Fehlern in der Cloudressource handeln. | Stellen Sie bei einem lokalen Ziel sicher, dass die anfordernde App mithilfe der passenden Protokolle eine Verbindung zum SG-Server herstellt; falls der Fehler beim Empfangen von Daten von einer lokalen Ressource auftritt, versuchen Sie, das Zeitlimit zu erweitern bzw. zu inaktivieren.<br><br> Bei einem Ziel in der Cloud müssen die Protokolle der Cloudressource überprüft werden, um sicherzustellen, dass die Unterbrechung der Verbindung nicht durch einen Fehler verursacht wurde. Falls in den Protokollen der Cloudressource nichts gefunden wird, muss durch eine Überprüfung der Zielkonfiguration sichergestellt werden, dass die entsprechenden Protokolle (und Zertifikate, sofern erforderlich) dem Client für die Verbindung zur Verfügung gestellt werden.
+ETIMEDOUT | Der Client kann den Hostnamen bzw. die IP-Adresse zum Aufbauen einer Verbindung aufgrund von Netzeinschränkungen nicht finden. | Versuchen Sie, den Hostnamen bzw. die IP-Adresse des Ziels von dem Host, auf dem der Client ausgeführt wird, mit Ping zu überprüfen, um die Netzkonnektivität sicherzustellen.  Wenn die Docker-Version des Clients ausgeführt wird, kann das Problem durch die Überbrückung des Containers mit dem Hostbetriebssystem unter Verwendung von `--net=host` behoben werden.
+ECONNREFUSED | Der Client hat den Hostnamen bzw. die IP-Adresse zum Aufbauen der Verbindung aufgelöst, aber der Verbindungshandshake kann nicht gestartet werden. | Dies wird in der Regel durch nicht übereinstimmende Protokolle des SG-Clients und der lokalen Ressource verursacht (Beispiel: der Client versucht, eine TCP-Verbindung zu einem Host/Port herzustellen, von dem eine TLS-Verbindung erwartet wird).  In manchen Fällen kann eine Firewallregel diesen Fehler anstatt ETIMEDOUT verursachen.
+ECONNRESET | Vom Client wurde eine Verbindung zum Ziel hergestellt, aber während des Handshakes (ein TLS-Handshakefehler kann auch zu unterschiedlichen Fehlern führen) oder während der Verarbeitung der Anforderung durch die lokale Ressource ist ein Fehler aufgetreten. | Die Protokolle der lokalen Ressource müssen überprüft werden, um sicherzustellen, dass die Unterbrechung der Verbindung nicht durch einen Fehler verursacht wurde.  Falls in den lokalen Protokollen nichts gefunden wird, muss durch eine Überprüfung der Zielkonfiguration sichergestellt werden, dass die entsprechenden Protokolle (und Zertifikate, sofern erforderlich) dem Client für die Verbindung zur Verfügung gestellt werden.
+REMOTE_RST | Auf einem Secure Gateway-Server ist ein Fehler aufgetreten. <br><br> Bei einem lokalen Ziel kann es sich um einen Fehler handeln, der auftritt, wenn die anfordernde App eine Verbindung zum SG-Server aufbaut oder wenn eine Zeitüberschreitung beim Empfangen von Daten von einer lokalen Ressource auftritt.<br><br> Bei einem Ziel in der Cloud kann es sich um Fehler im Zusammenhang mit einem TLS-Handshake bis zu Fehlern in der Cloudressource handeln. | Stellen Sie bei einem lokalen Ziel sicher, dass die anfordernde App mithilfe der passenden Protokolle eine Verbindung zum SG-Server herstellt; falls der Fehler beim Empfangen von Daten von einer lokalen Ressource auftritt, versuchen Sie, das Zeitlimit zu erweitern bzw. zu inaktivieren. <br><br> Bei einem Ziel in der Cloud müssen die Protokolle der Cloudressource überprüft werden, um sicherzustellen, dass die Unterbrechung der Verbindung nicht durch einen Fehler verursacht wurde.  Falls in den Protokollen der Cloudressource nichts gefunden wird, muss durch eine Überprüfung der Zielkonfiguration sichergestellt werden, dass die entsprechenden Protokolle (und Zertifikate, sofern erforderlich) dem Client für die Verbindung zur Verfügung gestellt werden.
 
-Viele Anwendungen sind blockiert, nachdem der Fehler ECONNRESET am anderen Ende des Tunnels aufgetreten ist. Hierbei handelt es sich um ein erwartetes Verhalten. Von Secure Gateway kann das RST-Paket am anderen Ende des Tunnels nicht wiederholt werden, da die TCP-Pakete für diese Seite des Tunnels bereits bestätigt wurden. Die einzige Methode zum Beenden der Blockierung sind Zeitlimitwerte auf Anwendungsebene, bei deren Verwendung die Anwendung nie eine Bestätigungsantwort erhält.
+Viele Anwendungen sind blockiert, nachdem der Fehler ECONNRESET am anderen Ende des Tunnels aufgetreten ist. Hierbei handelt es sich um ein erwartetes Verhalten. Von Secure Gateway kann das RST-Paket am anderen Ende des Tunnels nicht wiederholt werden, da die TCP-Pakete für diese Seite des Tunnels bereits bestätigt wurden. Die einzige Methode zum Beenden der Blockierung ist die Definition von
+Zeitlimitwerten für die Anwendung, die nie eine Bestätigungsantwort erhält.
 
 ## Neustart des Docker-Clients bei Neustart des Servers konfigurieren
-{: #docker}
+{: #docker-auto-restart}
 
 ### Ausgangssituation
+{: #docker-auto-restart-what-is-happening}
 Wenn Sie den Server erneut starten, auf dem der Secure Gateway-Client ausgeführt wird, müssen Sie den Docker-Client von Secure Gateway manuell erneut starten. Wie können Sie festlegen, dass der Client nach einem Neustart des Systems automatisch gestartet wird?
 
 ### Fehlerbehebung
+{: #docker-auto-restart-how-to-fix-it}
 
 - Unter Linux- oder UNIX-Systemen:
 - Fügen Sie den Docker-Befehl in ein Script ein, das durch einen Cron-Job aufgerufen werden kann.
@@ -57,6 +61,7 @@ for /L %i in (0,0,0) do docker run -it ibmcom/secure-gateway-client <gateway_id>
 {: #not-in-cn}
 
 ### Ausgangssituation
+{: #not-in-cn-what-is-happening}
 Sie versuchen, TLS lokal auf der Clientseite mithilfe des Secure Gateway-Clients zu implementieren, und Sie erhalten die folgende Fehlernachricht.
 
 ```
@@ -70,6 +75,7 @@ Where:
 {: screen}
 
 ### Entstehung des Problems
+{: #not-in-cn-why-it-is-happening}
 Der allgemeine Name (zum Beispiel der FQDN des Servers oder der eigene Name) der lokalen Anwendung und des Zertifikats, das Sie in {{site.data.keyword.Bluemix_notm}} für dieses Ziel hochladen, stimmen nicht überein.
 
 - Überprüfen Sie die folgenden Punkte:
@@ -77,6 +83,7 @@ Der allgemeine Name (zum Beispiel der FQDN des Servers oder der eigene Name) der
 - In das {{site.data.keyword.Bluemix_notm}}-Ziel für diesen Client wurde das korrekte Zertifikat hochgeladen.
 
 ### Fehlerbehebung
+{: #not-in-cn-how-to-fix-it}
 
  1. Wechseln Sie in der {{site.data.keyword.Bluemix_notm}}-Benutzerschnittstelle zum Secure Gateway-Dashboard.
  2. Wählen Sie das entsprechende Ziel aus und klicken Sie auf das Symbol 'Bearbeiten'.
@@ -87,11 +94,12 @@ Der allgemeine Name (zum Beispiel der FQDN des Servers oder der eigene Name) der
 {: #san}
 
 ### Ausgangssituation
+{: #san-what-is-happening}
 Der allgemeine Name im Zertifikat ist die IP-Adresse des Gateways, aber das Zertifikat weist keinen SAN (Subject Alternative Name) auf, der mit der IP-Adresse übereinstimmt; somit schlägt der Verbindungsversuch des Clients fehl.  
 
-Da sich der Hostname nicht auflösen lässt, wird die IP-Adresse im Ziel verwendet. Der allgemeine Name im Zertifikat ist die IP-Adresse des Gateways, aber das Zertifikat weist keinen SAN (Subject Alternative Name) auf, der mit der IP-Adresse übereinstimmt; somit schlägt der Verbindungsversuch des Clients fehl.
+Da sich der Hostname nicht auflösen lässt, wird die IP-Adresse im Ziel verwendet.  Der allgemeine Name im Zertifikat ist die IP-Adresse des Gateways, aber das Zertifikat weist keinen SAN (Subject Alternative Name) auf, der mit der IP-Adresse übereinstimmt; somit schlägt der Verbindungsversuch des Clients fehl.
 
-Es wurde ein Ziel mit TLS erstellt, aber anstatt den Hostnamen des Ziels zu verwenden, wurde die IP-Adresse des Ziels verwendet. Beim Verbinden des Clients wird der folgende Fehler ausgelöst.
+Es wurde ein Ziel mit TLS erstellt, aber anstatt den Hostnamen des Ziels zu verwenden, wurde die IP-Adresse des Ziels verwendet.  Beim Verbinden des Clients wird der folgende Fehler ausgelöst.
 
 ```
 [2015-10-15 13:00:04.866] [INFO] Connection #0 is being established to 10.3.20.31:443
@@ -101,10 +109,12 @@ Es wurde ein Ziel mit TLS erstellt, aber anstatt den Hostnamen des Ziels zu verw
 {: screen}
 
 ### Entstehung des Problems
-Vom SSL-Überprüfungscode im Gateway-Client wird dieses Ziel anders behandelt, weil eine IP-Adresse anstelle eines Hostnamens verwendet wird. Anstatt einen Abgleich mit dem allgemeinen Namen des Zertifikats durchzuführen, wird der SAN des Zertifikats durchsucht, um einen Abgleich mit der IP-Adresse durchzuführen. Da das Zertifikat keinen SAN enthält, wird dies als schlechte Verbindung interpretiert, und der SSL-Handshake schlägt fehl.
+{: #san-why-it-is-happening}
+Vom SSL-Überprüfungscode im Gateway-Client wird dieses Ziel anders behandelt, weil eine IP-Adresse anstelle eines Hostnamens verwendet wird.  Anstatt einen Abgleich mit dem allgemeinen Namen des Zertifikats durchzuführen, wird der SAN des Zertifikats durchsucht, um einen Abgleich mit der IP-Adresse durchzuführen.  Da das Zertifikat keinen SAN enthält, wird dies als schlechte Verbindung interpretiert, und der SSL-Handshake schlägt fehl.
 
 ### Fehlerbehebung
-In der Fehlernachricht wird zwar nicht der allgemeine Name angegeben (Beispiel: [ERROR] Connection ## had error: Host: . is not cert&apos;s CN: ), aber die Liste der Zertifikate; dies deutet darauf hin, dass das selbst signierte Zertifikat fehlerhaft generiert wurde. Durch dieses Problem wird ein Zertifikat unter Verwendung eines FQDN oder allgemeinen Namens mit einer IP-Adresse generiert. Dies funktioniert nicht, da IP-Adressen nur unterstützt werden, wenn ein SAN (Subject Alternative Name) verwendet wird.
+{: #san-how-to-fix-it}
+In der Fehlernachricht wird zwar nicht der allgemeine Name angegeben (Beispiel: [ERROR] Connection ## had error: Host: . is not cert&apos;s CN: ), aber die Liste der Zertifikate; dies deutet darauf hin, dass das selbst signierte Zertifikat fehlerhaft generiert wurde. Das Problem ist, dass das Zertifikat unter Verwendung eines FQDN oder eines CN mit einer IP-Adresse generiert wurde; dies funktioniert nicht, da IP-Adressen nur unterstützt werden, wenn ein SAN (Subject Alternative Name) verwendet wird.
 
 Methode zum Generieren eines Zertifikats mit einer IP als allgemeiner Name mit OpenSSL:
 
@@ -176,6 +186,7 @@ in die Standardeinstellung:
 {: #depth-zero}
 
 ### Ausgangssituation
+{: #depth-zero-what-is-happening}
 Sie versuchen, TLS lokal auf der Clientseite mithilfe des Secure Gateway-Clients zu implementieren, und Sie erhalten die folgende Fehlernachricht.
 
 ```
@@ -186,9 +197,11 @@ Sie versuchen, TLS lokal auf der Clientseite mithilfe des Secure Gateway-Clients
 {: screen}
 
 ### Entstehung des Problems
+{: #depth-zero-why-it-is-happening}
 Im definierten Ziel fehlt ein clientseitiges Zertifikat.
 
 ### Fehlerbehebung
+{: #depth-zero-how-to-fix-it}
  1. Wechseln Sie in der {{site.data.keyword.Bluemix_notm}}-Benutzerschnittstelle zum Secure Gateway-Dashboard.
  2. Wählen Sie das entsprechende Ziel aus und klicken Sie auf das Symbol 'Bearbeiten'.
  3. Klicken Sie auf 'Zertifikat hochladen'.
@@ -196,12 +209,14 @@ Im definierten Ziel fehlt ein clientseitiges Zertifikat.
 
 
 ## Wie kann eine ACL-Datei interaktiv in den Docker-Client geladen werden?
-{: #docker-acl}
+{: #docker-load-acl}
 
 ### Ausgangssituation
-Da Docker ein Container oder eine virtualisierte Umgebung ist, kann von Docker erst dann direkt auf das Dateisystem zugegriffen werden, wenn der Container tatsächlich gestartet ist. So wird verhindert, dass das Dateisystem auf den Hostmaschinen von Docker gelesen wird, bis Docker tatsächlich gestartet und ausgeführt wird.
+{: #docker-load-acl-what-is-happening}
+Da Docker ein Container oder eine virtualisierte Umgebung ist, kann von Docker erst dann direkt auf das Dateisystem zugegriffen werden, wenn der Container tatsächlich gestartet ist.  So wird verhindert, dass das Dateisystem auf den Hostmaschinen von Docker gelesen wird, bis Docker tatsächlich gestartet und ausgeführt wird.
 
 ### Fehlerbehebung
+{: #docker-load-acl-how-to-fix-it}
 So können Sie den Fehler beheben:
 
 - Erstellen Sie eine Dockerfile, um die Datei 'aclfile.txt' einzuschließen:
@@ -236,9 +251,9 @@ docker run -t -i ads-secure-gateway-client1  --F /tmp/aclfile.txt
 {: screen}
 
 ## Weitere Hilfe und Unterstützung anfordern
-{: #support}
+{: #getting-help-and-support}
 
-Wenn Sie technische Fragen zum Entwickeln oder Bereitstellen einer Anwendung mit Secure Gateway haben, posten Sie Ihre Frage auf [Stack Overflow ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](http://stackoverflow.com/search?q=securegateway+ibm-bluemix). Kennzeichnen Sie Ihre Frage mit "ibm-bluemix" und "secure-gateway", sodass sie von den {{site.data.keyword.Bluemix_notm}}-Entwicklerteams leichter gefunden werden können.
+Wenn Sie technische Fragen zum Entwickeln oder Bereitstellen einer Anwendung mit Secure Gateway haben, posten Sie Ihre Frage auf [Stack Overflow ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](http://stackoverflow.com/search?q=securegateway+ibm-bluemix).  Kennzeichnen Sie Ihre Frage mit "ibm-bluemix" und "secure-gateway", sodass sie von den {{site.data.keyword.Bluemix_notm}}-Entwicklerteams leichter gefunden werden können.
 
 Wenn Sie Fragen zum Service oder zu den Anweisungen für den Einstieg haben, verwenden Sie das Forum [IBM developerWorks dW Answers ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://developer.ibm.com/answers/topics/securegateway/?smartspace=bluemix) und die Markierungen "bluemix" und "Secure Gateway".
 
@@ -251,10 +266,10 @@ Geben Sie beim Erstellen eines Tickets möglichst viele der folgenden Informatio
 - Unter welchem Betriebssystem wird der Client ausgeführt?
 - Welche Version des Clients wird verwendet (dies kann mithilfe des Befehls 'C' auf dem Client festgestellt werden)?
 - Wenn es sich um ein Problem der Benutzerschnittstelle handelt, fügen Sie alle zugehörigen Konsolenprotokolle und Screenshots des Browsers ein oder hängen Sie diese an.
-- Fügen Sie alle zugehörigen Protokolle der anfordernden Anwendung ein oder hängen Sie diese an.
-- Fügen Sie alle zugeordneten Protokolle des Secure Gateway-Clients ein oder hängen Sie diese an.
+- Fügen Sie alle zugehörigen Protokolle der anfordernden Anwendung ein oder hängen Sie diese an, samt Zeitzone.
+- Fügen Sie alle zugeordneten Protokolle des Secure Gateway-Clients ein oder hängen Sie diese an, samt Zeitzone.
 - Geben Sie die Details des verwendeten Ziels an (senden Sie entweder einen Screenshot oder füllen Sie die folgenden Felder aus):
    - Ziel-ID
    - Protokoll
    - Zielseitige Authentifizierung
-   - Hochgeladene Zertifikate (nur Namen und Bereiche nach dem Hochladen)
+   - Hochgeladene Zertifikate (nur Namen und Ordnerbereiche oder Links nach dem Hochladen)

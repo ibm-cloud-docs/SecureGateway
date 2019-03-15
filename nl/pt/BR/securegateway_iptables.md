@@ -12,7 +12,8 @@ lastupdated: "2018-08-10"
 # Regras de tabela de IPs
 {: #iptables-rulles}
 
-Para permitir o cumprimento de regras de iptable em seu destino, deve-se ter a opção `Restrict network access` marcada no painel Segurança de rede de seu destino. Nesse ponto, é possível incluir as regras que você deseja cumprir, como: 192.0.0.1 9000 (IP e porta únicos), 192.0.0.1-192.0.0.5 5000:5005 (intervalo de IPs e intervalo de portas) ou qualquer combinação. Veja [Configurando a segurança de rede](/docs/services/SecureGateway/securegateway_destination.html#configuring-network-security) para obter mais informações.
+Para permitir a imposição das regras iptables em seu destino, deve-se ter a opção `Restringir acesso à rede` marcada no painel Segurança de rede do seu destino. Nesse ponto, é possível incluir
+as regras que deseja impor, tais como: 192.0.0.1 9000 (IP único e porta), 192.0.0.1-192.0.0.5 5000:5005 (intervalo de IPs e intervalo de portas) ou qualquer combinação dessas regras. Veja [Configurando a segurança de rede](/docs/services/SecureGateway/securegateway_destination.html#dest-network-security) para obter mais informações.
 
 Se estiver criando seus destinos privados com cURL, você poderá usar um comando como:
 
@@ -38,6 +39,7 @@ curl -X PUT "https://sgmanager.ng.bluemix.net/v1/sgconfig/<gateway_id>/destinati
 Observe que o primeiro comando usa `src` para fornecer um único IP, enquanto o segundo usa `src_range` para fornecer um intervalo de IPs.
 
 ## Regras de tabela de IPs para IPs dinâmicos
+{: #iptables-dynamic-ips}
 
 Se seu aplicativo tiver um conjunto dinâmico de IPs, mas você não os souber, será possível alavancar a API de REST do {{site.data.keyword.SecureGateway}}
 para atualizar as regras de tabela de IPs instantaneamente.
@@ -69,9 +71,10 @@ request({
   }, console.log.bind(console)) 
 ```
 
-Isso deve ser executado na inicialização do aplicativo e reconfigurará a regra de tabela de IPs na inicialização do aplicativo. Cada regra de tabela de IPs
-identifica exclusivamente cada instância do aplicativo usando o `application_id` e `CF_INSTANCE_INDEX`. O endereço IP frontal
-é recuperado da variável `CF_INSTANCE_IP` e aplicado à regra de tabela de IPs.
+Isso deve ser executado ao iniciar o aplicativo, e qualquer regra de tabela de IP que tenha sido
+definida antes será sobrescrita. Cada regra de tabela de IPs
+identifica exclusivamente cada instância do aplicativo usando o `application_id` e `CF_INSTANCE_INDEX`. O endereço IP externo é recuperado da variável `CF_INSTANCE_IP`
+e aplicado à regra de tabela de IPs.
 
 
 {: pre}

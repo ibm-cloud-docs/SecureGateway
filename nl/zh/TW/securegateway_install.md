@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-10-11"
+  years: 2015, 2019
+lastupdated: "2019-02-25"
 
 ---
 {:screen: .screen}
@@ -13,7 +13,7 @@ lastupdated: "2018-10-11"
 {: #client-install}
 
 ## Docker
-{: #docker}
+{: #installing-docker}
 
 Docker
 是協力廠商平台，它提供容器方式來輕鬆快速地安裝應用程式，且只需要很少配置或不需任何配置。
@@ -49,7 +49,7 @@ docker run -it ibmcom/secure-gateway-client <gateway ID> -t <security token>
 回到[開始使用 - 新增用戶端](/docs/services/SecureGateway/securegateway_client.html)。
 
 ## Mac OS X
-{: #mac}
+{: #installing-mac}
 
 ### Mac OS X 的執行需求
 {: #mac-requirements}
@@ -63,7 +63,7 @@ docker run -it ibmcom/secure-gateway-client <gateway ID> -t <security token>
 視系統的安全設定而定，您可能需要有管理專用權才能執行此安裝。
 
  1. 裝載從 {{site.data.keyword.SecureGateway}} 使用者介面下載的 DMG 映像檔，方法通常是「按兩下」該映像檔。
- 2. 應該會出現新的「搜尋器」視窗。此視窗應該包含一個應用程式「捷徑」圖示，請將應用程式拖放至該捷徑。否則，請「按兩下」已裝載的磁區，然後將應用程式圖示拖放至「搜尋器」資訊看板中的「應用程式」圖示。
+ 2. 應該會出現新的「搜尋器」視窗。否則，請「按兩下」已裝載的磁區。此視窗應該包含一個 "ibm" 資料夾圖示和一個應用程式「捷徑」圖示，請將 "ibm" 資料夾拖放至該捷徑。
 
 ### 啟動互動式用戶端階段作業
 {: #mac-run}
@@ -73,7 +73,7 @@ docker run -it ibmcom/secure-gateway-client <gateway ID> -t <security token>
 回到[開始使用 - 新增用戶端](/docs/services/SecureGateway/securegateway_client.html)。
 
 ## Linux
-{: #linux}
+{: #installing-linux}
 
 安裝包括 {{site.data.keyword.SecureGatewayfull}} 用戶端，以及 IBM nodejs 套件的安全版本。兩者都安裝在系統的 /opt/ibm 目錄下。安裝程式將會建立或更新下列檔案：
 
@@ -179,7 +179,7 @@ License: http://www.ibm.com/software/sla/sladb.nsf/lilookup/986C7686F22D4D358525
 
    用戶端安裝程式會啟動並安裝用戶端，並在 /etc/ibm 中建立 sgenvironment.conf 檔案。
 
-2. 選用項目：如果您要使用系統的 Upstart 處理程序，則必須編輯此檔案並提供下列內容，用戶端才能正確啟動。如需編輯此配置檔的相關資訊，請參閱[使用 Upstart](/docs/services/SecureGateway/securegateway_auto-start.html#linux)。
+2. 選用項目：如果您要使用系統的 Upstart 處理程序，則必須編輯此檔案並提供下列內容，用戶端才能正確啟動。如需編輯此配置檔的相關資訊，請參閱[使用 Upstart](/docs/services/SecureGateway/securegateway_auto-start.html#auto-start-linux)。
 
 3. 如果您已使用 Upstart 來啟動用戶端，請檢查日誌檔，確定其正確執行中。
 
@@ -194,6 +194,20 @@ License: http://www.ibm.com/software/sla/sladb.nsf/lilookup/986C7686F22D4D358525
    rpm -q ibm-securegateway-client
    ```
    {: pre}
+
+### AIX 安裝
+{: #aix-install}
+
+1. 確定已針對套件設定執行檔許可權。必要的話，請發出下列指令來變更檔案許可權：
+    ```
+    chmod a+x <secure-gateway-bin-package>
+    ```
+2. 發出下列指令來解壓縮套件：
+    ```
+    ./<secure-gateway-bin-package>
+    ```
+
+附註：請確定您的 AIX 系統是否滿足執行 Node.js 的需求，並且已安裝 ksh。
 
 ### 啟動互動式用戶端階段作業
 {: #linux-run}
@@ -211,7 +225,7 @@ node lib/secgwclient.js <gateway ID> -t <security token>
 回到[開始使用 - 新增用戶端](/docs/services/SecureGateway/securegateway_client.html)。
 
 ## Windows
-{: #windows}
+{: #installing-windows}
 
 ### 安裝用戶端
 {: #windows-install}
@@ -256,7 +270,7 @@ secgw.cmd
 回到[開始使用 - 新增用戶端](/docs/services/SecureGateway/securegateway_client.html)。
 
 ## DataPower
-{: #datapower}
+{: #installing-datapower}
 
 DataPower 具有內嵌版的「{{site.data.keyword.SecureGateway}} 用戶端」。視 DataPower 版本而定，您可能有不同的「{{site.data.keyword.SecureGateway}} 用戶端」版本。請注意任何適用的 [DataPower 用戶端限制](/docs/services/SecureGateway/securegateway_interaction.html#limits-datapower)。使用舊的「Secure Gateway 用戶端」可能會遇到非預期的錯誤。
 

@@ -17,7 +17,7 @@ Le client {{site.data.keyword.SecureGateway}} offre une prise en charge intégr�
 A compter de la version 1.5.0, des règles de liste de contrôle d'accès seront synchronisées sur tous les clients connectés à la même passerelle.  Ainsi, il vous suffit d'établir ou de mettre à jour votre liste de contrôle d'accès depuis un client unique et elle est partagée sur tous les clients en cours d'exécution connectés à cette passerelle.  La liste de contrôle d'accès sera également conservée entre les sessions, de sorte que la connexion à un nouveau client appliquera les mêmes règles de liste de contrôle d'accès.
 
 ## Commandes de liste de contrôle d'accès
-{: #commands}
+{: #acl-commands}
 
 Les commandes de liste de contrôle d'accès prises en charge sont les suivantes :
 
@@ -49,7 +49,7 @@ La commande `show acl` affiche la liste de contrôle d'accès actuellement défi
 Retour à [Initiation - Ajout d'un client](/docs/services/SecureGateway/securegateway_client.html).
 
 ## Contrôle de route HTTP/S à l'aide d'une liste de contrôle d'accès
-{: #routes}
+{: #acl-route-control}
 
 A compter de la version 1.6.0, les destinations HTTP/S peuvent aussi imposer des routes spécifiques sur les entrées de liste de contrôle d'accès.  Celles-ci sont ajoutées de la même façon que les entrées de liste de contrôle d'accès classiques mais avec le chemin inclus à la fin de la règle. Par exemple, la commande suivante autorise uniquement le passage des demandes qui suivent le chemin /my/api :
 
@@ -63,12 +63,12 @@ Une fois cette règle définie, les demandes via `<cloud host>:<cloud port>/my/a
 Les routes ne sont prises en charge que sur les commandes `acl allow`.
 
 ## Priorité des listes de contrôle d'accès
-{: #precedence}
+{: #acl-precedence}
 
 Une fois la commande `acl allow :` fournie, si d'autres commandes `acl allow` sont entrées, la règle d'autorisation `ALL:ALL` (provenant d'`acl allow :`) est retirée de la liste car il est supposé que vous ne voulez plus autoriser l'accès illimité.  Après avoir fourni une commande `acl deny :`, si une autre commande `acl deny` est entrée, la règle de refus `ALL:ALL` (provenant d'`acl deny :`) est retirée de la liste car il est supposé que vous ne voulez plus restreindre tous les accès.  Si vous affichez vos règles de liste de contrôle d'accès actuelles via la commande `show acl` de l'interface de ligne de commande, un indicateur signale si les règles non répertoriées sont autorisées ou refusées.
 
 ## Importation d'un fichier de liste de contrôle d'accès
-{: #import}
+{: #import-acl-file}
 
 Vous pouvez indiquer dans la commande `acl file` le nom d'un fichier qui contient les commandes de liste de contrôle d'accès prises en charge que le client lira au démarrage. Les commandes que contient ce fichier doivent être au format suivant :
 
@@ -87,9 +87,9 @@ Pour un exemple de fichier de liste de contrôle d'accès, cliquez [ici](/docs/s
 Retour à [Initiation - Ajout d'un client](/docs/services/SecureGateway/securegateway_client.html).
 
 ## Copie de votre fichier LCA dans le client {{site.data.keyword.SecureGateway}} Docker
-{: #docker}
+{: #copy-acl-to-docker}
 
-Le client Docker {{site.data.keyword.SecureGateway}} s'exécute essentiellement dans son propre conteneur de virtualisation.  Par conséquent, le système de fichiers de la machine hôte n'est pas directement accessible pour les processus qui s'exécutent dans le conteneur, y compris le client {{site.data.keyword.SecureGateway}}.  A compter de la version 1.8.0 de Docker Engine, vous pouvez utiliser la commande 'docker cp' pour envoyer les fichiers qui existent sur votre machine hôte dans le conteneur, qu'il soit en cours d'exécution ou arrêté.  Vous devez effectuer cette opération pour pouvoir utiliser la commande interactive ACL FILE du client {{site.data.keyword.SecureGateway}}.
+Le client Docker {{site.data.keyword.SecureGateway}} s'exécute essentiellement dans son propre conteneur de virtualisation.  Par conséquent, le système de fichiers de la machine hôte n'est pas directement accessible pour les processus qui s'exécutent dans le conteneur, y compris le client {{site.data.keyword.SecureGateway}}.  A compter de la version 1.8.0 de Docker Engine, vous pouvez utiliser la commande 'docker cp' pour importer les fichiers qui existent sur votre machine hôte dans le conteneur, qu'il soit en cours d'exécution ou arrêté, afin de pouvoir utiliser la commande interactive ACL FILE du client {{site.data.keyword.SecureGateway}}.
 
 Pour utiliser la prise en charge 'cp' interactive dans Docker depuis votre hôte vers l'instance Docker, vous devez disposer de Docker version 1.8.0. Pour le vérifier, exécutez la commande `docker --version`
 
@@ -114,7 +114,7 @@ Server:
 ```
 {: screen}
 
-Envoyez ensuite votre fichier de liste de contrôle d'accès à l'image Docker comme suit :
+Pour importer votre liste de fichiers acl dans l'image Docker, procédez comme suit :
 
 - Exécutez la commande 'docker ps' pour trouver votre ID conteneur
 

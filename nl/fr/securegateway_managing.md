@@ -10,6 +10,7 @@ lastupdated: "2017-04-10"
 {: #manage-sg-service}
 
 ## {{site.data.keyword.SecureGateway}} Tableau de bord
+{: #secure-gateway-dashboard}
 A partir de votre tableau de bord {{site.data.keyword.SecureGateway}}, vous pouvez rapidement visualiser les informations suivantes :
 
 - Le nombre en cours de connexions à vos destinations sur toutes vos passerelles.
@@ -21,6 +22,7 @@ A partir de votre tableau de bord {{site.data.keyword.SecureGateway}}, vous pouv
 ![{{site.data.keyword.SecureGateway}} Tableau de bord avec utilisation](./images/dashboardUsage.png?raw=true "{{site.data.keyword.SecureGateway}} Tableau de bord avec utilisation")
 
 ### Profil de service
+{: #dashboard-service-profile}
 Si vous cliquez sur le bouton Profil, les informations suivantes s'affichent :
 
 Zone | Description
@@ -34,6 +36,7 @@ Excédent passerelle | Nombre de dépassements de passerelle qui vous est actuel
 Excédent données | Nombre de dépassements de données imputés pour le cycle de facturation du mois en cours.
 
 ### Panneau d'informations sur la passerelle
+{: #dashboard-gw-info-panel}
 Si vous cliquez sur le bouton Paramètres de n'importe quelle vignette de passerelle, les informations suivantes s'affichent :
 
 - Le jeton de sécurité requis pour utiliser l'API ou connecter un client, selon que le jeton est imposé aux connexions client.
@@ -50,6 +53,7 @@ Les tâches suivantes peuvent également être effectuées à partir du panneau 
 - Supprimer la passerelle.
 
 ## Tableau de bord d'une passerelle particulière
+{: #dashboard-particular-gateway}
 Si vous cliquez sur l'une des vignettes de passerelle, le tableau de bord de cette passerelle s'affiche.  Comme depuis le tableau de bord {{site.data.keyword.SecureGateway}} principal, vous pouvez rapidement visualiser les informations suivantes :
 
 - Le nombre en cours de connexions aux destinations sur cette passerelle.
@@ -61,10 +65,11 @@ Si vous cliquez sur l'une des vignettes de passerelle, le tableau de bord de cet
 ![Tableau de bord d'une passerelle particulière](./images/viewGateway.png?raw=true "Tableau de bord d'une passerelle particulière")
 
 ### Panneau d'informations sur la destination
+{: #dashboard-dest-info-panel}
 Si vous cliquez sur le bouton Paramètres de n'importe quelle vignette de destination, les informations suivantes s'affichent :
 
 - L'ID de destination requis pour utiliser l'API.
-- Les destinations sur site auront un numéro de port et un nom d'hôte de cloud. Votre application a besoin de cette information pour se connecter à votre ressource sur site.
+- Les destinations sur site auront un numéro de port et un nom d'hôte de cloud.  Votre application a besoin de cette information pour se connecter à votre ressource sur site.
 - Les destinations sur le cloud auront un port client.  Il s'agit du port sur lequel le client {{site.data.keyword.SecureGateway}} sera en mode écoute pour connecter à votre application sur site à votre ressource de cloud.
 - L'hôte et le port de ressource vers lesquels pointe cette destination.
 - Quand la destination a été créée et quel utilisateur l'a créée.

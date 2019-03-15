@@ -10,36 +10,46 @@ lastupdated: "2017-04-25"
 {: #secure-gateway-change-log}
 
 ## v1.7.0 Fixpack 1
+{: #v171fp1}
 
 ### Correzioni
+{: #v171fp1-fixes}
 
-- Corregge l'errore `EADDRINUSE` causato da un non corretto teardown dei listener all'eliminazione della destinazione.
+- Risolve l'errore `EADDRINUSE` causato dai listener che non eseguono un teardown in modo appropriato quando viene eliminata una destinazione.
 - Risolve il problema per cui non era possibile eliminare le istanze del servizio associate a un'applicazione.
 
 ## v1.7.0
+{: #v170}
 
 ### Funzioni
+{: #v170-features}
 
 - Introduce nuovi piani del servizio: Essentials, Professional ed Enterprise.
 - Il client Secure Gateway ora supporta il proxy SOCKS tra se stesso e la destinazione in loco.
 
 ## v1.6.0 Fixpack 1
+{: #v160fp1}
 
 ### Correzioni
+{: #v160fp1-fixes}
 
 - Risolve il problema per cui più client che si disconnettono producono dei processi orfani nell'array di client connesso.
 - Ora ripulisce le connessioni orfane causate da listener messi in pausa in modo non corretto.
 
 ## v1.6.0
+{: #v160}
 
 ### Funzioni
+{: #v160-features}
 
 - L'ACL (Access Control List) ora supporta uno specifico instradamento di percorso per le richieste HTTP/S.
 - Le destinazioni adesso supportano gli indicatori di nome server per le connessioni TLS.
 
 ## v1.5.1
+{: #v151}
 
 ### Funzioni
+{: #v151-features}
 
 - È stata aggiunta una procedura guidata per le destinazioni per la creazione della destinazione.
 - I gateway supportano adesso il caricamento di una coppia certificato/chiave.
@@ -48,8 +58,10 @@ lastupdated: "2017-04-25"
 - Test di latenza tra client e server in grado di essere eseguiti dall'IU di Secure Gateway.
 
 ## v1.5.0 Fixpack 1
+{: #v150fp1}
 
 ### Correzioni
+{: #v150fp1-fixes}
 
 - Ripulisce i processi tunnel orfani alla disconnessione di rete.
 - Risolve l'assegnazione di porta duplicata causata da un'eliminazione della destinazione non riuscita.
@@ -57,8 +69,10 @@ lastupdated: "2017-04-25"
 - Risolve i gestori IPC mancanti sui processi di sostituzione.
 
 ## v1.5.0
+{: #v150}
 
 ### Funzioni
+{: #v150-features}
 
 - Il client ora dispone di una IU interattiva locale.
 - Le connessioni UDP sono adesso supportate.
@@ -67,8 +81,10 @@ lastupdated: "2017-04-25"
 - l'ACL (Access Control List) esegue la sincronizzazione tra i client connessi allo stesso gateway.
 
 ## v1.4.2
+{: #v142}
 
 ### Funzioni
+{: #v142-features}
 
 - Ai client viene ora assegnato un ID quando si connettono al server SG.
 - I client ora vengono terminati in remoto tramite l'API o tramite l'IU di Secure Gateway.

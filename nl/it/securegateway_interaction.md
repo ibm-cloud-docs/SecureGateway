@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-10-04"
+  years: 2015, 2019
+lastupdated: "2019-02-19"
 
 ---
 {:screen: .screen}
@@ -24,7 +24,7 @@ Ci sono diversi modi per interagire con il client:
 ### Argomenti e opzioni di avvio
 {: #startup-args}
 
-La seguente tabella descrive tutte le opzioni disponibili che possono essere fornite insieme al comando di avvio per il client. Il loro utilizzo consentirà la configurazione completa del client prima dell'avvio piuttosto che richiedere la singola impostazione una volta che il client è in esecuzione.
+La seguente tabella descrive tutte le opzioni disponibili che possono essere fornite insieme al comando di avvio per il client.  Il loro utilizzo consentirà la configurazione completa del client prima dell'avvio piuttosto che richiedere la singola impostazione una volta che il client è in esecuzione.
 
 | Parametro e arguenti | Descrizione |
 | ------------- | ----------- |
@@ -51,15 +51,15 @@ Il caso d'uso più di base consiste nell'iniziare con una connessione client sin
 ```
 {: pre}
 
-Queste opzioni possono anche essere estese per supportare la connessione automatica di più client. Per eseguirne la trasmissione a più connessioni client, è necessario farlo utilizzando uno specifico formato. Gli ID gateway possono essere trasmessi nello stesso modo utilizzato per la connessione a gateway singolo (con ciascun ID gateway separato da uno spazio); tuttavia, l'ordine di questi ID determina
-l'ordine che deve seguire il resto degli argomenti. Quando trasmetti uno qualsiasi degli altri argomenti, essi devono
-essere separati da `--` affinché vengano rilevati correttamente. Se non viene trasmesso alcun argomento per un determinato indicatore, si presume che non si applichi a nessuno dei client.
+Queste opzioni possono anche essere estese per supportare la connessione automatica di più client.  Per eseguirne la trasmissione a più connessioni client, è necessario farlo utilizzando uno specifico formato.  Gli ID gateway possono essere trasmessi nello stesso modo utilizzato per la connessione a gateway singolo (con ciascun ID gateway separato da uno spazio); tuttavia, l'ordine di questi ID determina
+l'ordine che deve seguire il resto degli argomenti.  Quando trasmetti uno qualsiasi degli altri argomenti, essi devono
+essere separati da `--` affinché vengano rilevati correttamente.  Se non viene trasmesso alcun argomento per un determinato indicatore, si presume che non si applichi a nessuno dei client.
 
-Se non vengono forniti argomenti sufficienti per soddisfare tutti gli ID gateway, questi verranno applicati in ordine finché non ci saranno più argomenti. Ad esempio, se vengono trasmessi due ID gateway e un singolo token di sicurezza, il token verrà applicato al primo ID gateway e non al secondo.   
+Se non vengono forniti argomenti sufficienti per soddisfare tutti gli ID gateway, questi verranno applicati in ordine finché non ci saranno più argomenti.  Ad esempio, se vengono trasmessi due ID gateway e un singolo token di sicurezza, il token verrà applicato al primo ID gateway e non al secondo.  
 
 Se vengono forniti ID gateway che richiedono argomenti differenti, è necessario designare la
-parola chiave `none` al posto di qualsiasi specifico argomento che un gateway non stia implementando/fornendo. Ad esempio, se vengono trasmessi tre ID gateway e l'utente vuole specificare
-un livello di log (loglevel) per il primo e il terzo, l'argomento sarà simile a `--loglevel DEBUG--none--TRACE`. In questo caso, none assumerà quindi per impostazione predefinita un valore di INFO.
+parola chiave `none` al posto di qualsiasi specifico argomento che un gateway non stia implementando/fornendo.  Ad esempio, se vengono trasmessi tre ID gateway e l'utente vuole specificare
+un livello di log (loglevel) per il primo e il terzo, l'argomento sarà simile a `--loglevel DEBUG--none--TRACE`.  In questo caso, none assumerà quindi per impostazione predefinita un valore di INFO.
 
 ### Esempi di argomento di avvio
 {: #startup-examples}
@@ -107,18 +107,18 @@ un migliore controllo interattivo sul client.
 | F, acl file &lt;file&gt; &lt;ID nodo di lavoro&gt; | File ACL (Access Control List) |
 | C, displayconfig &lt;ID nodo di lavoro&gt; | Visualizza la configurazione {{site.data.keyword.SecureGateway}} corrente,
 se disponibile |
-| a, authorize &lt;ID nodo di lavoro&gt; |Attiva/disattiva la sovrascrittura del parametro rejectUnauthorized per le connessioni TLS in uscita per il nodo di lavoro specificato|
-| t, sectoken &lt;token sicurezza&gt; |Il token di sicurezza da utilizzare per la connessione gateway successiva|
+| a, authorize &lt;ID nodo di lavoro&gt; | Attiva/disattiva la sovrascrittura del parametro rejectUnauthorized per le connessioni TLS in uscita per il nodo di lavoro specificato |
+| t, sectoken &lt;token sicurezza&gt; | Il token di sicurezza da utilizzare per la connessione gateway successiva |
 | c, connect &lt;ID gateway&gt; | Stabilisci una connessione a {{site.data.keyword.Bluemix_notm}} utilizzando
 l'ID gateway fornito |
-| l, loglevel &lt;livello&gt; &lt;ID nodo di lavoro&gt; |Modifica il livello di log in ERROR, INFO, DEBUG o TRACE|
+| l, loglevel &lt;livello&gt; &lt;ID nodo di lavoro&gt; | Modifica il livello di log in ERROR, INFO, DEBUG o TRACE |
 | p, logpath &lt;file&gt; &lt;ID nodo di lavoro&gt; | Indirizza la registrazione a uno specifico file |
 | r, reverse &lt;ID nodo di lavoro&gt; | Elenca le porte su cui il client è in ascolto per le destinazioni inverse |
 | k, kill &lt;ID nodo di lavoro&gt;  | Termina il nodo di lavoro specificato |
-| e, select &lt;ID nodo di lavoro&gt;  |Specifica un nodo di lavoro su cui eseguire comandi, se non specificato altrimenti|
-| d, deselect | Deseleziona il nodo di lavoro precedentemente specificato. Immetti il comando di selezione per specificarne
+| e, select &lt;ID nodo di lavoro&gt;  | Specifica un nodo di lavoro su cui eseguire comandi, se non specificato altrimenti |
+| d, deselect | Deseleziona il nodo di lavoro precedentemente specificato.  Immetti il comando di selezione per specificarne
 un'altra |
-| w, password &lt;vecchia password&gt; &lt;nuova password&gt; |Imposta la password dell'IU. Se il valore &lt;nuova password&gt; è vuoto, non verrà implementata alcuna password. &lt;vecchia password&gt; è un valore richiesto quando si aggiorna la password. Le password devono contenere solo lettere |
+| w, password &lt;vecchia password&gt; &lt;nuova password&gt; | Imposta la password dell'IU.  Se il valore &lt;nuova password&gt; è vuoto, non verrà implementata alcuna password. &lt;vecchia password&gt; è un valore richiesto quando si aggiorna la password. Le password devono contenere solo lettere |
 | P, port &lt;nuova porta&gt; | Modifica la porta su cui è in ascolto l'IU |
 | u, uistart &lt;password iniziale&gt; &lt;porta&gt; | Avvia l'IU su localhost:&lt;porta&gt;/dashboard. Se il valore &lt;password iniziale&gt; è vuoto e non sono state impostate altre password per
 la sessione, non verrà implementata alcuna password dell'IU. Se il valore &lt;porta&gt; è vuoto, l'IU sarà raggiungibile su 9003 |
@@ -136,11 +136,11 @@ Per ulteriori dettagli sulla configurazione dell'ACL (Access Control List), [fai
 Ritorna a [Introduzione - Aggiunta di un client](/docs/services/SecureGateway/securegateway_client.html).
 
 ## IU client
-{: #ui}
+{: #client-ui}
 
 <b>Nota:</b> L'IU client non è supportata quando si utilizza Docker su Windows o MacOS.
 
-L'IU client fornisce un'interfaccia web locale che consente all'utente di interagire con il client {{site.data.keyword.SecureGateway}} anziché con la CLI. Per impostazione predefinita, questa IU è disponibile in `localhost:9003/dashboard` L'IU è suddivisa nelle seguenti pagine:
+L'IU client fornisce un'interfaccia web locale che consente all'utente di interagire con il client {{site.data.keyword.SecureGateway}} anziché con la CLI.  Per impostazione predefinita, questa IU è disponibile in `localhost:9003/dashboard` L'IU è suddivisa nelle seguenti pagine:
 
 ### Connessione
 {: #ui-connect}
@@ -150,22 +150,22 @@ Questa è la pagina di destinazione iniziale per l'IU in cui un utente può forn
 ### Accesso
 {: #ui-login}
 
-Questa pagina verrà visualizzata se l'IU è stata protetta da una password. Se raggiungi questa pagina mentre non è applicata alcuna password, aggiorna la pagina per essere reindirizzato.
+Questa pagina verrà visualizzata se l'IU è stata protetta da una password.  Se raggiungi questa pagina mentre non è applicata alcuna password, aggiorna la pagina per essere reindirizzato.
 
 ### Dashboard
 {: #ui-dashboard}
 
-Questa è la pagina principale dopo che un client è stato connesso. Da qui, puoi accedere alla pagina Visualizza log, alla pagina ACL (Access Control List) e alla pagina Informazioni sulla connessione.Nella parte inferiore, puoi anche scegliere di disconnettere uno o più client connessi. Nella parte superiore della pagina, sarà visualizzato il client attualmente selezionato nonché un'opzione per connettere client aggiuntivi.
+Questa è la pagina principale dopo che un client è stato connesso.  Da qui, puoi accedere alla pagina Visualizza log, alla pagina ACL (Access Control List) e alla pagina Informazioni sulla connessione.  Nella parte inferiore, puoi anche scegliere di disconnettere uno o più client connessi.  Nella parte superiore della pagina, sarà visualizzato il client attualmente selezionato e sarà presente un'opzione per connettere client aggiuntivi. 
 
 ### Visualizza log
 {: #ui-logs}
 
-Questa pagina ti consentirà di visualizzare i log generati dal client selezionato (visualizzato nella parte superiore destra della pagina). I log visualizzati possono essere filtrati mediante le caselle di spunta poste sotto i log.
+Questa pagina ti consentirà di visualizzare i log generati dal client selezionato (visualizzato nella parte superiore destra della pagina).  I log visualizzati possono essere filtrati mediante le caselle di spunta poste sotto i log.
 
 ### ACL (Access Control List)
 {: #ui-acl}
 
-Questa pagina ti consentirà di gestire l'ACL (Access Control List) per il client selezionato (visualizzato nell'angolo superiore destro della pagina). È possibile aggiungere singolarmente le regole alle tabelle allow/deny oppure caricare un file nella parte inferiore della pagina.
+Questa pagina ti consentirà di gestire l'ACL (Access Control List) per il client selezionato (visualizzato nell'angolo superiore destro della pagina).  È possibile aggiungere singolarmente le regole alle tabelle allow/deny oppure caricare un file nella parte inferiore della pagina.
 
 ### Informazioni sulla connessione
 {: #ui-info}
@@ -176,9 +176,9 @@ correnti e i listener di destinazione inversa.
 Ritorna a [Introduzione - Aggiunta di un client](/docs/services/SecureGateway/securegateway_client.html).
 
 ## Terminazione del client remoto
-{: #remote}
+{: #client-remote}
 
-Se a un client è stato fornito un ID, può essere terminato in remoto mediante l'IU SG o tramite l'API SG. Se termini un client che è in esecuzione come un servizio, il client verrà riavviato e otterrà un nuovo ID client; tuttavia, se al servizio sono connessi più client, il client terminato non verrà riavviato finché tutti i client rimanenti non saranno stati terminati.
+Se a un client è stato fornito un ID, può essere terminato in remoto mediante l'IU SG o tramite l'API SG.  Se termini un client che è in esecuzione come un servizio, il client verrà riavviato e otterrà un nuovo ID client; tuttavia, se al servizio sono connessi più client, il client terminato non verrà riavviato finché tutti i client rimanenti non saranno stati terminati.
 
 ## Limitazioni
 {: #limits}
@@ -191,7 +191,7 @@ Il gateway SG può gestire solo 250 connessioni simultanee. Se il numero di rich
 ### Limitazioni del client DataPower
 {: #limits-datapower}
 
-Il client {{site.data.keyword.SecureGateway}} DataPower è in fase di aggiornamento in modo che corrisponda alle funzionalità del resto dei nostri client. Attualmente presenta le seguenti limitazioni: 
+Il client {{site.data.keyword.SecureGateway}} DataPower è in fase di aggiornamento in modo che corrisponda alle funzionalità del resto dei nostri client.  Attualmente presenta le seguenti limitazioni:
 
 - L'ACL verrà impostata automaticamente su ALLOW ALL
 - L'abilitazione e la disabilitazione di gateway o destinazioni dall'IU {{site.data.keyword.SecureGateway}} non è supportata. Tuttavia, l'opzione Administrative State nell'IU DataPower funziona come un interruttore di attivazione/disattivazione (on/off) per tale specifico client.
@@ -199,3 +199,4 @@ Il client {{site.data.keyword.SecureGateway}} DataPower è in fase di aggiorname
 - Le catene di certificati complete con la TLS lato destinazione non sono supportate prima di DataPower versione 7.5.1.0
 - Le destinazioni cloud non sono supportate prima di DataPower versione 7.5.1.0
 - Il livello di log non può essere modificato al livello TRACE
+- L'ultima versione client di Secure Gateway Client in DataPower è 1.8.0fp6, consulta [qui](/docs/services/SecureGateway/securegateway_install.html#installing-datapower) per ulteriori informazioni

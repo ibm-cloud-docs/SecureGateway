@@ -13,7 +13,7 @@ lastupdated: "2017-04-25"
 {: #auto-start-conf}
 
 ## Linux
-{: #linux}
+{: #auto-start-linux}
 
 Si vous avez opté pour la fonction de démarrage automatique de votre système, utilisez l'une des méthodes suivantes pour démarrer le client.  Le fichier de configuration qu'utilisera la client est disponible dans :
 
@@ -30,7 +30,7 @@ Ce fichier contient les variables importantes suivantes à définir :
 | ------------- | ----------- |
 | RESTART_CLIENT | Arrêter et redémarrer le client lors de l'installation ou de la mise à niveau (Yes ou No) |
 | GATEWAY_ID | ID de passerelle, tel qu'il a été créé dans l'interface utilisateur Secure Gateway for Bluemix |
-| SECTOKEN | Jeton de sécurité pour cet ID de passerelle, si vous avez choisi d'appliquer la sécurité lors de sa création |
+| SECTOKEN | Jeton de sécurité pour cet ID de passerelle, si vous avez choisi d'appliquer la sécurité lors de la création de la passerelle |
 | ACL_FILE | Fichier de liste de contrôle d'accès à utiliser pour restreindre l'accès sur site aux ressources |
 | LOGLEVEL | Niveau de journalisation que vous voulez appliquer pour votre service (par défaut, INFO) |
 | USE_UI   | Définissez cette variable sur 'N' si vous ne voulez pas lancer l'interface utilisateur du client |
@@ -40,7 +40,7 @@ Ce fichier contient les variables importantes suivantes à définir :
 <b>Remarque :</b> ce fichier est en lecture seule si vous utilisez la fonction de démarrage automatique de votre système.  Si vous exécutez le client manuellement, ce fichier est ignoré.
 
 ### Upstart
-{: #upstart}
+{: #auto-start-upstart}
 
 ### Démarrage du client
 {: #upstart-start}
@@ -70,7 +70,7 @@ sudo initctl stop securegateway_client
 {: pre}
 
 ### SystemD
-{: #systemd}
+{: #auto-start-systemd}
 
 
 ### Démarrage du client
@@ -107,8 +107,8 @@ systemctl stop securegateway_client
 ```
 {: pre}
 
-### SystemV
-{: #systemv}
+### System V
+{: #auto-start-system-v}
 
 System V n'est pas configuré lors de l'installation comme les autres fonctions de démarrage automatique. Les scripts suivants sont disponibles dans le répertoire d'installation /opt/ibm/securegateway/client/upstart :
 
@@ -120,7 +120,7 @@ securegateway_clientd
 
 <b>Remarque :</b> cette section concerne les utilisateurs de SuSE/SLES 11.
 
-Facultatif : si vous exécutez SuSE version 11 qui utilise la fonction de démarrage automatique systemV, des scripts permettant de configurer ce processus sont fournis. Suivez la procédure ci-dessous :
+Facultatif : Si vous exécutez SuSE version 11 qui utilise la fonction de démarrage automatique System V, des scripts permettant de configurer ce processus sont fournis. Suivez la procédure ci-dessous :
 
 ```
 cd /opt/ibm/securegateway/client/upstart/systemV
@@ -135,12 +135,12 @@ vi /etc/ibm/sgenvironment.conf
 ```
 {: codeblock}
 
-Une fois cette procédure exécutée, les commandes YasT et systemV peuvent être utilisées pour démarrer et arrêter le démon.
+Une fois cette procédure exécutée, les commandes YasT et System V peuvent être utilisées pour démarrer/arrêter le démon.
 
 Retour à [Initiation - Ajout d'un client](/docs/services/SecureGateway/securegateway_client.html).
 
 ## Windows
-{: #windows}
+{: #auto-start-windows}
 
 Pour modifier l'état du service Windows, ouvrez une fenêtre de commande avec des droits d'administrateur.
 

@@ -13,6 +13,7 @@ lastupdated: "2017-04-25"
 {: #cert-key-management}
 
 ## 生成自签名证书/密钥对
+{: #self-signed-cert-gen}
 
 要生成自签名证书/密钥对，请运行以下命令：
 
@@ -23,6 +24,7 @@ openssl req -new -newkey rsa:2048 -days 365 -nodes -x509 -keyout serverKey.pem -
 
 
 ## 将证书/密钥对上传到浏览器
+{: #upload-cert-to-browser}
 
 要访问强制实施相互认证的目标，您必须将证书/密钥对转换为 PKCS#12 文件，并将其上传到浏览器。
 

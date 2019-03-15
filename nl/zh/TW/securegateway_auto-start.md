@@ -13,7 +13,7 @@ lastupdated: "2017-04-25"
 {: #auto-start-conf}
 
 ## Linux
-{: #linux}
+{: #auto-start-linux}
 
 如果您已選擇使用系統的自動啟動機能，請使用下面其中一種方法來啟動用戶端。可在下列位置找到可供用戶端使用的配置檔：
 
@@ -40,7 +40,7 @@ lastupdated: "2017-04-25"
 <b>附註：</b>只有在您使用系統的自動啟動機能時，才會讀取此檔案。如果您手動執行用戶端，則會忽略此檔案。
 
 ### Upstart
-{: #upstart}
+{: #auto-start-upstart}
 
 ### 啟動用戶端
 {: #upstart-start}
@@ -70,7 +70,7 @@ sudo initctl stop securegateway_client
 {: pre}
 
 ### SystemD
-{: #systemd}
+{: #auto-start-systemd}
 
 
 ### 啟動用戶端
@@ -108,7 +108,7 @@ systemctl stop securegateway_client
 {: pre}
 
 ### System V
-{: #systemv}
+{: #auto-start-system-v}
 
 在安裝期間，不會像其他自動啟動機能一樣設定 System V。安裝目錄 /opt/ibm/securegateway/client/upstart 中提供了 Script，包括：
 
@@ -140,7 +140,7 @@ vi /etc/ibm/sgenvironment.conf
 回到[開始使用 - 新增用戶端](/docs/services/SecureGateway/securegateway_client.html)。
 
 ## Windows
-{: #windows}
+{: #auto-start-windows}
 
 若要變更 Windows 服務的狀態，請使用管理者專用權開啟指令視窗。
 

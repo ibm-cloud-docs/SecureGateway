@@ -17,11 +17,13 @@ lastupdated: "2017-04-10"
 
 指导式设置<b>不</b>支持配置代理信息、服务器名称指示符或上传特定于目标的证书/密钥对。目标创建之后，所有字段都可通过“编辑目标”面板使用。
 
-## 指导式设置面板
+## “指导式设置”面板
+{: #add-dest-guided-setup}
 
 ![指导式设置](./images/guidedLanding.png?raw=true "“指导式设置”登录面板")
 
-## 高级设置面板
+## “高级设置”面板
+{: #add-dest-advanced-setup}
 
 ![高级设置](./images/advancedLanding.png?raw=true "“高级设置”登录面板")
 
@@ -31,24 +33,25 @@ lastupdated: "2017-04-10"
 创建目标时要回答的第一个问题是需要连接到的资源位于哪里。
 
 ### 内部部署目标
-内部部署目标适用的用例是公共空间中的应用程序需要访问位于内部部署的受限资源的情况。
-![内部部署目标](./images/onPremDestination.png?raw=true "内部部署目标")
+{: #dest-types-on-prem}
+内部部署目标适用的用例具有以下特点：公共空间中的应用程序需要访问内部部署的受限资源。![内部部署目标](./images/onPremDestination.png?raw=true "内部部署目标")
 
 ### 云目标
-云目标适用的用例是位于受限网络的应用程序需要访问在公共空间中提供的资源的情况。
-![云目标](./images/reverseDestination.png?raw=true "云目标")
+{: #dest-types-on-cloud}
+云目标适用的用例具有以下特点：受限网络中的应用程序需要访问公共空间中提供的资源。![云目标](./images/reverseDestination.png?raw=true "云目标")
 
 ## 定义目标
+{: #define-dest}
 对于这两种类型的目标，都需要以下信息：
 
 - <b>资源主机名</b>：这是需要连接的资源的 IP 或主机名。
 - <b>资源端口</b>：这是资源在侦听的端口。
-- <b>协议</b>：这是应用程序将要建立的连接的类型。请参阅下表以了解各种[协议选项](#protocols)。有关配置资源所需的连接类型的信息，请查看[资源认证](#resource-auth)部分。
+- <b>协议</b>：这是应用程序将要建立的连接的类型。请参阅下表以了解各种[协议选项](#protocols-options)。有关配置资源所需的连接类型的信息，请查看[资源认证](#dest-resource-auth)部分。
 
 如果选择了云目标，那么还需要提供<b>客户机端口</b>。这是 {{site.data.keyword.SecureGateway}} 客户机将侦听的端口，通过该端口，允许连接到关联资源的主机名和端口。
 
 ## 协议选项
-{: #protocols}
+{: #protocols-options}
 
 下表提供了有关应用程序如何使用 {{site.data.keyword.SecureGateway}} 启动连接/发起请求的所有可用选项。
 
@@ -63,47 +66,52 @@ HTTPS：相互认证|TLS：重写主机头以匹配内部部署主机名的相�
 
 
 ## 配置相互认证
-{: #mutual-auth}
+{: #dest-mutual-auth}
 
 对于强制实施相互认证的协议，您还需要上传自己的证书，否则服务器将自动创建自签名证书/密钥对供应用程序使用。此对可以与服务器证书一起下载。
 ![“相互认证”面板](./images/mutualAuth.png?raw=true "“相互认证”面板")
 
 ### 用户认证
-{: #user-auth}
+{: #dest-user-auth}
 
-“用户认证”部分用于通过 {{site.data.keyword.SecureGateway}} 来管理请求/连接应用程序的授权。此字段接受单个证书，这应该是应用程序将与任何连接/请求一起提供的证书。
+“用户认证”部分用于对使用 {{site.data.keyword.SecureGateway}} 的请求/连接应用程序进行授权管理。此字段接受单个证书，这应该是应用程序将与任何连接/请求一起提供的证书。
 
 ### 资源认证
-{: #resource-auth}
+{: #dest-resource-auth}
 
 资源认证确定 {{site.data.keyword.SecureGateway}} 将如何尝试连接到定义的资源。提供了三个选项：无、TLS（服务器端）和相互认证。根据您的选择，会有不同的认证选项变为可用。
 
 在资源连接上启用 TLS 与用于用户认证的 TLS 不同。用于用户认证的 TLS 保护的是初始请求应用程序和 {{site.data.keyword.SecureGateway}} 之间的访问（例如，{{site.data.keyword.Bluemix_notm}} 应用程序与 {{site.data.keyword.SecureGateway}} 服务器之间的访问），而用于资源认证的 TLS 保护的是 {{site.data.keyword.SecureGateway}} 与您定义的资源之间的连接（例如，在 {{site.data.keyword.SecureGateway}} 客户机与内部部署数据库之间的连接）。
 
 #### 云/内部部署认证
+{: #cloud-or-on-prem-auth}
 
-通过为“资源认证”选择 TLS 或“相互认证”，此选项会变为可用。此字段的名称将与您选择的[目标类型](#dest-types)相匹配。此字段支持上传最多 6 个证书，以便验证要连接到的资源的证书。这些文件将添加到资源连接的 CA 中，并且应包含资源将提供的证书或证书链。
+通过为[资源认证](#dest-resource-auth)选择 TLS 或“相互认证”，此选项会变为可用。此字段的名称将与您选择的[目标类型](#dest-types)相匹配。此字段支持上传最多 6 个证书，以便验证要连接到的资源的证书。这些文件将添加到资源连接的 CA 中，并且应包含资源将提供的证书或证书链。
 
 #### 服务器名称指示符 (SNI)
-通过为“资源认证”选择 TLS 或“相互认证”，此选项会变为可用。此项用于允许向资源连接的 TLS 握手提供单独的主机名。
+{: #dest-sni}
+通过为[资源认证](#dest-resource-auth)选择 TLS 或“相互认证”，此选项会变为可用。此项用于允许向资源连接的 TLS 握手提供单独的主机名。
 
 ### 客户机证书和密钥
+{: #dest-client-cert-key}
 “客户机证书”和“密钥”字段显示的位置取决于您选择的[目标类型](#dest-types)。在这两种情况下，SG 客户机都将使用此处提供的文件来识别自身，从而建立 TLS 连接。如果未上传任何文件，{{site.data.keyword.SecureGateway}} 服务器将使用 `localhost` 的 CN 自动生成自签名对。有关如何生成证书/密钥对的指示信息，请[单击此处](/docs/services/SecureGateway/securegateway_keygen.html)。
 
-对于内部部署目标，如果选择的“资源认证”是“相互认证”，那么该目标会显示在“资源认证”下。在这种情况下，客户机会将此证书/密钥对用于其与定义的资源的出站连接。此连接的 CA 将包含[云/内部部署认证](#resource-auth)字段中提供的证书。
+对于内部部署目标，如果选择了`资源认证：相互认证`，那么该目标会显示在[资源认证](#dest-resource-auth)下。在此情况下，SG 客户机将此证书/密钥对用于它与定义的资源的出站连接，内部部署资源需要将此证书添加到其 CA 以与 SG 客户机进行通信。
 
-对于云目标，如果选择了 TLS 协议，那么该目标会显示在“用户认证”下。在此情况下，客户机将通过上传到 CA 中的[用户认证](#user-auth)的文件，使用此证书/密钥对来建立 TLS 侦听器。  
+对于云目标，如果选择了 TLS 协议，那么该目标会显示在[用户认证](#dest-user-auth)下。在此情况下，SG 客户机将使用此证书/密钥对来创建 TLS 侦听器，内部部署应用程序需要将此证书添加到其 CA 以与 SG 客户机进行通信。
 
 ## 配置网络安全性
-为了阻止特定 IP 地址之外的所有 IP 地址连接到云主机和端口，您可以选择在内部部署目标上强制实施 iptable 规则。
+{: #dest-network-security}
+为了阻止特定 IP 地址之外的所有 IP 地址连接到云主机和端口，您可以选择在内部部署目标上强制实施 iptables 规则。
 ![“网络安全性”面板](./images/networkSecurity.png?raw=true "“网络安全性”面板")
 
-要强制实施 iptable 规则，请选中“网络安全性”面板中的<b>使用 iptable 规则限制对此目标的云访问</b>框。选中此框后，即可以开始添加应该允许连接的 IP。如果未提供任何 IP，那么只要选中<b>限制云访问权</b>框，就会拒绝与此云主机和端口的所有连接。
+要强制实施 iptables 规则，请选中“网络安全性”面板中的<b>使用 iptables 规则限制对此目标的云访问</b>框。选中此框后，即可以开始添加应该允许连接的 IP。如果未提供任何 IP，那么只要选中<b>限制云访问权</b>框，就会拒绝与此云主机和端口的所有连接。
 
 <b>注</b>：所提供的 IP 或端口必须是 {{site.data.keyword.SecureGateway}} 服务器将看到的外部 IP 地址，而不能是发出请求的机器的本地 IP 地址。
 
-### 添加 iptable 规则
-向 iptables 添加规则时，可以提供单个 IP 或 IP 范围以及单个端口或端口范围。所提供的所有范围都包含两端值。下表包含一些示例并说明了如何在 iptables 中对其进行解析：
+### 添加 iptables 规则
+{: #dest-iptables}
+向 iptables 添加 iptables 规则时，可以提供单个 IP 或 IP 范围以及单个端口或端口范围。所提供的所有范围都包含两端值。下表包含一些示例并说明了如何在 iptables 中对其进行解析：
 
 IP 地址|端口|结果
 -- | -- | --
@@ -114,15 +122,17 @@ IP 地址|端口|结果
 1.2.3.4| |只允许来自任意端口的 IP 1.2.3.4。
 | 5000|允许来自端口 5000 的任何 IP。
 
-还可以将特定规则与应用程序相关联。有关创建关联规则的更多信息，请参阅[如何为应用程序创建 iptable 规则](./iptables.html)。
+还可以将特定规则与应用程序相关联。有关创建关联规则的更多信息，请参阅[如何为应用程序创建 iptables 规则](/docs/services/SecureGateway/iptables.html)。
 
 ## 配置代理选项
+{: #dest-proxy}
 如果内部部署目标位于 SOCKS 代理后面，那么可以在“代理选项”面板中为目标配置代理设置。
 ![“代理选项”面板](./images/proxyOptions.png?raw=true "“代理选项”面板")
 
 要配置代理设置，您只需要提供代理在侦听的主机名和端口以及正在使用的 SOCKS 协议（4、4a 和 5）。
 
 ## 目标设置
+{: #dest-settings}
 创建了目标后，请单击“设置”图标以查看以下信息：
 
 - 使用 API 所需的目标标识。

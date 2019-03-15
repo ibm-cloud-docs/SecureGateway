@@ -14,35 +14,40 @@ lastupdated: "2017-04-10"
 
 In diesem Beispiel wird die Konfiguration der gegenseitigen Authentifizierung für beide Seiten eines lokalen Ziels beschrieben: Die Benutzerauthentifizierung und die Ressourcenauthentifizierung.
 
-Die Ressource, zu der eine Verbindung hergestellt werden soll, wird auf derselben Maschine wie der Secure Gateway-Client gehostet, Port 8999 wird überwacht und für eine Verbindung ist die gegenseitige Authentifizierung erforderlich. Mit diesen Informationen kann die Erstellung des Ziels begonnen werden.
+Die Ressource, zu der eine Verbindung hergestellt werden soll, wird auf derselben Maschine wie der Secure Gateway-Client gehostet, Port 8999 wird überwacht und für eine Verbindung ist die gegenseitige Authentifizierung erforderlich.  Mit diesen Informationen kann die Erstellung des Ziels begonnen werden.
 
 ![Erstmalige gegenseitige TLS-Authentifizierung](./images/tlsMA.png?raw=true "Erstmalige gegenseitige TLS-Authentifizierung")
 
 ## Benutzerauthentifizierung
-Da eine absolut neue Anwendung erstellt wird, ist kein Zertifikats-/Schlüsselpaar vorhanden, das für die Anwendung verwendet werden kann; somit wird das Paar von den Secure Gateway-Servern automatisch generiert. Hierzu muss das Feld zum Hochladen in der Benutzerauthentifizierung leer bleiben. Falls bereits ein Paar vorhanden ist, das von der Anwendung verwendet wird, wird in diesem Feld stattdessen das jeweilige Zertifikat eingegeben.
+{: #tls-ma-user-auth}
+Da eine absolut neue Anwendung erstellt wird, ist kein Zertifikats-/Schlüsselpaar vorhanden, das für die Anwendung verwendet werden kann; somit wird das Paar von den Secure Gateway-Servern automatisch generiert.  Hierzu muss das Feld zum Hochladen in der Benutzerauthentifizierung leer bleiben.  Falls bereits ein Paar vorhanden ist, das von der Anwendung verwendet wird, wird in diesem Feld stattdessen das jeweilige Zertifikat eingegeben.
 
 ## Ressourcenauthentifizierung
+{: #tls-ma-resource-auth}
 
 ### Lokale Authentifizierung
-Damit vom Secure Gateway-Client die Ressource authentifiziert werden kann, mit der er verbunden ist, muss dem Client das Zertifikat (oder die Zertifikatskette) bereitgestellt werde, das bzw. die von der Ressource für die Authentifizierung verwendet wird. Da die Ressource nicht über eine vollständige Zertifikatskette verfügt, muss im Feld 'Lokale Authentifizierung' nur ihr Zertifikat hochgeladen werden. In diesem Feld sind bis zu sechs separate Zertifikatsdateien zulässig (.pem, .cer, .der, .crt).
+{: #tls-ma-on-prem-auth}
+Damit vom Secure Gateway-Client die Ressource authentifiziert werden kann, mit der er verbunden ist, muss dem Client das Zertifikat (oder die Zertifikatskette) bereitgestellt werde, das bzw. die von der Ressource für die Authentifizierung verwendet wird.  Da die Ressource nicht über eine vollständige Zertifikatskette verfügt, muss im Feld 'Lokale Authentifizierung' nur ihr Zertifikat hochgeladen werden.  In diesem Feld sind bis zu sechs separate Zertifikatsdateien zulässig (.pem, .cer, .der, .crt).
 
 ### Clientzertifikat und -schlüssel
-Falls angegeben werden muss, wie die Identifizierung des Secure Gateway-Clients an der Ressource durchgeführt werden soll, können zu diesem Zweck für den Client ein Zertifikat und ein Schlüssel hochgeladen werden. Da sich der Client und die Ressource auf derselben Maschine befinden, ist diese nicht erforderlich, und von den Secure Gateway-Servern kann automatisch ein Paar generiert werden. Wenn sich die Ressource auf einem anderen Host befindet, muss [ein Zertifikats-/Schlüsselpaar generiert und hochgeladen werden](/docs/services/SecureGateway/securegateway_keygen.html).
+{: #tls-ma-client-cert-and-key}
+Falls angegeben werden muss, wie die Identifizierung des Secure Gateway-Clients an der Ressource durchgeführt werden soll, können zu diesem Zweck für den Client ein Zertifikat und ein Schlüssel hochgeladen werden.  Da sich der Client und die Ressource auf derselben Maschine befinden, ist diese nicht erforderlich, und von den Secure Gateway-Servern kann automatisch ein Paar generiert werden.  Wenn sich die Ressource auf einem anderen Host befindet, muss [ein Zertifikats-/Schlüsselpaar generiert und hochgeladen werden](/docs/services/SecureGateway/securegateway_keygen.html).
 
 ![Lokale gegenseitige TLS-Authentifizierung](./images/localTLSma.png?raw=true "Lokale gegenseitige TLS-Authentifizierung")
 
-Wenn dieses Ziel erstellt wird, wird von den Secure Gateway-Servern automatisch ein Zertifikats-/Schlüsselpaar für die Anwendung und ein Paar für den Secure Gateway-Client für den Verbindungsaufbau zur lokalen Ressource erstellt. Das Ziel verfügt außerdem über das Zertifikat der lokalen Ressource, das dem Secure Gateway-Client für die Verwendung in der Zertifizierungsstelle während der Verbindung bereitgestellt wird. Nach der Erstellung kann das Ziel bearbeitet werden, sodass die folgenden Informationen angezeigt werden:
+Wenn dieses Ziel erstellt wird, wird von den Secure Gateway-Servern automatisch ein Zertifikats-/Schlüsselpaar für die Anwendung und ein Paar für den Secure Gateway-Client für den Verbindungsaufbau zur lokalen Ressource erstellt.  Das Ziel verfügt außerdem über das Zertifikat der lokalen Ressource, das dem Secure Gateway-Client für die Verwendung in der Zertifizierungsstelle während der Verbindung bereitgestellt wird.  Nach der Erstellung kann das Ziel bearbeitet werden, sodass die folgenden Informationen angezeigt werden:
 
 ![Details der lokalen gegenseitigen TLS-Authentifizierung](./images/editLocalTLSma.png?raw=true "Details der lokalen gegenseitigen TLS-Authentifizierung")
 
 ## Sicherheitsdateien herunterladen
+{: #tls-ma-download-files}
 In der Anzeige der Zielinformationen des Ziels befindet sich ein Link zum Herunterladen einer komprimierten Datei, in der alle Zertifikate und Schlüssel enthalten sind, die dem Ziel zugeordnet sind:
 
 ![Informationsanzeige für gegenseitige Authentifizierung](./images/infoPanelMA.png?raw=true "Informationsanzeige für gegenseitige Authentifizierung")
 
 Nach dem Herunterladen der komprimierten Datei und Extrahieren der Daten wird Folgendes angezeigt:
 
-Dateiname | Verwendungszweck 
+Dateiname | Verwendungszweck
 -- | --
 secureGatewayCert.pem | Primäres Zertifikat des Secure Gateway-Servers
 DigiCertCA2.pem | Zwischenzertifikat des Secure Gateway-Servers
@@ -55,7 +60,8 @@ Nn5TJ34LyVQ_clientCert.pem | Automatisch generiertes Zertifikat vom Gateway für
 localServerCert.pem | Das Zertifikat der lokalen Ressource, das in der Zertifizierungsstelle des Secure Gateway-Clients verwendet werden soll.
 
 ## Anwendung erstellen
-Ein Cloud-Host und -Port für das Ziel sowie die verschiedenen Zertifikate und Schlüssel sind vorhanden; das Schreiben der Anwendung zum Verbinden zu Secure Gateway kann jetzt beginnen. Hierbei handelt es sich um eine einfach Node.js-Anwendung, von der eine Verbindung zum lokalen TLS-Server aufgebaut wird, eine kleine Datenmenge empfangen wird und danach die Verbindung geschlossen wird.
+{: #tls-ma-app-example}
+Ein Cloud-Host und -Port für das Ziel sowie die verschiedenen Zertifikate und Schlüssel sind vorhanden; das Schreiben der Anwendung zum Verbinden zu Secure Gateway kann jetzt beginnen.  Hierbei handelt es sich um eine einfach Node.js-Anwendung, von der eine Verbindung zum lokalen TLS-Server aufgebaut wird, eine kleine Datenmenge empfangen wird und danach die Verbindung geschlossen wird.
 
 ```javascript
 let fs = require('fs');
@@ -89,6 +95,7 @@ so.on('close', function() {
 {: codeblock}
 
 ## TLS-Server erstellen
+{: #tls-ma-server-example}
 Der lokale TLS-Server ist eine einfache Node.js-Anwendung, die für Verbindungen empfangsbereit ist, eine Nachricht bei einer erfolgreichen Verbindung schreibt und diese Verbindung anschließend schließt.
 
 ```javascript
@@ -129,7 +136,8 @@ server.listen(8999);
 {: codeblock}
 
 ## Zugriffssteuerungsliste des Clients aktualisieren
-Vor dem Testen der Anwendung muss sichergestellt werden, dass die Zugriffssteuerungsliste ordnungsgemäß konfiguriert ist. Zur Zugriffssteuerungsliste wurde `localhost:8999` hinzugefügt:
+{: #tls-ma-acl}
+Vor dem Testen der Anwendung muss sichergestellt werden, dass die Zugriffssteuerungsliste ordnungsgemäß konfiguriert ist.  Zur Zugriffssteuerungsliste wurde `localhost:8999` hinzugefügt:
 
 ```
 --------------------------------------------------------------------
@@ -144,9 +152,11 @@ Vor dem Testen der Anwendung muss sichergestellt werden, dass die Zugriffssteuer
 {: screen}
 
 ## Verbindung testen
-Die Anwendung, der lokale Server und der Client wurden konfiguriert; die Ausgabe der Anwendung und des Clients lautet wie folgt: 
+{: #tls-ma-testing}
+Die Anwendung, der lokale Server und der Client wurden konfiguriert; die Ausgabe der Anwendung und des Clients lautet wie folgt:
 
 ### Anwendung
+{: #tls-ma-testing-app}
 
 ```
 Client connected, authorized: true
@@ -156,6 +166,7 @@ Client connection closing
 {: screen}
 
 ### Secure Gateway-Client
+{: #tls-ma-testing-client}
 
 ```
 [2017-04-07 12:22:42.363] [INFO] (Client ID Nn5TJ34LyVQ_qCB) Connection #1 is being established to localhost:8999
@@ -164,4 +175,5 @@ Client connection closing
 {: screen}
 
 ## Erfolg!
+{: #tls-ma-testing-result}
 Die gegenseitige Authentifizierung wurde sowohl für die Benutzerauthentifizierung als auch für Ressourcenauthentifizierung erfolgreich konfiguriert.

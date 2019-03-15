@@ -12,14 +12,14 @@ lastupdated: "2017-04-10"
 # ACL (Access Control List)
 {: #acl}
 
-Il client {{site.data.keyword.SecureGateway}} fornisce il supporto ACL (Accesss Control List) integrato. Puoi consentire o limitare (rifiutare) l'accesso alle risorse in loco apportando modifiche all'ACL per il client. Tale operazione può essere eseguita interattivamente utilizzando i comandi client oppure specificando un file che contiene gli ACL che desideri siano implementati.
+Il client {{site.data.keyword.SecureGateway}} fornisce il supporto ACL (Accesss Control List) integrato. Puoi consentire o limitare (rifiutare) l'accesso alle risorse in loco apportando modifiche all'ACL per il client.  Tale operazione può essere eseguita interattivamente utilizzando i comandi client oppure specificando un file che contiene gli ACL che desideri siano implementati.
 
-A partire dalla versione 1.5.0, le regole dell'ACL (Access Control List) saranno sincronizzate tra tutti i client connessi allo stesso gateway. In questo modo, hai bisogno solo di stabilire/aggiornare il tuo ACL da un singolo client che verrà quindi condiviso tra tutti i client in esecuzione connessi a tale gateway. L'ACL verrà
+A partire dalla versione 1.5.0, le regole dell'ACL (Access Control List) saranno sincronizzate tra tutti i client connessi allo stesso gateway.  In questo modo, hai bisogno solo di stabilire/aggiornare il tuo ACL da un singolo client che verrà quindi condiviso tra tutti i client in esecuzione connessi a tale gateway.  L'ACL verrà
 mantenuto anche tra le sessioni, in modo tale che la connessione di un nuovo client applicherà anche le stesse
 regole ACL.
 
 ## Comandi ACL (Access Control List)
-{: #commands}
+{: #acl-commands}
 
 I comandi ACL supportati sono:
 
@@ -32,7 +32,7 @@ show acl
 ```
 {: screen}
 
-I formati in cui hai tralasciato un nome host o una porta implicano tutti i nomi host o tutte le porte. Ad esempio, la seguente è una regola ACL per consentire tutti i nomi host per la porta 22.
+I formati in cui hai tralasciato un nome host o una porta implicano tutti i nomi host o tutte le porte.  Ad esempio, la seguente è una regola ACL per consentire tutti i nomi host per la porta 22.
 
 ```
 acl allow :22
@@ -51,9 +51,9 @@ Il comando `show acl` mostrerà l'ACL attualmente impostato oppure fornirà un m
 Ritorna a [Introduzione - Aggiunta di un client](/docs/services/SecureGateway/securegateway_client.html).
 
 ## Controllo della rotta HTTP/S utilizzando l'ACL
-{: #routes}
+{: #acl-route-control}
 
-A partire dalla versione 1.6.0, le destinazioni HTTP/S possono anche implementare specifiche rotte sulle voci ACL. Vengono aggiunte nello stesso modo delle voci ACL tipiche, ma con il percorso accodato alla fine della regola. Ad esempio, quanto segue consentirà il transito solo alle richieste che seguono il percorso /my/api:
+A partire dalla versione 1.6.0, le destinazioni HTTP/S possono anche implementare specifiche rotte sulle voci ACL.  Vengono aggiunte nello stesso modo delle voci ACL tipiche, ma con il percorso accodato alla fine della regola. Ad esempio, quanto segue consentirà il transito solo alle richieste che seguono il percorso /my/api:
 
 ```
 acl allow localhost:80/my/api
@@ -65,19 +65,19 @@ Con questa regola implementata, sarà consentito il transito alle richieste a `<
 Le rotte sono supportate solo sui comandi `acl allow`.
 
 ## Precedenza dell'ACL (Access Control List)
-{: #precedence}
+{: #acl-precedence}
 
 Dopo che hai fornito un comando `acl allow :`, se vengono immessi altri comandi `acl
 allow`, la regola allow `ALL:ALL` (da `acl
 allow:`) verrà rimossa dall'elenco, sulla base del presupposto che non desideri più consentire l'accesso
-illimitato. Dopo che hai fornito un comando `acl deny :`, se viene immesso un altro comando `acl deny`,
+illimitato.  Dopo che hai fornito un comando `acl deny :`, se viene immesso un altro comando `acl deny`,
 la regola deny `ALL:ALL` (da `acl deny:`) verrà
-rimossa dall'elenco, sulla base del presupposto che non desideri più limitare tutto l'accesso. Se
+rimossa dall'elenco, sulla base del presupposto che non desideri più limitare tutto l'accesso.  Se
 elenchi le tue regole ACL correnti tramite il comando `show acl` nella CLI, ci sarà
 un indicatore che mostra se le regole non elencate verranno consentite o respinte.
 
 ## Importazione di un file ACL
-{: #import}
+{: #import-acl-file}
 
 Puoi fornire un nome file al comando `acl file` che contiene i comandi ACL supportati che verranno letti dal client all'avvio. Questo file dovrebbe avere i comandi nel seguente formato:
 
@@ -96,10 +96,9 @@ Puoi trovare un file ACL di esempio [qui](/docs/services/SecureGateway/securegat
 Ritorna a [Introduzione - Aggiunta di un client](/docs/services/SecureGateway/securegateway_client.html).
 
 ## Copia del file ACL nel client Docker {{site.data.keyword.SecureGateway}}
-{: #docker}
+{: #copy-acl-to-docker}
 
-Il client docker {{site.data.keyword.SecureGateway}} in sostanza viene eseguito nel suo contenitore di virtualizzazione. Il filesystem della macchina host non è pertanto direttamente accessibile ai processi eseguiti all'interno del contenitore, compreso il client {{site.data.keyword.SecureGateway}}.  A partire dalla versione 1.8.0 del motore Docker, puoi utilizzare
-il comando 'docker cp' per eseguire il push dei file presenti nel tuo host al contenitore mentre è in esecuzione o arrestato. Ciò deve essere fatto per utilizzare il comando interattivo ACL FILE del client {{site.data.keyword.SecureGateway}}.
+Il client docker {{site.data.keyword.SecureGateway}} in sostanza viene eseguito nel suo contenitore di virtualizzazione.  Il filesystem della macchina host non è pertanto direttamente accessibile ai processi eseguiti all'interno del contenitore, compreso il client {{site.data.keyword.SecureGateway}}.  A partire dalla versione 1.8.0 del motore Docker, puoi utilizzare il comando 'docker cp' per importare i file presenti nel tuo host nel contenitore mentre è in esecuzione o arrestato, quest'operazione deve essere effettuata per poter utilizzare il comando interattivo ACL FILE del client {{site.data.keyword.SecureGateway}}. 
 
 Per utilizzare il supporto 'cp' interattivo in docker dal tuo host all'istanza docker, devi essere al docker 1.8.0. Può verificarlo utilizzando `docker --version`
 
@@ -124,7 +123,7 @@ Server:
 ```
 {: screen}
 
-Quindi, per eseguire il push del tuo file acl all'immagine docker, attieniti alla seguente procedura:
+Quindi, per importare il tuo file acl nell'immagine docker, attieniti alla seguente procedura:
 
 - Esegui il comando 'docker ps' per trovare il tuo ID contenitore
 
@@ -157,7 +156,7 @@ cli F /root/01_client.list
 ```
 cli> S
  -------------------------------------------------------------------
-           -- Secure Gateway Client Access Control List --
+           -- Secure Gateway Client Access Control List --          
 
   hostname                               port                  value
   127.0.0.1                             27017                  Allow

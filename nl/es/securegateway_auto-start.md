@@ -13,7 +13,7 @@ lastupdated: "2017-04-25"
 {: #auto-start-conf}
 
 ## Linux
-{: #linux}
+{: #auto-start-linux}
 
 Si ha optado por utilizar el recurso de inicio automático del sistema, utilice uno de los métodos siguientes para iniciar el cliente.  El archivo de configuración que utilizará el cliente se puede encontrar en:
 
@@ -30,7 +30,7 @@ Este archivo incluye las siguientes variables importantes que se deben establece
 | ------------- | ----------- |
 | RESTART_CLIENT | Iniciar y reiniciar el cliente durante la instalación o la actualización (Sí o No) |
 | GATEWAY_ID | El ID de pasarela que se ha creado en la interfaz de usuario de Secure Gateway for Bluemix |
-| SECTOKEN | Señal de seguridad para este ID de pasarela, si elige imponer la seguridad al crearla |
+| SECTOKEN | Señal de seguridad para este ID de pasarela, si elige imponer la seguridad al crear la pasarela |
 | ACL_FILE | Archivo de lista de control de accesos que desee utilizar para restringir el acceso local a los recursos |
 | LOGLEVEL | El nivel de registro que desea establecer para el servicio (el valor predeterminado es INFO) |
 | USE_UI   | Establezca este valor en 'N' si no desea iniciar la interfaz de usuario del cliente |
@@ -41,7 +41,7 @@ Este archivo incluye las siguientes variables importantes que se deben establece
 el cliente de forma manual, se omitirá este archivo.
 
 ### Upstart
-{: #upstart}
+{: #auto-start-upstart}
 
 ### Iniciar el cliente
 {: #upstart-start}
@@ -71,7 +71,7 @@ sudo initctl stop securegateway_client
 {: pre}
 
 ### SystemD
-{: #systemd}
+{: #auto-start-systemd}
 
 
 ### Iniciar el cliente
@@ -108,8 +108,8 @@ systemctl stop securegateway_client
 ```
 {: pre}
 
-### SystemV
-{: #systemv}
+### System V
+{: #auto-start-system-v}
 
 System V no se configura durante la instalación
 como el resto de los recursos de inicio automático. Los scripts están disponibles en el
@@ -123,7 +123,7 @@ securegateway_clientd
 
 <b>Nota:</b> esta sección afecta a los usuarios de SuSE/SLES 11.
 
-Opcional: si está ejecutando SuSE versión 11 que utiliza el inicio automático de systemV, se proporcionan scripts que se pueden utilizar para configurar este proceso. Siga este procedimiento:
+Opcional: si está ejecutando SuSE versión 11 que utiliza el inicio automático de System V, se proporcionan scripts que se pueden utilizar para configurar este proceso. Siga este procedimiento:
 
 ```
 cd /opt/ibm/securegateway/client/upstart/systemV
@@ -138,12 +138,12 @@ vi /etc/ibm/sgenvironment.conf
 ```
 {: codeblock}
 
-Cuando se hayan ejecutado estos pasos, se pueden utilizar los mandatos YasT y systemV para iniciar/detener el daemon.
+Cuando se hayan ejecutado estos pasos, se pueden utilizar los mandatos de YasT y System V para iniciar/detener el daemon.
 
 Volver a [Iniciación - Adición de un cliente](/docs/services/SecureGateway/securegateway_client.html).
 
 ## Windows
-{: #windows}
+{: #auto-start-windows}
 
 Para modificar el estado del servicio Windows, abra una ventana de mandatos con privilegios de administrador.
 

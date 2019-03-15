@@ -9,7 +9,7 @@ lastupdated: "2017-04-25"
 # Client hinzufügen
 {: #add-client}
 
-Der {{site.data.keyword.SecureGateway}}-Client ist ein Puzzleteil in einer hervorragenden Softwarelösung. Vom Client wird die einleitende Verbindung zwischen dem lokalen Netz und einem Gateway auf den {{site.data.keyword.SecureGateway}}-Servern hergestellt und die Kommunikation mit den festgelegten Zielen ermöglicht.
+Der {{site.data.keyword.SecureGateway}}-Client ist ein Puzzleteil in einer hervorragenden Softwarelösung.  Vom Client wird die einleitende Verbindung zwischen dem lokalen Netz und einem Gateway auf den {{site.data.keyword.SecureGateway}}-Servern hergestellt und die Kommunikation mit den festgelegten Zielen ermöglicht.
 
 ![Neues Gateway](./images/newGateway.png?raw=true "Neues Gateway")
 

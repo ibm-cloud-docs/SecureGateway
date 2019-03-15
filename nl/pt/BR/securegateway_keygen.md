@@ -13,6 +13,7 @@ lastupdated: "2017-04-25"
 {: #cert-key-management}
 
 ## Gerando um par certificado autoassinado/chave
+{: #self-signed-cert-gen}
 
 Para gerar um par certificado autoassinado/chave, execute o comando a seguir:
 
@@ -23,8 +24,10 @@ openssl req -new -newkey rsa:2048 -days 365 -nodes -x509 -keyout serverKey.pem -
 
 
 ## Fazendo upload de um par certificado/chave no navegador
+{: #upload-cert-to-browser}
 
-Para acessar um destino cumprindo a autenticação mútua, deve-se converter seu par certificado/chave em um arquivo PKCS#12 e fazer upload dele para seu navegador.
+Para acessar um destino que imponha a autenticação mútua, deve-se converter seu par de
+certificado/chave em um arquivo PKCS#12 e carregá-lo em seu navegador.
 
 Para criar o arquivo PKCS#12, use o comando a seguir:
 

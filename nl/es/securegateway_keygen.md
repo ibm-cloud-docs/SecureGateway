@@ -13,6 +13,7 @@ lastupdated: "2017-04-25"
 {: #cert-key-management}
 
 ## Generación de un par certificado/clave autofirmado
+{: #self-signed-cert-gen}
 
 Para generar un par de certificado/clave autofirmado, ejecute el mandato siguiente:
 
@@ -23,8 +24,9 @@ openssl req -new -newkey rsa:2048 -days 365 -nodes -x509 -keyout serverKey.pem -
 
 
 ## Carga de un par de certificado/clave en el navegador
+{: #upload-cert-to-browser}
 
-Para acceder a un destino imponiendo una autenticación mutua, debe convertir el par certificado/clave a un archivo PKCS#12 y cargarlo en el navegador.
+Para acceder a un destino que impone una autenticación mutua, debe convertir el par certificado/clave a un archivo PKCS#12 y cargarlo en el navegador.
 
 Para crear el archivo PKCS#12, utilice este mandato:
 

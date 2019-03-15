@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-10-11"
+  years: 2015, 2019
+lastupdated: "2019-02-25"
 
 ---
 {:screen: .screen}
@@ -13,7 +13,7 @@ lastupdated: "2018-10-11"
 {: #client-install}
 
 ## Docker
-{: #docker}
+{: #installing-docker}
 
 Docker 是一个第三方平台，可提供一种快速轻松安装应用程序的容器方法，该方法只需要少量配置或者不需要任何配置。{{site.data.keyword.SecureGateway}} 服务提供了可在工作站上安装 Docker 实用程序之后使用的 Docker 映像。要安装 Docker，请参阅 Docker 安装 Web 站点并遵循适合您系统的指示信息进行操作。
 
@@ -47,7 +47,7 @@ docker run -it ibmcom/secure-gateway-client <gateway ID> -t <security token>
 返回到[入门 - 添加客户机](/docs/services/SecureGateway/securegateway_client.html)。
 
 ## Mac OS X
-{: #mac}
+{: #installing-mac}
 
 ### 在 Mac OS X 上运行的需求
 {: #mac-requirements}
@@ -61,7 +61,7 @@ docker run -it ibmcom/secure-gateway-client <gateway ID> -t <security token>
 根据系统的安全设置，您可能需要管理特权才能执行此安装。
 
  1. 通过“双击”在 {{site.data.keyword.SecureGateway}} UI 中下载的 DMG 映像来安装该映像。
- 2. 这应该会显示新的“访达”窗口。此窗口应该包含应用程序“快捷方式”图标，请将应用程序拖放到快捷方式上。如果未包含该图标，请“双击”已安装的卷，然后将应用程序图标拖放到“访达”侧边栏中的“应用程序”图标。
+ 2. 这应该会显示新的“访达”窗口。如果未显示，请“双击”已安装的卷。此窗口应该包含一个“ibm”文件夹图标和一个应用程序“快捷方式”图标，请将“ibm”文件夹拖放到该快捷方式上。
 
 ### 启动交互式客户机会话
 {: #mac-run}
@@ -71,7 +71,7 @@ docker run -it ibmcom/secure-gateway-client <gateway ID> -t <security token>
 返回到[入门 - 添加客户机](/docs/services/SecureGateway/securegateway_client.html)。
 
 ## Linux
-{: #linux}
+{: #installing-linux}
 
 此安装包含 {{site.data.keyword.SecureGatewayfull}} 客户机以及 IBM 的 nodejs 包的安全版本。这两项都会安装在系统上的 /opt/ibm 目录下。安装程序会创建或更新以下内容：
 
@@ -182,7 +182,7 @@ License: http://www.ibm.com/software/sla/sladb.nsf/lilookup/986C7686F22D4D358525
 
    客户机安装程序会启动并安装客户机，这将在 /etc/ibm 中创建 sgenvironment.conf 文件。
 
-2. 可选：如果要使用系统的 upstart 进程，您必须编辑此文件并提供以下内容，客户机才能正常启动。请参阅[使用 Upstart](/docs/services/SecureGateway/securegateway_auto-start.html#linux)，以获取有关编辑此配置文件的更多信息。
+2. 可选：如果要使用系统的 upstart 进程，您必须编辑此文件并提供以下内容，客户机才能正常启动。请参阅[使用 Upstart](/docs/services/SecureGateway/securegateway_auto-start.html#auto-start-linux)，以获取有关编辑此配置文件的更多信息。
 
 3. 如果使用 upstart 启动了客户机，请检查日志文件以确保它在正常运行。
 
@@ -197,6 +197,20 @@ License: http://www.ibm.com/software/sla/sladb.nsf/lilookup/986C7686F22D4D358525
    rpm -q ibm-securegateway-client
    ```
    {: pre}
+
+### AIX 安装
+{: #aix-install}
+
+1. 确保为该包设置了可执行许可权。如有必要，通过发出以下命令更改文件许可权：
+    ```
+    chmod a+x <secure-gateway-bin-package>
+    ```
+2. 通过发出以下命令解压缩包：
+    ```
+    ./<secure-gateway-bin-package>
+    ```
+
+注：请确保 AIX 系统满足运行已安装的 Node.js 和 ksh 的需求。
 
 ### 启动交互式客户机会话
 {: #linux-run}
@@ -214,7 +228,7 @@ node lib/secgwclient.js <gateway ID> -t <security token>
 返回到[入门 - 添加客户机](/docs/services/SecureGateway/securegateway_client.html)。
 
 ## Windows
-{: #windows}
+{: #installing-windows}
 
 ### 安装客户机
 {: #windows-install}
@@ -259,7 +273,7 @@ secgw.cmd
 返回到[入门 - 添加客户机](/docs/services/SecureGateway/securegateway_client.html)。
 
 ## DataPower
-{: #datapower}
+{: #installing-datapower}
 
 DataPower 具有嵌入式版本的 {{site.data.keyword.SecureGateway}} 客户机。根据 DataPower 版本，您可能具有其他版本的 {{site.data.keyword.SecureGateway}} 客户机。请注意任何适用的 [DataPower 客户机限制](/docs/services/SecureGateway/securegateway_interaction.html#limits-datapower)。使用旧 Secure Gateway 客户机可能会遇到意外错误。
 

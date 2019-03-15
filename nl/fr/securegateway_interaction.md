@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-10-04"
+  years: 2015, 2019
+lastupdated: "2019-02-19"
 
 ---
 {:screen: .screen}
@@ -29,17 +29,17 @@ Le tableau suivant décrit toutes les options disponibles qui peuvent être asso
 | Paramètres et arguments | Description |
 | ------------- | ----------- |
 | &lt;ID_passerelle&gt; | Connexion à {{site.data.keyword.Bluemix_notm}} avec l'ID de passerelle fourni |
-| -F, -\-aclfile &lt;fichier&gt; | Fichier de liste de contrôle d'accès |
-| -g, -\-gateway &lt;nom_hôte:port&gt; | Utilisé pour sélectionner manuellement une destination de passerelle spécifique (utilisateurs avancés seulement) |
-| -l, -\-loglevel &lt;niveau&gt; | Définition du niveau de journalisation sur ERROR, INFO, DEBUG ou TRACE |
-| -p, -\-logpath &lt;fichier&gt; | Envoi de la journalisation dans un fichier spécifique |
-| -t, -\-sectoken &lt;jeton_sécurité&gt; | Jeton de sécurité à utiliser pour cette connexion de passerelle |
-| -P, -\-port &lt;port&gt; | Port sur lequel exécuter l'interface utilisateur. La valeur par défaut est le port 9003. |
-| -w, -\-password &lt;mot_de_passe&gt; | Mot de passe pour protéger l'interface utilisateur. La valeur par défaut est no password. |
-| -x, -\-proxy &lt;agent proxy&gt; | Proxy pour la connexion au port 9000 |
-| -\-noUI | L'interface utilisateur n'est pas automatiquement démarrée. |
-| -\-allow | Toutes les connexions au client sont autorisées. Ce paramètre est remplacé par le fichier de liste de contrôle d'accès si un tel fichier est fourni. |
-| -\-service | Après la première connexion, le parent sera redémarré dans les 60 secondes si tous les clients enfant sont arrêtés. |
+| -F, -\-aclfile &lt;file&gt; | Access control List file |
+| -g, -\-gateway &lt;hostname:port&gt; | Used to manually select a specific gateway destination (advanced use only) |
+| -l, -\-loglevel &lt;level&gt; | Change the log level to ERROR, INFO, DEBUG or TRACE |
+| -p, -\-logpath &lt;file&gt; | Direct logging to a specific file |
+| -t, -\-sectoken &lt;security token&gt; | The security token to use for this gateway connection |
+| -P, -\-port &lt;port&gt; | The port for the UI to run on.  Defaults to port 9003 |
+| -w, -\-password &lt;password&gt; | The password to protect the UI with.  Defaults to no password |
+| -x, -\-proxy &lt;proxy agent&gt; | The proxy for the port 9000 connection |
+| -\-noUI | Prevent the UI from starting up automatically |
+| -\-allow | Allows all connections to the client. Is overridden by the ACL file, if provided |
+| -\-service | After an initial connection, the parent will restart within 60s if all child clients are terminated |
 
 <b>Remarque :</b> les indicateurs `--service`, `--allow` et `--noUI` doivent être les derniers paramètres des arguments de ligne de commande.
 
@@ -124,7 +124,7 @@ Pour plus d'informations sur la configuration de la liste de contrôle d'accès,
 Retour à [Initiation - Ajout d'un client](/docs/services/SecureGateway/securegateway_client.html).
 
 ## Interface utilisateur client
-{: #ui}
+{: #client-ui}
 
 <b>Remarque :</b> l'interface utilisateur client n'est pas prise en charge lorsque vous utilisez Docker sous Windows ou MacOS.
 
@@ -143,7 +143,7 @@ Cette page s'affiche si l'interface utilisateur est protégée par mot de passe.
 ### Tableau de bord
 {: #ui-dashboard}
 
-Il s'agit de la page principale après connexion d'un client.  A partir de cette page, vous pouvez accéder à la page Affichage des journaux, à la page Liste de contrôle d'accès et à la page Informations de connexion.  Au bas de la page, vous pouvez également choisir de déconnecter un ou plusieurs des clients connectés.  En haut de la page, le client actuellement sélectionné s'affiche ainsi qu'une option pour se connecter à d'autres clients.
+Il s'agit de la page principale après connexion d'un client.  A partir de cette page, vous pouvez accéder à la page Affichage des journaux, à la page Liste de contrôle d'accès et à la page Informations de connexion.  Au bas de la page, vous pouvez également choisir de déconnecter un ou plusieurs des clients connectés.  En haut de la page, le client actuellement sélectionné s'affiche, ainsi qu'une option pour se connecter à d'autres clients. 
 
 ### Affichage des journaux
 {: #ui-logs}
@@ -163,7 +163,7 @@ Cette page affiche des informations sur la connexion en cours pour le client sé
 Retour à [Initiation - Ajout d'un client](/docs/services/SecureGateway/securegateway_client.html).
 
 ## Arrêt du client distant
-{: #remote}
+{: #client-remote}
 
 Si un client est associé à un ID, vous pouvez l'arrêter à distance à l'aide de l'interface utilisateur SG ou à l'aide de l'API SG.  Si vous arrêtez un client qui s'exécute en tant que service, le client redémarrera et obtiendra un nouvel ID client ; cependant, si le client a plusieurs clients connectés, le client arrêté ne redémarrera pas tant que tous les autres clients n'auront pas été arrêtés.
 
@@ -173,7 +173,7 @@ Si un client est associé à un ID, vous pouvez l'arrêter à distance à l'aide
 ### Limites de connexion
 {: #limits-conn}
 
-La passerelle SG peut gérer au maximum 250 connections simultanées. Si le nombre de demandes simultanées excède cette limite, cela peut entraîner un rejet des tentatives de connexion et engendrer des temps d'attente. Un moyen simple pour résoudre ce problème consiste à utiliser un regroupement de connexions sur l'application appelante. Sachez que la limite de 250 connections simultanées s'applique à la passerelle et non au client ou à la destination. Cette limite se partage entre tous les clients et les destinations sur la passerelle.
+La passerelle SG peut gérer au maximum 250 connexions simultanées. Si le nombre de demandes simultanées excède cette limite, cela peut entraîner un rejet des tentatives de connexion et engendrer des temps d'attente. Un moyen simple pour résoudre ce problème consiste à utiliser un regroupement de connexions sur l'application appelante. Sachez que la limite de 250 connections simultanées s'applique à la passerelle et non au client ou à la destination. Cette limite se partage entre tous les clients et les destinations sur la passerelle.
 
 ### Limites applicable au client DataPower
 {: #limits-datapower}
@@ -188,3 +188,4 @@ prise en charge.
 - Les chaînes de certificats complètes avec TLS côté destination ne sont pas prises en charge avant la version 7.5.1.0 de DataPower.
 - Les destinations dans le cloud ne sont pas prises en charge avant la version 7.5.1.0 de DataPower.
 - Le niveau de journalisation ne peut pas être défini sur TRACE.
+- La version Secure Gateway Client la plus récente dans DataPower est 1.8.0fp6. Cliquez [ici](/docs/services/SecureGateway/securegateway_install.html#installing-datapower) pour plus d'informations. 

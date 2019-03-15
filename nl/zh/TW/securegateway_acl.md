@@ -17,7 +17,7 @@ lastupdated: "2017-04-10"
 從 1.5.0 版開始，所有連接至相同閘道之用戶端的「存取控制清單」規則皆已同步。這表示您只需要從單一用戶端建立/更新 ACL，它就會在所有連接至該閘道的執行中用戶端之間共用。ACL 也會在各階段作業之間持續保存，如此連接新的用戶端時，也會套用相同的 ACL 規則。
 
 ## 存取控制清單指令
-{: #commands}
+{: #acl-commands}
 
 支援的 ACL 指令如下：
 
@@ -49,7 +49,7 @@ acl allow :
 回到[開始使用 - 新增用戶端](/docs/services/SecureGateway/securegateway_client.html)。
 
 ## 使用 ACL 的 HTTP/S 路徑控制
-{: #routes}
+{: #acl-route-control}
 
 從 1.6.0 版開始，HTTP/S 目的地也可以在 ACL 項目上強制執行特定路徑。這些的新增方式與一般 ACL 項目相同，但將路徑附加至規則尾端。例如，下列指令只容許遵循 /my/api 路徑的要求通過：
 
@@ -63,13 +63,13 @@ acl allow localhost:80/my/api
 只有在 `acl allow` 指令上支援路徑。
 
 ## 存取控制清單優先順序
-{: #precedence}
+{: #acl-precedence}
 
 提供 `acl allow :` 指令之後，如果進一步輸入 `acl allow` 指令，則 `ALL:ALL` 容許規則（來自 `acl allow :`）將會從清單移除，並假設您不再想要容許進行無限制的存取。提供 `acl deny :` 指令之後，如果輸入另一個 `acl deny` 指令，則 `ALL:ALL` 拒絕規則（來自 `acl deny :`）將會從清單移除，並假設您不再想要限制所有存取。如果在 CLI 中透過
 `show acl` 指令列出現行 ACL 規則，則會有一個指示器顯示容許還是拒絕未列出的規則。
 
 ## 匯入 ACL 檔案
-{: #import}
+{: #import-acl-file}
 
 您可以提供檔名給 `acl file` 指令，檔案中包含用戶端在啟動時將讀取的受支援 ACL 指令。此檔案應該具有下列格式的指令：
 
@@ -88,9 +88,9 @@ no acl
 回到[開始使用 - 新增用戶端](/docs/services/SecureGateway/securegateway_client.html)。
 
 ## 將 ACL 檔案複製到 {{site.data.keyword.SecureGateway}} Docker 用戶端
-{: #docker}
+{: #copy-acl-to-docker}
 
-{{site.data.keyword.SecureGateway}} Docker 用戶端實際上是在它自己的虛擬化容器中執行。因此，在容器內執行的處理程序（包括 {{site.data.keyword.SecureGateway}} 用戶端）無法直接存取管理機器的檔案系統。從 Docker Engine 1.8.0 版開始，不論容器在執行中還是已停止，您都可以使用 'docker cp' 指令，將主機上的現有檔案推送至容器。必須執行此作業，才能使用 {{site.data.keyword.SecureGateway}} 用戶端的 ACL FILE 互動式指令。
+{{site.data.keyword.SecureGateway}} Docker 用戶端實際上是在它自己的虛擬化容器中執行。因此，在容器內執行的處理程序（包括 {{site.data.keyword.SecureGateway}} 用戶端）無法直接存取管理機器的檔案系統。從 Docker Engine 1.8.0 版開始，不論容器在執行中還是已停止，您都可以使用 'docker cp' 指令，將主機上的現有檔案匯入至容器，必須完成此作業才能使用 {{site.data.keyword.SecureGateway}} 用戶端的 ACL FILE 互動式指令。
 
 若要在 Docker 中使用互動式 'cp' 支援從主機推送到 Docker 實例，您必須使用 Docker 1.8.0。您可以使用 `docker --version` 來檢查這點。
 
@@ -115,7 +115,7 @@ Server:
 ```
 {: screen}
 
-然後，若要將 acl 檔案清單推送至 Docker 映像檔，請遵循下列步驟：
+然後，若要將 acl 檔案清單匯入至 Docker 映像檔，請遵循下列步驟：
 
 - 執行 'docker ps' 指令，以尋找您的容器 ID
 

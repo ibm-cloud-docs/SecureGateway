@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-10-11"
+  years: 2015, 2019
+lastupdated: "2019-02-25"
 
 ---
 {:screen: .screen}
@@ -13,9 +13,9 @@ lastupdated: "2018-10-11"
 {: #client-install}
 
 ## Docker
-{: #docker}
+{: #installing-docker}
 
-Docker ist eine Plattform eines Drittanbieters, von der eine Containermethode zum schnellen und einfachen Installieren von Anwendungen bereitgestellt wird, für die nur wenig oder keine Konfiguration erforderlich ist. Vom {{site.data.keyword.SecureGateway}}-Service wird ein Docker-Image bereitgestellt, das verwendet werden kann, nachdem das Dienstprogramm Docker auf der Workstation installiert ist. Informationen zum Installieren von Docker finden Sie auf der Website für die Installation von Docker und und in den Anweisungen für Ihr System.
+Docker ist eine Plattform eines Drittanbieters, von der eine Containermethode zum schnellen und einfachen Installieren von Anwendungen bereitgestellt wird, für die nur wenig oder keine Konfiguration erforderlich ist. Vom {{site.data.keyword.SecureGateway}}-Service wird ein Docker-Image bereitgestellt, das verwendet werden kann, nachdem das Dienstprogramm Docker auf der Workstation installiert ist.  Informationen zum Installieren von Docker finden Sie auf der Website für die Installation von Docker und und in den Anweisungen für Ihr System.
 
 ### Client installieren und aktualisieren
 {: #docker-install}
@@ -47,7 +47,7 @@ Vom {{site.data.keyword.SecureGateway}}-Client werden nur Befehle des Typs `pull
 Kehren Sie zu [Einführung - Client hinzufügen](/docs/services/SecureGateway/securegateway_client.html) zurück.
 
 ## Mac OS X
-{: #mac}
+{: #installing-mac}
 
 ### Voraussetzungen für die Ausführung unter Mac OS X
 {: #mac-requirements}
@@ -61,7 +61,7 @@ Vor der Ausführung des Clients unter Mac OS X sind die folgenden Voraussetzunge
 Je nach Sicherheitskonfiguration Ihres Systems benötigen Sie möglicherweise Administratorrechte, um diese Installation auszuführen.
 
  1. Hängen Sie das DMG-Image an, das von der {{site.data.keyword.SecureGateway}}-Benutzerschnittstelle heruntergeladen wurde (normalerweise durch Doppelklicken).
- 2. Es sollte ein neues 'Finder'-Fenster angezeigt werden. Dieses Fenster muss das Direktaufrufsymbol 'shortcut' für Anwendungen enthalten; ziehen Sie die Anwendung und legen Sie sie auf dem Direktaufruf ab. Ist dies nicht der Fall, doppelklicken Sie auf den angehängten Datenträger, ziehen das Anwendungssymbol und legen es über dem Symbol für die Anwendungen in der Seitenleiste des Fensters 'Finder' ab.
+ 2. Es sollte ein neues 'Finder'-Fenster angezeigt werden. Ist dies nicht der Fall, doppelklicken Sie auf den angehängten Datenträger. Dieses Fenster muss das Symbol für den Ordner 'ibm' und das Direktaufrufsymbol für Anwendungen enthalten; ziehen Sie den Ordner 'ibm' und legen Sie ihn auf dem Direktaufruf ab.
 
 ### Interaktive Clientsitzung starten
 {: #mac-run}
@@ -71,11 +71,11 @@ Führen Sie zum Starten des Clients die Datei `secgw.command` aus, die sich an d
 Kehren Sie zu [Einführung - Client hinzufügen](/docs/services/SecureGateway/securegateway_client.html) zurück.
 
 ## Linux
-{: #linux}
+{: #installing-linux}
 
-Die Installation umfasst den {{site.data.keyword.SecureGatewayfull}}-Client sowie eine sichere Version des Node.js-Pakets von IBM. Beide sind im Verzeichnis '/opt/ibm' auf dem System installiert. Vom Installationsprogramm wird Folgendes erstellt oder aktualisiert:
+Die Installation umfasst den {{site.data.keyword.SecureGatewayfull}}-Client sowie eine sichere Version des Node.js-Pakets von IBM.  Beide sind im Verzeichnis '/opt/ibm' auf dem System installiert.  Vom Installationsprogramm wird Folgendes erstellt oder aktualisiert:
 
-| Verzeichnis | Dateiname | Beschreibung |
+| Verzeichnis | Dateiname | Beschreibung          |
 | ------------- | ------------- | ----------- |
 | /etc/ibm | sgenvironment.conf | Konfigurationsdatei für upstart |
 | /etc/ibm | passwd | erstellt Benutzer: secgwadmin:x:501:501::/home/secgwadmin:/bin/bash |
@@ -184,7 +184,7 @@ License: http://www.ibm.com/software/sla/sladb.nsf/lilookup/986C7686F22D4D358525
 
    Das Clientinstallationsprogramm wird gestartet; von ihm werden der Client installiert und die Datei 'sgenvironment.conf' im Pfad '/etc/ibm' erstellt.
 
-2. Optional: Falls Sie den upstart-Prozess des Systems verwenden möchten, müssen Sie diese Datei bearbeiten und Folgendes angeben, damit der Client ordnungsgemäß gestartet wird. Weitere Informationen zum Bearbeiten dieser Konfigurationsdatei finden Sie unter [Upstart verwenden](/docs/services/SecureGateway/securegateway_auto-start.html#linux).
+2. Optional: Falls Sie den upstart-Prozess des Systems verwenden möchten, müssen Sie diese Datei bearbeiten und Folgendes angeben, damit der Client ordnungsgemäß gestartet wird. Weitere Informationen zum Bearbeiten dieser Konfigurationsdatei finden Sie unter [Upstart verwenden](/docs/services/SecureGateway/securegateway_auto-start.html#auto-start-linux).
 
 3. Wenn Sie den Client mit 'upstart' gestartet haben, überprüfen Sie die Protokolldatei, um sicherzustellen, dass die Datei ordnungsgemäß ausgeführt wird.
 
@@ -199,6 +199,21 @@ License: http://www.ibm.com/software/sla/sladb.nsf/lilookup/986C7686F22D4D358525
    rpm -q ibm-securegateway-client
    ```
    {: pre}
+
+### AIX-Installation
+{: #aix-install}
+
+1. Stellen Sie sicher, dass für das Paket eine Berechtigung zur Ausführung vorliegt. Falls dies erforderlich sein sollte, ändern Sie die Dateiberechtigungen durch Absetzen des folgenden Befehls:
+    ```
+    chmod a+x <secure-gateway-bin-package>
+    ```
+2. Extrahieren Sie das Paket durch Absetzen des folgenden Befehls:
+    ```
+    ./<secure-gateway-bin-package>
+    ```
+
+Anmerkung:
+Stellen Sie sicher, dass Ihr AIX-System die Voraussetzungen für die Ausführung der installierten Software Node.js und der Korn-Shell verfügt.
 
 ### Interaktive Clientsitzung starten
 {: #linux-run}
@@ -216,14 +231,14 @@ Normalerweise sind zwei Parameter erforderlich: Die {{site.data.keyword.SecureGa
 Kehren Sie zu [Einführung - Client hinzufügen](/docs/services/SecureGateway/securegateway_client.html) zurück.
 
 ## Windows
-{: #windows}
+{: #installing-windows}
 
 ### Client installieren
 {: #windows-install}
 
 Je nach Sicherheitskonfiguration Ihres Systems benötigen Sie möglicherweise Administratorrechte, um diese Installation auszuführen.
 
- 1. Kopieren Sie die EXE-Installationsdatei auf das System. Es wird auch MD5 SUM bereitgestellt, damit Sie die Integrität des Installationspakets überprüfen können.
+ 1. Kopieren Sie die EXE-Installationsdatei auf das System.  Es wird auch MD5 SUM bereitgestellt, damit Sie die Integrität des Installationspakets überprüfen können.
 
  2. Führen Sie die Installation entweder durch Doppelklicken auf die Datei und Beantworten der Eingabeaufforderungen oder durch Ausführen der ausführbaren Datei in der Eingabeaufforderung aus.
 
@@ -261,11 +276,11 @@ Alternativ können Sie zum Verzeichnis `<Installation_directory>\ibm\securegatew
 Kehren Sie zu [Einführung - Client hinzufügen](/docs/services/SecureGateway/securegateway_client.html) zurück.
 
 ## DataPower
-{: #datapower}
+{: #installing-datapower}
 
-DataPower verfügt über eine eingebettete Version des {{site.data.keyword.SecureGateway}}-Clients. Abhängig von der DataPower-Version haben Sie möglicherweise eine andere Version des {{site.data.keyword.SecureGateway}}-Clients. Beachten Sie alle maßgeblichen [Einschränkungen des DataPower-Clients](/docs/services/SecureGateway/securegateway_interaction.html#limits-datapower). Bei Verwendung des alten Secure Gateway-Clients können unerwartete Fehler auftreten.
+DataPower verfügt über eine eingebettete Version des {{site.data.keyword.SecureGateway}}-Clients.  Abhängig von der DataPower-Version haben Sie möglicherweise eine andere Version des {{site.data.keyword.SecureGateway}}-Clients.  Beachten Sie alle maßgeblichen [Einschränkungen des DataPower-Clients](/docs/services/SecureGateway/securegateway_interaction.html#limits-datapower). Bei Verwendung des alten Secure Gateway-Clients können unerwartete Fehler auftreten.
 
-| DataPower-Version | {{site.data.keyword.SecureGateway}}-Clientversion |
+| DataPower-Version | {{site.data.keyword.SecureGateway}}-Clientversion  |
 | -- | --  |
 | 7.2.0.0, 7.5.0.0 | 1.1.0  |
 | 7.5.1.0, 7.7.0 | 1.4.2  |

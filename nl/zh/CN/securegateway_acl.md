@@ -17,7 +17,7 @@ lastupdated: "2017-04-10"
 从 V1.5.0 开始，访问控制表规则将在连接到同一网关的所有客户机之间同步。因此，您只需在一个客户机上建立/更新 ACL，即可在连接到该网关的所有运行中客户机之间共享。ACL 还将在会话之间持久存储，因此在连接新客户机时也将应用相同的 ACL 规则。
 
 ## 访问控制表命令
-{: #commands}
+{: #acl-commands}
 
 支持的 ACL 命令包括：
 
@@ -49,9 +49,9 @@ acl allow :
 返回到[入门 - 添加客户机](/docs/services/SecureGateway/securegateway_client.html)。
 
 ## 使用 ACL 的 HTTP/HTTPS 路由控制
-{: #routes}
+{: #acl-route-control}
 
-从 V1.6.0 开始，HTTP/HTTPS 目标还可以在 ACL 条目上强制实施特定路径。这些路径按照添加典型 ACL 条目的相同方式进行添加，但要将路径附加到规则末尾。例如，以下命令仅允许遵循 /my/api 路径的请求通过：
+从 V1.6.0 开始，HTTP/HTTPS 目标还可以在 ACL 条目上强制实施特定路由。这些路由按照添加典型 ACL 条目的相同方式进行添加，但要将路径附加到规则末尾。例如，以下命令仅允许遵循 /my/api 路径的请求通过：
 
 ```
 acl allow localhost:80/my/api
@@ -60,15 +60,15 @@ acl allow localhost:80/my/api
 
 落实此规则后，将允许对 `<cloud host>:<cloud port>/my/api*` 的请求通过。
 
-仅在 `acl allow` 命令上支持路径。
+仅在 `acl allow` 命令上支持路由。
 
 ## 访问控制表优先顺序
-{: #precedence}
+{: #acl-precedence}
 
 提供 `acl allow :` 命令之后，如果再输入其他 `acl allow` 命令，那么系统将假定您不再希望允许不受限制的访问，从而将 `ALL:ALL` 允许规则（来自 `acl allow:`）从列表中除去。提供 `acl deny :` 命令之后，如果输入另一个 `acl deny` 命令，那么系统将假定您不再希望限制所有访问，从而将 `ALL:ALL` 拒绝规则（来自 `acl deny:`）从列表中除去。如果通过 CLI 命令 `show acl` 列出当前的 ACL 规则，将出现一个指示器，其中显示允许还是拒绝未列出的规则。
 
 ## 导入 ACL 文件
-{: #import}
+{: #import-acl-file}
 
 您可以向 `acl file` 命令提供文件名，该文件中包含客户机在启动时将读取的受支持 ACL 命令。此文件应具有以下格式的命令：
 
@@ -87,9 +87,9 @@ no acl
 返回到[入门 - 添加客户机](/docs/services/SecureGateway/securegateway_client.html)。
 
 ## 将 ACL 文件复制到 {{site.data.keyword.SecureGateway}} Docker 客户机
-{: #docker}
+{: #copy-acl-to-docker}
 
-{{site.data.keyword.SecureGateway}} Docker 客户机实质上在其自己的虚拟化容器中运行。因此，托管机器的文件系统无法由该容器内部运行的进程（包括 {{site.data.keyword.SecureGateway}} 客户机）直接访问。从 Docker Engine V1.8.0 开始，可以使用“docker cp”命令将主机上存在的文件推送到正在运行或已停止的容器中。要使用 {{site.data.keyword.SecureGateway}} 客户机的 ACL FILE 交互命令，必须执行此操作。
+{{site.data.keyword.SecureGateway}} Docker 客户机实质上在其自己的虚拟化容器中运行。因此，托管机器的文件系统无法由该容器内部运行的进程（包括 {{site.data.keyword.SecureGateway}} 客户机）直接访问。从 Docker Engine V1.8.0 开始，可以使用“docker cp”命令将主机上存在的文件导入到正在运行或已停止的容器中，必须完成此操作才能使用 {{site.data.keyword.SecureGateway}} 客户机的 ACL FILE 交互命令。
 
 要在 Docker 中使用从主机到 Docker 实例的交互式“cp”支持，您必须使用的是 Docker 1.8.0。可以使用 `docker --version` 进行检查。
 
@@ -114,7 +114,7 @@ Server:
 ```
 {: screen}
 
-然后，要将 ACL 文件列表推出到 Docker 映像，请执行以下步骤：
+然后，要将 ACL 文件列表导入到 Docker 映像，请执行以下步骤：
 
 - 运行“docker ps”命令以查找容器标识
 
