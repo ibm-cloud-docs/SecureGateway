@@ -18,7 +18,7 @@ lastupdated: "2018-08-10"
 - [Reaching the Enterprise Backend using Bluemix Secure Gateway via SDK API ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://developer.ibm.com/bluemix/2015/04/07/reaching-enterprise-backend-bluemix-secure-gateway-via-sdk-api/){: new_window}
 - [Reaching enterprise backend with Bluemix Secure Gateway via console ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://developer.ibm.com/bluemix/2015/04/01/reaching-enterprise-backend-bluemix-secure-gateway/){: new_window}
 - [Real-life production experience with Secure Gateway ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://www.ibm.com/blogs/bluemix/2015/11/secure-gateway-in-production-part1/){: new_window}
-- [REST API ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://new-console.ng.bluemix.net/apidocs/25){: new_window}
+- [REST API ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://cloud.ibm.com/apidocs/secure-gateway){: new_window}
 
 
 ## Utilizzo di {{site.data.keyword.SecureGateway}} SDK for Bluemix
