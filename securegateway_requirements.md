@@ -35,7 +35,7 @@ The Secure Gateway Client is supported in the following environments:
 
 The Secure Gateway Client uses outbound port 443 and port 9000 to connect to npm registry and the {{site.data.keyword.Bluemix}} environment :
 - Port `443` for npm installation
-  - During the installation, the installer will connect to npm registry and run `npm install` to install the dependencies required by Secure Gateway Client. Before the installation, please make sure the machine which the client will be installed on can connect to a npm registry website. npm is configured to use npm, Inc.'s public registry at https://registry.npmjs.org by default. <br><br>
+  - During the installation, the installer will connect to npm registry and run `npm install` to install the dependencies required by Secure Gateway Client. Before the installation, please make sure the machine which the client will be installed on can connect to a npm registry website. npm is configured to use npm, Inc.'s public registry at `https://registry.npmjs.org` by default. <br><br>
 If there's npm Enterprise server in your environment, please whitelist all of the dependencies of Secure Gateway Client on the npm Enterprise server. For the list of dependencies, please refer to `<Installation_directory>\ibm\securegateway\client\package.json` file.<br><br>
 
 - Port `443` for gateway authentication
