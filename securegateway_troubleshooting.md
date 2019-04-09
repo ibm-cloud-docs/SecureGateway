@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-08-10"
+  years: 2015, 2019
+lastupdated: "2019-04-09"
 
 ---
 {:screen: .screen}
@@ -259,9 +259,9 @@ If you have technical questions about developing or deploying an application wit
 
 If you have question about the service or instructions on how to get started, use the [IBM developerWorks dW Answers ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/answers/topics/securegateway/?smartspace=bluemix) forum along with the "bluemix" and "Secure Gateway" tags.
 
-For more details on on using these forums, check the [Getting help page here ](https://console.ng.bluemix.net/docs/support/index.html#getting-help).
+For more details on on using these forums, check the [Getting help page here ](https://cloud.ibm.com/docs/get-support?topic=get-support-getting-customer-support#using-avatar).
 
-For information about opening an IBM support ticket, or about support levels and ticket severities, see [Contacting support](https://console.ng.bluemix.net/docs/support/index.html#contacting-support).
+For information about opening an IBM support ticket, or about support levels and ticket severities, see [Contacting support](https://cloud.ibm.com/docs/get-support?topic=get-support-support-case-severity#support-case-severity).
 
 Please provide as much of the following information as possible when submitting a ticket:
 
