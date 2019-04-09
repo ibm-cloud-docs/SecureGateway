@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-01-16"
+lastupdated: "2019-04-09"
 
 ---
 
@@ -225,3 +225,30 @@ Where can I receive Secure Gateway notifications, especially for disruptive main
 You can get notifications via our [status page](https://console.bluemix.net/status), please search `Secure Gateway` in that page.
 
 When the Secure Gateway client disconnected unexpectedly, please go to the status page to check whether there is disruptive maintenance at that time.
+
+## How can I capture the Secure Gateway Client logs on DataPower?
+{: #faq-dp-log}
+
+### Question
+{: #dp-log-question}
+How can I capture the Secure Gateway Client logs and write it to a file on DataPower?
+
+### Answer
+{: #dp-log-answer}
+
+The event category of Secure Gateway Client logs is `sgclient`. You can create a [log target](https://www.ibm.com/support/knowledgecenter/en/SS9H2Y_7.7.0/com.ibm.dp.doc/logtarget_logs.html) to write the logs with specific event category to a file, following is the example:
+
+- From the default domain:
+    - GUI side panel select `Object` → `Logging Configuration` → `Log Target`. Or search for `Log Target` in the `Search` field.
+    - Select the `Add` button to add a log target
+- In the `Main` tab:
+    - Fill in `Name`
+    - `Target Type` of `File`
+    - `Log format` of `Text`
+    - Fill in `File Name` to define the output location, for example: `logtemp:///sgclient.log`
+    - Select `Archive Mode` to `Rotate`
+- In the `Event Subscription` Tab:
+    - Fill in `Name`
+    - Select the `Add` button to add a target event subscription
+    - Fill in the `Event Category` selecting `sgclient`
+    - Fill in the `Minimum Event Priority` of `debug`
