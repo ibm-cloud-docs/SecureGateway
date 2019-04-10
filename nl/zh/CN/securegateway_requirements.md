@@ -35,7 +35,7 @@ lastupdated: "2019-03-07"
 
 Secure Gateway 客户机使用出站端口 443 和端口 9000 来连接到 npm 注册表和 {{site.data.keyword.Bluemix}} 环境：
 - 端口 `443`，用于 npm 安装
-  - 在安装期间，安装程序将连接到 npm 注册表，并运行 `npm install` 来安装 Secure Gateway 客户机所需的依赖项。在安装之前，请确保安装客户机的机器可以连接到 npm 注册表 Web 站点。缺省情况下，npm 配置为使用 npm, Inc. 的公共注册表：https://registry.npmjs.org。<br><br>
+  - 在安装期间，安装程序将连接到 npm 注册表，并运行 `npm install` 来安装 Secure Gateway 客户机所需的依赖项。在安装之前，请确保安装客户机的机器可以连接到 npm 注册表 Web 站点。缺省情况下，npm 配置为使用 npm, Inc. 的公共注册表：`https://registry.npmjs.org`。<br><br>
 如果环境中有 npm Enterprise 服务器，请在 npm Enterprise 服务器上将 Secure Gateway 客户机的所有依赖项列入白名单。有关依赖项的列表，请参阅 `<Installation_directory>\ibm\securegateway\client\package.json` 文件。<br><br>
 
 - 端口 `443`，用于网关认证

@@ -35,7 +35,7 @@ Il client Secure Gateway è supportato nei seguenti ambienti:
 
 Il client Secure Gateway utilizza la porta in uscita 443 e la porta 9000 per stabilire una connessione al registro npm e all'ambiente {{site.data.keyword.Bluemix}}:
 - Porta `443` per l'installazione npm
-  - Durante l'installazione, il programma di installazione si connetterà al registro npm ed eseguirà `npm install` per installare le dipendenze richieste dal client Secure Gateway. Prima dell'installazione, assicurati che la macchina su cui verrà installato il client possa connettersi a un sito web di registro npm. Per impostazione predefinita, npm è configurato per utilizzare il registro pubblico di npm, Inc. all'indirizzo https://registry.npmjs.org. <br><br>
+  - Durante l'installazione, il programma di installazione si connetterà al registro npm ed eseguirà `npm install` per installare le dipendenze richieste dal client Secure Gateway. Prima dell'installazione, assicurati che la macchina su cui verrà installato il client possa connettersi a un sito web di registro npm. Per impostazione predefinita, npm è configurato per utilizzare il registro pubblico di npm, Inc. all'indirizzo `https://registry.npmjs.org`. <br><br>
 Se nel tuo ambiente è presente il server Enterprise di npm, inserisci in whitelist tutte le dipendenze del client Secure Gateway sul server Enteprise di npm. Per l'elenco di dipendenze, fai riferimento al file `<Installation_directory>\ibm\securegateway\client\package.json`.<br><br>
 
 - Porta `443` per l'autenticazione del gateway
