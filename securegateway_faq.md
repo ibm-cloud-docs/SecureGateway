@@ -222,9 +222,11 @@ Where can I receive Secure Gateway notifications, especially for disruptive main
 ### Answer
 {: #notification-answer}
 
-You can get notifications via our [status page](https://cloud.ibm.com/status?selected=status), please search `Secure Gateway` in that page.
+You can get notifications via our [status page](https://cloud.ibm.com/status?selected=status). To get the disruptive maintenance, please search `Secure Gateway` in the tab `Planned maintenance`.
 
 When the Secure Gateway client disconnected unexpectedly, please go to the status page to check whether there is disruptive maintenance at that time.
+
+If the maintenance needs to have disruption over 10 minutes, then you might need to manually restart the Secure Gateway client to reconnect to the Secure Gateway server after the maintenance. Normally, the service downtime will be equal to or less than 10 minutes, the Secure Gateway client (after version v180) should be able to reconnect to the Secure Gateway server automatically.
 
 ## How can I capture the Secure Gateway Client logs on DataPower?
 {: #faq-dp-log}
