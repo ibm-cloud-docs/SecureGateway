@@ -288,7 +288,6 @@ DataPower has an embedded version of the {{site.data.keyword.SecureGateway}} Cli
 | 7.5.2.6, 7.6.0.0 | 1.7.0  |
 | 7.5.2.14, 7.6.0.7, 7.7.1.0, 2018.4.1.0 |  1.8.0fp6  |
 | 2018.4.1.4 | 1.8.2  |
-| 7.6.0.15, 2018.4.1.6 | 1.8.2fp1 |
 
 ### Starting a client session
 {: #datapower-run}
