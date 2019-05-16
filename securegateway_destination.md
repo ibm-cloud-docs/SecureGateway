@@ -96,7 +96,7 @@ This option becomes available by selecting TLS or Mutual Auth for your [Resource
 
 ### Client Certificate and Key
 {: #dest-client-cert-key}
-Where the Client Certificate and Key fields appears depends on the [type of destination](#dest-types) you have chosen.  In both situations, the files provided here will be used by the SG Client to identify itself for TLS connections.  If no files are uploaded, the {{site.data.keyword.SecureGateway}} servers will automatically generate a self-signed pair with a CN of `localhost`.  For instructions on how to generate a certificate/key pair, [click here](/docs/services/SecureGateway/securegateway_keygen.html).
+Where the Client Certificate and Key fields appears depends on the [type of destination](#dest-types) you have chosen.  In both situations, the files provided here will be used by the SG Client to identify itself for TLS connections.  If no files are uploaded, the {{site.data.keyword.SecureGateway}} servers will automatically generate a self-signed pair with a CN of `localhost`.  For instructions on how to generate a certificate/key pair, [click here](/docs/services/SecureGateway?topic=securegateway-cert-key-management).
 
 For an on-premises destination, it will appear under [Resource Authentication](#dest-resource-auth) if `Resource Authentication: Mutual Auth` has been selected.  In this case, the SG Client will use this certificate/key pair for its outbound connection to the defined resource, the On-prem resource needs to add this certificate to its CA to communicate with the SG Client.
 
@@ -124,7 +124,7 @@ IP Addresses | Ports | Results
 1.2.3.4 | | Only IP 1.2.3.4 from any port will be allowed.
 | 5000 | Any IP from port 5000 will be allowed.
 
-Specific rules can also be associated with an application.  For more information on creating associated rules, see [how to create iptables rules for your app](/docs/services/SecureGateway/iptables.html).
+Specific rules can also be associated with an application.  For more information on creating associated rules, see [how to create iptables rules for your app](/docs/services/SecureGateway?topic=securegateway-iptables-rulles).
 
 ## Configuring Proxy Options
 {: #dest-proxy}

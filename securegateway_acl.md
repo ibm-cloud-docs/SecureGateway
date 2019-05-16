@@ -46,7 +46,7 @@ acl allow :
 
 The `show acl` command will show the currently set ACL or provide a message on the overall setting.
 
-Return to [Getting Started - Adding a Client](/docs/services/SecureGateway/securegateway_client.html).
+Return to [Getting Started - Adding a Client](/docs/services/SecureGateway?topic=securegateway-add-client).
 
 ## HTTP/S Route Control using the ACL
 {: #acl-route-control}
@@ -82,9 +82,9 @@ no acl
 
 <b>Note:</b> `no acl` without any other parameters RESETS the ACL table and sets the access to DENY ALL.
 
-You can find a sample ACL file [here](/docs/services/SecureGateway/securegateway_acl-file.html).
+You can find a sample ACL file [here](/docs/services/SecureGateway?topic=securegateway-acl-files).
 
-Return to [Getting Started - Adding a Client](/docs/services/SecureGateway/securegateway_client.html).
+Return to [Getting Started - Adding a Client](/docs/services/SecureGateway?topic=securegateway-add-client).
 
 ## Copying your ACL file into the {{site.data.keyword.SecureGateway}} Docker client
 {: #copy-acl-to-docker}
@@ -156,4 +156,4 @@ cli> S
 ```
 {: screen}
 
-Return to [Getting Started - Adding a Client](/docs/services/SecureGateway/securegateway_client.html).
+Return to [Getting Started - Adding a Client](/docs/services/SecureGateway?topic=securegateway-add-client).
