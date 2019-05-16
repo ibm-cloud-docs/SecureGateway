@@ -137,7 +137,7 @@ vi /etc/ibm/sgenvironment.conf
 
 Once these steps have been executed, the YasT and System V commands can be used to start/stop the daemon.
 
-Return to [Getting Started - Adding a Client](/docs/services/SecureGateway/securegateway_client.html).
+Return to [Getting Started - Adding a Client](/docs/services/SecureGateway?topic=securegateway-add-client).
 
 ## Windows
 {: #auto-start-windows}
@@ -179,4 +179,4 @@ The application logs for windows service will be stored at:
 
  The logs are rolled into a new file on a daily basis.
 
-Return to [Getting Started - Adding a Client](/docs/services/SecureGateway/securegateway_client.html).
+Return to [Getting Started - Adding a Client](/docs/services/SecureGateway?topic=securegateway-add-client).

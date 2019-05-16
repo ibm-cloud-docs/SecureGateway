@@ -66,7 +66,7 @@ If there's npm Enterprise server in your environment, please whitelist all of th
   The node of the SG gateway, which can be found in the configuration of the gateway. Since each gateway will not be on the same node, please confirm the hostname of the node every time you create the gateway
 
 
-Ensure you check or modify additional firewall and IP Table rules that might apply. However, we do not recommend setting rules by IP, rules should be set specific to host name and port as the IPs for gateway authentication and SG gateway are controlled by Bluemix and are subject to change. If your network administrators require current IPs for specific hostname, please [contact support to request these for your environment](/docs/services/SecureGateway/securegateway_troubleshooting.html#getting-help-and-support).
+Ensure you check or modify additional firewall and IP Table rules that might apply. However, we do not recommend setting rules by IP, rules should be set specific to host name and port as the IPs for gateway authentication and SG gateway are controlled by Bluemix and are subject to change. If your network administrators require current IPs for specific hostname, please [contact support to request these for your environment](/docs/services/SecureGateway?topic=securegateway-troubleshooting#getting-help-and-support).
 
 
 ## Determining Hardware Requirements

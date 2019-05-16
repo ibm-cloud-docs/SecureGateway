@@ -12,7 +12,7 @@ lastupdated: "2019-04-09"
 # IP Table Rules
 {: #iptables-rulles}
 
-To allow the enforcement of iptables rules on your destination, you must have the `Restrict network access` option checked under the Network Security panel of your destination.  At that point you can add the rules you want enforced, such as: 192.0.0.1 9000 (single IP and port),  192.0.0.1-192.0.0.5 5000:5005 (range of IPs and range of ports), or any combination of these rules. Please see [Configuring Network Security](/docs/services/SecureGateway/securegateway_destination.html#dest-network-security) for more information.
+To allow the enforcement of iptables rules on your destination, you must have the `Restrict network access` option checked under the Network Security panel of your destination.  At that point you can add the rules you want enforced, such as: 192.0.0.1 9000 (single IP and port),  192.0.0.1-192.0.0.5 5000:5005 (range of IPs and range of ports), or any combination of these rules. Please see [Configuring Network Security](/docs/services/SecureGateway?topic=securegateway-add-dest#dest-network-security) for more information.
 
 If you are creating your private destinations with cURL, you could use a command like:
 
