@@ -10,7 +10,7 @@ lastupdated: "2018-08-10"
 {:pre: .pre}
 
 # IP 테이블 규칙
-{: #iptables-rulles}
+{: #iptables-rules}
 
 대상에서 iptable 규칙을 적용하려면 대상의 네트워크 보안 패널에 있는 `네트워크 액세스 제한` 옵션이 선택되어 있어야 합니다. 해당 위치에서 적용하려는 규칙을 추가할 수 있습니다(예: 192.0.0.1 9000(단일 IP 및 포트), 192.0.0.1-192.0.0.5 5000:5005(IP 범위 및 포트 범위) 또는 해당 규칙의 조합). 자세한 정보는 [네트워크 보안 구성](/docs/services/SecureGateway/securegateway_destination.html#dest-network-security)을 참조하십시오.
 

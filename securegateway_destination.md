@@ -124,7 +124,7 @@ IP Addresses | Ports | Results
 1.2.3.4 | | Only IP 1.2.3.4 from any port will be allowed.
 | 5000 | Any IP from port 5000 will be allowed.
 
-Specific rules can also be associated with an application.  For more information on creating associated rules, see [how to create iptables rules for your app](/docs/services/SecureGateway?topic=securegateway-iptables-rulles).
+Specific rules can also be associated with an application.  For more information on creating associated rules, see [how to create iptables rules for your app](/docs/services/SecureGateway?topic=securegateway-iptables-rules).
 
 ## Configuring Proxy Options
 {: #dest-proxy}

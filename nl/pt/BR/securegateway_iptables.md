@@ -10,7 +10,7 @@ lastupdated: "2018-08-10"
 {:pre: .pre}
 
 # Regras de tabela de IPs
-{: #iptables-rulles}
+{: #iptables-rules}
 
 Para permitir a imposição das regras iptables em seu destino, deve-se ter a opção `Restringir acesso à rede` marcada no painel Segurança de rede do seu destino. Nesse ponto, é possível incluir
 as regras que deseja impor, tais como: 192.0.0.1 9000 (IP único e porta), 192.0.0.1-192.0.0.5 5000:5005 (intervalo de IPs e intervalo de portas) ou qualquer combinação dessas regras. Veja [Configurando a segurança de rede](/docs/services/SecureGateway/securegateway_destination.html#dest-network-security) para obter mais informações.
