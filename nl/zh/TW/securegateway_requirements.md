@@ -66,7 +66,7 @@ lastupdated: "2019-03-07"
   可在閘道配置中找到之 SG 閘道的節點。由於每個閘道不在相同節點上，請在每次建立閘道時，確認節點的主機名稱。
 
 
-請務必檢查或修改可能會適用的其他防火牆及「IP 表格」規則。不過，我們不建議以 IP 來設定規則，規則應該特別針對主機名稱及埠而設定，因為閘道鑑別和 SG 閘逆用的 IP 是由 Bluemix 控制，可能會變更。如果您的網路管理者針對特定主機名稱需要現行 IP，請[與支援中心聯絡，以為您的環境要求這些項目](/docs/services/SecureGateway/securegateway_troubleshooting.html#getting-help-and-support)。
+請務必檢查或修改可能會適用的其他防火牆及「IP 表格」規則。不過，我們不建議以 IP 來設定規則，規則應該特別針對主機名稱及埠而設定，因為閘道鑑別和 SG 閘逆用的 IP 是由 Bluemix 控制，可能會變更。如果您的網路管理者針對特定主機名稱需要現行 IP，請[與支援中心聯絡，以為您的環境要求這些項目](/docs/services/SecureGateway?topic=securegateway-troubleshooting#getting-help-and-support)。
 
 
 ## 判定硬體需求

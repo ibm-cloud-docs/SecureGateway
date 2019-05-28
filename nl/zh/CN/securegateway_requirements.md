@@ -35,7 +35,7 @@ lastupdated: "2019-03-07"
 
 Secure Gateway 客户机使用出站端口 443 和端口 9000 来连接到 npm 注册表和 {{site.data.keyword.Bluemix}} 环境：
 - 端口 `443`，用于 npm 安装
-  - 在安装期间，安装程序将连接到 npm 注册表，并运行 `npm install` 来安装 Secure Gateway 客户机所需的依赖项。在安装之前，请确保安装客户机的机器可以连接到 npm 注册表 Web 站点。缺省情况下，npm 配置为使用 npm, Inc. 的公共注册表：`https://registry.npmjs.org`。<br><br>
+  - 在安装期间，安装程序将连接到 npm 注册表，并运行 `npm install` 来安装 Secure Gateway 客户机所需的依赖项。在安装之前，请确保安装客户机的机器可以连接到 npm 注册表 Web 站点。缺省情况下，npm 配置为使用 npm, Inc. 的公共注册表，网址为：`https://registry.npmjs.org`。<br><br>
 如果环境中有 npm Enterprise 服务器，请在 npm Enterprise 服务器上将 Secure Gateway 客户机的所有依赖项列入白名单。有关依赖项的列表，请参阅 `<Installation_directory>\ibm\securegateway\client\package.json` 文件。<br><br>
 
 - 端口 `443`，用于网关认证
@@ -66,7 +66,7 @@ Secure Gateway 客户机使用出站端口 443 和端口 9000 来连接到 npm �
   SG 网关的节点，可在网关的配置中找到。由于每个网关不会位于同一节点上，请在每次创建网关时确认节点的主机名。
 
 
-确保检查或修改可能适用的其他防火墙和 IP 表规则。但是，建议不要按 IP 设置规则，应特定于主机名和端口来设置规则，因为用于网关认证和 SG 网关的 IP 受 Bluemix 控制并且可能会更改。如果网络管理员需要特定主机名的当前 IP，请[联系支持人员以请求用于您环境的 IP](/docs/services/SecureGateway/securegateway_troubleshooting.html#getting-help-and-support)。
+确保检查或修改可能适用的其他防火墙和 IP 表规则。但是，建议不要按 IP 设置规则，应特定于主机名和端口来设置规则，因为用于网关认证和 SG 网关的 IP 受 Bluemix 控制并且可能会更改。如果网络管理员需要特定主机名的当前 IP，请[联系支持人员以请求用于您环境的 IP](/docs/services/SecureGateway?topic=securegateway-troubleshooting#getting-help-and-support)。
 
 
 ## 确定硬件需求

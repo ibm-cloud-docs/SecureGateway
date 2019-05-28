@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-01-16"
+lastupdated: "2019-04-29"
 
 ---
 
@@ -54,7 +54,7 @@ porque está fazendo algumas atualizações no serviço.  Nesse caso, você pode
 desativar seus gateways ou destinos até que a construção de backend
 esteja completa.
 
-Para obter mais informações sobre a desativação de um gateway ou um destino, veja [como gerenciar sua instância de serviço do Secure Gateway](/docs/services/SecureGateway/securegateway_managing.html).
+Para obter mais informações sobre a desativação de um gateway ou um destino, veja [como gerenciar sua instância de serviço do Secure Gateway](/docs/services/SecureGateway?topic=securegateway-manage-sg-service).
 
 ## Qual é a abordagem recomendada para a automação de criação entre múltiplos espaços?
 {: #faq-automation-spaces}
@@ -62,12 +62,12 @@ Para obter mais informações sobre a desativação de um gateway ou um destino,
 ### Pergunta
 {: #automation-spaces-question}
 Um ambiente do cliente tem uma organização e três espaços.  Um espaço é para desenvolvimento, outro para preparação e o último para produção.  O cliente deve criar uma única instância do Secure Gateway ou
-várias instâncias (por exemplo, uma para cada espaço)? Se o cliente pode criar múltiplos gateways, há quaisquer considerações para reutilizar um aplicativo Node.js para criar um gateway e um destino em cada espaço?
+várias instâncias (por exemplo, uma para cada espaço)?  Se o cliente pode criar múltiplos gateways, há quaisquer considerações para reutilizar um aplicativo Node.js para criar um gateway e um destino em cada espaço?
 
 ### Resposta
 {: #automation-spaces-answer}
 
-- É possível criar uma única instância do Secure Gateway para todos os três espaços.  No entanto, deve-se lembrar das [limitações de gateway e de destino para seu plano específico](/docs/services/SecureGateway/securegateway_plans.html).
+- É possível criar uma única instância do Secure Gateway para todos os três espaços.  No entanto, deve-se lembrar das [limitações de gateway e de destino para seu plano específico](/docs/services/SecureGateway?topic=securegateway-secure-gateway-service-plans).
 - Não há considerações adicionais para reutilizar um aplicativo Node.js, pois nenhuma ligação de serviço é requerida pelo Secure Gateway.
 
 
@@ -81,7 +81,7 @@ Um ambiente do cliente tem três organizações: uma para desenvolvimento, uma p
 ### Resposta
 {: #automation-orgs-answer}
 
-- Você não precisa ter uma instância de serviço do Secure Gateway em cada organização. É possível ter uma instância em uma organização e usar os gateways nessa instância por meio de todos os outros ambientes.  Com essa configuração, deve-se lembrar as [limitações de gateway e de destino para seu plano específico](/docs/services/SecureGateway/securegateway_plans.html).
+- Você não precisa ter uma instância de serviço do Secure Gateway em cada organização. É possível ter uma instância em uma organização e usar os gateways nessa instância por meio de todos os outros ambientes.  Com essa configuração, deve-se lembrar as [limitações de gateway e de destino para seu plano específico](/docs/services/SecureGateway?topic=securegateway-secure-gateway-service-plans).
 - É possível ter uma instância de serviço do Secure Gateway em cada organização e a configuração estará disponível para todos os seus espaços.
 
 ## Meu app precisa estar no mesmo espaço?
@@ -105,7 +105,7 @@ Não, você não precisa executar seu app no mesmo espaço do {{site.data.keywor
 
 ### Resposta
 {: #server-logs-answer}
-Os logs de nível de erro no servidor não podem ser recuperados. Somente erros que são feitos no momento da solicitação podem ser vistos.
+Os logs de nível de erro no servidor não podem ser recuperados.  Somente erros que são feitos no momento da solicitação podem ser vistos.
 
 ## Quais são os estados funcionais do Secure Gateway?
 {: #faq-states}
@@ -196,24 +196,24 @@ Quais são as configurações recomendadas para tornar minhas conexões mais seg
 {: #secure-app-answer-ma}
 Ativar a Autenticação mútua para ambos os lados dos destinos no local torna o Secure Gateway mais seguro. No lado Autenticação do usuário, ative a autenticação mútua para restringir o acesso do nó em nuvem do Secure Gateway por meio da autenticação usando um certificado de cliente quando a solicitação é por meio de TLS/HTTPS. No
 lado de Autenticação de recurso, ative a autenticação mútua para que ela forneça a credencial apropriada ao
-conectar-se ao terminal de destino e assegure acesso seguro/criptografado ao recurso no local. Veja [Configurando a autenticação mútua](/docs/services/SecureGateway/securegateway_destination.html#dest-mutual-auth) e [Autenticação mútua TLS do Node.js](/docs/services/SecureGateway/securegateway_tls-ma.html#nodejs-tls-ma) para obter mais informações.
+conectar-se ao terminal de destino e assegure acesso seguro/criptografado ao recurso no local. Veja [Configurando a autenticação mútua](/docs/services/SecureGateway?topic=securegateway-add-dest#dest-mutual-auth) e [Autenticação mútua TLS do Node.js](/docs/services/SecureGateway?topic=securegateway-nodejs-tls-ma#nodejs-tls-ma) para obter mais informações.
 
 #### Configurar regras de tabela de IPs (para o destino no local)
 {: #secure-app-answer-iptables}
 O host e a porta em nuvem do Secure Gateway de um destino no local estão no espaço público; portanto, é permitido que todos acessem por padrão.
 Para controlar o acesso ao tráfego no Secure Gateway, configure as regras iptables para permitir acesso
 somente por um intervalo específico de IPs e portas para proteger os recursos no local. Veja [Regras
-de tabela de IPs](/docs/services/SecureGateway/securegateway_destination.html#dest-network-security) para obter mais informações sobre como configurar as regras iptables no
+de tabela de IPs](/docs/services/SecureGateway?topic=securegateway-add-dest#dest-network-security) para obter mais informações sobre como configurar as regras iptables no
 Secure Gateway.
 
 #### Configurar Lista de Controle de Acesso (para o destino no local)
 {: #secure-app-answer-acl}
 Configure o suporte à Lista de Controle de Acesso para permitir ou restringir o acesso aos recursos no local para tornar os destinos no local mais seguros, especificando o direito de acesso no host e na porta de destino específicos. Recomenda-se definir as rotas HTTP/S permitidas ou restritas nas entradas ACL, bem como
-aprimorar a segurança do destino no local. Veja [Lista de controle de acesso](/docs/services/SecureGateway/securegateway_acl.html#acl) e [Controle de rota HTTP/S usando a ACL](/docs/services/SecureGateway/securegateway_acl.html#acl-route-control) para obter informações.
+aprimorar a segurança do destino no local. Veja [Lista de controle de acesso](/docs/services/SecureGateway?topic=securegateway-acl#acl) e [Controle de rota HTTP/S usando a ACL](/docs/services/SecureGateway?topic=securegateway-acl#acl-route-control) para obter informações.
 
 #### Configurar a senha na IU do cliente Secure Gateway
 {: #secure-app-answer-ui-pw}
-Recomenda-se configurar a senha da IU para restringir o acesso da IU do cliente Secure Gateway. Veja [Interagindo com o cliente](/docs/services/SecureGateway/securegateway_interaction.html#client-interacting) para obter mais detalhes sobre como configurar a senha usando a configuração de inicialização ou os comandos interativos na linha de comandos do terminal do cliente Secure Gateway.
+Recomenda-se configurar a senha da IU para restringir o acesso da IU do cliente Secure Gateway. Veja [Interagindo com o cliente](/docs/services/SecureGateway?topic=securegateway-client-interacting#client-interacting) para obter mais detalhes sobre como configurar a senha usando a configuração de inicialização ou os comandos interativos na linha de comandos do terminal do cliente Secure Gateway.
 
 ## O que é migração de gateway? Por que o domínio foi mudado após dezembro de 2018?
 {: #faq-gateway-migration}
@@ -247,8 +247,38 @@ Onde posso receber notificações do Secure Gateway, especialmente para manuten�
 ### Resposta
 {: #notification-answer}
 
-É possível receber notificações por meio de nossa [página
-de status](https://console.bluemix.net/status). Para isso, procure Secure Gateway nessa página.
+É possível obter notificações por meio de nossa [página de status](https://cloud.ibm.com/status?selected=status).
+- Para obter as notificações sobre uma manutenção disruptiva concluída/em andamento, procure `Secure Gateway` na guia `Status`.
+- Para obter as notificações sobre uma manutenção disruptiva planejada, procure `Secure Gateway` na guia `Manutenção planejada`.
 
 Quando o cliente Secure Gateway for desconectado inesperadamente, acesse a página de status
 para verificar se há manutenção disruptiva no momento.
+
+Se a manutenção precisar ser interrompida por mais de 10 minutos, poderá ser necessário reiniciar manualmente o cliente Secure Gateway para se reconectar ao servidor Secure Gateway após a manutenção. Normalmente, o tempo de inatividade do serviço será igual ou menor que 10 minutos, e o cliente Secure Gateway (após a versão v180) deverá ser capaz de se reconectar automaticamente ao servidor Secure Gateway.
+
+## Como posso capturar os logs do cliente Secure Gateway no DataPower?
+{: #faq-dp-log}
+
+### Pergunta
+{: #dp-log-question}
+Como posso capturar os logs do cliente Secure Gateway e gravá-los em um arquivo no DataPower?
+
+### Resposta
+{: #dp-log-answer}
+
+A categoria de evento dos logs do cliente Secure Gateway é `sgclient`. É possível criar um [destino de log](https://www.ibm.com/support/knowledgecenter/en/SS9H2Y_7.7.0/com.ibm.dp.doc/logtarget_logs.html) para gravar os logs com uma categoria de evento específica em um arquivo. O exemplo é mostrado a seguir:
+
+- No domínio padrão:
+    - No painel lateral da GUI, selecione `Objeto` → `Configuração de criação de log` → `Destino de log`. Ou procure `Destino de log` no campo `Procurar`.
+    - Selecione o botão `Incluir` para incluir um destino de log
+- Na guia `Principal`:
+    - Preencha o `Nome`
+    - `Tipo de destino` do `Arquivo`
+    - `Formato de log` do `Texto`
+    - Preencha o `Nome do arquivo` para definir o local de saída, por exemplo: `logtemp:///sgclient.log`
+    - Selecione `Modo de archive` para `Girar`
+- Na guia `Inscrição de evento`:
+    - Preencha o `Nome`
+    - Selecione o botão `Incluir` para incluir uma assinatura de evento de destino
+    - Preencha a `Categoria de evento` selecionando `sgclient`
+    - Preencha a `Prioridade mínima do evento` com `depuração`

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-08-10"
+  years: 2015, 2019
+lastupdated: "2019-04-09"
 
 ---
 {:screen: .screen}
@@ -257,9 +257,9 @@ docker run -t -i ads-secure-gateway-client1  --F /tmp/aclfile.txt
 
 如果您有关于该服务的疑问或要了解有关如何入门的指示信息，请使用 [IBM developerWorks dW Answers ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://developer.ibm.com/answers/topics/securegateway/?smartspace=bluemix) 论坛，并使用“bluemix”和“Secure Gateway”标记。
 
-有关使用这些论坛的更多详细信息，请查看[此处的“获取帮助”页面](https://console.ng.bluemix.net/docs/support/index.html#getting-help)。
+有关使用这些论坛的更多详细信息，请查看[此处的“获取帮助”页面](https://cloud.ibm.com/docs/get-support?topic=get-support-getting-customer-support#using-avatar)。
 
-有关提交 IBM 支持凭单或有关支持级别和凭单严重性的信息，请参阅[联系支持人员](https://console.ng.bluemix.net/docs/support/index.html#contacting-support)。
+有关提交 IBM 支持凭单或有关支持级别和凭单严重性的信息，请参阅[联系支持人员](https://cloud.ibm.com/docs/get-support?topic=get-support-support-case-severity#support-case-severity)。
 
 提交凭单时，请尽可能多地提供以下信息：
 

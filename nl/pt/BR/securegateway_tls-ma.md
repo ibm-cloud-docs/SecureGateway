@@ -31,7 +31,7 @@ Para que o cliente Secure Gateway autentique o recurso ao qual ele está se cone
 
 ### Certificado de cliente e Chave
 {: #tls-ma-client-cert-and-key}
-Se precisar especificar como o cliente Secure Gateway se identificará para o meu recurso, eu poderei fazer upload de um certificado e uma chave aqui para que o Cliente use.  Como o Cliente e o recurso estão em execução na mesma máquina, eu posso deixá-los vazios e deixar que os servidores Secure Gateway gerem automaticamente um par para mim.  Se meu recurso estivesse em um host separado, eu precisaria [gerar um par certificado/chave para fazer upload](/docs/services/SecureGateway/securegateway_keygen.html).
+Se precisar especificar como o cliente Secure Gateway se identificará para o meu recurso, eu poderei fazer upload de um certificado e uma chave aqui para que o Cliente use.  Como o Cliente e o recurso estão em execução na mesma máquina, eu posso deixá-los vazios e deixar que os servidores Secure Gateway gerem automaticamente um par para mim.  Se meu recurso estivesse em um host separado, eu precisaria [gerar um par certificado/chave para fazer upload](/docs/services/SecureGateway?topic=securegateway-cert-key-management).
 
 ![Autenticação mútua TLS local](./images/localTLSma.png?raw=true "Autenticação mútua TLS local")
 

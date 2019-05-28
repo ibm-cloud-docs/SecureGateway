@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-08-10"
+  years: 2015, 2019
+lastupdated: "2019-04-09"
 
 ---
 {:screen: .screen}
@@ -29,7 +29,7 @@ accessibles et que les tous les noms d'hôte peuvent être résolus par un serve
 - Initiez la demande en échec depuis l'application demandeuse
 - Consultez les journaux du client Secure Gateway
 - Si aucun journal de client n'a été généré à partir de la demande, le problème se situe entre l'application demandeuse et les serveurs Secure Gateway.  Le problème peut aller de la fiabilité du réseau à des protocoles de requête non concordants, en passant par un établissement de liaison d'authentification mutuelle TLS inapproprié.
-- Si le client a généré des journaux de niveau d'erreur à partir de la requête, le problème se situe entre le client SG et la ressource sur site. Le tableau ci-dessous répertorie les erreurs communes, les problèmes généralement à l'origine de ces erreurs et les méthodes susceptibles de les résoudre.
+- Si le client a généré des journaux de niveau d'erreur à partir de la requête, le problème se situe entre le client SG et la ressource sur site.  Le tableau ci-dessous répertorie les erreurs communes, les problèmes généralement à l'origine de ces erreurs et les méthodes susceptibles de les résoudre.
 
 Erreur | Cause typique | Méthodes de traitement
 --- | --- | ---
@@ -266,9 +266,9 @@ Si vous avez des questions techniques sur le développement ou le déploiement d
 
 Si vous avez une question concernant le service ou les instructions de démarrage, accédez au forum [IBM developerWorks dW Answers ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://developer.ibm.com/answers/topics/securegateway/?smartspace=bluemix) et utilisez les étiquettes "bluemix" et "Secure Gateway".
 
-Pour plus d'informations sur l'utilisation de ces forums, cliquez sur la [page Obtenir de l'aide ici](https://console.ng.bluemix.net/docs/support/index.html#getting-help).
+Pour plus d'informations sur l'utilisation de ces forums, cliquez sur la [page Obtenir de l'aide ici](https://cloud.ibm.com/docs/get-support?topic=get-support-getting-customer-support#using-avatar).
 
-Pour plus d'informations sur l'ouverture d'un ticket de demande de service IBM, sur les niveaux de support disponibles ou les niveaux de gravité des tickets, voir la rubrique décrivant [comment contacter le support](https://console.ng.bluemix.net/docs/support/index.html#contacting-support).
+Pour plus d'informations sur l'ouverture d'un ticket de demande de service IBM, sur les niveaux de support disponibles ou les niveaux de gravité des tickets, voir la rubrique décrivant [comment contacter le support](https://cloud.ibm.com/docs/get-support?topic=get-support-support-case-severity#support-case-severity).
 
 Lors de la soumission d'un ticket, fournissez le maximum des informations suivantes :
 
@@ -281,4 +281,4 @@ Lors de la soumission d'un ticket, fournissez le maximum des informations suivan
    - ID de la destination
    - Protocole
    - Authentification côté destination
-   - Certificats chargés (uniquement leurs noms et le dossier Box dans lesquels ils ont été téléchargés) 
+   - Certificats chargés (uniquement leurs noms et le dossier Box dans lesquels ils ont été téléchargés)

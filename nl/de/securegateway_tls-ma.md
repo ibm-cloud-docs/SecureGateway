@@ -31,7 +31,7 @@ Damit vom Secure Gateway-Client die Ressource authentifiziert werden kann, mit d
 
 ### Clientzertifikat und -schlüssel
 {: #tls-ma-client-cert-and-key}
-Falls angegeben werden muss, wie die Identifizierung des Secure Gateway-Clients an der Ressource durchgeführt werden soll, können zu diesem Zweck für den Client ein Zertifikat und ein Schlüssel hochgeladen werden.  Da sich der Client und die Ressource auf derselben Maschine befinden, ist diese nicht erforderlich, und von den Secure Gateway-Servern kann automatisch ein Paar generiert werden.  Wenn sich die Ressource auf einem anderen Host befindet, muss [ein Zertifikats-/Schlüsselpaar generiert und hochgeladen werden](/docs/services/SecureGateway/securegateway_keygen.html).
+Falls angegeben werden muss, wie die Identifizierung des Secure Gateway-Clients an der Ressource durchgeführt werden soll, können zu diesem Zweck für den Client ein Zertifikat und ein Schlüssel hochgeladen werden.  Da sich der Client und die Ressource auf derselben Maschine befinden, ist diese nicht erforderlich, und von den Secure Gateway-Servern kann automatisch ein Paar generiert werden.  Wenn sich die Ressource auf einem anderen Host befindet, muss [ein Zertifikats-/Schlüsselpaar generiert und hochgeladen werden](/docs/services/SecureGateway?topic=securegateway-cert-key-management).
 
 ![Lokale gegenseitige TLS-Authentifizierung](./images/localTLSma.png?raw=true "Lokale gegenseitige TLS-Authentifizierung")
 

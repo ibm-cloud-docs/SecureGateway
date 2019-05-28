@@ -27,4 +27,4 @@ lastupdated: "2017-04-10"
 
 ![新建閘道](./images/newGateway.png?raw=true "新建閘道")
 
-既然您擁有新建立的閘道，便可以[連接第一個用戶端](/docs/services/SecureGateway/securegateway_client.html)。
+既然您擁有新建立的閘道，便可以[連接第一個用戶端](/docs/services/SecureGateway?topic=securegateway-add-client)。

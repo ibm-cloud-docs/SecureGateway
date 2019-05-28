@@ -46,7 +46,7 @@ acl allow :
 
 O comando `show acl` mostrará a ACL atualmente configurada ou fornecerá uma mensagem sobre a configuração geral.
 
-Retorne para [Introdução - Incluindo um cliente](/docs/services/SecureGateway/securegateway_client.html).
+Retorne para [Introdução - Incluindo um cliente](/docs/services/SecureGateway?topic=securegateway-add-client).
 
 ## Controle de rota de HTTP/S usando a ACL
 {: #acl-route-control}
@@ -58,7 +58,7 @@ acl allow localhost:80/my/api
 ```
 {: pre}
 
-Com essa regra no local, solicitações para `<cloud host>:<cloud port>/my/api*` serão permitidas.
+Com essa regra em vigor, será permitida a passagem das solicitações para `<cloud host>:<cloud port>/my/api*`.
 
 As rotas são suportadas somente em comandos `acl allow`.
 
@@ -82,9 +82,9 @@ no acl
 
 <b>Nota:</b> `no acl` sem nenhum outro parâmetro RECONFIGURA a tabela ACL e configura o acesso para DENY ALL.
 
-É possível localizar um arquivo ACL de amostra [aqui](/docs/services/SecureGateway/securegateway_acl-file.html).
+É possível localizar um arquivo ACL de amostra [aqui](/docs/services/SecureGateway?topic=securegateway-acl-files).
 
-Retorne para [Introdução - Incluindo um cliente](/docs/services/SecureGateway/securegateway_client.html).
+Retorne para [Introdução - Incluindo um cliente](/docs/services/SecureGateway?topic=securegateway-add-client).
 
 ## Copiando seu arquivo ACL para o cliente Docker do {{site.data.keyword.SecureGateway}}
 {: #copy-acl-to-docker}
@@ -159,4 +159,4 @@ cli> S
 ```
 {: screen}
 
-Retorne para [Introdução - Incluindo um cliente](/docs/services/SecureGateway/securegateway_client.html).
+Retorne para [Introdução - Incluindo um cliente](/docs/services/SecureGateway?topic=securegateway-add-client).

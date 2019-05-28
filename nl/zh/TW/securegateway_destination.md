@@ -96,7 +96,7 @@ HTTPS：交互鑑別|「TLS：交互鑑別」連線，其中已重新編寫主�
 
 ### 用戶端憑證及金鑰
 {: #dest-client-cert-key}
-「用戶端憑證」及「金鑰」欄位的出現位置，取決於您選擇的[目的地類型](#dest-types)。在這兩種情況下，「SG 用戶端」會使用這裡提供的檔案來識別它自己以進行 TLS 連線。如果未上傳任何檔案，則 {{site.data.keyword.SecureGateway}} 伺服器會自動產生具有 CN `localhost` 的自簽配對。如需如何產生憑證/金鑰配對的指示，[請按一下這裡](/docs/services/SecureGateway/securegateway_keygen.html)。
+「用戶端憑證」及「金鑰」欄位的出現位置，取決於您選擇的[目的地類型](#dest-types)。在這兩種情況下，「SG 用戶端」會使用這裡提供的檔案來識別它自己以進行 TLS 連線。如果未上傳任何檔案，則 {{site.data.keyword.SecureGateway}} 伺服器會自動產生具有 CN `localhost` 的自簽配對。如需如何產生憑證/金鑰配對的指示，[請按一下這裡](/docs/services/SecureGateway?topic=securegateway-cert-key-management)。
 
 若為內部部署目的地，如果已選取`資源鑑別：交互鑑別`，則這會出現在[資源鑑別](#dest-resource-auth)下。在此情況下，SG 用戶端會將此憑證/金鑰配對用於它對已定義資源的出埠連線，內部部署資源需要將此憑證新增至它的 CA 才能與 SG 用戶端通訊。
 
@@ -124,7 +124,7 @@ IP 位址 | 埠 | 結果
 1.2.3.4 | | 僅容許來自任何埠的 IP 1.2.3.4。
 | 5000 | 容許來自埠 5000 的任何 IP。
 
-特定規則也可以與應用程式相關聯。如需建立關聯規則的相關資訊，請參閱[如何為應用程式建立 iptables 規則](/docs/services/SecureGateway/iptables.html)。
+特定規則也可以與應用程式相關聯。如需建立關聯規則的相關資訊，請參閱[如何為應用程式建立 iptables 規則](/docs/services/SecureGateway?topic=securegateway-iptables-rules)。
 
 ## 配置 Proxy 選項
 {: #dest-proxy}

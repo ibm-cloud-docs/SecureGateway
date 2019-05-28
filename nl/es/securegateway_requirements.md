@@ -35,7 +35,7 @@ El cliente de Secure Gateway recibe soporte en los siguientes entornos:
 
 El cliente de Secure Gateway utiliza el puerto de salida 443 y el puerto 9000 para conectar con el registro npm y el entorno de {{site.data.keyword.Bluemix}}:
 - Puerto `443` para la instalación de npm
-  - Durante la instalación, el instalador se conectará al registro npm y ejecutará `npm install` para instalar las dependencias necesarias para el cliente Secure Gateway. Antes de la instalación, asegúrese de que la máquina en la que se instalará el cliente se pueda conectar a un sitio web de registro de npm. npm se configura para que utilice el registro público de npm, Inc., que está en https://registry.npmjs.org de forma predeterminada. <br><br>
+  - Durante la instalación, el instalador se conectará al registro npm y ejecutará `npm install` para instalar las dependencias necesarias para el cliente Secure Gateway. Antes de la instalación, asegúrese de que la máquina en la que se instalará el cliente se pueda conectar a un sitio web de registro de npm. npm se configura para que utilice el registro público npm, Inc., que está en `https://registry.npmjs.org` de forma predeterminada. <br><br>
 Si hay un servidor de npm Enterprise en el entorno, coloque en la lista blanca todas las dependencias del cliente de Secure Gateway en el servidor de npm Enterprise. Para ver la lista de dependencias, consulte el archivo `<Installation_directory>\ibm\securegateway\client\package.json`.<br><br>
 
 - Puerto `443` para la autenticación de pasarela
@@ -67,7 +67,7 @@ Si hay un servidor de npm Enterprise en el entorno, coloque en la lista blanca t
 
 
 Asegúrese de comprobar o modificar
-las reglas de Tabla de IP y cortafuegos adicionales que puedan aplicarse. Sin embargo, no recomendamos definir reglas por IP; las reglas deben ser específicas del nombre de host y del puerto, al igual que las IP para la autenticación de pasarela y la pasarela SG se controlan mediante Bluemix y están sujetas a cambios. Si los administradores de red necesitan IP específicas para un nombre de host específico, [póngase en contacto con el equipo de soporte para solicitar estos datos para su entorno](/docs/services/SecureGateway/securegateway_troubleshooting.html#getting-help-and-support).
+las reglas de Tabla de IP y cortafuegos adicionales que puedan aplicarse. Sin embargo, no recomendamos definir reglas por IP; las reglas deben ser específicas del nombre de host y del puerto, al igual que las IP para la autenticación de pasarela y la pasarela SG se controlan mediante Bluemix y están sujetas a cambios. Si los administradores de red necesitan IP específicas para un nombre de host específico, [póngase en contacto con el equipo de soporte para solicitar estos datos para su entorno](/docs/services/SecureGateway?topic=securegateway-troubleshooting#getting-help-and-support).
 
 
 ## Determinación de los requisitos de hardware

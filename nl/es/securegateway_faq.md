@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-01-16"
+lastupdated: "2019-04-29"
 
 ---
 
@@ -47,7 +47,7 @@ Es posible que desee inhabilitar un destino o una pasarela por una de las siguie
 - No desea que el servicio esté disponible para los usuarios porque está realizando algunas actualizaciones en el servicio.  En este caso, puede inhabilitar temporalmente las pasarelas necesarias y esperar a que se actualice el servicio.
 - Ha configurado todas las pasarelas y destinos en la parte frontal, pero el programa de fondo aún se está creando.  En este caso, inhabilitaría las pasarelas o destinos hasta que finalice la creación del programa de fondo.
 
-Para obtener más información cómo inhabilitar una pasarela o un destino, consulte [cómo gestionar la instancia del servicio Secure Gateway](/docs/services/SecureGateway/securegateway_managing.html).
+Para obtener más información cómo inhabilitar una pasarela o un destino, consulte [cómo gestionar la instancia del servicio Secure Gateway](/docs/services/SecureGateway?topic=securegateway-manage-sg-service).
 
 ## ¿Cuál es el enfoque recomendado para la automatización de la creación en varios espacios?
 {: #faq-automation-spaces}
@@ -59,7 +59,7 @@ Un entorno de cliente tiene una organización y tres espacios.  Un espacio es pa
 ### Respuesta
 {: #automation-spaces-answer}
 
-- Puede crear una sola instancia de Secure Gateway para los tres espacios.  Sin embargo, debe recordar las [limitaciones para su plan específico](/docs/services/SecureGateway/securegateway_plans.html) de pasarela y de destino.
+- Puede crear una sola instancia de Secure Gateway para los tres espacios.  Sin embargo, debe recordar las [limitaciones para su plan específico](/docs/services/SecureGateway?topic=securegateway-secure-gateway-service-plans) de pasarela y de destino.
 - No hay consideraciones adicionales a tener en cuenta para reutilizar una aplicación Node.js, ya que Secure Gateway no necesita enlaces de servicio.
 
 
@@ -73,7 +73,7 @@ Un entorno de cliente tiene tres organizaciones: una para desarrollo, una para t
 ### Respuesta
 {: #automation-orgs-answer}
 
-- No es necesario tener una instancia de servicio de Secure Gateway en cada organización. Puede tener una instancia en una organización y utilizar las pasarelas de dicha instancia desde todos los demás entornos.  Sin embargo, con esta configuración debe recordar las [limitaciones para su plan específico](/docs/services/SecureGateway/securegateway_plans.html) de pasarela y de destino.
+- No es necesario tener una instancia de servicio de Secure Gateway en cada organización. Puede tener una instancia en una organización y utilizar las pasarelas de dicha instancia desde todos los demás entornos.  Sin embargo, con esta configuración debe recordar las [limitaciones para su plan específico](/docs/services/SecureGateway?topic=securegateway-secure-gateway-service-plans) de pasarela y de destino.
 - Puede tener una instancia del servicio Secure Gateway en cada organización y la configuración estará disponible para todos los espacios.
 
 ## ¿Es necesario que mi app esté en el mismo espacio?
@@ -180,20 +180,20 @@ Nota: esta información sobre conexiones es a nivel de cliente, no a nivel de pa
 
 #### Utilizar autenticación mutua
 {: #secure-app-answer-ma}
-El hecho de habilitar la autenticación mutua en ambos lados de los destinos locales hace que Secure Gateway sea más segura. En el lado de autenticación de usuario, habilite la autenticación mutua para restringir el acceso al nodo de nube de Secure Gateway mediante la autenticación utilizando un certificado de cliente cuando la solicitud se realice sobre TLS/HTTPS. En el lado de la autenticación de recursos, habilite la autenticación mutua para proporcionar la credencial adecuada al conectar con el punto final de destino y asegure el acceso seguro/cifrado al recurso local. Consulte [Configuración de la autenticación mutua](/docs/services/SecureGateway/securegateway_destination.html#dest-mutual-auth) y [Autenticación mutua de TLS de Node.js](/docs/services/SecureGateway/securegateway_tls-ma.html#nodejs-tls-ma) para obtener más información.
+El hecho de habilitar la autenticación mutua en ambos lados de los destinos locales hace que Secure Gateway sea más segura. En el lado de autenticación de usuario, habilite la autenticación mutua para restringir el acceso al nodo de nube de Secure Gateway mediante la autenticación utilizando un certificado de cliente cuando la solicitud se realice sobre TLS/HTTPS. En el lado de la autenticación de recursos, habilite la autenticación mutua para proporcionar la credencial adecuada al conectar con el punto final de destino y asegure el acceso seguro/cifrado al recurso local. Consulte [Configuración de la autenticación mutua](/docs/services/SecureGateway?topic=securegateway-add-dest#dest-mutual-auth) y [Autenticación mutua de TLS de Node.js](/docs/services/SecureGateway?topic=securegateway-nodejs-tls-ma#nodejs-tls-ma) para obtener más información.
 
 #### Configurar reglas de IPtable (para destino local)
 {: #secure-app-answer-iptables}
 El puerto y el host de nube de Secure Gateway de un destino local están en el espacio público; por lo tanto, todo el mundo tiene acceso de forma predeterminada.
-Para controlar el tráfico de acceso en Secure Gateway, defina reglas de iptables de modo que solo permitan el acceso mediante un rango específico de IP y puertos para proteger los recursos locales. Consulte [Reglas de IPtable](/docs/services/SecureGateway/securegateway_destination.html#dest-network-security) para obtener más información sobre cómo configurar las reglas de iptables en Secure Gateway.
+Para controlar el tráfico de acceso en Secure Gateway, defina reglas de iptables de modo que solo permitan el acceso mediante un rango específico de IP y puertos para proteger los recursos locales. Consulte [Reglas de IPtable](/docs/services/SecureGateway?topic=securegateway-add-dest#dest-network-security) para obtener más información sobre cómo configurar las reglas de iptables en Secure Gateway.
 
 #### Configurar lista de control de accesos (para destino local)
 {: #secure-app-answer-acl}
-La configuración del soporte de lista de control de accesos para permitir o restringir el acceso a los recursos locales haría que los destinos locales fueran más seguros mediante la especificación del acceso en el host y puerto de destino específicos. Se recomienda definir las rutas HTTP/S permitidas o restringidas en las entradas de ACL, así como mejorar la seguridad del destino local. Consulte [Lista de control de accesos](/docs/services/SecureGateway/securegateway_acl.html#acl) y [Control de rutas HTTP/S mediante la ACL](/docs/services/SecureGateway/securegateway_acl.html#acl-route-control) para obtener más información.
+La configuración del soporte de lista de control de accesos para permitir o restringir el acceso a los recursos locales haría que los destinos locales fueran más seguros mediante la especificación del acceso en el host y puerto de destino específicos. Se recomienda definir las rutas HTTP/S permitidas o restringidas en las entradas de ACL, así como mejorar la seguridad del destino local. Consulte [Lista de control de accesos](/docs/services/SecureGateway?topic=securegateway-acl#acl) y [Control de rutas HTTP/S mediante la ACL](/docs/services/SecureGateway?topic=securegateway-acl#acl-route-control) para obtener más información.
 
 #### Establecer la contraseña en la interfaz de usuario del cliente de Secure Gateway
 {: #secure-app-answer-ui-pw}
-Se recomienda establecer la contraseña de la interfaz de usuario para restringir el acceso a la interfaz de usuario del cliente de Secure Gateway. Consulte [Interactuación con el cliente](/docs/services/SecureGateway/securegateway_interaction.html#client-interacting) para ver más información sobre cómo definir la contraseña mediante la configuración de inicio o de mandatos interactivos en la línea de mandatos de terminal del cliente de Secure Gateway.
+Se recomienda establecer la contraseña de la interfaz de usuario para restringir el acceso a la interfaz de usuario del cliente de Secure Gateway. Consulte [Interactuación con el cliente](/docs/services/SecureGateway?topic=securegateway-client-interacting#client-interacting) para ver más información sobre cómo definir la contraseña mediante la configuración de inicio o de mandatos interactivos en la línea de mandatos de terminal del cliente de Secure Gateway.
 
 ## ¿Qué es la migración de pasarela? ¿Por qué cambia el dominio después de diciembre de 2018?
 {: #faq-gateway-migration}
@@ -221,6 +221,37 @@ Actualmente la migración no es obligatoria y no hay fecha exacta sobre cuándo 
 ### Respuesta
 {: #notification-answer}
 
-Puede recibir notificaciones a través de nuestra [página de estado](https://console.bluemix.net/status); busque `Secure Gateway` en dicha página.
+Puede recibir notificaciones a través de nuestra [página de estado](https://cloud.ibm.com/status?selected=status).
+- Para recibir notificaciones sobre interrupciones por mantenimiento completadas o en curso, busque `Secure Gateway` en el separador `Estado`.
+- Para recibir notificaciones sobre interrupciones por mantenimiento planificadas, busque `Secure Gateway` en el separador `Estado`.
 
 Si el cliente Secure Gateway se desconecta de forma inesperada, vaya a la página de estado para ver si se ha producido una interrupción por mantenimiento en este momento.
+
+Si el mantenimiento requiere una interrupción de más de 10 minutos, deberá reiniciar manualmente el cliente de Secure Gateway para que se vuelva a conectar al servidor de Secure Gateway después del mantenimiento. Normalmente, el tiempo de inactividad del servicio será igual o inferior a 10 minutos, el cliente de Secure Gateway (después de la versión v180) debería poder volverse a conectar al servidor de Secure Gateway automáticamente.
+
+## ¿Cómo puedo capturar registros del cliente de Secure Gateway en DataPower?
+{: #faq-dp-log}
+
+### Pregunta
+{: #dp-log-question}
+¿Cómo puedo capturar registros del cliente de Secure Gateway y escribirlos en un archivo en DataPower?
+
+### Respuesta
+{: #dp-log-answer}
+
+La categoría de suceso de los registros de cliente de Secure Gateway es `sgclient`. Puede crear un [destino de registro](https://www.ibm.com/support/knowledgecenter/en/SS9H2Y_7.7.0/com.ibm.dp.doc/logtarget_logs.html) para escribir los registros con una categoría de suceso específica para un archivo, como se muestra en el siguiente ejemplo:
+
+- Desde el dominio predeterminado:
+    - En el panel lateral de la interfaz gráfica de usuario seleccione `Objeto` → `Configuración de registro` → `Destino de registro`. O busque `Destino de registro` en el campo `Buscar`.
+    - Seleccione el botón `Añadir` para añadir un destino de registro
+- En el separador `Principal`:
+    - Rellene el `Nombre`
+    - `Tipo de destino` del `Archivo`
+    - `Formato de registro` del `Texto`
+    - Rellene el `Nombre de archivo` para definir la ubicación de salida, por ejemplo: `logtemp:///sgclient.log`
+    - Seleccione `Modalidad de archivado` en `Rotar`
+- En el separador `Suscripción de sucesos`:
+    - Rellene el `Nombre`
+    - Seleccione el botón `Añadir` para añadir una suscripción de suceso de destino
+    - Rellene la `Categoría de suceso` seleccionando `sgclient`
+    - Rellene la `Prioridad de suceso mínima` de `debug`

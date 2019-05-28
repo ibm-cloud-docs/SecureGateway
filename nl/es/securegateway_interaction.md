@@ -90,7 +90,7 @@ node lib/secgwclient.js <myGatewayID_1> <myGatewayID_2> -t none--<token for gate
 ```
 {: pre}
 
-Volver a [Iniciación - Adición de un cliente](/docs/services/SecureGateway/securegateway_client.html).
+Volver a [Iniciación - Adición de un cliente](/docs/services/SecureGateway?topic=securegateway-add-client).
 
 ## Configuración interactiva
 {: #interactive}
@@ -110,7 +110,7 @@ el control interactivo en el cliente.
 | N, no acl &lt;hostname:port&gt; &lt;worker ID&gt; | Eliminar una entrada de la lista de control de accesos |
 | S, show acl &lt;worker ID&gt; | Mostrar todas las entradas de la lista de control de accesos |
 | F, acl file &lt;file&gt; &lt;worker ID&gt; | Archivo de lista de control de accesos |
-| C, displayconfig &lt;worker ID&gt; | Muestra la configuración actual de {{site.data.keyword.SecureGateway}} si está disponible. |
+| C, displayconfig &lt;worker ID&gt; | Muestra la configuración actual de {{site.data.keyword.SecureGateway}} si está disponible |
 | a, authorize &lt;worker ID&gt; | Conmutar la sustitución del parámetro rejectUnauthorized para conexiones TLS de salida para el nodo trabajador especificado |
 | t, sectoken &lt;security token&gt; | La señal de seguridad que se debe utilizar para la siguiente conexión de pasarela |
 | c, connect &lt;gateway ID&gt; | Conectar a {{site.data.keyword.Bluemix_notm}} mediante el ID de pasarela especificado |
@@ -122,7 +122,7 @@ el control interactivo en el cliente.
 | d, deselect | Deselecciona el nodo trabajador especificado anteriormente.  Emita el mandato seleccionado para especificar
 otro |
 | w, password &lt;old password&gt; &lt;new password&gt; | Establecer la contraseña de IU.  Si &lt;new password&gt; está en blanco, no se impone ninguna contraseña. Hay que especificar &lt;old password&gt; al actualizar la contraseña. Las contraseñas deben contener solamente letras |
-| P, port &lt;new port&gt; | Cambiar el puerto en el que está a la escucha la interfaz de usuario. |
+| P, port &lt;new port&gt; | Cambiar el puerto en el que está a la escucha la interfaz de usuario |
 | u, uistart &lt;initial password&gt; &lt;port&gt; | Inicia la IU en localhost:&lt;port&gt;/ashboard. Si &lt;initial password&gt; está en blanco y no se ha establecido ninguna otra contraseña para la sesión, no se impondrá ninguna contraseña de interfaz de usuario. Si &lt;port&gt; está en blanco, se podrá acceder a la interfaz de usuario en 9003 |
 | U, uistop | Cierra la interfaz de usuario asociada a esta sesión de cliente. Solo se podrá acceder a la sesión mediante la CLI hasta que se inicie manualmente una nueva IU |
 | R, revoke | Borrar todas las autorizaciones de interfaz de usuario asociadas a esta sesión de cliente |
@@ -132,9 +132,9 @@ otro |
 
 <b>Nota:</b> si se ha especificado una conexión con el mandato `select` y se llama a otro mandato sin proporcionar un ID de nodo trabajador, el mandato intentará ejecutarse en la conexión especificada por `select`.
 
-Para obtener más información sobre cómo configurar la lista de control de accesos, [pulse aquí](/docs/services/SecureGateway/securegateway_acl.html).
+Para obtener más información sobre cómo configurar la lista de control de accesos, [pulse aquí](/docs/services/SecureGateway?topic=securegateway-acl).
 
-Volver a [Iniciación - Adición de un cliente](/docs/services/SecureGateway/securegateway_client.html).
+Volver a [Iniciación - Adición de un cliente](/docs/services/SecureGateway?topic=securegateway-add-client).
 
 ## Interfaz de usuario de cliente
 {: #client-ui}
@@ -173,7 +173,7 @@ Esta página le permitirá manipular la lista de control de accesos para el clie
 
 Esta página mostrará información de la conexión actual para el cliente seleccionado (que se muestra en la parte superior derecha de la página).  La información como la descripción de contraseña, el número de conexiones actuales y los escuchas de destino inverso puede verse aquí.
 
-Volver a [Iniciación - Adición de un cliente](/docs/services/SecureGateway/securegateway_client.html).
+Volver a [Iniciación - Adición de un cliente](/docs/services/SecureGateway?topic=securegateway-add-client).
 
 ## Terminación de un cliente remoto
 {: #client-remote}
@@ -199,4 +199,4 @@ El cliente de {{site.data.keyword.SecureGateway}} DataPower está en el proceso 
 - No se admiten cadenas de certificados completos con TLS del lado de destino antes de DataPower versión 7.5.1.0.
 - Los destinos de nube no reciben soporte antes de DataPower versión 7.5.1.0.
 - El nivel de registro no se puede cambiar por nivel TRACE
-- La última versión de Secure Gateway Client en DataPower es 1.8.0fp6; consulte [aquí](/docs/services/SecureGateway/securegateway_install.html#installing-datapower) para obtener más información
+- La última versión de Secure Gateway Client en DataPower es 1.8.2fp1, consulte [aquí](/docs/services/SecureGateway?topic=securegateway-client-install#installing-datapower) para obtener más información

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-08-10"
+  years: 2015, 2019
+lastupdated: "2019-04-09"
 
 ---
 {:screen: .screen}
@@ -33,7 +33,7 @@ e che tutti i nomi host possano essere risolti da un DNS.
 - Avvia la richiesta malfunzionante dall'applicazione richiedente
 - Controlla i log del client Secure Gateway
 - Se non sono stati generati log del client dalla richiesta, il problema è presente tra l'applicazione richiedente e i server Secure Gateway.  Può spaziare dall'affidabilità di rete a protocolli di richiesta non corrispondenti e a un handshake di autenticazione reciproca TLS non corretto.
-- Se il client ha generato i log del livello di errore dalla richiesta, allora il problema è tra il client SG e la risorsa in loco. Di seguito è riportata una tabella che contiene gli errori comuni, i problemi che di solito li causano e i possibili metodi per risolverli.
+- Se il client ha generato i log del livello di errore dalla richiesta, allora il problema è tra il client SG e la risorsa in loco.  Di seguito è riportata una tabella che contiene gli errori comuni, i problemi che di solito li causano e i possibili metodi per risolverli.
 
 Errore | Caso tipico | Metodi di risoluzione dei problemi
 --- | --- | ---
@@ -277,11 +277,11 @@ Se hai domande tecniche sullo sviluppo o la distribuzione di un'applicazione con
 
 Se hai domande sul servizio o sulle istruzioni introduttive, usa il forum [IBM developerWorks dW Answers ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://developer.ibm.com/answers/topics/securegateway/?smartspace=bluemix) insieme alle tag "bluemix" e "Secure Gateway".
 
-Per ulteriori dettagli sull'utilizzo di questi forum, verifica la [pagina Come ottenere supporto qui](https://console.ng.bluemix.net/docs/support/index.html#getting-help).
+Per ulteriori dettagli sull'utilizzo di questi forum, verifica la [pagina Come ottenere supporto qui](https://cloud.ibm.com/docs/get-support?topic=get-support-getting-customer-support#using-avatar).
 
 Per informazioni su come aprire un ticket di supporto IBM o sui livelli di supporto e sulla
 gravità dei ticket, consulta [Come contattare il
-supporto](https://console.ng.bluemix.net/docs/support/index.html#contacting-support).
+supporto](https://cloud.ibm.com/docs/get-support?topic=get-support-support-case-severity#support-case-severity).
 
 Quando inoltri un ticket, fornisci quante più informazioni puoi delle seguenti:
 

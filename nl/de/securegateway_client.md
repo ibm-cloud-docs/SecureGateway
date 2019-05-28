@@ -17,12 +17,12 @@ Klicken Sie vom neuen Gateway und in der Registerkarte 'Clients' auf die Schaltf
 
 ![Client verbinden](./images/connectClient.png?raw=true "Client verbinden")
 
-Wenn Sie den bevorzugten Client ausgewählt haben, [klicken Sie hier, um anzuzeigen, wie er installiert wird](/docs/services/SecureGateway/securegateway_install.html).
+Wenn Sie den bevorzugten Client ausgewählt haben, [klicken Sie hier, um anzuzeigen, wie er installiert wird](/docs/services/SecureGateway?topic=securegateway-client-install).
 
-Nachdem Sie den Client installiert haben, können Sie ihn so konfigurieren, dass er [automatisch gestartet wird](/docs/services/SecureGateway/securegateway_auto-start.html) oder [interaktiv ausgeführt wird](/docs/services/SecureGateway/securegateway_interaction.html).
+Nachdem Sie den Client installiert haben, können Sie ihn so konfigurieren, dass er [automatisch gestartet wird](/docs/services/SecureGateway?topic=securegateway-auto-start-conf) oder [interaktiv ausgeführt wird](/docs/services/SecureGateway?topic=securegateway-client-interacting).
 
 ![Verbundener Client](./images/connectedClient.png?raw=true "Verbundener Client")
 
-Wenn Sie jetzt die Zugriffssteuerungsliste für den Client konfigurieren möchten, [klicken Sie hier, um weitere Informationen zu erhalten](/docs/services/SecureGateway/securegateway_acl.html).
+Wenn Sie jetzt die Zugriffssteuerungsliste für den Client konfigurieren möchten, [klicken Sie hier, um weitere Informationen zu erhalten](/docs/services/SecureGateway?topic=securegateway-acl).
 
-Da der Client jetzt verbunden ist, können Sie [Ihr erstes Ziel erstellen](/docs/services/SecureGateway/securegateway_destination.html).
+Da der Client jetzt verbunden ist, können Sie [Ihr erstes Ziel erstellen](/docs/services/SecureGateway?topic=securegateway-add-dest).

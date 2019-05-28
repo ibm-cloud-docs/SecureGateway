@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-08-10"
+  years: 2015, 2019
+lastupdated: "2019-04-09"
 
 ---
 {:screen: .screen}
@@ -12,26 +12,26 @@ lastupdated: "2018-08-10"
 # IP-Tabellenregeln
 {: #iptables-rules}
 
-Damit die Regeln einer IP-Tabelle (iptables) für ein Ziel erzwungen werden, muss die Option `Netzzugriff beschränken` in der Anzeige 'Netzsicherheit' des Ziels ausgewählt sein. An diesem Punkt können Sie Regeln hinzufügen, die erzwungen werden sollen, zum Beispiel 192.0.0.1 9000 (einzelne IP und einzelner Port), 192.0.0.1-192.0.0.5 5000:5005 (IP-Bereich und Portbereich) oder eine Kombination dieser Regeln. Weitere Informationen finden Sie unter [Netzsicherheit konfigurieren](/docs/services/SecureGateway/securegateway_destination.html#dest-network-security).
+Damit die Regeln einer IP-Tabelle (iptables) für ein Ziel erzwungen werden, muss die Option `Netzzugriff beschränken` in der Anzeige 'Netzsicherheit' des Ziels ausgewählt sein.  An diesem Punkt können Sie Regeln hinzufügen, die erzwungen werden sollen, zum Beispiel 192.0.0.1 9000 (einzelne IP und einzelner Port), 192.0.0.1-192.0.0.5 5000:5005 (IP-Bereich und Portbereich) oder eine Kombination dieser Regeln. Weitere Informationen finden Sie unter [Netzsicherheit konfigurieren](/docs/services/SecureGateway?topic=securegateway-add-dest#dest-network-security).
 
 Wenn Sie private Ziele mit cURL erstellen, können Sie einen Befehl wie den folgenden verwenden:
 
 ```
-curl "https://sgmanager.ng.bluemix.net/v1/sgconfig/<gateway_id>/destinations" -H "Authorization: Bearer <security_token>" -H "Content-type: application/json" -d '{"desc":"My Private Destination","ip":"1.1.1.1","port":8000,"private":true}'
+curl "https://sgmanager.us-south.securegateway.cloud.ibm.com/v1/sgconfig/<gateway_id>/destinations" -H "Authorization: Bearer <security_token>" -H "Content-type: application/json" -d '{"desc":"My Private Destination","ip":"1.1.1.1","port":8000,"private":true}'
 ```
 {: pre}
 
 Sobald ein privates Ziel erstellt wurde, können Sie IP-Tabellenregeln mit Befehlen wie den folgenden hinzufügen:
 
 ```
-curl -X PUT "https://sgmanager.ng.bluemix.net/v1/sgconfig/<gateway_id>/destinations/<destination_id>/ipTableRule" -H "Authorization: Bearer <security_token>" -H "Content-type: application/json" -d '{"src":"192.0.0.1","spt":"9000"}' -k
+curl -X PUT "https://sgmanager.us-south.securegateway.cloud.ibm.com/v1/sgconfig/<gateway_id>/destinations/<destination_id>/ipTableRule" -H "Authorization: Bearer <security_token>" -H "Content-type: application/json" -d '{"src":"192.0.0.1","spt":"9000"}' -k
 ```
 {: pre}
 
 und
 
 ```
-curl -X PUT "https://sgmanager.ng.bluemix.net/v1/sgconfig/<gateway_id>/destinations/<destination_id>/ipTableRule" -H "Authorization: Bearer <security_token>" -H "Content-type: application/json" -d '{"src_range":"192.0.0.1-192.0.0.5","spt":"5000:5005"}' -k
+curl -X PUT "https://sgmanager.us-south.securegateway.cloud.ibm.com/v1/sgconfig/<gateway_id>/destinations/<destination_id>/ipTableRule" -H "Authorization: Bearer <security_token>" -H "Content-type: application/json" -d '{"src_range":"192.0.0.1-192.0.0.5","spt":"5000:5005"}' -k
 ```
 {: pre}
 
@@ -60,7 +60,7 @@ const IP_TABLE_BODY = {
  
 request({
   method: 'PUT',
-  uri: `https://sgmanager.ng.bluemix.net/v1/sgconfig/$GATEWAY_ID/destinations/$DEST_ID/ipTableRule`
+  uri: `https://sgmanager.us-south.securegateway.cloud.ibm.com/v1/sgconfig/$GATEWAY_ID/destinations/$DEST_ID/ipTableRule`
   headers: {
     'Authorization': `Bearer $SEC_TOKEN`
   }

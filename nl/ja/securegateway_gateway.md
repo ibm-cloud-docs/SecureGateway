@@ -27,4 +27,4 @@ Secure Gateway ダッシュボードで「ゲートウェイの追加」ボタ�
 
 ![新規ゲートウェイ](./images/newGateway.png?raw=true "新規ゲートウェイ")
 
-これでゲートウェイが新しく作成されたので、[最初のクライアントを接続](/docs/services/SecureGateway/securegateway_client.html)できます。
+これでゲートウェイが新しく作成されたので、[最初のクライアントを接続](/docs/services/SecureGateway?topic=securegateway-add-client)できます。

@@ -17,12 +17,12 @@ Dall'interno del tuo nuovo gateway e nella scheda Destinations, fai clic sul pul
 
 La configurazione guidata <b>non</b> consente la configurazione delle informazioni sul proxy, gli indicatori di nome server o il caricamento di una coppia certificato/chiave specifica per la destinazione.  Dopo la creazione, tutti i campi sono disponibili tramite il pannello Edit Destination.
 
-## Pannello di configurazione guidato 
+## Pannello di configurazione guidato
 {: #add-dest-guided-setup}
 
 ![Guided Setup](./images/guidedLanding.png?raw=true "Pannello di destinazione Guided Setup")
 
-## Pannello di configurazione avanzato 
+## Pannello di configurazione avanzato
 {: #add-dest-advanced-setup}
 
 ![Advanced Setup](./images/advancedLanding.png?raw=true "Pannello di destinazione Advanced Setup")
@@ -88,26 +88,26 @@ L'abilitazione della TLS sulla connessione alla tua risorsa è separata dalla TL
 #### Cloud/On-Premises Authentication
 {: #cloud-or-on-prem-auth}
 
-Questa opzione diventa disponibile selezionando TLS o Mutual Auth per [Resource Authentication](#dest-resource-auth). Il nome del campo corrisponderà al [tipo di destinazione](#dest-types) che hai scelto.  Questo campo consente di caricare fino a 6 certificati per convalidare il certificato della risorsa a cui ti stai connettendo.  Questi file verranno aggiunti alla CA di connessione alla risorsa e devono contenere il certificato o la catena di certificati che la tua risorsa presenterà.
+Questa opzione diventa disponibile selezionando TLS o Mutual Auth per [Resource Authentication](#dest-resource-auth).  Il nome del campo corrisponderà al [tipo di destinazione](#dest-types) che hai scelto.  Questo campo consente di caricare fino a 6 certificati per convalidare il certificato della risorsa a cui ti stai connettendo.  Questi file verranno aggiunti alla CA di connessione alla risorsa e devono contenere il certificato o la catena di certificati che la tua risorsa presenterà.
 
 #### Server Name Indicator (SNI)
 {: #dest-sni}
-Questa opzione diventa disponibile selezionando TLS o Mutual Auth per [Resource Authentication](#dest-resource-auth). Viene utilizzata per consentire di fornire un nome host separato all'handshake TLS della connessione della risorsa.
+Questa opzione diventa disponibile selezionando TLS o Mutual Auth per [Resource Authentication](#dest-resource-auth).  Viene utilizzata per consentire di fornire un nome host separato all'handshake TLS della connessione della risorsa.
 
 ### Client Cert and Key
 {: #dest-client-cert-key}
-La visualizzazione o meno dei campi Client Certificate e Key dipende dal [tipo di destinazione](#dest-types) che hai scelto.  In entrambe le situazioni, i file qui forniti verranno utilizzati dal client SG per identificarsi per le connessioni TLS.  Se non viene caricato alcun file, i server {{site.data.keyword.SecureGateway}} genereranno automaticamente una coppia autofirmata con un CN `localhost`.  Per istruzioni su come generare una coppia certificato/chiave, [fai clic qui](/docs/services/SecureGateway/securegateway_keygen.html).
+La visualizzazione o meno dei campi Client Certificate e Key dipende dal [tipo di destinazione](#dest-types) che hai scelto.  In entrambe le situazioni, i file qui forniti verranno utilizzati dal client SG per identificarsi per le connessioni TLS.  Se non viene caricato alcun file, i server {{site.data.keyword.SecureGateway}} genereranno automaticamente una coppia autofirmata con un CN `localhost`.  Per istruzioni su come generare una coppia certificato/chiave, [fai clic qui](/docs/services/SecureGateway?topic=securegateway-cert-key-management).
 
-Per una destinazione in loco, comparirà sotto [Resource Authentication](#dest-resource-auth), se è stata selezionata `Resource Authentication: Mutual Auth`. In questo caso, il client SG utilizzerà questa coppia certificato/chiave per la sua connessione in uscita alla risorsa definita, la risorsa in loco deve aggiungere questo certificato alla propria CA per comunicare con il client SG. 
+Per una destinazione in loco, comparirà sotto [Resource Authentication](#dest-resource-auth), se è stata selezionata `Resource Authentication: Mutual Auth`.  In questo caso, il client SG utilizzerà questa coppia certificato/chiave per la sua connessione in uscita alla risorsa definita, la risorsa in loco deve aggiungere questo certificato alla propria CA per comunicare con il client SG.
 
-Per una destinazione cloud, comparirà sotto [User Authentication](#dest-user-auth), se è stato selezionato un protocollo TLS. In questo caso, il client SG utilizzerà questa coppia certificato/chiave per creare i listener TLS, l'applicazione in loco deve aggiungere questo certificato alla propria CA per comunicare con il client SG.
+Per una destinazione cloud, comparirà sotto [User Authentication](#dest-user-auth), se è stato selezionato un protocollo TLS.  In questo caso, il client SG utilizzerà questa coppia certificato/chiave per creare i listener TLS, l'applicazione in loco deve aggiungere questo certificato alla propria CA per comunicare con il client SG.
 
 ## Configurazione della sicurezza di rete
 {: #dest-network-security}
 Per impedire a tutti gli indirizzi IP tranne quelli specificamente indicati di connettersi ai tuoi host e porte cloud, puoi scegliere di implementare delle regole iptables sulla tua destinazione in loco.
 ![Pannello Network Security](./images/networkSecurity.png?raw=true "Pannello Network Security")
 
-Per implementare le regole iptables, seleziona la casella <b>Restrict cloud access to this destination with iptables rules</b> dal pannello Network Security. Dopo che la casella è stata selezionata, puoi iniziare ad aggiungere gli IP a cui deve essere consentita la connessione.  Se non viene fornito alcun IP, tutte le connessioni a questi host e a queste porte cloud verranno rifiutate fintanto che la casella <b>Restrict cloud access</b> sarà selezionata.
+Per implementare le regole iptables, seleziona la casella <b>Restrict cloud access to this destination with iptables rules</b> dal pannello Network Security.  Dopo che la casella è stata selezionata, puoi iniziare ad aggiungere gli IP a cui deve essere consentita la connessione.  Se non viene fornito alcun IP, tutte le connessioni a questi host e a queste porte cloud verranno rifiutate fintanto che la casella <b>Restrict cloud access</b> sarà selezionata.
 
 <b>Nota</b>: gli IP o le porte forniti devono essere l'indirizzo IP esterno che i server {{site.data.keyword.SecureGateway}} vedranno, non l'indirizzo IP locale della macchina che effettua la richiesta.
 
@@ -124,7 +124,7 @@ Indirizzi IP | Porte | Risultati
 1.2.3.4 | | Sarà consentito solo l'IP 1.2.3.4 da qualsiasi porta.
 | 5000 | Sarà consentito qualsiasi IP dalla porta 5000.
 
-È anche possibile associare delle regole specifiche a un'applicazione.  Per ulteriori informazioni sulla creazione di regole associate, vedi il documento relativo a [come creare regole iptables per la tua applicazione](/docs/services/SecureGateway/iptables.html).
+È anche possibile associare delle regole specifiche a un'applicazione.  Per ulteriori informazioni sulla creazione di regole associate, vedi il documento relativo a [come creare regole iptables per la tua applicazione](/docs/services/SecureGateway?topic=securegateway-iptables-rules).
 
 ## Configurazione delle opzioni proxy
 {: #dest-proxy}

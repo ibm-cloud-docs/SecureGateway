@@ -31,7 +31,7 @@ Secure Gateway 클라이언트에서 연결 중인 리소스를 인증하기 위
 
 ### 클라이언트 인증서 및 키
 {: #tls-ma-client-cert-and-key}
-Secure Gateway 클라이언트가 내 리소스에 자신을 식별할 방법을 지정해야 하는 경우 여기에서 사용할 클라이언트를 위한 인증서 및 키를 업로드할 수 있습니다.  클라이언트와 리소스가 동일한 시스템에서 실행 중이기 때문에 이 항목을 비어 있는 상태로 놔두고 Secure Gateway 서버에서 자동으로 쌍을 생성하도록 할 수 있습니다.  내 리소스가 별도의 호스트에 있는 경우 [업로드할 인증서/키 쌍을 생성](/docs/services/SecureGateway/securegateway_keygen.html)해야 합니다.
+Secure Gateway 클라이언트가 내 리소스에 자신을 식별할 방법을 지정해야 하는 경우 여기에서 사용할 클라이언트를 위한 인증서 및 키를 업로드할 수 있습니다.  클라이언트와 리소스가 동일한 시스템에서 실행 중이기 때문에 이 항목을 비어 있는 상태로 놔두고 Secure Gateway 서버에서 자동으로 쌍을 생성하도록 할 수 있습니다.  내 리소스가 별도의 호스트에 있는 경우 [업로드할 인증서/키 쌍을 생성](/docs/services/SecureGateway?topic=securegateway-cert-key-management)해야 합니다.
 
 ![로컬 TLS 상호 인증](./images/localTLSma.png?raw=true "로컬 TLS 상호 인증")
 

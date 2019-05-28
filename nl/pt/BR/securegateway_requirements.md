@@ -18,13 +18,13 @@ O cliente Secure Gateway é suportado nos ambientes a seguir:
 | ------------- | ----------- |
 | Windows Desktop | 7, 8.1, 10 e superior |
 | Windows Server | 2012 R2 e superior |
-| Red Hat Linux | 7.3 e superior  |
-| CentOS | 7.3 e superior  |
-| SuSE Linux | 12 e superior  |
+| Red Hat Linux | 7.3 e superior |
+| CentOS | 7.3 e superior |
+| SuSE Linux | 12 e superior |
 | Ubuntu Linux | 14.04 (LTS) e superior |
 | Power Machine | Arquitetura ppc64el |
 | Ubuntu Z-Linux | - |
-| AIX | 7.1 TL4 e superior  |
+| AIX | 7.1 TL4 e superior |
 | Mac OS X | 10.10 (Yosemite) e superior |
 | Docker | 1.7.0 e superior, todos os sistemas operacionais suportados |
 
@@ -35,7 +35,7 @@ O cliente Secure Gateway é suportado nos ambientes a seguir:
 
 O cliente Secure Gateway usa a porta de saída 443 e a porta 9000 para conectar-se ao registro do npm e ao ambiente do {{site.data.keyword.Bluemix}}:
 - Porta `443` para instalação do npm
-  - Durante a instalação, o instalador se conectará ao registro do npm e executará `npm install` para instalar as dependências requeridas pelo cliente Secure Gateway. Antes da instalação, assegure-se de que a máquina na qual o cliente será instalado possa se conectar a um website do registro do npm. O npm está configurado para usar o registro público do npm, Inc. em https://registry.npmjs.org por padrão. <br><br>
+  - Durante a instalação, o instalador se conectará ao registro do npm e executará `npm install` para instalar as dependências requeridas pelo cliente Secure Gateway. Antes da instalação, assegure-se de que a máquina na qual o cliente será instalado possa se conectar a um website do registro do npm. O npm está configurado para usar o registro público da npm, Inc. em `https://registry.npmjs.org` por padrão. <br><br>
 Se houver o servidor npm Enterprise em seu ambiente, inclua na lista de desbloqueio todas as dependências do cliente Secure Gateway no servidor npm Enterprise. Para obter a lista de dependências, consulte o arquivo `<Installation_directory>\ibm\securegateway\client\package.json`.<br><br>
 
 - Porta `443` para autenticação de gateway
@@ -67,13 +67,13 @@ Se houver o servidor npm Enterprise em seu ambiente, inclua na lista de desbloqu
 
 
 Assegure-se de verificar ou modificar
-regras adicionais de firewall e de Tabela de IP que possam se aplicar. No entanto, não recomendamos a configuração de regras por IP. As regras devem ser configuradas como específicas para o nome do host e a porta, já que os IPs para a autenticação de gateway e o gateway SG são controlados pelo Bluemix e estão sujeitos a mudanças. Se seus administradores de rede requererem IPs atuais para o nome do host específico, [entre em contato com o suporte para solicitá-los para o seu ambiente](/docs/services/SecureGateway/securegateway_troubleshooting.html#getting-help-and-support).
+regras adicionais de firewall e de Tabela de IP que possam se aplicar. No entanto, não recomendamos a configuração de regras por IP. As regras devem ser configuradas como específicas para o nome do host e a porta, já que os IPs para a autenticação de gateway e o gateway SG são controlados pelo Bluemix e estão sujeitos a mudanças. Se seus administradores de rede requererem IPs atuais para o nome do host específico, [entre em contato com o suporte para solicitá-los para o seu ambiente](/docs/services/SecureGateway?topic=securegateway-troubleshooting#getting-help-and-support).
 
 
 ## Determinando requisitos de hardware
 {: #hardware-requirements}
 
-As especificações da máquina que executa o cliente Secure Gateway dependem em grande parte do tráfego que passará pela conexão.  Cada instância do cliente é um processo individual que fornece até 250 conexões simultâneas.  Para estimar uma média máxima que a máquina precisaria suportar, determine o tamanho médio de uma transação no cliente (solicitação e resposta) e, em seguida, escale isso para 250 transações simultâneas. Dado que esse número combinou os tamanhos de solicitação e de resposta, o cliente não deve exceder a área de cobertura da memória.  Para estimativas mais precisas, uma mistura de tamanhos de solicitação e tamanhos de resposta deve ser usada para simular melhor um cenário de transação no mundo real.
+As especificações da máquina que executa o cliente Secure Gateway dependem em grande parte do tráfego que passará pela conexão.  Cada instância do cliente é um processo individual que fornece até 250 conexões simultâneas.  Para estimar uma média máxima que a máquina precisaria suportar, determine o tamanho médio de uma transação no cliente (solicitação e resposta) e, em seguida, escale isso para 250 transações simultâneas.  Dado que esse número combinou os tamanhos de solicitação e de resposta, o cliente não deve exceder a área de cobertura da memória.  Para estimativas mais precisas, uma mistura de tamanhos de solicitação e tamanhos de resposta deve ser usada para simular melhor um cenário de transação no mundo real.
 
 Para executar uma única instância do cliente Secure Gateway, sugerimos um mínimo de 2 núcleos e 4 GB de memória.
 

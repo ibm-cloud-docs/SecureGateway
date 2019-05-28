@@ -31,7 +31,7 @@ lastupdated: "2017-04-10"
 
 ### クライアント証明書およびクライアント鍵
 {: #tls-ma-client-cert-and-key}
-Secure Gateway クライアントがそれ自身をリソースに識別させる方法を指定する必要がある場合、クライアントが使用するための証明書および鍵をアップロードできます。  クライアントとリソースは同じマシン上で実行されているため、これらを空のままにすることができます。そうすると、Secure Gateway サーバーがペアを自動的に生成してくれます。  リソースが別のホスト上にある場合は、[アップロードするための証明書/鍵ペアを生成](/docs/services/SecureGateway/securegateway_keygen.html)する必要があります。
+Secure Gateway クライアントがそれ自身をリソースに識別させる方法を指定する必要がある場合、クライアントが使用するための証明書および鍵をアップロードできます。  クライアントとリソースは同じマシン上で実行されているため、これらを空のままにすることができます。そうすると、Secure Gateway サーバーがペアを自動的に生成してくれます。  リソースが別のホスト上にある場合は、[アップロードするための証明書/鍵ペアを生成](/docs/services/SecureGateway?topic=securegateway-cert-key-management)する必要があります。
 
 ![ローカル TLS 相互認証](./images/localTLSma.png?raw=true "ローカル TLS 相互認証")
 

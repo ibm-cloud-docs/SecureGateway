@@ -93,7 +93,7 @@ Esta opción está disponible si se selecciona TLS o Autenticación mutua para l
 
 ### Certificado y clave de cliente
 {: #dest-client-cert-key}
-Dónde aparecen los campos Certificado y clave de cliente depende del [tipo de destino](#dest-types) que haya elegido.  En ambas situaciones, el cliente SG utilizará los archivos proporcionados aquí para identificarse a sí mismo para las conexiones TLS.  Si no se carga ningún archivo, los servidores de {{site.data.keyword.SecureGateway}} generarán automáticamente un par autofirmado con un CN de `localhost`.  Para ver instrucciones sobre cómo generar un par de certificado/clave, [pulse aquí](/docs/services/SecureGateway/securegateway_keygen.html).
+Dónde aparecen los campos Certificado y clave de cliente depende del [tipo de destino](#dest-types) que haya elegido.  En ambas situaciones, el cliente SG utilizará los archivos proporcionados aquí para identificarse a sí mismo para las conexiones TLS.  Si no se carga ningún archivo, los servidores de {{site.data.keyword.SecureGateway}} generarán automáticamente un par autofirmado con un CN de `localhost`.  Para ver instrucciones sobre cómo generar un par de certificado/clave, [pulse aquí](/docs/services/SecureGateway?topic=securegateway-cert-key-management).
 
 Para un destino local, aparecerá bajo [Autenticación de recursos](#dest-resource-auth) si se ha seleccionado la opción `Autenticación de recursos: autenticación mutua`.  En este caso, el cliente SG utilizará este par de certificado/clave para su conexión de salida con el recurso definido; el recurso local debe añadir este certificado a su CA para poderse comunicar con el cliente SG.
 
@@ -120,7 +120,7 @@ Direcciones IP | Puertos | Resultados
 1.2.3.4 | | Solo se permitirá la IP 1.2.3.4 procedente de cualquier puerto.
 | 5000 | Se permitirá cualquier IP procedente del puerto 5000.
 
-También se pueden asociar a una aplicación reglas específicas.  Para obtener más información sobre cómo crear reglas asociadas, consulte [cómo crear reglas iptables para su app](/docs/services/SecureGateway/iptables.html).
+También se pueden asociar a una aplicación reglas específicas.  Para obtener más información sobre cómo crear reglas asociadas, consulte [cómo crear reglas iptables para su app](/docs/services/SecureGateway?topic=securegateway-iptables-rules).
 
 ## Configuración de opciones de proxy
 {: #dest-proxy}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-02-25"
+lastupdated: "2019-05-07"
 
 ---
 {:screen: .screen}
@@ -44,7 +44,7 @@ docker run -it ibmcom/secure-gateway-client <gateway ID> -t <security token>
 
 {{site.data.keyword.SecureGateway}} 客户机仅支持将 `pull` 和 `run` 命令用于操作容器。
 
-返回到[入门 - 添加客户机](/docs/services/SecureGateway/securegateway_client.html)。
+返回到[入门 - 添加客户机](/docs/services/SecureGateway?topic=securegateway-add-client)。
 
 ## Mac OS X
 {: #installing-mac}
@@ -68,7 +68,7 @@ docker run -it ibmcom/secure-gateway-client <gateway ID> -t <security token>
 
 要启动客户机，请运行位于缺省安装位置 `/Applications/ibm/` 中的 `secgw.command` 文件。
 
-返回到[入门 - 添加客户机](/docs/services/SecureGateway/securegateway_client.html)。
+返回到[入门 - 添加客户机](/docs/services/SecureGateway?topic=securegateway-add-client)。
 
 ## Linux
 {: #installing-linux}
@@ -182,7 +182,7 @@ License: http://www.ibm.com/software/sla/sladb.nsf/lilookup/986C7686F22D4D358525
 
    客户机安装程序会启动并安装客户机，这将在 /etc/ibm 中创建 sgenvironment.conf 文件。
 
-2. 可选：如果要使用系统的 upstart 进程，您必须编辑此文件并提供以下内容，客户机才能正常启动。请参阅[使用 Upstart](/docs/services/SecureGateway/securegateway_auto-start.html#auto-start-linux)，以获取有关编辑此配置文件的更多信息。
+2. 可选：如果要使用系统的 upstart 进程，您必须编辑此文件并提供以下内容，客户机才能正常启动。请参阅[使用 Upstart](/docs/services/SecureGateway?topic=securegateway-auto-start-conf#auto-start-linux)，以获取有关编辑此配置文件的更多信息。
 
 3. 如果使用 upstart 启动了客户机，请检查日志文件以确保它在正常运行。
 
@@ -225,7 +225,7 @@ node lib/secgwclient.js <gateway ID> -t <security token>
 
 通常，该命令会采用两个参数，即 {{site.data.keyword.SecureGateway}} 网关标识和网关的安全性令牌，这两个参数都可通过 {{site.data.keyword.SecureGateway}} 仪表板提供。
 
-返回到[入门 - 添加客户机](/docs/services/SecureGateway/securegateway_client.html)。
+返回到[入门 - 添加客户机](/docs/services/SecureGateway?topic=securegateway-add-client)。
 
 ## Windows
 {: #installing-windows}
@@ -266,16 +266,16 @@ secgw.cmd
 ```
 {: codeblock}
 
-或者，浏览至 `<Installation_directory>\ibm\securegateway\client`，然后双击 `secgw.cmd`。
+或者，导航至 `<Installation_directory>\ibm\securegateway\client`，然后双击 `secgw.cmd`。
 
-<b>注：</b>您可以选择使用存储在 `<Installation_directory>\ibm\securegateway\client\securegw_service.config` 文件中的配置，或以交互方式提供详细信息。
+<b>注：</b>您可以选择使用 `<Installation_directory>\ibm\securegateway\client\securegw_service.config` 文件中存储的配置，或者以交互方式提供详细信息。
 
-返回到[入门 - 添加客户机](/docs/services/SecureGateway/securegateway_client.html)。
+返回到[入门 - 添加客户机](/docs/services/SecureGateway?topic=securegateway-add-client)。
 
 ## DataPower
 {: #installing-datapower}
 
-DataPower 具有嵌入式版本的 {{site.data.keyword.SecureGateway}} 客户机。根据 DataPower 版本，您可能具有其他版本的 {{site.data.keyword.SecureGateway}} 客户机。请注意任何适用的 [DataPower 客户机限制](/docs/services/SecureGateway/securegateway_interaction.html#limits-datapower)。使用旧 Secure Gateway 客户机可能会遇到意外错误。
+DataPower 具有嵌入式版本的 {{site.data.keyword.SecureGateway}} 客户机。根据 DataPower 版本，您可能具有其他版本的 {{site.data.keyword.SecureGateway}} 客户机。请注意任何适用的 [DataPower 客户机限制](/docs/services/SecureGateway?topic=securegateway-client-interacting#limits-datapower)。使用旧 Secure Gateway 客户机可能会遇到意外错误。
 
 |DataPower 版本|{{site.data.keyword.SecureGateway}} 客户机版本|
 | -- | --  |
@@ -283,14 +283,16 @@ DataPower 具有嵌入式版本的 {{site.data.keyword.SecureGateway}} 客户机
 |7.5.1.0、7.7.0|1.4.2|
 |7.5.2.4|1.6.1|
 |7.5.2.6、7.6.0.0|1.7.0|
-|7.5.2.14、7.6.0.7、7.7.1.0|1.8.0fp6|
+|7.5.2.14、7.6.0.7、7.7.1.0、2018.4.1.0|1.8.0fp6|
+|2018.4.1.4 |1.8.2  |
+|7.6.0.15, 2018.4.1.6 |1.8.2fp1 |
 
 ### 启动客户机会话
 {: #datapower-run}
 
 1. 登录到 DataPower Web GUI
-2. 浏览至“对象”->“云”->“Secure Gateway 客户机”，或搜索 Secure Gateway 客户机
+2. 导航至“对象”->“云”->“Secure Gateway 客户机”，或搜索“Secure Gateway 客户机”
 3. 单击`添加`以配置新的客户机连接
 4. 提供名称、网关标识和安全性令牌（如果适用），然后应用更改。
 
-返回到[入门 - 添加客户机](/docs/services/SecureGateway/securegateway_client.html)。
+返回到[入门 - 添加客户机](/docs/services/SecureGateway?topic=securegateway-add-client)。

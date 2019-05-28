@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-02-25"
+lastupdated: "2019-05-07"
 
 ---
 {:screen: .screen}
@@ -44,7 +44,7 @@ docker run -it ibmcom/secure-gateway-client <gateway ID> -t <security token>
 
 {{site.data.keyword.SecureGateway}} クライアントは、コンテナーを操作するために `pull` コマンドおよび `run` コマンドのみをサポートします。
 
-[概説 - クライアントの追加](/docs/services/SecureGateway/securegateway_client.html)に戻ります。
+[概説 - クライアントの追加](/docs/services/SecureGateway?topic=securegateway-add-client)に戻ります。
 
 ## Mac OS X
 {: #installing-mac}
@@ -61,14 +61,14 @@ Mac OS X でクライアントを実行するには、以下の前提条件が�
 ご使用のシステムのセキュリティー・セットアップによっては、このインストールを実行するために管理特権が必要な場合があります。
 
  1. {{site.data.keyword.SecureGateway}} UI でダウンロードされた DMG イメージを、通常はダブルクリックすることによってマウントします。
- 2. 新しい「ファインダー」ウィンドウが表示されます。 表示されない場合は、マウントされたボリュームをダブルクリックしてください。このウィンドウには、「ibm」フォルダー・アイコンとアプリケーションのショートカット・アイコンが含まれているので、「ibm」フォルダーをショートカットにドラッグ・アンド・ドロップします。
+ 2. 新しい「ファインダー」ウィンドウが表示されます。 表示されない場合は、マウントされたボリュームをダブルクリックしてください。 このウィンドウには、「ibm」フォルダー・アイコンとアプリケーションのショートカット・アイコンが含まれているので、「ibm」フォルダーをショートカットにドラッグ・アンド・ドロップします。
 
 ### 対話式クライアント・セッションの開始
 {: #mac-run}
 
 クライアントを開始するには、デフォルトのインストール場所 `/Applications/ibm/` にある `secgw.command` ファイルを実行します。
 
-[概説 - クライアントの追加](/docs/services/SecureGateway/securegateway_client.html)に戻ります。
+[概説 - クライアントの追加](/docs/services/SecureGateway?topic=securegateway-add-client)に戻ります。
 
 ## Linux
 {: #installing-linux}
@@ -177,7 +177,7 @@ License: http://www.ibm.com/software/sla/sladb.nsf/lilookup/986C7686F22D4D358525
 
    クライアント・インストーラーが開始し、クライアントがインストールされると、/etc/ibm に sgenvironment.conf ファイルが作成されます。
 
-2. オプション: システムの upstart プロセスを使用する場合、クライアントが正しく開始するためには、このファイルを編集して、以下を指定する必要があります。 この構成ファイルの編集について詳しくは、[Upstart の使用](/docs/services/SecureGateway/securegateway_auto-start.html#auto-start-linux)を参照してください。
+2. オプション: システムの upstart プロセスを使用する場合、クライアントが正しく開始するためには、このファイルを編集して、以下を指定する必要があります。 この構成ファイルの編集について詳しくは、[Upstart の使用](/docs/services/SecureGateway?topic=securegateway-auto-start-conf#auto-start-linux)を参照してください。
 
 3. upstart を使用してクライアントを開始した場合、ログ・ファイルを調べて、クライアントが正しく実行されていることを確認します。
 
@@ -196,7 +196,7 @@ License: http://www.ibm.com/software/sla/sladb.nsf/lilookup/986C7686F22D4D358525
 ### AIX インストール済み環境
 {: #aix-install}
 
-1. パッケージに対する実行権限が設定されていることを確認します。必要な場合、以下のコマンドを発行してファイル許可を変更します。
+1. パッケージに対する実行権限が設定されていることを確認します。 必要な場合、以下のコマンドを発行してファイル許可を変更します。
     ```
     chmod a+x <secure-gateway-bin-package>
     ```
@@ -221,7 +221,7 @@ node lib/secgwclient.js <gateway ID> -t <security token>
 
 通常、これには 2 つのパラメーターがあります。1 つは {{site.data.keyword.SecureGateway}} ゲートウェイ ID、もう 1 つはゲートウェイのセキュリティー・トークンであり、両方とも {{site.data.keyword.SecureGateway}} ダッシュボードを介して入手できます。
 
-[概説 - クライアントの追加](/docs/services/SecureGateway/securegateway_client.html)に戻ります。
+[概説 - クライアントの追加](/docs/services/SecureGateway?topic=securegateway-add-client)に戻ります。
 
 ## Windows
 {: #installing-windows}
@@ -266,12 +266,12 @@ secgw.cmd
 
 <b>注:</b> `<Installation_directory>&#xa5;ibm&#xa5;securegateway&#xa5;client&#xa5;securegw_service.config` ファイルに保管された構成を使用することも、詳細を対話式に指定することもできます。
 
-[概説 - クライアントの追加](/docs/services/SecureGateway/securegateway_client.html)に戻ります。
+[概説 - クライアントの追加](/docs/services/SecureGateway?topic=securegateway-add-client)に戻ります。
 
 ## DataPower
 {: #installing-datapower}
 
-DataPower には、組み込みバージョンの {{site.data.keyword.SecureGateway}} クライアントがあります。  {{site.data.keyword.SecureGateway}} クライアントのバージョンは DataPower のバージョンによって異なることがあります。  該当する [DataPower クライアントの制限事項](/docs/services/SecureGateway/securegateway_interaction.html#limits-datapower)に注意してください。 古い Secure Gateway クライアントを使用すると、予期しないエラーが発生する可能性があります。
+DataPower には、組み込みバージョンの {{site.data.keyword.SecureGateway}} クライアントがあります。  {{site.data.keyword.SecureGateway}} クライアントのバージョンは DataPower のバージョンによって異なることがあります。  該当する [DataPower クライアントの制限事項](/docs/services/SecureGateway?topic=securegateway-client-interacting#limits-datapower)に注意してください。古い Secure Gateway クライアントを使用すると、予期しないエラーが発生する可能性があります。
 
 | DataPower バージョン | {{site.data.keyword.SecureGateway}} クライアントのバージョン  |
 | -- | --  |
@@ -279,7 +279,9 @@ DataPower には、組み込みバージョンの {{site.data.keyword.SecureGate
 | 7.5.1.0, 7.7.0 | 1.4.2  |
 | 7.5.2.4 | 1.6.1  |
 | 7.5.2.6, 7.6.0.0 | 1.7.0  |
-| 7.5.2.14, 7.6.0.7, 7.7.1.0 |  1.8.0fp6  |
+| 7.5.2.14, 7.6.0.7, 7.7.1.0, 2018.4.1.0 |  1.8.0fp6  |
+| 2018.4.1.4 | 1.8.2  |
+| 7.6.0.15, 2018.4.1.6 | 1.8.2fp1 |
 
 ### クライアント・セッションの開始
 {: #datapower-run}
@@ -289,4 +291,4 @@ DataPower には、組み込みバージョンの {{site.data.keyword.SecureGate
 3. 新規クライアント接続を構成するため、「`Add`」をクリックします。
 4. 名前、ゲートウェイ ID、およびセキュリティー・トークン (該当する場合) を指定し、変更を適用します。
 
-[概説 - クライアントの追加](/docs/services/SecureGateway/securegateway_client.html)に戻ります。
+[概説 - クライアントの追加](/docs/services/SecureGateway?topic=securegateway-add-client)に戻ります。

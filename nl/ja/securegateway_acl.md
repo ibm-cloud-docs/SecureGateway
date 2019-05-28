@@ -46,7 +46,7 @@ acl allow :
 
 `show acl` コマンドは、現在設定されている ACL を表示するか、設定全体についてのメッセージを提供します。
 
-[概説 - クライアントの追加](/docs/services/SecureGateway/securegateway_client.html)に戻ります。
+[概説 - クライアントの追加](/docs/services/SecureGateway?topic=securegateway-add-client)に戻ります。
 
 ## ACL を使用した HTTP/S の経路制御
 {: #acl-route-control}
@@ -82,9 +82,9 @@ no acl
 
 <b>注:</b> 他のパラメーターなしで `no acl` を指定すると、ACL テーブルがリセットされ、アクセスは DENY ALL に設定されます。
 
-サンプル ACL ファイルが[ここ](/docs/services/SecureGateway/securegateway_acl-file.html)にあります。
+サンプル ACL ファイルが[ここ](/docs/services/SecureGateway?topic=securegateway-acl-files)にあります。
 
-[概説 - クライアントの追加](/docs/services/SecureGateway/securegateway_client.html)に戻ります。
+[概説 - クライアントの追加](/docs/services/SecureGateway?topic=securegateway-add-client)に戻ります。
 
 ## {{site.data.keyword.SecureGateway}} Docker クライアントへの ACL ファイルのコピー
 {: #copy-acl-to-docker}
@@ -156,4 +156,4 @@ cli> S
 ```
 {: screen}
 
-[概説 - クライアントの追加](/docs/services/SecureGateway/securegateway_client.html)に戻ります。
+[概説 - クライアントの追加](/docs/services/SecureGateway?topic=securegateway-add-client)に戻ります。

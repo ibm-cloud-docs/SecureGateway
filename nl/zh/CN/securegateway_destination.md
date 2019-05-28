@@ -94,7 +94,7 @@ HTTPS：相互认证|TLS：重写主机头以匹配内部部署主机名的相�
 
 ### 客户机证书和密钥
 {: #dest-client-cert-key}
-“客户机证书”和“密钥”字段显示的位置取决于您选择的[目标类型](#dest-types)。在这两种情况下，SG 客户机都将使用此处提供的文件来识别自身，从而建立 TLS 连接。如果未上传任何文件，{{site.data.keyword.SecureGateway}} 服务器将使用 `localhost` 的 CN 自动生成自签名对。有关如何生成证书/密钥对的指示信息，请[单击此处](/docs/services/SecureGateway/securegateway_keygen.html)。
+“客户机证书”和“密钥”字段显示的位置取决于您选择的[目标类型](#dest-types)。在这两种情况下，SG 客户机都将使用此处提供的文件来识别自身，从而建立 TLS 连接。如果未上传任何文件，{{site.data.keyword.SecureGateway}} 服务器将使用 `localhost` 的 CN 自动生成自签名对。有关如何生成证书/密钥对的指示信息，请[单击此处](/docs/services/SecureGateway?topic=securegateway-cert-key-management)。
 
 对于内部部署目标，如果选择了`资源认证：相互认证`，那么该目标会显示在[资源认证](#dest-resource-auth)下。在此情况下，SG 客户机将此证书/密钥对用于它与定义的资源的出站连接，内部部署资源需要将此证书添加到其 CA 以与 SG 客户机进行通信。
 
@@ -122,7 +122,7 @@ IP 地址|端口|结果
 1.2.3.4| |只允许来自任意端口的 IP 1.2.3.4。
 | 5000|允许来自端口 5000 的任何 IP。
 
-还可以将特定规则与应用程序相关联。有关创建关联规则的更多信息，请参阅[如何为应用程序创建 iptables 规则](/docs/services/SecureGateway/iptables.html)。
+还可以将特定规则与应用程序相关联。有关创建关联规则的更多信息，请参阅[如何为应用程序创建 iptables 规则](/docs/services/SecureGateway?topic=securegateway-iptables-rules)。
 
 ## 配置代理选项
 {: #dest-proxy}

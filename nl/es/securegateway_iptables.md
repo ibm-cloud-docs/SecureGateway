@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-08-10"
+  years: 2015, 2019
+lastupdated: "2019-04-09"
 
 ---
 {:screen: .screen}
@@ -12,26 +12,26 @@ lastupdated: "2018-08-10"
 # Reglas de iptable
 {: #iptables-rules}
 
-Para permitir la imposición de reglas de iptables en el destino, debe tener la opción `Restringir acceso a la red` marcada en el panel de seguridad de red del destino.  En este punto, puede añadir las reglas que desea imponer, como por ejemplo 192.0.0.1 9000 (una sola IP y un solo puerto), 192.0.0.1-192.0.0.5 5000:5005 (rango de IP y rango de puertos) o cualquier combinación de estas reglas. Consulte [Configuración de la seguridad de la red](/docs/services/SecureGateway/securegateway_destination.html#dest-network-security) para obtener más información.
+Para permitir la imposición de reglas de iptables en el destino, debe tener la opción `Restringir acceso a la red` marcada en el panel de seguridad de red del destino.  En este punto, puede añadir las reglas que desea imponer, como por ejemplo 192.0.0.1 9000 (una sola IP y un solo puerto), 192.0.0.1-192.0.0.5 5000:5005 (rango de IP y rango de puertos) o cualquier combinación de estas reglas. Consulte [Configuración de la seguridad de la red](/docs/services/SecureGateway?topic=securegateway-add-dest#dest-network-security) para obtener más información.
 
 Si va a crear sus destinos privados con cURL, puede utilizar una línea de mandatos:
 
 ```
-curl "https://sgmanager.ng.bluemix.net/v1/sgconfig/<gateway_id>/destinations" -H "Authorization: Bearer <security_token>" -H "Content-type: application/json" -d '{"desc":"My Private Destination","ip":"1.1.1.1","port":8000,"private":true}'
+curl "https://sgmanager.us-south.securegateway.cloud.ibm.com/v1/sgconfig/<gateway_id>/destinations" -H "Authorization: Bearer <security_token>" -H "Content-type: application/json" -d '{"desc":"My Private Destination","ip":"1.1.1.1","port":8000,"private":true}'
 ```
 {: pre}
 
 Una vez creado el destino privado, puede añadir reglas de iptable con mandatos como los siguientes:
 
 ```
-curl -X PUT "https://sgmanager.ng.bluemix.net/v1/sgconfig/<gateway_id>/destinations/<destination_id>/ipTableRule" -H "Authorization: Bearer <security_token>" -H "Content-type: application/json" -d '{"src":"192.0.0.1","spt":"9000"}' -k
+curl -X PUT "https://sgmanager.us-south.securegateway.cloud.ibm.com/v1/sgconfig/<gateway_id>/destinations/<destination_id>/ipTableRule" -H "Authorization: Bearer <security_token>" -H "Content-type: application/json" -d '{"src":"192.0.0.1","spt":"9000"}' -k
 ```
 {: pre}
 
 y
 
 ```
-curl -X PUT "https://sgmanager.ng.bluemix.net/v1/sgconfig/<gateway_id>/destinations/<destination_id>/ipTableRule" -H "Authorization: Bearer <security_token>" -H "Content-type: application/json" -d '{"src_range":"192.0.0.1-192.0.0.5","spt":"5000:5005"}' -k
+curl -X PUT "https://sgmanager.us-south.securegateway.cloud.ibm.com/v1/sgconfig/<gateway_id>/destinations/<destination_id>/ipTableRule" -H "Authorization: Bearer <security_token>" -H "Content-type: application/json" -d '{"src_range":"192.0.0.1-192.0.0.5","spt":"5000:5005"}' -k
 ```
 {: pre}
 
@@ -60,7 +60,7 @@ const IP_TABLE_BODY = {
  
 request({
   method: 'PUT',
-  uri: `https://sgmanager.ng.bluemix.net/v1/sgconfig/$GATEWAY_ID/destinations/$DEST_ID/ipTableRule`
+  uri: `https://sgmanager.us-south.securegateway.cloud.ibm.com/v1/sgconfig/$GATEWAY_ID/destinations/$DEST_ID/ipTableRule`
   headers: {
     'Authorization': `Bearer $SEC_TOKEN`
   }

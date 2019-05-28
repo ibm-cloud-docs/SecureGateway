@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-08-10"
+  years: 2015, 2019
+lastupdated: "2019-04-09"
 
 ---
 {:screen: .screen}
@@ -12,26 +12,26 @@ lastupdated: "2018-08-10"
 # IP 테이블 규칙
 {: #iptables-rules}
 
-대상에서 iptable 규칙을 적용하려면 대상의 네트워크 보안 패널에 있는 `네트워크 액세스 제한` 옵션이 선택되어 있어야 합니다. 해당 위치에서 적용하려는 규칙을 추가할 수 있습니다(예: 192.0.0.1 9000(단일 IP 및 포트), 192.0.0.1-192.0.0.5 5000:5005(IP 범위 및 포트 범위) 또는 해당 규칙의 조합). 자세한 정보는 [네트워크 보안 구성](/docs/services/SecureGateway/securegateway_destination.html#dest-network-security)을 참조하십시오.
+대상에서 iptable 규칙을 적용하려면 대상의 네트워크 보안 패널에 있는 `네트워크 액세스 제한` 옵션이 선택되어 있어야 합니다.  해당 위치에서 적용하려는 규칙을 추가할 수 있습니다(예: 192.0.0.1 9000(단일 IP 및 포트), 192.0.0.1-192.0.0.5 5000:5005(IP 범위 및 포트 범위) 또는 해당 규칙의 조합). 자세한 정보는 [네트워크 보안 구성](/docs/services/SecureGateway?topic=securegateway-add-dest#dest-network-security)을 참조하십시오.
 
 cURL로 사설 대상을 작성하는 경우 다음과 같이 명령행을 사용할 수 있습니다.
 
 ```
-curl "https://sgmanager.ng.bluemix.net/v1/sgconfig/<gateway_id>/destinations" -H "Authorization: Bearer <security_token>" -H "Content-type: application/json" -d '{"desc":"My Private Destination","ip":"1.1.1.1","port":8000,"private":true}'
+curl "https://sgmanager.us-south.securegateway.cloud.ibm.com/v1/sgconfig/<gateway_id>/destinations" -H "Authorization: Bearer <security_token>" -H "Content-type: application/json" -d '{"desc":"My Private Destination","ip":"1.1.1.1","port":8000,"private":true}'
 ```
 {: pre}
 
 사설 대상이 작성되면 다음과 같이 명령행을 사용하여 IP 테이블 규칙을 추가할 수 있습니다.
 
 ```
-curl -X PUT "https://sgmanager.ng.bluemix.net/v1/sgconfig/<gateway_id>/destinations/<destination_id>/ipTableRule" -H "Authorization: Bearer <security_token>" -H "Content-type: application/json" -d '{"src":"192.0.0.1","spt":"9000"}' -k
+curl -X PUT "https://sgmanager.us-south.securegateway.cloud.ibm.com/v1/sgconfig/<gateway_id>/destinations/<destination_id>/ipTableRule" -H "Authorization: Bearer <security_token>" -H "Content-type: application/json" -d '{"src":"192.0.0.1","spt":"9000"}' -k
 ```
 {: pre}
 
 및
 
 ```
-curl -X PUT "https://sgmanager.ng.bluemix.net/v1/sgconfig/<gateway_id>/destinations/<destination_id>/ipTableRule" -H "Authorization: Bearer <security_token>" -H "Content-type: application/json" -d '{"src_range":"192.0.0.1-192.0.0.5","spt":"5000:5005"}' -k
+curl -X PUT "https://sgmanager.us-south.securegateway.cloud.ibm.com/v1/sgconfig/<gateway_id>/destinations/<destination_id>/ipTableRule" -H "Authorization: Bearer <security_token>" -H "Content-type: application/json" -d '{"src_range":"192.0.0.1-192.0.0.5","spt":"5000:5005"}' -k
 ```
 {: pre}
 
@@ -61,7 +61,7 @@ const IP_TABLE_BODY = {
  
 request({
   method: 'PUT',
-  uri: `https://sgmanager.ng.bluemix.net/v1/sgconfig/$GATEWAY_ID/destinations/$DEST_ID/ipTableRule`
+  uri: `https://sgmanager.us-south.securegateway.cloud.ibm.com/v1/sgconfig/$GATEWAY_ID/destinations/$DEST_ID/ipTableRule`
   headers: {
     'Authorization': `Bearer $SEC_TOKEN`
   }

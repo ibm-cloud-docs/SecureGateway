@@ -88,23 +88,23 @@ A ativação do TLS na conexão com seu recurso é separada do TLS usado para Au
 #### Autenticação em nuvem/no local
 {: #cloud-or-on-prem-auth}
 
-Essa opção fica disponível selecionando TLS ou Autenticação Mútua para sua [Autenticação de recurso](#dest-resource-auth). O nome do campo corresponderá ao [tipo de destino](#dest-types) que você escolheu.  Esse campo permite que até 6 certificados sejam transferidos por upload a fim de validar o certificado do recurso ao qual você está se conectando.  Esses arquivos serão incluídos na CA de conexão com o recurso e deverão conter o certificado ou a cadeia de certificados que seu recurso apresentará.
+Essa opção fica disponível selecionando TLS ou Autenticação Mútua para sua [Autenticação de recurso](#dest-resource-auth).  O nome do campo corresponderá ao [tipo de destino](#dest-types) que você escolheu.  Esse campo permite que até 6 certificados sejam transferidos por upload a fim de validar o certificado do recurso ao qual você está se conectando.  Esses arquivos serão incluídos na CA de conexão com o recurso e deverão conter o certificado ou a cadeia de certificados que seu recurso apresentará.
 
 #### Server Name Indicator (SNI)
 {: #dest-sni}
-Essa opção fica disponível selecionando TLS ou Autenticação Mútua para sua [Autenticação de recurso](#dest-resource-auth). Isso é usado para permitir que um nome do host separado seja fornecido para o handshake TLS da conexão de recurso.
+Essa opção fica disponível selecionando TLS ou Autenticação Mútua para sua [Autenticação de recurso](#dest-resource-auth).  Isso é usado para permitir que um nome do host separado seja fornecido para o handshake TLS da conexão de recurso.
 
 ### Certificado de cliente e Chave
 {: #dest-client-cert-key}
-O local em que os campos Certificado de cliente e Chave aparecem depende do [tipo de destino](#dest-types) escolhido.  Em ambas as situações, os arquivos fornecidos aqui serão usados pelo cliente SG para identificar-se para conexões TLS.  Se nenhum arquivo for transferido por upload, os servidores {{site.data.keyword.SecureGateway}} gerarão automaticamente um par autoassinado com um CN de `localhost`.  Para obter instruções sobre como gerar um par certificado/chave, [clique aqui](/docs/services/SecureGateway/securegateway_keygen.html).
+O local em que os campos Certificado de cliente e Chave aparecem depende do [tipo de destino](#dest-types) escolhido.  Em ambas as situações, os arquivos fornecidos aqui serão usados pelo cliente SG para identificar-se para conexões TLS.  Se nenhum arquivo for transferido por upload, os servidores {{site.data.keyword.SecureGateway}} gerarão automaticamente um par autoassinado com um CN de `localhost`.  Para obter instruções sobre como gerar um par certificado/chave, [clique aqui](/docs/services/SecureGateway?topic=securegateway-cert-key-management).
 
 Para um destino no local, ele aparecerá em [Autenticação de recurso](#dest-resource-auth)
-se a opção `Autenticação de recurso: autenticação mútua` tiver sido selecionada. Nesse
+se a opção `Autenticação de recurso: autenticação mútua` tiver sido selecionada.  Nesse
 caso, o cliente SG usará esse par de certificado/chave para sua conexão de saída para o recurso definido,
 e o recurso no local precisa incluir esse certificado em sua CA para se comunicar com o cliente SG.
 
 Para um destino em nuvem, ele aparecerá em [Autenticação do usuário](#dest-user-auth)
-se um protocolo TLS tiver sido selecionado. Nesse caso, o cliente SG usará esse par de certificado/chave
+se um protocolo TLS tiver sido selecionado.  Nesse caso, o cliente SG usará esse par de certificado/chave
 para criar listeners TLS, e o app no local precisa incluir esse certificado em sua CA para se comunicar com
 o cliente SG.
 
@@ -114,7 +114,7 @@ Para evitar que todos os endereços IP, exceto os específicos, se conectem a se
 nuvem, é possível optar por impor regras iptables em seu destino no local. ![Painel Segurança de rede](./images/networkSecurity.png?raw=true "Painel Segurança de rede")
 
 Para impor regras iptables, marque a caixa <b>Restringir o acesso à nuvem para esse destino com
-regras iptables</b> no painel Segurança de rede. Quando a caixa estiver marcada, será possível começar a incluir os IPs que devem ter permissão para se conectar.  Se nenhum IP for fornecido, todas as conexões com esses hosts
+regras iptables</b> no painel Segurança de rede.  Quando a caixa estiver marcada, será possível começar a incluir os IPs que devem ter permissão para se conectar.  Se nenhum IP for fornecido, todas as conexões com esses hosts
 e portas em nuvem serão rejeitadas, desde que a caixa <b>Restringir acesso à nuvem</b> esteja marcada.
 
 <b>Nota</b>: os IPs ou as portas fornecidos devem ser o endereço IP externo que os servidores {{site.data.keyword.SecureGateway}} verão, não o endereço IP local da máquina que está fazendo a solicitação.
@@ -133,7 +133,7 @@ Endereços IP | Portas | Resultados
 | 5000 | Qualquer IP da porta 5000 será permitido.
 
 Regras específicas também podem ser associadas a um aplicativo.  Para obter mais informações
-sobre a criação de regras associadas, veja [como criar regras iptables para seu app](/docs/services/SecureGateway/iptables.html).
+sobre a criação de regras associadas, veja [como criar regras iptables para seu app](/docs/services/SecureGateway?topic=securegateway-iptables-rules).
 
 ## Configurando opções de proxy
 {: #dest-proxy}

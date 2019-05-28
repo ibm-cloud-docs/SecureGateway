@@ -27,4 +27,4 @@ Wenn Sie die Erstellung des Gateways fertigstellen möchten, klicken Sie auf 'Ga
 
 ![Neues Gateway](./images/newGateway.png?raw=true "Neues Gateway")
 
-Da Sie jetzt über ein neu erstelltes Gateway verfügen, können Sie [eine Verbindung für den ersten Client erstellen](/docs/services/SecureGateway/securegateway_client.html).
+Da Sie jetzt über ein neu erstelltes Gateway verfügen, können Sie [eine Verbindung für den ersten Client erstellen](/docs/services/SecureGateway?topic=securegateway-add-client).

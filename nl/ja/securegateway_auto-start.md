@@ -120,7 +120,7 @@ securegateway_clientd
 
 <b>注:</b> このセクションは SuSE/SLES 11 のユーザーに影響します。
 
-オプション: System V 自動開始を使用する SuSE バージョン 11 を実行している場合、提供されるスクリプトを使用してこのプロセスを構成できます。以下の手順を実行してください。
+オプション: System V 自動開始を使用する SuSE バージョン 11 を実行している場合、提供されるスクリプトを使用してこのプロセスを構成できます。 以下の手順を実行してください。
 
 ```
 cd /opt/ibm/securegateway/client/upstart/systemV
@@ -137,7 +137,7 @@ vi /etc/ibm/sgenvironment.conf
 
 これらのステップが実行された後、YasT および System V のコマンドを使用してデーモンを開始/停止できます。
 
-[概説 - クライアントの追加](/docs/services/SecureGateway/securegateway_client.html)に戻ります。
+[概説 - クライアントの追加](/docs/services/SecureGateway?topic=securegateway-add-client)に戻ります。
 
 ## Windows
 {: #auto-start-windows}
@@ -179,4 +179,4 @@ Windows サービスのアプリケーション・ログは次の場所に保管
 
  ログは日次ベースで新しいファイルに切り替えられます。
 
-[概説 - クライアントの追加](/docs/services/SecureGateway/securegateway_client.html)に戻ります。
+[概説 - クライアントの追加](/docs/services/SecureGateway?topic=securegateway-add-client)に戻ります。

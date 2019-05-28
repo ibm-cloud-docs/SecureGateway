@@ -17,12 +17,12 @@ lastupdated: "2017-04-25"
 
 ![連接用戶端](./images/connectClient.png?raw=true "連接用戶端")
 
-選取您偏好的用戶端之後，[請按一下這裡以查看如何安裝它](/docs/services/SecureGateway/securegateway_install.html)。
+選取您偏好的用戶端之後，[請按一下這裡以查看如何安裝它](/docs/services/SecureGateway?topic=securegateway-client-install)。
 
-安裝用戶端之後，您可以將它配置為[自動啟動](/docs/services/SecureGateway/securegateway_auto-start.html)，或配置為[以互動方式執行](/docs/services/SecureGateway/securegateway_interaction.html)。
+安裝用戶端之後，您可以將它配置為[自動啟動](/docs/services/SecureGateway?topic=securegateway-auto-start-conf)，或配置為[以互動方式執行](/docs/services/SecureGateway?topic=securegateway-client-interacting)。
 
 ![連接的用戶端](./images/connectedClient.png?raw=true "連接的用戶端")
 
-如果您現在要配置用戶端的「存取控制清單」，[請按一下這裡以取得詳細資料](/docs/services/SecureGateway/securegateway_acl.html)。
+如果您現在要配置用戶端的「存取控制清單」，[請按一下這裡以取得詳細資料](/docs/services/SecureGateway?topic=securegateway-acl)。
 
-既然您已連接用戶端，便可以[建立第一個目的地](/docs/services/SecureGateway/securegateway_destination.html)。
+既然您已連接用戶端，便可以[建立第一個目的地](/docs/services/SecureGateway?topic=securegateway-add-dest)。

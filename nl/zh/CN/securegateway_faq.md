@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-01-16"
+lastupdated: "2019-04-29"
 
 ---
 
@@ -47,7 +47,7 @@ Secure Gateway 服务支持 TLS V1.2。
 - 您不希望服务可供用户使用，因为您要对服务进行一些更新。在这种情况下，可能要临时禁用必要的网关，并等待服务更新。
 - 您已在前端设置所有网关和目标，但后端仍在进行构建。在这种情况下，应禁用网关或目标，直到后端构建完成为止。
 
-有关禁用网关或目标的更多信息，请参阅[如何管理 Secure Gateway 服务实例](/docs/services/SecureGateway/securegateway_managing.html)。
+有关禁用网关或目标的更多信息，请参阅[如何管理 Secure Gateway 服务实例](/docs/services/SecureGateway?topic=securegateway-manage-sg-service)。
 
 ## 在多个空间中创建自动化的建议方法是什么？
 {: #faq-automation-spaces}
@@ -59,7 +59,7 @@ Secure Gateway 服务支持 TLS V1.2。
 ### 答案
 {: #automation-spaces-answer}
 
-- 您可以创建一个 Secure Gateway 实例用于所有三个空间。但是，您必须记住[特定套餐的网关和目标限制](/docs/services/SecureGateway/securegateway_plans.html)。
+- 您可以创建一个 Secure Gateway 实例用于所有三个空间。但是，您必须记住[特定套餐的网关和目标限制](/docs/services/SecureGateway?topic=securegateway-secure-gateway-service-plans)。
 - 对于复用 Node.js 应用程序没有其他注意事项，因为 Secure Gateway 不需要任何服务绑定。
 
 
@@ -73,7 +73,7 @@ Secure Gateway 服务支持 TLS V1.2。
 ### 答案
 {: #automation-orgs-answer}
 
-- 您无需在每个组织中都有一个 Secure Gateway 服务实例。您可以在一个组织内有一个实例，然后在该实例内使用其他所有环境中的网关。使用此设置时，您必须记住[特定套餐的网关和目标限制](/docs/services/SecureGateway/securegateway_plans.html)。
+- 您无需在每个组织中都有一个 Secure Gateway 服务实例。您可以在一个组织内有一个实例，然后在该实例内使用其他所有环境中的网关。使用此设置时，您必须记住[特定套餐的网关和目标限制](/docs/services/SecureGateway?topic=securegateway-secure-gateway-service-plans)。
 - 您可以在每个组织中有一个 Secure Gateway 服务实例，并且所有空间都可以使用此配置。
 
 ## 应用程序需要位于同一空间吗？
@@ -181,19 +181,19 @@ Secure Gateway 服务支持 TLS V1.2。
 
 #### 使用相互认证
 {: #secure-app-answer-ma}
-对内部部署目标的两端启用相互认证可使 Secure Gateway 更加安全。在“用户认证”端上启用相互认证，可在通过 TLS/HTTPS 进行请求时使用客户机证书进行认证，从而限制对 Secure Gateway 云节点的访问。在“资源认证”端启用相互认证，可在连接到目标端点时提供相应凭证，并确保对内部部署资源的安全/加密访问。请参阅[配置相互认证](/docs/services/SecureGateway/securegateway_destination.html#dest-mutual-auth)和 [Node.js TLS 相互认证](/docs/services/SecureGateway/securegateway_tls-ma.html#nodejs-tls-ma)，以获取更多信息。
+对内部部署目标的两端启用相互认证可使 Secure Gateway 更加安全。在“用户认证”端上启用相互认证，可在通过 TLS/HTTPS 进行请求时使用客户机证书进行认证，从而限制对 Secure Gateway 云节点的访问。在“资源认证”端启用相互认证，可在连接到目标端点时提供相应凭证，并确保对内部部署资源的安全/加密访问。请参阅[配置相互认证](/docs/services/SecureGateway?topic=securegateway-add-dest#dest-mutual-auth)和 [Node.js TLS 相互认证](/docs/services/SecureGateway?topic=securegateway-nodejs-tls-ma#nodejs-tls-ma)，以获取更多信息。
 
 #### 设置 IP 表规则（对于内部部署目标）
 {: #secure-app-answer-iptables}
-内部部署目标的 Secure Gateway 云主机和端口位于公共空间中；因此，缺省情况下允许所有人访问。要控制 Secure Gateway 上的流量访问，请将 iptables 规则设置为仅允许特定范围的 IP 和端口访问，从而保护内部部署资源。有关如何在 Secure Gateway 上配置 iptables 规则的更多信息，请参阅 [IP 表规则](/docs/services/SecureGateway/securegateway_destination.html#dest-network-security)。
+内部部署目标的 Secure Gateway 云主机和端口位于公共空间中；因此，缺省情况下允许所有人访问。要控制 Secure Gateway 上的流量访问，请将 iptables 规则设置为仅允许特定范围的 IP 和端口访问，从而保护内部部署资源。有关如何在 Secure Gateway 上配置 iptables 规则的更多信息，请参阅 [IP 表规则](/docs/services/SecureGateway?topic=securegateway-add-dest#dest-network-security)。
 
 #### 配置访问控制表（对于内部部署目标）
 {: #secure-app-answer-acl}
-配置访问控制表支持以允许或限制对内部部署资源的访问，可通过指定特定目标主机和端口上的访问权，从而使内部部署目标更安全。建议还在 ACL 条目上定义允许的或限制的 HTTP/HTTPS 路由，以增强内部部署目标的安全性。请参阅[访问控制表](/docs/services/SecureGateway/securegateway_acl.html#acl)和[使用 ACL 的 HTTP/HTTPS 路由控制](/docs/services/SecureGateway/securegateway_acl.html#acl-route-control)，以获取更多信息。
+配置访问控制表支持以允许或限制对内部部署资源的访问，可通过指定特定目标主机和端口上的访问权，从而使内部部署目标更安全。建议还在 ACL 条目上定义允许的或限制的 HTTP/HTTPS 路由，以增强内部部署目标的安全性。请参阅[访问控制表](/docs/services/SecureGateway?topic=securegateway-acl#acl)和[使用 ACL 的 HTTP/HTTPS 路由控制](/docs/services/SecureGateway?topic=securegateway-acl#acl-route-control)，以获取更多信息。
 
 #### 在 Secure Gateway 客户机 UI 上设置密码
 {: #secure-app-answer-ui-pw}
-建议设置 UI 密码以限制对 Secure Gateway 客户机 UI 的访问。请参阅[与客户机交互](/docs/services/SecureGateway/securegateway_interaction.html#client-interacting)，以获取有关如何在 Secure Gateway 客户机终端命令行上使用启动配置或交互命令来设置密码的更多详细信息。
+建议设置 UI 密码以限制对 Secure Gateway 客户机 UI 的访问。请参阅[与客户机交互](/docs/services/SecureGateway?topic=securegateway-client-interacting#client-interacting)，以获取有关如何在 Secure Gateway 客户机终端命令行上使用启动配置或交互命令来设置密码的更多详细信息。
 
 ## 什么是网关迁移？为何在 2018 年 12 月后域发生更改？
 {: #faq-gateway-migration}
@@ -221,6 +221,37 @@ Secure Gateway 服务支持 TLS V1.2。
 ### 答案
 {: #notification-answer}
 
-您可以通过[状态页面](https://console.bluemix.net/status)获取通知，请在该页面中搜索 `Secure Gateway`。
+您可以通过[状态页面](https://cloud.ibm.com/status?selected=status)获取通知。
+- 要获取关于已完成/正在进行的中断性维护的通知，请在选项卡`状态`中搜索 `Secure Gateway`。
+- 要获取关于计划内的中断性维护的通知，请在选项卡`计划维护`中搜索 `Secure Gateway`。
 
 在 Secure Gateway 客户机意外断开连接时，请转至状态页面以检查此时是否有中断性维护。
+
+如果维护需要中断超过 10 分钟，那么可能需要手动重新启动 Secure Gateway 客户机以在维护后重新连接到 Secure Gateway 服务器。通常，服务停机时间将等于或小于 10 分钟, Secure Gateway 客户机（v180 版本之后）应该能够自动重新连接到 Secure Gateway 服务器。
+
+## 如何在 DataPower 上捕获 Secure Gateway 客户机日志？
+{: #faq-dp-log}
+
+### 问题
+{: #dp-log-question}
+如何捕获 Secure Gateway 客户机日志并将其写入 DataPower 上的文件？
+
+### 答案
+{: #dp-log-answer}
+
+Secure Gateway 客户机日志的事件类别是 `sgclient`。 您可以创建[日志目标](https://www.ibm.com/support/knowledgecenter/en/SS9H2Y_7.7.0/com.ibm.dp.doc/logtarget_logs.html)以将具有特定事件类别的日志写入一个文件，示例如下：
+
+- 从缺省域：
+    - GUI 侧面板选择`对象` → `日志记录配置` → `日志目标`。 或者在`搜索`字段中搜索`日志目标`。
+    - 选择`添加`按钮以添加日志目标
+- 在`主要`选项卡中：
+    - 填写`名称`
+    - `文件`的`目标类型`
+    - `文本`的`日志格式`
+    - 填写`文件名`以定义输出位置，例如：`logtemp:///sgclient.log`
+    - 选择`归档方式`为`轮换`
+- 在`事件预订`选项卡中：
+    - 填写`名称`
+    - 选择`添加`按钮以添加目标事件预订
+    - 填写`事件类别`，选择 `sgclient`
+    - 填写`最低事件优先级`为 `debug`

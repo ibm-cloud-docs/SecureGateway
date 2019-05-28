@@ -46,7 +46,7 @@ acl allow :
 
 El mandato `show acl` mostrará la ACL establecida actualmente o proporcionará un mensaje sobre el valor global.
 
-Volver a [Iniciación - Adición de un cliente](/docs/services/SecureGateway/securegateway_client.html).
+Volver a [Iniciación - Adición de un cliente](/docs/services/SecureGateway?topic=securegateway-add-client).
 
 ## Control de rutas HTTP/S mediante la ACL
 {: #acl-route-control}
@@ -82,9 +82,9 @@ no acl
 
 <b>Nota:</b> `no acl` sin ningún otro parámetro RESTABLECE la tabla de ACL y establece el acceso en DENY ALL.
 
-[Aquí](/docs/services/SecureGateway/securegateway_acl-file.html) encontrará un archivo ACL de ejemplo.
+[Aquí](/docs/services/SecureGateway?topic=securegateway-acl-files) encontrará un archivo ACL de ejemplo.
 
-Volver a [Iniciación - Adición de un cliente](/docs/services/SecureGateway/securegateway_client.html).
+Volver a [Iniciación - Adición de un cliente](/docs/services/SecureGateway?topic=securegateway-add-client).
 
 ## Copia del archivo ACL en el cliente de Docker de {{site.data.keyword.SecureGateway}}
 {: #copy-acl-to-docker}
@@ -118,7 +118,7 @@ Server:
 
 Luego, para importar la lista de archivos acl a la imagen del docker, siga los pasos siguientes:
 
-- Ejecute el mandato 'docker ps' para buscar el ID del contenedor.
+- Ejecute el mandato 'docker ps' para buscar el ID del contenedor
 
 ```
 CONTAINER ID IMAGE                        COMMAND                CREATED        STATUS  PORTS NAMES
@@ -158,4 +158,4 @@ cli> S
 ```
 {: screen}
 
-Volver a [Iniciación - Adición de un cliente](/docs/services/SecureGateway/securegateway_client.html).
+Volver a [Iniciación - Adición de un cliente](/docs/services/SecureGateway?topic=securegateway-add-client).

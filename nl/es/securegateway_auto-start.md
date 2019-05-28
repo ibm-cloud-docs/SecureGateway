@@ -140,7 +140,7 @@ vi /etc/ibm/sgenvironment.conf
 
 Cuando se hayan ejecutado estos pasos, se pueden utilizar los mandatos de YasT y System V para iniciar/detener el daemon.
 
-Volver a [Iniciación - Adición de un cliente](/docs/services/SecureGateway/securegateway_client.html).
+Volver a [Iniciación - Adición de un cliente](/docs/services/SecureGateway?topic=securegateway-add-client).
 
 ## Windows
 {: #auto-start-windows}
@@ -182,4 +182,4 @@ Los registros de la aplicación para el servicio Windows se almacenarán en:
 
  Los registros se guardan en un nuevo archivo a diario.
 
-Volver a [Iniciación - Adición de un cliente](/docs/services/SecureGateway/securegateway_client.html).
+Volver a [Iniciación - Adición de un cliente](/docs/services/SecureGateway?topic=securegateway-add-client).

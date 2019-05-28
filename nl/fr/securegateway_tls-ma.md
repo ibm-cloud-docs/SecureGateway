@@ -31,7 +31,7 @@ Pour que le client Secure Gateway puisse authentifier la ressource à laquelle i
 
 ### Clé et certificat client
 {: #tls-ma-client-cert-and-key}
-Si je dois spécifier comment le client Secure Gateway s'identifiera auprès de ma ressource, je peux télécharger ici un certificat et une clé que le client utilisera.  Etant donné que le client et la ressource s'exécutent sur la même machine, je peux laisser cette zone vide et laisser les serveurs Secure Gateway générer une paire automatiquement pour moi.  Si ma ressource se trouve sur un hôte distinct, je dois [générer une paire certificat-clé à télécharger](/docs/services/SecureGateway/securegateway_keygen.html).
+Si je dois spécifier comment le client Secure Gateway s'identifiera auprès de ma ressource, je peux télécharger ici un certificat et une clé que le client utilisera.  Etant donné que le client et la ressource s'exécutent sur la même machine, je peux laisser cette zone vide et laisser les serveurs Secure Gateway générer une paire automatiquement pour moi.  Si ma ressource se trouve sur un hôte distinct, je dois [générer une paire certificat-clé à télécharger](/docs/services/SecureGateway?topic=securegateway-cert-key-management).
 
 ![Authentification mutuelle TLS locale](./images/localTLSma.png?raw=true "Authentification mutuelle TLS locale")
 

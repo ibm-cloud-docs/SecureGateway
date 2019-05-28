@@ -27,4 +27,4 @@ Para finalizar la creación de la pasarela, pulse Añadir pasarela.  Una vez que
 
 ![Nueva pasarela](./images/newGateway.png?raw=true "Nueva pasarela")
 
-Ahora que tiene una pasarela recién creada, puede [conectar su primer cliente](/docs/services/SecureGateway/securegateway_client.html).
+Ahora que tiene una pasarela recién creada, puede [conectar su primer cliente](/docs/services/SecureGateway?topic=securegateway-add-client).

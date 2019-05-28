@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-08-10"
+  years: 2015, 2019
+lastupdated: "2019-04-09"
 
 ---
 {:screen: .screen}
@@ -288,9 +288,9 @@ Si tiene preguntas técnicas sobre el desarrollo o el despliegue de una aplicaci
 
 Si tiene preguntas sobre el servicio o las instrucciones sobre cómo empezar, utilice el foro [IBM developerWorks dW Answers ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://developer.ibm.com/answers/topics/securegateway/?smartspace=bluemix) junto con las etiquetas "bluemix" y "Secure Gateway".
 
-Para obtener más información sobre cómo utilizar estos foros, consulte la [página de obtención de ayuda aquí](https://console.ng.bluemix.net/docs/support/index.html#getting-help).
+Para obtener más información sobre cómo utilizar estos foros, consulte la [página de obtención de ayuda aquí](https://cloud.ibm.com/docs/get-support?topic=get-support-getting-customer-support#using-avatar).
 
-Para obtener información sobre cómo abrir una incidencia de soporte de IBM, o sobre los niveles de soporte y la gravedad de las incidencias, consulte [Cómo obtener soporte](https://console.ng.bluemix.net/docs/support/index.html#contacting-support).
+Para obtener información sobre cómo abrir una incidencia de soporte de IBM, o sobre los niveles de soporte y la gravedad de las incidencias, consulte [Cómo obtener soporte](https://cloud.ibm.com/docs/get-support?topic=get-support-support-case-severity#support-case-severity).
 
 Proporcione toda la información siguiente posible cuando envíe una incidencia:
 

@@ -31,7 +31,7 @@ lastupdated: "2017-04-10"
 
 ### 客户机证书和密钥
 {: #tls-ma-client-cert-and-key}
-如果需要指定 Secure Gateway 客户机如何向资源表明自己的身份，那么可以在此上传证书和密钥以供客户机使用。由于客户机和资源是在同一台机器上运行，因此可以使这些信息保留为空，而让 Secure Gateway 服务器自动生成证书/密钥对。如果资源位于单独的主机上，那么需要[生成要上传的证书/密钥对](/docs/services/SecureGateway/securegateway_keygen.html)。
+如果需要指定 Secure Gateway 客户机如何向资源表明自己的身份，那么可以在此上传证书和密钥以供客户机使用。由于客户机和资源是在同一台机器上运行，因此可以使这些信息保留为空，而让 Secure Gateway 服务器自动生成证书/密钥对。如果资源位于单独的主机上，那么需要[生成要上传的证书/密钥对](/docs/services/SecureGateway?topic=securegateway-cert-key-management)。
 
 ![本地 TLS 相互认证](./images/localTLSma.png?raw=true "本地 TLS 相互认证")
 

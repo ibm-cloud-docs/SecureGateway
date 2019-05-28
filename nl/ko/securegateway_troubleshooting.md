@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-08-10"
+  years: 2015, 2019
+lastupdated: "2019-04-09"
 
 ---
 {:screen: .screen}
@@ -29,7 +29,7 @@ lastupdated: "2018-08-10"
 - 요청 애플리케이션에서 실패한 요청을 시작하십시오.
 - Secure Gateway 클라이언트 로그를 확인하십시오.
 - 요청에서 클라이언트 로그가 생성되지 않은 경우 요청 애플리케이션과 Secure Gateway 서버 간의 문제입니다.  이 문제의 범위는 불일치가 발생한 네트워크 프로토콜에 대한 네트워크 신뢰성으로부터 부적절한 TLS 상호 인증 핸드쉐이크까지 해당될 수 있습니다.
-- 클라이언트가 요청에서 오류 레벨 로그를 생성한 경우 SG 클라이언트와 온프레미스 리소스 간의 문제입니다. 다음은 일반적인 오류, 일반적으로 해당 오류를 유발하는 문제 및 해당 문제점을 해결하기 위한 잠재적인 방법이 포함된 표입니다.
+- 클라이언트가 요청에서 오류 레벨 로그를 생성한 경우 SG 클라이언트와 온프레미스 리소스 간의 문제입니다.  다음은 일반적인 오류, 일반적으로 해당 오류를 유발하는 문제 및 해당 문제점을 해결하기 위한 잠재적인 방법이 포함된 표입니다.
 
 오류 | 일반적인 원인 | 문제점 해결 방법
 --- | --- | ---
@@ -41,7 +41,7 @@ REMOTE_RST | SG 서버 측에서 오류가 발생했습니다. <br><br> 온프�
 터널의 반대쪽 끝에서 ECONNRESET이 발생한 후 많은 애플리케이션이 "정지(hang)"됩니다. 이 상황은 예상된 결과입니다. Secure
 Gateway의 경우 터널의 해당 끝에서 이미 TCP 패킷이 수신확인되었기 때문에 터널의 반대편 끝에서 RST 패킷을
 재생할 수 없습니다. 수신확인 응답을 받지 못하는 애플리케이션의 제한시간을 정의하는 것은
-정지(hang) 상태를 종료하는 유일한 방법입니다. 
+정지(hang) 상태를 종료하는 유일한 방법입니다.
 
 ## 서버가 다시 시작될 때 다시 시작되도록 Docker 클라이언트 구성
 {: #docker-auto-restart}
@@ -122,7 +122,7 @@ TLS를 사용하여 대상을 작성했지만 대상의 호스트 이름을 사�
 
 ### 수정 방법
 {: #san-how-to-fix-it}
-오류 메시지를 확인하는 경우 CN에 대해 언급하지 않고(예: [ERROR] Connection ## had error: Host: . is not cert&apos;s CN: ) 자체 서명 인증서가 잘못 생성된 것으로 믿도록 인증서 목록이 표시됩니다. 문제점은 인증서가 IP_주소와 함께 FQDN 또는 CN을 사용하여 생성되었다는 것이며, SAN을 사용하는 경우 IP 주소만 지원되기 때문에 이는 작동하지 않습니다. 
+오류 메시지를 확인하는 경우 CN에 대해 언급하지 않고(예: [ERROR] Connection ## had error: Host: . is not cert&apos;s CN: ) 자체 서명 인증서가 잘못 생성된 것으로 믿도록 인증서 목록이 표시됩니다. 문제점은 인증서가 IP_주소와 함께 FQDN 또는 CN을 사용하여 생성되었다는 것이며, SAN을 사용하는 경우 IP 주소만 지원되기 때문에 이는 작동하지 않습니다.
 
 openssl을 사용하는 CN으로서의 IP가 포함된 인증서를 생성하는 방법:
 
@@ -250,7 +250,7 @@ docker run -t -i ads-secure-gateway-client1  --F /tmp/aclfile.txt
 ```
 {: pre}
 
-- 다음과 같은 출력을 가져와야 합니다. 
+- 다음과 같은 출력을 가져와야 합니다.
 
 ```
 [2015-09-30 16:50:32.084] [INFO] The current access control list is being reset and replaced by the user provided file: /tmp/aclfile.txt
@@ -266,9 +266,9 @@ Secure Gateway를 사용하여 애플리케이션을 개발하거나 배치하�
 
 서비스 또는 지시사항을 시작하는 방법에 대한 질문이 있는 경우 "bluemix" 및 "Secure Gateway" 태그와 함께 [IBM developerWorks dW Answers ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://developer.ibm.com/answers/topics/securegateway/?smartspace=bluemix) 포럼을 사용하십시오.
 
-이러한 포럼을 사용하는 방법에 대한 자세한 정보는 [여기에서 도움말 페이지 받기](https://console.ng.bluemix.net/docs/support/index.html#getting-help)를 확인하십시오.
+이러한 포럼을 사용하는 방법에 대한 자세한 정보는 [여기에서 도움말 페이지 받기](https://cloud.ibm.com/docs/get-support?topic=get-support-getting-customer-support#using-avatar)를 확인하십시오.
 
-IBM 지원 티켓 열기 또는 지원 레벨과 티켓 심각도에 대한 정보는 [지원 문의](https://console.ng.bluemix.net/docs/support/index.html#contacting-support)를 참조하십시오.
+IBM 지원 티켓 열기 또는 지원 레벨과 티켓 심각도에 대한 정보는 [지원 문의](https://cloud.ibm.com/docs/get-support?topic=get-support-support-case-severity#support-case-severity)를 참조하십시오.
 
 티켓을 제출할 때 다음과 같은 정보를 최대한 많이 제공해 주십시오.
 

@@ -17,12 +17,12 @@ lastupdated: "2017-04-25"
 
 ![连接客户机](./images/connectClient.png?raw=true "连接客户机")
 
-选择首选客户机后，[单击此处以查看如何安装客户机](/docs/services/SecureGateway/securegateway_install.html)。
+选择首选客户机后，[单击此处以查看如何安装客户机](/docs/services/SecureGateway?topic=securegateway-client-install)。
 
-安装了客户机后，即可以将其配置为[自动启动](/docs/services/SecureGateway/securegateway_auto-start.html)或[以交互方式运行](/docs/services/SecureGateway/securegateway_interaction.html)。
+安装了客户机后，即可以将其配置为[自动启动](/docs/services/SecureGateway?topic=securegateway-auto-start-conf)或[以交互方式运行](/docs/services/SecureGateway?topic=securegateway-client-interacting)。
 
 ![连接的客户机](./images/connectedClient.png?raw=true "连接的客户机")
 
-如果要立即为客户机配置访问控制表，请[单击此处以获取更多详细信息](/docs/services/SecureGateway/securegateway_acl.html)。
+如果要立即为客户机配置访问控制表，请[单击此处以获取更多详细信息](/docs/services/SecureGateway?topic=securegateway-acl)。
 
-既然您已连接了客户机，那么现在可以[创建第一个目标](/docs/services/SecureGateway/securegateway_destination.html)。
+既然您已连接了客户机，那么现在可以[创建第一个目标](/docs/services/SecureGateway?topic=securegateway-add-dest)。

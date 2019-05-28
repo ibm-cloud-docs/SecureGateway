@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-08-10"
+  years: 2015, 2019
+lastupdated: "2019-04-09"
 
 ---
 {:screen: .screen}
@@ -256,9 +256,9 @@ docker run -t -i ads-secure-gateway-client1  --F /tmp/aclfile.txt
 
 如果您有服務或如何開始使用之指示的相關問題，請使用 [IBM developerWorks dW Answers ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://developer.ibm.com/answers/topics/securegateway/?smartspace=bluemix) 討論區以及 "bluemix" 和 "Secure Gateway" 標籤。
 
-如需有關使用這些討論區的詳細資料，請參閱[這裡的取得協助頁面](https://console.ng.bluemix.net/docs/support/index.html#getting-help)。
+如需有關使用這些討論區的詳細資料，請參閱[這裡的取得協助頁面](https://cloud.ibm.com/docs/get-support?topic=get-support-getting-customer-support#using-avatar)。
 
-如需開立 IBM 支援問題單的相關資訊，或支援層次與問題單嚴重性的相關資訊，請參閱[與支援中心聯絡](https://console.ng.bluemix.net/docs/support/index.html#contacting-support)。
+如需開立 IBM 支援問題單的相關資訊，或支援層次與問題單嚴重性的相關資訊，請參閱[與支援中心聯絡](https://cloud.ibm.com/docs/get-support?topic=get-support-support-case-severity#support-case-severity)。
 
 在提交問題單時，請盡可能提供下列資訊：
 

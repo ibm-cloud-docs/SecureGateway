@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-01-16"
+lastupdated: "2019-04-29"
 
 ---
 
@@ -47,19 +47,19 @@ Vous pouvez avoir besoin de désactiver une destination ou une passerelle pour l
 - Vous ne voulez pas que le service soit disponible pour les utilisateurs car vous êtes en train d'effectuer des mises à jour dans le service.  Dans ce cas, vous pouvez désactiver temporairement les passerelles nécessaires et attendre que le service soit mis à jour.
 - Vous avez configuré toutes vos passerelles et destinations sur le système frontal mais votre système en arrière-plan est toujours en train de compiler.  Dans ce cas, vous désactiverez vos passerelles ou destinations jusqu'à ce que la compilation en arrière-plan soit terminée.
 
-Pour plus d'informations sur la désactivation d'une passerelle ou une destination, voir [gestion de votre instance de service Secure Gateway](/docs/services/SecureGateway/securegateway_managing.html).
+Pour plus d'informations sur la désactivation d'une passerelle ou une destination, voir [gestion de votre instance de service Secure Gateway](/docs/services/SecureGateway?topic=securegateway-manage-sg-service).
 
 ## Quelle est l'approche recommandée pour la mise en oeuvre de l'automatisation dans plusieurs espaces ?
 {: #faq-automation-spaces}
 
 ### Question
 {: #automation-spaces-question}
-Un environnement client dispose d'une organisation et de trois espaces.  L'un des espaces est destiné au développement, un autre à la préproduction et le dernier à la production.  Le client peut créer une unique instance Secure Gateway ou plusieurs (par exemple, une pour chaque espace) ? Si le client peut créer plusieurs passerelles, est-ce intéressant de réutiliser une application Node.js pour créer une passerelle et une destination dans chaque espace ?
+Un environnement client dispose d'une organisation et de trois espaces.  L'un des espaces est destiné au développement, un autre à la préproduction et le dernier à la production.  Le client peut créer une unique instance Secure Gateway ou plusieurs (par exemple, une pour chaque espace) ?  Si le client peut créer plusieurs passerelles, est-ce intéressant de réutiliser une application Node.js pour créer une passerelle et une destination dans chaque espace ?
 
 ### Réponse
 {: #automation-spaces-answer}
 
-- Vous pouvez créer une instance Secure Gateway unique pour chacun des trois espaces.  Toutefois, n'oubliez pas les [limitations applicables à votre plan spécifique](/docs/services/SecureGateway/securegateway_plans.html) de passerelle et de destination.
+- Vous pouvez créer une instance Secure Gateway unique pour chacun des trois espaces.  Toutefois, n'oubliez pas les [limitations applicables à votre plan spécifique](/docs/services/SecureGateway?topic=securegateway-secure-gateway-service-plans) de passerelle et de destination.
 - Il n'existe pas de considérations supplémentaires liées à la réutilisation d'une application Node.js car Secure Gateway ne requiert aucune liaison de service.
 
 
@@ -73,7 +73,7 @@ Un environnement client dispose de trois organisations : une pour le développem
 ### Réponse
 {: #automation-orgs-answer}
 
-- Vous n'avez pas besoin d'avoir une instance de service Secure Gateway dans chaque organisation. Il suffit d'avoir une instance dans une organisation et d'utiliser les passerelles au sein de cette instance à partir de tous vos autres environnements.  Avec cette configuration, vous devez vous souvenir des [limitations applicables à votre plan spécifique](/docs/services/SecureGateway/securegateway_plans.html) de passerelle et de destination.
+- Vous n'avez pas besoin d'avoir une instance de service Secure Gateway dans chaque organisation. Il suffit d'avoir une instance dans une organisation et d'utiliser les passerelles au sein de cette instance à partir de tous vos autres environnements.  Avec cette configuration, vous devez vous souvenir des [limitations applicables à votre plan spécifique](/docs/services/SecureGateway?topic=securegateway-secure-gateway-service-plans) de passerelle et de destination.
 - Vous pouvez avoir une instance de service Secure Gateway dans chaque organisation et la configuration sera disponible pour tous vos espaces.
 
 ## Mon application doit-elle se trouver dans le même espace ?
@@ -96,7 +96,7 @@ Est-il possible d'extraire les journaux de niveau d'erreur du serveur Secure Gat
 
 ### Réponse
 {: #server-logs-answer}
-Les journaux de niveau d'erreur sur le serveur ne peuvent pas être extraits. Seules les erreurs qui se produisent au moment de la demande sont visibles.
+Les journaux de niveau d'erreur sur le serveur ne peuvent pas être extraits.  Seules les erreurs qui se produisent au moment de la demande sont visibles.
 
 ## Quels sont les états fonctionnels de Secure Gateway ?
 {: #faq-states}
@@ -181,20 +181,20 @@ Quelles sont les configurations recommandées pour mieux sécuriser mes connexio
 
 #### Utiliser l'authentification mutuelle
 {: #secure-app-answer-ma}
-L'activation de l'authentification mutuelle des deux côtés des destinations sur site renforce la sécurité de Secure Gateway. Du côté de l'authentification de l'utilisateur, activez l'authentification mutuelle afin de restreindre l'accès au noeud de cloud Secure Gateway par une authentification à l'aide d'un certificat client lorsque la demande s'effectue via TLS/HTTPS. Du côté de l'authentification de la ressource, activez l'authentification mutuelle avec entrée des données d'identification appropriées lors de la connexion au noeud final de destination, et vérifiez que l'accès à une ressource sur site est sécurisé/chiffré. Voir [Configuration de l'authentification mutuelle](/docs/services/SecureGateway/securegateway_destination.html#dest-mutual-auth) et [Authentification mutuelle TLS Node.js](/docs/services/SecureGateway/securegateway_tls-ma.html#nodejs-tls-ma) pour plus d'informations.
+L'activation de l'authentification mutuelle des deux côtés des destinations sur site renforce la sécurité de Secure Gateway. Du côté de l'authentification de l'utilisateur, activez l'authentification mutuelle afin de restreindre l'accès au noeud de cloud Secure Gateway par une authentification à l'aide d'un certificat client lorsque la demande s'effectue via TLS/HTTPS. Du côté de l'authentification de la ressource, activez l'authentification mutuelle avec entrée des données d'identification appropriées lors de la connexion au noeud final de destination, et vérifiez que l'accès à une ressource sur site est sécurisé/chiffré. Voir [Configuration de l'authentification mutuelle](/docs/services/SecureGateway?topic=securegateway-add-dest#dest-mutual-auth) et [Authentification mutuelle TLS Node.js](/docs/services/SecureGateway?topic=securegateway-nodejs-tls-ma#nodejs-tls-ma) pour plus d'informations.
 
 #### Définir des règles de table d'IP (pour une destination sur site)
 {: #secure-app-answer-iptables}
 L'hôte et le port de cloud Secure Gateway d'une destination sur site se trouvent dans l'espace public ; par conséquent, l'accès est, par défaut, autorisé à tous.
-Pour contrôler le trafic qui accède à Secure Gateway, définissez des règles de table d'IP pour n'autoriser l'accès qu'à une plage spécifique d'adresses IP et de ports afin de sécuriser les ressources sur site. Voir [Règles de table d'IP](/docs/services/SecureGateway/securegateway_destination.html#dest-network-security) pour plus d'informations sur la configuration des règles de table d'IP sur Secure Gateway.
+Pour contrôler le trafic qui accède à Secure Gateway, définissez des règles de table d'IP pour n'autoriser l'accès qu'à une plage spécifique d'adresses IP et de ports afin de sécuriser les ressources sur site. Voir [Règles de table d'IP](/docs/services/SecureGateway?topic=securegateway-add-dest#dest-network-security) pour plus d'informations sur la configuration des règles de table d'IP sur Secure Gateway.
 
 #### Configurer une liste de contrôle d'accès (pour une destination sur site)
 {: #secure-app-answer-acl}
-Configurez la prise en charge des listes de contrôle d'accès pour autoriser ou refuser l'accès à des ressources sur site de manière à mieux sécuriser les destinations sur site en spécifiant des droits d'accès sur le port et l'hôte d'une destination spécifique. Il est recommandé de définir les routes HTTP/S autorisées ou restreintes sur les entrées de liste de contrôle d'accès, ainsi que d'augmenter la sécurité de la destination sur site. Voir [Liste de contrôle d'accès](/docs/services/SecureGateway/securegateway_acl.html#acl) et [Contrôle des routes et de HTTP/S à l'aide de listes de contrôle d'accès](/docs/services/SecureGateway/securegateway_acl.html#acl-route-control) pour plus d'informations.
+Configurez la prise en charge des listes de contrôle d'accès pour autoriser ou refuser l'accès à des ressources sur site de manière à mieux sécuriser les destinations sur site en spécifiant des droits d'accès sur le port et l'hôte d'une destination spécifique. Il est recommandé de définir les routes HTTP/S autorisées ou restreintes sur les entrées de liste de contrôle d'accès, ainsi que d'augmenter la sécurité de la destination sur site. Voir [Liste de contrôle d'accès](/docs/services/SecureGateway?topic=securegateway-acl#acl) et [Contrôle des routes et de HTTP/S à l'aide de listes de contrôle d'accès](/docs/services/SecureGateway?topic=securegateway-acl#acl-route-control) pour plus d'informations.
 
 #### Définir un mot de passe sur l'interface utilisateur du client Secure Gateway
 {: #secure-app-answer-ui-pw}
-Il est recommandé de définir un mot de passe pour l'interface utilisateur afin de restreindre l'accès à l'interface utilisateur du client Secure Gateway. Voir [Interaction avec le client](/docs/services/SecureGateway/securegateway_interaction.html#client-interacting) pour plus d'informations sur la définition du mot de passe à l'aide d'une configuration de démarrage ou des commandes interactives sur la ligne de commande du terminal client Secure Gateway.
+Il est recommandé de définir un mot de passe pour l'interface utilisateur afin de restreindre l'accès à l'interface utilisateur du client Secure Gateway. Voir [Interaction avec le client](/docs/services/SecureGateway?topic=securegateway-client-interacting#client-interacting) pour plus d'informations sur la définition du mot de passe à l'aide d'une configuration de démarrage ou des commandes interactives sur la ligne de commande du terminal client Secure Gateway.
 
 ## Qu'est-ce que la migration de passerelle ? Pourquoi le domaine a-t-il été changé après décembre 2018 ?
 {: #faq-gateway-migration}
@@ -222,6 +222,37 @@ Où puis-je voir les notifications Secure Gateway, en particulier celles concern
 ### Réponse
 {: #notification-answer}
 
-Vous pouvez recevoir les notifications sur notre [page de statut](https://console.bluemix.net/status). Consultez la rubrique `Secure Gateway` sur cette page.
+Vous pouvez recevoir les notifications sur notre [page de statut](https://cloud.ibm.com/status?selected=status).
+- Pour recevoir les notifications relatives aux maintenances avec interruption qui sont terminées/en cours, effectuez une recherche sur `Secure Gateway` dans l'onglet `Statut`.
+- Pour recevoir les notifications relatives aux maintenances avec interruption qui sont planifiées, effectuez une recherche sur `Secure Gateway` dans l'onglet `Maintenance planifiée`.
 
 Lorsque le client Secure Gateway a été déconnecté de manière inattendue, accédez à la page de statut pour vérifier si une maintenance avec interruption était planifiée à ce moment-là.
+
+Si une interruption pendant 10 minutes est requise pour la maintenance, vous devrez peut-être redémarrer manuellement le client Secure Gateway pour effectuer une reconnexion au serveur Secure Gateway après la maintenance. Normalement, la durée d'immobilisation du service est supérieure ou égale à 10 minutes, le client Secure Gateway (après la version v180) devrait pouvoir se reconnecter automatiquement au serveur Secure Gateway. 
+
+## Comment puis-je capturer les journaux du client Secure Gateway sur DataPower ?
+{: #faq-dp-log}
+
+### Question
+{: #dp-log-question}
+Comment Puis-je capturer les journaux du client Secure Gateway et les écrire dans un fichier sur DataPower ?
+
+### Réponse
+{: #dp-log-answer}
+
+La catégorie d'événement des journaux du client Secure Gateway est `sgclient`. Vous pouvez créer une [cible de journal](https://www.ibm.com/support/knowledgecenter/en/SS9H2Y_7.7.0/com.ibm.dp.doc/logtarget_logs.html) pour écrire les journaux avec une catégorie d'événement spécifique dans un fichier. Par exemple : 
+
+- A partir du domaine par défaut :
+    - Dans le panneau de l'interface graphique, sélectionnez `Objet` → `Configuration de consignation` → `Cible de journal`. Ou bien, effectuez une recherche sur `Cible de journal` dans la zone `Rechercher`. 
+    - Sélectionnez le bouton `Ajouter` pour ajouter une cible de journal. 
+- Dans l'onglet `Principal` :
+    - Renseignez la zone `Nom`
+    - `Type de cible` : `Fichier`
+    - `Format de journal` : `Texte`
+    - Renseignez la zone `Nom de fichier` pour définir l'emplacement de la sortie, par exemple : `logtemp:///sgclient.log`
+    - Sélectionnez `Pivoter` pour `Mode archivage`
+- Dans l'onglet `Abonnement à des événements` :
+    - Renseignez la zone `Nom`
+    - Sélectionnez le bouton `Ajouter` pour ajouter un abonnement à un événement cible. 
+    - Renseignez la zone `Catégorie d'événement` en sélectionnant `sgclient`. 
+    - Renseignez la zone `Priorité d'événement minimum` en sélectionnant `débogage`. 

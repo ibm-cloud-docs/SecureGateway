@@ -48,7 +48,7 @@ acl allow :
 
 Il comando `show acl` mostrerà l'ACL attualmente impostato oppure fornirà un messaggio relativo all'impostazione complessiva.
 
-Ritorna a [Introduzione - Aggiunta di un client](/docs/services/SecureGateway/securegateway_client.html).
+Ritorna a [Introduzione - Aggiunta di un client](/docs/services/SecureGateway?topic=securegateway-add-client).
 
 ## Controllo della rotta HTTP/S utilizzando l'ACL
 {: #acl-route-control}
@@ -91,14 +91,14 @@ no acl
 
 <b>Nota:</b> `no acl` senza alcun altro parametro REIMPOSTA la tabella ACL e imposta l'accesso su DENY ALL.
 
-Puoi trovare un file ACL di esempio [qui](/docs/services/SecureGateway/securegateway_acl-file.html).
+Puoi trovare un file ACL di esempio [qui](/docs/services/SecureGateway?topic=securegateway-acl-files).
 
-Ritorna a [Introduzione - Aggiunta di un client](/docs/services/SecureGateway/securegateway_client.html).
+Ritorna a [Introduzione - Aggiunta di un client](/docs/services/SecureGateway?topic=securegateway-add-client).
 
 ## Copia del file ACL nel client Docker {{site.data.keyword.SecureGateway}}
 {: #copy-acl-to-docker}
 
-Il client docker {{site.data.keyword.SecureGateway}} in sostanza viene eseguito nel suo contenitore di virtualizzazione.  Il filesystem della macchina host non è pertanto direttamente accessibile ai processi eseguiti all'interno del contenitore, compreso il client {{site.data.keyword.SecureGateway}}.  A partire dalla versione 1.8.0 del motore Docker, puoi utilizzare il comando 'docker cp' per importare i file presenti nel tuo host nel contenitore mentre è in esecuzione o arrestato, quest'operazione deve essere effettuata per poter utilizzare il comando interattivo ACL FILE del client {{site.data.keyword.SecureGateway}}. 
+Il client docker {{site.data.keyword.SecureGateway}} in sostanza viene eseguito nel suo contenitore di virtualizzazione.  Il filesystem della macchina host non è pertanto direttamente accessibile ai processi eseguiti all'interno del contenitore, compreso il client {{site.data.keyword.SecureGateway}}.  A partire dalla versione 1.8.0 del motore Docker, puoi utilizzare il comando 'docker cp' per importare i file presenti nel tuo host nel contenitore mentre è in esecuzione o arrestato, quest'operazione deve essere effettuata per poter utilizzare il comando interattivo ACL FILE del client {{site.data.keyword.SecureGateway}}.
 
 Per utilizzare il supporto 'cp' interattivo in docker dal tuo host all'istanza docker, devi essere al docker 1.8.0. Può verificarlo utilizzando `docker --version`
 
@@ -165,4 +165,4 @@ cli> S
 ```
 {: screen}
 
-Ritorna a [Introduzione - Aggiunta di un client](/docs/services/SecureGateway/securegateway_client.html).
+Ritorna a [Introduzione - Aggiunta di un client](/docs/services/SecureGateway?topic=securegateway-add-client).

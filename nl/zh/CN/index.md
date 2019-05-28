@@ -17,6 +17,6 @@ lastupdated: "2017-04-10"
 
 创建 {{site.data.keyword.SecureGateway}} 服务的实例后，只需完成几个步骤即可建立连接。
 
-1. [添加网关](/docs/services/SecureGateway/securegateway_gateway.html)。
-2. [添加客户机](/docs/services/SecureGateway/securegateway_client.html)。
-3. [添加目标](/docs/services/SecureGateway/securegateway_destination.html)。
+1. [添加网关](/docs/services/SecureGateway?topic=securegateway-add-sg-gw)。
+2. [添加客户机](/docs/services/SecureGateway?topic=securegateway-add-client)。
+3. [添加目标](/docs/services/SecureGateway?topic=securegateway-add-dest)。

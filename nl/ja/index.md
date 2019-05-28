@@ -17,6 +17,6 @@ lastupdated: "2017-04-10"
 
 {{site.data.keyword.SecureGateway}} サービスのインスタンスを作成した後、数ステップで接続することができます。
 
-1. [ゲートウェイを追加します](/docs/services/SecureGateway/securegateway_gateway.html)。
-2. [クライアントを追加します](/docs/services/SecureGateway/securegateway_client.html)。
-3. [宛先を追加します](/docs/services/SecureGateway/securegateway_destination.html)。
+1. [ゲートウェイを追加します](/docs/services/SecureGateway?topic=securegateway-add-sg-gw)。
+2. [クライアントを追加します](/docs/services/SecureGateway?topic=securegateway-add-client)。
+3. [宛先を追加します](/docs/services/SecureGateway?topic=securegateway-add-dest)。

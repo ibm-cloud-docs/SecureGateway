@@ -46,7 +46,7 @@ acl allow :
 
 `show acl` 指令將顯示目前設定的 ACL，或提供有關整體設定的訊息。
 
-回到[開始使用 - 新增用戶端](/docs/services/SecureGateway/securegateway_client.html)。
+回到[開始使用 - 新增用戶端](/docs/services/SecureGateway?topic=securegateway-add-client)。
 
 ## 使用 ACL 的 HTTP/S 路徑控制
 {: #acl-route-control}
@@ -83,9 +83,9 @@ no acl
 
 <b>附註：</b>沒有任何其他參數的 `no acl` 會「重設」ACL 表格，並將存取設為 DENY ALL。
 
-您可以在[這裡](/docs/services/SecureGateway/securegateway_acl-file.html)找到範例 ACL 檔案。
+您可以在[這裡](/docs/services/SecureGateway?topic=securegateway-acl-files)找到範例 ACL 檔案。
 
-回到[開始使用 - 新增用戶端](/docs/services/SecureGateway/securegateway_client.html)。
+回到[開始使用 - 新增用戶端](/docs/services/SecureGateway?topic=securegateway-add-client)。
 
 ## 將 ACL 檔案複製到 {{site.data.keyword.SecureGateway}} Docker 用戶端
 {: #copy-acl-to-docker}
@@ -157,4 +157,4 @@ cli> S
 ```
 {: screen}
 
-回到[開始使用 - 新增用戶端](/docs/services/SecureGateway/securegateway_client.html)。
+回到[開始使用 - 新增用戶端](/docs/services/SecureGateway?topic=securegateway-add-client)。

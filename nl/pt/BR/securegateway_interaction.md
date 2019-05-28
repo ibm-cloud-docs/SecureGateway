@@ -29,17 +29,19 @@ A tabela a seguir descreve todas as opções disponíveis que podem ser fornecid
 | Parâmetro e argumentos | Descrição |
 | ------------- | ----------- |
 | &lt;gateway ID&gt; | Conecte-se ao {{site.data.keyword.Bluemix_notm}}, usando o ID do gateway que é fornecido |
-| -F, -\-aclfile &lt;file&gt; | Access control List file |
-| -g, -\-gateway &lt;hostname:port&gt; | Used to manually select a specific gateway destination (advanced use only) |
-| -l, -\-loglevel &lt;level&gt; | Change the log level to ERROR, INFO, DEBUG or TRACE |
-| -p, -\-logpath &lt;file&gt; | Direct logging to a specific file |
-| -t, -\-sectoken &lt;security token&gt; | The security token to use for this gateway connection |
-| -P, -\-port &lt;port&gt; | The port for the UI to run on.  Defaults to port 9003 |
-| -w, -\-password &lt;password&gt; | The password to protect the UI with.  Defaults to no password |
-| -x, -\-proxy &lt;proxy agent&gt; | The proxy for the port 9000 connection |
-| -\-noUI | Prevent the UI from starting up automatically |
-| -\-allow | Allows all connections to the client. Is overridden by the ACL file, if provided |
-| -\-service | After an initial connection, the parent will restart within 60s if all child clients are terminated |
+| -F, -\-aclfile &lt;file&gt; | Arquivo de Lista de Controle de Acesso |
+| -g, -\-gateway &lt;hostname:port&gt; | Usado para selecionar manualmente um destino de gateway específico
+(somente uso avançado) |
+| -l, -\-loglevel &lt;level&gt; | Mudar o nível de log para ERROR, INFO, DEBUG ou TRACE |
+| -p, -\-logpath &lt;file&gt; | Criação de log direto para um arquivo específico |
+| -t, -\-sectoken &lt;security token&gt; | O token de segurança a ser usado para essa conexão de gateway |
+| -P, -\-port &lt;port&gt; | A porta para a UI ser executada.  Padronizada para a porta 9003 |
+| -w, -\-password &lt;password&gt; | A senha para proteção da UI.  Padronizada para nenhuma senha |
+| -x, -\-proxy &lt;proxy agent&gt; | O proxy para a conexão da porta 9000 |
+| -\-noUI | Impeça a UI de iniciar automaticamente |
+| -\-allow | Permite todas as conexões com o cliente. É substituído pelo arquivo de ACL, se
+fornecido |
+| -\-service | Após uma conexão inicial, o pai será reiniciado em 60 segundos se todos os clientes filhos forem finalizados |
 
 <b>Nota:</b> as sinalizações `--service`, `--allow` e `--noUI` devem ser os últimos parâmetros nos argumentos de linha de comandos.
 
@@ -80,7 +82,7 @@ node lib/secgwclient.js <myGatewayID_1> <myGatewayID_2> -t none--<token for gate
 ```
 {: pre}
 
-Retorne para [Introdução - Incluindo um cliente](/docs/services/SecureGateway/securegateway_client.html).
+Retorne para [Introdução - Incluindo um cliente](/docs/services/SecureGateway?topic=securegateway-add-client).
 
 ## Configuração interativa
 {: #interactive}
@@ -121,9 +123,9 @@ conexões |
 
 <b>Nota:</b> se uma conexão tiver sido especificada com o comando `select` e outro comando for chamado sem fornecer um ID do trabalhador, o comando tentará executar na conexão especificada por `select`.
 
-Para obter mais detalhes sobre como configurar a Lista de Controle de Acesso, [clique aqui](/docs/services/SecureGateway/securegateway_acl.html).
+Para obter mais detalhes sobre como configurar a Lista de Controle de Acesso, [clique aqui](/docs/services/SecureGateway?topic=securegateway-acl).
 
-Retorne para [Introdução - Incluindo um cliente](/docs/services/SecureGateway/securegateway_client.html).
+Retorne para [Introdução - Incluindo um cliente](/docs/services/SecureGateway?topic=securegateway-add-client).
 
 ## UI do Cliente
 {: #client-ui}
@@ -165,7 +167,7 @@ Essa página permitirá manipular a Lista de Controle de Acesso do cliente selec
 Essa página mostrará as informações de conexão atuais para o cliente selecionado (mostradas no canto superior direito da página).  Informações
 como descrição de gateway, número de conexões atuais e listeners de destino reverso podem ser vistos aqui.
 
-Retorne para [Introdução - Incluindo um cliente](/docs/services/SecureGateway/securegateway_client.html).
+Retorne para [Introdução - Incluindo um cliente](/docs/services/SecureGateway?topic=securegateway-add-client).
 
 ## Finalização do cliente remoto
 {: #client-remote}
@@ -193,4 +195,4 @@ desconectado em tempo real não é suportada.
 - Cadeias de certificados completas com TLS do lado de destino não são suportadas antes do DataPower versão 7.5.1.0
 - Os destinos em nuvem não são suportados antes do DataPower versão 7.5.1.0
 - O nível de log não pode ser mudado para o nível TRACE
-- A versão mais recente do cliente Secure Gateway no DataPower é a 1.8.0fp6. Clique [aqui](/docs/services/SecureGateway/securegateway_install.html#installing-datapower) para obter mais informações
+- A versão mais recente do cliente Secure Gateway no DataPower é a 1.8.2fp1. Clique [aqui](/docs/services/SecureGateway?topic=securegateway-client-install#installing-datapower) para obter mais informações

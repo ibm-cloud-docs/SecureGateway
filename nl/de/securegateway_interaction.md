@@ -80,7 +80,7 @@ node lib/secgwclient.js <myGatewayID_1> <myGatewayID_2> -t none--<token for gate
 ```
 {: pre}
 
-Kehren Sie zu [Einführung - Client hinzufügen](/docs/services/SecureGateway/securegateway_client.html) zurück.
+Kehren Sie zu [Einführung - Client hinzufügen](/docs/services/SecureGateway?topic=securegateway-add-client) zurück.
 
 ## Interaktive Konfiguration
 {: #interactive}
@@ -118,9 +118,9 @@ Der {{site.data.keyword.SecureGateway}}-Client verfügt zur leichteren Konfigura
 
 <b>Anmerkung:</b> Wenn eine Verbindung mit dem Befehl `select` angegeben wurde und ein weiterer Befehl ohne Angabe der Worker-ID aufgerufen wird, wird versucht, den Befehl für die Verbindung auszuführen, die mithilfe von `select` angegeben wurde.
 
-Weitere Informationen zum Konfigurieren der Zugriffssteuerungsliste erhalten Sie, wenn Sie [hier klicken](/docs/services/SecureGateway/securegateway_acl.html).
+Weitere Informationen zum Konfigurieren der Zugriffssteuerungsliste erhalten Sie, wenn Sie [hier klicken](/docs/services/SecureGateway?topic=securegateway-acl).
 
-Kehren Sie zu [Einführung - Client hinzufügen](/docs/services/SecureGateway/securegateway_client.html) zurück.
+Kehren Sie zu [Einführung - Client hinzufügen](/docs/services/SecureGateway?topic=securegateway-add-client) zurück.
 
 ## Clientbenutzerschnittstelle
 {: #client-ui}
@@ -159,7 +159,7 @@ Auf dieser Seite können Sie die Zugriffssteuerungsliste für den ausgewählten 
 
 Auf dieser Seite werden die aktuellen Verbindungsinformationen für den ausgewählten Client (der in der rechten oberen Ecke der Seite angezeigt wird) angezeigt.  Hier werden Informationen wie die Beschreibung des Gateways, die Anzahl der aktuellen Verbindungen und die Listener für umgekehrte Verbindungen angezeigt.
 
-Kehren Sie zu [Einführung - Client hinzufügen](/docs/services/SecureGateway/securegateway_client.html) zurück.
+Kehren Sie zu [Einführung - Client hinzufügen](/docs/services/SecureGateway?topic=securegateway-add-client) zurück.
 
 ## Beendigung des fernen Clients
 {: #client-remote}
@@ -185,4 +185,4 @@ Der DataPower-Client für {{site.data.keyword.SecureGateway}} wird derzeit aktua
 - Vollständige Zertifikatsketten mit TLS auf der Zielseite werden vor DataPower Version 7.5.1.0 nicht unterstützt.
 - Cloudziele werden vor DataPower Version 7.5.1.0 nicht unterstützt.
 - Die Protokollebene kann nicht in die Ebene TRACE geändert werden.
-- Die neueste Version des Secure Gateway-Clients in DataPower ist 1.8.0fp6; weitere Informationen finden Sie [hier](/docs/services/SecureGateway/securegateway_install.html#installing-datapower).
+- Die neueste Version des Secure Gateway-Clients in DataPower ist 1.8.2fp1; weitere Informationen finden Sie [hier](/docs/services/SecureGateway?topic=securegateway-client-install#installing-datapower).

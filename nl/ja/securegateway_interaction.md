@@ -34,11 +34,11 @@ lastupdated: "2019-02-19"
 | -l, -\-loglevel &lt;level&gt; | ログ・レベルを ERROR、INFO、DEBUG または TRACE に変更します |
 | -p, -\-logpath &lt;file&gt; | ロギングを特定のファイルに送信します |
 | -t, -\-sectoken &lt;security token&gt; | このゲートウェイ接続に使用するセキュリティー・トークン |
-| -P, -\-port &lt;port&gt; | UI が実行されるポート。デフォルトはポート 9003 |
-| -w, -\-password &lt;password&gt; | UI を保護するパスワード。デフォルトはパスワードなしです |
+| -P, -\-port &lt;port&gt; | UI が実行されるポート。  デフォルトはポート 9003 |
+| -w, -\-password &lt;password&gt; | UI を保護するパスワード。  デフォルトはパスワードなしです |
 | -x, -\-proxy &lt;proxy agent&gt; | ポート 9000 接続用のプロキシー |
 | -\-noUI | UI が自動的に開始されないようにします |
-| -\-allow | クライアントへのすべての接続を許可します。ACL ファイルによってオーバーライドされます (指定されている場合) |
+| -\-allow | クライアントへのすべての接続を許可します。 ACL ファイルによってオーバーライドされます (指定されている場合) |
 | -\-service | 初期接続の後、すべての子クライアントが終了していると、親は 60 秒以内に再始動されます |
 
 <b>注:</b> `--service`、`--allow`、および `--noUI` フラグは、コマンド・ライン引数の最後のパラメーターでなければなりません。
@@ -83,7 +83,7 @@ node lib/secgwclient.js <myGatewayID_1> <myGatewayID_2> -t none--<token for gate
 ```
 {: pre}
 
-[概説 - クライアントの追加](/docs/services/SecureGateway/securegateway_client.html)に戻ります。
+[概説 - クライアントの追加](/docs/services/SecureGateway?topic=securegateway-add-client)に戻ります。
 
 ## 対話式構成
 {: #interactive}
@@ -121,9 +121,9 @@ node lib/secgwclient.js <myGatewayID_1> <myGatewayID_2> -t none--<token for gate
 
 <b>注:</b> `select` コマンドで接続が指定されていて、別のコマンドがワーカー ID を指定せずに呼び出された場合、そのコマンドは、`select` で指定された接続で実行されます。
 
-アクセス制御リストの構成について詳しくは、[ここをクリック](/docs/services/SecureGateway/securegateway_acl.html)してください。
+アクセス制御リストの構成について詳しくは、[ここをクリック](/docs/services/SecureGateway?topic=securegateway-acl)してください。
 
-[概説 - クライアントの追加](/docs/services/SecureGateway/securegateway_client.html)に戻ります。
+[概説 - クライアントの追加](/docs/services/SecureGateway?topic=securegateway-add-client)に戻ります。
 
 ## クライアント UI
 {: #client-ui}
@@ -162,7 +162,7 @@ node lib/secgwclient.js <myGatewayID_1> <myGatewayID_2> -t none--<token for gate
 
 このページには、選択したクライアント (ページの右上に表示されます) の現行接続情報が表示されます。  ここには、ゲートウェイの説明、現行接続の数、逆方向の宛先のリスナーなどの情報を表示できます。
 
-[概説 - クライアントの追加](/docs/services/SecureGateway/securegateway_client.html)に戻ります。
+[概説 - クライアントの追加](/docs/services/SecureGateway?topic=securegateway-add-client)に戻ります。
 
 ## リモート・クライアントの終了
 {: #client-remote}
@@ -175,7 +175,7 @@ node lib/secgwclient.js <myGatewayID_1> <myGatewayID_2> -t none--<token for gate
 ### 接続の制限
 {: #limits-conn}
 
-SG ゲートウェイは、250 個の同時接続しか処理できません。同時要求の数が制限を超えると、接続の試行が拒否され、待ち時間が発生する可能性があります。 これを修正する簡単な方法は、呼び出し側アプリケーションで接続プールを使用することです。 250 の同時接続の制限はゲートウェイに対してであり、クライアントでも宛先でもないことに注意してください。 この制限は、ゲートウェイ上のすべてのクライアントと宛先で共有されます。
+SG ゲートウェイは、250 個の同時接続しか処理できません。 同時要求の数が制限を超えると、接続の試行が拒否され、待ち時間が発生する可能性があります。 これを修正する簡単な方法は、呼び出し側アプリケーションで接続プールを使用することです。 250 の同時接続の制限はゲートウェイに対してであり、クライアントでも宛先でもないことに注意してください。 この制限は、ゲートウェイ上のすべてのクライアントと宛先で共有されます。
 
 ### DataPower クライアント制限
 {: #limits-datapower}
@@ -188,4 +188,4 @@ SG ゲートウェイは、250 個の同時接続しか処理できません。�
 - DataPower バージョン 7.5.1.0 より前では、宛先側 TLS を備えた完全な証明書チェーンはサポートされません。
 - DataPower バージョン 7.5.1.0 より前では、クラウドの宛先はサポートされません。
 - ログ・レベルを TRACE レベルに変更できません。
-- DataPower での最新 Secure Gateway クライアント・バージョンは、1.8.0fp6 です。詳しくは、[こちら](/docs/services/SecureGateway/securegateway_install.html#installing-datapower)を確認してください。
+- DataPower での最新 Secure Gateway クライアント・バージョンは、1.8.2fp1 です。詳しくは、[こちら](/docs/services/SecureGateway?topic=securegateway-client-install#installing-datapower)を確認してください。

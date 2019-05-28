@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-01-16"
+lastupdated: "2019-04-29"
 
 ---
 
@@ -47,19 +47,19 @@ Es kann aus den folgenden Gründen sinnvoll sein, ein Ziel oder Gateway zu inakt
 - Der Service soll für die Benutzer nicht verfügbar sein, weil Sie gerade Aktualisierungen am Service vornehmen.  In diesem Fall können Sie die erforderlichen Gateways vorübergehend inaktivieren und warten, bis der Service aktualisiert wurde.
 - Sie haben alle Gateways und Ziele am Front-End eingerichtet, aber das Back-End wurde noch nicht erstellt.  In diesem Fall ist es sinnvoll, die Gateways oder Ziele zu inaktivieren und erst dann zu aktivieren, wenn die Erstellung des Back-Ends abgeschlossen ist.
 
-Weitere Informationen zum Inaktivieren eines Gateways oder Ziels finden Sie unter [Vorgehensweise zum Verwalten der Secure Gateway-Serviceinstanz](/docs/services/SecureGateway/securegateway_managing.html).
+Weitere Informationen zum Inaktivieren eines Gateways oder Ziels finden Sie unter [Vorgehensweise zum Verwalten der Secure Gateway-Serviceinstanz](/docs/services/SecureGateway?topic=securegateway-manage-sg-service).
 
 ## Welcher Ansatz wird für die Erstellungsautomatisierung für mehrere Bereiche empfohlen?
 {: #faq-automation-spaces}
 
 ### Frage
 {: #automation-spaces-question}
-Eine Kundenumgebung verfügt über eine Organisation und drei Bereiche.  Ein Bereich ist für die Entwicklung, ein weiterer für das Staging und der letzte für die Produktion vorgesehen.  Soll der Kunde eine einzelne Secure Gateway-Instanz oder mehrere erstellen (zum Beispiel eine für jeden Bereich)? Gibt es Überlegungen zur Wiederverwendung einer Node.js-Anwendung zum Erstellen eines Gateways und einer Anwendung in jedem Bereich, wenn der Kunde mehrere Gateways erstellen kann?
+Eine Kundenumgebung verfügt über eine Organisation und drei Bereiche.  Ein Bereich ist für die Entwicklung, ein weiterer für das Staging und der letzte für die Produktion vorgesehen.  Soll der Kunde eine einzelne Secure Gateway-Instanz oder mehrere erstellen (zum Beispiel eine für jeden Bereich)?  Gibt es Überlegungen zur Wiederverwendung einer Node.js-Anwendung zum Erstellen eines Gateways und einer Anwendung in jedem Bereich, wenn der Kunde mehrere Gateways erstellen kann?
 
 ### Antwort
 {: #automation-spaces-answer}
 
-- Sie können für alle drei Bereiche eine einzige Secure Gateway-Instanz erstellen.  Sie müssen hierbei jedoch die [Einschränkungen für den jeweiligen Plan](/docs/services/SecureGateway/securegateway_plans.html) in Bezug auf Gateways und Ziele berücksichtigen.
+- Sie können für alle drei Bereiche eine einzige Secure Gateway-Instanz erstellen.  Sie müssen hierbei jedoch die [Einschränkungen für den jeweiligen Plan](/docs/services/SecureGateway?topic=securegateway-secure-gateway-service-plans) in Bezug auf Gateways und Ziele berücksichtigen.
 - Hinsichtlich einer Wiederverwendung der Node.js-Anwendung müssen keine weiteren Überlegungen berücksichtigt werden, da für Secure Gateway keine Servicebindungen erforderlich sind.
 
 
@@ -73,7 +73,7 @@ Eine Kundenumgebung weist drei Organisationen auf: eine für die Entwicklung, ei
 ### Antwort
 {: #automation-orgs-answer}
 
-- Es muss nicht in jeder Secure Gateway-Serviceinstanz eine Organisation vorhanden sein. In einer Organisation kann eine Instanz vorhanden sein und Sie können die Gateways in dieser Instanz von allen anderen Umgebungen aus verwenden.  Bei Verwendung dieser Konfiguration müssen Sie jedoch die [Einschränkungen für den jeweiligen Plan](/docs/services/SecureGateway/securegateway_plans.html) in Bezug auf Gateways und Ziele berücksichtigen.
+- Es muss nicht in jeder Secure Gateway-Serviceinstanz eine Organisation vorhanden sein. In einer Organisation kann eine Instanz vorhanden sein und Sie können die Gateways in dieser Instanz von allen anderen Umgebungen aus verwenden.  Bei Verwendung dieser Konfiguration müssen Sie jedoch die [Einschränkungen für den jeweiligen Plan](/docs/services/SecureGateway?topic=securegateway-secure-gateway-service-plans) in Bezug auf Gateways und Ziele berücksichtigen.
 - In einzelnen Organisation kann eine Secure Gateway-Serviceinstanz vorhanden sein und die Konfiguration ist in allen Bereichen verfügbar.
 
 ## Muss sich meine App in demselben Bereich befinden?
@@ -96,7 +96,7 @@ Können Protokoll auf Fehlerebene für den Secure Gateway-Server abgerufen werde
 
 ### Antwort
 {: #server-logs-answer}
-Die Protokoll auf Fehlerebene auf dem Server können nicht abgerufen werden. Es können nur Fehler angezeigt werden, die zum Zeitpunkt der Anforderung gemacht wurden.
+Die Protokoll auf Fehlerebene auf dem Server können nicht abgerufen werden.  Es können nur Fehler angezeigt werden, die zum Zeitpunkt der Anforderung gemacht wurden.
 
 ## Welche Angaben kann Secure Gateway für Statusangaben zur Funktion aufweisen?
 {: #faq-states}
@@ -181,20 +181,20 @@ Welche Konfigurationen werden zum Schützen von Verbindungen empfohlen?
 
 #### Gegenseitige Authentifizierung verwenden
 {: #secure-app-answer-ma}
-Die Aktivierung der gegenseitigen Authentifizierung für beide Seiten der lokalen Ziele erhöht die Sicherheit in Secure Gateway. Aktivieren Sie auf der Seite 'Benutzerauthentifizierung' die gegenseitige Authentifizierung, um den Zugriff auf den Secure Gateway-Cloudknoten durch die Authentifizierung mithilfe eines Clientzertifikats zu beschränken, wenn die Anforderung über TLS/HTTPS gesendet wird. Aktivieren Sie auf der Seite 'Ressourcenauthentifizierung' die gegenseitige Authentifizierung, um einen entsprechenden Berechtigungsnachweis bereitzustellen, wenn eine Verbindung zum Zielendpunkt hergestellt wird, und stellen Sie den sicheren bzw. verschlüsselten Zugriff auf die lokale Ressource sicher. Weitere Informationen finden Sie in [Gegenseitige Authentifizierung konfigurieren](/docs/services/SecureGateway/securegateway_destination.html#dest-mutual-auth) und [Gegenseitige TLS-Authentifizierung mit Node.js](/docs/services/SecureGateway/securegateway_tls-ma.html#nodejs-tls-ma).
+Die Aktivierung der gegenseitigen Authentifizierung für beide Seiten der lokalen Ziele erhöht die Sicherheit in Secure Gateway. Aktivieren Sie auf der Seite 'Benutzerauthentifizierung' die gegenseitige Authentifizierung, um den Zugriff auf den Secure Gateway-Cloudknoten durch die Authentifizierung mithilfe eines Clientzertifikats zu beschränken, wenn die Anforderung über TLS/HTTPS gesendet wird. Aktivieren Sie auf der Seite 'Ressourcenauthentifizierung' die gegenseitige Authentifizierung, um einen entsprechenden Berechtigungsnachweis bereitzustellen, wenn eine Verbindung zum Zielendpunkt hergestellt wird, und stellen Sie den sicheren bzw. verschlüsselten Zugriff auf die lokale Ressource sicher. Weitere Informationen finden Sie in [Gegenseitige Authentifizierung konfigurieren](/docs/services/SecureGateway?topic=securegateway-add-dest#dest-mutual-auth) und [Gegenseitige TLS-Authentifizierung mit Node.js](/docs/services/SecureGateway?topic=securegateway-nodejs-tls-ma#nodejs-tls-ma).
 
 #### Regeln für IP-Tabelle festlegen (für lokales Ziel)
 {: #secure-app-answer-iptables}
 Da sich Host und Port der Secure Gateway-Cloud eines lokalen Ziels im öffentlichen Bereich befinden, ist der Zugriff standardmäßig nicht begrenzt.
-Wenn Sie den Datenverkehr kontrollieren möchten, über den auf Secure Gateway zugegriffen wird, legen Sie iptables-Regeln fest, damit nur von bestimmten IPs und Ports aus zugegriffen werden kann, um die lokalen Ressourcen zu schützen. Weitere Informationen zum Konfigurieren der iptables-Regeln für Secure Gateway finden Sie in [IP-Tabellenregeln](/docs/services/SecureGateway/securegateway_destination.html#dest-network-security).
+Wenn Sie den Datenverkehr kontrollieren möchten, über den auf Secure Gateway zugegriffen wird, legen Sie iptables-Regeln fest, damit nur von bestimmten IPs und Ports aus zugegriffen werden kann, um die lokalen Ressourcen zu schützen. Weitere Informationen zum Konfigurieren der iptables-Regeln für Secure Gateway finden Sie in [IP-Tabellenregeln](/docs/services/SecureGateway?topic=securegateway-add-dest#dest-network-security).
 
 #### Zugriffssteuerungsliste konfigurieren (für lokales Ziel)
 {: #secure-app-answer-acl}
-Konfigurieren Sie die Unterstützung für die Zugriffssteuerungsliste, um den Zugriff auf lokale Ressourcen zu erteilen oder zu beschränken; durch das Angeben einer Zugriffsberechtigung für Host und Port eines bestimmten Ziels werden die lokalen Ziele sicherer. Es wird empfohlen, die zulässigen oder einschränkten HTTP- bzw. HTTPS-Routen in den ACL-Einträgen zu definieren, um die Sicherheit von lokalen Zielen zu erhöhen. Weitere Informationen hierzu finden Sie in [Zugriffssteuerungsliste](/docs/services/SecureGateway/securegateway_acl.html#acl) und in [HTTP- und HTTPS-Routensteuerung mithilfe der Zugriffssteuerungsliste](/docs/services/SecureGateway/securegateway_acl.html#acl-route-control).
+Konfigurieren Sie die Unterstützung für die Zugriffssteuerungsliste, um den Zugriff auf lokale Ressourcen zu erteilen oder zu beschränken; durch das Angeben einer Zugriffsberechtigung für Host und Port eines bestimmten Ziels werden die lokalen Ziele sicherer. Es wird empfohlen, die zulässigen oder einschränkten HTTP- bzw. HTTPS-Routen in den ACL-Einträgen zu definieren, um die Sicherheit von lokalen Zielen zu erhöhen. Weitere Informationen hierzu finden Sie in [Zugriffssteuerungsliste](/docs/services/SecureGateway?topic=securegateway-acl#acl) und in [HTTP- und HTTPS-Routensteuerung mithilfe der Zugriffssteuerungsliste](/docs/services/SecureGateway?topic=securegateway-acl#acl-route-control).
 
 #### Kennwort für Secure Gateway-Clientbenutzerschnittstelle festlegen
 {: #secure-app-answer-ui-pw}
-Es wird empfohlen, ein Benutzerschnittstellenkennwort festzulegen, um den Zugriff auf die Benutzerschnittstelle des Secure Gateway-Clients zu beschränken. Weitere Details um Festlegen des Kennworts mithilfe der Startkonfiguration oder interaktiver Befehle in der Terminalbefehlszeile des Secure Gateway-Clients finden Sie in [Interaktion mit dem Client](/docs/services/SecureGateway/securegateway_interaction.html#client-interacting).
+Es wird empfohlen, ein Benutzerschnittstellenkennwort festzulegen, um den Zugriff auf die Benutzerschnittstelle des Secure Gateway-Clients zu beschränken. Weitere Details um Festlegen des Kennworts mithilfe der Startkonfiguration oder interaktiver Befehle in der Terminalbefehlszeile des Secure Gateway-Clients finden Sie in [Interaktion mit dem Client](/docs/services/SecureGateway?topic=securegateway-client-interacting#client-interacting).
 
 ## Was ist eine Gateway-Migration? Aus welchem Grund wurde die Domäne nach Dezember 2018 geändert?
 {: #faq-gateway-migration}
@@ -217,11 +217,42 @@ Derzeit ist die Migration nicht obligatorisch und es gibt kein genaues Datum, an
 
 ### Frage
 {: #notification-question}
-Wie können Secure Gateway-Benachrichtigungen empfangen werden, insbesondere dazu, ob Wartungsmaßnahmen vorliegen?
+Wo erhalte ich Secure Gateway-Benachrichtigungen, insbesondere Benachrichtigungen dazu, ob Wartungsmaßnahmen geplant sind, die zu einer Betriebsunterbrechung führen?
 
 ### Antwort
 {: #notification-answer}
 
-Benachrichtigungen können über die [Statusseite](https://console.bluemix.net/status) empfangen werden; suchen Sie auf dieser Seite nach `Secure Gateway`.
+Benachrichtigungen erhalten Sie über die [Statusseite](https://cloud.ibm.com/status?selected=status). 
+- Wenn Sie Benachrichtigungen zu abgeschlossenen bzw. laufenden Wartungsmaßnahmen, die zu einer Betriebsunterbrechung führen, erhalten möchten, suchen Sie nach `Secure Gateway` auf der Registerkarte `Status`.
+- Wenn Sie Benachrichtigungen zu geplanten Wartungsmaßnahmen, die zu einer Betriebsunterbrechung führen, erhalten möchten, suchen Sie nach `Secure Gateway` auf der Registerkarte `Geplante Wartung`.
 
-Wenn es zu einer unerwarteten Unterbrechung der Verbindung zum Secure Gateway kommt, rufen Sie die Statusseite auf und prüfen Sie, ob derzeit eine Wartungsmaßnahme vorliegt.
+Wenn es zu einer unerwarteten Unterbrechung der Verbindung zum Secure Gateway-Client kommt, rufen Sie die Statusseite auf und prüfen Sie, ob derzeit Wartungsmaßnahmen, die zu einer Betriebsunterbrechung führen, ausgeführt werden. 
+
+Wenn für die Wartungsmaßnahmen eine Unterbrechung von mehr als 10 Minuten erforderlich ist, müssen Sie möglicherweise den Secure Gateway-Client manuell erneut starten, um die Verbindung zum Secure Gateway-Server nach der Wartung wiederherzustellen. Normalerweise beträgt die Ausfallzeit des Service höchstens 10 Minuten und der Secure Gateway-Client (nach Version v180) kann in der Regel die Verbindung zum Secure Gateway-Server automatisch wiederherstellen. 
+
+## Wie kann ich die Secure Gateway-Clientprotokolle in DataPower erfassen?
+{: #faq-dp-log}
+
+### Frage
+{: #dp-log-question}
+Wie kann ich die Secure Gateway-Clientprotokolle erfassen und in eine Datei in DataPower schreiben?
+
+### Antwort
+{: #dp-log-answer}
+
+Die Ereigniskategorie der Secure Gateway-Clientprotokolle ist `sgclient`. Sie können ein [Protokollziel](https://www.ibm.com/support/knowledgecenter/en/SS9H2Y_7.7.0/com.ibm.dp.doc/logtarget_logs.html) erstellen, um die Protokolle mit der spezifischen Ereigniskategorie in eine Datei zu schreiben. Ein Beispiel ist nachfolgend aufgeführt:
+
+- In der Standarddomäne: 
+    - Wählen Sie in der Seitenleiste der grafischen Benutzerschnittstelle `Objekt` → `Protokollierungskonfiguration` → `Protokollziel` aus. Oder suchen Sie im Feld `Suche` nach `Protokollziel`. 
+    - Wählen Sie die Schaltfläche `Hinzufügen` aus, um ein Protokollziel hinzuzufügen. 
+- Auf der `Hauptregisterkarte`:
+    - Geben Sie den `Namen` ein. 
+    - Geben Sie `Datei` als `Zieltyp` an. 
+    - Geben Sie `Text` als `Protokollformat` an. 
+    - Geben Sie den `Dateinamen` ein, um die Ausgabeposition zu definieren, z. B. `logtemp:///sgclient.log`. 
+    - Wählen Sie `Rotation` als `Archivierungsmodus` aus. 
+- Auf der Registerkarte `Ereignisabonnement`:
+    - Geben Sie den `Namen` ein. 
+    - Wählen Sie die Schaltfläche `Hinzufügen` aus, um ein Zielereignisabonnement hinzuzufügen. 
+    - Wählen Sie `sgclient` als `Ereigniskategorie` aus. 
+    - Geben Sie `Debugging` als `Minimale Ereignispriorität` ein. 

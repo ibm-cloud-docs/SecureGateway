@@ -88,26 +88,26 @@ Die Aktivierung von TLS für die Verbindung zur Ressource ist von der Verwendung
 #### Cloudauthentifizierung/Lokale Authentifizierung
 {: #cloud-or-on-prem-auth}
 
-Diese Option wird verfügbar, wenn Sie für [Ressourcenauthentifizierung](#dest-resource-auth) die Option 'TLS' oder 'Gegenseitige Authentifizierung' auswählen. Der Name des Felds ist mit dem [Typ des Ziels](#dest-types) identisch, den Sie ausgewählt haben.  Dieses Feld ermöglicht das Hochladen von bis zu 6 Zertifikaten, um das Zertifikat der Ressource zu validieren, zu der Sie eine Verbindung herstellen.  Diese Dateien werden für die Zertifizierungsstelle der jeweiligen Verbindung zur Ressource hinzugefügt und müssen das Zertifikat oder die Zertifikatskette enthalten, das bzw. die von der Ressource angezeigt wird.
+Diese Option wird verfügbar, wenn Sie für [Ressourcenauthentifizierung](#dest-resource-auth) die Option 'TLS' oder 'Gegenseitige Authentifizierung' auswählen.  Der Name des Felds ist mit dem [Typ des Ziels](#dest-types) identisch, den Sie ausgewählt haben.  Dieses Feld ermöglicht das Hochladen von bis zu 6 Zertifikaten, um das Zertifikat der Ressource zu validieren, zu der Sie eine Verbindung herstellen.  Diese Dateien werden für die Zertifizierungsstelle der jeweiligen Verbindung zur Ressource hinzugefügt und müssen das Zertifikat oder die Zertifikatskette enthalten, das bzw. die von der Ressource angezeigt wird.
 
 #### Servernamensindikator (SNI)
 {: #dest-sni}
-Diese Option wird verfügbar, wenn Sie für [Ressourcenauthentifizierung](#dest-resource-auth) die Option 'TLS' oder 'Gegenseitige Authentifizierung' auswählen. Sie wird verwendet, damit für den TLS-Handshake der Ressourcenverbindung ein separater Hostname verwendet werden kann.
+Diese Option wird verfügbar, wenn Sie für [Ressourcenauthentifizierung](#dest-resource-auth) die Option 'TLS' oder 'Gegenseitige Authentifizierung' auswählen.  Sie wird verwendet, damit für den TLS-Handshake der Ressourcenverbindung ein separater Hostname verwendet werden kann.
 
 ### Clientzertifikat und -schlüssel
 {: #dest-client-cert-key}
-Ob die Felder für Clientzertifikat und Clientschlüssel angezeigt werden, hängt vom [Typ des Ziels](#dest-types) ab, den Sie ausgewählt haben.  In beiden Fällen werden die hier bereitgestellten Dateien vom SG-Client für seine Identifizierung bei TLS-Verbindungen verwendet.  Falls keine Dateien hochgeladen werden, wird von den {{site.data.keyword.SecureGateway}}-Servern automatisch ein selbst signiertes Paar mit der CN-Angabe `localhost` generiert.  Für Anweisungen zum Generieren eines Paars aus Zertifikat und Schlüssel [klicken Sie hier](/docs/services/SecureGateway/securegateway_keygen.html).
+Ob die Felder für Clientzertifikat und Clientschlüssel angezeigt werden, hängt vom [Typ des Ziels](#dest-types) ab, den Sie ausgewählt haben.  In beiden Fällen werden die hier bereitgestellten Dateien vom SG-Client für seine Identifizierung bei TLS-Verbindungen verwendet.  Falls keine Dateien hochgeladen werden, wird von den {{site.data.keyword.SecureGateway}}-Servern automatisch ein selbst signiertes Paar mit der CN-Angabe `localhost` generiert.  Für Anweisungen zum Generieren eines Paars aus Zertifikat und Schlüssel [klicken Sie hier](/docs/services/SecureGateway?topic=securegateway-cert-key-management).
 
-Bei einem lokalen Ziel wird es unter [Ressourcenauthentifizierung](#dest-resource-auth) angezeigt, wenn die Option `Gegenseitige Authentifizierung` ausgewählt wurde. In diesem Fall verwendet der SG-Client dieses Zertifikats-/Schlüsselpaar für seine abgehende Verbindung zur definierten Ressource; die lokale Ressource muss dieses Zertifikat zur Zertifizierungsstelle hinzufügen, damit eine Kommunikation mit dem SG-Client möglich ist.
+Bei einem lokalen Ziel wird es unter [Ressourcenauthentifizierung](#dest-resource-auth) angezeigt, wenn die Option `Gegenseitige Authentifizierung` ausgewählt wurde.  In diesem Fall verwendet der SG-Client dieses Zertifikats-/Schlüsselpaar für seine abgehende Verbindung zur definierten Ressource; die lokale Ressource muss dieses Zertifikat zur Zertifizierungsstelle hinzufügen, damit eine Kommunikation mit dem SG-Client möglich ist.
 
-Bei einem Cloudziel wird es unter [Benutzerauthentifizierung](#dest-user-auth) angezeigt, wenn ein TLS-Protokoll ausgewählt wurde. In diesem Fall verwendet der SG-Client dieses Zertifikats-/Schlüsselpaar für die TLS-Listener-Erstellung; die lokale App muss dieses Zertifikat zur Zertifizierungsstelle hinzufügen, damit eine Kommunikation mit dem SG-Client möglich ist.
+Bei einem Cloudziel wird es unter [Benutzerauthentifizierung](#dest-user-auth) angezeigt, wenn ein TLS-Protokoll ausgewählt wurde.  In diesem Fall verwendet der SG-Client dieses Zertifikats-/Schlüsselpaar für die TLS-Listener-Erstellung; die lokale App muss dieses Zertifikat zur Zertifizierungsstelle hinzufügen, damit eine Kommunikation mit dem SG-Client möglich ist.
 
 ## Netzsicherheit konfigurieren
 {: #dest-network-security}
 Damit nur bestimmte IP-Adressen eine Verbindung zu Hosts und Ports in der Cloud herstellen können, können Sie auf dem lokalen Ziel iptables-Regeln erzwingen.
 ![Anzeige für Netzsicherheit](./images/networkSecurity.png?raw=true "Anzeige für Netzsicherheit")
 
-Wenn Sie iptables-Regeln erzwingen möchten, markieren Sie das Kontrollkästchen <b>Cloudzugriff auf dieses Ziel durch iptables-Regeln beschränken</b> in der Anzeige 'Netzsicherheit'. Sobald das Kontrollkästchen aktiviert ist, können Sie mit dem Hinzufügen der IPs beginnen, für die ein Verbindungsaufbau zulässig ist.  Wenn keine IPs angegeben werden, werden alle Verbindungen zu diesen Hosts und Ports in der Cloud abgelehnt, solange das Kontrollkästchen <b>Cloudzugriff beschränken</b> markiert ist.
+Wenn Sie iptables-Regeln erzwingen möchten, markieren Sie das Kontrollkästchen <b>Cloudzugriff auf dieses Ziel durch iptables-Regeln beschränken</b> in der Anzeige 'Netzsicherheit'.  Sobald das Kontrollkästchen aktiviert ist, können Sie mit dem Hinzufügen der IPs beginnen, für die ein Verbindungsaufbau zulässig ist.  Wenn keine IPs angegeben werden, werden alle Verbindungen zu diesen Hosts und Ports in der Cloud abgelehnt, solange das Kontrollkästchen <b>Cloudzugriff beschränken</b> markiert ist.
 
 <b>Anmerkung:</b> Die bereitgestellten IPs oder Ports müssen externe IP-Adressen sein, die von den {{site.data.keyword.SecureGateway}}-Servern erkannt werden können; sie dürfen nicht die lokale IP-Adresse der Maschine sein, von der die Anforderung erstellt wird.
 
@@ -124,7 +124,7 @@ IP-Adressen | Ports | Ergebnisse
 1.2.3.4 | | Nur IP 1.2.3.4 ist an allen Ports zulässig.
 | 5000 | Jede IP ist an Port 5000 zulässig.
 
-Einer Anwendung können auch bestimmte Regeln zugeordnet werden.  Weitere Informationen zum Erstellen zugeordneter Regeln finden Sie unter [Vorgehensweise zum Erstellen von iptables-Regeln für die Anwendung](/docs/services/SecureGateway/iptables.html).
+Einer Anwendung können auch bestimmte Regeln zugeordnet werden.  Weitere Informationen zum Erstellen zugeordneter Regeln finden Sie unter [Vorgehensweise zum Erstellen von iptables-Regeln für die Anwendung](/docs/services/SecureGateway?topic=securegateway-iptables-rules).
 
 ## Proxy-Optionen konfigurieren
 {: #dest-proxy}

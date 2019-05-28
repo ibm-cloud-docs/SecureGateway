@@ -17,6 +17,6 @@ Le service {{site.data.keyword.SecureGatewayfull}} offre une solution rapide, fa
 
 Après avoir créé une instance du service {{site.data.keyword.SecureGateway}}, quelques étapes suffisent pour se connecter.
 
-1. [Ajout d'une passerelle](/docs/services/SecureGateway/securegateway_gateway.html).
-2. [Ajout d'un client](/docs/services/SecureGateway/securegateway_client.html).
-3. [Ajout d'une destination](/docs/services/SecureGateway/securegateway_destination.html).
+1. [Ajout d'une passerelle](/docs/services/SecureGateway?topic=securegateway-add-sg-gw).
+2. [Ajout d'un client](/docs/services/SecureGateway?topic=securegateway-add-client).
+3. [Ajout d'une destination](/docs/services/SecureGateway?topic=securegateway-add-dest).

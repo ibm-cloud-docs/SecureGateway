@@ -15,7 +15,7 @@ Com a liberação da v1.7.0, um novo modelo de precificação de plano em camada
 
 ## Mudando planos
 {: #changing-plans}
-Quando você mudar os planos, seu novo plano será considerado como um upgrade ou um downgrade.  Isso é determinado pelo número padrão de gateways permitidos por plano (por exemplo, Professional (5) para Enterprise (25) é um upgrade).  Ao fazer upgrade, não haverá interrupção do serviço, no entanto, um downgrade atualizará todos os gateways para que fiquem [inativos](/docs/services/SecureGateway/securegateway_faq.html#faq-states), o que exigirá a reativação dos gateways e dos destinos (até o seu novo limite de plano) antes da restauração do serviço.
+Quando você mudar os planos, seu novo plano será considerado como um upgrade ou um downgrade.  Isso é determinado pelo número padrão de gateways permitidos por plano (por exemplo, Professional (5) para Enterprise (25) é um upgrade).  Ao fazer upgrade, não haverá interrupção do serviço, no entanto, um downgrade atualizará todos os gateways para que fiquem [inativos](/docs/services/SecureGateway?topic=securegateway-sg-faq#faq-states), o que exigirá a reativação dos gateways e dos destinos (até o seu novo limite de plano) antes da restauração do serviço.
 
 <b>Nota</b>: ao executar a transição do plano Padrão para qualquer um dos novos planos, isso será considerado um downgrade.
 

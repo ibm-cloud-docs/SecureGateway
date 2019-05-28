@@ -17,12 +17,12 @@ lastupdated: "2017-04-25"
 
 ![クライアントの接続](./images/connectClient.png?raw=true "クライアントの接続")
 
-好みのクライアントを選択した後、[ここをクリックしてインストール方法を確認します](/docs/services/SecureGateway/securegateway_install.html)。
+好みのクライアントを選択した後、[ここをクリックしてインストール方法を確認します](/docs/services/SecureGateway?topic=securegateway-client-install)。
 
-クライアントをインストールした後、[自動開始](/docs/services/SecureGateway/securegateway_auto-start.html)するように、または[対話式に実行](/docs/services/SecureGateway/securegateway_interaction.html)するように、そのクライアントを構成できます。
+クライアントをインストールした後、[自動開始](/docs/services/SecureGateway?topic=securegateway-auto-start-conf)するように、または[対話式に実行](/docs/services/SecureGateway?topic=securegateway-client-interacting)するように、そのクライアントを構成できます。
 
 ![接続されたクライアント](./images/connectedClient.png?raw=true "接続されたクライアント")
 
-今すぐクライアントのアクセス制御リストを構成したい場合、[ここをクリックして詳細を確認](/docs/services/SecureGateway/securegateway_acl.html)してください。
+今すぐクライアントのアクセス制御リストを構成したい場合、[ここをクリックして詳細を確認](/docs/services/SecureGateway?topic=securegateway-acl)してください。
 
-これで接続されたクライアントができたので、[最初の宛先を作成](/docs/services/SecureGateway/securegateway_destination.html)できます。
+これで接続されたクライアントができたので、[最初の宛先を作成](/docs/services/SecureGateway?topic=securegateway-add-dest)できます。

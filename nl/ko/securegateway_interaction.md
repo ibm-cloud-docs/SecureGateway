@@ -34,8 +34,8 @@ lastupdated: "2019-02-19"
 | -l, -\-loglevel &lt;level&gt; | 로그 레벨을 ERROR, INFO, DEBUG 또는 TRACE로 변경 |
 | -p, -\-logpath &lt;file&gt; |특정 파일로 직접 로깅 |
 | -t, -\-sectoken &lt;security token&gt; | 이 게이트웨이 연결에 사용할 보안 토큰 |
-| -P, -\-port &lt;port&gt; | 실행될 UI에 대한 포트. 포트 9003으로 기본 설정됨 |
-| -w, -\-password &lt;password&gt; | UI를 보호하는 데 사용될 비밀번호임. 비밀번호 없음으로 기본 설정됨 |
+| -P, -\-port &lt;port&gt; | 실행될 UI에 대한 포트.  포트 9003으로 기본 설정됨 |
+| -w, -\-password &lt;password&gt; | UI를 보호하는 데 사용될 비밀번호임.  비밀번호 없음으로 기본 설정됨 |
 | -x, -\-proxy &lt;proxy agent&gt; | 포트 9000 연결에 사용될 프록시임 |
 | -\-noUI | UI가 자동으로 시작되지 않도록 함 |
 | -\-allow | 클라이언트에 대한 모든 연결을 허용함. ACL 파일로 대체됨(제공되는 경우) |
@@ -80,7 +80,7 @@ node lib/secgwclient.js <myGatewayID_1> <myGatewayID_2> -t none--<token for gate
 ```
 {: pre}
 
-[시작하기 - 클라이언트 추가](/docs/services/SecureGateway/securegateway_client.html)로 돌아가십시오.
+[시작하기 - 클라이언트 추가](/docs/services/SecureGateway?topic=securegateway-add-client)로 돌아가십시오.
 
 ## 대화식 구성
 {: #interactive}
@@ -121,9 +121,9 @@ node lib/secgwclient.js <myGatewayID_1> <myGatewayID_2> -t none--<token for gate
 
 <b>참고:</b> `select` 명령을 사용하여 연결이 지정된 상태에서 작업자 ID를 제공하지 않고 다른 명령을 호출하는 경우 `select`로 지정된 연결에서 해당 명령을 실행하려고 시도합니다.
 
-액세스 제어 목록을 구성하는 방법에 대한 자세한 정보를 확인하려면 [여기를 클릭](/docs/services/SecureGateway/securegateway_acl.html)하십시오.
+액세스 제어 목록을 구성하는 방법에 대한 자세한 정보를 확인하려면 [여기를 클릭](/docs/services/SecureGateway?topic=securegateway-acl)하십시오.
 
-[시작하기 - 클라이언트 추가](/docs/services/SecureGateway/securegateway_client.html)로 돌아가십시오.
+[시작하기 - 클라이언트 추가](/docs/services/SecureGateway?topic=securegateway-add-client)로 돌아가십시오.
 
 ## 클라이언트 UI
 {: #client-ui}
@@ -162,7 +162,7 @@ UI가 비밀번호로 보호된 경우 이 페이지가 표시됩니다.  비밀
 
 이 페이지에는 선택된 클라이언트(페이지의 오른쪽 상단에 표시됨)에 대한 현재 연결 정보가 표시됩니다.  게이트웨이 설명, 현재 연결 수, 역방향 대상 리스너와 같은 정보를 여기에서 전송할 수 있습니다.
 
-[시작하기 - 클라이언트 추가](/docs/services/SecureGateway/securegateway_client.html)로 돌아가십시오.
+[시작하기 - 클라이언트 추가](/docs/services/SecureGateway?topic=securegateway-add-client)로 돌아가십시오.
 
 ## 원격 클라이언트 종료
 {: #client-remote}
@@ -188,4 +188,4 @@ SG 게이트웨이는 250개의 동시 연결만 처리할 수 있습니다. 동
 - DataPower 버전 7.5.1.0 이전 버전에서는 대상 측 TLS가 포함된 전체 인증서 체인이 지원되지 않습니다.
 - DataPower 버전 7.5.1.0 이전 버전에서는 클라우드 대상이 지원되지 않습니다.
 - 로그 레벨을 TRACE 레벨로 변경할 수 없습니다.
-- DataPower의 최신 Secure Gateway Client 버전은 1.8.0fp6입니다. 자세한 정보는 [여기](/docs/services/SecureGateway/securegateway_install.html#installing-datapower)를 확인하십시오.
+- DataPower의 최신 Secure Gateway Client 버전은 1.8.2fp1입니다. 자세한 정보는 [여기](/docs/services/SecureGateway?topic=securegateway-client-install#installing-datapower)를 확인하십시오.

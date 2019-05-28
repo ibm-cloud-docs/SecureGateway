@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-08-10"
+  years: 2015, 2019
+lastupdated: "2019-04-09"
 
 ---
 {:screen: .screen}
@@ -35,7 +35,7 @@ resolvidos por um DNS.
 - Verifique os logs do cliente Secure Gateway
 - Se nenhum log de cliente foi gerado por meio da solicitação, o problema é entre o aplicativo solicitante e os servidores Secure Gateway.  Isso pode variar desde a confiabilidade de rede a protocolos de solicitação incompatíveis para um handshake de autenticação mútua TLS incorreto.
 - Se o cliente tiver gerado logs de nível de erro por meio de solicitação, o problema será entre
-o cliente SG e o recurso no local. Abaixo está uma tabela contendo erros comuns, os problemas que normalmente os causam e os potenciais métodos para solucioná-los.
+o cliente SG e o recurso no local.  Abaixo está uma tabela contendo erros comuns, os problemas que normalmente os causam e os potenciais métodos para solucioná-los.
 
 Erro | Causa típica | Métodos de resolução de problemas
 --- | --- | ---
@@ -43,7 +43,7 @@ ETIMEDOUT | O cliente é incapaz de localizar o nome do host/ip ao qual se conec
 ECONNREFUSED | O cliente resolveu o nome do host/ip ao qual se conectar, mas é incapaz de iniciar o handshake da conexão | Isso é geralmente causado por um protocolo incompatível entre o cliente SG e o recurso no local (por exemplo, o cliente está tentando uma conexão TCP com um host:porta que está esperando uma conexão TLS).  Em alguns casos, uma regra de firewall pode causar esse erro, em vez de ETIMEDOUT.
 ECONNRESET | O cliente estabeleceu uma conexão com o destino, mas algo deu errado durante o handshake (um erro de handshake TLS também pode resultar em erros diferentes) ou enquanto a solicitação estava sendo manipulada pelo recurso no local. | Os logs do recurso no local devem ser verificados para confirmar que nenhum erro causou a interrupção da conexão.  Se nada for localizado nos logs no local, a configuração de destino deverá ser examinada para assegurar que os protocolos (e certificados, se necessário) apropriados estejam sendo fornecidos ao cliente para a conexão.
 REMOTE_RST | Ocorreu um erro no lado do servidor SG. <br><br> Para o destino no local, ocorre um erro quando o
-app solicitante conecta-se ao servidor SG ou um erro de tempo limite ao receber dados do recurso no local.<br><br> Para o destino em nuvem, isso pode ser qualquer coisa, desde falha de handshake TLS até erros no recurso em nuvem | Para o destino no local, assegure que o app solicitante que usa os protocolos apropriados estabeleça a conexão com o servidor SG. Se o erro ocorrer ao receber dados do recurso no local, tente estender/desativar o tempo limite. <br><br> Para o destino em nuvem, os logs do recurso em nuvem devem ser verificados para confirmar que nenhum erro causou a interrupção da conexão.  Se nada for localizado nos logs de recurso em nuvem, a configuração de destino deverá ser examinada para assegurar que os protocolos (e certificados, se necessário) apropriados estejam sendo fornecidos ao cliente para a conexão.
+app solicitante conecta-se ao servidor SG ou um erro de tempo limite ao receber dados do recurso no local. <br><br> Para o destino em nuvem, isso pode ser qualquer coisa, desde falha de handshake TLS até erros no recurso em nuvem | Para o destino no local, assegure que o app solicitante que usa os protocolos apropriados estabeleça a conexão com o servidor SG. Se o erro ocorrer ao receber dados do recurso no local, tente estender/desativar o tempo limite. <br><br> Para o destino em nuvem, os logs do recurso em nuvem devem ser verificados para confirmar que nenhum erro causou a interrupção da conexão.  Se nada for localizado nos logs de recurso em nuvem, a configuração de destino deverá ser examinada para assegurar que os protocolos (e certificados, se necessário) apropriados estejam sendo fornecidos ao cliente para a conexão.
 
 Muitos aplicativos experimentam "interrupções" depois que um ECONNRESET ocorre na outra extremidade do túnel. Isso é esperado. O Secure
 Gateway não pode reproduzir o pacote RST na outra extremidade do túnel, uma vez que os pacotes TCP já foram confirmados para esse
@@ -280,12 +280,12 @@ Se você tiver perguntas técnicas sobre como desenvolver ou implementar um apli
 
 Se você tiver alguma pergunta sobre o serviço ou instruções sobre como começar, use o fórum do [IBM developerWorks dW Answers ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://developer.ibm.com/answers/topics/securegateway/?smartspace=bluemix) com as tags "bluemix" e "Secure Gateway".
 
-Para obter mais detalhes sobre como usar esses fóruns, verifique a [página Obtendo ajuda aqui](https://console.ng.bluemix.net/docs/support/index.html#getting-help).
+Para obter mais detalhes sobre como usar esses fóruns, verifique a [página Obtendo ajuda aqui](https://cloud.ibm.com/docs/get-support?topic=get-support-getting-customer-support#using-avatar).
 
 Para obter informações sobre como abrir um chamado de suporte IBM
 ou sobre os níveis de suporte e severidades de chamado, consulte
 [Entrando
-em contato com o suporte](https://console.ng.bluemix.net/docs/support/index.html#contacting-support).
+em contato com o suporte](https://cloud.ibm.com/docs/get-support?topic=get-support-support-case-severity#support-case-severity).
 
 Forneça o máximo possível das informações a seguir ao enviar um chamado:
 

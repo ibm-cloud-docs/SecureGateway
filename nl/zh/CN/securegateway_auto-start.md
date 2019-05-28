@@ -137,7 +137,7 @@ vi /etc/ibm/sgenvironment.conf
 
 执行了这些步骤后，就可以使用 YasT 和系统 V 命令来启动/停止守护程序。
 
-返回到[入门 - 添加客户机](/docs/services/SecureGateway/securegateway_client.html)。
+返回到[入门 - 添加客户机](/docs/services/SecureGateway?topic=securegateway-add-client)。
 
 ## Windows
 {: #auto-start-windows}
@@ -179,4 +179,4 @@ Windows 服务的应用程序日志将存储在以下位置：
 
  这些日志每日滚动为新文件。
 
-返回到[入门 - 添加客户机](/docs/services/SecureGateway/securegateway_client.html)。
+返回到[入门 - 添加客户机](/docs/services/SecureGateway?topic=securegateway-add-client)。

@@ -31,7 +31,7 @@ Per consentire al client Secure Gateway di autenticare la risorsa a cui si sta c
 
 ### Client Cert and Key
 {: #tls-ma-client-cert-and-key}
-Se devo specificare il modo in cui il client Secure Gateway si identificherà presso la mia risorsa, posso caricare un certificato e una chiave qui per l'utilizzo da parte del client.  Poiché il Client e la risorsa sono in esecuzione sulla stessa macchina, posso lasciarli vuoti e lasciare che i server Secure Gateway generino automaticamente una coppia per me.  Se la mia risorsa si trovasse su un host separato, dovrei [generare una coppia certificato/chiave da caricare](/docs/services/SecureGateway/securegateway_keygen.html).
+Se devo specificare il modo in cui il client Secure Gateway si identificherà presso la mia risorsa, posso caricare un certificato e una chiave qui per l'utilizzo da parte del client.  Poiché il Client e la risorsa sono in esecuzione sulla stessa macchina, posso lasciarli vuoti e lasciare che i server Secure Gateway generino automaticamente una coppia per me.  Se la mia risorsa si trovasse su un host separato, dovrei [generare una coppia certificato/chiave da caricare](/docs/services/SecureGateway?topic=securegateway-cert-key-management).
 
 ![Autenticazione reciproca TLS locale](./images/localTLSma.png?raw=true "Autenticazione reciproca TLS locale")
 

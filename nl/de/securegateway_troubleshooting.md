@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-08-10"
+  years: 2015, 2019
+lastupdated: "2019-04-09"
 
 ---
 {:screen: .screen}
@@ -25,14 +25,14 @@ lastupdated: "2018-08-10"
 - Fehlgeschlagene Anforderung von anfordernder Anwendung starten
 - Protokolle des Secure Gateway-Clients überprüfen
 - Falls für die Anforderung keine Clientprotokolle generiert wurden, tritt das Problem zwischen der anfordernden Anwendung und den Secure Gateway-Servern auf.  Hierbei kann es sich um ein Problem bei der Netzzuverlässigkeit, ein nicht übereinstimmendes Anforderungsprotokoll bis hin zu einem falschen TLS-Handshake bei der gegenseitigen Authentifizierung handeln.
-- Falls vom Client Protokoll auf Fehlerebene für die Anforderung generiert wurden, tritt das Problem zwischen dem SG-Client und der lokalen Ressource auf. In der unten folgenden Tabelle werden gängige Fehler, die Ursachen für diese Fehler und die Möglichkeiten zu ihrer Behebung aufgeführt.
+- Falls vom Client Protokoll auf Fehlerebene für die Anforderung generiert wurden, tritt das Problem zwischen dem SG-Client und der lokalen Ressource auf.  In der unten folgenden Tabelle werden gängige Fehler, die Ursachen für diese Fehler und die Möglichkeiten zu ihrer Behebung aufgeführt.
 
 Fehler | Typische Ursache | Verfahren zur Fehlerbehebung
 --- | --- | ---
 ETIMEDOUT | Der Client kann den Hostnamen bzw. die IP-Adresse zum Aufbauen einer Verbindung aufgrund von Netzeinschränkungen nicht finden. | Versuchen Sie, den Hostnamen bzw. die IP-Adresse des Ziels von dem Host, auf dem der Client ausgeführt wird, mit Ping zu überprüfen, um die Netzkonnektivität sicherzustellen.  Wenn die Docker-Version des Clients ausgeführt wird, kann das Problem durch die Überbrückung des Containers mit dem Hostbetriebssystem unter Verwendung von `--net=host` behoben werden.
 ECONNREFUSED | Der Client hat den Hostnamen bzw. die IP-Adresse zum Aufbauen der Verbindung aufgelöst, aber der Verbindungshandshake kann nicht gestartet werden. | Dies wird in der Regel durch nicht übereinstimmende Protokolle des SG-Clients und der lokalen Ressource verursacht (Beispiel: der Client versucht, eine TCP-Verbindung zu einem Host/Port herzustellen, von dem eine TLS-Verbindung erwartet wird).  In manchen Fällen kann eine Firewallregel diesen Fehler anstatt ETIMEDOUT verursachen.
 ECONNRESET | Vom Client wurde eine Verbindung zum Ziel hergestellt, aber während des Handshakes (ein TLS-Handshakefehler kann auch zu unterschiedlichen Fehlern führen) oder während der Verarbeitung der Anforderung durch die lokale Ressource ist ein Fehler aufgetreten. | Die Protokolle der lokalen Ressource müssen überprüft werden, um sicherzustellen, dass die Unterbrechung der Verbindung nicht durch einen Fehler verursacht wurde.  Falls in den lokalen Protokollen nichts gefunden wird, muss durch eine Überprüfung der Zielkonfiguration sichergestellt werden, dass die entsprechenden Protokolle (und Zertifikate, sofern erforderlich) dem Client für die Verbindung zur Verfügung gestellt werden.
-REMOTE_RST | Auf einem Secure Gateway-Server ist ein Fehler aufgetreten. <br><br> Bei einem lokalen Ziel kann es sich um einen Fehler handeln, der auftritt, wenn die anfordernde App eine Verbindung zum SG-Server aufbaut oder wenn eine Zeitüberschreitung beim Empfangen von Daten von einer lokalen Ressource auftritt.<br><br> Bei einem Ziel in der Cloud kann es sich um Fehler im Zusammenhang mit einem TLS-Handshake bis zu Fehlern in der Cloudressource handeln. | Stellen Sie bei einem lokalen Ziel sicher, dass die anfordernde App mithilfe der passenden Protokolle eine Verbindung zum SG-Server herstellt; falls der Fehler beim Empfangen von Daten von einer lokalen Ressource auftritt, versuchen Sie, das Zeitlimit zu erweitern bzw. zu inaktivieren. <br><br> Bei einem Ziel in der Cloud müssen die Protokolle der Cloudressource überprüft werden, um sicherzustellen, dass die Unterbrechung der Verbindung nicht durch einen Fehler verursacht wurde.  Falls in den Protokollen der Cloudressource nichts gefunden wird, muss durch eine Überprüfung der Zielkonfiguration sichergestellt werden, dass die entsprechenden Protokolle (und Zertifikate, sofern erforderlich) dem Client für die Verbindung zur Verfügung gestellt werden.
+REMOTE_RST | Auf einem Secure Gateway-Server ist ein Fehler aufgetreten. <br><br> Bei einem lokalen Ziel kann es sich um einen Fehler handeln, der auftritt, wenn die anfordernde App eine Verbindung zum SG-Server aufbaut oder wenn eine Zeitüberschreitung beim Empfangen von Daten von einer lokalen Ressource auftritt. <br><br> Bei einem Ziel in der Cloud kann es sich um Fehler im Zusammenhang mit einem TLS-Handshake bis zu Fehlern in der Cloudressource handeln. | Stellen Sie bei einem lokalen Ziel sicher, dass die anfordernde App mithilfe der passenden Protokolle eine Verbindung zum SG-Server herstellt; falls der Fehler beim Empfangen von Daten von einer lokalen Ressource auftritt, versuchen Sie, das Zeitlimit zu erweitern bzw. zu inaktivieren. <br><br> Bei einem Ziel in der Cloud müssen die Protokolle der Cloudressource überprüft werden, um sicherzustellen, dass die Unterbrechung der Verbindung nicht durch einen Fehler verursacht wurde.  Falls in den Protokollen der Cloudressource nichts gefunden wird, muss durch eine Überprüfung der Zielkonfiguration sichergestellt werden, dass die entsprechenden Protokolle (und Zertifikate, sofern erforderlich) dem Client für die Verbindung zur Verfügung gestellt werden.
 
 Viele Anwendungen sind blockiert, nachdem der Fehler ECONNRESET am anderen Ende des Tunnels aufgetreten ist. Hierbei handelt es sich um ein erwartetes Verhalten. Von Secure Gateway kann das RST-Paket am anderen Ende des Tunnels nicht wiederholt werden, da die TCP-Pakete für diese Seite des Tunnels bereits bestätigt wurden. Die einzige Methode zum Beenden der Blockierung ist die Definition von
 Zeitlimitwerten für die Anwendung, die nie eine Bestätigungsantwort erhält.
@@ -257,9 +257,9 @@ Wenn Sie technische Fragen zum Entwickeln oder Bereitstellen einer Anwendung mit
 
 Wenn Sie Fragen zum Service oder zu den Anweisungen für den Einstieg haben, verwenden Sie das Forum [IBM developerWorks dW Answers ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://developer.ibm.com/answers/topics/securegateway/?smartspace=bluemix) und die Markierungen "bluemix" und "Secure Gateway".
 
-Weitere Details zur Verwendung dieser Foren finden Sie unter [Hilfeseite aufrufen](https://console.ng.bluemix.net/docs/support/index.html#getting-help).
+Weitere Details zur Verwendung dieser Foren finden Sie unter [Hilfeseite aufrufen](https://cloud.ibm.com/docs/get-support?topic=get-support-getting-customer-support#using-avatar).
 
-Informationen zum Öffnen eines IBM Support-Tickets oder zu Supportebenen und Dringlichkeit für Tickets finden Sie in [Unterstützung anfordern](https://console.ng.bluemix.net/docs/support/index.html#contacting-support).
+Informationen zum Öffnen eines IBM Support-Tickets oder zu Supportebenen und Dringlichkeit für Tickets finden Sie in [Unterstützung anfordern](https://cloud.ibm.com/docs/get-support?topic=get-support-support-case-severity#support-case-severity).
 
 Geben Sie beim Erstellen eines Tickets möglichst viele der folgenden Informationen an:
 

@@ -27,4 +27,4 @@ lastupdated: "2017-04-10"
 
 ![새 게이트웨이](./images/newGateway.png?raw=true "새 게이트웨이")
 
-새로 작성된 게이트웨이가 있기 때문에 [첫 번째 클라이언트에 연결](/docs/services/SecureGateway/securegateway_client.html)할 수 있습니다.
+새로 작성된 게이트웨이가 있기 때문에 [첫 번째 클라이언트에 연결](/docs/services/SecureGateway?topic=securegateway-add-client)할 수 있습니다.

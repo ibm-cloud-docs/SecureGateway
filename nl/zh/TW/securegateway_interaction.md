@@ -80,7 +80,7 @@ node lib/secgwclient.js <myGatewayID_1> <myGatewayID_2> -t none--<token for gate
 ```
 {: pre}
 
-回到[開始使用 - 新增用戶端](/docs/services/SecureGateway/securegateway_client.html)。
+回到[開始使用 - 新增用戶端](/docs/services/SecureGateway?topic=securegateway-add-client)。
 
 ## 互動式配置
 {: #interactive}
@@ -118,9 +118,9 @@ node lib/secgwclient.js <myGatewayID_1> <myGatewayID_2> -t none--<token for gate
 
 <b>附註：</b>如果已使用 `select` 指令指定連線，並在未提供工作者節點 ID 的情況下呼叫另一個指令，則會嘗試對 `select` 所指定的連線執行指令。
 
-如需配置「存取控制清單」的詳細資料，[請按一下這裡](/docs/services/SecureGateway/securegateway_acl.html)。
+如需配置「存取控制清單」的詳細資料，[請按一下這裡](/docs/services/SecureGateway?topic=securegateway-acl)。
 
-回到[開始使用 - 新增用戶端](/docs/services/SecureGateway/securegateway_client.html)。
+回到[開始使用 - 新增用戶端](/docs/services/SecureGateway?topic=securegateway-add-client)。
 
 ## 用戶端使用者介面
 {: #client-ui}
@@ -159,7 +159,7 @@ node lib/secgwclient.js <myGatewayID_1> <myGatewayID_2> -t none--<token for gate
 
 此頁面將顯示選取之用戶端（顯示在頁面右上方）的現行連線資訊。在這裡可以看到閘道說明、現行連線數及反向目的地接聽器之類的資訊。
 
-回到[開始使用 - 新增用戶端](/docs/services/SecureGateway/securegateway_client.html)。
+回到[開始使用 - 新增用戶端](/docs/services/SecureGateway?topic=securegateway-add-client)。
 
 ## 遠端用戶端終止
 {: #client-remote}
@@ -185,4 +185,4 @@ SG 閘道只能處理 250 個並行連線。如果並行要求數目超出限制
 - DataPower 7.5.1.0 版之前不支援具有目的地端 TLS 的完整憑證鏈
 - DataPower 7.5.1.0 版之前不支援雲端目的地
 - 記載層次無法變更為 TRACE 層次
-- DataPower 中最新的 Secure Gateway 用戶端版本是 1.8.0fp6，如需相關資訊，請檢查[這裡](/docs/services/SecureGateway/securegateway_install.html#installing-datapower)。
+- DataPower 中最新的 Secure Gateway 用戶端版本是 1.8.2fp1，如需相關資訊，請檢查[這裡](/docs/services/SecureGateway?topic=securegateway-client-install#installing-datapower)。

@@ -31,7 +31,7 @@ lastupdated: "2017-04-10"
 
 ### 用戶端憑證及金鑰
 {: #tls-ma-client-cert-and-key}
-如果我需要指定「Secure Gateway 用戶端」如何對我的資源識別它自己，則可以在這裡上傳憑證及金鑰，以供用戶端使用。因為用戶端及資源都是在相同的機器上執行，所以我可以將這些項目保留為空白，並讓 Secure Gateway 伺服器自動為我產生配對。如果我的資源以前位於個別主機上，則我需要[產生要上傳的憑證/金鑰配對](/docs/services/SecureGateway/securegateway_keygen.html)。
+如果我需要指定「Secure Gateway 用戶端」如何對我的資源識別它自己，則可以在這裡上傳憑證及金鑰，以供用戶端使用。因為用戶端及資源都是在相同的機器上執行，所以我可以將這些項目保留為空白，並讓 Secure Gateway 伺服器自動為我產生配對。如果我的資源以前位於個別主機上，則我需要[產生要上傳的憑證/金鑰配對](/docs/services/SecureGateway?topic=securegateway-cert-key-management)。
 
 ![本端 TLS 交互鑑別](./images/localTLSma.png?raw=true "本端 TLS 交互鑑別")
 

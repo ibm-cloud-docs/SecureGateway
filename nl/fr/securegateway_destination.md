@@ -96,18 +96,18 @@ Cette option est disponible lorsque vous sélectionnez TLS ou l'authentification
 
 ### Clé et certificat client
 {: #dest-client-cert-key}
-L'endroit où s'affichent les zones de clé et de certificat client dépend du [type de destination](#dest-types) que vous avez choisi.  Dans les deux cas, les fichiers fournis ici seront utilisés par le client SG pour s'identifier pour des connexions TLS.  Si aucun fichier n'est téléchargé, les serveurs {{site.data.keyword.SecureGateway}} génèrent automatiquement une paire autosignée avec un nom usuel de `système hôte local`.  Pour les instructions relatives à la génération d'une paire certificat-clé, [cliquez ici](/docs/services/SecureGateway/securegateway_keygen.html).
+L'endroit où s'affichent les zones de clé et de certificat client dépend du [type de destination](#dest-types) que vous avez choisi.  Dans les deux cas, les fichiers fournis ici seront utilisés par le client SG pour s'identifier pour des connexions TLS.  Si aucun fichier n'est téléchargé, les serveurs {{site.data.keyword.SecureGateway}} génèrent automatiquement une paire autosignée avec un nom usuel de `système hôte local`.  Pour les instructions relatives à la génération d'une paire certificat-clé, [cliquez ici](/docs/services/SecureGateway?topic=securegateway-cert-key-management).
 
-Pour une destination sur site, l'option s'affiche sous [Authentification des ressources](#dest-resource-auth) si `Authentification des ressources : authentification mutuelle` a été sélectionnée. Dans ce cas, le client SG utilisera cette paire certificat-clé pour sa connexion sortante vers la ressource définie. Pour ce faire, la ressource sur site doit ajouter ce certificat à son autorité de certification pour pouvoir communiquer avec le client SG.
+Pour une destination sur site, l'option s'affiche sous [Authentification des ressources](#dest-resource-auth) si `Authentification des ressources : authentification mutuelle` a été sélectionnée.  Dans ce cas, le client SG utilisera cette paire certificat-clé pour sa connexion sortante vers la ressource définie. Pour ce faire, la ressource sur site doit ajouter ce certificat à son autorité de certification pour pouvoir communiquer avec le client SG.
 
-Pour une destination sur le cloud, l'option s'affiche sous [Authentification des utilisateurs](#dest-user-auth) si vous avez sélectionné un protocole TLS. Dans ce cas, le client SG utilisera cette paire certificat-clé pour créer des programmes d'écoute TLS et l'application sur site devra ajouter ce certificat à son autorité de certification pour pouvoir communiquer avec le client SG.
+Pour une destination sur le cloud, l'option s'affiche sous [Authentification des utilisateurs](#dest-user-auth) si vous avez sélectionné un protocole TLS.  Dans ce cas, le client SG utilisera cette paire certificat-clé pour créer des programmes d'écoute TLS et l'application sur site devra ajouter ce certificat à son autorité de certification pour pouvoir communiquer avec le client SG.
 
 ## Configuration de la sécurité du réseau
 {: #dest-network-security}
 Pour que seules certaines adresses IP puissent se connecter à vos ports et hôtes sur le cloud, vous pouvez choisir d'appliquer des règles de table d'IP (iptables) à votre destination sur site.
 ![Panneau Sécurité du réseau](./images/networkSecurity.png?raw=true "Panneau Sécurité du réseau")
 
-Pour appliquer des règles de table d'IP, cochez la case <b>Restreindre l'accès cloud à cette destination avec des règles iptables</b> du panneau Sécurité du réseau. Une fois la case cochée, vous pouvez commencer à ajouter des adresses IP qui seront autorisées à se connecter.  Si aucune adresse IP n'est fournie, toutes les connexions à ces ports et hôtes sur le cloud seront rejetées tant que la case <b>Restreindre l'accès cloud</b> reste cochée.
+Pour appliquer des règles de table d'IP, cochez la case <b>Restreindre l'accès cloud à cette destination avec des règles iptables</b> du panneau Sécurité du réseau.  Une fois la case cochée, vous pouvez commencer à ajouter des adresses IP qui seront autorisées à se connecter.  Si aucune adresse IP n'est fournie, toutes les connexions à ces ports et hôtes sur le cloud seront rejetées tant que la case <b>Restreindre l'accès cloud</b> reste cochée.
 
 <b>Remarque</b> : Les adresses IP ou les ports fournis doivent correspondre à l'adresse IP externe que les serveurs {{site.data.keyword.SecureGateway}} verront, et non à l'adresse IP locale de la machine émettrice de la demande.
 
@@ -124,7 +124,7 @@ Adresses IP | Ports | Résultat
 1.2.3.4 | | Seule l'adresse IP 1.2.3.4 de n'importe quel port sera autorisée.
 | 5000 | Toutes les adresses IP du port 5000 seront autorisées.
 
-Des règles spécifiques peuvent également être associées à une application.  Pour plus d'informations sur la création de règles associées, voir la section consacrée à la [création de règles de table d'IP pour votre application](/docs/services/SecureGateway/iptables.html).
+Des règles spécifiques peuvent également être associées à une application.  Pour plus d'informations sur la création de règles associées, voir la section consacrée à la [création de règles de table d'IP pour votre application](/docs/services/SecureGateway?topic=securegateway-iptables-rules).
 
 ## Configuration d'options de proxy
 {: #dest-proxy}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-02-25"
+lastupdated: "2019-05-07"
 
 ---
 {:screen: .screen}
@@ -45,7 +45,7 @@ En général, elle contient deux paramètres, votre ID de passerelle {{site.data
 
 Le client {{site.data.keyword.SecureGateway}} prend uniquement en charge les commandes `pull` et `run` pour la manipulation du conteneur.
 
-Retour à [Initiation - Ajout d'un client](/docs/services/SecureGateway/securegateway_client.html).
+Retour à [Initiation - Ajout d'un client](/docs/services/SecureGateway?topic=securegateway-add-client).
 
 ## Mac OS X
 {: #installing-mac}
@@ -69,7 +69,7 @@ Selon la configuration de sécurité de votre système, vous devez disposer des 
 
 Pour démarrer le client, exécutez le fichier `secgw.command` qui se trouve dans le répertoire d'installation par défaut : `/Applications/ibm/`.
 
-Retour à [Initiation - Ajout d'un client](/docs/services/SecureGateway/securegateway_client.html).
+Retour à [Initiation - Ajout d'un client](/docs/services/SecureGateway?topic=securegateway-add-client).
 
 ## Linux
 {: #installing-linux}
@@ -185,7 +185,7 @@ License: http://www.ibm.com/software/sla/sladb.nsf/lilookup/986C7686F22D4D358525
 
    Le programme d'installation du client démarre et installe le client ; il crée un fichier sgenvironment.conf dans /etc/ibm.
 
-2. Facultatif : si vous voulez utiliser le processus upstart du système, vous devez éditer ce fichier et fournir les informations suivantes pour que le client démarre correctement. Pour plus d'informations sur l'édition de ce fichier de configuration, voir [Utilisation d'upstart](/docs/services/SecureGateway/securegateway_auto-start.html#auto-start-linux).
+2. Facultatif : si vous voulez utiliser le processus upstart du système, vous devez éditer ce fichier et fournir les informations suivantes pour que le client démarre correctement. Pour plus d'informations sur l'édition de ce fichier de configuration, voir [Utilisation d'upstart](/docs/services/SecureGateway?topic=securegateway-auto-start-conf#auto-start-linux).
 
 3. Si vous avez démarré le client à l'aide de upstart, consultez le fichier journal pour vous assurer qu'il fonctionne correctement.
 
@@ -229,7 +229,7 @@ node lib/secgwclient.js <ID passerelle> -t <jeton de sécurité>
 
 En général, elle contient deux paramètres, un ID de passerelle {{site.data.keyword.SecureGateway}} et le jeton de sécurité de la passerelle, tous deux disponibles via le tableau de bord {{site.data.keyword.SecureGateway}}.
 
-Retour à [Initiation - Ajout d'un client](/docs/services/SecureGateway/securegateway_client.html).
+Retour à [Initiation - Ajout d'un client](/docs/services/SecureGateway?topic=securegateway-add-client).
 
 ## Windows
 {: #installing-windows}
@@ -271,16 +271,16 @@ secgw.cmd
 ```
 {: codeblock}
 
-Vous pouvez également accéder à `<Installation_directory>\ibm\securegateway\client`, puis cliquer deux fois sur `secgw.cmd`.
+Sinon, accédez à `<Installation_directory>\ibm\securegateway\client` et cliquez deux fois sur `secgw.cmd`.
 
-<b>Remarque :</b> vous pouvez choisir d'utiliser les configurations enregistrées dans le fichier `<Installation_directory>\ibm\securegateway\client\securegw_service.config` ou fournir les détails interactivement.
+<b>Remarque :</b> vous pouvez choisir d'utiliser les configurations stockées dans le fichier `<Installation_directory>\ibm\securegateway\client\securegw_service.config` ou de fournir les détails de façon interactive. 
 
-Retour à [Initiation - Ajout d'un client](/docs/services/SecureGateway/securegateway_client.html).
+Retour à [Initiation - Ajout d'un client](/docs/services/SecureGateway?topic=securegateway-add-client).
 
 ## DataPower
 {: #installing-datapower}
 
-DataPower dispose d'une version intégrée du client {{site.data.keyword.SecureGateway}}.  La version du client {{site.data.keyword.SecureGateway}} dont vous disposez dépend de la version de DataPower.  Tenez compte des éventuelles [limitations du client DataPower](/docs/services/SecureGateway/securegateway_interaction.html#limits-datapower) applicables. L'utilisation de l'ancien client Secure Gateway peut engendrer des erreurs inattendues.
+DataPower dispose d'une version intégrée du client {{site.data.keyword.SecureGateway}}.  La version du client {{site.data.keyword.SecureGateway}} dont vous disposez dépend de la version de DataPower.  Tenez compte des éventuelles [limitations du client DataPower](/docs/services/SecureGateway?topic=securegateway-client-interacting#limits-datapower) applicables. L'utilisation de l'ancien client Secure Gateway peut engendrer des erreurs inattendues.
 
 | Version de DataPower | Version du client {{site.data.keyword.SecureGateway}}  |
 | -- | --  |
@@ -288,7 +288,9 @@ DataPower dispose d'une version intégrée du client {{site.data.keyword.SecureG
 | 7.5.1.0, 7.7.0 | 1.4.2  |
 | 7.5.2.4 | 1.6.1  |
 | 7.5.2.6, 7.6.0.0 | 1.7.0  |
-| 7.5.2.14, 7.6.0.7, 7.7.1.0 |  1.8.0fp6  |
+| 7.5.2.14, 7.6.0.7, 7.7.1.0, 2018.4.1.0 |  1.8.0fp6  |
+| 2018.4.1.4 | 1.8.2  |
+| 7.6.0.15, 2018.4.1.6 | 1.8.2fp1 |
 
 ### Démarrage d'une session client
 {: #datapower-run}
@@ -298,4 +300,4 @@ DataPower dispose d'une version intégrée du client {{site.data.keyword.SecureG
 3. Cliquez sur `Add` pour configurer une nouvelle connexion client.
 4. Entrez un nom, l'ID de passerelle et le jeton de sécurité (le cas échéant) et appliquez les modifications.
 
-Retour à [Initiation - Ajout d'un client](/docs/services/SecureGateway/securegateway_client.html).
+Retour à [Initiation - Ajout d'un client](/docs/services/SecureGateway?topic=securegateway-add-client).

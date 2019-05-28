@@ -19,7 +19,7 @@ Dans le tableau de bord Secure Gateway, cliquez sur le bouton Ajouter une passer
 
 La seule entrée obligatoire sur ce panneau est le nom de votre passerelle.  Les cases `Exiger un jeton de sécurité` et `Expiration du jeton` sont cochées par défaut.
 
-Si vous exigez un jeton de sécurité pour la connexion des clients, chaque fois que vous démarrez un client Secure Gateway, vous devrez fournir à la fois l'ID de passerelle et le jeton de sécurité.  Si vous décochez la case `Exiger un jeton de sécurité`, il vous suffira de fournir l'ID de passerelle du client lorsque vous établissez la connexion à la passerelle. 
+Si vous exigez un jeton de sécurité pour la connexion des clients, chaque fois que vous démarrez un client Secure Gateway, vous devrez fournir à la fois l'ID de passerelle et le jeton de sécurité.  Si vous décochez la case `Exiger un jeton de sécurité`, il vous suffira de fournir l'ID de passerelle du client lorsque vous établissez la connexion à la passerelle.
 
 La date d'expiration du jeton de sécurité est fixée par défaut à 90 jours après sa date de création.  Pour modifier la date d'expiration, laissez la case `Expiration du jeton` cochée et indiquez dans la zone de texte le nombre de jours qui vous convient avant expiration du jeton (1 jour minimum, 365 jours maximum).  Pour créer un jeton sans date d'expiration, désactivez la case `Expiration du jeton`.  
 
@@ -27,4 +27,4 @@ Pour finaliser la création de votre passerelle, cliquez sur Ajouter une passere
 
 ![Nouvelle passerelle](./images/newGateway.png?raw=true "Nouvelle passerelle")
 
-Maintenant que votre nouvelle passerelle a été créée, vous pouvez [connecter votre premier client](/docs/services/SecureGateway/securegateway_client.html).
+Maintenant que votre nouvelle passerelle a été créée, vous pouvez [connecter votre premier client](/docs/services/SecureGateway?topic=securegateway-add-client).
