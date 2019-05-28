@@ -29,4 +29,4 @@ The client port that is provided for a destination must be unique within the ass
 
 ## High Availability
 {: #about-ha}
-To achieve high availability, create multiple client connections to the same gateway ID.  This can be accomplished by connecting multiple single-gateway clients to the same gateway ID and/or by issuing multiple connections on a single multi-gateway client to the same gateway ID.  Connections will be distributed between all connected clients in a round-robin fashion.
+To achieve high availability, create multiple client connections to the same gateway ID.  This can be accomplished by connecting multiple single-gateway clients to the same gateway ID and/or by issuing multiple connections on a single multi-gateway client to the same gateway ID. On-premises destination connections will be distributed between all connected clients in a round-robin fashion.
