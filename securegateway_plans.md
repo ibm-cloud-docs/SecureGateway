@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-08-10"
+  years: 2015, 2019
+lastupdated: "2018-05-28"
 
 ---
 
@@ -12,6 +12,8 @@ lastupdated: "2018-08-10"
 With the release of v1.7.0, a new tiered plan pricing model was introduced that allows {{site.data.keyword.SecureGateway}} to scale to the needs of any company.  The table below provides the limitations associated with each of the publicly available plans:
 
 ![Tiered Plan Model](./images/planDetails.png?raw=true "Tiered Plan Model")
+
+- Dedicated IP: Dedicated hostname and static IP address on the cloud side for connecting to on-premises destinations
 
 ## Changing Plans
 {: #changing-plans}
