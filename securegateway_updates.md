@@ -1,13 +1,93 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-04-25"
+  years: 2015, 2019
+lastupdated: "2019-05-28"
 
 ---
 
 # {{site.data.keyword.SecureGateway}} Change Log
 {: #secure-gateway-change-log}
+
+## v1.8.2 Fixpack 2
+{: #v182fp2}
+
+### Fixes
+{: #v182fp2-fixes}
+
+- Resolves SG client UI vulnerability
+- Resolves resource auth vulnerability
+- Enhance the handling when both side close the connection in the same time
+- Resolves collapsed resource when the on-prem destination connection close too fast
+
+## v1.8.2 Fixpack 1
+{: #v182fp1}
+
+### Fixes
+{: #v182fp1-fixes}
+
+- Upgrade Node.js to 8.15.1
+- Resolves undefined environment info in Deutsch
+- Resolves the incorrect concurrent connection limit for reverse connections
+- Resolves collapsed connections when both side end the connection in the same time
+
+## v1.8.2
+{: #v182}
+
+### Fixes
+{: #v182-fixes}
+
+- Upgrade Node.js to 8.15.0
+- Node modules vulnerabilities fix
+
+## v1.8.1
+{: #v181}
+
+### Fixes
+{: #v181-fixes}
+
+- Resolves regular connections hanging issue when closing
+- Uew new path for gateway authentication ([Click here for more info](/docs/services/SecureGateway?topic=securegateway-client-requirements#network-requirements))
+- Use new mechanism for log generating (Log translation enhance)
+
+## v1.8.0 Fixpack 9
+{: #v180fp9}
+
+### Fixes
+{: #v180fp9-fixes}
+
+- Separate the ConnIndicies for reverse and regular destination
+- Accessibility enhancements on client UI.
+- Resolves unexpected behaviour when set UI password on command line.
+- Resolves unexpected crash when UI closed
+
+## v1.8.0 Fixpack 8
+{: #v180fp8}
+
+### Fixes
+{: #v180fp8-fixes}
+
+- Enhance the logs
+- Add the data size checking when transmitted data
+
+## v1.8.0 Fixpack 7
+{: #v180fp7}
+
+### Fixes
+{: #v180fp7-fixes}
+
+- Added the TRACE level log for transmitted data
+- Add Error level log when reverse dest hit concurrent limit
+- Resolves the undefined Secure Gateway Client fixpack info in gateway panel
+
+## v1.8.0 Fixpack 6
+{: #v180fp6}
+
+### Fixes
+{: #v180fp6-fixes}
+
+- Enhance the logs
+- Resolves unexpected behaviour in docker version
 
 ## v1.7.0 Fixpack 1
 {: #v171fp1}
