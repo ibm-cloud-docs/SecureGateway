@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-04-10"
+  years: 2015, 2019
+lastupdated: "2019-06-17"
 
 ---
 
@@ -28,3 +28,16 @@ To finish the creation of your gateway, click Add Gateway.  Once the gateway is 
 ![New Gateway](./images/newGateway.png?raw=true "New Gateway")
 
 Now that you have your newly created gateway, you can [connect your first client](/docs/services/SecureGateway?topic=securegateway-add-client).
+
+## Regenerate security token
+{: #regen-sectoken}
+
+By clicking the Settings button on any of the gateway tiles, you can edit the configuration of the gateway and check the `Current Token Expiring` on the panel.
+
+![Guided Setup](./images/editGateway.png?raw=true "Edit Gateway")
+
+When the security token is expired, it will not affect the connecting Secure Gateway Client, since the security token is only used when start/restart a Secure Gateway Client.
+
+There is no way of extending the expiration of the existing security token, when the security token is expired, you will need to regenerate it, once the Secure Gateway Client restart, it will need to use the latest security token.
+
+To regenerate the security token, you will need to click the `Regenerate Token` link. The `Token Expiration` will only take effect when you click the `Regenerate Token` link, but not the `Save` button. Please check the `Current Token Expiring` after you regenerate the security token.

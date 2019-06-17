@@ -33,40 +33,31 @@ The Secure Gateway Client is supported in the following environments:
 ## Network Requirements
 {: #network-requirements}
 
-The Secure Gateway Client uses outbound port 443 and port 9000 to connect to npm registry and the {{site.data.keyword.Bluemix}} environment :
+The Secure Gateway Client uses outbound port 443 and port 9000 to connect to npm registry and the {{site.data.keyword.Bluemix}} environment:
+
 - Port `443` for npm installation
   - During the installation, the installer will connect to npm registry and run `npm install` to install the dependencies required by Secure Gateway Client. Before the installation, please make sure the machine which the client will be installed on can connect to a npm registry website. npm is configured to use npm, Inc.'s public registry at `https://registry.npmjs.org` by default. <br><br>
-If there's npm Enterprise server in your environment, please whitelist all of the dependencies of Secure Gateway Client on the npm Enterprise server. For the list of dependencies, please refer to `<Installation_directory>\ibm\securegateway\client\package.json` file.<br><br>
+If there's npm Enterprise server in your environment, please whitelist all of the dependencies of Secure Gateway Client on the npm Enterprise server. For the list of dependencies, please refer to `<Installation_directory>\ibm\securegateway\client\package.json` file.
 
-- Port `443` for gateway authentication
+- Port `9000` for WSS connection between Secure Gateway Client and Secure Gateway Server
+  - The node of the SG gateway, which can be found in the configuration of the gateway. Since each gateway will not be on the same node, please confirm the hostname of the node every time you create the gateway
+
+- Port `443` for gateway authentication when Secure Gateway Client start up
   - For SG client `v180fp9 and former`
+    - US South: sgmanager.ng.bluemix.net
+    - US East: sgmanager.us-east.bluemix.net
+    - United Kingdom: sgmanager.eu-gb.bluemix.net
+    - Germany: sgmanager.eu-de.bluemix.net
+    - Sydney: sgmanager.au-syd.bluemix.net
+  - For SG client `v181 and later` <br>
+    - US South: sgmanager.us-south.securegateway.cloud.ibm.com
+    - US East: sgmanager.us-east.securegateway.cloud.ibm.com
+    - United Kingdom: sgmanager.eu-gb.securegateway.cloud.ibm.com
+    - Germany: sgmanager.eu-de.securegateway.cloud.ibm.com
+    - Sydney: sgmanager.au-syd.securegateway.cloud.ibm.com
 
 
-  | Region  | Host  |
-  | --  | --  |
-  | US South  | sgmanager.ng.bluemix.net  |
-  | US East  | sgmanager.us-east.bluemix.net  |
-  | United Kingdom  | sgmanager.eu-gb.bluemix.net  |
-  | Germany  | sgmanager.eu-de.bluemix.net  |
-  | Sydney  | sgmanager.au-syd.bluemix.net  |
-
-  - For SG client `v181 and later`
-  
-  
-  | Region  | Host  |
-  | --  | --  |
-  | US South  | sgmanager.us-south.securegateway.cloud.ibm.com  |
-  | US East  | sgmanager.us-east.securegateway.cloud.ibm.com  |
-  | United Kingdom  | sgmanager.eu-gb.securegateway.cloud.ibm.com  |
-  | Germany  | sgmanager.eu-de.securegateway.cloud.ibm.com  |
-  | Sydney  | sgmanager.au-syd.securegateway.cloud.ibm.com  |
-
-- Port `9000`
-
-  The node of the SG gateway, which can be found in the configuration of the gateway. Since each gateway will not be on the same node, please confirm the hostname of the node every time you create the gateway
-
-
-Ensure you check or modify additional firewall and IP Table rules that might apply. However, we do not recommend setting rules by IP, rules should be set specific to host name and port as the IPs for gateway authentication and SG gateway are controlled by Bluemix and are subject to change. If your network administrators require current IPs for specific hostname, please [contact support to request these for your environment](/docs/services/SecureGateway?topic=securegateway-troubleshooting#getting-help-and-support).
+Ensure you check or modify additional firewall and IP Table rules that might apply. However, we do not recommend setting rules by IP, rules should be set specific to host name and port as the IPs for gateway authentication and SG gateway are controlled by IBM Cloud and are subject to change.
 
 
 ## Determining Hardware Requirements
