@@ -166,6 +166,15 @@ Return to [Getting Started - Adding a Client](/docs/services/SecureGateway?topic
 
 If a client has been provided an ID, then it can be remotely terminated via the SG UI or through the SG API.  If you terminate a client that is running as a service, the client will restart and obtain a new client ID; however, if the service has multiple clients connected, the terminated client will not restart until all of the remaining clients have been terminated.
 
+## Client behind proxy
+{: #client-proxy}
+
+The Secure Gateway client uses outbound port 443 and port 9000 to connect to npm registry and the {{site.data.keyword.Bluemix}} environment as mentioned in the [network requirement](/docs/services/SecureGateway?topic=securegateway-client-requirements#network-requirements), if the Secure Gateway client use the proxy for the outbound request, you can use the [startup option](#startup-args) `--proxy` and the environment variable to define the proxy agent for the outbound request, for example, if you are using the auto-start [configuration file](/docs/services/SecureGateway?topic=securegateway-auto-start-conf#auto-start-linux):
+```
+SECGW_ARGS="--no_license --l $LOGLEVEL -x https://prox-server:3128 --service"
+export https_proxy=https://prox-server:3128
+```
+
 ## Limitations
 {: #limits}
 
