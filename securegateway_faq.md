@@ -230,6 +230,18 @@ When the Secure Gateway client disconnected unexpectedly, please go to the statu
 
 If the maintenance needs to have disruption over 10 minutes, then you might need to manually restart the Secure Gateway client to reconnect to the Secure Gateway server after the maintenance. Normally, the service downtime will be equal to or less than 10 minutes, the Secure Gateway client (after version v180) should be able to reconnect to the Secure Gateway server automatically.
 
+## How can we avoid manually restart after the disruptive maintenance?
+{: #faq-manually-restart}
+
+### Question
+{: #manually-restart-question}
+How can we avoid manually restart after the disruptive maintenance?
+
+### Answer
+{: #manually-restart-answer}
+
+You can use the [startup options](/docs/services/SecureGateway?topic=securegateway-client-interacting#startup-args) `--service` when starting up the Secure Gateway client, such that the parent process of the Secure Gateway client will restart within 60s if all child clients are terminated.
+
 ## How can I capture the Secure Gateway Client logs on DataPower?
 {: #faq-dp-log}
 
