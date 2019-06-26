@@ -4,6 +4,8 @@ copyright:
   years: 2015, 2019
 lastupdated: "2019-05-07"
 
+subcollection: securegateway
+
 ---
 {:screen: .screen}
 {:codeblock: .codeblock}

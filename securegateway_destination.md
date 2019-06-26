@@ -4,6 +4,8 @@ copyright:
   years: 2015, 2017
 lastupdated: "2017-04-10"
 
+subcollection: securegateway
+
 ---
 
 # Adding a Destination
