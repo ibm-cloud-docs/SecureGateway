@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-05-28"
+lastupdated: "2019-06-26"
 
 subcollection: securegateway
 
@@ -36,8 +36,8 @@ subcollection: securegateway
 ## v1.8.2
 {: #v182}
 
-### Fixes
-{: #v182-fixes}
+### Features and Fixes
+{: #v182-features-and-fixes}
 
 - Upgrade Node.js to 8.15.0
 - Node modules vulnerabilities fix
@@ -45,8 +45,8 @@ subcollection: securegateway
 ## v1.8.1
 {: #v181}
 
-### Fixes
-{: #v181-fixes}
+### Features and Fixes
+{: #v181-features-and-fixes}
 
 - Resolves regular connections hanging issue when closing
 - Uew new path for gateway authentication ([Click here for more info](/docs/services/SecureGateway?topic=securegateway-client-requirements#network-requirements))
@@ -90,6 +90,71 @@ subcollection: securegateway
 
 - Enhance the logs
 - Resolves unexpected behaviour in docker version
+
+## v1.8.0 Fixpack 5
+{: #v180fp5}
+
+### Fixes
+{: #v180fp5-fixes}
+
+- Resolves the corrupted header
+- Enhance the error log
+
+## v1.8.0 Fixpack 4
+{: #v180fp4}
+
+### Fixes
+{: #v180fp4-fixes}
+
+- Resolves ACL configuration issue
+
+## v1.8.0 Fixpack 3
+{: #v180fp3}
+
+### Fixes
+{: #v180fp3-fixes}
+
+- Resolves the truncated message
+- Resolves the hang connection
+- Add option to define timeout on destination
+
+## v1.8.0 Fixpack 2
+{: #v180fp2}
+
+### Fixes
+{: #v180fp2-fixes}
+
+- Resolves issue when the connection closed by the cloud side
+- Resolves issue related to the host header
+
+## v1.8.0 Fixpack 1
+{: #v180fp1}
+
+### Fixes
+{: #v180fp1-fixes}
+
+- Resolves Docker version Secure Gateway Client UI issue
+- Enhance error log when error occur on server side
+- Resolves connection issue between Secure Gateway Client and Secure Gateway Server
+
+## v1.8.0
+{: #v180}
+
+### Features
+{: #v180-features}
+- Performance improvement
+- Add Secure Gateway Client reconnect logic
+
+## v1.7.1
+{: #v171}
+
+### Features
+{: #v171-features}
+- Resolves Secure Gateway Client UI vulnerability
+- Resolves issue related to UDP connections
+- Resolves issue related to quality test
+- Refactor log generater
+- Add the startup option to define the proxy for the 9000 ws connection
 
 ## v1.7.0 Fixpack 1
 {: #v171fp1}
