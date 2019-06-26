@@ -255,14 +255,14 @@ docker run -t -i ads-secure-gateway-client1  --F /tmp/aclfile.txt
 {: screen}
 
 ## Why do I get 500 Internal Server Error when accessing Secure Gateway gateway panel?
-{: #gateway-ui-Internal Server Error}
+{: #gateway-ui-unauthorized}
 
 ### What is happening
-{: #gateway-ui-Internal Server Error-what-is-happening}
+{: #gateway-ui-unauthorized-what-is-happening}
 When you access the Secure Gateway instance via the url `https://cloud.ibm.com/services/securegateway/<sg_instance_id>?env_id=<region>`, and you receive the error message `500 Internal Server Error`.
 
 ### How to fix it
-{: #gateway-ui-Internal Server Error-how-to-fix-it}
+{: #gateway-ui-unauthorized-how-to-fix-it}
 - Access Secure Gateway instance via the portal `https://cloud.ibm.com/resources`.
 - Secure Gateway cannot be accessed with space role `Auditor`, please confirm whether you have `Developer` access of the space.
 
