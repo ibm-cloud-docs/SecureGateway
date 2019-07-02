@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-06-21"
+lastupdated: "2019-07-02"
 
 subcollection: securegateway
 
@@ -35,10 +35,12 @@ The following table describes all of the available options that can be provided 
 | -g, -\-gateway &lt;hostname:port&gt; | Used to manually select a specific gateway destination (advanced use only) |
 | -l, -\-loglevel &lt;level&gt; | Change the log level to ERROR, INFO, DEBUG or TRACE |
 | -p, -\-logpath &lt;file&gt; | Direct logging to a specific file |
-| -t, -\-sectoken &lt;security token&gt; | The security token to use for this gateway connection |
 | -P, -\-port &lt;port&gt; | The port for the UI to run on.  Defaults to port 9003 |
+| -r, -\-reconnect &lt;reconnect attempts&gt; | Reconnect attempts after drop the connection between SG client and SG server, -1 means retry forever. Defaults to 20 |
+| -t, -\-sectoken &lt;security token&gt; | The security token to use for this gateway connection |
 | -w, -\-password &lt;password&gt; | The password to protect the UI with.  Defaults to no password |
-| -x, -\-proxy &lt;proxy agent&gt; | The proxy for the port 9000 connection |
+| -x, -\-proxy &lt;proxy agent&gt; | (For SG client v182fp2 and former) The proxy for the port 9000 wss connection |
+|                                   | (For SG client v183 and later) The proxy for the port 9000 wss connection and port 443 gateway authentication connection |
 | -\-noUI | Prevent the UI from starting up automatically |
 | -\-allow | Allows all connections to the client. Is overridden by the ACL file, if provided |
 | -\-service | After an initial connection, the parent will restart within 60s if all child clients are terminated |

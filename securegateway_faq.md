@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-06-25"
+lastupdated: "2019-07-02"
 
 subcollection: securegateway
 
@@ -224,9 +224,9 @@ Where can I receive Secure Gateway notifications, especially for disruptive main
 ### Answer
 {: #notification-answer}
 
-You can get notifications via our [status page](https://cloud.ibm.com/status?selected=status).
-- To get the notifications about completed/on going disruptive maintenance, please search `Secure Gateway` in the tab `Status`.
-- To get the notifications about planned disruptive maintenance, please search `Secure Gateway` in the tab `Planned maintenance`.
+You can get notifications via our [status page](https://cloud.ibm.com/status?selected=maintenance).
+- To get the notifications about completed disruptive maintenance, please search `Secure Gateway` in the tab [History](https://cloud.ibm.com/status?query=Secure+Gateway&selected=history).
+- To get the notifications about on going or planned disruptive maintenance, please search `Secure Gateway` in the tab [Planned maintenance](https://cloud.ibm.com/status?query=Secure+Gateway&selected=maintenance).
 
 When the Secure Gateway client disconnected unexpectedly, please go to the status page to check whether there is disruptive maintenance at that time.
 
@@ -240,7 +240,7 @@ How can we avoid manually restart after the disruptive maintenance?
 ### Answer
 {: #manually-restart-answer}
 
-If the maintenance needs to have disruption over 10 minutes, then you might need to manually restart the Secure Gateway client to reconnect to the Secure Gateway server after the maintenance. In this case, you can use the [startup options](/docs/services/SecureGateway?topic=securegateway-client-interacting#startup-args) `--service` when starting up the Secure Gateway client, such that the parent process of the Secure Gateway client will restart within 60s if all child clients are terminated.
+If the maintenance needs to have disruption over 10 minutes, then you might need to manually restart the Secure Gateway client to reconnect to the Secure Gateway server after the maintenance. In this case, you can use the [startup options](/docs/services/SecureGateway?topic=securegateway-client-interacting#startup-args) `--service` when starting up the Secure Gateway client, such that the parent process of the Secure Gateway client will restart within 60s if all child clients are terminated. Beside that, you can also use the startup options `--reconnect` to define the reconnect attempts after the connection between Secure Gateway client and Secure Gateway server drop.
 
 Normally, the service downtime will be equal to or less than 10 minutes, the Secure Gateway client (after version v180) should be able to reconnect to the Secure Gateway server automatically.
 

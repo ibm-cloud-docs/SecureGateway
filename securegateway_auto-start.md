@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-04-25"
+  years: 2015, 2019
+lastupdated: "2019-07-02"
 
 subcollection: securegateway
 
@@ -38,6 +38,7 @@ This file includes the following important variables to set:
 | USE_UI   | Set this to 'N' if you don't want to launch the client UI |
 | UI_PORT  | The port on which you want to launch client UI on (default is 9003) |
 | LANGUAGE | The language you want to have client logs in (default is en) |
+| SECGW_ARGS | The addtional [startup options](/docs/services/SecureGateway?topic=securegateway-client-interacting#startup-args) you want to add (default is `--no_license --l $LOGLEVEL --service`) |
 
 <b>Note:</b> This file is only read if you are using your system's auto-start facility.  If you are running the client manually this file is ignored.
 

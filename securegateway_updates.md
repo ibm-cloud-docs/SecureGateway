@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-06-26"
+lastupdated: "2019-07-02"
 
 subcollection: securegateway
 
@@ -10,6 +10,19 @@ subcollection: securegateway
 
 # {{site.data.keyword.SecureGateway}} Change Log
 {: #secure-gateway-change-log}
+
+## v1.8.3
+{: #v183}
+
+### Features and Fixes
+{: #v183-features-and-fixes}
+
+- Resolves Windows installer vulnerability for SG client UI Password
+- Resolves unexpected behaviour when configure SG client UI port and password
+- Resolves the error when generating logs
+- Add the startup option to define the reconnect attempts
+- Add `addtional startup option` field to the auto-start config
+- Add proxy support for the gateway authentication request to port 443
 
 ## v1.8.2 Fixpack 2
 {: #v182fp2}
