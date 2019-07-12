@@ -31,7 +31,7 @@ This file includes the following important variables to set:
 | Environment Variable | Description       |
 | ------------- | ----------- |
 | RESTART_CLIENT | Stop and Restart the client during install or upgrade (Yes or No) |
-| GATEWAY_ID | Your gateway ID as created on the Secure Gateway for Bluemix UI |
+| GATEWAY_ID | Your gateway ID as created on the Secure Gateway for IBM Cloud UI |
 | SECTOKEN | Security Token for this Gateway ID, if you choose to enforce security when creating the gateway |
 | ACL_FILE | Access Control List File you want to use to restrict on-premises access to resources |
 | LOGLEVEL | The log level you want to set for your service (default is INFO) |

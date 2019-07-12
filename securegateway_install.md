@@ -166,8 +166,8 @@ Maintainer: cloudoe-dev@webconf.ibm.com
 Architecture: amd64
 Source: ibm-securegateway+securegateway-client
 Version: 1.7.0
-Description: IBM Secure Gateway Client for Bluemix
-IBM Secure Gateway client package for Bluemix, supports secure connections to on-premises connections.
+Description: IBM Secure Gateway Client for IBM Cloud
+IBM Secure Gateway client package for IBM Cloud, supports secure connections to on-premises connections.
 Homepage: https://ng.bluemix.net/
 License: http://www.ibm.com/software/sla/sladb.nsf/lilookup/986C7686F22D4D3585257E13004EA6CB?OpenDocument
 ```
@@ -248,7 +248,7 @@ You may require administrative privileges to perform this installation, dependin
 
  4. The user will be prompted to select the language in which they want to launch the Command Line Interface. If not language is selected, it will be defaulted to English.
 
- 5. The user will be prompted to install the client as a windows service. If the user chooses to do so, the client will run in background as a windows service with the configurations user provide in the subsequent dialog. The status of service can be checked in the service page of Control Panel. The service name is "IBM Bluemix Secure Gateway Service".
+ 5. The user will be prompted to install the client as a windows service. If the user chooses to do so, the client will run in background as a windows service with the configurations user provide in the subsequent dialog. The status of service can be checked in the service page of Control Panel. The service name is "IBM Cloud Secure Gateway Service".
 
  6. The installer identifies if there is an existing installation on the machine. If it is detected, the user is asked if they want to use the existing configurations, else the user has the option to enter new configurations. Details like gateway ids, security tokens, acl files and log level for each gateway can be provided here. If the user has chosen to run the client as a windows service the client will launch with the configurations provided. If the user has not chosen to launch the client as a windows service, the configurations will be stored for further use. In either case, the configurations are stored in %Installation_directory%/ibm/securegateway/client/securegw_service.config.
 
