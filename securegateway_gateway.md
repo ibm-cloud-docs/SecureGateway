@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-06-17"
+lastupdated: "2019-07-12"
 
 subcollection: securegateway
 
@@ -38,7 +38,7 @@ By clicking the Settings button on any of the gateway tiles, you can edit the co
 
 ![Guided Setup](./images/editGateway.png?raw=true "Edit Gateway")
 
-When the security token is expired, it will not affect the connecting Secure Gateway Client, since the security token is only used when start/restart a Secure Gateway Client.
+When the security token is expired, it will not affect the connecting Secure Gateway Client, since the security token is only used when start/restart a Secure Gateway Client. However, you will not able to configure the destinations until you regenerate the security token.
 
 There is no way of extending the expiration of the existing security token, when the security token is expired, you will need to regenerate it, once the Secure Gateway Client restart, it will need to use the latest security token.
 
