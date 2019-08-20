@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-07-02"
+lastupdated: "2019-08-20"
 
 subcollection: securegateway
 
@@ -10,6 +10,16 @@ subcollection: securegateway
 
 # {{site.data.keyword.SecureGateway}} Change Log
 {: #secure-gateway-change-log}
+
+## v1.8.3 Fixpack 1
+{: #v183fp1}
+
+### Features and Fixes
+{: #v183fp1-features-and-fixes}
+
+- Resolves error when sending the large data with HTTP/HTTPS request to on-cloud destiantion
+- Resolves data truncated issue when sending data to on-perm destination
+- Resolves the docker version SG client UI issue
 
 ## v1.8.3
 {: #v183}
