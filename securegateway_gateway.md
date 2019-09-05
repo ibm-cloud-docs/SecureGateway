@@ -34,7 +34,7 @@ Now that you have your newly created gateway, you can [connect your first client
 ## Regenerate security token
 {: #regen-sectoken}
 
-By clicking the Settings button on any of the gateway tiles, you can edit the configuration of the gateway and check the `Current Token Expiring` on the panel.
+By clicking the Settings button ![Setting Button](./images/settingIcon.png?raw=true "Setting Button") on any of the gateway tiles, you can edit the configuration of the gateway and check the `Current Token Expiring` on the panel.
 
 ![Guided Setup](./images/editGateway.png?raw=true "Edit Gateway")
 

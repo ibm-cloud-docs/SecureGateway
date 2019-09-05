@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-04-10"
+  years: 2015, 2019
+lastupdated: "2019-09-02"
 
 subcollection: securegateway
 
@@ -25,7 +25,7 @@ From your {{site.data.keyword.SecureGateway}} dashboard, you can quickly see the
 
 ### Service Profile
 {: #dashboard-service-profile}
-By clicking the Profile button, you can see:
+By clicking the Profile button ![Profile Button](./images/profileIcon.png?raw=true "Profile Button"), you can see:
 
 Field | Description
 -- | --
@@ -39,13 +39,11 @@ Data Overages | The number of data overages incurred for the current month's bil
 
 ### Gateway Info Panel
 {: #dashboard-gw-info-panel}
-By clicking the Settings button on any of the gateway tiles, you can see:
+By clicking the Settings button ![Setting Button](./images/settingIcon.png?raw=true "Setting Button") on any of the gateway tiles, you can see:
 
 - The security token required to use the API or to connect a client, depending on whether the token is being enforced on client connections.
 - The gateway ID required to use the API or to connect a client.
 - The node your gateway has been created on.  This is the server your client will connect to.
-- When the gateway was created and the user who it was created by.
-- When the gateway was last modified and the user who it was modified by.
 - A link to regenerate the certificate and key associated with the gateway.  These files are only used with legacy destinations that do not contain their own certificate/key pair for mutual authentication on the client.
 
 The following tasks can also be completed from the Gateway Info panel:
@@ -68,14 +66,12 @@ By clicking on one of the gateway tiles, the dashboard for that particular gatew
 
 ### Destination Info Panel
 {: #dashboard-dest-info-panel}
-By clicking the Settings button on any of the destination tiles, you can see:
+By clicking the Settings button ![Setting Button](./images/settingIcon.png?raw=true "Setting Button") on any of the destination tiles, you can see:
 
 - The destination ID required to use the API.
 - On-premises destinations will have a cloud host and port.  This information is required by your application in order to connect to your on-premises resource.
 - Cloud destinations will have a client port.  This is the port the {{site.data.keyword.SecureGateway}} Client will be listening on in order to connect your on-premises application to your cloud resource.
 - The resource host and port this destination is pointed to.
-- When the destination was created as well as the user it was created by.
-- When the destination was last modified as well as the user it was modified by.
 
 The following tasks can also be completed from the Destination Info panel:
 

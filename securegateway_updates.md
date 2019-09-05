@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-08-20"
+lastupdated: "2019-09-02"
 
 subcollection: securegateway
 
@@ -10,6 +10,11 @@ subcollection: securegateway
 
 # {{site.data.keyword.SecureGateway}} Change Log
 {: #secure-gateway-change-log}
+
+Our regression test only cover last 3 versions and current supported DataPower.
+
+Please ensure your Secure Gateway Client does not fall more than 3 versions behind, or you might get unexpected behaviour. If you are using DataPower, please ensure your DataPower is current supported.
+
 
 ## v1.8.3 Fixpack 1
 {: #v183fp1}

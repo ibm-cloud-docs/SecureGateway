@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-04-10"
+  years: 2015, 2019
+lastupdated: "2019-09-02"
 
 subcollection: securegateway
 
@@ -137,11 +137,9 @@ To configure the proxy settings, you only need to provide the hostname and port 
 
 ## Destination Settings
 {: #dest-settings}
-Once your destination has been created, click the settings icon to see the following information:
+Once your destination has been created, click the settings icon ![Setting Icon](./images/settingIcon.png?raw=true "Setting Icon") to see the following information:
 
 - The destination ID required to use the API.
 - <b>On-premises destinations will have a cloud host and port.  This information is required by your application in order to connect to your on-premises resource.</b>
 - <b>Cloud destinations will have a client port.  This is the port the {{site.data.keyword.SecureGateway}} Client will be listening on in order to connect your on-premises application to your cloud resource.</b>
 - The resource host and port this destination is pointed to.
-- When the destination was created as well as the user who created it.
-- When the destination was last modified as well as the user who modified it.

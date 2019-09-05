@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-07-02"
+lastupdated: "2019-09-03"
 
 subcollection: securegateway
 
@@ -34,7 +34,7 @@ Error | Typical Cause | Troubleshooting Methods
 ETIMEDOUT | The client is unable to find the hostname/ip to connect to due to network constraints. | Attempt to ping the destination's hostname/ip from the host running the client to ensure network connectivity.  If running the Docker version of the client, bridging the container with the host OS  with `--net=host` may resolve the issue.
 ECONNREFUSED | The client has resolved the hostname/ip to connect to but is unable to begin the connection handshake | This is typically caused by a mismatched protocol between the SG Client and the on-prem resource (e.g., the client is attempting a TCP connection to a host:port that is expecting a TLS connection).  In some cases, a firewall rule may cause this error instead of ETIMEDOUT.
 ECONNRESET | The client has established a connection to the destination but something went wrong either during the handshake (a TLS handshake error might result in different errors, as well) or while the request was being handled by the on-prem resource. | The logs of the on-prem resource should be checked to confirm no error has caused the connection to be interrupted.  If nothing is found in the on-prem logs, then the destination configuration should be examined to ensure the appropriate protocols (and certificates, if necessary) are being provided to the client for the connection.
-REMOTE_RST | There is error occurred in SG Server side. <br><br> For on-prem destination, there is error during the requesting app connecting to the SG Server, or a timeout error when receiving data from the on-prem resource. <br><br> For cloud destination, it could be anything from TLS handshake failure, to errors in the cloud resource | For on-prem destination, please ensure the requesting app using the appropriate protocols to establish the connection with SG Server, if the error occurs when receiving data from on-prem resource, please try to extend/disable the timeout. <br><br> For cloud destination, the logs of the cloud resource should be checked to confirm no error has caused the connection to be interrupted.  If nothing is found in the cloud resource logs, then the destination configuration should be examined to ensure the appropriate protocols (and certificates, if necessary) are being provided to the client for the connection.
+REMOTE_RST | There is error occurred in SG Server side. <br><br> For on-prem destination, there is error during the requesting app connecting to the SG Server, or a timeout error when receiving data from the on-prem resource. <br><br> For cloud destination, it could be anything from TLS handshake failure, to errors in the cloud resource | For on-prem destination, please ensure the requesting app using the appropriate protocols to establish the connection with SG Server, if the error occurs when receiving data from on-prem resource, please try to extend/disable the timeout. If the timeout is disabled but still getting this error 3600 seconds after the last data transmitted/received, please implement the keep-alive logic when sending the request on cloud side. <br><br> For cloud destination, the logs of the cloud resource should be checked to confirm no error has caused the connection to be interrupted.  If nothing is found in the cloud resource logs, then the destination configuration should be examined to ensure the appropriate protocols (and certificates, if necessary) are being provided to the client for the connection.
 
 Many applications experience "hangs" after an ECONNRESET occurring on the other end of the tunnel. This is expected. Secure 
 Gateway can not replay the RST packet on the other end of the tunnel since the TCP packets have already been ACKed for that
@@ -194,9 +194,11 @@ to the default:
 You are trying to implement on-premises client-side TLS by using the Secure Gateway client and you receive the following error message.
 
 ```
-[ERROR] Connection #<connection ID> had error: DEPTH_ZERO_SELF_SIGNED_CERT Where:
+[ERROR] Connection #<connection ID> to destination <target host>:<target port> had error: DEPTH_ZERO_SELF_SIGNED_CERT
 
-    connection ID is a client assigned connection number.
+Where:
+    - connection ID is a client assigned connection number.
+    - target is the on-premise endpoint
 ```
 {: screen}
 
@@ -210,6 +212,11 @@ The destination you defined is missing a client-side certificate.
  2. Select your destination and click the Edit icon.
  3. Click Upload certificate.
  4. Upload the PEM certificate file that is to be used to connect to the on-premises system.
+ - You can verify your certificate file using following command:
+    ```
+    openssl s_client -CAfile <CA> -connect <target_host>:<target_port>
+    ```
+    Where: CA is the certificate file you uploaded, target is the on-premise endpoint.
 
 
 ## How can I interactively load an ACL file in the Docker client?
