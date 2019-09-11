@@ -143,3 +143,5 @@ Once your destination has been created, click the settings icon ![Setting Icon](
 - <b>On-premises destinations will have a cloud host and port.  This information is required by your application in order to connect to your on-premises resource.</b>
 - <b>Cloud destinations will have a client port.  This is the port the {{site.data.keyword.SecureGateway}} Client will be listening on in order to connect your on-premises application to your cloud resource.</b>
 - The resource host and port this destination is pointed to.
+- When the destination was created
+- When the destination was last modified

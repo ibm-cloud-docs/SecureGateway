@@ -44,6 +44,8 @@ By clicking the Settings button ![Setting Button](./images/settingIcon.png?raw=t
 - The security token required to use the API or to connect a client, depending on whether the token is being enforced on client connections.
 - The gateway ID required to use the API or to connect a client.
 - The node your gateway has been created on.  This is the server your client will connect to.
+- When the gateway was created
+- When the gateway was last modified
 - A link to regenerate the certificate and key associated with the gateway.  These files are only used with legacy destinations that do not contain their own certificate/key pair for mutual authentication on the client.
 
 The following tasks can also be completed from the Gateway Info panel:
@@ -72,6 +74,8 @@ By clicking the Settings button ![Setting Button](./images/settingIcon.png?raw=t
 - On-premises destinations will have a cloud host and port.  This information is required by your application in order to connect to your on-premises resource.
 - Cloud destinations will have a client port.  This is the port the {{site.data.keyword.SecureGateway}} Client will be listening on in order to connect your on-premises application to your cloud resource.
 - The resource host and port this destination is pointed to.
+- When the destination was created
+- When the destination was last modified
 
 The following tasks can also be completed from the Destination Info panel:
 
