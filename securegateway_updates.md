@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-09-02"
+lastupdated: "2019-10-04"
 
 subcollection: securegateway
 
@@ -19,6 +19,8 @@ Please ensure your Secure Gateway Client does not fall more than 3 versions behi
 ## v1.8.3 Fixpack 1
 {: #v183fp1}
 
+Published date: 2019-08-21
+
 ### Features and Fixes
 {: #v183fp1-features-and-fixes}
 
@@ -28,6 +30,8 @@ Please ensure your Secure Gateway Client does not fall more than 3 versions behi
 
 ## v1.8.3
 {: #v183}
+
+Published date: 2019-07-05
 
 ### Features and Fixes
 {: #v183-features-and-fixes}
@@ -42,6 +46,8 @@ Please ensure your Secure Gateway Client does not fall more than 3 versions behi
 ## v1.8.2 Fixpack 2
 {: #v182fp2}
 
+Published date: 2019-05-21
+
 ### Fixes
 {: #v182fp2-fixes}
 
@@ -52,6 +58,8 @@ Please ensure your Secure Gateway Client does not fall more than 3 versions behi
 
 ## v1.8.2 Fixpack 1
 {: #v182fp1}
+
+Published date: 2019-04-30
 
 ### Fixes
 {: #v182fp1-fixes}
@@ -64,6 +72,8 @@ Please ensure your Secure Gateway Client does not fall more than 3 versions behi
 ## v1.8.2
 {: #v182}
 
+Published date: 2019-03-12
+
 ### Features and Fixes
 {: #v182-features-and-fixes}
 
@@ -72,6 +82,8 @@ Please ensure your Secure Gateway Client does not fall more than 3 versions behi
 
 ## v1.8.1
 {: #v181}
+
+Published date: 2019-01-13
 
 ### Features and Fixes
 {: #v181-features-and-fixes}
@@ -82,6 +94,8 @@ Please ensure your Secure Gateway Client does not fall more than 3 versions behi
 
 ## v1.8.0 Fixpack 9
 {: #v180fp9}
+
+Published date: 2018-11-08
 
 ### Fixes
 {: #v180fp9-fixes}
@@ -94,6 +108,8 @@ Please ensure your Secure Gateway Client does not fall more than 3 versions behi
 ## v1.8.0 Fixpack 8
 {: #v180fp8}
 
+Published date: 2018-10-03
+
 ### Fixes
 {: #v180fp8-fixes}
 
@@ -102,6 +118,8 @@ Please ensure your Secure Gateway Client does not fall more than 3 versions behi
 
 ## v1.8.0 Fixpack 7
 {: #v180fp7}
+
+Published date: 2018-08-31
 
 ### Fixes
 {: #v180fp7-fixes}
@@ -113,6 +131,8 @@ Please ensure your Secure Gateway Client does not fall more than 3 versions behi
 ## v1.8.0 Fixpack 6
 {: #v180fp6}
 
+Published date: 2018-03-06
+
 ### Fixes
 {: #v180fp6-fixes}
 
@@ -121,6 +141,8 @@ Please ensure your Secure Gateway Client does not fall more than 3 versions behi
 
 ## v1.8.0 Fixpack 5
 {: #v180fp5}
+
+Published date: 2018-02-13
 
 ### Fixes
 {: #v180fp5-fixes}
@@ -131,6 +153,8 @@ Please ensure your Secure Gateway Client does not fall more than 3 versions behi
 ## v1.8.0 Fixpack 4
 {: #v180fp4}
 
+Published date: 2017-11-10
+
 ### Fixes
 {: #v180fp4-fixes}
 
@@ -138,6 +162,8 @@ Please ensure your Secure Gateway Client does not fall more than 3 versions behi
 
 ## v1.8.0 Fixpack 3
 {: #v180fp3}
+
+Published date: 2017-10-30
 
 ### Fixes
 {: #v180fp3-fixes}
@@ -149,6 +175,8 @@ Please ensure your Secure Gateway Client does not fall more than 3 versions behi
 ## v1.8.0 Fixpack 2
 {: #v180fp2}
 
+Published date: 2017-08-17
+
 ### Fixes
 {: #v180fp2-fixes}
 
@@ -157,6 +185,8 @@ Please ensure your Secure Gateway Client does not fall more than 3 versions behi
 
 ## v1.8.0 Fixpack 1
 {: #v180fp1}
+
+Published date: 2017-08-03
 
 ### Fixes
 {: #v180fp1-fixes}
@@ -168,6 +198,8 @@ Please ensure your Secure Gateway Client does not fall more than 3 versions behi
 ## v1.8.0
 {: #v180}
 
+Published date: 2017-07-06
+
 ### Features
 {: #v180-features}
 - Performance improvement
@@ -176,6 +208,8 @@ Please ensure your Secure Gateway Client does not fall more than 3 versions behi
 ## v1.7.1
 {: #v171}
 
+Published date: 2017-05-23
+
 ### Features
 {: #v171-features}
 - Resolves Secure Gateway Client UI vulnerability
@@ -183,18 +217,13 @@ Please ensure your Secure Gateway Client does not fall more than 3 versions behi
 - Resolves issue related to quality test
 - Refactor log generater
 - Add the startup option to define the proxy for the 9000 ws connection
-
-## v1.7.0 Fixpack 1
-{: #v171fp1}
-
-### Fixes
-{: #v171fp1-fixes}
-
 - Fixes `EADDRINUSE` error caused by listeners that do not execute a teardown appropriately when a destination is deleted.
 - Resolves issue where service instances bound to an application could not be deleted.
 
 ## v1.7.0
 {: #v170}
+
+Published date: 2017-03-16
 
 ### Features
 {: #v170-features}
@@ -202,17 +231,21 @@ Please ensure your Secure Gateway Client does not fall more than 3 versions behi
 - Introduces new service plans: Essentials, Professional, and Enterprise.
 - The Secure Gateway Client now supports SOCKS proxy between itself and the on-prem destination.
 
-## v1.6.0 Fixpack 1
-{: #v160fp1}
+## v1.6.1
+{: #v161}
+
+Published date: 2017-02-03
 
 ### Fixes
-{: #v160fp1-fixes}
+{: #v161-fixes}
 
 - Resolves issue where disconnecting multiple clients results in orphaned processes in the connected clients array.
 - Now cleans up orphaned connections that resulted in incorrecty paused listeners.
 
 ## v1.6.0
 {: #v160}
+
+Published date: 2016-10-06
 
 ### Features
 {: #v160-features}
@@ -223,6 +256,8 @@ Please ensure your Secure Gateway Client does not fall more than 3 versions behi
 ## v1.5.1
 {: #v151}
 
+Published date: 2016-08-10
+
 ### Features
 {: #v151-features}
 
@@ -231,13 +266,6 @@ Please ensure your Secure Gateway Client does not fall more than 3 versions behi
 - Services are now limited to 50 gateways and 50 destinations per gateway.
 - Destinations/Gateways/Services can now be exported/imported.
 - Latency tests between client and server capable of being executed from Secure Gateway UI.
-
-## v1.5.0 Fixpack 1
-{: #v150fp1}
-
-### Fixes
-{: #v150fp1-fixes}
-
 - Cleans up orphaned tunnel processes on network disconnect.
 - Resolves duplicate port allocation caused by failed destination deletion.
 - Resolves HTTP/S issue with non-UTF8 encoding.
@@ -245,6 +273,8 @@ Please ensure your Secure Gateway Client does not fall more than 3 versions behi
 
 ## v1.5.0
 {: #v150}
+
+Published date: 2016-05-26
 
 ### Features
 {: #v150-features}
@@ -257,6 +287,8 @@ Please ensure your Secure Gateway Client does not fall more than 3 versions behi
 
 ## v1.4.2
 {: #v142}
+
+Published date: 2016-03-21
 
 ### Features
 {: #v142-features}
