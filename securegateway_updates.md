@@ -11,9 +11,9 @@ subcollection: securegateway
 # {{site.data.keyword.SecureGateway}} Change Log
 {: #secure-gateway-change-log}
 
-Our regression test only cover last 3 versions and current supported DataPower.
+Our regression tests only cover last 3 versions and currently supported DataPower versions.
 
-Please ensure your Secure Gateway Client does not fall more than 3 versions behind, or you might get unexpected behaviour. If you are using DataPower, please ensure your DataPower is current supported.
+Please ensure your Secure Gateway Client does not fall more than 3 versions behind, or you might get unexpected behaviour. If you are using DataPower as the Secure Gateway Client, please ensure it is a currently supported DataPower version.
 
 
 ## v1.8.3 Fixpack 1
