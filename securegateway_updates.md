@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-10-04"
+lastupdated: "2019-10-22"
 
 subcollection: securegateway
 
@@ -15,6 +15,16 @@ Our regression tests only cover last 3 versions and currently supported DataPowe
 
 Please ensure your Secure Gateway Client does not fall more than 3 versions behind, or you might get unexpected behaviour. If you are using DataPower as the Secure Gateway Client, please ensure it is a currently supported DataPower version.
 
+
+## v1.8.4
+{: #v184}
+
+Published date: 2019-10-22
+
+### Features
+{: #v184-features}
+
+- Support the toggle `rejectUnauthorized` for Resource Authentication
 
 ## v1.8.3 Fixpack 1
 {: #v183fp1}

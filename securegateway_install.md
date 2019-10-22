@@ -103,29 +103,29 @@ You will require root or administrative privileges to perform this installation.
 
  2. When the client installer starts, you are prompted for the following information.
 
-    <b>Auto-start process Yes/No</b>
+    `Auto-start process Yes/No`
         If this is an upgrade or reinstall, you must choose whether you want the existing client to be stopped while
         the installation process is running. Choose Y/y to stop the existing client. Otherwise, the client package
         is upgraded without restarting the client, which means that you can wait for an appropriate Software Update
         window to perform a restart. If you choose N/n, the installation continues and you must restart the client
         manually.
 
-    <b>Gateway ID</b>
+    `Gateway ID`
         Set the gateway ID for the client. The gateway ID is defined when you create a {{site.data.keyword.SecureGateway}} service. If the
         client fails to connect, you can change your selection by editing the .conf file.
 
-    <b>Security token</b>
+    `Security token`
         If the gateway ID is enabled to check for a security token, you must provide it now. If the gateway ID does
         not require a security token, leave this blank.
 
-    <b>Logging level</b>
+    `Logging level`
         The default setting is INFO. Other valid values are TRACE, DEBUG, and ERROR.
 
-    <b>Access Control List</b>
+    `Access Control List`
         Enter the absolute path of the file name containing the access control list on what has access to your
         on-premises resources. For more information, see the README.md file in /opt/ibm/securegateway or Access control list.
 
-    <b>Client UI</b>
+    `Client UI`
         Choose if you want to use client UI. If yes, user can change the port for the UI. Default value is 9003.
 
     <b>Note:</b> You do not have to answer any of the prompts, all will take the defined default or be left blank in the sgenvironment.conf file. This allows the installation process to run without user interaction.

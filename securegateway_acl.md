@@ -39,7 +39,7 @@ acl allow :22
 ```
 {: pre}
 
-The following is another example ACL rule to allow all hostnames for all ports, essentially disabling ACL support. <b>This is not recommended.</b>
+The following is another example ACL rule to allow all hostnames for all ports, essentially disabling ACL support. `This is not recommended.`
 
 ```
 acl allow :

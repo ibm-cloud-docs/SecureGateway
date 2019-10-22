@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-09-02"
+lastupdated: "2019-10-22"
 
 subcollection: securegateway
 
@@ -17,7 +17,7 @@ A destination is a definition of how to connect to a specific on-premises or clo
 
 From within your new gateway and on the Destinations tab, click the Add Destination button to open the Add Destination panel.  There are two methods for creating your destination:  a guided setup that shows how each piece fits into the overall architecture and an advanced setup that provides all fields and options on a single panel.  
 
-The guided setup <b>does not</b> allow for the configuration of proxy information, server name indicators, or the upload of a destination-specific cert/key pair.  After creation, all fields are available via the Edit Destination panel.
+The guided setup `does not` allow for the configuration of proxy information, server name indicators, reject unauthorized or the upload of a destination-specific cert/key pair.  After creation, all fields are available via the Edit Destination panel.
 
 ## Guided Setup Panel
 {: #add-dest-guided-setup}
@@ -48,11 +48,11 @@ The cloud destination is for the use case where an application located in a rest
 {: #define-dest}
 For both types of destinations, the following information is required:
 
-- <b>Resource Hostname</b>: This is the IP or hostname of the resource you need to connect to.
-- <b>Resource Port</b>: This is the port that your resource is listening on.
-- <b>Protocol</b>: This is the type of connection your application will be making.  See the table below for the various [protocol options](#protocols-options).  For configuring the type of connection your resource is expecting, check the [Resource authentication](#dest-resource-auth) section.
+- `Resource Hostname`: This is the IP or hostname of the resource you need to connect to.
+- `Resource Port`: This is the port that your resource is listening on.
+- `Protocol`: This is the type of connection your application will be making.  See the table below for the various [protocol options](#protocols-options).  For configuring the type of connection your resource is expecting, check the [Resource authentication](#dest-resource-auth) section.
 
-If you have selected a cloud destination you will also need to provide a <b>Client Port</b>.  This is the port that the {{site.data.keyword.SecureGateway}} Client will listen on to allow connections to the associated resource hostname and port.
+If you have selected a cloud destination you will also need to provide a `Client Port`.  This is the port that the {{site.data.keyword.SecureGateway}} Client will listen on to allow connections to the associated resource hostname and port.
 
 ## Protocol options
 {: #protocols-options}
@@ -90,7 +90,15 @@ Enabling TLS on the connection to your resource is separate from the TLS used fo
 #### Cloud/On-Premises Authentication
 {: #cloud-or-on-prem-auth}
 
-This option becomes available by selecting TLS or Mutual Auth for your [Resource Authentication](#dest-resource-auth).  The name of the field will match the [type of destination](#dest-types) you have chosen.  This field allows for up to 6 certificates to be uploaded in order to validate the certificate of the resource you are connecting to.  These files will be added to the CA of connection to the resource and should contain the certificate or certificate chain that your resource will be presenting.
+This option becomes available by selecting TLS or Mutual Auth for your [Resource Authentication](#dest-resource-auth).  The name of the field will match the [type of destination](#dest-types) you have chosen.
+
+To reject any connection which is not authorized with the list of supplied CAs, check the box `Reject unauthorized` from the Cloud/On-Premises Authentication panel. Once the box is checked and the resource you are connecting to is using a self-signed certificate, you must upload it, or the connection will be rejected.
+
+It is allows for up to 6 certificates to be uploaded in order to validate the certificate of the resource which you are connecting to. These files will be added to the CA of connection to the resource and should contain the certificate or certificate chain that your resource will be presenting.
+
+The box `Reject unauthorized` is supported only when using Secure Gateway Client v1.8.4 or later, old Secure Gateway Client will still reject unauthorized even if this box is unchecked.
+
+Uncheck the box `Reject unauthorized` will leave you vulnerable to Man-in-the-middle attack.
 
 #### Server Name Indicator (SNI)
 {: #dest-sni}
@@ -109,7 +117,7 @@ For a cloud destination, it will appear under [User Authentication](#dest-user-a
 To prevent all but specific IP addresses from connecting to your cloud hosts and ports, you can choose to enforce iptables rules on your on-premises destination.
 ![Network Security Panel](./images/networkSecurity.png?raw=true "Network Security panel")
 
-To enforce iptables rules, check the box <b>Restrict cloud access to this destination with iptables rules</b> from the Network Security panel.  Once the box is checked, you can begin adding the IPs that should be allowed to connect.  If no IPs are provided, all connections to this cloud hosts and ports will be rejected as long as the <b>Restrict cloud access</b> box is checked.
+To enforce iptables rules, check the box `Restrict cloud access to this destination with iptables rules` from the Network Security panel.  Once the box is checked, you can begin adding the IPs that should be allowed to connect.  If no IPs are provided, all connections to this cloud hosts and ports will be rejected as long as the `Restrict cloud access` box is checked.
 
 <b>Note</b>: The IPs or ports provided must be the external IP address that the {{site.data.keyword.SecureGateway}} servers will see, not the local IP address of the machine making the request.
 
@@ -135,13 +143,23 @@ If your on-premises destination is located behind a SOCKS proxy, you can configu
 
 To configure the proxy settings, you only need to provide the hostname and port that the proxy is listening on as well as the SOCKS protocol that is being used (4, 4a, 5).
 
+## Configuring Miscellaneous options
+
+![Miscellaneous Options panel](./images/miscellaneousOptions.png?raw=true "Miscellaneous Options panel")
+
+To compress the data flowing through the wss connection between Secure Gateway Server and Secure Gateway Client, check the box `Enable Compression` from the Miscellaneous Options panel.
+
+`Connection Timeout` is default to 0, which mean disable the connection timeout. To enable the connection timeout, edit the text field with the number of seconds you would like the connection timeout be (minimum 1, maximum 120).
+
+The session TTL of our firewall is 3600 seconds. If the connection between the cloud application and the Secure Gateway Server hangs (no data flowing) over than 3600 seconds, our firewall will drop the connection even if the `Connection Timeout` is disabled. In this case, you can enable the TCP keep-alive on the cloud application, to keep the connections alive.
+
 ## Destination Settings
 {: #dest-settings}
 Once your destination has been created, click the settings icon ![Setting Icon](./images/settingIcon.png?raw=true "Setting Icon") to see the following information:
 
 - The destination ID required to use the API.
-- <b>On-premises destinations will have a cloud host and port.  This information is required by your application in order to connect to your on-premises resource.</b>
-- <b>Cloud destinations will have a client port.  This is the port the {{site.data.keyword.SecureGateway}} Client will be listening on in order to connect your on-premises application to your cloud resource.</b>
+- `On-premises destinations will have a cloud host and port.  This information is required by your application in order to connect to your on-premises resource.`
+- `Cloud destinations will have a client port.  This is the port the {{site.data.keyword.SecureGateway}} Client will be listening on in order to connect your on-premises application to your cloud resource.`
 - The resource host and port this destination is pointed to.
 - When the destination was created
 - When the destination was last modified

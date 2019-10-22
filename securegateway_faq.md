@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-07-02"
+lastupdated: "2019-10-22"
 
 subcollection: securegateway
 
@@ -180,6 +180,10 @@ What are the recommended configurations to make my connections more secure?
 
 ### Answer
 {: #secure-app-answer}
+
+#### Reject unauthorized
+{: #secure-app-answer-reject-unauth}
+To protect against Man-in-the-middle attack, reject connections to the resource which is not authorized with the list of supplied CAs. On the Resource Authentication, check the box `Reject unauthorized`, then upload the certificate if the certificate of the resource is self-signed. Please see [Cloud/On-Premises Authentication](/docs/services/SecureGateway?topic=securegateway-add-dest#cloud-or-on-prem-auth) for more information.
 
 #### Use Mutual Authentication
 {: #secure-app-answer-ma}

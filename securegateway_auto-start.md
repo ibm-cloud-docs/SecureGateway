@@ -24,8 +24,6 @@ If you have chosen to use you system's auto-start facility, use one of the metho
 ```
 {: screen}
 
-<b>Note:</b> Auto-start functionality is not available for Red Hat Linux 6.
-
 This file includes the following important variables to set:
 
 | Environment Variable | Description       |
