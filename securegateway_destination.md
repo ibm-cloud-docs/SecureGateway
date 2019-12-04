@@ -149,7 +149,7 @@ To configure the proxy settings, you only need to provide the hostname and port 
 
 To compress the data flowing through the wss connection between Secure Gateway Server and Secure Gateway Client, check the box `Enable Compression` from the Miscellaneous Options panel.
 
-`Connection Timeout` is default to 0, which mean disable the connection timeout. To enable the connection timeout, edit the text field with the number of seconds you would like the connection timeout be (minimum 1, maximum 120).
+`Connection Timeout` is default to 0, which mean disable the connection timeout. To enable the connection timeout, edit the text field with the number of seconds you would like the connection timeout be (minimum 1, maximum 180).
 
 The session TTL of our firewall is 3600 seconds. If the connection between the cloud application and the Secure Gateway Server hangs (no data flowing) over than 3600 seconds, our firewall will drop the connection even if the `Connection Timeout` is disabled. In this case, you can enable the TCP keep-alive on the cloud application, to keep the connections alive.
 
