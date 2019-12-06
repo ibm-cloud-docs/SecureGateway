@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-10-22"
+lastupdated: "2019-12-04"
 
 subcollection: securegateway
 
@@ -14,7 +14,6 @@ subcollection: securegateway
 Our regression tests only cover last 3 versions and currently supported DataPower versions.
 
 Please ensure your Secure Gateway Client does not fall more than 3 versions behind, or you might get unexpected behaviour. If you are using DataPower as the Secure Gateway Client, please ensure it is a currently supported DataPower version.
-
 
 ## v1.8.4
 {: #v184}
@@ -53,6 +52,11 @@ Published date: 2019-07-05
 - Add `addtional startup option` field to the auto-start config
 - Add proxy support for the gateway authentication request to port 443
 
+### Breaking changes
+{: #v183-breaking-changes}
+
+For Windows installer, the old Secure Gateway Client UI Password configuration cannot be reused since this release. Please remove the UI Password configuration before you reuse the old config file during installation.
+
 ## v1.8.2 Fixpack 2
 {: #v182fp2}
 
@@ -65,6 +69,13 @@ Published date: 2019-05-21
 - Resolves resource auth vulnerability
 - Enhance the handling when both side close the connection in the same time
 - Resolves collapsed resource when the on-prem destination connection close too fast
+
+### Breaking changes
+{: #v182fp2-breaking-changes}
+
+You might get certificate error when the Secure Gateway Client is sending connection to the endpoint since this release, to fix the vulnerabilities, we start to check whether the certificate of the endpoint is authorized with the list of supplied CAs.
+
+To fix the error, you can upload the CAs to the [resource authentication](/docs/services/SecureGateway?topic=securegateway-add-dest#cloud-or-on-prem-auth) such that the Secure Gateway Client can trust it, or you can upgrade the Secure Gateway Client to v1.8.4 or later, then disable the `Reject unauthorized` in the [resource authentication](/docs/services/SecureGateway?topic=securegateway-add-dest#cloud-or-on-prem-auth).
 
 ## v1.8.2 Fixpack 1
 {: #v182fp1}
@@ -90,6 +101,11 @@ Published date: 2019-03-12
 - Upgrade Node.js to 8.15.0
 - Node modules vulnerabilities fix
 
+### Breaking changes
+{: #v182-breaking-changes}
+
+The system requirement is changed since this release. For more information, see [System Requirements](/docs/services/SecureGateway?topic=securegateway-client-requirements#system-requirements)
+
 ## v1.8.1
 {: #v181}
 
@@ -101,6 +117,11 @@ Published date: 2019-01-13
 - Resolves regular connections hanging issue when closing
 - Uew new path for gateway authentication ([Click here for more info](/docs/services/SecureGateway?topic=securegateway-client-requirements#network-requirements))
 - Use new mechanism for log generating (Log translation enhance)
+
+### Breaking changes
+{: #v181-breaking-changes}
+
+The network requirement is changed since this release. For more information, see [Network Requirements](/docs/services/SecureGateway?topic=securegateway-client-requirements#network-requirements)
 
 ## v1.8.0 Fixpack 9
 {: #v180fp9}
