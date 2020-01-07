@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-07-02"
+lastupdated: "2020-01-07"
 
 subcollection: securegateway
 
@@ -173,11 +173,36 @@ If a client has been provided an ID, then it can be remotely terminated via the 
 ## Client behind proxy
 {: #client-proxy}
 
-The Secure Gateway client uses outbound port 443 and port 9000 to connect to npm registry and the {{site.data.keyword.Bluemix}} environment as mentioned in the [network requirement](/docs/services/SecureGateway?topic=securegateway-client-requirements#network-requirements), if the Secure Gateway client use the proxy for the outbound request, you can use the [startup option](#startup-args) `--proxy` and the environment variable to define the proxy agent for the outbound request, for example, if you are using the auto-start [configuration file](/docs/services/SecureGateway?topic=securegateway-auto-start-conf#auto-start-linux):
+The Secure Gateway client uses outbound port 443 and port 9000 to connect to npm registry and the {{site.data.keyword.Bluemix}} environment as mentioned in the [network requirement](/docs/services/SecureGateway?topic=securegateway-client-requirements#network-requirements). If the Secure Gateway client use the proxy for the outbound request, you can use following option to define the proxy configuration.
+
+### Port `443` for gateway authentication connection and port `9000` for WSS connection
+You can use the [startup option](#startup-args) `--proxy` to define the proxy agent for the outbound request to the Secure Gateway server, for example, if you are using the auto-start [configuration file](/docs/services/SecureGateway?topic=securegateway-auto-start-conf#auto-start-linux):
 ```
-SECGW_ARGS="--no_license --l $LOGLEVEL -x https://prox-server:3128 --service"
-export https_proxy=https://prox-server:3128
+SECGW_ARGS="--no_license --l $LOGLEVEL -x <proxy_info> --service"
 ```
+
+Note:
+
+For the Secure Gateway client v182fp2 and former, the proxy option only support for the port `9000` wss connection, if you want to define the proxy for the port `443` gateway authentication connection, you can add the environment variable `http_proxy` or `https_proxy` to the configuration file, for example:
+```
+SECGW_ARGS="--no_license --l $LOGLEVEL -x http://prox-server:3128 --service"
+export http_proxy=http://prox-server:3128
+```
+
+Or you can define the environment variable before starting the interactive command line interface.
+
+### Port `443` for npm module installation
+For the Secure Gateway client v185 and later, You can define the proxy option for the npm module installation during the Secure Gateway client installation. For example (MacOX):
+```
+Enter the gateway IDs, separated by spaces: <gateway_id>
+INFO: The gateway ID for this install is: <gateway_id>
+
+Enter the gateway ID security tokens separated by spaces, enter 'none' for no security token: <token>
+
+Enter the proxy info if you want to start the client with the proxy: <proxy_info>
+```
+
+If you are using http proxy, the proxy option should be `http://<proxy host>:<proxy port>`, if you are using https proxy, the proxy option should be `https://<proxy host>:<proxy port>`
 
 ## Limitations
 {: #limits}

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2019
-lastupdated: "2019-12-04"
+  years: 2015, 2020
+lastupdated: "2020-01-07"
 
 subcollection: securegateway
 
@@ -11,9 +11,24 @@ subcollection: securegateway
 # {{site.data.keyword.SecureGateway}} Change Log
 {: #secure-gateway-change-log}
 
-Our regression tests only cover last 3 versions and currently supported DataPower versions.
+Our regression tests only cover last 3 versions.
 
-Please ensure your Secure Gateway Client does not fall more than 3 versions behind, or you might get unexpected behaviour. If you are using DataPower as the Secure Gateway Client, please ensure it is a currently supported DataPower version.
+Please ensure your Secure Gateway Client does not fall more than 3 versions behind, or you might get unexpected behaviour. 
+
+If you are using DataPower as the Secure Gateway Client, please ensure it is a currently supported DataPower version as well.
+
+## v1.8.5
+{: #v185}
+
+Published date: 2020-01-07
+
+### Features
+{: #v185-features}
+
+- Upgrade Node.js to 10.17.0
+- Node modules vulnerabilities fix
+- Resolves the Node.js conflict on Windows installer
+- Add proxy option to the installer for npm module installation
 
 ## v1.8.4
 {: #v184}
