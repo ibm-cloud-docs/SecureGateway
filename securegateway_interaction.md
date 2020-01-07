@@ -102,7 +102,6 @@ The {{site.data.keyword.SecureGateway}} client has a command line interface (cli
 | S, show acl &lt;worker ID&gt; | Show all access control list entries |
 | F, acl file &lt;file&gt; &lt;worker ID&gt; | Access control List file |
 | C, displayconfig &lt;worker ID&gt; | Display the current {{site.data.keyword.SecureGateway}} configuration, if available |
-| a, authorize &lt;worker ID&gt; | Toggle the override of the rejectUnauthorized parameter for outbound TLS connections for the specified worker |
 | t, sectoken &lt;security token&gt; | The security token to use for the next gateway connection |
 | c, connect &lt;gateway ID&gt; | Connect to {{site.data.keyword.Bluemix_notm}} by using the gateway ID that is provided |
 | l, loglevel &lt;level&gt; &lt;worker ID&gt; | Change the log level to ERROR, INFO, DEBUG or TRACE |
