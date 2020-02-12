@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-01-07"
+lastupdated: "2020-02-12"
 
 subcollection: securegateway
 
@@ -16,6 +16,17 @@ Our regression tests only cover last 3 versions.
 Please ensure your Secure Gateway Client does not fall more than 3 versions behind, or you might get unexpected behaviour. 
 
 If you are using DataPower as the Secure Gateway Client, please ensure it is a currently supported DataPower version as well.
+
+## v1.8.5fp1
+{: #v185fp1}
+
+Published date: 2020-02-12
+
+### Features
+{: #v185-features}
+
+- Upgrade Node.js to 10.19.0
+- Resolves the error when starting the Secure Gateway Client as Windows service
 
 ## v1.8.5
 {: #v185}
@@ -50,7 +61,7 @@ Published date: 2019-08-21
 
 - Resolves error when sending the large data with HTTP/HTTPS request to on-cloud destiantion
 - Resolves data truncated issue when sending data to on-perm destination
-- Resolves the docker version SG client UI issue
+- Resolves the docker version Secure Gateway Client UI issue
 
 ## v1.8.3
 {: #v183}
@@ -60,8 +71,8 @@ Published date: 2019-07-05
 ### Features and Fixes
 {: #v183-features-and-fixes}
 
-- Resolves Windows installer vulnerability for SG client UI Password
-- Resolves unexpected behaviour when configure SG client UI port and password
+- Resolves Windows installer vulnerability for Secure Gateway Client UI Password
+- Resolves unexpected behaviour when configure Secure Gateway Client UI port and password
 - Resolves the error when generating logs
 - Add the startup option to define the reconnect attempts
 - Add `addtional startup option` field to the auto-start config
@@ -80,7 +91,7 @@ Published date: 2019-05-21
 ### Fixes
 {: #v182fp2-fixes}
 
-- Resolves SG client UI vulnerability
+- Resolves Secure Gateway Client UI vulnerability
 - Resolves resource auth vulnerability
 - Enhance the handling when both side close the connection in the same time
 - Resolves collapsed resource when the on-prem destination connection close too fast

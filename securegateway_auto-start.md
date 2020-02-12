@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2019
-lastupdated: "2019-07-02"
+  years: 2015, 2020
+lastupdated: "2020-02-12"
 
 subcollection: securegateway
 
@@ -43,10 +43,7 @@ This file includes the following important variables to set:
 ### Upstart
 {: #auto-start-upstart}
 
-### Starting the client
-{: #upstart-start}
-
-If you using the upstart capability so that the Secure Gateway client runs automatically at system startup you have to check its configuration first (/etc/ibm/sgenvironment.conf).  Once you have configured the upstart service you can use the following command to start it:
+If you using the upstart capability so that the Secure Gateway client runs automatically at system startup, you have to check its configuration first (/etc/ibm/sgenvironment.conf).  Once you have configured the upstart service you can use the following command to start it:
 
 ```
 sudo initctl start securegateway_client
@@ -60,9 +57,6 @@ sudo initctl restart securegateway_client
 ```
 {: pre}
 
-### Stopping the client
-{: #upstart-stop}
-
 To stop the service, run the following command:
 
 ```
@@ -73,11 +67,7 @@ sudo initctl stop securegateway_client
 ### SystemD
 {: #auto-start-systemd}
 
-
-### Starting the client
-{: #systemd-start}
-
-If you are using the systemD capability so that the Secure Gateway client runs automatically at system startup you may have to check its configuration first (/etc/ibm/sgenvironment.conf).  Once you have configured the upstart service you can use the following command to start it:
+If you are using the systemD capability so that the Secure Gateway client runs automatically at system startup, you have to check its configuration first (/etc/ibm/sgenvironment.conf).  Once you have configured the upstart service you can use the following command to start it:
 
 ```
 systemctl start securegateway_client
@@ -97,9 +87,6 @@ For status on the service:
 systemctl status securegateway_client
 ```
 {: pre}
-
-### Stopping the client
-{: #systemd-stop}
 
 To stop the service, run the following command:
 
@@ -137,6 +124,36 @@ vi /etc/ibm/sgenvironment.conf
 {: codeblock}
 
 Once these steps have been executed, the YasT and System V commands can be used to start/stop the daemon.
+
+### AIX
+{: #auto-start-aix}
+
+When installing the Secure Gateway client on AIX system, the `forever` will be installed as well, it can help you to start Secure Gateway client as a background process, you can use `forever --version` to check.
+
+To start the Secure Gateway client as a background process, you have to check its configuration first (/etc/ibm/sgenvironment.conf).  Once you have configured you can use the following script to start it:
+
+```
+/opt/ibm/securegateway/client/start_sgclient
+```
+{: pre}
+
+To restart the service:
+
+```
+forever restart sgclient
+```
+{: pre}
+
+To stop the service, run the following command:
+
+```
+forever stop sgclient
+```
+{: pre}
+
+Please use the `start_sgclient` script to start the service again when it is stopped.
+
+**Limitation: You must run the `start_sgclient` script after each reboot.**
 
 Return to [Getting Started - Adding a Client](/docs/services/SecureGateway?topic=securegateway-add-client).
 
