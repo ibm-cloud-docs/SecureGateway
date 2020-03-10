@@ -15,11 +15,11 @@ subcollection: securegateway
 ## Blogs and other resources
 {: #blogs-and-others}
 
-- [Securing Destinations with TLS in IBM Cloud Secure Gateway ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/bluemix/2015/04/17/securing-destinations-tls-bluemix-secure-gateway/){: new_window}
-- [IBM Cloud Secure Gateway - Yes I Can Get It ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/bluemix/2015/03/27/bluemix-secure-gateway-yes-can-get/){: new_window}
-- [Reaching the Enterprise Backend using IBM Cloud Secure Gateway via SDK API ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/bluemix/2015/04/07/reaching-enterprise-backend-bluemix-secure-gateway-via-sdk-api/){: new_window}
-- [Reaching enterprise backend with IBM Cloud Secure Gateway via console ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/bluemix/2015/04/01/reaching-enterprise-backend-bluemix-secure-gateway/){: new_window}
-- [Real-life production experience with Secure Gateway ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/blogs/bluemix/2015/11/secure-gateway-in-production-part1/){: new_window}
+- [Securing Destinations with TLS in IBM Cloud Secure Gateway ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/blogs/cloud-archive/2015/04/17/securing-destinations-tls-bluemix-secure-gateway/){: new_window}
+- [IBM Cloud Secure Gateway - Yes I Can Get It ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud/blog/bluemix-secure-gateway-yes-can-get){: new_window}
+- [Reaching the Enterprise Backend using IBM Cloud Secure Gateway via SDK API ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/blogs/cloud-archive/2015/04/07/reaching-enterprise-backend-bluemix-secure-gateway-via-sdk-api/){: new_window}
+- [Reaching enterprise backend with IBM Cloud Secure Gateway via console ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/blogs/cloud-archive/2015/04/01/reaching-enterprise-backend-bluemix-secure-gateway/){: new_window}
+- [Real-life production experience with Secure Gateway ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/blogs/cloud-archive/2015/11/secure-gateway-in-production-part1/){: new_window}
 - [REST API ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/apidocs/secure-gateway){: new_window}
 
 
