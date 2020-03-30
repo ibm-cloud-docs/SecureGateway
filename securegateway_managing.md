@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2019
-lastupdated: "2019-09-02"
+  years: 2015, 2020
+lastupdated: "2020-03-31"
 
 subcollection: securegateway
 
@@ -15,7 +15,6 @@ subcollection: securegateway
 {: #secure-gateway-dashboard}
 From your {{site.data.keyword.SecureGateway}} dashboard, you can quickly see the following details:
 
-- The current number of connections to your destinations across all of your gateways.
 - The inbound data flow across all your gateways in the past 12 hours.
 - The outbound data flow across all your gateways in the past 12 hours.
 - A graph displaying the past 12 hours of usage on a per gateway basis.
@@ -58,11 +57,10 @@ The following tasks can also be completed from the Gateway Info panel:
 {: #dashboard-particular-gateway}
 By clicking on one of the gateway tiles, the dashboard for that particular gateway is displayed.  Similar to the main {{site.data.keyword.SecureGateway}} dashboard, you can quickly see the following details:
 
-- The current number of connections to the destinations on this gateway.
 - The inbound data flow across this gateway in the past 12 hours.
 - The outbound data flow across this gateway in the past 12 hours.
 - A graph displaying the past 12 hours of usage on a per destination basis.
-- Your existing destinations, their current status, and their current number of active connections.
+- Your existing destinations, their current status.
 
 ![Dashboard for a particular gateway](./images/viewGateway.png?raw=true "Dashboard for a particular gateway")
 
