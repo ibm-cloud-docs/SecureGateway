@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-02-12"
+lastupdated: "2020-04-21"
 
 subcollection: securegateway
 
@@ -17,13 +17,23 @@ Please ensure your Secure Gateway Client does not fall more than 3 versions behi
 
 If you are using DataPower as the Secure Gateway Client, please ensure it is a currently supported DataPower version as well.
 
+## v1.8.5fp2
+{: #v185fp2}
+
+Published date: 2020-04-22
+
+### Fixes
+{: #v185fp2-fixes}
+
+- Resolves the error when starting the Secure Gateway Client UI in Windows version
+
 ## v1.8.5fp1
 {: #v185fp1}
 
 Published date: 2020-02-12
 
-### Features
-{: #v185-features}
+### Features and Fixes
+{: #v185fp1-features-and-fixes}
 
 - Upgrade Node.js to 10.19.0
 - Resolves the error when starting the Secure Gateway Client as Windows service
