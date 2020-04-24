@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2019
-lastupdated: "2019-09-03"
+  years: 2015, 2020
+lastupdated: "2020-04-24"
 
 subcollection: securegateway
 
@@ -66,7 +66,7 @@ for /L %i in (0,0,0) do docker run -it ibmcom/secure-gateway-client <gateway_id>
 
 ### What is happening
 {: #not-in-cn-what-is-happening}
-You are trying to implement on-premises client-side TLS by using the Secure Gateway client and you receive the following error message.
+You are trying to implement on-premises client-side TLS by using the Secure Gateway client and the [Reject unauthorized](/docs/services/SecureGateway?topic=securegateway-add-dest#dest-user-auth) of the destination is enabled, but you receive the following error message.
 
 ```
 [ERROR] Connection #<connection ID> had error: Host: <host name>. is not cert's CN: <mycommonname>
@@ -91,15 +91,20 @@ The Common Name, for example, the server FQDN or YOUR name, between your on-prem
 
  1. In the {{site.data.keyword.Bluemix_notm}} UI, go to the Secure Gateway Dashboard.
  2. Select your destination and click the Edit icon.
- 3. Click Upload certificate.
- 4. Upload the PEM certificate file that is to be used to connect to the on-premises system.
+ 3. Disable `Reject unauthorized` or upload the correct certificate in `Resource Authentication`.
+ 4. If you choose to upload certificate, upload the PEM certificate file that is to be used to connect to the on-premises system.
+ - You can verify your certificate file using following command:
+    ```
+    openssl s_client -CAfile <CA> -connect <target_host>:<target_port>
+    ```
+    Where: CA is the certificate file you uploaded, target is the on-premise endpoint.
 
 ## IP is not in the cert's list
 {: #san}
 
 ### What is happening
 {: #san-what-is-happening}
-The CN in the certificate presented is the IP address of the gateway, but the certificate does not have a SAN matching the IP address and the client fails to connect.  
+The [Reject unauthorized](/docs/services/SecureGateway?topic=securegateway-add-dest#dest-user-auth) of the destination is enabled and the CN in the certificate presented is the IP address of the gateway, but the certificate does not have a SAN matching the IP address and the client fails to connect.
 
 Due to hostname resolution issues we are using the IP address in our destination.  The CN in the certificate presented is the IP address of the gateway, but the certificate does not have a SAN matching the IP address and the client fails to connect
 
@@ -118,6 +123,9 @@ What is going on is that the SSL verification code in the gateway client is trea
 
 ### How to fix it
 {: #san-how-to-fix-it}
+
+You can disable the `Reject unauthorized` of the destiantion, or upload the correct certificate as mentioned below:
+
 If you look at the error message it does not say CN, (e.g. [ERROR] Connection ## had error: Host: . is not cert&apos;s CN: ), but the cert&apos;s list, which leads me to believe you have generated your self-signed cert incorrectly. The problem is that the cert was generated using an FQDN or CN with an IP_Address, this will not work since IP addresses are only supported when using SAN.
 
 Method for generating a certificate with an IP as the CN with openssl:
@@ -191,7 +199,7 @@ to the default:
 
 ### What is happening
 {: #depth-zero-what-is-happening}
-You are trying to implement on-premises client-side TLS by using the Secure Gateway client and you receive the following error message.
+You are trying to implement on-premises client-side TLS by using the Secure Gateway client and the [Reject unauthorized](/docs/services/SecureGateway?topic=securegateway-add-dest#dest-user-auth) of the destination is enabled, but you receive the following error message.
 
 ```
 [ERROR] Connection #<connection ID> to destination <target host>:<target port> had error: DEPTH_ZERO_SELF_SIGNED_CERT
@@ -210,8 +218,8 @@ The destination you defined is missing a client-side certificate.
 {: #depth-zero-how-to-fix-it}
  1. In the {{site.data.keyword.Bluemix_notm}} UI, go to the Secure Gateway Dashboard.
  2. Select your destination and click the Edit icon.
- 3. Click Upload certificate.
- 4. Upload the PEM certificate file that is to be used to connect to the on-premises system.
+ 3. Disable `Reject unauthorized` or upload the correct certificate in `Resource Authentication`.
+ 4. If you choose to upload certificate, upload the PEM certificate file that is to be used to connect to the on-premises system.
  - You can verify your certificate file using following command:
     ```
     openssl s_client -CAfile <CA> -connect <target_host>:<target_port>
