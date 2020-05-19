@@ -4,7 +4,7 @@ copyright:
   years: 2015, 2020
 lastupdated: "2020-04-21"
 
-subcollection: securegateway
+subcollection: SecureGateway
 
 ---
 
@@ -111,7 +111,7 @@ Published date: 2019-05-21
 
 You might get certificate error when the Secure Gateway Client is sending connection to the endpoint since this release, to fix the vulnerabilities, we start to check whether the certificate of the endpoint is authorized with the list of supplied CAs.
 
-To fix the error, you can upload the CAs to the [resource authentication](/docs/services/SecureGateway?topic=securegateway-add-dest#cloud-or-on-prem-auth) such that the Secure Gateway Client can trust it, or you can upgrade the Secure Gateway Client to v1.8.4 or later, then disable the `Reject unauthorized` in the [resource authentication](/docs/services/SecureGateway?topic=securegateway-add-dest#cloud-or-on-prem-auth).
+To fix the error, you can upload the CAs to the [resource authentication](/docs/services/SecureGateway?topic=SecureGateway-add-dest#cloud-or-on-prem-auth) such that the Secure Gateway Client can trust it, or you can upgrade the Secure Gateway Client to v1.8.4 or later, then disable the `Reject unauthorized` in the [resource authentication](/docs/services/SecureGateway?topic=SecureGateway-add-dest#cloud-or-on-prem-auth).
 
 ## v1.8.2 Fixpack 1
 {: #v182fp1}
@@ -140,7 +140,7 @@ Published date: 2019-03-12
 ### Breaking changes
 {: #v182-breaking-changes}
 
-The system requirement is changed since this release. For more information, see [System Requirements](/docs/services/SecureGateway?topic=securegateway-client-requirements#system-requirements)
+The system requirement is changed since this release. For more information, see [System Requirements](/docs/services/SecureGateway?topic=SecureGateway-client-requirements#system-requirements)
 
 ## v1.8.1
 {: #v181}
@@ -151,13 +151,13 @@ Published date: 2019-01-13
 {: #v181-features-and-fixes}
 
 - Resolves regular connections hanging issue when closing
-- Uew new path for gateway authentication ([Click here for more info](/docs/services/SecureGateway?topic=securegateway-client-requirements#network-requirements))
+- Uew new path for gateway authentication ([Click here for more info](/docs/services/SecureGateway?topic=SecureGateway-client-requirements#network-requirements))
 - Use new mechanism for log generating (Log translation enhance)
 
 ### Breaking changes
 {: #v181-breaking-changes}
 
-The network requirement is changed since this release. For more information, see [Network Requirements](/docs/services/SecureGateway?topic=securegateway-client-requirements#network-requirements)
+The network requirement is changed since this release. For more information, see [Network Requirements](/docs/services/SecureGateway?topic=SecureGateway-client-requirements#network-requirements)
 
 ## v1.8.0 Fixpack 9
 {: #v180fp9}

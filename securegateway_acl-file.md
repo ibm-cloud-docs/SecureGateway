@@ -4,7 +4,7 @@ copyright:
   years: 2015, 2017
 lastupdated: "2017-04-10"
 
-subcollection: securegateway
+subcollection: SecureGateway
 
 ---
 {:screen: .screen}

@@ -4,7 +4,7 @@ copyright:
   years: 2015, 2019
 lastupdated: "2019-07-12"
 
-subcollection: securegateway
+subcollection: SecureGateway
 
 ---
 
@@ -29,7 +29,7 @@ To finish the creation of your gateway, click Add Gateway.  Once the gateway is 
 
 ![New Gateway](./images/newGateway.png?raw=true "New Gateway")
 
-Now that you have your newly created gateway, you can [connect your first client](/docs/services/SecureGateway?topic=securegateway-add-client).
+Now that you have your newly created gateway, you can [connect your first client](/docs/services/SecureGateway?topic=SecureGateway-add-client).
 
 ## Regenerate security token
 {: #regen-sectoken}

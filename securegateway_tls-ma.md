@@ -4,7 +4,7 @@ copyright:
   years: 2015, 2017
 lastupdated: "2017-04-10"
 
-subcollection: securegateway
+subcollection: SecureGateway
 
 ---
 {:screen: .screen}
@@ -33,7 +33,7 @@ In order for the Secure Gateway Client to authenticate the resource it is connec
 
 ### Client Certificate and Key
 {: #tls-ma-client-cert-and-key}
-If I need to specify how the Secure Gateway Client will identify itself to my resource, I can upload a certificate and key here for the Client to use.  Because the Client and the resource are running on the same machine, I can leave these empty and have the Secure Gateway servers automatically generate a pair for me.  If my resource was on a separate host, I would need to [generate a cert/key pair to upload](/docs/services/SecureGateway?topic=securegateway-cert-key-management).
+If I need to specify how the Secure Gateway Client will identify itself to my resource, I can upload a certificate and key here for the Client to use.  Because the Client and the resource are running on the same machine, I can leave these empty and have the Secure Gateway servers automatically generate a pair for me.  If my resource was on a separate host, I would need to [generate a cert/key pair to upload](/docs/services/SecureGateway?topic=SecureGateway-cert-key-management).
 
 ![Local TLS Mutual Authentication](./images/localTLSma.png?raw=true "Local TLS Mutual Authentication")
 

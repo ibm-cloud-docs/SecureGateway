@@ -4,7 +4,7 @@ copyright:
   years: 2015, 2020
 lastupdated: "2020-01-07"
 
-subcollection: securegateway
+subcollection: SecureGateway
 
 ---
 

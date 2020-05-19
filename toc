@@ -1,7 +1,7 @@
 {:navgroup: .navgroup}
 {:topicgroup: .topicgroup}
 
-{: .toc subcollection="securegateway" category="integration" audience="service" arm="337" href="/docs/services/SecureGateway?topic=securegateway-getting-started-with-sg" path="services/SecureGateway"}
+{: .toc subcollection="SecureGateway" category="integration" audience="service" href="/docs/services/SecureGateway?topic=SecureGateway-getting-started-with-sg" path="SecureGateway"}
 Secure Gateway
 
   {: .navgroup id="learn"}

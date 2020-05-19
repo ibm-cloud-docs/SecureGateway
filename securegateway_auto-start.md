@@ -4,7 +4,7 @@ copyright:
   years: 2015, 2020
 lastupdated: "2020-02-12"
 
-subcollection: securegateway
+subcollection: SecureGateway
 
 ---
 {:screen: .screen}
@@ -36,7 +36,7 @@ This file includes the following important variables to set:
 | USE_UI   | Set this to 'N' if you don't want to launch the client UI |
 | UI_PORT  | The port on which you want to launch client UI on (default is 9003) |
 | LANGUAGE | The language you want to have client logs in (default is en) |
-| SECGW_ARGS | The addtional [startup options](/docs/services/SecureGateway?topic=securegateway-client-interacting#startup-args) you want to add (default is `--no_license --l $LOGLEVEL --service`) |
+| SECGW_ARGS | The addtional [startup options](/docs/services/SecureGateway?topic=SecureGateway-client-interacting#startup-args) you want to add (default is `--no_license --l $LOGLEVEL --service`) |
 
 <b>Note:</b> This file is only read if you are using your system's auto-start facility.  If you are running the client manually this file is ignored.
 
@@ -155,7 +155,7 @@ Please use the `start_sgclient` script to start the service again when it is sto
 
 **Limitation: You must run the `start_sgclient` script after each reboot.**
 
-Return to [Getting Started - Adding a Client](/docs/services/SecureGateway?topic=securegateway-add-client).
+Return to [Getting Started - Adding a Client](/docs/services/SecureGateway?topic=SecureGateway-add-client).
 
 ## Windows
 {: #auto-start-windows}
@@ -197,4 +197,4 @@ The application logs for windows service will be stored at:
 
  The logs are rolled into a new file on a daily basis.
 
-Return to [Getting Started - Adding a Client](/docs/services/SecureGateway?topic=securegateway-add-client).
+Return to [Getting Started - Adding a Client](/docs/services/SecureGateway?topic=SecureGateway-add-client).

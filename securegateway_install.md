@@ -4,7 +4,7 @@ copyright:
   years: 2015, 2020
 lastupdated: "2020-05-19"
 
-subcollection: securegateway
+subcollection: SecureGateway
 
 ---
 {:screen: .screen}
@@ -46,7 +46,7 @@ Normally it takes two parameters, your {{site.data.keyword.SecureGateway}} gatew
 
 The {{site.data.keyword.SecureGateway}} Client only supports the `pull` and `run` commands for manipulating the container.
 
-Return to [Getting Started - Adding a Client](/docs/services/SecureGateway?topic=securegateway-add-client).
+Return to [Getting Started - Adding a Client](/docs/services/SecureGateway?topic=SecureGateway-add-client).
 
 ## Mac OS X
 {: #installing-mac}
@@ -70,7 +70,7 @@ You may require administrative privileges to perform this installation, dependin
 
 To start the client, run the `secgw.command` file located in the default installation location: `/Applications/ibm/`.
 
-Return to [Getting Started - Adding a Client](/docs/services/SecureGateway?topic=securegateway-add-client).
+Return to [Getting Started - Adding a Client](/docs/services/SecureGateway?topic=SecureGateway-add-client).
 
 ## Linux
 {: #installing-linux}
@@ -186,7 +186,7 @@ License: http://www.ibm.com/software/sla/sladb.nsf/lilookup/986C7686F22D4D358525
 
    The client installer starts and installs the client, it will create a sgenvironment.conf file in /etc/ibm.
 
-2. Optional: If you want to use the system's upstart process you must edit this file and provide the following for the client to start correctly. See [Using Upstart](/docs/services/SecureGateway?topic=securegateway-auto-start-conf#auto-start-linux) for more information on editing this configuration file.
+2. Optional: If you want to use the system's upstart process you must edit this file and provide the following for the client to start correctly. See [Using Upstart](/docs/services/SecureGateway?topic=SecureGateway-auto-start-conf#auto-start-linux) for more information on editing this configuration file.
 
 3. If you started the client using upstart, check the log file to make sure it is running correctly.
 
@@ -230,7 +230,7 @@ node lib/secgwclient.js <gateway ID> -t <security token>
 
 Normally it takes two parameters, a {{site.data.keyword.SecureGateway}} gateway ID and the gateway's security token, both of which are available via the {{site.data.keyword.SecureGateway}} Dashboard.
 
-Return to [Getting Started - Adding a Client](/docs/services/SecureGateway?topic=securegateway-add-client).
+Return to [Getting Started - Adding a Client](/docs/services/SecureGateway?topic=SecureGateway-add-client).
 
 ## Windows
 {: #installing-windows}
@@ -275,12 +275,12 @@ Alternatively, navigate to `<Installation_directory>\ibm\securegateway\client` a
 
 <b>Note:</b>You can choose to use the configurations stored in `<Installation_directory>\ibm\securegateway\client\securegw_service.config` file or provide the details interactively.
 
-Return to [Getting Started - Adding a Client](/docs/services/SecureGateway?topic=securegateway-add-client).
+Return to [Getting Started - Adding a Client](/docs/services/SecureGateway?topic=SecureGateway-add-client).
 
 ## DataPower
 {: #installing-datapower}
 
-DataPower has an embedded version of the {{site.data.keyword.SecureGateway}} Client.  Depending on the DataPower version, you may have a different version of the {{site.data.keyword.SecureGateway}} Client.  Be aware of any applicable [DataPower Client Limitations](/docs/services/SecureGateway?topic=securegateway-client-interacting#limits-datapower). Using the old Secure Gateway Client might experience unexpected errors.
+DataPower has an embedded version of the {{site.data.keyword.SecureGateway}} Client.  Depending on the DataPower version, you may have a different version of the {{site.data.keyword.SecureGateway}} Client.  Be aware of any applicable [DataPower Client Limitations](/docs/services/SecureGateway?topic=SecureGateway-client-interacting#limits-datapower). Using the old Secure Gateway Client might experience unexpected errors.
 
 | DataPower Version | {{site.data.keyword.SecureGateway}} Client Version  |
 | -- | --  |
@@ -301,4 +301,4 @@ DataPower has an embedded version of the {{site.data.keyword.SecureGateway}} Cli
 3. Click `Add` to configure a new client connection
 4. Provide a Name, the Gateway ID, and the Security Token (if applicable) and then apply the changes.
 
-Return to [Getting Started - Adding a Client](/docs/services/SecureGateway?topic=securegateway-add-client).
+Return to [Getting Started - Adding a Client](/docs/services/SecureGateway?topic=SecureGateway-add-client).

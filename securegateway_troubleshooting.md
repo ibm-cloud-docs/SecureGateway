@@ -4,7 +4,7 @@ copyright:
   years: 2015, 2020
 lastupdated: "2020-04-24"
 
-subcollection: securegateway
+subcollection: SecureGateway
 
 ---
 {:screen: .screen}
@@ -66,7 +66,7 @@ for /L %i in (0,0,0) do docker run -it ibmcom/secure-gateway-client <gateway_id>
 
 ### What is happening
 {: #not-in-cn-what-is-happening}
-You are trying to implement on-premises client-side TLS by using the Secure Gateway client and the [Reject unauthorized](/docs/services/SecureGateway?topic=securegateway-add-dest#dest-user-auth) of the destination is enabled, but you receive the following error message.
+You are trying to implement on-premises client-side TLS by using the Secure Gateway client and the [Reject unauthorized](/docs/services/SecureGateway?topic=SecureGateway-add-dest#dest-user-auth) of the destination is enabled, but you receive the following error message.
 
 ```
 [ERROR] Connection #<connection ID> had error: Host: <host name>. is not cert's CN: <mycommonname>
@@ -104,7 +104,7 @@ The Common Name, for example, the server FQDN or YOUR name, between your on-prem
 
 ### What is happening
 {: #san-what-is-happening}
-The [Reject unauthorized](/docs/services/SecureGateway?topic=securegateway-add-dest#dest-user-auth) of the destination is enabled and the CN in the certificate presented is the IP address of the gateway, but the certificate does not have a SAN matching the IP address and the client fails to connect.
+The [Reject unauthorized](/docs/services/SecureGateway?topic=SecureGateway-add-dest#dest-user-auth) of the destination is enabled and the CN in the certificate presented is the IP address of the gateway, but the certificate does not have a SAN matching the IP address and the client fails to connect.
 
 Due to hostname resolution issues we are using the IP address in our destination.  The CN in the certificate presented is the IP address of the gateway, but the certificate does not have a SAN matching the IP address and the client fails to connect
 
@@ -199,7 +199,7 @@ to the default:
 
 ### What is happening
 {: #depth-zero-what-is-happening}
-You are trying to implement on-premises client-side TLS by using the Secure Gateway client and the [Reject unauthorized](/docs/services/SecureGateway?topic=securegateway-add-dest#dest-user-auth) of the destination is enabled, but you receive the following error message.
+You are trying to implement on-premises client-side TLS by using the Secure Gateway client and the [Reject unauthorized](/docs/services/SecureGateway?topic=SecureGateway-add-dest#dest-user-auth) of the destination is enabled, but you receive the following error message.
 
 ```
 [ERROR] Connection #<connection ID> to destination <target host>:<target port> had error: DEPTH_ZERO_SELF_SIGNED_CERT

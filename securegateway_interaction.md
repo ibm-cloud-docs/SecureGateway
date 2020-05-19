@@ -4,7 +4,7 @@ copyright:
   years: 2015, 2019
 lastupdated: "2020-01-07"
 
-subcollection: securegateway
+subcollection: SecureGateway
 
 ---
 {:screen: .screen}
@@ -84,7 +84,7 @@ node lib/secgwclient.js <myGatewayID_1> <myGatewayID_2> -t none--<token for gate
 ```
 {: pre}
 
-Return to [Getting Started - Adding a Client](/docs/services/SecureGateway?topic=securegateway-add-client).
+Return to [Getting Started - Adding a Client](/docs/services/SecureGateway?topic=SecureGateway-add-client).
 
 ## Interactive Configuration
 {: #interactive}
@@ -121,9 +121,9 @@ The {{site.data.keyword.SecureGateway}} client has a command line interface (cli
 
 <b>Note:</b> If a connection has been specified with the `select` command and another command is called without providing a worker ID, the command will attempt to run on the connection specified by `select`.
 
-For more details on configuring the Access Control List, [click here](/docs/services/SecureGateway?topic=securegateway-acl).
+For more details on configuring the Access Control List, [click here](/docs/services/SecureGateway?topic=SecureGateway-acl).
 
-Return to [Getting Started - Adding a Client](/docs/services/SecureGateway?topic=securegateway-add-client).
+Return to [Getting Started - Adding a Client](/docs/services/SecureGateway?topic=SecureGateway-add-client).
 
 ## Client UI
 {: #client-ui}
@@ -162,7 +162,7 @@ This page will allow you to manipulate the Access Control List for the selected 
 
 This page will show the current connection information for the selected client (shown in the upper right of the page).  Information such as gateway description, number of current connections, and reverse destination listeners can be seen here.
 
-Return to [Getting Started - Adding a Client](/docs/services/SecureGateway?topic=securegateway-add-client).
+Return to [Getting Started - Adding a Client](/docs/services/SecureGateway?topic=SecureGateway-add-client).
 
 ## Remote Client Termination
 {: #client-remote}
@@ -172,10 +172,10 @@ If a client has been provided an ID, then it can be remotely terminated via the 
 ## Client behind proxy
 {: #client-proxy}
 
-The Secure Gateway client uses outbound port 443 and port 9000 to connect to npm registry and the {{site.data.keyword.Bluemix}} environment as mentioned in the [network requirement](/docs/services/SecureGateway?topic=securegateway-client-requirements#network-requirements). If the Secure Gateway client use the proxy for the outbound request, you can use following option to define the proxy configuration.
+The Secure Gateway client uses outbound port 443 and port 9000 to connect to npm registry and the {{site.data.keyword.Bluemix}} environment as mentioned in the [network requirement](/docs/services/SecureGateway?topic=SecureGateway-client-requirements#network-requirements). If the Secure Gateway client use the proxy for the outbound request, you can use following option to define the proxy configuration.
 
 ### Port `443` for gateway authentication connection and port `9000` for WSS connection
-You can use the [startup option](#startup-args) `--proxy` to define the proxy agent for the outbound request to the Secure Gateway server, for example, if you are using the auto-start [configuration file](/docs/services/SecureGateway?topic=securegateway-auto-start-conf#auto-start-linux):
+You can use the [startup option](#startup-args) `--proxy` to define the proxy agent for the outbound request to the Secure Gateway server, for example, if you are using the auto-start [configuration file](/docs/services/SecureGateway?topic=SecureGateway-auto-start-conf#auto-start-linux):
 ```
 SECGW_ARGS="--no_license --l $LOGLEVEL -x <proxy_info> --service"
 ```
@@ -222,4 +222,4 @@ The {{site.data.keyword.SecureGateway}} DataPower Client is in the process of be
 - Full certificate chains with destination-side TLS are not supported prior to DataPower version 7.5.1.0
 - Cloud destinations are not supported prior to DataPower version 7.5.1.0
 - The log level can't be changed to TRACE level
-- The latest Secure Gateway Client version in DataPower is 1.8.2fp1, please check [here](/docs/services/SecureGateway?topic=securegateway-client-install#installing-datapower) for more information
+- The latest Secure Gateway Client version in DataPower is 1.8.2fp1, please check [here](/docs/services/SecureGateway?topic=SecureGateway-client-install#installing-datapower) for more information

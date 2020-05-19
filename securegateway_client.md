@@ -4,7 +4,7 @@ copyright:
   years: 2015, 2017
 lastupdated: "2017-04-25"
 
-subcollection: securegateway
+subcollection: SecureGateway
 
 ---
 
@@ -19,12 +19,12 @@ From within your new gateway and on the Clients tab, click the Connect Client bu
 
 ![Connect Client](./images/connectClient.png?raw=true "Connect Client")
 
-After selecting your preferred client, [click here to see how to install it](/docs/services/SecureGateway?topic=securegateway-client-install).
+After selecting your preferred client, [click here to see how to install it](/docs/services/SecureGateway?topic=SecureGateway-client-install).
 
-Once you have installed your client, you can configure it to [start automatically](/docs/services/SecureGateway?topic=securegateway-auto-start-conf) or to [run interactively](/docs/services/SecureGateway?topic=securegateway-client-interacting).
+Once you have installed your client, you can configure it to [start automatically](/docs/services/SecureGateway?topic=SecureGateway-auto-start-conf) or to [run interactively](/docs/services/SecureGateway?topic=SecureGateway-client-interacting).
 
 ![Connected Client](./images/connectedClient.png?raw=true "Connected Client")
 
-If you would like to configure the Access Control List for your client now, [click here for more details](/docs/services/SecureGateway?topic=securegateway-acl).
+If you would like to configure the Access Control List for your client now, [click here for more details](/docs/services/SecureGateway?topic=SecureGateway-acl).
 
-Now that you have your client connected, you can [create your first destination](/docs/services/SecureGateway?topic=securegateway-add-dest).
+Now that you have your client connected, you can [create your first destination](/docs/services/SecureGateway?topic=SecureGateway-add-dest).
