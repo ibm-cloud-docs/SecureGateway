@@ -1,0 +1,262 @@
+{
+       "faq-osi": [
+        "layer of OSI model for Secure Gateway",
+        "layer of the OSI model does Secure Gateway represent",
+        "SG network layer",
+        "OSI model Secure Gateway tier",
+        "Secure Gateway OSI reference model",
+        "SG in seven layers model"
+    ],
+    "faq-tls": [
+        "TLS version Secure Gateway support",
+        "SSL version for SG support",
+        "supported TLS version for SG",
+        "version of TLS does the Secure Gateway support",
+        "version of security protocol Secure Gateway support",
+        "version of Transport Layer Security for Secure Gateway",
+        "Secure Socket Layer version for SG "
+    ],
+    "faq-disabled": [
+        "why disable Secure Gateway",
+        "why should I disable a secure gateway or destination",
+        "disable SG destination",
+        "how to diable a SG destination",
+        "Secure Gateway maintenance mode",
+        "disabling sercure gateway",
+        "temporary disabled Secure Gateway",
+        "best practice of SG destination maintenance"
+    ],
+    "faq-automation-spaces": [
+        "Secure Gateway space recommended approach",
+        "create automation across multiple spaces in SG",
+        "SG spaces best practice",
+        "creating automation across SG spaces",
+        "Secure Gateway cover multiple spaces",
+        "Require Secure Gateway space",
+        "Need SG each space"
+    ],
+    "faq-automation-orgs": [
+        "Create Secure Gateway each org",
+        "Have SG instance in organization",
+        "Secure Gateway organisation",
+        "Orgs tactics for Secure Gateway",
+        "Org strategies for SG"
+    ],
+    "faq-app-space": [
+        "Run app SG in same space",
+        "Need application in same space with Secure Gateway",
+        "run the Node.js app in the same space as Secure Gateway",
+        "my app need to be in the same space as SG",
+        "relationship between app and Secure Gateway",
+        "Application Secure Gateway deployment",
+        "where to place app and SG"
+    ],
+    "faq-server-logs": [
+        "retrieve SG server logs",
+        "find error level logs for Secure Gateway server",
+        "retrieve SG DataPower logs",
+        "get Secure Gateway server logs",
+        "get Secure Gateway DataPower logs",
+        "find the logs for Secure Gateway server errors",
+        "debug Secure Gateway server logs",
+        "SG server log level",
+        "Secure Gateway server trace logs"
+    ],
+    "faq-states": [
+        "functional states of Secure Gateway",
+        "lifecycle states of gateways and destinations in SG",
+        "lifecycle of Secure Gateway state",
+        "difference functional and non-functional state of SG",
+        "different states for secure gateway",
+        "difference between disabled and enabled of Secure Gateway",
+        "non functional states of SG"
+    ],
+    "faq-data-size": [
+        "Secure Gateway client activity",
+        "SG client transmission data",
+        "the data activities through Secure Gateway Client",
+        "Secure Gateway client data size",
+        "different activities in SG client",
+        "Secure Gateway client throughput",
+        "SG client send size of data"
+    ],
+    "faq-connect-num": [
+        "Secure Gateway client real time connection",
+        "amount of the real-time connections on Secure Gateway",
+        "Real time active connections of SG",
+        "get connections information for secure gateway",
+        "total amount of SecureGateway connections ",
+        "connection stats for Secure Gateway client",
+        "connection information for SG"
+    ],
+    "faq-secure-app": [
+        "Security options for Secure Gateway",
+        "recommended configurations to make my SG connections more secure",
+        "use mutual authentication for SG",
+        "configure security for Secure Gateway",
+        "protect SecureGateway against Man-in-the-middle attack",
+        "Secure Gateway security",
+        "Configure Access Control List for SG",
+        "white list for Secure Gateway",
+        "IP table rules for SG",
+        "ACL for SecureGateway",
+        "access control list for Secure Gateway"
+    ],
+    "faq-gateway-migration": [
+        "what's migrate button of Secure Gateway",
+        "SG domain change ",
+        "What is gateway migration",
+        "supported domain name for SecureGateway",
+        "migration within secure gateway",
+        "migrate button on the gateway panel for",
+        "domain migration for Secure Gateway",
+        "old domain work for SG"
+    ],
+    "faq-notification": [
+        "receive Secure Gateway notifications",
+        "subscribe SG notifications",
+        "Where can I receive Secure Gateway notifications",
+        "know planned maintenance for SecureGateway",
+        "know the maintainence schedule for SG",
+        "find maintenance for Secure Gateway",
+        "RSS of SG maintenance"
+    ],
+    "faq-manually-restart": [
+        "manually restart SG after disruptive maintenance",
+        "auto restart Secure Gateway after disruptive maintenance",
+        "how reconnect option work SecureGateway",
+        "avoid manually restart after the disruptive maintenance",
+        "restart after my SG server was down",
+        "avoid manual restart Secure Gateway",
+        "avoid SG service downtime "
+    ],
+    "faq-dp-log": [
+        "export Secure Gateway client logs to DataPower",
+        "capture the Secure Gateway Client logs on DataPower",
+        "write SG client logs to file on DataPower",
+        "Secure Gateway Client logs on DataPower",
+        "capture SG Client logs and write it to a file on DataPower",
+        "SG log target DataPower",
+        "event subscription Secure Gateway DataPower"
+    ],
+    "best-practices": [
+        "run Secure Gateway client on VM",
+        "running SG client on VM",
+        "install SecureGateway client behind NAT",
+        "installing Secure Gateway client in yellow zone",
+        "run SG client in DMZ"
+    ],
+    "initial-troubleshooting": [
+        "ETIMEDOUT Secure Gateway",
+        "ECONNREFUSED SG client cause",
+        "ECONNRESET SecureGateway troubleshoot",
+        "REMOTE_RST Secure Gateway reason",
+        "troubleshooting SG connection "
+    ],
+    "docker-auto-restart": [
+        "run Secure Gateway client on Docker",
+        "cron SG client on Docker",
+        "configure Docker client to restart when SG server restarts",
+        "restart SecureGateway client on Docker ",
+        "get the SG client to start automatically after a restart ",
+        "cronjob SG client on Docker",
+        "automatic restart Secure Gateway client on Docker"
+    ],
+    "not-in-cn": [
+        "Secure Gateway Host is not cert's CN error",
+        "getting connection error message: host is not in cert's CN",
+        "SG client FQDN",
+        "host is not in cert's CN in secure gateway",
+        "SecureGateway client common name",
+        "upload certs for Secure Gateway client",
+        "upload certification for SG client"
+    ],
+    "san": [
+        "SAN for Secure Gateway client",
+        "subjectAltName for SG client",
+        "use IP for SecureGateway client",
+        "IP is not in the cert's list for secure gateway",
+        "cannot connect Secure Gateway with IP",
+        "can't connect SG via IP"
+    ],
+    "depth-zero": [
+        "what's DEPTH_ZERO_SELF_SIGNED_CERT of SG",
+        "DEPTH_ZERO_SELF_SIGNED_CERT error of Secure Gateway",
+        "how to fix DEPTH_ZERO_SELF_SIGNED_CERT of SecureGateway",
+        "resolve DEPTH_ZERO_SELF_SIGNED_CERT of Secure Gateway",
+        "DEPTH_ZERO_SELF_SIGNED_CERT ",
+        "fixing DEPTH_ZERO_SELF_SIGNED_CERT of SG"
+    ],
+    "docker-load-acl": [
+        "load interactively ACL Secure Gateway Docker client",
+        "load access control list in SG Docker client",
+        "interactively load an ACL file in the Docker client of SG",
+        "load aclfile.txt SecureGateway Docker client",
+        "how to load ACL in container Secure Gateway client",
+        "load up access control list in SG",
+        "Dcoker image with ACL SG client"
+    ],
+    "gateway-ui-unauthorized": [
+        "401 Unauthorized error on Secure Gateway console",
+        "401 Unauthorized error on SG panel",
+        "401 Unauthorized error on SecureGateway GUI",
+        "Cloud Foundry space role for Secure Gateway",
+        "which role needed for SG",
+        "error -  401 Unauthorized when accessing Secure Gateway gateway "
+    ],
+    "faq-concurrent": [
+        "max concurrent connections for Secure Gateway",
+        "many concurrent connections can Secure Gateway handle",
+        "number of concurrent connections SG handle",
+        "max number of connections for secure gateway",
+        "concurrent connection limit for SecureGateway",
+        "maximum concurrent connections for SG",
+        "limitation of concurrent connections SecureGateway afford"
+    ],
+    "faq-client-logs": [
+        "location of Secure Gateway client logs",
+        "Secure Gateway client log location",
+        "where's SG client logs",
+        "directory of SecureGateway client logs",
+        "find Secure Gateway client logs",
+        "finding Secure Gateway client logs",
+        "folder of Secure Gateway client logs",
+        "find SG client logs"
+    ],
+    "faq-autostart-aix": [
+        "run Secure Gateway client daemon AIX",
+        "run Secure Gateway client as a deamon on AIX",
+        "running SG client as AIX service",
+        "forever SecureGateway client AIX",
+        "start Secure Gateway client service AIX",
+        "start_sgclient SG client AIX"
+    ],
+    "faq-ports": [
+        "what ports Secure Gateway client use",
+        "outbound port for SG client",
+        "outbound connection for SecureGateway client",
+        "ports does Secure Gateway client use",
+        "port requirements for secure gateway",
+        "network port configuration for Secure Gateway client",
+        "port rules for SG client"
+    ],
+    "faq-multiple": [
+        "two Secure Gateway on same machine",
+        "Secure Gateway client to handle two gateways on a same machine",
+        "multiple SG clients ",
+        "handle two gateways Secure Gateway client",
+        "tips for multiple SecureGateway",
+        "more than one Secure Gateway on a machine",
+        "multiple Secure Gateway on one pc"
+    ],
+    "faq-ha": [
+        "Secure Gateway High Availability",
+        "HA support for SG",
+        "HA configuration for SecureGateway",
+        "disaster recovery option for SG",
+        "DR for Secure Gateway",
+        "use HA with Secure Gateway",
+        "Secure gateway server support HA",
+        "Secure Gateway server supports High Availability "
+    ]
+}

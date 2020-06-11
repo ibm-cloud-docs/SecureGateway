@@ -89,6 +89,18 @@ Do I need to run the Node.js app in the same {{site.data.keyword.Bluemix_notm}} 
 {: #app-space-answer}
 No, you do not need to run your app in the same {{site.data.keyword.Bluemix_notm}} space as the Secure Gateway service.
 
+## Can a Secure Gateway client handle two gateways on the same machine?
+{: #faq-multiple}
+
+### Question
+Can a Secure Gateway client handle two gateways on the same machine?
+
+### Answer
+Yes, you can specify multiple connections through the command line as shown in this excerpt from [Startup Argument Examples](/docs/SecureGateway?topic=SecureGateway-client-interacting#startup-examples):
+```
+node lib/secgwclient.js <gateway_id_1> <gateway_id_2> -t <security_token_1>--<security_token_2>
+```
+
 ## Can I get the Secure Gateway server logs?
 {: #faq-server-logs}
 
@@ -99,6 +111,23 @@ Can I retrieve error level logs for the Secure Gateway server?
 ### Answer
 {: #server-logs-answer}
 Error level logs on the server cannot be retrieved.  Only errors that are made at the time of the request can be seen.
+
+## Where can I find the client logs for the Secure Gateway client? 
+{: #faq-client-logs}
+
+### Question
+Where can I find the client logs for the Secure Gateway client? 
+
+### Answer
+By default, the client logs can be found at the following locations:
+
+Windows: `%Installation_directory%/ibm/securegateway/client
+/logs/securegw_win_service.log`
+Linux: `/var/log/securegateway/client_console.log`
+AIX: `/opt/ibm/securegateway/client_console.log`
+
+You can change the location by using the `-p` option when starting the Secure Gateway client. See also [Startup Arguments and Options](/docs/SecureGateway?topic=SecureGateway-client-interacting#startup-args).
+
 
 ## What are the functional states of Secure Gateway?
 {: #faq-states}
@@ -170,6 +199,15 @@ The following connection statistics would be displayed:
 - Real-time active connections.
 
 Note: This connections information is on Client level, not in Gateway level. If you need connections information in Gateway level, please check each Client which connected to that Gateway.
+
+## How many concurrent connections can Secure Gateway handle?
+{: #faq-concurrent}
+
+### Question
+How many concurrent connections can Secure Gateway handle?
+
+### Answer
+The Secure Gateway can only handle 250 concurrent connections. For details, see [Limitations](/docs/SecureGateway?topic=SecureGateway-client-interacting#limits).
 
 ## What are the recommended configurations to make my connections more secure?
 {: #faq-secure-app}
@@ -248,6 +286,16 @@ If the maintenance needs to have disruption over 10 minutes, then you might need
 
 Normally, the service downtime will be equal to or less than 10 minutes, the Secure Gateway client (after version v180) should be able to reconnect to the Secure Gateway server automatically.
 
+
+## How do I run the Secure Gateway client as a daemon on AIX?
+{: #faq-autostart-aix}
+
+### Question
+How do I run the Secure Gateway client as a daemon on AIX?
+
+### Answer
+You use `forever` along with a script to start the Secure Gateway client as a background process on AIX.  Steps and details are in the [AIX](docs/SecureGateway?topic=SecureGateway-auto-start-conf#auto-start-aix) section of [Configuring Auto-start for the Client](/docs/SecureGateway?topic=SecureGateway-auto-start-conf).
+
 ## How can I capture the Secure Gateway Client logs on DataPower?
 {: #faq-dp-log}
 
@@ -274,3 +322,19 @@ The event category of Secure Gateway Client logs is `sgclient`. You can create a
     - Select the `Add` button to add a target event subscription
     - Fill in the `Event Category` selecting `sgclient`
     - Fill in the `Minimum Event Priority` of `debug`
+
+## Which ports does the Secure Gateway client use?
+{: #faq-ports}
+
+### Question
+Which ports does the Secure Gateway client use?
+
+### Answer
+The Secure Gateway Client uses outbound port 443 and port 9000 to connect to npm registry and the IBM Cloud environment.  See [Network requirements](/docs/SecureGateway?topic=SecureGateway-client-requirements#network-requirements) for details.
+
+## Does the Secure Gateway server support High Availability?
+{: #faq-ha}
+
+### Answer
+The server does not support High Availability (HA) nor provide redundancy.  To avoid interruption during planned maintenance or outages, you could use the gateway server in another region.  You can achieve HA with multiple client connections to the same gateway ID as allowed by your [Secure Gateway Service Plan](/docs/SecureGateway?topic=SecureGateway-secure-gateway-service-plans).  For additional information, see [High Availability](/docs/SecureGateway?topic=SecureGateway-about-sg#about-ha).
+

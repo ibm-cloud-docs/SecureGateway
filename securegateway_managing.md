@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2020
-lastupdated: "2020-03-30"
+  years: 2015, 2019
+lastupdated: "2019-09-02"
 
 subcollection: SecureGateway
 

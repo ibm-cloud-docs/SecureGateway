@@ -284,7 +284,7 @@ When you access the Secure Gateway instance via the url `https://cloud.ibm.com/s
 ## Getting additional help and support
 {: #getting-help-and-support}
 
-If you have technical questions about developing or deploying an application with Secure Gateway, post your question on [Stack Overflow ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://stackoverflow.com/search?q=securegateway+ibm-cloud).  Tag your question with "ibm-cloud" and "secure-gateway" so that it can be found more readily by {{site.data.keyword.Bluemix_notm}} development teams.
+If you have technical questions about developing or deploying an application with Secure Gateway, post your question on [Stack Overflow ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://stackoverflow.com/search?q=SecureGateway+ibm-cloud).  Tag your question with "ibm-cloud" and "secure-gateway" so that it can be found more readily by {{site.data.keyword.Bluemix_notm}} development teams.
 
 If you have question about the service or instructions on how to get started, use the [IBM developerWorks dW Answers ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/answers/topics/securegateway) forum along with the "ibm-cloud" and "securegateway" tags.
 
