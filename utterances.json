@@ -56,6 +56,8 @@
         "find error level logs for Secure Gateway server",
         "retrieve SG DataPower logs",
         "get Secure Gateway server logs",
+        "where are the logs for secure gateway",
+        "where to find SG logs",
         "get Secure Gateway DataPower logs",
         "find the logs for Secure Gateway server errors",
         "debug Secure Gateway server logs",
@@ -150,6 +152,8 @@
         "ETIMEDOUT Secure Gateway",
         "ECONNREFUSED SG client cause",
         "ECONNRESET SecureGateway troubleshoot",
+        "initial troubleshooting Steps for SG",
+        "troubleshooting for secure gateway",  
         "REMOTE_RST Secure Gateway reason",
         "troubleshooting SG connection "
     ],
