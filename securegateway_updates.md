@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-04-21"
+lastupdated: "2020-09-02"
 
 subcollection: SecureGateway
 
@@ -50,6 +50,11 @@ Published date: 2020-01-07
 - Node modules vulnerabilities fix
 - Resolves the Node.js conflict on Windows installer
 - Add proxy option to the installer for npm module installation
+
+### Breaking changes
+{: #v185-breaking-changes}
+
+Please be aware the breaking changes for the Node.js version upgrade, for example, the OpenSSL is upgraded to 1.1.1d because of Node.js upgrade which might cause some breaking changes on the TLS connections since the security policy is stricter than before, customer will get error when enable `Reject unauthorized` and connect to the endpoint which using cert/key which generate with insecure algorithm.
 
 ## v1.8.4
 {: #v184}
