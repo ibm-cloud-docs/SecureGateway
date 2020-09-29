@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-09-02"
+lastupdated: "2020-09-29"
 
 subcollection: SecureGateway
 
@@ -16,6 +16,22 @@ Our regression tests only cover last 3 versions.
 Please ensure your Secure Gateway Client does not fall more than 3 versions behind, or you might get unexpected behaviour. 
 
 If you are using DataPower as the Secure Gateway Client, please ensure it is a currently supported DataPower version as well.
+
+## v1.8.6
+{: #v186}
+
+Published date: 2020-09-22
+
+### Fixes
+{: #v186-fixes}
+
+- Resolves potential vulnerabilities
+- Resolves unexpected websocket fatal error
+- Resolves error when update destination too frequently
+- Resolves incorrect UI version info
+- Resolves DataPower SG client unexpected restart issue
+- Enhance concurrent connection limit counting and logging
+- Resolved incorrect UI version info
 
 ## v1.8.5fp2
 {: #v185fp2}
