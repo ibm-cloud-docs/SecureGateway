@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-09-29"
+lastupdated: "2020-09-30"
 
 subcollection: SecureGateway
 
@@ -32,6 +32,11 @@ Published date: 2020-09-22
 - Resolves DataPower SG client unexpected restart issue
 - Enhance concurrent connection limit counting and logging
 - Resolved incorrect UI version info
+
+### Breaking changes
+{: #v186-breaking-changes}
+
+TLS 1.0 and TLS 1.1 is disabled since this version, connections which use TLS 1.0 and TLS 1.1 will get SSL error.
 
 ## v1.8.5fp2
 {: #v185fp2}
