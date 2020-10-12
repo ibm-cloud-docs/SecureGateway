@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-04-24"
+lastupdated: "2020-10-12"
 
 subcollection: SecureGateway
 
@@ -196,6 +196,8 @@ to the default:
 
 ## Connection error message: DEPTH_ZERO_SELF_SIGNED_CERT
 {: #depth-zero}
+## Connection error message: UNABLE_TO_VERIFY_LEAF_SIGNATURE
+{: #unable-verify-leaf}
 
 ### What is happening
 {: #depth-zero-what-is-happening}
@@ -203,6 +205,7 @@ You are trying to implement on-premises client-side TLS by using the Secure Gate
 
 ```
 [ERROR] Connection #<connection ID> to destination <target host>:<target port> had error: DEPTH_ZERO_SELF_SIGNED_CERT
+[ERROR] Connection #<connection ID> to destination <target host>:<target port> had error: UNABLE_TO_VERIFY_LEAF_SIGNATURE
 
 Where:
     - connection ID is a client assigned connection number.

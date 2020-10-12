@@ -65,6 +65,10 @@
         "Secure Gateway server trace logs"
     ],
     "faq-states": [
+        "reactivate gateway",
+        "reactivate destination",
+        "inactive gateway",
+        "inactive destination",
         "functional states of Secure Gateway",
         "lifecycle states of gateways and destinations in SG",
         "lifecycle of Secure Gateway state",
@@ -262,5 +266,16 @@
         "use HA with Secure Gateway",
         "Secure gateway server support HA",
         "Secure Gateway server supports High Availability "
+    ],
+    "faq-token-expired": [
+        "token expired",
+        "expired token",
+        "token regenerate",
+        "regenerate token",
+        "regenerate gateway token",
+        "regenerate security token",
+        "renew token",
+        "renew gateway token",
+        "renew security token"
     ]
 }
