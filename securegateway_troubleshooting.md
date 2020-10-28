@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-10-12"
+lastupdated: "2020-10-20"
 
 subcollection: SecureGateway
 
@@ -26,10 +26,27 @@ subcollection: SecureGateway
 
 - Initiate the failing request from the requesting application
 - Check the Secure Gateway Client logs
-- If no client logs have been generated from the request, the issue is between the requesting application and the Secure Gateway Servers.  This could range from network reliability to mismatched request protocols to an improper TLS mutual authentication handshake.
-- If the client has generated error level logs from the request, then the issue is between the SG Client and the on-prem resource.  Below is a table containing common errors, the issues that typically cause them, and potential methods to troubleshoot them.
+- If there is error when fetching configuration:
+  ```
+  [DEBUG] The Secure Gateway client will fetch its configuration from https://sgmanager.<region>.securegateway.cloud.ibm.com/sgconfig/<gateway id>
+  [ERROR] The response is code: <Error Code>, message: <Error details>
+  ```
+  Please check whether your Secure Gateway Client have access to `https://sgmanager.<region>.securegateway.cloud.ibm.com`. For details, see [Network Requirements](/docs/SecureGateway?topic=SecureGateway-client-requirements#network-requirements).
+- If there is error when accessing tunnel server:
+  ```
+  [DEBUG] The Secure Gateway tunnel is connecting for wss://<node>.securegateway.appdomain.cloud:9000/ws
+  [ERROR] The following error occurred on the Secure Gateway tunnel, <Error Code>
+  [INFO] The Secure Gateway tunnel was disconnected
+  ```
+  Please check whether your Secure Gateway Client have access to `<node>.securegateway.appdomain.cloud:9000`. For details, see [Network Requirements](/docs/SecureGateway?topic=SecureGateway-client-requirements#network-requirements).
+- If the Secure Gateway Client is connecting to the tunnel but no client logs have been generated from the request, the issue is between the requesting application and the Secure Gateway Servers.  This could range from network reliability to mismatched request protocols to an improper TLS mutual authentication handshake.
+- If the client has generated error level logs from the request, then the issue is between the SG Client and the on-prem resource. For example:
+  ```
+  [ERROR] Connection #<connection ID> to destination <target host>:<target port> had error: '<Error Code>'
+  ```
+  Below is a table containing common errors, the issues that typically cause them, and potential methods to troubleshoot them.
 
-Error | Typical Cause | Troubleshooting Methods
+Error Code | Typical Cause | Troubleshooting Methods
 --- | --- | ---
 ETIMEDOUT | The client is unable to find the hostname/ip to connect to due to network constraints. | Attempt to ping the destination's hostname/ip from the host running the client to ensure network connectivity.  If running the Docker version of the client, bridging the container with the host OS  with `--net=host` may resolve the issue.
 ECONNREFUSED | The client has resolved the hostname/ip to connect to but is unable to begin the connection handshake | This is typically caused by a mismatched protocol between the SG Client and the on-prem resource (e.g., the client is attempting a TCP connection to a host:port that is expecting a TLS connection).  In some cases, a firewall rule may cause this error instead of ETIMEDOUT.
@@ -196,8 +213,6 @@ to the default:
 
 ## Connection error message: DEPTH_ZERO_SELF_SIGNED_CERT
 {: #depth-zero}
-## Connection error message: UNABLE_TO_VERIFY_LEAF_SIGNATURE
-{: #unable-verify-leaf}
 
 ### What is happening
 {: #depth-zero-what-is-happening}
@@ -205,7 +220,6 @@ You are trying to implement on-premises client-side TLS by using the Secure Gate
 
 ```
 [ERROR] Connection #<connection ID> to destination <target host>:<target port> had error: DEPTH_ZERO_SELF_SIGNED_CERT
-[ERROR] Connection #<connection ID> to destination <target host>:<target port> had error: UNABLE_TO_VERIFY_LEAF_SIGNATURE
 
 Where:
     - connection ID is a client assigned connection number.
@@ -219,6 +233,39 @@ The destination you defined is missing a client-side certificate.
 
 ### How to fix it
 {: #depth-zero-how-to-fix-it}
+ 1. In the {{site.data.keyword.Bluemix_notm}} UI, go to the Secure Gateway Dashboard.
+ 2. Select your destination and click the Edit icon.
+ 3. Disable `Reject unauthorized` or upload the correct certificate in `Resource Authentication`.
+ 4. If you choose to upload certificate, upload the PEM certificate file that is to be used to connect to the on-premises system.
+ - You can verify your certificate file using following command:
+    ```
+    openssl s_client -CAfile <CA> -connect <target_host>:<target_port>
+    ```
+    Where: CA is the certificate file you uploaded, target is the on-premise endpoint.
+
+
+## Connection error message: UNABLE_TO_VERIFY_LEAF_SIGNATURE
+{: #unable-verify-leaf}
+
+### What is happening
+{: #unable-verify-leaf-what-is-happening}
+You are trying to implement on-premises client-side TLS by using the Secure Gateway client and the [Reject unauthorized](/docs/services/SecureGateway?topic=SecureGateway-add-dest#dest-user-auth) of the destination is enabled, but you receive the following error message.
+
+```
+[ERROR] Connection #<connection ID> to destination <target host>:<target port> had error: UNABLE_TO_VERIFY_LEAF_SIGNATURE
+
+Where:
+    - connection ID is a client assigned connection number.
+    - target is the on-premise endpoint
+```
+{: screen}
+
+### Why it is happening
+{: #unable-verify-leaf-why-it-is-happening}
+The destination you defined is missing a client-side certificate.
+
+### How to fix it
+{: #unable-verify-leaf-how-to-fix-it}
  1. In the {{site.data.keyword.Bluemix_notm}} UI, go to the Secure Gateway Dashboard.
  2. Select your destination and click the Edit icon.
  3. Disable `Reject unauthorized` or upload the correct certificate in `Resource Authentication`.

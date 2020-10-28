@@ -32,6 +32,7 @@ Secure Gateway
     securegateway_tls-ma.md
     securegateway_iptables.md
     securegateway_acl-file.md
+    securegateway_config-file.md
     securegateway_keygen.md
   {: .navgroup-end}
 

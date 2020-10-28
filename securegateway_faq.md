@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-10-12"
+lastupdated: "2020-10-20"
 
 subcollection: SecureGateway
 
@@ -110,7 +110,7 @@ The 1.7.0 release introduced a new tiered plan pricing model. With this model ca
 - All Destinations within an inactive gateway will also be inactive and cannot be reactivated until their Gateway is also set Active.
 - Inactive items are considered Non Functional. Inactive items cannot be in any of the Functional states.
 
-When you [downgrade the plan](/docs/SecureGateway?topic=SecureGateway-secure-gateway-service-plans#changing-plans), it will update all gateways to be inactive, all provisioned cloud port of the destinations will be reset. If you want to reactivate your gateway, you can click the wrench button in the gateway panel to configure the Non-functional State
+When you [downgrade the plan](/docs/SecureGateway?topic=SecureGateway-secure-gateway-service-plans#changing-plans), it will update all gateways to be inactive, all provisioned cloud port of the destinations will be reset. If you want to reactivate your gateway, you can click the wrench button in the gateway panel to configure the Non-functional State. For details, see [Reactivate gateway](/docs/SecureGateway?topic=SecureGateway-add-sg-gw#reactivate).
 
 ### Functional States
 {: #states-answer-functional}

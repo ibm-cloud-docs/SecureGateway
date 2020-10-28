@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2019
-lastupdated: "2019-07-12"
+  years: 2015, 2020
+lastupdated: "2020-10-20"
 
 subcollection: SecureGateway
 
@@ -43,3 +43,15 @@ When the security token is expired, it will not affect the connecting Secure Gat
 There is no way of extending the expiration of the existing security token, when the security token is expired, you will need to regenerate it, once the Secure Gateway Client restart, it will need to use the latest security token.
 
 To regenerate the security token, you will need to click the `Regenerate Token` link. The `Token Expiration` will only take effect when you click the `Regenerate Token` link, but not the `Save` button. Please check the `Current Token Expiring` after you regenerate the security token.
+
+## Reactivate gateway
+{: #reactivate}
+
+![Manage Activity](./images/manageActivity.png?raw=true "Manage Activity")
+
+When you [downgrade the plan](/docs/SecureGateway?topic=SecureGateway-secure-gateway-service-plans#changing-plans), it will update all gateways to be [inactive](/docs/SecureGateway?topic=SecureGateway-sg-faq#states-answer-non-functional), all provisioned cloud port of the destinations will be reset. By clicking the wrench button ![Wrench Button](./images/wrenchIcon.png?raw=true "Wrench Button") in the gateway panel, you can reactivate your gateways with the arrow button ![Arrow Button](./images/arrowIcon.png?raw=true "Arrow Button"), and the configuration will be applied after you click the `Apply` button. After you reactivate your gateways, you can [reactivate the destinations](/docs/SecureGateway?topic=SecureGateway-add-dest#reactivate) within the gateway in the destination panel.
+
+## Import/Export gateway
+{: #import}
+
+If you want to copy the gateway/destination configuration to another Secure Gateway instance, you can click the Export button ![Export Button](./images/exportIcon.png?raw=true "Export Button") on the gateway tile to export the configuration of the gateway/destination in the gateway panel of the original Secure Gateway instance, then click the Import button ![Import Button](./images/importIcon.png?raw=true "Import Button") to import the configuration in the gateway panel of the target Secure Gateway instance. The imported gateway will obtain another security token and might be created on another Node, and the imported On-premises destinations will obtain another cloud host and port.

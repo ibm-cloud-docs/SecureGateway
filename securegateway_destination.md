@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2019
-lastupdated: "2019-10-22"
+  years: 2015, 2020
+lastupdated: "2020-10-20"
 
 subcollection: SecureGateway
 
@@ -157,9 +157,23 @@ The session TTL of our firewall is 3600 seconds. If the connection between the c
 {: #dest-settings}
 Once your destination has been created, click the settings icon ![Setting Icon](./images/settingIcon.png?raw=true "Setting Icon") to see the following information:
 
+![Mutual Authentication Info Panel](./images/infoPanelMA.png?raw=true "Mutual Authentication Info Panel")
+
 - The destination ID required to use the API.
 - `On-premises destinations will have a cloud host and port.  This information is required by your application in order to connect to your on-premises resource.`
 - `Cloud destinations will have a client port.  This is the port the {{site.data.keyword.SecureGateway}} Client will be listening on in order to connect your on-premises application to your cloud resource.`
 - The resource host and port this destination is pointed to.
 - When the destination was created
 - When the destination was last modified
+
+## Reactivate destination
+{: #reactivate}
+
+![Manage Activity](./images/manageActivityDestination.png?raw=true "Manage Activity")
+
+After you [reactivate the gateway](/docs/SecureGateway?topic=SecureGateway-add-sg-gw#reactivate), you can reactivate the destination by clicking the wrench button ![Wrench Button](./images/wrenchIcon.png?raw=true "Wrench Button") in the destination panel, you can reactivate your destinations with the arrow button ![Arrow Button](./images/arrowIcon.png?raw=true "Arrow Button"), and the configuration will be applied after you click the `Apply` button. The reactivated On-premises destinations will obtain another cloud host and port.
+
+## Import/Export gateway
+{: #import}
+
+If you want to copy the destination configuration to another gateway, you can click the Export button ![Export Button](./images/exportIcon.png?raw=true "Export Button") on the destination tile to export the configuration of the destination in the destination panel of the original gateway, then click the Import button ![Import Button](./images/importIcon.png?raw=true "Import Button") to import the configuration in the destination panel of the target gateway. The imported On-premises destinations will obtain another cloud host and port.
