@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-09-30"
+lastupdated: "2020-11-19"
 
 subcollection: SecureGateway
 
@@ -16,6 +16,18 @@ Our regression tests only cover last 3 versions.
 Please ensure your Secure Gateway Client does not fall more than 3 versions behind, or you might get unexpected behaviour. 
 
 If you are using DataPower as the Secure Gateway Client, please ensure it is a currently supported DataPower version as well.
+
+## v1.8.6fp1
+{: #v186fp1}
+
+Published date: 2020-11-18
+
+### Fixes
+{: #v186fp1-fixes}
+
+- Resolves unexpected error when there is network latency between SG client and SG server
+- Resolves error when using RPM installer with upgrade operation
+- Enhance the handling when both side close the connection in the same time
 
 ## v1.8.6
 {: #v186}
