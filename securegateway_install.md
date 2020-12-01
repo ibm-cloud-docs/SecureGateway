@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-05-19"
+lastupdated: "2020-12-01"
 
 subcollection: SecureGateway
 
@@ -292,6 +292,7 @@ DataPower has an embedded version of the {{site.data.keyword.SecureGateway}} Cli
 | 2018.4.1.4 | 1.8.2  |
 | 7.6.0.15, 2018.4.1.6 | 1.8.2fp1 |
 | 2018.4.1.11 | 1.8.5fp1 |
+| 2018.4.1.14, 10.0.1.1 | 1.8.6 |
 
 ### Starting a client session
 {: #datapower-run}
