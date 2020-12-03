@@ -231,7 +231,7 @@ To run the Secure Gateway client as a daemon, you use `forever` along with a scr
 {: #faq-dp-log}
 {: faq}
 
-The event category of Secure Gateway Client logs is `sgclient`. You can create a [log target](https://www.ibm.com/support/knowledgecenter/en/SS9H2Y_7.7.0/com.ibm.dp.doc/logtarget_logs.html) to write the logs with specific event category to a file on DataPower. Following is an example:
+The event category of Secure Gateway Client logs is `sgclient`. You can create a [log target](https://www.ibm.com/support/knowledgecenter/en/SS9H2Y_7.7.0/com.ibm.dp.doc/logtarget_logs.html){: external} to write the logs with specific event category to a file on DataPower. Following is an example:
 
 - From the default domain:
     - GUI side panel select `Object` → `Logging Configuration` → `Log Target`. Or search for `Log Target` in the `Search` field.
