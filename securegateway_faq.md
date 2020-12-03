@@ -224,7 +224,7 @@ Normally, the service downtime will be equal to or less than 10 minutes, the Sec
 {: #faq-autostart-aix}
 {: faq}
 
-To run the Secure Gateway client as a daemon, you use `forever` along with a script to start the Secure Gateway client as a background process on AIX.  Steps and details are in the [AIX](docs/SecureGateway?topic=SecureGateway-auto-start-conf#auto-start-aix) section of [Configuring Auto-start for the Client](/docs/SecureGateway?topic=SecureGateway-auto-start-conf).
+To run the Secure Gateway client as a daemon, you use `forever` along with a script to start the Secure Gateway client as a background process on AIX.  Steps and details are in the [AIX](/docs/SecureGateway?topic=SecureGateway-auto-start-conf#auto-start-aix) section of [Configuring Auto-start for the Client](/docs/SecureGateway?topic=SecureGateway-auto-start-conf).
 
 ## How can I capture the Secure Gateway Client logs on DataPower?
 {: #faq-dp-log}
