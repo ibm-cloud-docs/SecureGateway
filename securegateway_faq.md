@@ -9,6 +9,7 @@ subcollection: SecureGateway
 ---
 {:shortdesc: .shortdesc}
 {:faq: data-hd-content-type='faq'}
+{:external: target="_blank" .external}
 
 # Frequently Asked Questions
 {: #sg-faq}
@@ -206,9 +207,9 @@ Currently the migration is not mandatory and there is not an exact date about wh
 {: #faq-notification}
 {: faq}
 
-You can get notifications via our [status page](https://cloud.ibm.com/status?selected=maintenance).
-- To get the notifications about completed disruptive maintenance, please search `Secure Gateway` in the tab [History](https://cloud.ibm.com/status?query=Secure+Gateway&selected=history).
-- To get the notifications about on going or planned disruptive maintenance, please search `Secure Gateway` in the tab [Planned maintenance](https://cloud.ibm.com/status?query=Secure+Gateway&selected=maintenance).
+You can get notifications via our [status page](https://cloud.ibm.com/status?selected=maintenance){: external}.
+- To get the notifications about completed disruptive maintenance, please search `Secure Gateway` in the tab [History](https://cloud.ibm.com/status?query=Secure+Gateway&selected=history){: external}.
+- To get the notifications about on going or planned disruptive maintenance, please search `Secure Gateway` in the tab [Planned maintenance](https://cloud.ibm.com/status?query=Secure+Gateway&selected=maintenance){: external}.
 
 When the Secure Gateway client disconnected unexpectedly, please go to the status page to check whether there is disruptive maintenance at that time.
 

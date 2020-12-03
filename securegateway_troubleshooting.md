@@ -10,6 +10,7 @@ subcollection: SecureGateway
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
+{:external: target="_blank" .external}
 
 # Troubleshooting
 {: #troubleshooting}
@@ -334,13 +335,13 @@ When you access the Secure Gateway instance via the url `https://cloud.ibm.com/s
 ## Getting additional help and support
 {: #getting-help-and-support}
 
-If you have technical questions about developing or deploying an application with Secure Gateway, post your question on [Stack Overflow](https://stackoverflow.com/search?q=SecureGateway+ibm-cloud).  Tag your question with "ibm-cloud" and "secure-gateway" so that it can be found more readily by {{site.data.keyword.Bluemix_notm}} development teams.
+If you have technical questions about developing or deploying an application with Secure Gateway, post your question on [Stack Overflow](https://stackoverflow.com/search?q=SecureGateway+ibm-cloud){: external}.  Tag your question with "ibm-cloud" and "secure-gateway" so that it can be found more readily by {{site.data.keyword.Bluemix_notm}} development teams.
 
-If you have question about the service or instructions on how to get started, use the [IBM developerWorks dW Answers](https://developer.ibm.com/answers/topics/securegateway) forum along with the "ibm-cloud" and "securegateway" tags.
+If you have question about the service or instructions on how to get started, use the [IBM developerWorks dW Answers](https://developer.ibm.com/answers/topics/securegateway){: external} forum along with the "ibm-cloud" and "securegateway" tags.
 
-For more details on on using these forums, check the [Getting help page here](https://cloud.ibm.com/docs/get-support?topic=get-support-getting-customer-support#using-avatar).
+For more details on on using these forums, check the [Getting help page here](https://cloud.ibm.com/docs/get-support?topic=get-support-getting-customer-support#using-avatar){: external}.
 
-For information about opening an IBM support ticket, or about support levels and ticket severities, see [Contacting support](https://cloud.ibm.com/docs/get-support?topic=get-support-support-case-severity#support-case-severity).
+For information about opening an IBM support ticket, or about support levels and ticket severities, see [Contacting support](https://cloud.ibm.com/docs/get-support?topic=get-support-support-case-severity#support-case-severity){: external}.
 
 Please provide as much of the following information as possible when submitting a ticket:
 
