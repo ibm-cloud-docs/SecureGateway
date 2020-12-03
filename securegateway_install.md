@@ -169,7 +169,7 @@ Version: 1.8.5fp1
 Description: IBM Secure Gateway Client for IBM Cloud
 IBM Secure Gateway client package for IBM Cloud, supports secure connections to on-premises connections.
 Homepage: https://cloud.ibm.com/
-License: http://www.ibm.com/software/sla/sladb.nsf/lilookup/986C7686F22D4D3585257E13004EA6CB?OpenDocument
+License: https://www.ibm.com/software/sla/sladb.nsf/lilookup/986C7686F22D4D3585257E13004EA6CB?OpenDocument
 ```
 {: screen}
 
