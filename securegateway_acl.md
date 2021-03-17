@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-04-10"
+  years: 2015, 2021
+lastupdated: "2021-03-17"
 
 subcollection: SecureGateway
 
@@ -10,9 +10,14 @@ subcollection: SecureGateway
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
+{:deprecated: .deprecated}
+{:external: target="_blank" .external}
 
 # Access Control List
 {: #acl}
+
+Secure Gateway is being deprecated. For more information, see [https://ibm.biz/securegateway-deprecation](https://ibm.biz/securegateway-deprecation){: external}.
+{: deprecated}
 
 The {{site.data.keyword.SecureGateway}} client provides embedded Access Control List (ACL) support. You can allow or restrict (deny) access to on-premises resources by making modifications to the ACL for the client.  This can be done interactively using the client commands or specifying a file that contains the ACLs you want to have in affect.
 

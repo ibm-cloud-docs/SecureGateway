@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-04-25"
+  years: 2015, 2021
+lastupdated: "2021-03-17"
 
 subcollection: SecureGateway
 
@@ -10,9 +10,14 @@ subcollection: SecureGateway
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
+{:deprecated: .deprecated}
+{:external: target="_blank" .external}
 
 # Uninstalling the Client
 {: #client-uninstall}
+
+Secure Gateway is being deprecated. For more information, see [https://ibm.biz/securegateway-deprecation](https://ibm.biz/securegateway-deprecation){: external}.
+{: deprecated}
 
 ## Docker
 {: #docker-uninstall}

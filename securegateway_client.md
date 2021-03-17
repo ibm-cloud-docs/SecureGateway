@@ -1,15 +1,20 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-04-25"
+  years: 2015, 2021
+lastupdated: "2021-03-17"
 
 subcollection: SecureGateway
 
 ---
+{:deprecated: .deprecated}
+{:external: target="_blank" .external}
 
 # Adding a Client
 {: #add-client}
+
+Secure Gateway is being deprecated. For more information, see [https://ibm.biz/securegateway-deprecation](https://ibm.biz/securegateway-deprecation){: external}.
+{: deprecated}
 
 The {{site.data.keyword.SecureGateway}} Client is the piece of the puzzle that makes the magic happen.  The client establishes the initial connection between the on-premises network and a gateway on the {{site.data.keyword.SecureGateway}} servers and allows for communication to pass through to the defined destinations.
 

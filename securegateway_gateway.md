@@ -1,15 +1,20 @@
 ---
 
 copyright:
-  years: 2015, 2020
-lastupdated: "2020-10-20"
+  years: 2015, 2021
+lastupdated: "2021-03-17"
 
 subcollection: SecureGateway
 
 ---
+{:deprecated: .deprecated}
+{:external: target="_blank" .external}
 
 # Adding a Gateway
 {: #add-sg-gw}
+
+Secure Gateway is being deprecated. For more information, see [https://ibm.biz/securegateway-deprecation](https://ibm.biz/securegateway-deprecation){: external}.
+{: deprecated}
 
 A gateway can be thought of as a way to identify a particular network or environment.  It is what a Secure Gateway Client will use to establish connectivity with the Secure Gateway servers and can contain multiple resource definitions, or destinations.
 

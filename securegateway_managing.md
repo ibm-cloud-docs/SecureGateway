@@ -1,15 +1,20 @@
 ---
 
 copyright:
-  years: 2015, 2019
-lastupdated: "2019-09-02"
+  years: 2015, 2021
+lastupdated: "2021-03-17"
 
 subcollection: SecureGateway
 
 ---
+{:deprecated: .deprecated}
+{:external: target="_blank" .external}
 
 # Managing your {{site.data.keyword.SecureGateway}} Service
 {: #manage-sg-service}
+
+Secure Gateway is being deprecated. For more information, see [https://ibm.biz/securegateway-deprecation](https://ibm.biz/securegateway-deprecation){: external}.
+{: deprecated}
 
 ## {{site.data.keyword.SecureGateway}} Dashboard
 {: #secure-gateway-dashboard}

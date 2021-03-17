@@ -1,15 +1,20 @@
 ---
 
 copyright:
-  years: 2015, 2020
-lastupdated: "2020-01-07"
+  years: 2015, 2021
+lastupdated: "2021-03-17"
 
 subcollection: SecureGateway
 
 ---
+{:deprecated: .deprecated}
+{:external: target="_blank" .external}
 
 # Requirements to run the Client
 {: #client-requirements}
+
+Secure Gateway is being deprecated. For more information, see [https://ibm.biz/securegateway-deprecation](https://ibm.biz/securegateway-deprecation){: external}.
+{: deprecated}
 
 ## System Requirements
 {: #system-requirements}

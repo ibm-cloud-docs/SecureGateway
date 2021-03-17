@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2020
-lastupdated: "2020-10-20"
+  years: 2015, 2021
+lastupdated: "2021-03-17"
 
 subcollection: SecureGateway
 
@@ -11,9 +11,13 @@ subcollection: SecureGateway
 {:codeblock: .codeblock}
 {:pre: .pre}
 {:external: target="_blank" .external}
+{:deprecated: .deprecated}
 
 # Troubleshooting
 {: #troubleshooting}
+
+Secure Gateway is being deprecated. For more information, see [https://ibm.biz/securegateway-deprecation](https://ibm.biz/securegateway-deprecation){: external}.
+{: deprecated}
 
 ## Best practices for running the Secure Gateway Client
 {: #best-practices}

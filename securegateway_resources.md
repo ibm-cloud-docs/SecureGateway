@@ -1,16 +1,20 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-08-10"
+  years: 2015, 2021
+lastupdated: "2021-03-17"
 
 subcollection: SecureGateway
 
 ---
 {:external: target="_blank" .external}
+{:deprecated: .deprecated}
 
 # Resources
 {: #secure-gateway-resource}
+
+Secure Gateway is being deprecated. For more information, see [https://ibm.biz/securegateway-deprecation](https://ibm.biz/securegateway-deprecation){: external}.
+{: deprecated}
 
 ## Blogs and other resources
 {: #blogs-and-others}

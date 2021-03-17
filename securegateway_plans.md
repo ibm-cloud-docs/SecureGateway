@@ -1,15 +1,20 @@
 ---
 
 copyright:
-  years: 2015, 2019
-lastupdated: "2018-05-28"
+  years: 2015, 2021
+lastupdated: "2021-03-17"
 
 subcollection: SecureGateway
 
 ---
+{:deprecated: .deprecated}
+{:external: target="_blank" .external}
 
 # {{site.data.keyword.SecureGateway}} Service Plans
 {: #secure-gateway-service-plans}
+
+Secure Gateway is being deprecated. For more information, see [https://ibm.biz/securegateway-deprecation](https://ibm.biz/securegateway-deprecation){: external}.
+{: deprecated}
 
 With the release of v1.7.0, a new tiered plan pricing model was introduced that allows {{site.data.keyword.SecureGateway}} to scale to the needs of any company.  The table below provides the limitations associated with each of the publicly available plans:
 

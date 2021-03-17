@@ -1,15 +1,20 @@
 ---
 
 copyright:
-  years: 2015, 2020
-lastupdated: "2020-11-19"
+  years: 2015, 2021
+lastupdated: "2021-03-17"
 
 subcollection: SecureGateway
 
 ---
+{:deprecated: .deprecated}
+{:external: target="_blank" .external}
 
 # {{site.data.keyword.SecureGateway}} Change Log
 {: #secure-gateway-change-log}
+
+Secure Gateway is being deprecated. For more information, see [https://ibm.biz/securegateway-deprecation](https://ibm.biz/securegateway-deprecation){: external}.
+{: deprecated}
 
 Our regression tests only cover last 3 versions.
 
