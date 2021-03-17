@@ -133,7 +133,10 @@ You will require root or administrative privileges to perform this installation.
     `Client UI`
         Choose if you want to use client UI. If yes, user can change the port for the UI. Default value is 9003.
 
-    <b>Note:</b> You do not have to answer any of the prompts, all will take the defined default or be left blank in the sgenvironment.conf file. This allows the installation process to run without user interaction.
+    `NPM installation proxy`
+        Enter the proxy info if you want to install the npm module with the proxy. If NPM installation proxy is not required, leave this blank.
+
+    <b>Note:</b> Other than the NPM installation proxy info, you do not have to answer any of the prompts, all will take the defined default or be left blank in the sgenvironment.conf file. This allows the installation process to start up Secure Gateway client without user interaction.
 
     <b>Note:</b> The sgenvironment.conf is read every time that you start or restart the client using the system's upstart process. You can edit the /etc/ibm/sgenvironment.conf file at any time to make changes to your configuration and restart the client to pick up those changes.
 
