@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2021
-lastupdated: "2021-03-17"
+lastupdated: "2021-04-13"
 
 subcollection: SecureGateway
 
@@ -31,8 +31,8 @@ The Secure Gateway Client is supported in the following environments:
 | Ubuntu Linux | 14.04 (LTS) and greater |
 | Power Machine | ppc64el architecture |
 | Ubuntu Z-Linux | - |
-| AIX | 7.1 TL4 and greater |
-| Mac OS X | 10.11 and greater |
+| AIX | 7.1 TL5 and greater |
+| Mac OS X | 10.15 and greater |
 | Docker | 1.7.0 and greater, all supported operating systems |
 
 <b>Note:</b> Only 64-bit environments are currently supported for native client installation.
