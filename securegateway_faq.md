@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2021
-lastupdated: "2021-03-17"
+lastupdated: "2021-05-07"
 
 subcollection: SecureGateway
 
@@ -99,6 +99,7 @@ By default, the client logs can be found at the following locations:
 
 You can change the location by using the `-p` option when starting the Secure Gateway client. See also [Startup Arguments and Options](/docs/SecureGateway?topic=SecureGateway-client-interacting#startup-args).
 
+For Docker, please run `docker logs <container id>` to get the logs
 
 ## What are the functional states of Secure Gateway?
 {: #faq-states}
