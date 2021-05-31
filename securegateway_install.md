@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2021
-lastupdated: "2021-03-17"
+lastupdated: "2021-05-31"
 
 subcollection: SecureGateway
 
@@ -45,6 +45,18 @@ docker run -it ibmcom/secure-gateway-client <gateway ID> -t <security token>
 {: pre}
 
 Normally it takes two parameters, your {{site.data.keyword.SecureGateway}} gateway ID and the gateway's security token, both of which are available via the {{site.data.keyword.SecureGateway}} Dashboard.
+
+### Exposing port for client UI
+{: #docker-run-ui}
+
+To run the Docker container with [client UI](/docs/services/SecureGateway?topic=SecureGateway-client-interacting#client-ui), start docker with `-p` or `-P` option to expose port 9003, for example:
+
+```
+docker run -it -p 127.0.0.1:9003:9003 ibmcom/secure-gateway-client <gateway ID> -t <security token>
+```
+{: pre}
+
+For more information about `-p` or `-P` option, see [docker document](https://docs.docker.com/engine/reference/run/#expose-incoming-ports){: external}
 
 ### Supported Docker Commands
 {: #docker-commands}
