@@ -13,9 +13,6 @@ subcollection: SecureGateway
 # Adding a Destination
 {: #add-dest}
 
-Secure Gateway is being deprecated. For more information, see [https://ibm.biz/securegateway-deprecation](https://ibm.biz/securegateway-deprecation){: external}.
-{: deprecated}
-
 A destination is a definition of how to connect to a specific on-premises or cloud resource. Once the destination has been created, the {{site.data.keyword.SecureGateway}} servers will provide it with a unique public endpoint where it will listen for connections while the gateway is connected.
 
 ![Dashboard with no destinations](./images/emptyDestinations.png?raw=true "Dashboard with no destinations")

@@ -16,9 +16,6 @@ subcollection: SecureGateway
 # Installing the Client
 {: #client-install}
 
-Secure Gateway is being deprecated. For more information, see [https://ibm.biz/securegateway-deprecation](https://ibm.biz/securegateway-deprecation){: external}.
-{: deprecated}
-
 ## Docker
 {: #installing-docker}
 

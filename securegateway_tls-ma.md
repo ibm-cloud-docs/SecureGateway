@@ -16,9 +16,6 @@ subcollection: SecureGateway
 # Node.js TLS Mutual Authentication
 {: #nodejs-tls-ma}
 
-Secure Gateway is being deprecated. For more information, see [https://ibm.biz/securegateway-deprecation](https://ibm.biz/securegateway-deprecation){: external}.
-{: deprecated}
-
 This sample will go over how to configure Mutual Authentication for both sides of an on-premises destination: User Authentication and Resource Authentication.
 
 I know that the resource I want to connect to will be hosted on the same machine as the Secure Gateway Client, it will be listening on port 8999, and that it requires mutual authentication to allow a connection.  With this information, I can begin creating my destination.

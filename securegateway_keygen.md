@@ -16,9 +16,6 @@ subcollection: SecureGateway
 # Cert/Key Management
 {: #cert-key-management}
 
-Secure Gateway is being deprecated. For more information, see [https://ibm.biz/securegateway-deprecation](https://ibm.biz/securegateway-deprecation){: external}.
-{: deprecated}
-
 ## Generating a self-signed certifiate/key pair
 {: #self-signed-cert-gen}
 

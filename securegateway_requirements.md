@@ -13,9 +13,6 @@ subcollection: SecureGateway
 # Requirements to run the Client
 {: #client-requirements}
 
-Secure Gateway is being deprecated. For more information, see [https://ibm.biz/securegateway-deprecation](https://ibm.biz/securegateway-deprecation){: external}.
-{: deprecated}
-
 ## System Requirements
 {: #system-requirements}
 

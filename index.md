@@ -18,9 +18,6 @@ subcollection: SecureGateway
 {{site.data.keyword.SecureGatewayfull}} service provides a quick, easy, and secure solution for connecting anything to anything.  By deploying the light-weight and natively installed {{site.data.keyword.SecureGateway}} Client, a secure, persistent connection can be established between your environment and the cloud.  With this, you can safely connect all of your applications and resources regardless of their location.  Rather than bridging your environments at the network level like a traditional VPN, {{site.data.keyword.SecureGateway}} provides granular resource control operating with the principle of least privilege as its core tenet.
 {: shortdesc}
 
-Secure Gateway is being deprecated. For more information, see [https://ibm.biz/securegateway-deprecation](https://ibm.biz/securegateway-deprecation){: external}.
-{: deprecated}
-
 ![{{site.data.keyword.SecureGateway}} Architecture](./images/diagramSGW.png?raw=true "{{site.data.keyword.SecureGateway}} Architecture")
 
 After creating an instance of the {{site.data.keyword.SecureGateway}} service, get connected in just a few steps.

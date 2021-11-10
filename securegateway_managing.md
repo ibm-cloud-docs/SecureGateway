@@ -13,9 +13,6 @@ subcollection: SecureGateway
 # Managing your {{site.data.keyword.SecureGateway}} Service
 {: #manage-sg-service}
 
-Secure Gateway is being deprecated. For more information, see [https://ibm.biz/securegateway-deprecation](https://ibm.biz/securegateway-deprecation){: external}.
-{: deprecated}
-
 ## {{site.data.keyword.SecureGateway}} Dashboard
 {: #secure-gateway-dashboard}
 From your {{site.data.keyword.SecureGateway}} dashboard, you can quickly see the following details:

@@ -16,9 +16,6 @@ subcollection: SecureGateway
 # Configuring Auto-start for the Client
 {: #auto-start-conf}
 
-Secure Gateway is being deprecated. For more information, see [https://ibm.biz/securegateway-deprecation](https://ibm.biz/securegateway-deprecation){: external}.
-{: deprecated}
-
 ## Linux
 {: #auto-start-linux}
 

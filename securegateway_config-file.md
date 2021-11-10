@@ -17,9 +17,6 @@ subcollection: SecureGateway
 # Config File
 {: #config-files}
 
-Secure Gateway is being deprecated. For more information, see [https://ibm.biz/securegateway-deprecation](https://ibm.biz/securegateway-deprecation){: external}.
-{: deprecated}
-
 ## Linux
 {: #config-files-linux}
 

@@ -16,9 +16,6 @@ subcollection: SecureGateway
 # Interacting with the Client
 {: #client-interacting}
 
-Secure Gateway is being deprecated. For more information, see [https://ibm.biz/securegateway-deprecation](https://ibm.biz/securegateway-deprecation){: external}.
-{: deprecated}
-
 There are a few ways to interact with the client:
 
 - Through terminal command line prior to startup

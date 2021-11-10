@@ -13,9 +13,6 @@ subcollection: SecureGateway
 # Resources
 {: #secure-gateway-resource}
 
-Secure Gateway is being deprecated. For more information, see [https://ibm.biz/securegateway-deprecation](https://ibm.biz/securegateway-deprecation){: external}.
-{: deprecated}
-
 ## Blogs and other resources
 {: #blogs-and-others}
 
