@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2021
-lastupdated: "2021-05-07"
+lastupdated: "2021-12-27"
 
 subcollection: SecureGateway
 
@@ -244,11 +244,9 @@ The event category of Secure Gateway Client logs is `sgclient`. You can create a
     - `Log format` of `Text`
     - Fill in `File Name` to define the output location, for example: `logtemp:///sgclient.log`
     - Select `Archive Mode` to `Rotate`
-- In the `Event Subscription` Tab:
-    - Fill in `Name`
-    - Select the `Add` button to add a target event subscription
-    - Fill in the `Event Category` selecting `sgclient`
-    - Fill in the `Minimum Event Priority` of `debug`
+- In the `Event Subscription` Tab, select the `Add` button to add following target event subscription
+    - Fill in the `Event Category` selecting `sgclient` and the `Minimum Event Priority` of `debug`
+    - Fill in the `Event Category` selecting `mgmt` and the `Minimum Event Priority` of `debug`
 
 ## Which ports does the Secure Gateway client use?
 {: #faq-ports}
