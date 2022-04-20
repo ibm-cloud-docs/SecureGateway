@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2021
-lastupdated: "2021-12-20"
+  years: 2015, 2022
+lastupdated: "2022-04-20"
 
 subcollection: SecureGateway
 
@@ -19,6 +19,18 @@ Please ensure your Secure Gateway Client does not fall more than 3 versions behi
 
 If you are using DataPower as the Secure Gateway Client, please ensure it is a currently supported DataPower version as well.
 
+## v1.8.8
+{: #v188}
+
+Published date: 2022-04-20
+
+### Features
+{: #v188-features}
+
+- Upgrade Node.js to 14.19.1
+- Resolve potential vulnerabilities
+- Fix connection error in slow network
+
 ## v1.8.7fp2
 {: #v187fp2}
 
@@ -28,7 +40,7 @@ Published date: 2021-12-02
 {: #v187fp2-features}
 
 - Upgrade Node.js to 12.22.7
-- Resolves potential vulnerabilities
+- Resolve potential vulnerabilities
 
 ## v1.8.7fp1
 {: #v187fp1}
@@ -39,7 +51,7 @@ Published date: 2021-08-19
 {: #v187fp1-features}
 
 - Upgrade Node.js to 12.22.2
-- Resolves potential vulnerabilities
+- Resolve potential vulnerabilities
 
 ## v1.8.7
 {: #v187}
@@ -50,7 +62,7 @@ Published date: 2021-04-14
 {: #v187-features}
 
 - Upgrade Node.js to 12.21.0
-- Resolves potential vulnerabilities
+- Resolve potential vulnerabilities
 
 ## v1.8.6fp1
 {: #v186fp1}
@@ -60,8 +72,8 @@ Published date: 2020-11-18
 ### Fixes
 {: #v186fp1-fixes}
 
-- Resolves unexpected error when there is network latency between SG client and SG server
-- Resolves error when using RPM installer with upgrade operation
+- Resolve unexpected error when there is network latency between SG client and SG server
+- Resolve error when using RPM installer with upgrade operation
 - Enhance the handling when both side close the connection in the same time
 
 ## v1.8.6
@@ -72,11 +84,11 @@ Published date: 2020-09-22
 ### Fixes
 {: #v186-fixes}
 
-- Resolves potential vulnerabilities
-- Resolves unexpected websocket fatal error
-- Resolves error when update destination too frequently
-- Resolves incorrect UI version info
-- Resolves DataPower SG client unexpected restart issue
+- Resolve potential vulnerabilities
+- Resolve unexpected websocket fatal error
+- Resolve error when update destination too frequently
+- Resolve incorrect UI version info
+- Resolve DataPower SG client unexpected restart issue
 - Enhance concurrent connection limit counting and logging
 - Resolved incorrect UI version info
 
@@ -93,7 +105,7 @@ Published date: 2020-04-22
 ### Fixes
 {: #v185fp2-fixes}
 
-- Resolves the error when starting the Secure Gateway Client UI in Windows version
+- Resolve the error when starting the Secure Gateway Client UI in Windows version
 
 ## v1.8.5fp1
 {: #v185fp1}
@@ -104,7 +116,7 @@ Published date: 2020-02-12
 {: #v185fp1-features-and-fixes}
 
 - Upgrade Node.js to 10.19.0
-- Resolves the error when starting the Secure Gateway Client as Windows service
+- Resolve the error when starting the Secure Gateway Client as Windows service
 
 ## v1.8.5
 {: #v185}
@@ -116,7 +128,7 @@ Published date: 2020-01-07
 
 - Upgrade Node.js to 10.17.0
 - Node modules vulnerabilities fix
-- Resolves the Node.js conflict on Windows installer
+- Resolve the Node.js conflict on Windows installer
 - Add proxy option to the installer for npm module installation
 
 ### Breaking changes
@@ -142,9 +154,9 @@ Published date: 2019-08-21
 ### Features and Fixes
 {: #v183fp1-features-and-fixes}
 
-- Resolves error when sending the large data with HTTP/HTTPS request to on-cloud destiantion
-- Resolves data truncated issue when sending data to on-perm destination
-- Resolves the docker version Secure Gateway Client UI issue
+- Resolve error when sending the large data with HTTP/HTTPS request to on-cloud destiantion
+- Resolve data truncated issue when sending data to on-perm destination
+- Resolve the docker version Secure Gateway Client UI issue
 
 ## v1.8.3
 {: #v183}
@@ -154,9 +166,9 @@ Published date: 2019-07-05
 ### Features and Fixes
 {: #v183-features-and-fixes}
 
-- Resolves Windows installer vulnerability for Secure Gateway Client UI Password
-- Resolves unexpected behaviour when configure Secure Gateway Client UI port and password
-- Resolves the error when generating logs
+- Resolve Windows installer vulnerability for Secure Gateway Client UI Password
+- Resolve unexpected behaviour when configure Secure Gateway Client UI port and password
+- Resolve the error when generating logs
 - Add the startup option to define the reconnect attempts
 - Add `addtional startup option` field to the auto-start config
 - Add proxy support for the gateway authentication request to port 443
@@ -174,10 +186,10 @@ Published date: 2019-05-21
 ### Fixes
 {: #v182fp2-fixes}
 
-- Resolves Secure Gateway Client UI vulnerability
-- Resolves resource auth vulnerability
+- Resolve Secure Gateway Client UI vulnerability
+- Resolve resource auth vulnerability
 - Enhance the handling when both side close the connection in the same time
-- Resolves collapsed resource when the on-prem destination connection close too fast
+- Resolve collapsed resource when the on-prem destination connection close too fast
 
 ### Breaking changes
 {: #v182fp2-breaking-changes}
@@ -195,9 +207,9 @@ Published date: 2019-04-30
 {: #v182fp1-fixes}
 
 - Upgrade Node.js to 8.15.1
-- Resolves undefined environment info in Deutsch
-- Resolves the incorrect concurrent connection limit for reverse connections
-- Resolves collapsed connections when both side end the connection in the same time
+- Resolve undefined environment info in Deutsch
+- Resolve the incorrect concurrent connection limit for reverse connections
+- Resolve collapsed connections when both side end the connection in the same time
 
 ## v1.8.2
 {: #v182}
@@ -223,7 +235,7 @@ Published date: 2019-01-13
 ### Features and Fixes
 {: #v181-features-and-fixes}
 
-- Resolves regular connections hanging issue when closing
+- Resolve regular connections hanging issue when closing
 - Uew new path for gateway authentication ([Click here for more info](/docs/services/SecureGateway?topic=SecureGateway-client-requirements#network-requirements))
 - Use new mechanism for log generating (Log translation enhance)
 
@@ -242,8 +254,8 @@ Published date: 2018-11-08
 
 - Separate the ConnIndicies for reverse and regular destination
 - Accessibility enhancements on client UI.
-- Resolves unexpected behaviour when set UI password on command line.
-- Resolves unexpected crash when UI closed
+- Resolve unexpected behaviour when set UI password on command line.
+- Resolve unexpected crash when UI closed
 
 ## v1.8.0 Fixpack 8
 {: #v180fp8}
@@ -266,7 +278,7 @@ Published date: 2018-08-31
 
 - Added the TRACE level log for transmitted data
 - Add Error level log when reverse dest hit concurrent limit
-- Resolves the undefined Secure Gateway Client fixpack info in gateway panel
+- Resolve the undefined Secure Gateway Client fixpack info in gateway panel
 
 ## v1.8.0 Fixpack 6
 {: #v180fp6}
@@ -277,7 +289,7 @@ Published date: 2018-03-06
 {: #v180fp6-fixes}
 
 - Enhance the logs
-- Resolves unexpected behaviour in docker version
+- Resolve unexpected behaviour in docker version
 
 ## v1.8.0 Fixpack 5
 {: #v180fp5}
@@ -287,7 +299,7 @@ Published date: 2018-02-13
 ### Fixes
 {: #v180fp5-fixes}
 
-- Resolves the corrupted header
+- Resolve the corrupted header
 - Enhance the error log
 
 ## v1.8.0 Fixpack 4
@@ -298,7 +310,7 @@ Published date: 2017-11-10
 ### Fixes
 {: #v180fp4-fixes}
 
-- Resolves ACL configuration issue
+- Resolve ACL configuration issue
 
 ## v1.8.0 Fixpack 3
 {: #v180fp3}
@@ -308,8 +320,8 @@ Published date: 2017-10-30
 ### Fixes
 {: #v180fp3-fixes}
 
-- Resolves the truncated message
-- Resolves the hang connection
+- Resolve the truncated message
+- Resolve the hang connection
 - Add option to define timeout on destination
 
 ## v1.8.0 Fixpack 2
@@ -320,8 +332,8 @@ Published date: 2017-08-17
 ### Fixes
 {: #v180fp2-fixes}
 
-- Resolves issue when the connection closed by the cloud side
-- Resolves issue related to the host header
+- Resolve issue when the connection closed by the cloud side
+- Resolve issue related to the host header
 
 ## v1.8.0 Fixpack 1
 {: #v180fp1}
@@ -331,9 +343,9 @@ Published date: 2017-08-03
 ### Fixes
 {: #v180fp1-fixes}
 
-- Resolves Docker version Secure Gateway Client UI issue
+- Resolve Docker version Secure Gateway Client UI issue
 - Enhance error log when error occur on server side
-- Resolves connection issue between Secure Gateway Client and Secure Gateway Server
+- Resolve connection issue between Secure Gateway Client and Secure Gateway Server
 
 ## v1.8.0
 {: #v180}
@@ -352,13 +364,13 @@ Published date: 2017-05-23
 
 ### Features
 {: #v171-features}
-- Resolves Secure Gateway Client UI vulnerability
-- Resolves issue related to UDP connections
-- Resolves issue related to quality test
+- Resolve Secure Gateway Client UI vulnerability
+- Resolve issue related to UDP connections
+- Resolve issue related to quality test
 - Refactor log generater
 - Add the startup option to define the proxy for the 9000 ws connection
 - Fixes `EADDRINUSE` error caused by listeners that do not execute a teardown appropriately when a destination is deleted.
-- Resolves issue where service instances bound to an application could not be deleted.
+- Resolve issue where service instances bound to an application could not be deleted.
 
 ## v1.7.0
 {: #v170}
@@ -379,7 +391,7 @@ Published date: 2017-02-03
 ### Fixes
 {: #v161-fixes}
 
-- Resolves issue where disconnecting multiple clients results in orphaned processes in the connected clients array.
+- Resolve issue where disconnecting multiple clients results in orphaned processes in the connected clients array.
 - Now cleans up orphaned connections that resulted in incorrecty paused listeners.
 
 ## v1.6.0
@@ -407,9 +419,9 @@ Published date: 2016-08-10
 - Destinations/Gateways/Services can now be exported/imported.
 - Latency tests between client and server capable of being executed from Secure Gateway UI.
 - Cleans up orphaned tunnel processes on network disconnect.
-- Resolves duplicate port allocation caused by failed destination deletion.
-- Resolves HTTP/S issue with non-UTF8 encoding.
-- Resolves missing IPC handlers on replacement processes.
+- Resolve duplicate port allocation caused by failed destination deletion.
+- Resolve HTTP/S issue with non-UTF8 encoding.
+- Resolve missing IPC handlers on replacement processes.
 
 ## v1.5.0
 {: #v150}

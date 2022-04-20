@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2021
-lastupdated: "2021-12-27"
+  years: 2015, 2022
+lastupdated: "2022-04-20"
 
 subcollection: SecureGateway
 
@@ -219,7 +219,7 @@ When the Secure Gateway client disconnected unexpectedly, please go to the statu
 {: #faq-manually-restart}
 {: faq}
 
-If the maintenance needs to have disruption over 10 minutes, then you might need to manually restart the Secure Gateway client to reconnect to the Secure Gateway server after the maintenance. In this case, you can use the [startup options](/docs/services/SecureGateway?topic=SecureGateway-client-interacting#startup-args) `--service` when starting up the Secure Gateway client, such that the parent process of the Secure Gateway client will restart within 60s if all child clients are terminated. Beside that, you can also use the startup options `--reconnect` to define the reconnect attempts after the connection between Secure Gateway client and Secure Gateway server drop.
+If the maintenance needs to have disruption over 10 minutes, then you might need to manually restart the Secure Gateway client to reconnect to the Secure Gateway server after the maintenance. In this case, you can use the [startup options](/docs/services/SecureGateway?topic=SecureGateway-client-interacting#startup-args) `--service` when starting up the Secure Gateway client, such that the parent process of the Secure Gateway client will restart within 60s if all child clients are terminated. Beside that, you can also use the startup options `--reconnect` to define the reconnect attempts after the connection between Secure Gateway client and Secure Gateway server drop, `--reconnect='-1'` means retry forever.
 
 Normally, the service downtime will be equal to or less than 10 minutes, the Secure Gateway client (after version v180) should be able to reconnect to the Secure Gateway server automatically.
 
