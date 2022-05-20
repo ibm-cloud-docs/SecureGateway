@@ -19,6 +19,7 @@ Please ensure your Secure Gateway Client does not fall more than 3 versions behi
 
 If you are using DataPower as the Secure Gateway Client, please ensure it is a currently supported DataPower version as well.
 
+
 ## v1.8.8
 {: #v188}
 
