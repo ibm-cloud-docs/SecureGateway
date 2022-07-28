@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2022
-lastupdated: "2022-04-20"
+lastupdated: "2022-07-28"
 
 subcollection: SecureGateway
 
@@ -19,6 +19,16 @@ Please ensure your Secure Gateway Client does not fall more than 3 versions behi
 
 If you are using DataPower as the Secure Gateway Client, please ensure it is a currently supported DataPower version as well.
 
+## v1.8.8fp1
+{: #v188fp1}
+
+Published date: 2022-07-27
+
+### Features
+{: #v188fp1-features}
+
+- Upgrade Node.js to 14.20.0
+- Resolve potential vulnerabilities
 
 ## v1.8.8
 {: #v188}
