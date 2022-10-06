@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2022
-lastupdated: "2022-04-20"
+lastupdated: "2022-10-06"
 
 subcollection: SecureGateway
 
@@ -203,7 +203,9 @@ After 2018 December maintenance, the cloud host of Secure Gateway is getting ren
 
 After the migration, the cloud host of the on-premises destinations will change to use the new domain, the users/applications will need to update to send the request to the new cloud host.
 
-Currently the migration is not mandatory and there is not an exact date about when the old domain will be out of support, but once this is settled, the customer who are still using the old domain name will be notified.
+Currently the cloud host migration is not mandatory and there is not an exact date about when the old domain will be out of support, but once this is settled, the customer who are still using the old domain name will be notified.
+
+For gateway authentication endpoint, currently `bluemix.net` has been deprecated, if you are using REST API or SDK, please ensure you are connecting to [new endpoints](https://cloud.ibm.com/apidocs/secure-gateway#intro){: external} instead of `bluemix.net`. For Secure Gateway Client, please ensure your Secure Gateway Client does not fall more than 3 versions behind.
 
 ## Where can I receive Secure Gateway notifications, especially for disruptive maintenance?
 {: #faq-notification}
