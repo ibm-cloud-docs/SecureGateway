@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2022
-lastupdated: "2022-10-06"
+lastupdated: "2022-11-30"
 
 subcollection: SecureGateway
 
@@ -207,6 +207,14 @@ Currently the cloud host migration is not mandatory and there is not an exact da
 
 For gateway authentication endpoint, currently `bluemix.net` has been deprecated, if you are using REST API or SDK, please ensure you are connecting to [new endpoints](https://cloud.ibm.com/apidocs/secure-gateway#intro){: external} instead of `bluemix.net`. For Secure Gateway Client, please ensure your Secure Gateway Client does not fall more than 3 versions behind.
 
+## Why am I getting error when connect to `bluemix.net` endpoints
+
+After 2018 December maintenance, the `bluemix.net` endpoints are deprecated and replaced by `securegateway.cloud.ibm.com`, the `bluemix.net` endpoints are still being maintained for 1 year after the deprecation. After 2022 Nov maintenance, the `bluemix.net` endpoints are removed, Secure Gateway client version v180fp9 and former is not be able to connect to Secure Gateway server after the maintenance, REST API or SDK which connect to `bluemix.net` endpoints gets 404 error.
+
+If you are using REST API or SDK, please confirm your application is connecting to API endpoints `sgmanager.REGION.securegateway.cloud.ibm.com` instead of `sgmanager.REGION.bluemix.net`. For details, please refer to [API document](https://cloud.ibm.com/apidocs/secure-gateway#intro){: external}
+
+For Secure Gateway client, if you are using version v180fp9 or former, please upgrade the Secure Gateway client and ensure your Secure Gateway client does not fall more than 3 versions behind.
+
 ## Where can I receive Secure Gateway notifications, especially for disruptive maintenance?
 {: #faq-notification}
 {: faq}
@@ -267,3 +275,15 @@ The server does not support High Availability (HA) nor provide redundancy.  To a
 {: faq}
 
 The security token could be regenerated in the edit board of the gateway panel, you can click the link `Regenerate Token` which next to `Token Expiration` to regenerate the token. The `Save` button cannot be used to regenerate the token. For additional information, see [Regenerate security token](/docs/SecureGateway?topic=SecureGateway-add-sg-gw#regen-sectoken)
+
+## Why connection is getting error after HTTP(S) redirect?
+
+When HTTP(S) connection is sent from the requesting application to the defined resource via Secure Gateway service but the defined resource return a redirect response, it will trigger another HTTP(S) connection which will be sent from the requesting application to the redirect resource directly but not via Secure Gateway service, such that the connection will get error if the requesting application do not have direct access to the redirect resource.
+
+## Why I can't use dynamic port service via Secure Gateway?
+
+Secure Gateway only support one request/resource port for each destination, even you can't define the cloud port in sequence. If the defined resource require connections on dynamic port, then Secure Gateway can't support it.
+
+For example:
+
+Regular FTP connections use port 21 for command channel but use other port for data channel, which cause control connection could be sent via Secure Gateway service to the command channel port 21 of the FTP server, but data flow connection is not able to be sent to the data channel port of the FTP server, even most of the FTP client get the data channel host/port information via the response of the control connection from the FTP server, which means you can't force the FTP client to send data flow connection via Secure Gateway service instead of send to FTP server directly.

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2021
-lastupdated: "2021-04-13"
+lastupdated: "2022-11-30"
 
 subcollection: SecureGateway
 
@@ -47,18 +47,11 @@ If there's npm Enterprise server in your environment, please whitelist all of th
   - The node of the SG gateway, which can be found in the configuration of the gateway. Since each gateway will not be on the same node, please confirm the hostname of the node every time you create the gateway
 
 - Port `443` for gateway authentication when Secure Gateway Client start up
-  - For SG client `v180fp9 and former`
-    - US South: sgmanager.ng.bluemix.net
-    - US East: sgmanager.us-east.bluemix.net
-    - United Kingdom: sgmanager.eu-gb.bluemix.net
-    - Germany: sgmanager.eu-de.bluemix.net
-    - Sydney: sgmanager.au-syd.bluemix.net
-  - For SG client `v181 and later` <br>
-    - US South: sgmanager.us-south.securegateway.cloud.ibm.com
-    - US East: sgmanager.us-east.securegateway.cloud.ibm.com
-    - United Kingdom: sgmanager.eu-gb.securegateway.cloud.ibm.com
-    - Germany: sgmanager.eu-de.securegateway.cloud.ibm.com
-    - Sydney: sgmanager.au-syd.securegateway.cloud.ibm.com
+  - US South: sgmanager.us-south.securegateway.cloud.ibm.com
+  - US East: sgmanager.us-east.securegateway.cloud.ibm.com
+  - United Kingdom: sgmanager.eu-gb.securegateway.cloud.ibm.com
+  - Germany: sgmanager.eu-de.securegateway.cloud.ibm.com
+  - Sydney: sgmanager.au-syd.securegateway.cloud.ibm.com
 
 
 Ensure you check or modify additional firewall and IP Table rules that might apply. However, we do not recommend setting rules by IP, rules should be set specific to host name and port as the IPs for gateway authentication and SG gateway are controlled by IBM Cloud and are subject to change.

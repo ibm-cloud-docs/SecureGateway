@@ -195,7 +195,7 @@ The application logs for windows service will be stored at:
 ```
 %Installation_directory%/ibm/securegateway/client/logs/securegw_win_service.log
 ```
-{:pre}
+{: pre}
 
  The logs are rolled into a new file on a daily basis.
 
