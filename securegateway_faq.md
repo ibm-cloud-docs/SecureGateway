@@ -209,7 +209,7 @@ For gateway authentication endpoint, currently `bluemix.net` has been deprecated
 
 ## Why am I getting error when connect to `bluemix.net` endpoints
 
-After 2018 December maintenance, the `bluemix.net` endpoints are deprecated and replaced by `securegateway.cloud.ibm.com`, the `bluemix.net` endpoints are still being maintained for 1 year after the deprecation. After 2022 Nov maintenance, the `bluemix.net` endpoints are removed, Secure Gateway client version v180fp9 and former is not be able to connect to Secure Gateway server after the maintenance, REST API or SDK which connect to `bluemix.net` endpoints gets 404 error.
+After 2018 December maintenance, the `bluemix.net` endpoints are deprecated and replaced by `securegateway.cloud.ibm.com`, the `bluemix.net` endpoints had still been being maintained for 1 year after the deprecation. After 2022 Nov maintenance, the `bluemix.net` endpoints are removed, Secure Gateway client version v180fp9 and former is not be able to connect to Secure Gateway server after the maintenance, REST API or SDK which connect to `bluemix.net` endpoints gets 404 error.
 
 If you are using REST API or SDK, please confirm your application is connecting to API endpoints `sgmanager.REGION.securegateway.cloud.ibm.com` instead of `sgmanager.REGION.bluemix.net`. For details, please refer to [API document](https://cloud.ibm.com/apidocs/secure-gateway#intro){: external}
 
