@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2021
-lastupdated: "2021-03-17"
+  years: 2015, 2023
+lastupdated: "2023-02-07"
 
 subcollection: SecureGateway
 
@@ -40,43 +40,6 @@ curl -X PUT "https://sgmanager.us-south.securegateway.cloud.ibm.com/v1/sgconfig/
 {: pre}
 
 Please note that the first command uses `src` to provide a single IP whereas the second uses `src_range` to provide a range of IPs.
-
-## IP Table Rules for Dynamic IPs
-{: #iptables-dynamic-ips}
-
-If your application has a dynamic set of IPs, but you do not know them you can leverage the {{site.data.keyword.SecureGateway}} 
-REST API to update the ip table rules on the fly.
-
-As an example, this short NodeJS program will update IP table rules for a Cloud Foundry application that runs multiple instances.
-
-```javascript
-const request = require('request')
-
-//These are best configured using environment variables.
-const GATEWAY_ID = 'XXXXXX'//Your Gateway ID
-const DEST_ID = 'YYYYYY' // The Destination ID to restrict access to.
-const SEC_TOKEN = 'ZZZZZ' // The Security Token for the Gateway.
-
-const APP_ID = JSON.parse(process.env.VCAP_APPLICATION).application_id
-const IP_TABLE_BODY = {
-  app: APP_ID + ':' + process.env.CF_INSTANCE_INDEX //uniquely identifies the app and instance for ip table rule.
-  src: process.env.CF_INSTANCE_IP 
- }
- 
-request({
-  method: 'PUT',
-  uri: `https://sgmanager.us-south.securegateway.cloud.ibm.com/v1/sgconfig/$GATEWAY_ID/destinations/$DEST_ID/ipTableRule`
-  headers: {
-    'Authorization': `Bearer $SEC_TOKEN`
-  }
-  json: true, // Content-Type: application/json
-  body: IP_TABLE_BODY
-  }, console.log.bind(console)) 
-```
-
-This should be run when starting up the application, any IP tables rule which is defined before will be overwritten. Each IP table rule
-uniquely identifies each instance of the application using the `application_id` and `CF_INSTANCE_INDEX`. The external IP address
-is retrieved from the `CF_INSTANCE_IP` variable and applied to the IP table rule.
 
 
 {: pre}
