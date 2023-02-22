@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-02-07"
+lastupdated: "2023-02-22"
 
 subcollection: SecureGateway
 
@@ -86,5 +86,6 @@ This should be run when starting up the application, any IP tables rule which is
 uniquely identifies each instance of the application using the `application_id` and `CF_INSTANCE_INDEX`. The external IP address
 is retrieved from `https://api.myip.com` and applied to the IP table rule.
 
+Note: The environment variable `CF_INSTANCE_IP` is changed to point to private IP now, if your script is still using `CF_INSTANCE_IP`, please update your script to retrieve the external IP from `https://api.myip.com`
 
 {: pre}
