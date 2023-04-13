@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2021
-lastupdated: "2021-05-05"
+  years: 2015, 2023
+lastupdated: "2023-04-12"
 
 subcollection: SecureGateway
 
@@ -26,22 +26,40 @@ subcollection: SecureGateway
 ## Initial Troubleshooting Steps
 {: #initial-troubleshooting}
 
-- Initiate the failing request from the requesting application
-- Check the Secure Gateway Client logs
+### Secure Gateway Client disconnected
+{: #initial-troubleshooting-disconnect}
+If the Secure Gateway Client have been disconnected, check the Secure Gateway Client logs
 - If there is error when fetching configuration:
   ```
   [DEBUG] The Secure Gateway client will fetch its configuration from https://sgmanager.<region>.securegateway.cloud.ibm.com/sgconfig/<gateway id>
   [ERROR] The response is code: <Error Code>, message: <Error details>
   ```
-  Please check whether your Secure Gateway Client have access to `https://sgmanager.<region>.securegateway.cloud.ibm.com`. For details, see [Network Requirements](/docs/SecureGateway?topic=SecureGateway-client-requirements#network-requirements).
+  - Please check whether your Secure Gateway Client have access to `https://sgmanager.<region>.securegateway.cloud.ibm.com`. For details, see [Network Requirements](/docs/SecureGateway?topic=SecureGateway-client-requirements#network-requirements).
+    ```
+    curl https://sgmanager.<region>.securegateway.cloud.ibm.com
+    ```
 - If there is error when accessing tunnel server:
   ```
   [DEBUG] The Secure Gateway tunnel is connecting for wss://<node>.securegateway.appdomain.cloud:9000/ws
   [ERROR] The following error occurred on the Secure Gateway tunnel, <Error Code>
   [INFO] The Secure Gateway tunnel was disconnected
   ```
-  Please check whether your Secure Gateway Client have access to `<node>.securegateway.appdomain.cloud:9000`. For details, see [Network Requirements](/docs/SecureGateway?topic=SecureGateway-client-requirements#network-requirements).
-- If the Secure Gateway Client is connecting to the tunnel but no client logs have been generated from the request, the issue is between the requesting application and the Secure Gateway Servers.  This could range from network reliability to mismatched request protocols to an improper TLS mutual authentication handshake.
+  - Please check whether your Secure Gateway Client have access to `<node>.securegateway.appdomain.cloud:9000`. For details, see [Network Requirements](/docs/SecureGateway?topic=SecureGateway-client-requirements#network-requirements).
+    ```
+    curl https://<node>.securegateway.appdomain.cloud:9000
+    ```
+- If you are using proxy option, please check with your proxy team to ensure the Secure Gateway Client could access above host and port via the proxy.
+  ```
+  curl -x <proxy> https://sgmanager.<region>.securegateway.cloud.ibm.com
+  curl -x <proxy> https://<node>.securegateway.appdomain.cloud:9000
+  ```
+
+### Secure Gateway Client connection errors
+{: #initial-troubleshooting-conn-err}
+- Initiate the failing request from the requesting application, check the Secure Gateway Client logs
+- If the Secure Gateway Client is connecting to the tunnel but no client logs have been generated from the request, the issue is between the requesting application and the Secure Gateway Servers. This could range from network reliability to mismatched request protocols to an improper TLS mutual authentication handshake. For example:
+  - If the destination have enabled iptables rules, please ensure the IP of the cloud application is in the range of the iptables rules
+  - If the destination is set to use `Mutual Auth`, please ensure it is using associated certificate and key to connect
 - If the client has generated error level logs from the request, then the issue is between the SG Client and the on-prem resource. For example:
   ```
   [ERROR] Connection #<connection ID> to destination <target host>:<target port> had error: '<Error Code>'
