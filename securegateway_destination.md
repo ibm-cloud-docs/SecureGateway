@@ -104,7 +104,7 @@ Uncheck the box `Reject unauthorized` will leave you vulnerable to Man-in-the-mi
 
 #### Server Name Indicator (SNI)
 {: #dest-sni}
-This option becomes available by selecting TLS or Mutual Auth for your [Resource Authentication](#dest-resource-auth).  This is used to allow a separate hostname to be provided to the TLS handshake of the resource connection.
+This option becomes available by selecting TLS or Mutual Auth for your [Resource Authentication](#dest-resource-auth).  This is used to allow a separate hostname to be provided to the TLS handshake of the resource connection. If you are using self-signed certificates, you can resolve some self-signed certificate errors by adding the hostname to your configuration. 
 
 ### Client Certificate and Key
 {: #dest-client-cert-key}
