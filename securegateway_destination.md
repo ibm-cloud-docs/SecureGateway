@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2021
-lastupdated: "2021-03-17"
+  years: 2015, 2023
+lastupdated: "2023-05-17"
 
 subcollection: SecureGateway
 
@@ -104,7 +104,7 @@ Uncheck the box `Reject unauthorized` will leave you vulnerable to Man-in-the-mi
 
 #### Server Name Indicator (SNI)
 {: #dest-sni}
-This option becomes available by selecting TLS or Mutual Auth for your [Resource Authentication](#dest-resource-auth).  This is used to allow a separate hostname to be provided to the TLS handshake of the resource connection.
+This option becomes available by selecting TLS or Mutual Auth for your [Resource Authentication](#dest-resource-auth). It is the name of the host being connected to, and must be a host name, and not an IP address. It can be used to allow a separate hostname to be provided to the TLS handshake of the resource connection, or used by a multi-homed server to choose the correct certificate to present to the client. It is suggested to set this to be same as `Resource Hostname`.
 
 ### Client Certificate and Key
 {: #dest-client-cert-key}
