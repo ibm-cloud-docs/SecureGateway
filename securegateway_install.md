@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2021
-lastupdated: "2021-08-20"
+  years: 2015, 2023
+lastupdated: "2023-05-31"
 
 subcollection: SecureGateway
 
@@ -147,7 +147,7 @@ You will require root or administrative privileges to perform this installation.
 
     <b>Note:</b> Other than the NPM installation proxy info, you do not have to answer any of the prompts, all will take the defined default or be left blank in the sgenvironment.conf file. This allows the installation process to start up Secure Gateway client without user interaction.
 
-    <b>Note:</b> The sgenvironment.conf is read every time that you start or restart the client using the system's upstart process. You can edit the /etc/ibm/sgenvironment.conf file at any time to make changes to your configuration and restart the client to pick up those changes.
+    <b>Note:</b> The sgenvironment.conf is read every time that you start or restart the client using the system's upstart process. You can edit the /etc/ibm/sgenvironment.conf file at any time to make changes to your configuration and restart the client to pick up those changes. However, UI password in config file could only be set up during installation.
 
     <b>Note:</b> The language of the {{site.data.keyword.SecureGateway}} client service logs can be changed by changing the `LANGUAGE` parameter in the /etc/ibm/sgenvironment.conf file. The service logs will change to selected language after service restart.
 
