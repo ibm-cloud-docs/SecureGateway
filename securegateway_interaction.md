@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2021
-lastupdated: "2021-03-17"
+  years: 2015, 2023
+lastupdated: "2021-05-31"
 
 subcollection: SecureGateway
 
@@ -40,7 +40,7 @@ The following table describes all of the available options that can be provided 
 | -P, -\-port &lt;port&gt; | The port for the UI to run on.  Defaults to port 9003 |
 | -r, -\-reconnect &lt;reconnect attempts&gt; | Reconnect attempts after drop the connection between SG client and SG server, -1 means retry forever. Defaults to 20 |
 | -t, -\-sectoken &lt;security token&gt; | The security token to use for this gateway connection |
-| -w, -\-password &lt;password&gt; | The password to protect the UI with.  Defaults to no password |
+| -w, -\-password &lt;password&gt; | The password to protect the UI with.  Defaults to no password.  Passwords must contain only letters. |
 | -x, -\-proxy &lt;proxy agent&gt; | (For SG client v182fp2 and former) The proxy for the port 9000 wss connection |
 |                                   | (For SG client v183 and later) The proxy for the port 9000 wss connection and port 443 gateway authentication connection |
 | -\-noUI | Prevent the UI from starting up automatically |
