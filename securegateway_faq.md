@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2022
-lastupdated: "2022-11-30"
+  years: 2015, 2023
+lastupdated: "2023-08-02"
 
 subcollection: SecureGateway
 
@@ -287,3 +287,34 @@ Secure Gateway only support one request/resource port for each destination, even
 For example:
 
 Regular FTP connections use port 21 for command channel but use other port for data channel, which cause control connection could be sent via Secure Gateway service to the command channel port 21 of the FTP server, but data flow connection is not able to be sent to the data channel port of the FTP server, even most of the FTP client get the data channel host/port information via the response of the control connection from the FTP server, which means you can't force the FTP client to send data flow connection via Secure Gateway service instead of send to FTP server directly.
+
+## How could I create Cloud Foundry Org to deploy Secure Gateway instance after Cloud Foundry deprecated?
+
+Based on the [IBM Cloud Foundry deprecation plan announcment](https://ibm.biz/ibmcf-announce){: external}, and because Secure Gateway relies on Cloud Foundry security constructs of Cloud Foundry Org ID and Space ID for a particular region for deployment and billing, please follow these steps before deploying a Secure Gateway instance.
+
+Pre-Steps to deploy a Secure Gateway instance
+
+- Go to the [Cloud Foundry Orgs console page](https://cloud.ibm.com/account/cloud-foundry){: external} in the IBM Cloud console
+- If you have a Cloud Foundry Org you want to deploy your Secure Gateway instance into, use that Cloud Foundry Org
+    - Click on it
+    - Make sure you have a Space for each IBM Cloud region you want to deploy a Secure Gateway into
+    - If not, Add a space for the IBM Cloud region you want to deploy into
+    - Repeat as needed
+- If you do not have a Cloud Foundry Org listed, or one you want to use, open a Support ticket to have that Cloud Foundry Org created for you
+    - [Open a support ticket](https://cloud.ibm.com/unifiedsupport/cases/form?type=IBM_SecureGateway){: external}
+    - Enter the Subject `Need Cloud Foundry Org created for Secure Gateway deployment deployment`
+    - In the request please include
+        ```
+        I need a Cloud Foundry Org created to deploy a Secure Gateway
+
+        Here is information in which I want the Cloud Foundry Org created
+
+        IBM Cloud Account ID (please put the account ID you can find here https://cloud.ibm.com/account/settings "ID: ##########":
+        Email address of this account ID:
+        Org name: <it can be any value you want>
+        ```
+    - You will receive an update back from that ticket when that has been created for you
+    - You can use that same Cloud Foundry Org console page to create Cloud Foundry Spaces in any region into which you want to deploy a Secure Gateway
+    - At that point, the Secure Gateway deployment to that requested Cloud Foundry Org and Cloud Foundry Space in the desired region will succeed
+
+
