@@ -69,7 +69,7 @@ You can use both distributed clouds and VPNs to connect and access resources thr
 
 If you need to share a lot of resources between various offices, VPNs can be a better choice. The administrators can then configure the VPN to lock down those resources that they don’t want shared over the virtual network.
 
-So, the decision of what kind of technology to use when securing your cloud resources depends on your intended usage, overall security concerns, and level of configuration effort required with each method. However, if you want the very latest in computing capability, flexibility in infrastructure options, a consistent operational experience, and the very best security possible across multiple locations, you should use {{site.data.keyword.satelliteshort}}.
+So, the decision of what kind of technology to use when securing your cloud resources depends on your intended usage, overall security concerns, and level of configuration effort required with each method. However, if you want the very latest in computing capability, flexibility in infrastructure options, a consistent operational experience, and the very best security possible across multiple locations, you should use {{site.data.keyword.satellite}}.
 
 ## Additional resources
 {: #migration_options_additional_resources}
