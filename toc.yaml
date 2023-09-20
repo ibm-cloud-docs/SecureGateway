@@ -18,45 +18,45 @@ toc:
       - topicgroup:
           label: Deprecation
           topics:
-          - deprecation.md
-          - migration_options.md
-          - deprecation_satellite.md
+            - deprecation.md
+            - migration_options.md
+            - deprecation_satellite.md
       - securegateway_about.md
   - navgroup:
       id: tutorial
       topics:
-      - securegateway_gateway.md
-      - securegateway_client.md
-      - securegateway_destination.md
+        - securegateway_gateway.md
+        - securegateway_client.md
+        - securegateway_destination.md
   - navgroup:
       id: reference
       topics:
-      - securegateway_updates.md
-      - securegateway_requirements.md
-      - securegateway_install.md
-      - securegateway_auto-start.md
-      - securegateway_interaction.md
-      - securegateway_acl.md
-      - securegateway_managing.md
-      - securegateway_plans.md
-      - securegateway_uninstall.md
+        - securegateway_updates.md
+        - securegateway_requirements.md
+        - securegateway_install.md
+        - securegateway_auto-start.md
+        - securegateway_interaction.md
+        - securegateway_acl.md
+        - securegateway_managing.md
+        - securegateway_plans.md
+        - securegateway_uninstall.md
   - navgroup:
       id: howto
       topics:
-      - securegateway_tls-ma.md
-      - securegateway_iptables.md
-      - securegateway_acl-file.md
-      - securegateway_config-file.md
-      - securegateway_keygen.md
+        - securegateway_tls-ma.md
+        - securegateway_iptables.md
+        - securegateway_acl-file.md
+        - securegateway_config-file.md
+        - securegateway_keygen.md
   - navgroup:
       id: help
       topics:
-      - securegateway_faq.md
-      - securegateway_troubleshooting.md
-      - securegateway_resources.md
+        - securegateway_faq.md
+        - securegateway_troubleshooting.md
+        - securegateway_resources.md
   - navgroup:
       id: reference
       topics:
         - link:
-            label: Resources Management API reference
-            href: https://cloud.ibm.com/apidocs/secure-gateway
+          label: Resources Management API reference
+          href: https://cloud.ibm.com/apidocs/secure-gateway
