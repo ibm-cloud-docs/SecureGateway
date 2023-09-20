@@ -57,9 +57,6 @@ toc:
   - navgroup:
       id: reference
       topics:
-      - topicgroup:
-          label: API reference
-          links:
-          - link:
-              label: Resources Management
-              href: https://cloud.ibm.com/apidocs/secure-gateway
+        - link:
+            label: Resources Management API reference
+            href: https://cloud.ibm.com/apidocs/secure-gateway
