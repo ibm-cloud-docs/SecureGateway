@@ -13,7 +13,7 @@ subcollection: SecureGateway
 {{site.data.keyword.attribute-definition-list}}
 
 
-# Understanding your migration options
+# Migrating from Secure Gateway
 {: #deprecation_migration_options}
 
 {{_include-segments/list-note.md}}
