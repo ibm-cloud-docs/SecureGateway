@@ -13,6 +13,8 @@ subcollection: SecureGateway
 # Resources
 {: #secure-gateway-resource}
 
+{{_include-segments/list-note.md}}
+
 ## Blogs and other resources
 {: #blogs-and-others}
 

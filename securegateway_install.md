@@ -16,6 +16,8 @@ subcollection: SecureGateway
 # Installing the Client
 {: #client-install}
 
+{{_include-segments/list-note.md}}
+
 ## Docker
 {: #installing-docker}
 

@@ -16,6 +16,8 @@ subcollection: SecureGateway
 # Interacting with the Client
 {: #client-interacting}
 
+{{_include-segments/list-note.md}}
+
 There are a few ways to interact with the client:
 
 - Through terminal command line prior to startup

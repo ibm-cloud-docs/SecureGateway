@@ -16,6 +16,8 @@ subcollection: SecureGateway
 # Troubleshooting
 {: #troubleshooting}
 
+{{_include-segments/list-note.md}}
+
 ## Best practices for running the Secure Gateway Client
 {: #best-practices}
 

@@ -13,6 +13,8 @@ subcollection: SecureGateway
 # {{site.data.keyword.SecureGateway}} Service Plans
 {: #secure-gateway-service-plans}
 
+{{_include-segments/list-note.md}}
+
 With the release of v1.7.0, a new tiered plan pricing model was introduced that allows {{site.data.keyword.SecureGateway}} to scale to the needs of any company.  The table below provides the limitations associated with each of the publicly available plans:
 
 ![Tiered Plan Model](./images/planDetails.png?raw=true "Tiered Plan Model")

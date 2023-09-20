@@ -13,6 +13,8 @@ subcollection: SecureGateway
 # {{site.data.keyword.SecureGateway}} Change Log
 {: #secure-gateway-change-log}
 
+{{_include-segments/list-note.md}}
+
 Our regression tests only cover last 3 versions.
 
 Please ensure your Secure Gateway Client does not fall more than 3 versions behind, or you might get unexpected behaviour. 

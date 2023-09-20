@@ -16,6 +16,8 @@ subcollection: SecureGateway
 # Uninstalling the Client
 {: #client-uninstall}
 
+{{_include-segments/list-note.md}}
+
 ## Docker
 {: #docker-uninstall}
 

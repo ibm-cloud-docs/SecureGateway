@@ -16,6 +16,7 @@ subcollection: SecureGateway
 # Understanding your migration options
 {: #deprecation_migration_options}
 
+{{_include-segments/list-note.md}}
 
 Review the following options secure data communications in the IBM Cloud.
 {: shortdesc}

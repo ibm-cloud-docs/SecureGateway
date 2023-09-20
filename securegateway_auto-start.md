@@ -16,6 +16,8 @@ subcollection: SecureGateway
 # Configuring Auto-start for the Client
 {: #auto-start-conf}
 
+{{_include-segments/list-note.md}}
+
 ## Linux
 {: #auto-start-linux}
 

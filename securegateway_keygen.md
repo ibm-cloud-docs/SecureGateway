@@ -16,6 +16,8 @@ subcollection: SecureGateway
 # Cert/Key Management
 {: #cert-key-management}
 
+{{_include-segments/list-note.md}}
+
 ## Generating a self-signed certifiate/key pair
 {: #self-signed-cert-gen}
 

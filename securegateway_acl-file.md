@@ -17,6 +17,8 @@ subcollection: SecureGateway
 # ACL File
 {: #acl-files}
 
+{{_include-segments/list-note.md}}
+
 ```
 #Lines preceded by a # will be ignored as a comment
 #To allow specific port on a specific host:

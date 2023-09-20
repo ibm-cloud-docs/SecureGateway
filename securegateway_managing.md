@@ -13,6 +13,8 @@ subcollection: SecureGateway
 # Managing your {{site.data.keyword.SecureGateway}} Service
 {: #manage-sg-service}
 
+{{_include-segments/list-note.md}}
+
 ## {{site.data.keyword.SecureGateway}} Dashboard
 {: #secure-gateway-dashboard}
 From your {{site.data.keyword.SecureGateway}} dashboard, you can quickly see the following details:

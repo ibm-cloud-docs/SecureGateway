@@ -17,6 +17,8 @@ subcollection: SecureGateway
 # Config File
 {: #config-files}
 
+{{_include-segments/list-note.md}}
+
 ## Linux
 {: #config-files-linux}
 
