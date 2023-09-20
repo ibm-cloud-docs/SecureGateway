@@ -31,7 +31,7 @@ Review the following options secure data communications in the IBM Cloud.
 - **Co-locating data and processing**: Satellite allows data processing to happen close to the data, alleviating latency. This is especially important when using predictive AI analytics or other critical applications with large date sets.
 - **Data sovereignty, security and compliance needs**: Satellite allows client data to remain in-country, meeting local regulatory, contractual, information security or compliance needs. 
 
-Satellite now has two deployment models to best fit a client’s needs:
+Satellite now has two deployment models to best fit a client’s needs. 
 
 Satellite Location
 :   Locations use the your x86 host resources to create a highly available availability zone on the client’s premise, supporting both Satellite Link’s communication functionality and the ability to deploying managed cloud services on premise, such as managed OpenShift, managed databases, and more.
@@ -39,8 +39,8 @@ Satellite Location
 Satellite Connector
 :   A new deployment model which enables only the secure communications with cloud via a light weight  container deployed by the client on their own docker hosts. This option brings all the security and auditability of Satellite communication, but with much lower resources required. Connector provides the same application-level transport through common ports as Secure Gateway, with greater client visibility and audit control. It’s light-weight container based deployment is focused for clients that just need the hybrid cloud communication features without the need for additional on-premise cloud services. Clients can also choose to utilize Satellite Locations instead, which provide the same communications services while also enabling the deployment of IBM managed services and features on-premises, at the edge or within other cloud providers. 
 
-Both Satellite Locations and Satellite Connectors are homed from a given IBM Cloud Multi Zone Region (MZR). Both provide application-layer transport (Layer 4) between the clients location and other IBM services or their own applications running within IBM Cloud. A Satellite Location goes furthur, allowing clients to run those same services locally, where ever the client needs, to address a number of real-world challenges: 
 
+Both Satellite Locations and Satellite Connectors are homed from a given IBM Cloud Multi Zone Region (MZR). Both provide application-layer transport (Layer 4) between the clients location and other IBM services or their own applications running within IBM Cloud. A Satellite Location goes furthur, allowing clients to run those same services locally, where ever the client needs, to address a number of real-world challenges. 
 
 
 ## Virtual Private Network
@@ -69,7 +69,7 @@ You can use both distributed clouds and VPNs to connect and access resources thr
 
 If you need to share a lot of resources between various offices, VPNs can be a better choice. The administrators can then configure the VPN to lock down those resources that they don’t want shared over the virtual network.
 
-So, the decision of what kind of technology to use when securing your cloud resources depends on your intended usage, overall security concerns, and level of configuration effort required with each method. However, if you want the very latest in computing capability, flexibility in infrastructure options, a consistent operational experience, and the very best security possible across multiple locations, you should use {{site.data.keyword.satellite}}.
+So, the decision of what kind of technology to use when securing your cloud resources depends on your intended usage, overall security concerns, and level of configuration effort required with each method. However, if you want the very latest in computing capability, flexibility in infrastructure options, a consistent operational experience, and the very best security possible across multiple locations, you should use {{site.data.keyword.satelliteshort}}.
 
 ## Additional resources
 {: #migration_options_additional_resources}

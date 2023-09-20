@@ -13,7 +13,7 @@ subcollection: SecureGateway
 {{site.data.keyword.attribute-definition-list}}
 
 
-# Deprecation of {{site.data.keyword.SecureGateway}}
+# Overview and timeline
 {: #deprecation}
 
 IBM {{site.data.keyword.SecureGateway}} is now deprecated. As of 01 April 2024 new IBM Cloud {{site.data.keyword.SecureGateway}} instances cannot be created and only existing users will be able to deploy instances. End-of-Support happens on 20 October 2024, any IBM Cloud {{site.data.keyword.SecureGateway}} instances that still exist on that date will be de-provisioned and removed.
@@ -38,7 +38,7 @@ Review the following table for important dates of the deprecation process.
 ## {{site.data.keyword.SecureGateway}} deprecation details
 {: #deprecation_details}
 
-Deprecation is a process, and we've announced the beginning of that process. It begins with the "Announcement" (this page), continues through to end of support.
+Deprecation is a process, and we've announced the beginning of that process. It begins with the announcement (this page), continues through to end of support.
 
 - At the end of marketing, users that don't have IBM Cloud {{site.data.keyword.SecureGateway}} instances will be blocked from deploying new instances. All users that have {{site.data.keyword.SecureGateway}} instances instances deployed can still keep deploying and re-deploying normally and as needed.
 - No other service or IBM Cloud service will be affected other than IBM Cloud {{site.data.keyword.SecureGateway}}
