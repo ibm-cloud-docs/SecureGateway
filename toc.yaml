@@ -14,13 +14,13 @@ toc:
   - navgroup:
       id: learn
       topics:
-      - index.md
       - topicgroup:
           label: Deprecation
           topics:
             - deprecation.md
             - migration_options.md
             - deprecation_satellite.md
+      - index.md
       - securegateway_about.md
   - navgroup:
       id: tutorial
