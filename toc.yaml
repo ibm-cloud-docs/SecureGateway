@@ -10,6 +10,7 @@ toc:
     version: 2
     console-page: /catalog/services/secure-gateway
     product-page: https://ibm.com/cloud/secure-gateway
+    release-level: deprecated
   entries:
   - navgroup:
       id: learn
