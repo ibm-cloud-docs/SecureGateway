@@ -1,4 +1,3 @@
----
 toc:
   properties:
     subcollection: SecureGateway
@@ -6,20 +5,22 @@ toc:
     category: integration
     audience: service
     href: /docs/SecureGateway
-    console-page: /catalog/services/secure-gateway
-    product-page: https://ibm.com/cloud/secure-gateway
     path: SecureGateway
     label: Secure Gateway
+    version: 2
+    console-page: /catalog/services/secure-gateway
+    product-page: https://ibm.com/cloud/secure-gateway
   entries:
   - navgroup:
       id: learn
       topics:
-      - topicgroup:
-        label: Deprecation
-        topics:
-        - deprecation.md
-        - deprecation_satellite.md
       - index.md
+      - topicgroup:
+          label: Deprecation
+          topics:
+          - deprecation.md
+          - migration_options.md
+          - deprecation_satellite.md
       - securegateway_about.md
   - navgroup:
       id: tutorial
