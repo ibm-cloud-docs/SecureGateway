@@ -7,9 +7,8 @@ lastupdated: "2021-03-17"
 subcollection: SecureGateway
 
 ---
-{:deprecated: .deprecated}
-{:external: target="_blank" .external}
-{:shortdesc: .shortdesc}
+
+{{site.data.keyword.attribute-definition-list}}
 
 
 # Getting started with {{site.data.keyword.SecureGateway}}
