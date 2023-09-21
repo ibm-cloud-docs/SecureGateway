@@ -20,7 +20,7 @@ toc:
           topics:
             - deprecation.md
             - migration_options.md
-            - deprecation_satellite.md
+            - migration_to_connector_1.md
       - index.md
       - securegateway_about.md
   - navgroup:
