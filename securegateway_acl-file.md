@@ -17,7 +17,8 @@ subcollection: SecureGateway
 # ACL File
 {: #acl-files}
 
-{{_include-segments/list-note.md}}
+{{site.data.keyword.SecureGateway}} is deprecated. For more information, see the [deprecation details](/docs/SecureGateway?topic=SecureGateway-deprecation).
+{: deprecated}
 
 ```
 #Lines preceded by a # will be ignored as a comment

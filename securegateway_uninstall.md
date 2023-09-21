@@ -16,7 +16,8 @@ subcollection: SecureGateway
 # Uninstalling the Client
 {: #client-uninstall}
 
-{{_include-segments/list-note.md}}
+{{site.data.keyword.SecureGateway}} is deprecated. For more information, see the [deprecation details](/docs/SecureGateway?topic=SecureGateway-deprecation).
+{: deprecated}
 
 ## Docker
 {: #docker-uninstall}

@@ -16,7 +16,8 @@ subcollection: SecureGateway
 # Troubleshooting
 {: #troubleshooting}
 
-{{_include-segments/list-note.md}}
+{{site.data.keyword.SecureGateway}} is deprecated. For more information, see the [deprecation details](/docs/SecureGateway?topic=SecureGateway-deprecation).
+{: deprecated}
 
 ## Best practices for running the Secure Gateway Client
 {: #best-practices}

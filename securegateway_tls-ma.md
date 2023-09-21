@@ -16,7 +16,8 @@ subcollection: SecureGateway
 # Node.js TLS Mutual Authentication
 {: #nodejs-tls-ma}
 
-{{_include-segments/list-note.md}}
+{{site.data.keyword.SecureGateway}} is deprecated. For more information, see the [deprecation details](/docs/SecureGateway?topic=SecureGateway-deprecation).
+{: deprecated}
 
 This sample will go over how to configure Mutual Authentication for both sides of an on-premises destination: User Authentication and Resource Authentication.
 

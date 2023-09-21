@@ -16,7 +16,8 @@ subcollection: SecureGateway
 # Access Control List
 {: #acl}
 
-{{_include-segments/list-note.md}}
+{{site.data.keyword.SecureGateway}} is deprecated. For more information, see the [deprecation details](/docs/SecureGateway?topic=SecureGateway-deprecation).
+{: deprecated}
 
 The {{site.data.keyword.SecureGateway}} client provides embedded Access Control List (ACL) support. You can allow or restrict (deny) access to on-premises resources by making modifications to the ACL for the client.  This can be done interactively using the client commands or specifying a file that contains the ACLs you want to have in affect.
 

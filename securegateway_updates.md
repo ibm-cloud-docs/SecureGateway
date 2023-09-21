@@ -13,7 +13,8 @@ subcollection: SecureGateway
 # {{site.data.keyword.SecureGateway}} Change Log
 {: #secure-gateway-change-log}
 
-{{_include-segments/list-note.md}}
+{{site.data.keyword.SecureGateway}} is deprecated. For more information, see the [deprecation details](/docs/SecureGateway?topic=SecureGateway-deprecation).
+{: deprecated}
 
 Our regression tests only cover last 3 versions.
 

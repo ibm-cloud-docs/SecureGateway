@@ -17,6 +17,7 @@ subcollection: SecureGateway
 {: #deprecation_migration_options}
 
 {{site.data.keyword.SecureGateway}} is deprecated. For more information, see the [deprecation details](/docs/SecureGateway?topic=SecureGateway-deprecation).
+{: deprecated}
 
 Review following options for migrating your secure data communications from {{site.data.keyword.SecureGateway}} to another {{site.data.keyword.cloud_notm}} service.
 {: shortdesc}
