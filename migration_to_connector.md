@@ -18,8 +18,8 @@ completion-time: 2hr
 {{site.data.keyword.attribute-definition-list}}
 
 
-# Understanding {{site.data.keyword.satelliteshort}} Connector
-{: #migration_to_connector}
+# Migrating to {{site.data.keyword.satelliteshort}} Connector
+{: #understanding-connector}
 {: toc-content-type="tutorial"}
 {: toc-services="SecureGateway,satellite"}
 {: toc-completion-time="2hr"}
@@ -40,30 +40,12 @@ This tutorial is designed for {{site.data.keyword.SecureGateway}} administrators
 - Explain how the {{site.data.keyword.satelliteshort}} Connector features compare to {{site.data.keyword.SecureGateway}}.
 
 
-## Review the Connector FAQ
-{: #migration_faq}
-{: step}
-
-[Review the Connector FAQs](/docs/satellite?topic=satellite-connector-faq).
-
-## Review the terminology mapping
-{: #migration_comp}
-{: step}
-
-{{../satellite/connector-and-secure-gateway.md#connector-sg-comp-table}}
-
-## Review the feature comparison table
-{: #migration_comp}
-{: step}
-
-{{../satellite/connector-and-secure-gateway.md #connector-capabilities-table}}
-
-
-## Review the Connector concepts
+## Review the concepts, terms, and capabilities
 {: #migration_understand}
 {: step}
 
-Review the [{{site.data.keyword.satelliteshort}} Connector overview](/docs/satellite?topic=satellite-understand-connectors) to get familar with the concepts and terms as well as the networking requirements.
+### Connector concepts
+{: #migration_concepts}
 
 {{../satellite/understand-connectors.md#term-connector}}
 
@@ -72,3 +54,18 @@ Review the [{{site.data.keyword.satelliteshort}} Connector overview](/docs/satel
 {{../satellite/understand-connectors.md#term-endpoint}}
 
 {{../satellite/understand-connectors.md#term-acl}}
+
+### Connector and Secure Gateway terminology mapping
+{: #migration_concepts}
+
+{{../satellite/connector-and-secure-gateway.md#connector-sg-comp-table}}
+
+### Connector a Secure Gateway capability comparison
+{: #migration_compare}
+
+{{../satellite/connector-and-secure-gateway.md #connector-capabilities-table}}
+
+[For more information, see the Connector FAQs](/docs/satellite?topic=satellite-connector-faq).
+{: tip}
+
+
