@@ -63,7 +63,7 @@ This tutorial is designed for {{site.data.keyword.SecureGateway}} administrators
 {: #migration_compare}
 {: step}
 
-{{../satellite/connector-and-secure-gateway.md #connector-capabilities-table}}
+{{../satellite/connector-and-secure-gateway.md#connector-capabilities-table}}
 
 [For more information, see the Connector FAQs](/docs/satellite?topic=satellite-connector-faq).
 {: tip}
