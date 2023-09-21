@@ -41,7 +41,7 @@ This tutorial is designed for {{site.data.keyword.SecureGateway}} administrators
 - Explain how the {{site.data.keyword.satelliteshort}} Connector features compare to {{site.data.keyword.SecureGateway}}.
 
 
-## Review the Connector concepts
+## Learn the concepts
 {: #migration_concepts}
 {: step}
 
@@ -53,20 +53,20 @@ This tutorial is designed for {{site.data.keyword.SecureGateway}} administrators
 
 {{../satellite/understand-connectors.md#term-acl}}
 
-## Review the Connector and Secure Gateway terminology mapping
+## Compare the terms
 {: #migration_terms}
 {: step}
 
 {{../satellite/connector-and-secure-gateway.md#connector-sg-comp-table}}
 
-## Review the capability comparison
+## Compare the capabilities
 {: #migration_compare}
 {: step}
 
 {{../satellite/connector-and-secure-gateway.md#connector-capabilities-table}}
 
 
-## Next steps
+## Review the requirements and FAQs
 {: #migration_next}
 
 1. [Review the Connector overview and requirements](/docs/satellite?topic=satellite-understand-connectors).
