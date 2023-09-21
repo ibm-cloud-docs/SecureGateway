@@ -18,7 +18,7 @@ completion-time: 2hr
 {{site.data.keyword.attribute-definition-list}}
 
 
-# Migrating to {{site.data.keyword.satelliteshort}} Connector
+# Understanding {{site.data.keyword.satelliteshort}} Connector
 {: #migration_to_connector}
 {: toc-content-type="tutorial"}
 {: toc-services="SecureGateway,satellite"}
