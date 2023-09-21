@@ -69,8 +69,8 @@ This tutorial is designed for {{site.data.keyword.SecureGateway}} administrators
 ## Next steps
 {: #migration_next}
 
+1. [Review the Connector overview and requirements](/docs/satellite?topic=satellite-understand-connectors).
 1. [Review the Connector FAQs](/docs/satellite?topic=satellite-connector-faq).
-1. [Review the Connector overview and requirements](/docs/satellite?topic=satellite-connector-faq).
 
 
 
