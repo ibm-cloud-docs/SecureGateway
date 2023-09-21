@@ -65,7 +65,12 @@ This tutorial is designed for {{site.data.keyword.SecureGateway}} administrators
 
 {{../satellite/connector-and-secure-gateway.md#connector-capabilities-table}}
 
-[For more information, see the Connector FAQs](/docs/satellite?topic=satellite-connector-faq).
-{: tip}
+
+## Next steps
+{: #migration_next}
+
+1. [Review the Connector FAQs](/docs/satellite?topic=satellite-connector-faq).
+1. [Review the Connector overview and requirements](/docs/satellite?topic=satellite-connector-faq).
+
 
 
