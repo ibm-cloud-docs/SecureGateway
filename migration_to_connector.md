@@ -18,7 +18,7 @@ completion-time: 2hr
 {{site.data.keyword.attribute-definition-list}}
 
 
-# Migrating to {{site.data.keyword.satelliteshort}} Connector
+# Reviewing {{site.data.keyword.satelliteshort}} Connector as a {{site.data.keyword.SecureGateway}} replacement
 {: #understanding-connector}
 {: toc-content-type="tutorial"}
 {: toc-services="SecureGateway,satellite"}
@@ -32,7 +32,8 @@ This tutorial is designed for {{site.data.keyword.SecureGateway}} administrators
 
 
 ## Goals
-{: migration_goals}
+{: #migration_goals}
+
 
 - Introduce you to the key {{site.data.keyword.satelliteshort}} Connector concepts.
 - Cover frequently asked questions about {{site.data.keyword.satelliteshort}} Connector
@@ -40,12 +41,9 @@ This tutorial is designed for {{site.data.keyword.SecureGateway}} administrators
 - Explain how the {{site.data.keyword.satelliteshort}} Connector features compare to {{site.data.keyword.SecureGateway}}.
 
 
-## Review the concepts, terms, and capabilities
-{: #migration_understand}
-{: step}
-
-### Connector concepts
+## Review the Connector concepts
 {: #migration_concepts}
+{: step}
 
 {{../satellite/understand-connectors.md#term-connector}}
 
@@ -55,13 +53,15 @@ This tutorial is designed for {{site.data.keyword.SecureGateway}} administrators
 
 {{../satellite/understand-connectors.md#term-acl}}
 
-### Connector and Secure Gateway terminology mapping
-{: #migration_concepts}
+## Review the Connector and Secure Gateway terminology mapping
+{: #migration_terms}
+{: step}
 
 {{../satellite/connector-and-secure-gateway.md#connector-sg-comp-table}}
 
-### Connector a Secure Gateway capability comparison
+## Review the capability comparison
 {: #migration_compare}
+{: step}
 
 {{../satellite/connector-and-secure-gateway.md #connector-capabilities-table}}
 
