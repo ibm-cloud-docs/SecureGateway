@@ -27,14 +27,9 @@ completion-time: 2hr
 {{site.data.keyword.SecureGateway}} is deprecated. For more information, see the [deprecation details](/docs/SecureGateway?topic=SecureGateway-deprecation).
 {: deprecated}
 
-This tutorial is designed to help you migrate your secure data communications from {{site.data.keyword.SecureGateway}} to {{site.data.keyword.satelliteshort}} Connector.
+This tutorial is designed for {{site.data.keyword.SecureGateway}} administrators who are considering migrating to {{site.data.keyword.satelliteshort}} Connector.
 {: shortdesc}
 
-
-## Audience
-{: #migration_goals}
-
-This tutorial is designed for {{site.data.keyword.SecureGateway}} administrators who considering migrating to {{site.data.keyword.satelliteshort}} Connector.
 
 ## Goals
 {: migration_goals}
