@@ -8,6 +8,11 @@ keywords: secure gateway, deprecation, migration
 
 subcollection: SecureGateway
 
+content-type: tutorial
+services: SecureGateway,satellite
+account-plan: paid
+completion-time: 2hr
+
 ---
 
 {{site.data.keyword.attribute-definition-list}}
@@ -15,6 +20,9 @@ subcollection: SecureGateway
 
 # Migrating to {{site.data.keyword.satelliteshort}} Connector
 {: #migration_to_connector}
+{: toc-content-type="tutorial"}
+{: toc-services="SecureGateway,satellite"}
+{: toc-completion-time="2hr"}
 
 {{site.data.keyword.SecureGateway}} is deprecated. For more information, see the [deprecation details](/docs/SecureGateway?topic=SecureGateway-deprecation).
 {: deprecated}
