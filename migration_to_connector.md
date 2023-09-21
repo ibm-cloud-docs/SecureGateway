@@ -31,10 +31,18 @@ This tutorial is designed to help you migrate your secure data communications fr
 {: shortdesc}
 
 
+## Audience
+{: #migration_goals}
+
+This tutorial is designed for {{site.data.keyword.SecureGateway}} administrators who considering migrating to {{site.data.keyword.satelliteshort}} Connector.
+
 ## Goals
 {: migration_goals}
 
-The goal of this tutorial is to introduce you to {{site.data.keyword.satelliteshort}} Connector and how it compares to {{site.data.keyword.SecureGateway}} as well as walk your through a migration scenario.
+- Introduce you to the key {{site.data.keyword.satelliteshort}} Connector concepts.
+- Cover frequently asked questions about {{site.data.keyword.satelliteshort}} Connector
+- Provide a terminology mapping, so that you can learn more about Connector through familiar {{site.data.keyword.SecureGateway}} terms.
+- Explain how the {{site.data.keyword.satelliteshort}} Connector features compare to {{site.data.keyword.SecureGateway}}.
 
 ## Review the Connector concepts
 {: #migration_understand}
@@ -46,7 +54,7 @@ Review the [{{site.data.keyword.satelliteshort}} Connector overview](/docs/satel
 {: #migration_faq}
 {: step}
 
-[Review the FAQ](/docs/satellite?topic=satellite-connector-faq)
+[Review the Connector FAQs](/docs/satellite?topic=satellite-connector-faq).
 
 ## Review the terminology mapping
 {: #migration_comp}
