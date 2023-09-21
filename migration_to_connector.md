@@ -44,11 +44,6 @@ This tutorial is designed for {{site.data.keyword.SecureGateway}} administrators
 - Provide a terminology mapping, so that you can learn more about Connector through familiar {{site.data.keyword.SecureGateway}} terms.
 - Explain how the {{site.data.keyword.satelliteshort}} Connector features compare to {{site.data.keyword.SecureGateway}}.
 
-## Review the Connector concepts
-{: #migration_understand}
-{: step}
-
-Review the [{{site.data.keyword.satelliteshort}} Connector overview](/docs/satellite?topic=satellite-understand-connectors) to get familar with the concepts and terms as well as the networking requirements.
 
 ## Review the Connector FAQ
 {: #migration_faq}
@@ -67,3 +62,18 @@ Review the [{{site.data.keyword.satelliteshort}} Connector overview](/docs/satel
 {: step}
 
 {{../satellite/connector-and-secure-gateway.md #connector-capabilities-table}}
+
+
+## Review the Connector concepts
+{: #migration_understand}
+{: step}
+
+Review the [{{site.data.keyword.satelliteshort}} Connector overview](/docs/satellite?topic=satellite-understand-connectors) to get familar with the concepts and terms as well as the networking requirements.
+
+{{../satellite/understand-connectors.md#term-connector}}
+
+{{../satellite/understand-connectors.md#term-agent}}
+
+{{../satellite/understand-connectors.md#term-endpoint}}
+
+{{../satellite/understand-connectors.md#term-acl}}
