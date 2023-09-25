@@ -33,9 +33,9 @@ Updates needed for {{site.data.keyword.SecureGateway}} instances that use Cloud 
 ## What do I need to do?
 {: #rc_what_to_do}
 
-There are no required manual changes needed for this update. However, if you want to choose the specific resource groups for your {{site.data.keyword.SecureGateway}} instance(s) you can manually complete this process.
+There are no required manual changes needed for this update. The {{site.data.keyword.SecureGateway}} product team will move your {{site.data.keyword.SecureGateway}} instances into the default resource group in your account.
 
-Otherwise, the {{site.data.keyword.SecureGateway}} product team will apply these changes in your account.
+However, if you want to choose the specific resource groups for your {{site.data.keyword.SecureGateway}} instance(s) you can manually complete this process.
 
 Review the following sections for more information about your options.
 
@@ -45,7 +45,7 @@ Review the following sections for more information about your options.
 ## Allowing the {{site.data.keyword.SecureGateway}} product team to apply the changes
 {: #rc_auto}
 
-If are ok with your {{site.data.keyword.SecureGateway}} instances being moving into the `default` resource group in your account and you don't want to manually select the resource groups, then the IBM {{site.data.keyword.SecureGateway}} product team will perform the update. Note that if you choose this option, only the owning user is granted admin permissions. However, after the update is applied, admin users can then add other admin-level users.
+If are ok with your {{site.data.keyword.SecureGateway}} instances being moving into the default resource group in your account and you don't want to manually select the resource groups, then the IBM {{site.data.keyword.SecureGateway}} product team will perform the update. Note that if you choose this option, only the owning user is granted admin permissions. However, after the update is applied, admin users can then add other admin-level users.
 
 ## Manually selecting a resource group for your {{site.data.keyword.SecureGateway}} instances
 {: #rc_manual}
@@ -54,7 +54,7 @@ You can decide the name of the resource group where your want to move your {{sit
 
 If you choose this option, you have until 30 October 2023 to manually update the Resource group.
 
-On 30 October 2023 at 23:59 GMT any remaining {{site.data.keyword.SecureGateway}} instances that are not in a resource group will be moved to the `default` resource group in your account by the {{site.data.keyword.SecureGateway}} product team.
+On 30 October 2023 at 23:59 GMT any remaining {{site.data.keyword.SecureGateway}} instances that are not in a resource group will be moved to the default resource group in your account by the {{site.data.keyword.SecureGateway}} product team.
 
 Differences between manual and automated update - more info needed.
 
