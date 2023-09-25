@@ -27,9 +27,7 @@ Updates needed for {{site.data.keyword.SecureGateway}} instances that use Cloud 
 - There are no changes to the {{site.data.keyword.SecureGateway}} instance.
 - There are no changes to the {{site.data.keyword.SecureGateway}} instance operation or function.
 - There are no changes the deployment region.
-- There is no impact to uptime. This is an atomic operation that happens immediately
-
-This change affects only how your {{site.data.keyword.SecureGateway}} resources are logically grouped and accessed within IBM Cloud.
+- There is no impact to uptime. This is an atomic operation that happens immediately.
 
 
 ## What do I need to do?
