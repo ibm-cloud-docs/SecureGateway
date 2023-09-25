@@ -49,16 +49,16 @@ This tutorial is designed for {{site.data.keyword.SecureGateway}} administrators
 
 
 
-Connector {: #term-connector}
+Connector
 :   A connector provides a secure connection between a specific remote location and {{site.data.keyword.cloud_notm}}.
   
-Agent {: #term-agent}
+Agent
 :   Each connector needs an agent running on your location to establish the connection.
   
-Endpoint {: #term-endpoint}
+Endpoint
 :   An endpoint allows you to securely connect to a server, service, or app that runs in your {{site.data.keyword.satelliteshort}} location from a client that is connected to the {{site.data.keyword.cloud_notm}} private network.
   
-Access control list {: #term-acl}
+Access control list
 :   Access control list (ACL) controls which clients can access location endpoint resources. You can create ACL rules and use them to control which clients can use the endpoint to connect to the destination resource that runs in your location.
 
 ## Compare the terms
