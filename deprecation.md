@@ -49,7 +49,4 @@ Deprecation is a process, and we've announced the beginning of that process. It 
 - After the End-of-Support date, any remaining {{site.data.keyword.SecureGateway}} instances will be permanently disabled and de-provisioned by the {{site.data.keyword.SecureGateway}} team. You must assume your {{site.data.keyword.SecureGateway}} instances will be no longer available at the End-of-Support time.
 
 
-## Resource controller details
-{: rc_details}
-
 
