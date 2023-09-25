@@ -42,7 +42,7 @@ Otherwise, the {{site.data.keyword.SecureGateway}} product team will apply these
 Review the following sections for more information about your options.
 
 - [Allow the {{site.data.keyword.SecureGateway}} product team to apply the changes](#rc_auto).
-- [Manually select the resource groups for my instances](#rc_manual).
+- [Select the resource groups for my instances manually](#rc_manual).
 
 ## Allowing the {{site.data.keyword.SecureGateway}} product team to apply the changes
 {: #rc_auto}
