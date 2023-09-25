@@ -19,8 +19,6 @@ subcollection: SecureGateway
 {{site.data.keyword.SecureGateway}} is deprecated. For more information, see the following deprecation details.
 {: important}
 
-{{site.data.keyword.SecureGateway}} is now deprecated. As of 01 April 2024 new {{site.data.keyword.SecureGateway}} instances cannot be created and only existing users will be able to deploy instances. End-of-Support happens on 20 October 2024, any {{site.data.keyword.SecureGateway}} instances that still exist on that date will be de-provisioned and removed.
-{: shortdesc}
 
 ## Timeline
 {: #deprecation_timeline}
