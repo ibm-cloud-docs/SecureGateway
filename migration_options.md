@@ -44,7 +44,7 @@ Review following options for migrating your secure data communications from {{si
 
 Both {{site.data.keyword.satelliteshort}} Locations and {{site.data.keyword.satelliteshort}} Connectors are homed from a given IBM Cloud Multi Zone Region (MZR). Both provide application-layer transport (Layer 4) between the clients location and other IBM services or their own applications running within IBM Cloud. A {{site.data.keyword.satelliteshort}} Location goes furthur, allowing clients to run those same services locally, where ever the client needs, to address a number of real-world challenges.
 
-To learn more about {{site.data.keyword.satelliteshort}} Connector and how it compares to {{site.data.keyword.SecureGateway}}, complete the [Understanding {{site.data.keyword.satelliteshort}} Connector tutorials](/docs/SecureGateway?topic=SecureGateway-)
+To learn more about {{site.data.keyword.satelliteshort}} Connector and how it compares to {{site.data.keyword.SecureGateway}}, complete the [Understanding {{site.data.keyword.satelliteshort}} Connector tutorial](/docs/SecureGateway?topic=SecureGateway-understanding-connector)
 
 
 ## Virtual Private Network

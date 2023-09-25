@@ -69,6 +69,20 @@ Access control list {: #term-acl}
 {: #migration_compare}
 {: step}
 
+In general, {{site.data.keyword.satelliteshort}} Connector has a number of improvements over {{site.data.keyword.SecureGateway}}.
+
+- Supports the latest generation of VPC networking.
+- Supports only cloud private endpoints.
+- Supports several integrations including standard IBM Cloud tools like Activity Tracker, LogDNA, and Sysdig.
+- Supports more concurrent incoming connections than {{site.data.keyword.SecureGateway}}.
+- Supports a higher number of client connections for client-side HA purposes.
+- Supports server-side HA for increased reliability and uptime.
+- Requires fewer exposed firewall ports which reduces need for proxy work arounds for very restrictive customer firewalls.
+- Supports new protocol for endpoints: HTTP-Tunnel (in addition to TCP/TLS/HTTP/HTTPS).
+- Has no bandwidth egress limits.
+
+Review the following table for more information and a comparison of capabilities between {{site.data.keyword.satelliteshort}} Connector and {{site.data.keyword.SecureGateway}}.
+
 {{../satellite/connector-and-secure-gateway.md#connector-capabilities-table}}
 
 
