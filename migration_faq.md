@@ -13,7 +13,7 @@ subcollection: SecureGateway
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Deprecationa and migration FAQ
+# Deprecation and migration FAQ
 {: #migration_faq}
 
 
@@ -21,8 +21,14 @@ subcollection: SecureGateway
 Review the following frequently asked questions about the {{site.data.keyword.SecureGateway}} Deprecation and migration steps.
 {: shortdesc}
 
-Question
-:   Is there a quick overview that compares the two solutions?
+## What is the timeline for deprecation?
+{: #faq-timeline}
 
-Answer
-:   Yes! See, [Reviewing {{site.data.keyword.satelliteshort}} Connector as a {{site.data.keyword.SecureGateway}} replacement](/docs/SecureGateway?topic=SecureGateway-understanding-connector)
+Review the [Overview and timeline](/docs/SecureGateway?topic=SecureGateway-deprecation) for dates and details.
+
+## Is there a quick overview that compares the two solutions?
+{: #faq-compare}
+
+Yes! For more information, see [Reviewing {{site.data.keyword.satelliteshort}} Connector as a {{site.data.keyword.SecureGateway}} replacement](/docs/SecureGateway?topic=SecureGateway-understanding-connector).
+
+
