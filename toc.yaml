@@ -21,6 +21,10 @@ toc:
             - deprecation.md
             - migration_options.md
             - migration_to_connector.md
+      - topicgroup:
+          label: Resource controller changes
+          topics:
+            - rc_resource_groups.md
       - index.md
       - securegateway_about.md
   - navgroup:
