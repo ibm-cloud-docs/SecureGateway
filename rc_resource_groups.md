@@ -13,7 +13,7 @@ subcollection: SecureGateway
 {{site.data.keyword.attribute-definition-list}}
 
 
-# Resouce controller changes
+# Understanding the changes from Cloud Foundry organizations to resource groups
 {: #rc_resouce_groups}
 
 Updates needed for {{site.data.keyword.SecureGateway}} instances that use Cloud Foundry organizations.
