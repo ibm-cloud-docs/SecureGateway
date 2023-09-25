@@ -35,10 +35,12 @@ This tutorial is designed for {{site.data.keyword.SecureGateway}} administrators
 {: #migration_goals}
 
 
+- Familiarize users with {{site.data.keyword.satelliteshort}} Connector as a replacement for {{site.data.keyword.SecureGateway}}.
 - Introduce you to the key {{site.data.keyword.satelliteshort}} Connector concepts.
-- Cover frequently asked questions about {{site.data.keyword.satelliteshort}} Connector
 - Provide a terminology mapping, so that you can learn more about Connector through familiar {{site.data.keyword.SecureGateway}} terms.
 - Explain how the {{site.data.keyword.satelliteshort}} Connector features compare to {{site.data.keyword.SecureGateway}}.
+- Cover frequently asked questions about {{site.data.keyword.satelliteshort}} Connector.
+- Give an overview of the {{site.data.keyword.satelliteshort}} Connector requirements.
 
 
 ## Learn the concepts
