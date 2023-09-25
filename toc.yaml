@@ -21,6 +21,7 @@ toc:
             - deprecation.md
             - migration_options.md
             - migration_to_connector.md
+            - migration_faq.md
       - topicgroup:
           label: Resource controller changes
           topics:
