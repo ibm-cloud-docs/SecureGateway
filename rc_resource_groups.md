@@ -39,6 +39,10 @@ There are no required manual changes needed for this update. However, if you wan
 
 Otherwise, the {{site.data.keyword.SecureGateway}} product team will apply these changes in your account.
 
+Review the following sections for more information about your options.
+
+- [Allow the {{site.data.keyword.SecureGateway}} product team to apply the changes](#rc_auto).
+- [Manually select the resource groups for my instances](#rc_manual).
 
 ## Allowing the {{site.data.keyword.SecureGateway}} product team to apply the changes
 {: #rc_auto}
