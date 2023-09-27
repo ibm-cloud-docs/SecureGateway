@@ -27,10 +27,7 @@ Review the following table for important dates of the deprecation process.
 
 | Date | Stage | Description |
 | --- | --- | --- |
-| 26 October 2023 | Deprecation announcement |  Announcement of the {{site.data.keyword.SecureGateway}} deprecatiom. All current {{site.data.keyword.SecureGateway}} users will receive an announcement email with information about the deprecation. Notification details will be put into the console and related screens. For more infromation, see [Deprecation deatils](#deprecation_details). |
-| 26 October 2023 | Resource Controller update announcement | {{site.data.keyword.SecureGateway}} is announcing a change in the way it deploys and references instances of the service. This update moves away from Cloud Foundry organizations and moves to Resource Groups. For more information, see [Resource controller update details](#rc_details). |
-| 01 March 2024 | End of free usage | All users that have a free plan version of {{site.data.keyword.SecureGateway}} will need to upgrade their {{site.data.keyword.SecureGateway}} instances to paid versions if they want to continue using them until EOS. |
-| 01 April 2024 | End of marketing | All users, other than those who have an {{site.data.keyword.SecureGateway}} application instances deployed, will be blocked from new instance deployments. | End of marketing |
+| 26 October 2023 | Deprecation announcement |  Announcement of the {{site.data.keyword.SecureGateway}} deprecation. All current {{site.data.keyword.SecureGateway}} users will receive an announcement email with information about the deprecation. Notification details will be put into the console and related screens. New deployments for the Secure Gateway service have been discontinued. Existing users as of this date will continue to be able to deploy Secure Gateway instances as needed for updates and replacement. For more infromation, see [Deprecation deatils](#deprecation_details). |
 | Ongoing | Reminders | Periodic reminders will be sent to all users with running {{site.data.keyword.SecureGateway}} instances that the end-of-support date is coming.
 | 26 October 2024 | End-of-Support | {{site.data.keyword.SecureGateway}} EOS. |
 
