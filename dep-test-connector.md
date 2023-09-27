@@ -35,7 +35,7 @@ This tutorial is designed for {{site.data.keyword.SecureGateway}} administrators
 
 The goal of this tutorial is to help guide you through setting up a {{site.data.keyword.satelliteshort}} Connector for testing as part of your migration away from {{site.data.keyword.SecureGateway}}.
 
-## Gather your {{site.data.keyword.SecureGateway}} instance details
+## Make a note of your {{site.data.keyword.SecureGateway}} instance details
 {: #testing-connector-details}
 {: step}
 
@@ -43,7 +43,7 @@ Before setting up Connector, make a note your {{site.data.keyword.SecureGateway}
 
 - The region where your {{site.data.keyword.SecureGateway}} instance is deployed.
 - The resource group in your account that contains your {{site.data.keyword.SecureGateway}} instances.
-- **Optional**: The tags, if any, that you use to organize your account resources. ( see https://cloud.ibm.com/docs/account?topic=account-tag for more info on tags).
+- **Optional**: The tags, if any, that you use to organize your account resources.
 
 ## Set up your permissions
 {: #testing-connector-create-agent}
