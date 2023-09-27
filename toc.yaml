@@ -21,6 +21,7 @@ toc:
             - dep-overview.md
             - dep-migration-options.md
             - dep-understand-connector.md
+            - dep-gather-sg-details.md
             - dep-test-connector.md
             - dep-faq.md
       - topicgroup:
