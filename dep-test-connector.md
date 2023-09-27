@@ -70,19 +70,30 @@ Create an API key(s) with the following permissions.
 
 1. Before setting up an agent, open the required firewall rules, if necessary, to allow outgoing traffic from your agent to Connector. For more information, see [Networking requirements](/docs/satellite?topic=satellite-understand-connectors#network-requirements) for Connector.
 
-1. **Optional**: Configure a proxy setup on your host container engine](/docs/satellite?topic=satellite-config-connector-proxy).
+1. **Optional**: [Configure a proxy setup on your host container engine](/docs/satellite?topic=satellite-config-connector-proxy).
 
 
-## Running the agent image
+## Run the agent image
 {: #testing-connector-run-image}
 {: step}
 
-Complete the tutorial to run the [Connector Agent image locally](/docs/satellite?topic=satellite-run-agent-locally).
+- Complete the [Running the Connector Agent image locally](/docs/satellite?topic=satellite-run-agent-locally) tutorial To begin testing Connector.
+- You can also run the Agent image in[swarm mode](/docs/satellite?topic=satellite-run-agent-swarm)
+- You can also [try the end-to-end example](/docs/satellite?topic=satellite-end-to-end#create-link-endpoint) which also covers creating endpoints and setting up TLS.
 
 
-{{../satellite/connector-create-endpoints.md#create-connector-endpoint-console}}
+## Set up your endpoints and ACLs
+{: #testing-connector-endpoints-acls}
+{: step}
 
-{{../satellite/connector-create-endpoints.md#create-connector-rule-console}}
+1. Follow the steps to [create an endpoint in the console](/docs/satellite?topic=satellite-connector-create-endpoints#create-connector-endpoint-console).
+1. After creating an endpoint, set up an [access control list](/docs/satellite?topic=satellite-connector-create-endpoints#create-connector-rule-console).
 
 
+
+## Next steps
+{: testing-connector-next}
+
+- Try running the Agent image in [swarm mode](/docs/satellite?topic=satellite-run-agent-swarm)
+- [Try the end-to-end Connector example](/docs/satellite?topic=satellite-end-to-end#create-link-endpoint) which also covers creating endpoints and setting up TLS.
 
