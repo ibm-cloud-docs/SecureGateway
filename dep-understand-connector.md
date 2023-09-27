@@ -100,6 +100,6 @@ Review the following table for more information and a comparison of capabilities
 ## Next steps
 {: #migration_next}
 
-Continue your evaluating and preparing for your migration by Reviewing your current {{site.data.keyword.SecureGateway}} setup.
+Continue your evaluating and preparing for your migration by [Reviewing your {{site.data.keyword.SecureGateway}} instance details](/docs/SecureGateway?topic=SecureGateway-dep-gather-sg-details).
 
 
