@@ -159,6 +159,6 @@ If you prefer working in the command line, you can complete the following steps 
 {: #dep-gather-sg-details-next-steps}
 
 
-You are now ready to use the output from the previous steps to begin migrating your [{{site.data.keyword.SecureGateway}} instances to {{site.data.keyword.satelliteshort}}](/docs/SecureGateway?topic=SecureGateway-testing-connector).
+You can now use the output from the previous steps to begin [Setting up Connector for testing {{site.data.keyword.SecureGateway}} migration](/docs/SecureGateway?topic=SecureGateway-testing-connector).
 
 
