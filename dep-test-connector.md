@@ -96,4 +96,5 @@ Create an API key(s) with the following permissions.
 
 - Try running the Agent image in [swarm mode](/docs/satellite?topic=satellite-run-agent-swarm)
 - [Try the end-to-end Connector example](/docs/satellite?topic=satellite-end-to-end#create-link-endpoint) which also covers creating endpoints and setting up TLS.
+- [Review the troubleshooting guide](/docs/satellite?topic=satellite-debug-connector).
 
