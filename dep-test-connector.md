@@ -44,19 +44,9 @@ Before setting up Connector, make a note your {{site.data.keyword.SecureGateway}
 
 - The region where your {{site.data.keyword.SecureGateway}} instance is deployed.
 - The resource group in your account that contains your {{site.data.keyword.SecureGateway}} instances.
-- **Optional**: The tags, if any, that you use to organize your account resources. ( see https://cloud.ibm.com/docs/account?topic=account-tag for more info on tags)
+- **Optional**: The tags, if any, that you use to organize your account resources. ( see https://cloud.ibm.com/docs/account?topic=account-tag for more info on tags).
 
-
-
-## Create a Connector
-{: #testing-connector-create}
-{: step}
-
-1. Follow the steps in the [Creating a Connector](/docs/satellite?topic=satellite-create-connector) documentation to set up a Connector.
-
-1. Make a note of the connector ID and region ID. These values are used as inputs when you attach agents in the next steps.
-
-## Set up permissions and firewall rules
+## Set up your permissions and firewall rules
 {: #testing-connector-create-agent}
 {: step}
 
@@ -73,15 +63,19 @@ Before setting up Connector, make a note your {{site.data.keyword.SecureGateway}
 
 instructions link: https://cloud.ibm.com/docs/satellite?topic=satellite-run-agent-locally
 
-To create endpoint:  (must be done from UI at this time)
+## Create a Connector
+{: #testing-connector-create}
+{: step}
 
- - destination fqdn/ip + port (agent -> destination service) - taken from SG destination setup
+1. [Create a Connector in the console](https://cloud.ibm.com/satellite/connectors/create){: external}.
 
- - protocol, plus cert and server name if required for protocol (TLS et al) - taken from SG destination setup
+1. Make a note of the connector ID and region ID. These values are used as inputs when you attach agents in the next steps.
 
- - acls to lockdown access - copied/modified from SG destination setup
 
- - inactivity (keep-alive) timeout - taken from SG destination setup
 
-instructions link: https://cloud.ibm.com/docs/satellite?topic=satellite-connector-create-endpoints
+{{../satellite/connector-create-endpoints.md#create-connector-endpoint-console}}
+
+{{../satellite/connector-create-endpoints.md#create-connector-rule-console}}
+
+
 
