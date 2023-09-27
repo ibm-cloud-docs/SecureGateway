@@ -12,6 +12,14 @@ subcollection: SecureGateway
 
 {{site.data.keyword.attribute-definition-list}}
 
+# Important notes for internal IBMers
+- This is a pre-release test version of the announcement for the Secure Gateway deprecation
+- It is internally available only start on 9/28/23 - the "Internal Announcement" date
+- It will be externally announced 10/26/23 and put into production - that is the "Official Announcement" date
+- the link we will use as a pointer to here is https://ibm.biz/ibmsg-announce
+- this is confidential outside of IBM until 10/26/23 - and cannot be shared with any external clients with Secure Gateway Product Management engagement
+- Enage with this process and key teams, with more internal information and support, here => https://ibm.biz/sg-future
+{: important}
 
 # Overview and timeline
 {: #dep-overview}
