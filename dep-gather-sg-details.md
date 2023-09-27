@@ -41,7 +41,7 @@ You might need to review the common terms and concepts of {{site.data.keyword.Se
 - Review [Destinations](/docs/SecureGateway?topic=SecureGateway-add-dest).
 
 
-## Access your {{site.data.keyword.SecureGateway}} instances
+## Access your {{site.data.keyword.SecureGateway}} instance details
 {: #testing-connector-details}
 {: step}
 
@@ -50,15 +50,20 @@ You might need to review the common terms and concepts of {{site.data.keyword.Se
 1. For each {{site.data.keyword.SecureGateway}} instances in your account, review your Gateways, Destinations, and connection details in the console. Make sure to save the information for later when you create {{site.data.keyword.satelliteshort}} Connectors.
 
     1. Every {{site.data.keyword.satelliteshort}} Connector is functionally similar to each Gateway. So you might have multiple Secure Gateway instances, and you might have multiple Gateway destinations set up. You will create a Satellite Connector for each of the Secure Gateway Destinations you have set up.
-    1. Select each destination in turn and click on the **Gear** icon to view the details for that destination and collect the necessary data for creating an equivalent Connector endpoint.
-    1. Review the example screenshot. 
-    1. From this window, collect the **Resource Host** and **Port**, and use the **Download Authentication Files** button to pull any necessary certificates and keys for doing authentication in the connection.
+    1. Select each destination in turn and click on the ![**Settings icon**](./images/settingIcon.png?raw=true "Setting Icon") to view the details for that destination and collect the necessary data for creating an equivalent Connector endpoint.
+    1. Review the **Destination settings** window.
+    
+    ![Mutual Authentication Info Panel](./images/infoPanelMA.png?raw=true "Mutual Authentication Info Panel")
+
+    1. From this window, make a note of the **Resource Host** and **Port**, and use the **Download Authentication Files** button to pull any necessary certificates and keys for doing authentication in the connection.
     1. You will also need to go click the **Edit** button and check the following sections
         - **Network Security** to get the ip restrictions for Connector ACL setup.
         - **Proxy Options** to get the required proxy setup that will be needed for the docker agents to access the onsite service.
         - **Miscellaneous Options** to get the connection timeout setting.
 
-You will repeat the previous steps for each Gateway and each destination in your Secure Gateway instance. Keep all of this information ready for when you set up your Connectors, Agents, and Endpoints in the next tutorial.
+Repeat this step for each Gateway and each destination in your Secure Gateway instance. Keep all of this information ready for when you set up your Connectors, Agents, and Endpoints in the next tutorial.
 
-
+## Access your {{site.data.keyword.SecureGateway}} instance details in the console
+{: #testing-connector-details}
+{: step}
 
