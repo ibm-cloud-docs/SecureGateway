@@ -54,7 +54,7 @@ Deprecation is a process, and we've announced the beginning of that process. It 
 If your organization needs help with your IBM Cloud secure data communication migration, or wants to engage another organization to assist you, here are some partners that have a great deal of skill and experience with cloud application migrations and cloud native development improvements and transformations. Contact them if needed to discuss your specific requirements. These are for-pay migration assistance options and you will need to engage with those teams directly.
 
 IBM Cloud Expert Labs
-:   IBM Cloud Expert Labs is the IBM Cloud Platform Professional Services team providing deep technical expertise and a proven approach to modernize applications on IBM Cloud platform technologies. For your IBM Cloud secure data transfer  needs, we offer both Advisory Services to assess, recommend, and plan your modernization approach and Migration Services to assist with data transfer and migration. For more information, see -
+:   IBM Cloud Expert Labs is the IBM Cloud Platform Professional Services team providing deep technical expertise and a proven approach to modernize applications on IBM Cloud platform technologies. For your IBM Cloud secure data transfer  needs, we offer both Advisory Services to assess, recommend, and plan your modernization approach and Migration Services to assist with data transfer and migration.
 
 Customer Support
 :   These materials and resources should help you through your IBM Cloud Secure Gateway migration. If you have questions, or need help, contact [IBM Cloud® Customer Support](https://www.ibm.com/cloud/support) for additional information and assistance.
