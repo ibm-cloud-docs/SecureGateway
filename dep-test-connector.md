@@ -33,7 +33,7 @@ This tutorial is designed for {{site.data.keyword.SecureGateway}} administrators
 ## Goals 
 {: #testing-connector-goals}
 
-The goal of this tutorial is to help guide you through setting up a {{site.data.keyword.satelliteshort}} Connector for testing run through testing to validate the data deliver.
+The goal of this tutorial is to help guide you through setting up a {{site.data.keyword.satelliteshort}} Connector for testing as part of your migration away from {{site.data.keyword.SecureGateway}}.
 
 ## Gather your {{site.data.keyword.SecureGateway}} instance details
 {: #testing-connector-goals}
