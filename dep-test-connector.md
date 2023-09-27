@@ -49,9 +49,10 @@ Before setting up Connector, make a note your {{site.data.keyword.SecureGateway}
 {: #testing-connector-create-agent}
 {: step}
 
-1. Create an API key(s) with the following permissions.
-    - To create a Connector, you need the **Administrator** Platform role for Satellite.
-    - To connect an Agent to an existing Connector, you need the **Viewer** Platform role or the **Reader** Service role for Satellite.
+Create an API key(s) with the following permissions.
+
+- To create a Connector, you need the **Administrator** Platform role for Satellite.
+- To connect an Agent to an existing Connector, you need the **Viewer** Platform role or the **Reader** Service role for Satellite.
 
 
 ## Create a Connector
