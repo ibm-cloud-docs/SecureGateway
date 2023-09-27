@@ -1,7 +1,7 @@
 ---
 
-copyright:
-  years: 2014, 2023
+copyright: 
+  years: 2023, 2023
 lastupdated: "2023-09-27"
 
 keywords: secure gateway, deprecation, migration
