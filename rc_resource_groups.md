@@ -30,6 +30,22 @@ Updates needed for {{site.data.keyword.SecureGateway}} instances that use Cloud 
 - There is no impact to uptime. This is an atomic operation that happens immediately.
 
 
+## Timeline
+{: #rc_timeline}
+
+Stage
+
+Date
+
+Description
+
+| Date | Stage | Description | 
+| --- | --- | --- | 
+| 10 October 2023 | Announcement | Secure Gateway is announcing a change in the way it deploys and references instances of the service. This update will move away from Cloud Foundry organizations, and move to IBM Cloud Resource Groups |
+| 11 November 2023 | Deadline  | 30 days after the initial announcement is the deadline for update of the Secure Gateway service broker. All users that have executed this update for themselves, will be able to pick the IBM Cloud resource group into which they place their Secure Gateway instance. At this time, the IBM Secure Gateway product team will execute the update for customers that have not done that themselves. By doing so, your Secure Gateway instance will be placed in the IBM Cloud resource group named `default`. |
+| 15 November 2023 | Updates completed. All updates will have been completed for Secure Gateway service broker updates. |
+
+
 ## What do I need to do?
 {: #rc_what_to_do}
 
