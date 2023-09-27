@@ -41,6 +41,13 @@ You might need to review the common terms and concepts of {{site.data.keyword.Se
 - Review [Destinations](/docs/SecureGateway?topic=SecureGateway-add-dest).
 
 
-## Review the {{site.data.keyword.SecureGateway}} terms
+## Access your {{site.data.keyword.SecureGateway}} instances
 {: #testing-connector-details}
 {: step}
+
+
+
+1. Access your {{site.data.keyword.SecureGateway}} instances from the [Resource list in the console](https://cloud.ibm.com/resources?product=Secure){: external}.
+
+1. Access each one for more information and usage.
+
