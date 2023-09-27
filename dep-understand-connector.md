@@ -89,7 +89,7 @@ Review the following table for more information and a comparison of capabilities
 
 
 ## Review the requirements and FAQs
-{: #migration_next}
+{: #migration_requirements}
 {: step}
 
 1. [Review the Connector overview and requirements](/docs/satellite?topic=satellite-understand-connectors).
