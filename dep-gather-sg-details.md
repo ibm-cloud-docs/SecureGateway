@@ -70,7 +70,7 @@ Repeat this step for each Gateway and Destination in your Secure Gateway instanc
 {: #dep-gather-sg-details-cli}
 {: step}
 
-If you prefer working in the command line, you can complete the following steps to gather the required {{site.data.keyword.SecureGateway}} instance details for migrating to Connector.
+If you prefer working in the command line, you can complete the following steps to gather the required {{site.data.keyword.SecureGateway}} instance details for migrating to Connector. If you already gathered your instance, you can continue to the next step.
 
 1. Enable the command line feature flag that will permit to use Cloud Foundry commands.
     ```sh
