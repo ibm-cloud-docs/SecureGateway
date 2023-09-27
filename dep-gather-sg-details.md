@@ -24,12 +24,12 @@ You can use the following steps to analyze the current usage of {{site.data.keyw
 
 
 ## Goals 
-{: #testing-connector-goals}
+{: #dep-gather-sg-goals}
 
 The goal of this tutorial is to help guide you through gathering the key information from your {{site.data.keyword.SecureGateway}} instances that you will need when you migrate to {{site.data.keyword.satelliteshort}} Connector. 
 
 ## Review the {{site.data.keyword.SecureGateway}} terms
-{: #testing-connector-details}
+{: #dep-gather-sg-terms}
 {: step}
 
 You might need to review the common terms and concepts of {{site.data.keyword.SecureGateway}}. For more information, see the following links.
@@ -42,7 +42,7 @@ You might need to review the common terms and concepts of {{site.data.keyword.Se
 
 
 ## Access your {{site.data.keyword.SecureGateway}} instance details in the console
-{: #testing-connector-details}
+{: #dep-gather-sg-details-console}
 {: step}
 
 1. Access your {{site.data.keyword.SecureGateway}} instances from the [Resource list in the console](https://cloud.ibm.com/resources?product=Secure){: external}.
@@ -67,7 +67,7 @@ You might need to review the common terms and concepts of {{site.data.keyword.Se
 Repeat this step for each Gateway and Destination in your Secure Gateway instance. Keep all of this information ready for when you set up your Connectors, Agents, and Endpoints in the next tutorial.
 
 ## Access your {{site.data.keyword.SecureGateway}} instance details in the CLI
-{: #testing-connector-details}
+{: #dep-gather-sg-details-cli}
 {: step}
 
 If you prefer working in the command line, you can complete the following steps to gather the required {{site.data.keyword.SecureGateway}} instance details for migrating to Connector.
@@ -154,4 +154,11 @@ If you prefer working in the command line, you can complete the following steps 
     ```
     {: screen}
 
-1. Use the output from the previous steps to migrate your {{site.data.keyword.SecureGateway}} instances to {{site.data.keyword.satelliteshort}}
+
+## Next steps
+{: #dep-gather-sg-details-next-steps}
+
+
+You are now ready to use the output from the previous steps to begin migrating your [{{site.data.keyword.SecureGateway}} instances to {{site.data.keyword.satelliteshort}}](/docs/SecureGateway?topic=SecureGateway-testing-connector).
+
+
