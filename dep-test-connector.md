@@ -18,7 +18,7 @@ completion-time: 1hr
 {{site.data.keyword.attribute-definition-list}}
 
 
-# Setting up Connector for testing
+# Setting up Connector for testing Secure Gateway migration
 {: #testing-connector}
 {: toc-content-type="tutorial"}
 {: toc-services="SecureGateway,satellite"}
