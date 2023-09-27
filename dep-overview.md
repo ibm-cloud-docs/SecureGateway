@@ -32,7 +32,7 @@ Review the following table for important dates of the deprecation process.
 | 01 March 2024 | End of free usage | All users that have a free plan version of {{site.data.keyword.SecureGateway}} will need to upgrade their {{site.data.keyword.SecureGateway}} instances to paid versions if they want to continue using them until EOS. |
 | 01 April 2024 | End of marketing | All users, other than those who have an {{site.data.keyword.SecureGateway}} application instances deployed, will be blocked from new instance deployments. | End of marketing |
 | Ongoing | Reminders | Periodic reminders will be sent to all users with running {{site.data.keyword.SecureGateway}} instances that the end-of-support date is coming.
-| 20 October 2024 | End-of-Support | {{site.data.keyword.SecureGateway}} EOS. |
+| 26 October 2024 | End-of-Support | {{site.data.keyword.SecureGateway}} EOS. |
 
 
 
