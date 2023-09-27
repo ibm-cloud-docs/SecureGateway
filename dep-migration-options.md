@@ -14,7 +14,7 @@ subcollection: SecureGateway
 
 
 # Understanding your migration options
-{: #deprecation_migration_options}
+{: #dep-migration-options}
 
 {{site.data.keyword.SecureGateway}} is deprecated. For more information, see the [deprecation details](/docs/SecureGateway?topic=SecureGateway-deprecation).
 {: deprecated}

@@ -14,7 +14,7 @@ subcollection: SecureGateway
 {{site.data.keyword.attribute-definition-list}}
 
 # Deprecation and migration FAQ
-{: #migration_faq}
+{: #dep-faq}
 
 
 
