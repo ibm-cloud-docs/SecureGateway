@@ -27,6 +27,8 @@ toc:
           label: Resource controller changes
           topics:
             - rc_resource_groups.md
+            - include: ../account/instance_migration.md
+              navtitle: Migrating Secure Gateway instances to resource groups
       - index.md
       - securegateway_about.md
   - navgroup:
