@@ -14,7 +14,7 @@ subcollection: SecureGateway
 
 
 # Overview and timeline
-{: #deprecation}
+{: #dep-overview}
 
 {{site.data.keyword.SecureGateway}} is deprecated. For more information, see the following deprecation details.
 {: important}

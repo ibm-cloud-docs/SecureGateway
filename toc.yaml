@@ -18,10 +18,11 @@ toc:
       - topicgroup:
           label: Deprecation
           topics:
-            - deprecation.md
-            - migration_options.md
-            - migration_to_connector.md
-            - migration_faq.md
+            - dep-overview.md
+            - dep-migration-options.md
+            - dep-understand-connector.md
+            - dep-test-connector.md
+            - dep-faq.md
       - topicgroup:
           label: Resource controller changes
           topics:
