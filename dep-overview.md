@@ -60,3 +60,7 @@ Customer Support
 
 
 
+Ready to start planning your migration? See [Reviewing your migration options](/docs/SecureGateway?topic=SecureGateway-dep-migration-options) for an overview and comparison of {{site.data.keyword.satellitelong}} Connector and a Virtual Private Network.
+{: tip}
+
+
