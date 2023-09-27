@@ -36,7 +36,7 @@ This tutorial is designed for {{site.data.keyword.SecureGateway}} administrators
 The goal of this tutorial is to help guide you through setting up a {{site.data.keyword.satelliteshort}} Connector for testing as part of your migration away from {{site.data.keyword.SecureGateway}}.
 
 ## Gather your {{site.data.keyword.SecureGateway}} instance details
-{: #testing-connector-goals}
+{: #testing-connector-details}
 {: step}
 
 Before setting up Connector, make a note your {{site.data.keyword.SecureGateway}} instance details like the following.
