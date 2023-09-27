@@ -75,6 +75,11 @@ If you need to share a lot of resources between various offices, VPNs can be a b
 
 So, the decision of what kind of technology to use when securing your cloud resources depends on your intended usage, overall security concerns, and level of configuration effort required with each method. However, if you want the very latest in computing capability, flexibility in infrastructure options, a consistent operational experience, and the very best security possible across multiple locations, you should use {{site.data.keyword.satelliteshort}}.
 
+## Next steps
+{: #migration_options_next}
+
+To beging learning more about {{site.data.keyword.satelliteshort}} Connector, complete the [Reviewing Satellite Connector as a Secure Gateway replacement](/docs/SecureGateway?topic=SecureGateway-understanding-connector) tutorial.
+
 ## Additional resources
 {: #migration_options_additional_resources}
 
