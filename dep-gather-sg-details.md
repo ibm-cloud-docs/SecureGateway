@@ -13,11 +13,11 @@ subcollection: SecureGateway
 {{site.data.keyword.attribute-definition-list}}
 
 
-# Understanding your migration options
+# Gathering your {{site.data.keyword.SecureGateway}} instance details
 {: #dep-migration-options}
 
 {{site.data.keyword.SecureGateway}} is deprecated. For more information, see the [deprecation details](/docs/SecureGateway?topic=SecureGateway-deprecation).
 {: deprecated}
 
-Review following options for migrating your secure data communications from {{site.data.keyword.SecureGateway}} to another {{site.data.keyword.cloud_notm}} service.
+Review following steps for gathering important information from your {{site.data.keyword.SecureGateway}} instances to prepare for migration
 {: shortdesc}
