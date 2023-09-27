@@ -44,7 +44,7 @@ Review following options for migrating your secure data communications from {{si
 
 Both {{site.data.keyword.satelliteshort}} Locations and {{site.data.keyword.satelliteshort}} Connectors are located in a given IBM Cloud Multi Zone Region (MZR). Both provide application-layer transport (Layer 4) between IBM services or their own applications running within IBM Cloud and the resources running at the client's location. A Satellite Location goes further, allowing clients to run cloud applications locally, wherever the client needs, to address a number of real-world challenges, as well as accessing cloud hosted applications and services via an encrypted and secured channel.
 
-To learn more about {{site.data.keyword.satelliteshort}} Connector and how it compares to {{site.data.keyword.SecureGateway}}, complete the [Understanding {{site.data.keyword.satelliteshort}} Connector tutorial](/docs/SecureGateway?topic=SecureGateway-understanding-connector)
+To beging learning more about {{site.data.keyword.satelliteshort}} Connector, complete the [Reviewing Satellite Connector as a Secure Gateway replacement](/docs/SecureGateway?topic=SecureGateway-understanding-connector) tutorial.
 
 
 ## Virtual Private Network
