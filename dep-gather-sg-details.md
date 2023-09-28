@@ -57,9 +57,9 @@ You might need to review the common terms and concepts of {{site.data.keyword.Se
 
     - From this window, make a note of the **Resource Host** and **Port**, and use the **Download Authentication Files** button to pull any necessary certificates and keys for doing authentication in the connection.
     - Click the **Edit** button and check the following sections
-        - **Network Security** to get the ip restrictions for Connector ACL setup.
-        - **Proxy Options** to get the required proxy setup that will be needed for the docker agents to access the onsite service.
-        - **Miscellaneous Options** to get the connection timeout setting.
+        - **Network Security**: Get the IP restrictions that you will use for setting up Connector ACLs.
+        - **Proxy Options**: Get the required proxy setup that will be needed for the Docker agents to access the onsite service.
+        - **Miscellaneous Options**: Get the connection timeout settings.
 
     You can click the Export button ![Export Button](./images/exportIcon.png "Export Button") on the gateway tile to export the configuration of the gateway/destination.
     {: tip}
