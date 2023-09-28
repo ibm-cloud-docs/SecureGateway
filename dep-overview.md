@@ -16,6 +16,9 @@ subcollection: SecureGateway
 # Overview and timeline
 {: #dep-overview}
 
+{{site.data.keyword.SecureGateway}} is deprecated. Review the following details for more information.
+{: deprecated}
+
 {{site.data.keyword.cloud}} is announcing the full deprecation of {{site.data.keyword.SecureGateway}}. See the deprecation dates, details, and specific implications.
 {: shortdesc}
 
