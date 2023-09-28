@@ -58,7 +58,7 @@ After completing the tutorial, you should have the following details from your {
 {: #testing-connector-create-agent}
 {: step}
 
-For security, {{site.data.keyword.satelliteshort}} uses API keys and IAM roles to manage access.
+For security, {{site.data.keyword.satelliteshort}} uses API keys and IAM roles to manage access the resources in your account.
 
 Create an IAM API key(s) with the following permissions.
 
