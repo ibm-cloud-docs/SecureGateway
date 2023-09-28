@@ -162,12 +162,12 @@ If you prefer working in the command line, you can complete the following steps 
 Review the information you compiled from your {{site.data.keyword.SecureGateway}} deployments and how they map to the inputs you need for setting up a Connector.
 
 - **Region**: Create your Connector in the same region where your {{site.data.keyword.SecureGateway}} deployment was located.
-- **Resource group** - Create your Connector in the same resource group where your {{site.data.keyword.SecureGateway}} deployment was located.
-- **Gateways** - It is what a Secure Gateway Client will use to establish connectivity with the Secure Gateway servers and can contain multiple resource definitions, or destinations. ( optional )
-- **Destinations** - Create Connector endpoints for each of your {{site.data.keyword.SecureGateway}} destinations.
-- **Resource Host** and **Port** - These are client defined host and port used for communication.
-- **Authentication Files** - .zip file that contains security files https://test.cloud.ibm.com/docs/SecureGateway?topic=SecureGateway-nodejs-tls-ma#tls-ma-download-files
-- **Clients** - The client establishes the initial connection between the on-premises network and a gateway on the Secure Gateway servers and allows for communication to pass through to the defined destinations. ( optional )
+- **Resource group**: Create your Connector in the same resource group where your {{site.data.keyword.SecureGateway}} deployment was located.
+- **Gateways**: You will recreate your Gateways as Satellite Connectors.
+- **Destinations**: Save your destination details and recreate them as Connector endpoints.
+- **Protocol**, **Resource Host**, and **Port** - Use these values when you create your Connector endpoints.
+- **Authentication Files** - Get a `.zip` file that your contains [security files](https://test.cloud.ibm.com/docs/SecureGateway?topic=SecureGateway-nodejs-tls-ma#tls-ma-download-files).
+- **Clients** - The client establishes the initial connection between the on-premises network and a gateway on the Secure Gateway servers and allows for communication to pass through to the defined destinations. Use your client details to create Connector agents.
 
 
 You can now use the output from the previous steps to begin [Setting up Connector for testing {{site.data.keyword.SecureGateway}} migration](/docs/SecureGateway?topic=SecureGateway-testing-connector).
