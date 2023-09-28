@@ -13,7 +13,7 @@ subcollection: SecureGateway
 # Adding a Destination
 {: #add-dest}
 
-{{site.data.keyword.SecureGateway}} is deprecated. For more information, see the [deprecation details](/docs/SecureGateway?topic=SecureGateway-deprecation).
+{{site.data.keyword.SecureGateway}} is deprecated. For more information, see the [deprecation details](/docs/SecureGateway?topic=SecureGateway-dep-overview).
 {: deprecated}
 
 A destination is a definition of how to connect to a specific on-premises or cloud resource. Once the destination has been created, the {{site.data.keyword.SecureGateway}} servers will provide it with a unique public endpoint where it will listen for connections while the gateway is connected.

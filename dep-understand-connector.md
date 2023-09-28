@@ -2,7 +2,7 @@
 
 copyright: 
   years: 2023, 2023
-lastupdated: "2023-09-27"
+lastupdated: "2023-09-28"
 
 keywords: secure gateway, deprecation, migration
 
@@ -24,7 +24,7 @@ completion-time: 2hr
 {: toc-services="SecureGateway,satellite"}
 {: toc-completion-time="2hr"}
 
-{{site.data.keyword.SecureGateway}} is deprecated. For more information, see the [deprecation details](/docs/SecureGateway?topic=SecureGateway-deprecation).
+{{site.data.keyword.SecureGateway}} is deprecated. For more information, see the [deprecation details](/docs/SecureGateway?topic=SecureGateway-dep-overview).
 {: deprecated}
 
 This tutorial is designed for {{site.data.keyword.SecureGateway}} administrators who are considering migrating to {{site.data.keyword.satelliteshort}} Connector.

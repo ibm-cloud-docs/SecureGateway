@@ -16,7 +16,7 @@ subcollection: SecureGateway
 # IP Table Rules
 {: #iptables-rules}
 
-{{site.data.keyword.SecureGateway}} is deprecated. For more information, see the [deprecation details](/docs/SecureGateway?topic=SecureGateway-deprecation).
+{{site.data.keyword.SecureGateway}} is deprecated. For more information, see the [deprecation details](/docs/SecureGateway?topic=SecureGateway-dep-overview).
 {: deprecated}
 
 To allow the enforcement of iptables rules on your destination, you must have the `Restrict network access` option checked under the Network Security panel of your destination.  At that point you can add the rules you want enforced, such as: 192.0.0.1 9000 (single IP and port),  192.0.0.1-192.0.0.5 5000:5005 (range of IPs and range of ports), or any combination of these rules. Please see [Configuring Network Security](/docs/services/SecureGateway?topic=SecureGateway-add-dest#dest-network-security) for more information.

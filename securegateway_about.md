@@ -13,7 +13,7 @@ subcollection: SecureGateway
 # About {{site.data.keyword.SecureGateway}}
 {: #about-sg}
 
-{{site.data.keyword.SecureGateway}} is deprecated. For more information, see the [deprecation details](/docs/SecureGateway?topic=SecureGateway-deprecation).
+{{site.data.keyword.SecureGateway}} is deprecated. For more information, see the [deprecation details](/docs/SecureGateway?topic=SecureGateway-dep-overview).
 {: deprecated}
 
 ## How is it secure?

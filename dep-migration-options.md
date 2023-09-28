@@ -13,10 +13,10 @@ subcollection: SecureGateway
 {{site.data.keyword.attribute-definition-list}}
 
 
-# Understanding migration options
+# Migration options
 {: #dep-migration-options}
 
-{{site.data.keyword.SecureGateway}} is deprecated. For more information, see the [deprecation details](/docs/SecureGateway?topic=SecureGateway-deprecation).
+{{site.data.keyword.SecureGateway}} is deprecated. For more information, see the [deprecation details](/docs/SecureGateway?topic=SecureGateway-dep-overview).
 {: deprecated}
 
 Review the following options for migrating your secure data communications from {{site.data.keyword.SecureGateway}} to another {{site.data.keyword.cloud_notm}} service.
@@ -87,14 +87,7 @@ Check out the following links for more information on IBM Cloud {{site.data.keyw
 
 - [{{site.data.keyword.satelliteshort}} overview](https://www.ibm.com/products/satellite){: external}
 - [{{site.data.keyword.satelliteshort}} Connector overview](/docs/satellite?topic=satellite-understand-connectors)
-- [IBM Cloud {{site.data.keyword.satelliteshort}} Connector & Secure Gateway comparison](/docs/satellite?topic=satellite-connector-and-secure-gateway)
 - [Build Faster, Securely, Anywhere with IBM Cloud {{site.data.keyword.satelliteshort}}](https://www.ibm.com/blog/deploy-cloud-services-anywhere-with-ibm-cloud-satellite/){: external}
-- [{{site.data.keyword.satelliteshort}} documentation](/docs/satellite)
 - [{{site.data.keyword.satelliteshort}} product demos on Framer](https://framer.com/share/External-{{site.data.keyword.satelliteshort}}-Demo--4QmxdNMF6smthRhzQgzt/ddN6j0Nrt?fullscreen=1&highlights=0#ddN6j0Nrt){: external}
-- [IBM Cloud {{site.data.keyword.satelliteshort}} is Launched](https://app.criticalmention.com/app/#/report/039173b6-e151-4bf5-9a08-38f69deda1a8){: external}
-- [IBM Expands Hybrid Cloud Service](https://app.criticalmention.com/app/#/report/99d053c1-a566-4afe-9ebe-0c4ba73071c0){: external}
-- [Brody Ford Interview on IBM {{site.data.keyword.satelliteshort}} Cloud](https://app.criticalmention.com/app/#/report/ad26d56c-83e7-46f5-9721-992f55259134){: external}
-- [Business Insider India](https://www.businessinsider.in/tech/news/ibm-is-eyeing-indias-public-sector-to-grow-its-cloud-business/articleshow/81288095.cms){: external}
-- [Nikkei](https://www.nikkei.com/article/DGXLRSP605848_S1A300C2000000/){: external}
-- [Cloud Wars](https://accelerationeconomy.com/cloud/can-ibm-reignite-cloud-growth-with-impressive-new-satellite-service/){: external}
+
 

@@ -13,7 +13,7 @@ subcollection: SecureGateway
 # Managing your {{site.data.keyword.SecureGateway}} Service
 {: #manage-sg-service}
 
-{{site.data.keyword.SecureGateway}} is deprecated. For more information, see the [deprecation details](/docs/SecureGateway?topic=SecureGateway-deprecation).
+{{site.data.keyword.SecureGateway}} is deprecated. For more information, see the [deprecation details](/docs/SecureGateway?topic=SecureGateway-dep-overview).
 {: deprecated}
 
 ## {{site.data.keyword.SecureGateway}} Dashboard
