@@ -61,7 +61,7 @@ You might need to review the common terms and concepts of {{site.data.keyword.Se
         - **Proxy Options** to get the required proxy setup that will be needed for the docker agents to access the onsite service.
         - **Miscellaneous Options** to get the connection timeout setting.
 
-    If you want to copy the gateway/destination configuration to another Secure Gateway instance, you can click the Export button ![Export Button](./images/exportIcon.png "Export Button") on the gateway tile to export the configuration of the gateway/destination.
+    You can click the Export button ![Export Button](./images/exportIcon.png "Export Button") on the gateway tile to export the configuration of the gateway/destination.
     {: tip}
 
 Repeat this step for each Gateway and Destination in your Secure Gateway instance. Keep all of this information ready for when you set up your Connectors, Agents, and Endpoints in the next tutorial.
