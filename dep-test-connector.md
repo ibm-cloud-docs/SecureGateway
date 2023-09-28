@@ -30,6 +30,16 @@ completion-time: 1hr
 This tutorial is designed for {{site.data.keyword.SecureGateway}} administrators who are considering migrating to {{site.data.keyword.satelliteshort}} Connector.
 {: shortdesc}
 
+## Prerequisites
+{: #test-connector-prereqs}
+
+Before completeing this tutorial, make sure you’ve done the key research needed to prepare for the migration to Satellite Connector.
+
+- [Understand your migration options](/docs/SecureGateway?topic=SecureGateway-dep-migration-options).
+- [Review Satellite Connector as a Secure Gateway replacement](/docs/SecureGateway?topic=SecureGateway-understanding-connector). Compared how Secure Gateway and Satellite Connector to understand their similar capabilities, and their different ways of doing things.
+- [Analyze your Secure Gateway environment and review your deployment details](/docs/SecureGateway?topic=SecureGateway-dep-gather-sg-details) for the key information you need to set up Connector.
+
+
 ## Goals 
 {: #testing-connector-goals}
 
