@@ -50,10 +50,10 @@ You might need to review the common terms and concepts of {{site.data.keyword.Se
 1. For each {{site.data.keyword.SecureGateway}} instances in your account, review your Gateways, Destinations, and connection details in the console. Make sure to save the information for later when you create {{site.data.keyword.satelliteshort}} Connectors.
 
     - Every {{site.data.keyword.satelliteshort}} Connector is functionally similar to each Gateway. So you might have multiple Secure Gateway instances, and you might have multiple Gateway destinations set up. You will create a Satellite Connector endpoint for each of the Secure Gateway Destinations you have set up.
-    - Select each Destination in turn and click on the ![**Settings icon**](./images/settingIcon.png?raw=true "Setting Icon") to view the details for that destination and collect the necessary data for creating an equivalent Connector endpoint.
+    - Select each Destination in turn and click on the ![**Settings icon**](./images/settingIcon.png "Setting Icon") to view the details for that destination and collect the necessary data for creating an equivalent Connector endpoint.
     - Review the **Destination settings** window.
     
-    ![Mutual Authentication Info Panel](./images/infoPanelMA.png "Mutual Authentication Info Panel")
+    ![Mutual Authentication Info Panel](./images/infoPanelMAsmaller.png "Mutual Authentication Info Panel")
 
     - From this window, make a note of the **Resource Host** and **Port**, and use the **Download Authentication Files** button to pull any necessary certificates and keys for doing authentication in the connection.
     - Click the **Edit** button and check the following sections
