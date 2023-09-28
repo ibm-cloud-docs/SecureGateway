@@ -58,7 +58,9 @@ After completing the tutorial, you should have the following details from your {
 {: #testing-connector-create-agent}
 {: step}
 
-Create an API key(s) with the following permissions.
+For security, {{site.data.keyword.satelliteshort}} uses API keys and IAM roles to manage access.
+
+Create an IAM API key(s) with the following permissions.
 
 - To create a Connector, you need the **Administrator** Platform role for Satellite.
 - To connect an Agent to an existing Connector, you need the **Viewer** Platform role or the **Reader** Service role for Satellite.
@@ -86,9 +88,9 @@ Create an API key(s) with the following permissions.
 {: #testing-connector-run-image}
 {: step}
 
-- Complete the [Running the Connector Agent image locally](/docs/satellite?topic=satellite-run-agent-locally) tutorial To begin testing Connector.
+- Complete the [Running the Connector Agent image](/docs/satellite?topic=satellite-run-agent-locally) tutorial to begin testing Connector.
 - You can also run the Agent image in [swarm mode for high-availability](/docs/satellite?topic=satellite-run-agent-swarm)
-- You can also [try the end-to-end example](/docs/satellite?topic=satellite-end-to-end#create-link-endpoint) which also covers creating endpoints and setting up TLS.
+- You can also [try the end-to-end example](/docs/satellite?topic=satellite-end-to-end#create-link-endpoint) which also covers creating endpoints and setting up TLS encryption.
 
 
 ## Set up your endpoints and ACLs
