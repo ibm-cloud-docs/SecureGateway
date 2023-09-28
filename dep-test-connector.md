@@ -74,6 +74,8 @@ Create an IAM API key(s) with the following permissions.
 {: #testing-connector-create}
 {: step}
 
+The first step is to set up the Satellite Connector. As explained in previous steps, the **Connector** is similar to each Secure Gateway **Gateway**. So if you had 1 Gateway, you will have 1 Connector. If you had  3 Gateways, you’ll have 3 Connectors. Complete the following steps to create a Connector.
+
 
 
 1. Determine which IBM Cloud region you want to create your Connector in. Previously, you examined which regions your Secure Gateway deployment was in.
