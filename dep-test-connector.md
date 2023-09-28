@@ -70,9 +70,7 @@ Create an IAM API key(s) with the following permissions.
 {: #testing-connector-create}
 {: step}
 
-[Create a Connector in the console](https://cloud.ibm.com/satellite/connectors/create){: external}. Make sure to use the same region and resource group as your Secure Gateway deployments.
-
-Also, make sure to use the deployment details you found earlier as inputs in the next steps.
+[Create a Connector in the console](https://cloud.ibm.com/satellite/connectors/create){: external}. Make sure to use the same region and resource group Secure Gateway deployments.
 
 
 ## Set up your firewall rules
@@ -97,7 +95,7 @@ Also, make sure to use the deployment details you found earlier as inputs in the
 {: #testing-connector-endpoints-acls}
 {: step}
 
-1. Follow the steps to [create an endpoint in the console](/docs/satellite?topic=satellite-connector-create-endpoints#create-connector-endpoint-console).
+1. Follow the steps to [create an endpoint in the console](/docs/satellite?topic=satellite-connector-create-endpoints#create-connector-endpoint-console). Make sure to use the Secure Gateway deployment details you found earlier as inputs when creating your endpoints.
 1. After creating an endpoint, set up an [access control list](/docs/satellite?topic=satellite-connector-create-endpoints#create-connector-rule-console).
 
 
