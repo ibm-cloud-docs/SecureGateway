@@ -78,7 +78,7 @@ Create an API key(s) with the following permissions.
 {: step}
 
 - Complete the [Running the Connector Agent image locally](/docs/satellite?topic=satellite-run-agent-locally) tutorial To begin testing Connector.
-- You can also run the Agent image in[swarm mode](/docs/satellite?topic=satellite-run-agent-swarm)
+- You can also run the Agent image in [swarm mode for high-availability](/docs/satellite?topic=satellite-run-agent-swarm)
 - You can also [try the end-to-end example](/docs/satellite?topic=satellite-end-to-end#create-link-endpoint) which also covers creating endpoints and setting up TLS.
 
 
