@@ -70,9 +70,9 @@ Create an IAM API key(s) with the following permissions.
 {: #testing-connector-create}
 {: step}
 
-1. [Create a Connector in the console](https://cloud.ibm.com/satellite/connectors/create){: external}. Make sure to use the same region and resource group that you found in the previous steps.
+[Create a Connector in the console](https://cloud.ibm.com/satellite/connectors/create){: external}. Make sure to use the same region and resource group as your Secure Gateway deployments.
 
-1. Make a note of the connector ID and region ID. These values are used as inputs when you attach agents in the next steps.
+Also, make sure to use the deployment details you found earlier as inputs in the next steps.
 
 
 ## Set up your firewall rules
