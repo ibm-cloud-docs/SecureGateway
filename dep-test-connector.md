@@ -47,8 +47,9 @@ After completing the tutorial, you should have the following details from your {
 - **Resource group**: Create your Connector in the same resource group where your {{site.data.keyword.SecureGateway}} deployment was located.
 - **Gateways**: You will recreate your Gateways as Satellite Connectors.
 - **Destinations**: Save your destination details and recreate them as Connector endpoints.
-- **Protocol**, **Resource Host**, and **Port** - Use these values when you create your Connector endpoints.
-- **Authentication Files** - Get a `.zip` file that your contains [security files](https://test.cloud.ibm.com/docs/SecureGateway?topic=SecureGateway-nodejs-tls-ma#tls-ma-download-files).
+- **Protocol**: Use the same protocol value when you create your Connector endpoints.
+- **Port**: Use the port value from your {{site.data.keyword.SecureGateway}} destination as the `Destination port` when setting up your Connector endpoint.
+- **Authentication Files** - Get a `.zip` file of your [authenticaion files](https://test.cloud.ibm.com/docs/SecureGateway?topic=SecureGateway-nodejs-tls-ma#tls-ma-download-files). You will upload these {{site.data.keyword.SecureGateway}} authentication files when creating a Connector endpoint in the console when prompted to `Upload certificate`.
 - **Clients** - The client establishes the initial connection between the on-premises network and a gateway on the Secure Gateway servers and allows for communication to pass through to the defined destinations. Use your client details to create Connector agents.
 
 
