@@ -85,7 +85,7 @@ If you prefer working in the command line, you can complete the following steps 
     {: pre}
 
 
-1. Get a refresh token.
+1. [Get an IAM refresh token for your session](/docs/account?topic=account-iamtoken_from_apikey#iamtoken).
     ```sh
     ibmcloud iam oauth-tokens 
     ```
