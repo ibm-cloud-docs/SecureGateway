@@ -39,19 +39,7 @@ Before completeing this tutorial, make sure you’ve done the key research neede
 - [Review Satellite Connector as a Secure Gateway replacement](/docs/SecureGateway?topic=SecureGateway-understanding-connector). Compared how Secure Gateway and Satellite Connector to understand their similar capabilities, and their different ways of doing things.
 - [Analyze your Secure Gateway environment and review your deployment details](/docs/SecureGateway?topic=SecureGateway-dep-gather-sg-details) for the key information you need to set up Connector.
 
-
-## Goals 
-{: #testing-connector-goals}
-
-The goal of this tutorial is to help guide you through setting up a {{site.data.keyword.satelliteshort}} Connector for testing as part of your migration away from {{site.data.keyword.SecureGateway}}.
-
-## Make a note of your {{site.data.keyword.SecureGateway}} deployment details
-{: #testing-connector-details}
-{: step}
-
-Before setting up a Connector, make a note your {{site.data.keyword.SecureGateway}} deployment details. Complete the [Reviewing your {{site.data.keyword.SecureGateway}} deployment details](/docs/SecureGateway?topic=SecureGateway-dep-gather-sg-details) to gather the required information.
-
-After completing the tutorial, you should have the following details from your {{site.data.keyword.SecureGateway}} deployment that you will use as inputs to complete the following steps.
+Before continuing, make sure you have the following details from your Secure Gateway deployments.
 
 - **Region**: Create your Connector in the same region where your {{site.data.keyword.SecureGateway}} deployment was located.
 - **Resource group**: Create your Connector in the same resource group where your {{site.data.keyword.SecureGateway}} deployment was located.
@@ -62,6 +50,12 @@ After completing the tutorial, you should have the following details from your {
 - **Authentication Files** - Get a `.zip` file of your [authenticaion files](https://test.cloud.ibm.com/docs/SecureGateway?topic=SecureGateway-nodejs-tls-ma#tls-ma-download-files). You will upload these {{site.data.keyword.SecureGateway}} authentication files when creating a Connector endpoint in the console when prompted to `Upload certificate`.
 - **Clients**: The client establishes the initial connection between the on-premises network and a gateway on the Secure Gateway servers and allows for communication to pass through to the defined destinations. Use your client details to create Connector agents.
 - **Proxy**: Include your {{site.data.keyword.SecureGateway}} proxy settings in your Dockerfile when configuring a proxy for your Satellite Connector.
+
+
+## Goals 
+{: #testing-connector-goals}
+
+The goal of this tutorial is to help guide you through setting up a {{site.data.keyword.satelliteshort}} Connector for testing as part of your migration away from {{site.data.keyword.SecureGateway}}.
 
 
 ## Set up your permissions
