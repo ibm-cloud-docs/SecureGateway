@@ -39,7 +39,7 @@ Before completeing this tutorial, make sure you’ve done the key research neede
 - [Review Satellite Connector as a Secure Gateway replacement](/docs/SecureGateway?topic=SecureGateway-understanding-connector). Compared how Secure Gateway and Satellite Connector to understand their similar capabilities, and their different ways of doing things.
 - [Analyze your Secure Gateway environment and review your deployment details](/docs/SecureGateway?topic=SecureGateway-dep-gather-sg-details) for the key information you need to set up Connector.
 
-Before continuing, make sure you have the following details from your Secure Gateway deployments.
+Before continuing, make sure you have the following details from your Secure Gateway deployments. You will use this information when completing the following steps.
 
 - **Region**: Create your Connector in the same region where your {{site.data.keyword.SecureGateway}} deployment was located.
 - **Resource group**: Create your Connector in the same resource group where your {{site.data.keyword.SecureGateway}} deployment was located.
