@@ -39,9 +39,17 @@ The goal of this tutorial is to help guide you through setting up a {{site.data.
 {: #testing-connector-details}
 {: step}
 
-Before setting up a Connector, make a note your {{site.data.keyword.SecureGateway}} deployment details. Complete the [Reviewing your {{site.data.keyword.SecureGateway}} deployment details]() to gather the required information.
+Before setting up a Connector, make a note your {{site.data.keyword.SecureGateway}} deployment details. Complete the [Reviewing your {{site.data.keyword.SecureGateway}} deployment details](/docs/SecureGateway?topic=SecureGateway-dep-gather-sg-details) to gather the required information.
 
+After completing the tutorial, you should have the following details from your {{site.data.keyword.SecureGateway}} deployment that you will use as inputs to complete the following steps.
 
+- **Region**: Create your Connector in the same region where your {{site.data.keyword.SecureGateway}} deployment was located.
+- **Resource group**: Create your Connector in the same resource group where your {{site.data.keyword.SecureGateway}} deployment was located.
+- **Gateways**: You will recreate your Gateways as Satellite Connectors.
+- **Destinations**: Save your destination details and recreate them as Connector endpoints.
+- **Protocol**, **Resource Host**, and **Port** - Use these values when you create your Connector endpoints.
+- **Authentication Files** - Get a `.zip` file that your contains [security files](https://test.cloud.ibm.com/docs/SecureGateway?topic=SecureGateway-nodejs-tls-ma#tls-ma-download-files).
+- **Clients** - The client establishes the initial connection between the on-premises network and a gateway on the Secure Gateway servers and allows for communication to pass through to the defined destinations. Use your client details to create Connector agents.
 
 
 ## Set up your permissions
@@ -69,7 +77,7 @@ Create an API key(s) with the following permissions.
 
 1. Before setting up an agent, open the required firewall rules, if necessary, to allow outgoing traffic from your agent to Connector. For more information, see [Networking requirements](/docs/satellite?topic=satellite-understand-connectors#network-requirements) for Connector.
 
-1. **Optional**: [Configure a proxy setup on your host container engine](/docs/satellite?topic=satellite-config-connector-proxy).
+1. **Optional**: [Configuring a proxy for your Satellite Connector](/docs/satellite?topic=satellite-config-connector-proxy).
 
 
 ## Run the agent image
