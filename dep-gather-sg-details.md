@@ -159,6 +159,16 @@ If you prefer working in the command line, you can complete the following steps 
 {: #dep-gather-sg-details-next-steps}
 
 
+Review the information you compiled from your {{site.data.keyword.SecureGateway}} deployments and how they map to the inputs you need for setting up a Connector.
+
+- **Region**: Create your Connector in the same region where your {{site.data.keyword.SecureGateway}} deployment was located.
+- **Resource group - say something about it, mention if it’s optional
+<name of item> - say something about it, mention if it’s optional
+<name of item> - say something about it, mention if it’s optional
+regions, IDs, keys, certs, whatever - it should be a 100% list
+
+
+
 You can now use the output from the previous steps to begin [Setting up Connector for testing {{site.data.keyword.SecureGateway}} migration](/docs/SecureGateway?topic=SecureGateway-testing-connector).
 
 
