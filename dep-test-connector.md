@@ -47,7 +47,8 @@ Before continuing, make sure you have the following details from your Secure Gat
 - **Destinations**: Recreate your {{site.data.keyword.SecureGateway}} destinations as Connector endpoints.
 - **Protocol**: Use the same {{site.data.keyword.SecureGateway}} destination protocol value when you create your Connector endpoint.
 - **Port**: Use the same port value from your {{site.data.keyword.SecureGateway}} destination as the `Destination port` when setting up your Connector endpoint.
-- **Authentication Files** - Get a `.zip` file of your [authenticaion files](https://test.cloud.ibm.com/docs/SecureGateway?topic=SecureGateway-nodejs-tls-ma#tls-ma-download-files). You will upload these {{site.data.keyword.SecureGateway}} authentication files when creating a Connector endpoint in the console when prompted to `Upload certificate`.
+- **Network Security**: Use your Secure Gateway Network Security settings are used when setting up your Connector endpoint access control lists (ACLs).
+- **Authentication Files**: Get a `.zip` file of your [authenticaion files](https://test.cloud.ibm.com/docs/SecureGateway?topic=SecureGateway-nodejs-tls-ma#tls-ma-download-files). You will upload these {{site.data.keyword.SecureGateway}} authentication files when creating a Connector endpoint in the console when prompted to `Upload certificate`.
 - **Clients**: The client establishes the initial connection between the on-premises network and a gateway on the Secure Gateway servers and allows for communication to pass through to the defined destinations. Use your client details to create Connector agents.
 - **Proxy**: Include your {{site.data.keyword.SecureGateway}} proxy settings in your Dockerfile when configuring a proxy for your Satellite Connector.
 
@@ -69,6 +70,8 @@ Create an IAM API key(s) with the following permissions.
 - To create a Connector, you need the **Administrator** Platform role for Satellite.
 - To connect an Agent to an existing Connector, you need the **Viewer** Platform role or the **Reader** Service role for Satellite.
 
+This apikey can be shared between the agents connecting to a specific Connector.
+
 
 ## Create a Connector
 {: #testing-connector-create}
@@ -86,11 +89,9 @@ The first step is to set up the Satellite Connector. As explained in previous st
 
 1. [Create a Connector in the console](https://cloud.ibm.com/satellite/connectors/create){: external} using the region, resource group, and tags you found in your Secure Gateway deployments.
 
-1. After creating a Connector, make a note of the connector ID and region ID used here. They will be required to attach agents in the next step.
+After creating a Connector, make a note of the Connector ID and Region ID used here. They will be used later when you attach agents in step 3.
 
-1. Now that you have a Connector, the next step is to attach the agents so they can pass data through.
-
-
+However, before setting up an agent, make sure your have the required firewall rules to allow data to pass through.
 
 
 ## Set up your firewall rules
@@ -106,6 +107,9 @@ The first step is to set up the Satellite Connector. As explained in previous st
 {: #testing-connector-run-image}
 {: step}
 
+Connector agents are similar to Secure Gateway clients. When you set up your agents, you will enter the Connector ID and region ID that you retrieved in step 2 when you created the Connector.
+
+
 - Complete the [Running the Connector Agent image](/docs/satellite?topic=satellite-run-agent-locally) tutorial to begin testing Connector.
 - You can also run the Agent image in [swarm mode for high-availability](/docs/satellite?topic=satellite-run-agent-swarm)
 - You can also [try the end-to-end example](/docs/satellite?topic=satellite-end-to-end#create-link-endpoint) which also covers creating endpoints and setting up TLS encryption.
@@ -115,6 +119,8 @@ The first step is to set up the Satellite Connector. As explained in previous st
 {: #testing-connector-endpoints-acls}
 {: step}
 
+ACLs are similar to your Secure Gateway Network Security options. 
+
 1. Review your Secure Gateway destination details before beginning.
 
     - **Region**: Create your Connector in the same region where your {{site.data.keyword.SecureGateway}} deployment was located.
@@ -123,7 +129,8 @@ The first step is to set up the Satellite Connector. As explained in previous st
 - **Destinations**: Recreate your {{site.data.keyword.SecureGateway}} destinations as Connector endpoints.
 - **Protocol**: Use the same {{site.data.keyword.SecureGateway}} destination protocol value when you create your Connector endpoint.
 - **Port**: Use the same port value from your {{site.data.keyword.SecureGateway}} destination as the `Destination port` when setting up your Connector endpoint.
-- **Authentication Files** - Get a `.zip` file of your [authenticaion files](https://test.cloud.ibm.com/docs/SecureGateway?topic=SecureGateway-nodejs-tls-ma#tls-ma-download-files). You will upload these {{site.data.keyword.SecureGateway}} authentication files when creating a Connector endpoint in the console when prompted to `Upload certificate`.
+- **Network Security**: Use your Secure Gateway Network Security settings are used when setting up your Connector endpoint access control lists (ACLs).
+- **Authentication Files**: Get a `.zip` file of your [authenticaion files](https://test.cloud.ibm.com/docs/SecureGateway?topic=SecureGateway-nodejs-tls-ma#tls-ma-download-files). You will upload these {{site.data.keyword.SecureGateway}} authentication files when creating a Connector endpoint in the console when prompted to `Upload certificate`.
 - **Clients**: The client establishes the initial connection between the on-premises network and a gateway on the Secure Gateway servers and allows for communication to pass through to the defined destinations. Use your client details to create Connector agents.
 - **Proxy**: Include your {{site.data.keyword.SecureGateway}} proxy settings in your Dockerfile when configuring a proxy for your Satellite Connector.
 
