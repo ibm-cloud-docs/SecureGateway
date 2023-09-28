@@ -2,7 +2,7 @@
 
 copyright: 
   years: 2023, 2023
-lastupdated: "2023-09-27"
+lastupdated: "2023-09-28"
 
 keywords: secure gateway, deprecation, migration, faq, questions
 
@@ -31,4 +31,22 @@ Review the [Overview and timeline](/docs/SecureGateway?topic=SecureGateway-depre
 
 Yes! For more information, see [Reviewing {{site.data.keyword.satelliteshort}} Connector as a {{site.data.keyword.SecureGateway}} replacement](/docs/SecureGateway?topic=SecureGateway-understanding-connector).
 
+
+{{../satellite/connector-faq.md#connector-faq-endpoints}}
+
+
+{{../satellite/connector-faq.md#connector-faq-restrict}}
+
+
+{{../satellite/connector-faq.md#connector-faq-acl-implementation}}
+
+
+{{../satellite/connector-faq.md#conector-faq-permissions}}
+
+
+{{../satellite/connector-faq.md#connector-faq-con-per-region}}
+
+{{../satellite/connector-faq.md#connector-faq-endpoints-per-conn}}
+
+{{../satellite/connector-faq.md#connector-faq-instance-limits}}
 
