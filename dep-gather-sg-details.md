@@ -78,9 +78,15 @@ If you prefer working in the command line, you can complete the following steps 
     ```
     {: pre}
 
+1. Install the `cf` plug-in.
+    ```sh
+    ibmcloud cf install
+    ```
+    {: pre}
+
 1. Target a CF org and space.
     ```sh
-    ibmcloud target --cf -r us-south -o xxxxx@ibm.com -s dev
+    ibmcloud target --cf -r REGION -o ORG -s SPACE
     ```
     {: pre}
 
