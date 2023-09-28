@@ -97,7 +97,7 @@ If you prefer working in the command line, you can complete the following steps 
     ```
     {: pre}
 
-1. List your {{site.data.keyword.SecureGateway}} instance details.
+1. List your {{site.data.keyword.SecureGateway}} instance details. Make a note of the `Organization ID` and `Space ID`. You will use these values as inputs in the next step.
 
     ```sh
     ibmcloud resource search 'name: *Secure*Gateway*'
@@ -126,7 +126,7 @@ If you prefer working in the command line, you can complete the following steps 
     ```
     {: pre}
 
-    Example output.
+    Review the output and make a note of the `_id`
 
     ```json
     [{"_id":"AAAA","org_id":"ORG-ID","desc":"Disconnected Gateway","hostname":"cap-sg-prd-2.securegateway.appdomain.cloud","port":49998,"status":"ENABLED","jwt”:”xxxx”,”enf_tok_sec":true,"connected":false,"created_by":null,"created_at":"2023-05-22T14:39:53.807Z","modified_by":null,"last_status_change":"2023-09-27T14:11:39.882Z","authorization":{"cert":"CERT","key":"KEY"},"recentlyDisconnected":[{"id":"ID","disconnectedAt":1684773248414},{"id":"ID","disconnectedAt":1684767669028},{"id":"ID","disconnectedAt":1684766756637}],"active":true,"connectedClientsArr":[],"expiry":1703599899000},]
@@ -134,7 +134,7 @@ If you prefer working in the command line, you can complete the following steps 
     {: screen}
 
 
-1. Use your {{site.data.keyword.SecureGateway}} instance ID to get your destination details.
+1. Use the `_id` you found in the previous step to get your destination details.
 
     ```sh
     curl -X GET -H 'Authorization: Bearer TOKEN' 'https://sgmanager.us-south.securegateway.cloud.ibm.com/v1/sgconfig/SG-ID/destinations'
