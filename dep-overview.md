@@ -2,7 +2,7 @@
 
 copyright: 
   years: 2023, 2023
-lastupdated: "2023-09-28"
+lastupdated: "2023-09-29"
 
 keywords: secure gateway, deprecation, migration
 
@@ -16,13 +16,10 @@ subcollection: SecureGateway
 # Overview and timeline
 {: #dep-overview}
 
-{{site.data.keyword.SecureGateway}} is deprecated. Review the following details for more information.
-{: deprecated}
-
 {{site.data.keyword.cloud}} is announcing the full deprecation of {{site.data.keyword.SecureGateway}}. See the deprecation dates, details, and specific implications.
 {: shortdesc}
 
-{{site.data.keyword.SecureGateway}} has provided secure communication for numerious customers and workloads over many years. But as technology moves on, newer and more sophisticated technologies have become available for our {{site.data.keyword.cloud}} users.
+{{site.data.keyword.SecureGateway}} has provided secure communications for numerious IBM Cloud customers and workloads over many years. But as technology moves on, newer and more sophisticated technologies have become available for our {{site.data.keyword.cloud}} users. Details below will walk you through those details, migration steps, and reach out for asssitance.
 
 
 
