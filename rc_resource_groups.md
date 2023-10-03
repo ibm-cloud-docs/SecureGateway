@@ -13,7 +13,7 @@ subcollection: SecureGateway
 {{site.data.keyword.attribute-definition-list}}
 
 
-# Understanding the change from Cloud Foundry organizations to resource groups
+# Resource group update
 {: #rc_resouce_groups}
 
 
