@@ -24,6 +24,19 @@ subcollection: SecureGateway
 
 
 
+**Internal users**: Review the following notes.
+{: important}
+
+- This is a pre-release test version of the announcement for the Secure Gateway deprecation. 
+- This page is internally available starting on 28 September 2023 - it is not visible users in production documentation
+- It will be externally announced and moved to production on 26 October 2023.
+- The short URL land page for this page is https://ibm.biz/ibmsg-announce.
+- This is confidential outside of IBM until 26 October 2023 and cannot be shared with any external clients without Secure Gateway Product Management engagement.
+- Enage with this process, the key teams, and the internal information and support here: https://ibm.biz/sg-future.
+
+
+
+
 ## Timeline
 {: #deprecation_timeline}
 
@@ -52,6 +65,23 @@ Deprecation is a process, and we've announced the beginning of that process. It 
 
 See [Reviewing your migration options](/docs/SecureGateway?topic=SecureGateway-dep-migration-options) for an overview and comparison of {{site.data.keyword.satellitelong}} Connector and a Virtual Private Network.
 
+## Migration steps
+{: #dep-migration-steps}
+
+Of the listed migration options, the most similar to {{site.data.keyword.SecureGateway}} is {{site.data.keyword.satellitelong}} Connector. So here is a phased approach to moving to that solution.
+
+Phase 1: Investigate {{site.data.keyword.satellitelong}} Connector versus {{site.data.keyword.SecureGateway}}
+:   Understanding the product {{site.data.keyword.satellitelong}}, and it's capability {{site.data.keyword.satellitelong}} Connector, is the first key step. This section [Reviewing Satellite Connector as a Secure Gateway replacement](/docs/SecureGateway?topic=SecureGateway-understanding-connector) will familiar you with that product. It will also explain through the differences and similarities between the two products. When done with this phase, you should understand the new product, how it relates to the existing {{site.data.keyword.SecureGateway}} product, and key information moving forward.
+
+Phase 2: Reviewing your {{site.data.keyword.SecureGateway}} deployment details
+:   Some users may know everything they need to know about how their {{site.data.keyword.SecureGateway}} is deployed, what it's layout details are, and ow it flows data. But in many cases not only is a review of this a good idea, but this will allow you to ensure you have all the key detailed noted and captured before the final migration phase. This section [Reviewing your Secure Gateway deployment details](/docs/SecureGateway?topic=SecureGateway-dep-gather-sg-details) is to help guide you through gathering the key information from your {{site.data.keyword.SecureGateway}} instances that you will need when you move forward with the migration.
+
+Phase 3: Setting up {{site.data.keyword.satellitelong}} Connector
+:   The two prevous phases involved learning about the new product, comparing it to your existing product, and gathering information needed to do the migration. Now it's time to do that setup and use the knowledge and data collected to set it up in a similar way to your {{site.data.keyword.SecureGateway}} infrastructure. When you complete the steps in [Setting up {{site.data.keyword.satellitelong}} Connector](/docs/SecureGateway?topic=SecureGateway-testing-connector), you will know the migration is complete and the same data is flowing that you need into the IBM Cloud.
+
+The only step left after you've completely these 3 phases us to disable your {{site.data.keyword.SecureGateway}} and delete them from the IBM Cloud.
+
+
 ## Migration assistance
 {: #dep-migration-assistance}
 
@@ -62,7 +92,6 @@ IBM Cloud Expert Labs
 
 ## Customer Support
 These materials and resources should help you through your IBM Cloud Secure Gateway migration. If you have questions, or need help, contact [IBM Cloud® Customer Support](https://www.ibm.com/cloud/support){: external} for additional information and assistance.
-
 
 
 
