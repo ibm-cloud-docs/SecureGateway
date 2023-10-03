@@ -2,7 +2,7 @@
 
 copyright: 
   years: 2023, 2023
-lastupdated: "2023-09-28"
+lastupdated: "2023-10-03"
 
 keywords: secure gateway, deprecation, migration, connector
 
@@ -18,7 +18,7 @@ completion-time: 1hr
 {{site.data.keyword.attribute-definition-list}}
 
 
-# Setting up Connector for testing Secure Gateway migration
+# Setting up Connector
 {: #testing-connector}
 {: toc-content-type="tutorial"}
 {: toc-services="SecureGateway,satellite"}
