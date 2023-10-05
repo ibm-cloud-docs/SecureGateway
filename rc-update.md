@@ -33,7 +33,7 @@ Updating the Secure Gateway instance pointer from CF org/space to resource group
 
 - **Resource groups can't be changed after migrating**: When you migrate existing Cloud Foundry service instances (like a Secure Gateway instance) to a resource group, the resource group that you choose can't be changed after the update is complete. So, it's essential to plan how you want to organize resources in the account before you do this update.
 
-## Migration steps using UI.
+## Migrating your instances in the console.
 {: #rc-update-console}
 
 1. Login to https://www.cloud.ibm.com and Select the **Navigation** menu icon , select **Resource** list.
@@ -52,7 +52,7 @@ Updating the Secure Gateway instance pointer from CF org/space to resource group
     ![Alias instance](./images/image11.png "Alias instance")  
 
 
-## Migration steps using the CLI
+## Migrating your instances from the CLI
 {: #rc-update-cli}
 
 1. Login to CLI and target the `cf` endpoints in the region you want to migrate Secure Gateway instances. Because IBM Cloud Foundry Public is deprecated, you need to enable the CF feature flag by running below command before target cf endpoint. 
