@@ -131,7 +131,7 @@ Updating the Secure Gateway instance pointer from CF org/space to resource group
 {: #rc-update-after}
 
 Manage users’ access to resources
-:   After you migrate your Cloud Foundry service instances to a resource group, you need to ensure that the users in your account have the required level of access to the resources in the account resource groups. The users need to be assigned a role [Operator] or [Editor] to manage the instance. This also provide access for users to create new service instances in the account resource groups. For more information about assigning access to resources in your resource groups, see [Managing access to resources](/docs/account?topic=account-assign-access-resources&interface=ui#assign-access-resources).
+:   After you migrate your Cloud Foundry service instances to a resource group, you need to ensure that the users in your account have the required level of access to the resources in the account resource groups. The users need to be assigned the **Operator** or **Editor** role in IAM to manage the instance. This also provide access for users to create new service instances in the account resource groups. For more information about assigning access to resources in your resource groups, see [Managing access to resources](/docs/account?topic=account-assign-access-resources&interface=ui#assign-access-resources).
 
 Review the Billing dashboard:
 :   After migration, the billing is confirmed under Cloud Foundry Org until the end of the month. The next month the billing can be checked under Resource group.
