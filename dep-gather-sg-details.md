@@ -13,7 +13,7 @@ subcollection: SecureGateway
 {{site.data.keyword.attribute-definition-list}}
 
 
-# Reviewing your {{site.data.keyword.SecureGateway}} deployment details
+# Reviewing {{site.data.keyword.SecureGateway}} deployment details
 {: #dep-gather-sg-details}
 
 {{site.data.keyword.SecureGateway}} is deprecated. For more information, see the [deprecation details](/docs/SecureGateway?topic=SecureGateway-dep-overview).
@@ -28,49 +28,128 @@ You can use the following steps to analyze the current usage of {{site.data.keyw
 
 The goal of this tutorial is to help guide you through gathering the key information from your {{site.data.keyword.SecureGateway}} instances that you will need when you migrate to {{site.data.keyword.satelliteshort}} Connector. 
 
-## Review the {{site.data.keyword.SecureGateway}} terms
+## Review the {{site.data.keyword.SecureGateway}} concepts
 {: #dep-gather-sg-terms}
-{: step}
 
 You might need to review the common terms and concepts of {{site.data.keyword.SecureGateway}}. For more information, see the following links.
 
-- Review the [Getting started with {{site.data.keyword.SecureGateway}}](/docs/SecureGateway?topic=SecureGateway-getting-started-with-sg)
-- Review the [Secure Gateway service instances](https://cloud.ibm.com/catalog/services/secure-gateway) and the versions you have.
-- Review [Gateways](/docs/SecureGateway?topic=SecureGateway-add-sg-gw).
-- Review [Clients](/docs/SecureGateway?topic=SecureGateway-add-client).
-- Review [Destinations](/docs/SecureGateway?topic=SecureGateway-add-dest).
+- Review the [Getting started with {{site.data.keyword.SecureGateway}}](/docs/SecureGateway?topic=SecureGateway-getting-started-with-sg) in general.
+- Review the key {{site.data.keyword.SecureGateway}} component topics.
+    - Review [Gateways](/docs/SecureGateway?topic=SecureGateway-add-sg-gw).
+    - Review [Clients](/docs/SecureGateway?topic=SecureGateway-add-client).
+    - Review [Destinations](/docs/SecureGateway?topic=SecureGateway-add-dest).
+
+## Access your {{site.data.keyword.SecureGateway}} instances
+{: step}
+- Access your list of [Secure Gateway service instances](https://cloud.ibm.com/resources?product=Secure) - see their names, what group they are in, where they are deployed, status, and the tags
+- For each instance follow the next step to gather additional details
 
 
-## Access your {{site.data.keyword.SecureGateway}} instance details in the console
+## Access your {{site.data.keyword.SecureGateway}} instance details
 {: #dep-gather-sg-details-console}
 {: step}
 
-1. Access your {{site.data.keyword.SecureGateway}} instances from the [Resource list in the console](https://cloud.ibm.com/resources?product=Secure){: external}.
+1. In this instance, you can see on the first page the total traffic, and a list of the Gateways in that instance. There may be no gateways, 1 gateway, or more gateways. No gateways means you're not using this instance to transfer traffic.
+2. In any Gateway box, click on the ![**Settings icon**](./images/settingIcon.png "Setting Icon") and it will show you the details for that gateway
+    - Gateway name
+    - Gateway key
+    - Gateway ID
+    - Node it's attached to
+    - Created & modified information
 
-1. For each {{site.data.keyword.SecureGateway}} instances in your account, review your Gateways, Destinations, and connection details in the console. Make sure to save the information for later when you create {{site.data.keyword.satelliteshort}} Connectors.
+In a below stop we'll show you how to extract this information to a file and get information from it that way
 
+DEREK: Can we get a picture here from Sid for this.
+
+3. In any Destination box, click on the ![**Settings icon**](./images/settingIcon.png "Setting Icon") and it will show you the details for that detination
+    - Destination ID
+    - Cloud host & port
+    - Resource hos & port
+    - Created & modified information
+    - Security protocal
+
+
+4. Back on the Gateway screen information, you can extract all the information about that Gateway to a file you can use to gather all the details
+  - Click the Export button ![Export Button](./images/exportIcon.png "Export Button") 
+  - It will be saved with the unique ID for that gateway to your download directory
+  - In a following step we'll show you how to parse that file and gather data
+
+
+
+DEREK: We need this, but now I'm not sure where
     - Every {{site.data.keyword.satelliteshort}} Connector is functionally similar to each Gateway. So you might have multiple Secure Gateway instances, and you might have multiple Gateway destinations set up. You will create a Satellite Connector endpoint for each of the Secure Gateway Destinations you have set up.
     - Select each Destination in turn and click on the ![**Settings icon**](./images/settingIcon.png "Setting Icon") to view the details for that destination and collect the necessary data for creating an equivalent Connector endpoint.
-    - Review the **Destination settings** window.
-    
-    ![Mutual Authentication Info Panel](./images/infoPanelMAsmaller.png "Mutual Authentication Info Panel")
 
-    - From this window, make a note of the **Resource Host** and **Port**, and use the **Download Authentication Files** button to pull any necessary certificates and keys for doing authentication in the connection.
-    - Click the **Edit** button and check the following sections
-        - **Network Security**: Get the IP restrictions that you will use for setting up Connector ACLs.
-        - **Proxy Options**: Get the required proxy setup that will be needed for the Docker agents to access the onsite service.
-        - **Miscellaneous Options**: Get the connection timeout settings.
 
-    You can click the Export button ![Export Button](./images/exportIcon.png "Export Button") on the gateway tile to export the configuration of the gateway/destination.
-    {: tip}
 
-Repeat this step for each Gateway and Destination in your Secure Gateway instance. Keep all of this information ready for when you set up your Connectors, Agents, and Endpoints in the next tutorial.
+
+## Parse extracted {{site.data.keyword.SecureGateway}} gateway files to gather data
+{: #dep-gather-sg-details-parse}
+{: step}
+
+In the previous step, if you extracted data about each Gateway, you can parse it using simple CLI tools to get that information easily.
+You could get all of this using the UI, but this allows you to examine and savae without many copy and past steps.
+
+1. Prep your machine
+  - This is most useful on a linux-type environment - so us Mac OS terminal, Linux, or Windows Linux support terminal window
+  - You can just load the json file into a browser or JSON viewing tool, but you also might want to use a JSON processor like [JK](https://jqlang.github.io/jq/). Our example will show you using JK, so you will need to install that if you want to use this method
+  - Each of the files saved have an extension .gateway. You can use them directly, but it also might help to pull into an editor if you rename them.json - but it is optional
+
+2. Extracting data
+
+filename="<name of the file you want to example>"
+cat $filename | jq "."
+This will show you the whole file
+
+  
+cat $filename | jq ".desc"
+Shows you the Gateway name
+  
+  
+cat $filename | jq ".destinations[]"
+Shows you the destiniations with all the sub array data
+  
+cat $filename | jq ".destinations[] .desc"
+Shows you just the destination names - now you know how many destinations you have for that gateway
+
+cat $filename | jq ".destinations[0]"
+Will list the details for just that destination - where "0" is the number of the destination in the array of destinations
+
+
+
+cat $filename | jq '.destinations[] | .desc + " " + .ip'
+Will show you some key info for this destiniation
+  
+  
+TODO: We need to spend more time here - how to extract what we want and need
+TODO: We could script this
+TODO: We could dump things to create a CSV
+TODO: We need Nathan and Sid to decide what is critical
+TODO: We need to say things like 
+TODO:     If your protocol="HTTPS", then you need to do and watch out for this
+TODO:     If you enable_client_tls="XYZ", then you need to do this
+TODO: 
+  
+cat $filename | jq 
+
+cat $filename | jq 
+
+cat $filename | jq 
+
+cat $filename | jq 
+
+cat $filename | jq 
+
+
+
+
 
 ## Access your {{site.data.keyword.SecureGateway}} instance details in the CLI
 {: #dep-gather-sg-details-cli}
 {: step}
 
-If you prefer working in the command line, you can complete the following steps to gather the required {{site.data.keyword.SecureGateway}} instance details for migrating to Connector. If you already gathered your instance, you can continue to the next step.
+If you prefer working in the command line, you can obtain a number of the above details, with even less usage of the IBM Cloud console.
+If you already gathered your instance information, you can continue with this step as you like.
 
 1. Enable the command line feature flag that will permit to use Cloud Foundry commands.
     ```sh
@@ -161,10 +240,25 @@ If you prefer working in the command line, you can complete the following steps 
     {: screen}
 
 
-## Next steps
-{: #dep-gather-sg-details-next-steps}
+## Analysis Summary
+{: #dep-gather-sg-details-summary}
+
+Let's summarize the information you have gathered about your {{site.data.keyword.SecureGateway}} deployment
+  
+1. Instance list: 
+    - You know how many instances you have, and their names, group, location, status, and tags
+
+2. Instance gateway list
+    - For each instance, you know the informaiton about the created gateways: key token, ID, node, and dates
+    - You know how many gateways you have
+  
+3. Instance gateway destination list
+    - For each gateway, you know the 
+  
+4. Instance gateway destination details
 
 
+ 
 Review the information you compiled from your {{site.data.keyword.SecureGateway}} deployments and how they map to the inputs you need for setting up a Connector.
 
 - **Region**: Create your Connector in the same region where your {{site.data.keyword.SecureGateway}} deployment was located.
@@ -178,7 +272,8 @@ Review the information you compiled from your {{site.data.keyword.SecureGateway}
 - **Clients**: The client establishes the initial connection between the on-premises network and a gateway on the Secure Gateway servers and allows for communication to pass through to the defined destinations. Use your client details to create Connector agents.
 - **Proxy**: Include your {{site.data.keyword.SecureGateway}} proxy settings in your Dockerfile when configuring a proxy for your Satellite Connector.
 
-
+## Next steps
+{: #dep-gather-sg-details-next-steps}
+  
 You can now use the output from the previous steps to begin [Setting up Connector for testing {{site.data.keyword.SecureGateway}} migration](/docs/SecureGateway?topic=SecureGateway-testing-connector).
-
 
