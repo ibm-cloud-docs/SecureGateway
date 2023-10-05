@@ -28,7 +28,7 @@ toc:
           label: Resource controller changes
           topics:
             - rc-resource-groups.md
-            - rc-migrate.md
+            - rc-update.md
       - index.md
       - securegateway_about.md
   - navgroup:
