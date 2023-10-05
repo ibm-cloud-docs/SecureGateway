@@ -63,30 +63,38 @@ subcollection: SecureGateway
 
 There are two methods below for this change to be made - one done by yourself and one done by the {{site.data.keyword.SecureGateway}} product team.
 
-Review the following sections for more information about your options - please see those below.
+Review the following sections for more information about your options.
 
-Manually selecting a resource group for your {{site.data.keyword.SecureGateway}} instances
-:   Doing this change yourself allows you to control the name of the Resource Group into which you will place the Secure Gateway instance.
+### Manually selecting a resource group for your {{site.data.keyword.SecureGateway}} instances
+{: #rc-manual}
+
+Doing this change yourself allows you to control the name of the Resource Group into which you will place the Secure Gateway instance.
+
 It also allows you to fully control security admin permissions to existing Secure Gateway instance(s).
 
 If you do not make the changes by the stated deadline, the {{site.data.keyword.SecureGateway}} product team will do the below step.
-{: #rc_manual}
 
 
-Allowing the {{site.data.keyword.SecureGateway}} product team to apply the changes
-:   If you do not do the above step, the {{site.data.keyword.SecureGateway}} product team will make that update.
-They will
-- move your {{site.data.keyword.SecureGateway}} instance into the 'default' resource group in your account
+
+## Allowing the {{site.data.keyword.SecureGateway}} product team to apply the changes
+{: #rc-auto}
+
+If you do not do the above step, the {{site.data.keyword.SecureGateway}} product team will make that update.
+The team will complete the following.
+
+- Move your {{site.data.keyword.SecureGateway}} instance into the 'default' resource group in your account
 - Only the account owner will retain admin privilages for the {{site.data.keyword.SecureGateway}} instance, all other users that previously had admin privilages for that {{site.data.keyword.SecureGateway}} instance will be removed
 - The {{site.data.keyword.SecureGateway}} instance account owner will then need to optionally add admin privlages back for other IBM Cloud users
-{: #rc_auto}
+
 
 
 ## Update Steps
 {: #rc_how_to_do_it}
+
 When you are ready to make the udpate changes to your {{site.data.keyword.SecureGateway}} instance, see the instructions [Migrating Secure Gateway service instances resource group](/docs/SecureGateway?topic=SecureGateway-migrate)
 
 
 ## Summary
+{: #rc-summary}
 
 Whether you manually update the resource group for their {{site.data.keyword.SecureGateway}}, or allow the IBM Cloud {{site.data.keyword.SecureGateway}} team do it for you, there is no difference in operation or function for your Secure Gateway instances, no changes, and no downtime required.
