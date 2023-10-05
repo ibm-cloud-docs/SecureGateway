@@ -1,8 +1,8 @@
 ---
 
-copyright:
-  years: 2014, 2023
-lastupdated: "2023-09-27"
+copyright: 
+  years: 2023, 2023
+lastupdated: "2023-10-05"
 
 keywords: secure gateway, deprecation, migration, resource controller, resource groups
 
