@@ -24,7 +24,9 @@ subcollection: SecureGateway
 
 There is a specific timeframe and deadline to make this change. All details for that timeline and steps needed can be find in the [Resource group update](/docs/SecureGateway?topic=SecureGateway-rc_resouce_groups) doc.
 
+
 Updating the Secure Gateway instance pointer from CF org/space to resource groups does not impact the running service instance (SG connections), or the VPN. This update impacts only the service governance model which means the Secure Gateway service instance authorization model will be migrated to IAM from CF. After the update, any creation or removal of secure gateway service instances will require IAM privileges.
+
 
 ## Prerequisites and notes
 {: #rc-update-prereq}
@@ -36,7 +38,9 @@ Updating the Secure Gateway instance pointer from CF org/space to resource group
 ## Migrating your instances in the console.
 {: #rc-update-console}
 
-1. Login to https://www.cloud.ibm.com and Select the **Navigation** menu icon , select **Resource** list.
+
+1. Login to https://www.cloud.ibm.com and select the **Navigation** menu icon, then select **Resource** list.
+
 1. Click the **Integration** drop down menu to see the list of Secure Gateway instance(s) - or go to this [Secure Gateway resource list](https://cloud.ibm.com/resources?product=Secure%20Gateway)
     ![Resource list](./images/image2.png "Resource list")
 1. Look for the small arrow icon next to a Secure Gateway instance. Click the **Migrate** button next to the Secure Gateway instance you want to update
@@ -154,7 +158,6 @@ Review the Billing dashboard:
 :   After migration, the billing is confirmed under Cloud Foundry Org until the end of the month. The next month the billing can be checked under Resource group.
 
 ![Billing dashboard](./images/image10.png "Billing dashboard") 
-
 
 
 
