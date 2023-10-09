@@ -2,7 +2,7 @@
 
 copyright: 
   years: 2023, 2023
-lastupdated: "2023-10-05"
+lastupdated: "2023-10-09"
 
 keywords: secure gateway, deprecation, migration, resource controller, resource groups
 
@@ -67,12 +67,12 @@ Updating the Secure Gateway instance pointer from CF org/space to resource group
     ```
     {: pre}
 
-    ```sh
     Example commands and output.
 
-    User$ export IBM_CF_EXTENSION=true
+    ```sh
+    export IBM_CF_EXTENSION=true
 
-    User$ ibmcloud target -r eu-gb -g Default --cf-api https://api.eu-gb.cf.cloud.ibm.com -o <org> -s <space>
+    ibmcloud target -r eu-gb -g Default --cf-api https://api.eu-gb.cf.cloud.ibm.com -o <org> -s <space>
 
     Targeted resource group Default
     Switched to region eu-gb
@@ -99,10 +99,14 @@ Updating the Secure Gateway instance pointer from CF org/space to resource group
 
     Example commands and output of a successful migration.
     ```sh
-    User$ ibmcloud resource cf-service-instance-migrate "Secure Gateway-z0" --resource-group-name Default
+    ibmcloud resource cf-service-instance-migrate "Secure Gateway-z0" --resource-group-name Default
+
     Really migrate Cloudfoundry service instance Secure Gateway-z0 into resource group Default?> y
+
     Migrating Cloudfoundry service instance Secure Gateway-z0 into resource group Default as user@ibm.com...
+
     OK
+    
     Service instance Secure Gateway-z0 was migrated into resource group Default successfully
     ```
     {: screen}
