@@ -91,6 +91,20 @@ Updating the Secure Gateway instance pointer from CF org/space to resource group
     ```
     {: screen}
 
+1. Target the `cf` API.
+    ```sh
+    ibmcloud target --cf
+    ```
+    {: pre}
+
+
+1. List the service instances in your CF org and space. Make a note of the service ID of the Secure Gateway instance you want to migrate.
+
+    ```sh
+    ibmcloud cf services
+    ```
+    {: pre}
+
 1. Run the following command to migrate the instance.
     ```sh
     ibmcloud resource cf-service-instance-migrate (SERVICE_INSTANCE_NAME | SERVICE_INSTANCE_ID) [--resource-group-name RESOURCE_GROUP_NAME | --resource-group-id RESOURCE_GROUP_ID] [-f, --force] [-q, --quiet]
