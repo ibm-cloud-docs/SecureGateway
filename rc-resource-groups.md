@@ -14,7 +14,7 @@ subcollection: SecureGateway
 
 
 # Resource group update
-{: #rc_resouce_groups}
+{: #rc_resource_groups}
 
 
 

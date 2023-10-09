@@ -22,7 +22,7 @@ subcollection: SecureGateway
 {: shortdesc}
 
 
-There is a specific timeframe and deadline to make this change. All details for that timeline and steps needed can be find in the [Resource group update](/docs/SecureGateway?topic=SecureGateway-rc_resouce_groups) doc.
+There is a specific timeframe and deadline to make this change. All details for that timeline and steps needed can be find in the [Resource group update](/docs/SecureGateway?topic=SecureGateway-rc_resource_groups) doc.
 
 Updating the Secure Gateway instance pointer from CF org/space to resource groups does not impact the running service instance (SG connections), or the VPN. This update impacts only the service governance model which means the Secure Gateway service instance authorization model will be migrated to IAM from CF. After the migration, any creation or removal of secure gateway service instances will require IAM privileges.
 
