@@ -13,7 +13,7 @@ subcollection: SecureGateway
 {{site.data.keyword.attribute-definition-list}}
 
 
-# Updating a Secure Gateway instance from Cloud Foundry org and space to resource groups
+# Updating a Secure Gateway instance to resource group
 {: #rc-update}
 
 
