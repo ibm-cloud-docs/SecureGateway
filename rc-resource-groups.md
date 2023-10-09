@@ -32,6 +32,8 @@ subcollection: SecureGateway
 
 
 ## Overview
+{: #rc_overview}
+
 {{site.data.keyword.SecureGateway}} users need to make a change to how their {{site.data.keyword.SecureGateway}} instances are connected to by IBM Cloud.
 {: shortdesc}
 
