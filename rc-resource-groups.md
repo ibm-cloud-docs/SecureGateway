@@ -14,7 +14,7 @@ subcollection: SecureGateway
 
 
 # Resource group update
-{: #rc_resource_groups}
+{: #rc_resouce_groups}
 
 
 
@@ -32,7 +32,7 @@ subcollection: SecureGateway
 
 
 ## Overview
-{: #rc_overview}
+{: #overview}
 
 {{site.data.keyword.SecureGateway}} users need to make a change to how their {{site.data.keyword.SecureGateway}} instances are connected to by IBM Cloud.
 {: shortdesc}
