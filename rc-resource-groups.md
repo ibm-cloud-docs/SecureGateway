@@ -55,8 +55,8 @@ subcollection: SecureGateway
 | Date | Stage | Description | 
 | --- | --- | --- | 
 | 16 October 2023 | Announcement | Secure Gateway is announcing a change in the way it deploys and references instances of the service. This update will move away from Cloud Foundry organizations, and move to IBM Cloud Resource Groups |
-| 16 November 2023 | Deadline  | 30 days after the initial announcement is the deadline for the update of the Secure Gateway service broker. All users that have executed this update for themselves, will be able to pick the IBM Cloud resource group into which they place their Secure Gateway instance. At this time, the IBM Secure Gateway product team will execute the update for customers that have not done that themselves. By doing so, your Secure Gateway instance will be placed in the IBM Cloud resource group named `default`. |
-| 30 November 2023 | Updates completed | All updates will have been completed for Secure Gateway service broker updates - either the users will have made them or the Secure Gateway Product team will have made them. |
+| 16 November 2023 | Deadline  | 30 days after the initial announcement is the deadline for the update of the Secure Gateway instances into Resource Groups. All steps listed below will be taken at that time based on each instance status. |
+| 30 November 2023 | Updates completed | All updates will have been completed for Secure Gateway instance resource group updates - either the users will have made them or the Secure Gateway Product team will have made them. |
 
 
 ## What do I need to do?
@@ -81,12 +81,16 @@ If you do not make the changes by the stated deadline, the {{site.data.keyword.S
 {: #rc-auto}
 
 If you do not do the above step, the {{site.data.keyword.SecureGateway}} product team will make this update.
+However this can only be done if you have a single Secure Gateway instance in the same region. If you have more than one Secure Gateway instance in the same region, we are unable to make the update for you, and the previous step is required.
+
 The product team will complete the following:
 
-- Move your {{site.data.keyword.SecureGateway}} instance into the resource group named 'default' in your account
+
+- Move your {{site.data.keyword.SecureGateway}} instance into the resource group named 'Default' in your account
 - Only the account owner will retain admin privilages for the {{site.data.keyword.SecureGateway}} instance, all other users that previously had admin privilages for that {{site.data.keyword.SecureGateway}} instance will be removed
 - The {{site.data.keyword.SecureGateway}} instance account owner will then need to optionally add admin privlages back for other IBM Cloud users
 
+- As a final step, if a Secure Gateway instance has Gateways with no usage traffic in August, September, or October of 2023 - 3 months of no usage - we will put that Gateway into the disabled state. That will denote for us that the Gateway has no traffic or usage. Users can enable it again as they like and continue usage - easy instructions to do that are in [Managing the Secure Gateway service](/docs/SecureGateway?topic=SecureGateway-manage-sg-service)
 
 
 ## Update Steps
@@ -99,3 +103,6 @@ When you are ready to make the udpate changes to your {{site.data.keyword.Secure
 {: #rc-summary}
 
 Whether you manually update the resource group for their {{site.data.keyword.SecureGateway}}, or allow the IBM Cloud {{site.data.keyword.SecureGateway}} product team do it for you, there is no difference in operation or function for your Secure Gateway instances, no changes, and no downtime required.
+
+## Customer Support
+These materials and resources should help you through your IBM Cloud Secure Gateway update to resource groups. If you have questions, or need help, contact [IBM Cloud® Customer Support](https://cloud.ibm.com/unifiedsupport/supportcenter){: external} for additional information and assistance.
