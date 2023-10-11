@@ -43,15 +43,16 @@ You might need to review the common terms and concepts of {{site.data.keyword.Se
 {: step}
 - The first step is to see what Secure Gateway instance(s) you have deployed. Most users only have a single instance, but some have multiple depending on the size of their deployment.
 - Access your list of [Secure Gateway service instances](https://cloud.ibm.com/resources?product=Secure) - see their names, what resource group they are in, what region they are deployed, their status, and any tags they might have
-- For each instance follow the next step to gather additional details
+- For each instance follow the next step to gather additional details.
 
 
 ## Access your {{site.data.keyword.SecureGateway}} instance details
 {: #dep-gather-sg-details-console}
 {: step}
 
+
 1. In this instance, you can see on the first page the total traffic, and a list of the Gateways in that instance. There may be no gateways, 1 gateway, or more gateways. If there are no gateways created, it means you are not using this instance to transfer traffic.
-2. In any Gateway box, click on the ![**Settings icon**](./images/settingIcon.png "Setting Icon") and it will show you the details for that gateway
+1. In any Gateway box, click the ![**Settings icon**](./images/settingIcon.png "Setting Icon") to review the following details for that Gateway.
     - Gateway name
     - Gateway key
     - Gateway ID
@@ -59,83 +60,76 @@ You might need to review the common terms and concepts of {{site.data.keyword.Se
     - Created & modified information
     - Whether it is enabled or disabled
 
-In a below stop we will show you how to extract this information to a file and get information from it that way.
 
-Note
-    - Every {{site.data.keyword.satelliteshort}} Connector is functionally similar to each Gateway. So you might have multiple Secure Gateway instances, and you might have multiple Gateway gateways and destinations set up. You will create a Satellite Connector endpoint for each of the Secure Gateway Destinations you have set up.
-NATHN & SID: Validate the above statement I asked in Slack
+1. Click on a Gateway to review the **Gateway** page.
 
-
-DEREK & SID: Can we get a picture here for this above step
-
-3. Click on the Gateway itself, and it will load the Gateway page. In the ** Destinations** tab, you can see the destiniations listed. In any Destination box, click on the ![**Settings icon**](./images/settingIcon.png "Setting Icon") and it will show you the details for that destination
+1. Review the **Destinations** tab for a list of destinations. In any Destination box, click the ![**Settings icon**](./images/settingIcon.png "Setting Icon") to review the following details for that Destination.
     - Destination ID
     - Cloud host & port
     - Resource host & port
     - Created & modified information
     - Security protocal
 
-Click on the **Clients** tab, and you can see the Clients connected to that Gateway.
+1. Click the **Clients** tab to review the Clients that are connected to that Gateway.
     - DEREK & SID: Sid, I don't have any clients, I need you to write this section please and get the data to Derek
 
 
-4. Back on the Gateway screen information, you can extract all the information about that Gateway to a file you can use to gather all the details
-  - Click the Export button ![Export Button](./images/exportIcon.png "Export Button") 
-  - It will be saved with the unique ID for that gateway to your download directory
-  - In a following step we will show you how to parse that file and gather data
+1. Back on the Gateway screen information, you can extract all the information about that Gateway by clicking the **Export** button ![Export Button](./images/exportIcon.png "Export Button"). Note that the file is saved with the unique ID for that gateway to your Download directory.
 
 
+1. Complete the next steps to to parse the file and gather the data you need to set up Satellite Connector.
 
-## Parse extracted {{site.data.keyword.SecureGateway}} gateway files to gather data
+Keep in mind when reviewing your Secure Gateway details that each Gateway is similar to a {{site.data.keyword.satelliteshort}} Connector. So as you review your might have multiple Secure Gateway instances, and you might have multiple gateways and destinations set up within that instance. Also each of your Secure Gateaway Destinations are similar to Satellite Connector endpoints.
+{: note}
+
+## Parse the extracted {{site.data.keyword.SecureGateway}} gateway files to gather data
 {: #dep-gather-sg-details-parse}
 {: step}
 
-In the previous step, if you extracted data about each Gateway, you can parse it using simple CLI tools to get that information easily.
-You could get all of this using the UI, but this allows you to examine and save without many copy and paste steps.
+In the previous step, if you extracted data about each Gateway, you can parse it using simple CLI tools to get the information easily. You can also get this data using the console, but the CLI allows you to examine and save with fewer manually copy and paste steps.
 
-1. Prep your machine
-  - This is most useful on a linux-type environment - so us Mac OS terminal, Linux, or Windows Linux support terminal window
-  - You can just load the json file into a browser or JSON viewing tool, but you also might want to use a JSON processor like [JK](https://jqlang.github.io/jq/). 
-  - Our example will show you using JK, so you will need to install that if you want to use this method
-  - Each of the files saved have an extension .gateway. You can use them directly, but it also might help to pull into an editor if you rename them .json - but it is optional
+1. Prepare your machine.
+  - This is most useful on a linux-type environment - so use Mac OS terminal, Linux, or Windows Linux support terminal window
+  - You can load the json file into a browser or JSON viewing tool, but you also might want to use a JSON processor like [JQ](https://jqlang.github.io/jq/). 
+  - If you want to use JQ as we do in the following example, you need to download it before beginning.
+  - **Optional** Each of the files saved have an extension `.gateway`. You can use them directly, but it also might help to pull into an editor if you rename them `.json`.
 
-2. Extracting data
+2. Extracte the data.
   - You can run a series of commands to get various pieces of data
 
-  - Set the filename for convenience
+  - Set the filename for convenience.
     ```sh
     filename="<name of the file you want to example>"
     ```
     {: pre}
     
     
-  - This will show you the whole file
+  - Display the whole file.
     ```sh
     cat $filename | jq "."
     ```
     {: pre}
     
-    If "jq" is not set up properly, you will need to set that up if you want to use this method to look at the file.
 
-  - Shows you the Gateway name
+  - Get the Gateway name.
     ```sh
     cat $filename | jq ".desc"
     ```
     {: pre}
 
-  - Shows you the destiniations with all the sub array data
+  - Get the destiniations with all the sub array data.
     ```sh
     cat $filename | jq ".destinations[]"
     ```
     {: pre}
 
-  - Shows you just the destination names in all the destinations - now you know how many destinations you have for that gateway
+  - Get just the destination names in all the destinations. This also tells you know how many destinations you have for that gateway.
     ```sh
     cat $filename | jq ".destinations[] .desc"
     ```
     {: pre}
 
-  - Will list the details for just that destination - where "0" is the number of the destination in the array of destinations
+  - Get the details for a specfic destination where "0" is the number of the destination in the array of destinations.
     ```sh
     cat $filename | jq ".destinations[0]"
     ```
@@ -267,13 +261,13 @@ If you already gathered your instance information, you can continue with this st
 
 Let's summarize the information you have gathered about your {{site.data.keyword.SecureGateway}} deployment
   
-1. Instance list: You know how many instances you have, and their names, groups, locations, status, and tags
+1. **Instance list**: You know how many instances you have, and their names, groups, locations, status, and tags.
 
-2. Instance gateway list: For each instance, you know the information about the created gateways - how many you have, and for each one: key token, ID, node, key dates, and the enable/disable status
+2. **Gateway list**: For each instance, you know the information about the created gateways - how many you have, and for each one: key token, ID, node, key dates, and the enable/disable status.
   
-3. Instance gateway destination list: For each gateway, you know the incoming destination(s) and details for each: name, host & port, authentication method, network security, proxy settings, and other miscellaneous info
+3. **Destination list**: For each Gateway, you know the incoming destination(s) and details for each: name, host & port, authentication method, network security, proxy settings, and other miscellaneous info.
 
-3. Instance gateway client list: For each gateway, you know the connected clients
+3. **Client list**: For each gateway, you know the connected clients.
 
 DEREK & SID: Sid, I dont have this, I need you to write this section please - host? IP? port? host type? status?
 
