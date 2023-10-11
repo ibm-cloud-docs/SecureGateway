@@ -267,25 +267,20 @@ If you already gathered your instance information, you can continue with this st
 
 Let's summarize the information you have gathered about your {{site.data.keyword.SecureGateway}} deployment
   
-1. Instance list: 
-    - You know how many instances you have, and their names, groups, locations, status, and tags
+1. Instance list: You know how many instances you have, and their names, groups, locations, status, and tags
 
-2. Instance gateway list
-    - For each instance, you know the information about the created gateways - how many you have, and for each one: key token, ID, node, key dates, and the enable/disable status
+2. Instance gateway list: For each instance, you know the information about the created gateways - how many you have, and for each one: key token, ID, node, key dates, and the enable/disable status
   
-3. Instance gateway destination list
-    - For each gateway, you know the incoming destination(s) and details for each: name, host & port, authentication method, network security, proxy settings, and other miscellaneous info
+3. Instance gateway destination list: For each gateway, you know the incoming destination(s) and details for each: name, host & port, authentication method, network security, proxy settings, and other miscellaneous info
 
-3. Instance gateway client list
-    - For each gateway, you know the connected clients
-DEREK & SID: Sid, I dont have this, I need you to write this section please or show me and I will
-    - host? IP? port? host type? status?
+3. Instance gateway client list: For each gateway, you know the connected clients
 
-With that above information about your Secyre Gateway instances, you are ready to move forward with setting up the corresponding Satellite Connector.
+DEREK & SID: Sid, I dont have this, I need you to write this section please - host? IP? port? host type? status?
+
+With that above information about your Secure Gateway instance(s), you are ready to move forward with setting up the corresponding Satellite Connector.
 
 
 ## Next steps
 {: #dep-gather-sg-details-next-steps}
   
 You can now use the output from the previous steps to begin [Setting up Connector for testing {{site.data.keyword.SecureGateway}} migration](/docs/SecureGateway?topic=SecureGateway-testing-connector).
-
