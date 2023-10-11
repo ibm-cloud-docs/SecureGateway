@@ -17,20 +17,7 @@ subcollection: SecureGateway
 {: #rc_resouce_groups}
 
 
-<staging>
 
-**Internal users**: Review the following notes.
-{: important}
-
-- This page is in draft stage
-- It's a fairly minor change we do need SG users to execute or we will do it for them
-- It's NOT attached to the deprecation announcement, but clearly it is related to it
-- we will be doing two announcements - this one is first - Oct 10th - 15th or so it will go out
-- it has a 30 day time frame - the SG PM will track all users carefully
-- then we will execute the update for them if they don't
-- Input on this is appreciated
-
-<staging>
 
 
 ## Overview
