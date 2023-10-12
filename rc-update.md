@@ -18,11 +18,13 @@ subcollection: SecureGateway
 
 
 
-These are the steps needed for the resource group update needed for Secure Gateway instances introduced in the [Resource group update](/docs/SecureGateway?topic=SecureGateway-rc_resouce_groups) doc. Please be sure to fully review that page befor proceeding here.
+These are the steps needed for the resource group update needed for Secure Gateway instances introduced in the [Resource group update](/docs/SecureGateway?topic=SecureGateway-rc_resouce_groups) page. Please be sure to fully review that page befor proceeding here.
 
 
-Updating the Secure Gateway instance location from CF org/space to resource groups does not impact the Secure Gateway instance, function, or operation.
-This update impacts only the Secure Gateway service resource group location, and the resulting authorization model will be updated to IBM Cloud Identity and access management (IAM). After the update, any creation or removal of secure gateway service instances will require IAM privileges. Using the Secure Gateway instances to pass data through a Gateway requires no new or different authorization, only management of those instances.
+Updating the Secure Gateway instance location from Cloud Foundry org and space to resource groups does not impact the Secure Gateway instance, function, or operation.
+
+
+This update impacts only the Secure Gateway service resource group location, and the resulting authorization model will be updated to IBM Cloud Identity and access management (IAM). After the update, any creation or removal of Secure Gateway service instances will require IAM privileges. Using the Secure Gateway instances to pass data through a Gateway requires no new or different authorization, only for management of those instances.
 
 
 ## Prerequisites and notes
@@ -31,6 +33,16 @@ This update impacts only the Secure Gateway service resource group location, and
 - **Only one instance of Secure Gateway is allowed per resource group per IBM Cloud region**: You can have only a single service instance of Secure Gateway per resource group per region. So, you might need to create multiple resource groups to host multiple service instances in the same region. You can have up to 1000 resource groups in IBM Cloud if you have a billable account.
 
 - **Resource groups can't be changed after migrating**: When you update your Secure Gateway instance to a resource group, the resource group that you choose cannot be changed after the update is complete. So, it is essential to plan how you want to organize resources in the account before you do this update.
+
+## Best Practices
+{: #rc-update-bestpractices}
+
+
+- Resource Groups are intended to help you layout and manage your IBM Cloud resources. You can name them using any plan or method you would like.
+- You can create new resource groups that are named for resources that work together, or you can create resource groups just for your Secure Gateway instances
+- If you need to make multiple resource groups for multiple Secure Gateway instances, you might coordinate naming so they are similar in some way
+- You can also simply use the "Default" group if you like
+- You can also use "Tags" for the Secure Gateway instance to align them with how they are used, resource groups they are in, or similar
 
 ## Migrating your instances in the console.
 {: #rc-update-console}
@@ -71,7 +83,7 @@ You can also do this using the IBM Cloud CLI. Be sure to authenticate normally a
     {: pre}
 
     ```sh
-    ibmcloud target -r REGION_NAME -g Default --cf-api ENDPOINT -o ORG -s SPACE
+    ibmcloud target [-r REGION_NAME] [-g (RESOURCE_GROUP_NAME | RESOURCE_GROUP_ID [--cf-api ENDPOINT] [-o ORG] [-s SPACE]
     ```
     {: pre}
 
@@ -163,7 +175,7 @@ You can also do this using the IBM Cloud CLI. Be sure to authenticate normally a
 {: #rc-update-after}
 
 Manage users’ access to resources
-:   After you update your Cloud Foundry service instances to a resource group, you need to ensure that the users in your account have the required level of access to the resources in the account resource groups. The users need to be assigned the **Operator** or **Editor** role in IAM to manage the instance. This also provides access for users to create new service instances in the account resource groups. For more information about assigning access to resources in your resource groups, see [Managing access to resources](/docs/account?topic=account-assign-access-resources&interface=ui#assign-access-resources). As mentioned before, someone who uses the Secure Gateway instances to pass data through a Gateway requires no new or different authorization, only management of those instances requires those permissions.
+:   After you update your Service Gateway service instances to a resource group, you need to ensure that the users in your account have the required level of access to the resources in the account resource groups. The users need to be assigned the **Operator** or **Editor** role in IAM to manage the instance. This also provides access for users to create new service instances in the account resource groups. For more information about assigning access to resources in your resource groups, see [Managing access to resources](/docs/account?topic=account-assign-access-resources&interface=ui#assign-access-resources). As mentioned before, someone who uses the Secure Gateway instances to pass data through a Gateway requires no new or different authorization, only management of those instances requires those permissions.
 
 Review the Billing dashboard
 :   After updating, the billing for the Secure Gateway instance is still listed under a Cloud Foundry Org until the end of the month. The next month the billing can be checked under Resource group. Billing doesn't change or interrupt, just where you see it in the billing system.
