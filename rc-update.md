@@ -71,7 +71,7 @@ You can also do this using the IBM Cloud CLI. Be sure to authenticate normally a
     {: pre}
 
     ```sh
-    ibmcloud target -r REGION_NAME --cf-api ENDPOINT -o ORG -s SPACE
+    ibmcloud target -r REGION_NAME -g Default --cf-api ENDPOINT -o ORG -s SPACE
     ```
     {: pre}
 
@@ -93,7 +93,7 @@ You can also do this using the IBM Cloud CLI. Be sure to authenticate normally a
     Cloud Foundry CLI is successfully installed
 
 
-    ibmcloud target -r eu-gb --cf-api https://api.eu-gb.cf.cloud.ibm.com -o <org> -s <space>
+    ibmcloud target -r eu-gb -g Default --cf-api https://api.eu-gb.cf.cloud.ibm.com -o <org> -s <space>
 
     Switched to region eu-gb
     Targeted Cloud Foundry (https://api.eu-gb.cf.cloud.ibm.com)
