@@ -70,7 +70,17 @@ You can also do this using the IBM Cloud CLI. Be sure to authenticate normally a
     ```
     {: pre}
 
-    ```txt
+    ```sh
+    ibmcloud target -r REGION_NAME --cf-api ENDPOINT -o ORG -s SPACE
+    ```
+    {: pre}
+
+    Example commands and output.
+
+    ```sh
+    export IBM_CF_EXTENSION=true
+    ibmcloud cf install
+
     Warning: IBM Cloud Foundry is deprecated. For details, see: https://cloud.ibm.com/docs/cloud-foundry-public?topic=cloud-foundry-public-deprecation
     Installed Cloud Foundry CLI version is '6.53.0'. Do you want to install and use latest version? [y/N] > y
     IBM Cloud Foundry Public is deprecated. For more information, see http://ibm.biz/ibmcf-announce
@@ -81,23 +91,10 @@ You can also do this using the IBM Cloud CLI. Be sure to authenticate normally a
     Installing Cloud Foundry CLI...
     OK
     Cloud Foundry CLI is successfully installed
-    ```
-    {: screen}
 
 
-    ```sh
-    ibmcloud target [-r REGION_NAME] [-g (RESOURCE_GROUP_NAME | RESOURCE_GROUP_ID [--cf-api ENDPOINT] [-o ORG] [-s SPACE
-    ```
-    {: pre}
+    ibmcloud target -r eu-gb --cf-api https://api.eu-gb.cf.cloud.ibm.com -o <org> -s <space>
 
-    Example commands and output.
-
-    ```sh
-    export IBM_CF_EXTENSION=true
-
-    ibmcloud target -r eu-gb -g Default --cf-api https://api.eu-gb.cf.cloud.ibm.com -o <org> -s <space>
-
-    Targeted resource group Default
     Switched to region eu-gb
     Targeted Cloud Foundry (https://api.eu-gb.cf.cloud.ibm.com)
     Targeted org <org>
