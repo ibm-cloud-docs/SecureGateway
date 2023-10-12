@@ -23,7 +23,6 @@ These are the steps needed for the resource group update needed for Secure Gatew
 
 Updating the Secure Gateway instance location from Cloud Foundry org/space to resource groups does not impact the Secure Gateway instance, function, or operation.
 
-
 This update impacts only the Secure Gateway service resource group location, and the resulting authorization model will be updated to IBM Cloud Identity and access management (IAM). After the update, any creation or removal of Secure Gateway service instances will require IAM privileges. Using the Secure Gateway instances to pass data through a Gateway requires no new or different authorization, only for management of those instances.
 
 
