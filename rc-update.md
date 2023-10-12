@@ -111,12 +111,6 @@ You can also do this using the IBM Cloud CLI. Be sure to authenticate normally a
     ```
     {: screen}
 
-1. Target the `cf` API.
-    ```sh
-    ibmcloud target --cf
-    ```
-    {: pre}
-
 
 1. List the service instances in your CF org and space. Make a note of the service ID of the Secure Gateway instance you want to migrate.
 
