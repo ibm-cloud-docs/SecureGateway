@@ -37,7 +37,6 @@ This update impacts only the Secure Gateway service resource group location, and
 ## Best Practices
 {: #rc-update-bestpractices}
 
-
 - Resource Groups are intended to help you layout and manage your IBM Cloud resources. You can name them using any plan or method you would like.
 - You can create new resource groups that are named for resources that work together, or you can create resource groups just for your Secure Gateway instances
 - If you need to make multiple resource groups for multiple Secure Gateway instances, you might coordinate naming so they are similar in some way
