@@ -66,6 +66,26 @@ You can also do this using the IBM Cloud CLI. Be sure to authenticate normally a
     {: pre}
 
     ```sh
+    ibmcloud cf install
+    ```
+    {: pre}
+
+    ```txt
+    Warning: IBM Cloud Foundry is deprecated. For details, see: https://cloud.ibm.com/docs/cloud-foundry-public?topic=cloud-foundry-public-deprecation
+    Installed Cloud Foundry CLI version is '6.53.0'. Do you want to install and use latest version? [y/N] > y
+    IBM Cloud Foundry Public is deprecated. For more information, see http://ibm.biz/ibmcf-announce
+    Attempting to download Cloud Foundry CLI...
+    8.93 MiB / 8.93 MiB [==============================================] 100.00% 1s
+    <no value> bytes downloaded
+    Saved in /Users/user/.bluemix/tmp/cf_2363512798/cf-cli_6.53.0_osx.tgz
+    Installing Cloud Foundry CLI...
+    OK
+    Cloud Foundry CLI is successfully installed
+    ```
+    {: screen}
+
+
+    ```sh
     ibmcloud target [-r REGION_NAME] [-g (RESOURCE_GROUP_NAME | RESOURCE_GROUP_ID [--cf-api ENDPOINT] [-o ORG] [-s SPACE
     ```
     {: pre}
