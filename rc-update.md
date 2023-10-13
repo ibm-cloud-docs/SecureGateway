@@ -67,8 +67,6 @@ This update impacts only the Secure Gateway service resource group location, and
 ## Updating your instances from the Cloud Shell
 {: #rc-update-cli}
 
-You can also do this using the IBM Cloud Cloud Shell.
-
 1. Open the [Cloud Shell](https://cloud.ibm.com/shell){: external}.
 
 
