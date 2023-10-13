@@ -148,8 +148,8 @@ You can also do this using the IBM Cloud Cloud Shell.
 
     Getting services in org ORG / space SPACE as user@ibm.com...
 
-    name               service           plan   bound apps   last operation     broker     upgrade available
-    SecureGateway-ox   cloudantNoSQLDB   lite                create succeeded   cloudant 
+    name                offering        plan           bound apps       last operation     broker                upgrade available
+    Secure Gateway-zv   SecureGateway   professional                    update succeeded   SecureGatewayBroker   no
     ```
 
 1. Run the following command to migrate the instance.
