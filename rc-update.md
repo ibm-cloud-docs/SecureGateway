@@ -36,11 +36,12 @@ This update impacts only the Secure Gateway service resource group location, and
 ## Best Practices
 {: #rc-update-bestpractices}
 
-- Resource Groups are intended to help you layout and manage your IBM Cloud resources. You can name them using any plan or method you would like.
-- You can create new resource groups that are named for resources that work together, or you can create resource groups just for your Secure Gateway instances
-- If you need to make multiple resource groups for multiple Secure Gateway instances, you might coordinate naming so they are similar in some way
-- You can also simply use the "Default" group if you like
-- You can also use "Tags" for the Secure Gateway instance to align them with how they are used, resource groups they are in, or similar
+- Define your own strategy for the number of and names used for your Resource Groups and how they will be used to organize your IBM Cloud resources.
+- One common strategy is to use a single Resource Group for a set of resources that work together (e.g. by application, test vs prod).
+- You can also add “Tags” to resource instances to organize their role and relationship with other resources within and across Resource Groups.
+- When migrating Cloud Foundry-based Secure Gateway instances to a Resource Group you can target an existing Resource Group such as “Default”, or you can create a new Resource Group if you want to organize and manage Secure Gateway resources separately from existing Resource Groups.
+- If you have multiple Secure Gateway instances in a single region you will need to use multiple Resource Groups as migration targets.  In that situation you may want to use a Resource Group naming pattern that reflects the Secure Gateway instance/region intersection and the role of the service (e.g SG-<region>-<role>).
+- You may want to consider your future plans when organizing Secure Gateway instances in Resource Groups. You may see these Resource Groups as a temporary home that can be deleted when you are no longer using Secure Gateway, or as a long term home where new resource might someday go.
 
 ## Migrating your instances in the console.
 {: #rc-update-console}

@@ -17,9 +17,6 @@ subcollection: SecureGateway
 {: #rc_resouce_groups}
 
 
-
-
-
 ## Overview
 {: #overview}
 
