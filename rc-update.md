@@ -64,13 +64,15 @@ This update impacts only the Secure Gateway service resource group location, and
     ![Alias instance](./images/image11.png "Alias instance")  
 
 
-## Updating your instances from the CLI
+## Updating your instances from the Cloud Shell
 {: #rc-update-cli}
 
-You can also do this using the IBM Cloud CLI. Be sure to authenticate normally as you would to the IBM Cloud using CLI commands.
+You can also do this using the IBM Cloud Cloud Shell.
 
-1. Login to CLI and target the `cf` endpoints in the region you want to update Secure Gateway instances. Because IBM Cloud Foundry Public is deprecated, you need to enable the CF feature flag by running below command before target cf endpoint. 
+1. Open the to [Cloud Shell](https://cloud.ibm.com/shell){: external}
 
+
+1. Install the Cloud Foundry CLI inside the IBM Cloud CLI.
     ```sh
     export IBM_CF_EXTENSION=true
     ```
@@ -80,6 +82,14 @@ You can also do this using the IBM Cloud CLI. Be sure to authenticate normally a
     ibmcloud cf install
     ```
     {: pre}
+
+3. Target the endpoints. Pick your Cloud Foundry org and space when prompted.
+
+    ```sh
+    ibmcloud target -r us-south --cf
+    ```
+    {: pre}
+
 
     ```sh
     ibmcloud target [-r REGION_NAME] [-g (RESOURCE_GROUP_NAME | RESOURCE_GROUP_ID [--cf-api ENDPOINT] [-o ORG] [-s SPACE]
