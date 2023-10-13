@@ -84,13 +84,13 @@ This update impacts only the Secure Gateway service resource group location, and
 3. Target the endpoints. Pick your Cloud Foundry org and space when prompted.
 
     ```sh
-    ibmcloud target -r us-south --cf
+    ibmcloud target [-r REGION_NAME] [-g (RESOURCE_GROUP_NAME | RESOURCE_GROUP_ID [--cf-api ENDPOINT] [-o ORG] [-s SPACE]
     ```
     {: pre}
 
-
+    Example command.
     ```sh
-    ibmcloud target [-r REGION_NAME] [-g (RESOURCE_GROUP_NAME | RESOURCE_GROUP_ID [--cf-api ENDPOINT] [-o ORG] [-s SPACE]
+    ibmcloud target -r eu-gb --cf
     ```
     {: pre}
 
@@ -112,7 +112,7 @@ This update impacts only the Secure Gateway service resource group location, and
     Cloud Foundry CLI is successfully installed
 
 
-    ibmcloud target -r eu-gb -g Default --cf-api https://api.eu-gb.cf.cloud.ibm.com -o <org> -s <space>
+    ibmcloud target -r eu-gb -g Default --cf -o <org> -s <space>
 
     Switched to region eu-gb
     Targeted Cloud Foundry (https://api.eu-gb.cf.cloud.ibm.com)
