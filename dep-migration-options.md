@@ -2,7 +2,7 @@
 
 copyright: 
   years: 2023, 2023
-lastupdated: "2023-09-28"
+lastupdated: "2023-10-13"
 
 keywords: secure gateway, deprecation, migration
 
@@ -13,278 +13,80 @@ subcollection: SecureGateway
 {{site.data.keyword.attribute-definition-list}}
 
 
-# Reviewing {{site.data.keyword.SecureGateway}} deployment details
-{: #dep-gather-sg-details}
+# Migration options
+{: #dep-migration-options}
 
 {{site.data.keyword.SecureGateway}} is deprecated. For more information, see the [deprecation details](/docs/SecureGateway?topic=SecureGateway-dep-overview).
 {: deprecated}
 
-You can use the following steps to analyze the current usage of {{site.data.keyword.SecureGateway}} for your secure data communications and collect the necessary information to create corresponding {{site.data.keyword.satelliteshort}} Connectors.
+Review the following options for migrating your secure data communications from {{site.data.keyword.SecureGateway}} to another {{site.data.keyword.cloud_notm}} service.
 {: shortdesc}
 
+## {{site.data.keyword.satellitelong}}
+{: #migration_options_satellite}
 
-## Goals 
-{: #dep-gather-sg-goals}
+{{site.data.keyword.satelliteshort}} employs the most current encryption standards for a mature and fully capable distributed hybrid cloud solution. {{site.data.keyword.satelliteshort}} Connector is a focused deployment of the hybrid cloud communications pair with a lightweight container based deployment model, extending access to cloud resources and operational simplicity to all sites. 
 
-The goal of this tutorial is to help guide you through gathering the key information from your {{site.data.keyword.SecureGateway}} instances that you will need when you migrate to {{site.data.keyword.satelliteshort}} Connector. 
+{{site.data.keyword.satelliteshort}} allows you to launch consistent cloud services across any cloud, on-premises, and at the edge with speed and simplicity. It includes {{site.data.keyword.satelliteshort}} Link functionality, which improves upon the Secure Gateway client experience with a highly available and secure-by-default communication between the cloud and client premise, third-party clouds or network edge.
 
-## Review the {{site.data.keyword.SecureGateway}} concepts
-{: #dep-gather-sg-terms}
+- **Consistent public cloud experience across geographies and clouds**: {{site.data.keyword.satelliteshort}} provides a consistent cloud experience in all parts of the world, regardless of the lack of any given public cloud provider’s regional presence. A consistent development platform results in higher development velocity.
+- **Co-locating data and processing**: {{site.data.keyword.satelliteshort}} allows data processing to happen close to the data, alleviating latency. This is especially important when using predictive AI analytics or other critical applications with large date sets.
+- **Data sovereignty, security and compliance needs**: {{site.data.keyword.satelliteshort}} allows client data to remain in-country, meeting local regulatory, contractual, information security or compliance needs. 
 
-You might need to review the common terms and concepts of {{site.data.keyword.SecureGateway}}. For more information, see the following links.
+{{site.data.keyword.satelliteshort}} now has two deployment models to best fit a client’s needs. 
 
-- Review the [Getting started with {{site.data.keyword.SecureGateway}}](/docs/SecureGateway?topic=SecureGateway-getting-started-with-sg) in general.
-- Review the key {{site.data.keyword.SecureGateway}} component topics.
-    - [Gateways](/docs/SecureGateway?topic=SecureGateway-add-sg-gw).
-    - [Clients](/docs/SecureGateway?topic=SecureGateway-add-client).
-    - [Destinations](/docs/SecureGateway?topic=SecureGateway-add-dest).
+{{site.data.keyword.satelliteshort}} Location
+:   Locations use the your x86 host resources to create a highly available availability zone on the client’s premise, supporting both {{site.data.keyword.satelliteshort}} Link’s communication functionality and the ability to deploying managed cloud services on premise, such as managed OpenShift, managed databases, and more.
 
-## Access your {{site.data.keyword.SecureGateway}} instances
-{: step}
-- The first step is to see what Secure Gateway instance(s) you have deployed. Most users only have a single instance, but some have multiple depending on the size of their deployment.
-- Access your list of [Secure Gateway service instances](https://cloud.ibm.com/resources?product=Secure) - see their names, what resource group they are in, what region they are deployed, their status, and any tags they might have
-- For each instance follow the next step to gather additional details
+{{site.data.keyword.satelliteshort}} Connector
+:   A new deployment model which enables only the secure communications with cloud via a light weight  container deployed by the client on their own docker hosts. This option brings all the security and auditability of {{site.data.keyword.satelliteshort}} communication, but with much lower resources required. Connector provides the same application-level transport through common ports as Secure Gateway, with greater client visibility and audit control. It’s light-weight container based deployment is focused for clients that just need the hybrid cloud communication features without the need for additional on-premise cloud services. Clients can also choose to utilize {{site.data.keyword.satelliteshort}} Locations instead, which provide the same communications services while also enabling the deployment of IBM managed services and features on-premises, at the edge or within other cloud providers. 
 
 
-## Access your {{site.data.keyword.SecureGateway}} instance details
-{: #dep-gather-sg-details-console}
-{: step}
+Both {{site.data.keyword.satelliteshort}} Locations and {{site.data.keyword.satelliteshort}} Connectors are located in a given IBM Cloud Multi Zone Region (MZR). Both provide application-layer transport (Layer 4) between IBM services or their own applications running within IBM Cloud and the resources running at the client's location. A Satellite Location goes further, allowing clients to run cloud applications locally, wherever the client needs, to address a number of real-world challenges, as well as accessing cloud hosted applications and services via an encrypted and secured channel.
 
-1. In this instance, you can see on the first page the total traffic, and a list of the Gateways in that instance. There may be no gateways, 1 gateway, or more gateways. If there are no gateways created, it means you are not using this instance to transfer traffic.
-2. In any Gateway box, click on the ![**Settings icon**](./images/settingIcon.png "Setting Icon") and it will show you the details for that gateway
-    - Gateway name
-    - Gateway key
-    - Gateway ID
-    - Node it's attached to
-    - Created & modified information
-    - Whether it is enabled or disabled
-
-In a below stop we will show you how to extract this information to a file and get information from it that way.
-
-Note
-    - Every {{site.data.keyword.satelliteshort}} Connector is functionally similar to each Gateway. So you might have multiple Secure Gateway instances, and you might have multiple Gateway gateways and destinations set up. You will create a Satellite Connector endpoint for each of the Secure Gateway Destinations you have set up.
-NATHN & SID: Validate the above statement I asked in Slack
+To beging learning more about {{site.data.keyword.satelliteshort}} Connector, complete the [Reviewing Satellite Connector as a Secure Gateway replacement](/docs/SecureGateway?topic=SecureGateway-understanding-connector) tutorial.
 
 
-DEREK & SID: Can we get a picture here for this above step
+## Virtual Private Network
+{: migration_options_vpn}
 
-3. Click on the Gateway itself, and it will load the Gateway page. In the ** Destinations** tab, you can see the destiniations listed. In any Destination box, click on the ![**Settings icon**](./images/settingIcon.png "Setting Icon") and it will show you the details for that destination
-    - Destination ID
-    - Cloud host & port
-    - Resource host & port
-    - Created & modified information
-    - Security protocal
+Another option to replace Secure Gateway is a Virtual Private Network (VPN), Secure Gateway is a type of specialized VPN. In essence, VPNs enable users to share data across public networks as though they were using a private network. They create virtual point-to-point connections using tunneling protocols, encryption and dedicated connections, which facilitate secure and functional environments for the data to be shared.
 
-Click on the **Clients** tab, and you can see the Clients connected to that Gateway.
-    - DEREK & SID: Sid, I don't have any clients, I need you to write this section please and get the data to Derek
+There are a few VPN-related technologies on the IBM Cloud that provide this level of VPN connection capability:
 
+IPSec VPN
+:   VPN facilitates connectivity from your secure network to IBM IaaS platform’s private network. A VPN connection from your location to the private network allows for out-of-band management and server rescue through an encrypted VPN tunnel. Communicating using the private network is inherently more secure and gives users the flexibility to limit public access while still being able to access their servers. Any user on your account can be given VPN access, which is available as both SSL and PPTP.
 
-4. Back on the Gateway screen information, you can extract all the information about that Gateway to a file you can use to gather all the details
-  - Click the Export button ![Export Button](./images/exportIcon.png "Export Button") 
-  - It will be saved with the unique ID for that gateway to your download directory
-  - In a following step we will show you how to parse that file and gather data
+VPN for VPC
+:   With Virtual Private Cloud (VPC), you can quickly provision generation 2 virtual server instances for VPC with high network performance. VPC infrastructure contains a number of Infrastructure-as-a-Service (IaaS) offerings, including Virtual Servers for VPC.
 
+## Comparing scenarios for VPN and IBM Cloud {{site.data.keyword.satelliteshort}} Connector
+{: #migration_options_usage}
 
+The products mentioned earlier are useful in different circumstances and bring different levels of capability to your Cloud experience. IBM Cloud {{site.data.keyword.satelliteshort}} is considered a distributed cloud, which is also what parts of Secure Gateway could generally be described as. So, when do you want a distributed cloud, and when do you want a VPN?
 
-## Parse extracted {{site.data.keyword.SecureGateway}} gateway files to gather data
-{: #dep-gather-sg-details-parse}
-{: step}
+One of the key differences between VPNs and distributed clouds is that VPNs expose the entire network by default. This is useful if the intention is to share significant amounts of resources over the network, but it requires extensive configuration to secure the resources that you don’t want to share. 
 
-In the previous step, if you extracted data about each Gateway, you can parse it using simple CLI tools to get that information easily.
-You could get all of this using the UI, but this allows you to examine and save without many copy and paste steps.
+Distributed clouds approach things in the opposite manner which means access to local resources is denied by default. To allow access to a resource, it has to be added as a "location," and authorization needs to be granted in the access control list. This makes IBM Cloud {{site.data.keyword.satelliteshort}} a powerful choice if there is a limited amount of resources that need to be accessed, because it involves significantly less configuration to keep other assets secure.
 
-1. Prep your machine
-  - This is most useful on a linux-type environment - so us Mac OS terminal, Linux, or Windows Linux support terminal window
-  - You can just load the json file into a browser or JSON viewing tool, but you also might want to use a JSON processor like [JK](https://jqlang.github.io/jq/). 
-  - Our example will show you using JK, so you will need to install that if you want to use this method
-  - Each of the files saved have an extension .gateway. You can use them directly, but it also might help to pull into an editor if you rename them .json - but it is optional
+You can use both distributed clouds and VPNs to connect and access resources through the IBM Cloud, but the ideal option will depend on your use case. If only a limited set of resources needs to be accessed, then a distributed cloud is probably the best way to go. This is because IBM Cloud {{site.data.keyword.satelliteshort}} is quicker and easier to configure and won’t run the risk of exposing assets that were intended to remain closed off.
 
-2. Extracting data
-  - You can run a series of commands to get various pieces of data
+If you need to share a lot of resources between various offices, VPNs can be a better choice. The administrators can then configure the VPN to lock down those resources that they don’t want shared over the virtual network.
 
-  - Set the filename for convenience
-    ```sh
-    filename="<name of the file you want to example>"
-    ```
-    {: pre}
-    
-    
-  - This will show you the whole file
-    ```sh
-    cat $filename | jq "."
-    ```
-    {: pre}
-    
-    If "jq" is not set up properly, you will need to set that up if you want to use this method to look at the file.
-
-  - Shows you the Gateway name
-    ```sh
-    cat $filename | jq ".desc"
-    ```
-    {: pre}
-
-  - Shows you the destiniations with all the sub array data
-    ```sh
-    cat $filename | jq ".destinations[]"
-    ```
-    {: pre}
-
-  - Shows you just the destination names in all the destinations - now you know how many destinations you have for that gateway
-    ```sh
-    cat $filename | jq ".destinations[] .desc"
-    ```
-    {: pre}
-
-  - Will list the details for just that destination - where "0" is the number of the destination in the array of destinations
-    ```sh
-    cat $filename | jq ".destinations[0]"
-    ```
-    {: pre}
-
-DEREK & SID: Sid, can you please decide what are the key information we want to pull out of that json? But we have to explain WHY
-It's a decent number of items - so if we can maybe get a jq command that will list some of them - or say "run this command and replace XXXX with the following values" or something. It's important, because we need to explain why they need that info for later. Why do they need compressStatus? Private? sni? I have no idea at this point. Just mention the important ones in some way.
-Or maybe we write it like this
-cat $filename | jq '.destinations[] | "Description: " + .desc + " - IP Address: " + .ip + " - Protocol: " + .protocol'
-Focus on WHAT, and then we can format it.
-
-  - xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-    ```sh
-    yyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy
-    ```
-    {: pre}
-
-
-  
-TODO: We need to spend more time here - how to extract what we want and need
-TODO: We could script this
-TODO: We could dump things to create a CSV
-TODO: We need to say things like 
-TODO:     If your protocol="HTTPS", then you need to do and watch out for this
-TODO:     If you enable_client_tls="XYZ", then you need to do this
-TODO: 
-  
-
-
-
-## Access your {{site.data.keyword.SecureGateway}} instance details in the CLI
-{: #dep-gather-sg-details-cli}
-{: step}
-
-If you prefer working in the command line, you can obtain a number of the above details, with even less usage of the IBM Cloud console.
-If you already gathered your instance information, you can continue with this step as you like. You will need to have the IBM Cloud CLI set up and the "Cloud Foundry plugin installed.
-
-1. Enable the command line feature flag that will permit to use Cloud Foundry commands.
-    ```sh
-    export IBM_CF_EXTENSION=true
-    ```
-    {: pre}
-
-1. Install the `cf` plug-in.
-    ```sh
-    ibmcloud cf install
-    ```
-    {: pre}
-
-1. Target a CF org and space.
-    ```sh
-    ibmcloud target --cf -r REGION -o ORG -s SPACE
-    ```
-    {: pre}
-
-
-1. [Get an IAM refresh token for your session](/docs/account?topic=account-iamtoken_from_apikey#iamtoken).
-    ```sh
-    ibmcloud iam oauth-tokens 
-    ```
-    {: pre}
-
-1. List your {{site.data.keyword.SecureGateway}} instance details. Make a note of the `Organization ID` and `Space ID`. You will use these values as inputs in the next step.
-
-    ```sh
-    ibmcloud resource search 'name: *Secure*Gateway*'
-    ```
-    {: pre}
-
-    Example output.
-    ```txt
-    Name:              Secure Gateway-qj
-    Location:          eu-gb
-    Family:            cloud_foundry
-    Resource Type:     cf-service-instance
-    Organization ID:   8891a43f-cdac-4e48-a4f7-8cdaf399c183
-    Space ID:          e832ed2e-3fe4-4d4f-9394-7f2b2b037eed
-    CRN:               crn:v1:bluemix:public:securegateway:eu-gb:s/e832ed2e-3fe4-4d4f-9394-7f2b2b037eed:86684bec-8174-4037-baed-70a0a4604220:cf-service-instance:
-    Tags:
-    Service Tags:
-    Access Tags:
-    ```
-    {: screen}
-
-1. Get the details for each of your {{site.data.keyword.SecureGateway}} instances by running the following `curl` command. Make sure to replace `ORG-ID` and `SPACE-ID` with the CF org and space IDs that you found in the previous step.
-
-    ```sh
-    curl -X GET   -H 'Authorization: Bearer TOKEN' 'https://sgmanager.us-south.securegateway.cloud.ibm.com/v1/sgconfig?org_id=ORG-ID&space_id=SPACE-ID'
-    ```
-    {: pre}
-
-    Review the output and make a note of the `_id`
-
-    ```json
-    [{"_id":"AAAA","org_id":"ORG-ID","desc":"Disconnected Gateway","hostname":"cap-sg-prd-2.securegateway.appdomain.cloud","port":49998,"status":"ENABLED","jwt”:”xxxx”,”enf_tok_sec":true,"connected":false,"created_by":null,"created_at":"2023-05-22T14:39:53.807Z","modified_by":null,"last_status_change":"2023-09-27T14:11:39.882Z","authorization":{"cert":"CERT","key":"KEY"},"recentlyDisconnected":[{"id":"ID","disconnectedAt":1684773248414},{"id":"ID","disconnectedAt":1684767669028},{"id":"ID","disconnectedAt":1684766756637}],"active":true,"connectedClientsArr":[],"expiry":1703599899000},]
-    ```
-    {: screen}
-
-
-1. Use the `_id` you found in the previous step to get your destination details.
-
-    ```sh
-    curl -X GET -H 'Authorization: Bearer TOKEN' 'https://sgmanager.us-south.securegateway.cloud.ibm.com/v1/sgconfig/SG-ID/destinations'
-    ```
-    {: pre}
-
-    Example output.
-
-    ```json
-    [{"_id":"AAA","configuration":"SG-ID","type":null,"port":18453,"connection_info":{"OnPremHost":"172.17.0.2","OnPremPort":"80","clientPort":null,"sni":"","Password":""},"proxy":{"ip":null,"port":null,"type":null},"enforceProxy":false,"certs":{},"keys":{},"TLS":"none","protocol":"HTTP","private":false,"enable_client_tls":false,"client_tls":"none","status":"ENABLED","created_at":"2023-07-05T14:10:07.678Z","created_by":null,"modified_by":null,"last_status_change":"2023-07-05T14:10:07.744Z","timeout":0,"compressData":true,"rejectUnauth":true,"exempt":null,"ip_table_rules":[],"org_id":"ORG-ID","space_id":"SPACE-ID","hostname":"cap-sg-prd-3.securegateway.appdomain.cloud","dedicatedIP":null,"desc":"perf-test-http"}]
-    ```
-    {: screen}
-
-1. Get the details of the connected clients.
-
-    ```sh
-    curl -X GET -H 'Authorization: Bearer TOKEN' 'https://sgmanager.us-south.securegateway.cloud.ibm.com/v1/sgconfig/SG-ID/clients'
-    ```
-    {: pre}
-
-    ```json
-    [{"id":"AAA","version":189,"version_detail":"Version 1.8.9","host":"0c081089b1c3","type":"docker"}]%
-    ```
-    {: screen}
-
-
-## Analysis Summary
-{: #dep-gather-sg-details-summary}
-
-Let's summarize the information you have gathered about your {{site.data.keyword.SecureGateway}} deployment
-  
-1. Instance list: 
-    - You know how many instances you have, and their names, groups, locations, status, and tags
-
-2. Instance gateway list
-    - For each instance, you know the information about the created gateways - how many you have, and for each one: key token, ID, node, key dates, and the enable/disable status
-  
-3. Instance gateway destination list
-    - For each gateway, you know the incoming destination(s) and details for each: name, host & port, authentication method, network security, proxy settings, and other miscellaneous info
-
-3. Instance gateway client list
-    - For each gateway, you know the connected clients
-DEREK & SID: Sid, I dont have this, I need you to write this section please or show me and I will
-    - host? IP? port? host type? status?
-
-With that above information about your Secyre Gateway instances, you are ready to move forward with setting up the corresponding Satellite Connector.
-
+So, the decision of what kind of technology to use when securing your cloud resources depends on your intended usage, overall security concerns, and level of configuration effort required with each method. However, if you want the very latest in computing capability, flexibility in infrastructure options, a consistent operational experience, and the very best security possible across multiple locations, you should use {{site.data.keyword.satelliteshort}}.
 
 ## Next steps
-{: #dep-gather-sg-details-next-steps}
-  
-You can now use the output from the previous steps to begin [Setting up Connector for testing {{site.data.keyword.SecureGateway}} migration](/docs/SecureGateway?topic=SecureGateway-testing-connector).
+{: #migration_options_next}
+
+To beging learning more about {{site.data.keyword.satelliteshort}} Connector, complete the [Reviewing Satellite Connector as a Secure Gateway replacement](/docs/SecureGateway?topic=SecureGateway-understanding-connector) tutorial.
+
+## Additional resources
+{: #migration_options_additional_resources}
+
+Check out the following links for more information on IBM Cloud {{site.data.keyword.satelliteshort}} and {{site.data.keyword.satelliteshort}} Connector, or contact your IBM sales representative.
+
+- [{{site.data.keyword.satelliteshort}} overview](https://www.ibm.com/products/satellite){: external}
+- [{{site.data.keyword.satelliteshort}} Connector overview](/docs/satellite?topic=satellite-understand-connectors)
+- [Build Faster, Securely, Anywhere with IBM Cloud {{site.data.keyword.satelliteshort}}](https://www.ibm.com/blog/deploy-cloud-services-anywhere-with-ibm-cloud-satellite/){: external}
+- [{{site.data.keyword.satelliteshort}} product demos on Framer](https://framer.com/share/External-{{site.data.keyword.satelliteshort}}-Demo--4QmxdNMF6smthRhzQgzt/ddN6j0Nrt?fullscreen=1&highlights=0#ddN6j0Nrt){: external}
+
