@@ -40,7 +40,7 @@ This update impacts only the Secure Gateway service resource group location, and
 - One common strategy is to use a single Resource Group for a set of resources that work together (e.g. by application, test vs prod).
 - You can also add “Tags” to resource instances to organize their role and relationship with other resources within and across Resource Groups.
 - When migrating Cloud Foundry-based Secure Gateway instances to a Resource Group you can target an existing Resource Group such as “Default”, or you can create a new Resource Group if you want to organize and manage Secure Gateway resources separately from existing Resource Groups.
-- If you have multiple Secure Gateway instances in a single region you will need to use multiple Resource Groups as migration targets.  In that situation you may want to use a Resource Group naming pattern that reflects the Secure Gateway instance/region intersection and the role of the service (e.g SG-<region>-<role>).
+- If you have multiple Secure Gateway instances in a single region you will need to use multiple Resource Groups as migration targets.  In that situation you may want to use a Resource Group naming pattern that reflects the Secure Gateway instance/region intersection and the role of the service (e.g SG-REGION-ROLE).
 - You may want to consider your future plans when organizing Secure Gateway instances in Resource Groups. You may see these Resource Groups as a temporary home that can be deleted when you are no longer using Secure Gateway, or as a long term home where new resource might someday go.
 
 ## Migrating your instances in the console.
@@ -69,10 +69,10 @@ This update impacts only the Secure Gateway service resource group location, and
 
 You can also do this using the IBM Cloud Cloud Shell.
 
-1. Open the to [Cloud Shell](https://cloud.ibm.com/shell){: external}
+1. Open the [Cloud Shell](https://cloud.ibm.com/shell){: external}.
 
 
-1. Install the Cloud Foundry CLI inside the IBM Cloud CLI.
+1. Install the Cloud Foundry CLI inside the Cloud Shell.
     ```sh
     export IBM_CF_EXTENSION=true
     ```
@@ -139,6 +139,18 @@ You can also do this using the IBM Cloud Cloud Shell.
     ibmcloud cf services
     ```
     {: pre}
+
+    Example output.
+    ```sh
+    User@cloudshell:~$ ibmcloud cf services
+    Warning: IBM Cloud Foundry is deprecated. For details, see: https://cloud.ibm.com/docs/cloud-foundry-public?topic=cloud-foundry-public-deprecation
+    Invoking 'cf services'...
+
+    Getting services in org ORG / space SPACE as user@ibm.com...
+
+    name               service           plan   bound apps   last operation     broker     upgrade available
+    SecureGateway-ox   cloudantNoSQLDB   lite                create succeeded   cloudant 
+    ```
 
 1. Run the following command to migrate the instance.
     ```sh
