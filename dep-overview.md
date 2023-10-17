@@ -88,7 +88,12 @@ The only step left after you've completely these 3 phases us to disable your {{s
 If your organization needs help with your IBM Cloud secure data communication migration, or wants to engage another organization to assist you, here are some partners that have a great deal of skill and experience with cloud application migrations and cloud native development improvements and transformations. Contact them if needed to discuss your specific requirements. These are for-pay migration assistance options and you will need to engage with those teams directly.
 
 IBM Cloud Expert Labs
-:   IBM Cloud Expert Labs is the IBM Cloud Platform Professional Services team providing deep technical expertise and a proven approach to modernize applications on IBM Cloud platform technologies. For your IBM Cloud secure data transfer  needs, we offer both Advisory Services to assess, recommend, and plan your modernization approach and Migration Services to assist with data transfer and migration.
+:   IBM Cloud Expert Labs is the IBM Cloud Platform Professional Services team providing deep technical expertise and a proven approach to modernize applications and infrastructures on IBM Cloud platform technologies. For your IBM Cloud secure data transfer needs, we offer both Advisory Services to assess, recommend, and plan your modernization approach and Migration Services to assist with data transfer and migration.
+
+- Architect for IBM Cloud Satellite - Use this offering for professional services to create a solution design, a migration plan and/or hands on guidance and enablement to migrate from Secure Gateway to Satellite Connector. This offering provides design, planning, enablement and guidance only, not actual migration services. 1 unit/1 week will enable customers to perform the migration themselves. The offering is available via PID in SQO or the IBM Cloud Catalog. See details in the attached.
+
+- Migrate to IBM Cloud Satellite - Use this offering for professional services to perform the migration from Secure Gateway to Satellite Connector. This offering will set up and configure a Satellite Connector service to replace a Secure Gateway service. 1 unit/1 week will perform the migration. The offering is available via PID in SQO or the IBM Cloud Catalog. See details in the attached.
+
 
 ## Customer Support
 These materials and resources should help you through your IBM Cloud Secure Gateway migration. If you have questions, or need help, contact [IBM Cloud® Customer Support](https://cloud.ibm.com/unifiedsupport/supportcenter){: external} for additional information and assistance.
