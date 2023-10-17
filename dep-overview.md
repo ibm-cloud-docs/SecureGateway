@@ -79,7 +79,7 @@ Phase 2: Reviewing your {{site.data.keyword.SecureGateway}} deployment details
 Phase 3: Setting up {{site.data.keyword.satellitelong}} Connector
 :   The two prevous phases involved learning about the new product, comparing it to your existing product, and gathering information needed to do the migration. Now it's time to do that setup and use the knowledge and data collected to set it up in a similar way to your {{site.data.keyword.SecureGateway}} infrastructure. When you complete the steps in [Setting up {{site.data.keyword.satellitelong}} Connector](/docs/SecureGateway?topic=SecureGateway-testing-connector), you will know the migration is complete and the same data is flowing that you need into the IBM Cloud.
 
-The only step left after you've completely these 3 phases us to disable your {{site.data.keyword.SecureGateway}} and delete them from the IBM Cloud.
+Last step: The only step left after you have completely these three phases is to disable your Secure Gateway gateways and then delete your Secure Gateway instance from your account.
 
 
 ## Migration assistance
