@@ -71,7 +71,6 @@ You might need to review the common terms and concepts of {{site.data.keyword.Se
     - Security protocal
 
 1. Click the **Clients** tab to review the Clients that are connected to that Gateway.
-    - DEREK & SID: Sid, I don't have any clients, I need you to write this section please and get the data to Derek
 
 
 1. Back on the Gateway screen information, you can extract all the information about that Gateway by clicking the **Export** button ![Export Button](./images/exportIcon.png "Export Button"). Note that the file is saved with the unique ID for that gateway to your Download directory.
@@ -94,7 +93,7 @@ In the previous step, if you extracted data about each Gateway, you can parse it
   - If you want to use JQ as we do in the following example, you need to download it before beginning.
   - **Optional** Each of the files saved have an extension `.gateway`. You can use them directly, but it also might help to pull into an editor if you rename them `.json`.
 
-2. Extracte the data.
+2. Extract the data.
   - You can run a series of commands to get various pieces of data
 
   - Set the filename for convenience.
@@ -134,30 +133,6 @@ In the previous step, if you extracted data about each Gateway, you can parse it
     cat $filename | jq ".destinations[0]"
     ```
     {: pre}
-
-DEREK & SID: Sid, can you please decide what are the key information we want to pull out of that json? But we have to explain WHY
-It's a decent number of items - so if we can maybe get a jq command that will list some of them - or say "run this command and replace XXXX with the following values" or something. It's important, because we need to explain why they need that info for later. Why do they need compressStatus? Private? sni? I have no idea at this point. Just mention the important ones in some way.
-Or maybe we write it like this
-cat $filename | jq '.destinations[] | "Description: " + .desc + " - IP Address: " + .ip + " - Protocol: " + .protocol'
-Focus on WHAT, and then we can format it.
-
-  - xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-    ```sh
-    yyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy
-    ```
-    {: pre}
-
-
-  
-TODO: We need to spend more time here - how to extract what we want and need
-TODO: We could script this
-TODO: We could dump things to create a CSV
-TODO: We need to say things like 
-TODO:     If your protocol="HTTPS", then you need to do and watch out for this
-TODO:     If you enable_client_tls="XYZ", then you need to do this
-TODO: 
-  
-
 
 
 ## Access your {{site.data.keyword.SecureGateway}} instance details in the CLI
@@ -268,10 +243,6 @@ Let's summarize the information you have gathered about your {{site.data.keyword
 3. **Destination list**: For each Gateway, you know the incoming destination(s) and details for each: name, host & port, authentication method, network security, proxy settings, and other miscellaneous info.
 
 3. **Client list**: For each gateway, you know the connected clients.
-
-DEREK & SID: Sid, I dont have this, I need you to write this section please - host? IP? port? host type? status?
-
-With that above information about your Secure Gateway instance(s), you are ready to move forward with setting up the corresponding Satellite Connector.
 
 
 ## Next steps
