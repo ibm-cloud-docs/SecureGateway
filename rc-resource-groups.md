@@ -2,7 +2,7 @@
 
 copyright: 
   years: 2023, 2023
-lastupdated: "2023-10-05"
+lastupdated: "2023-10-19"
 
 keywords: secure gateway, deprecation, migration, resource controller, resource groups
 
@@ -30,8 +30,7 @@ subcollection: SecureGateway
 
 - There are no changes to the {{site.data.keyword.SecureGateway}} instance, it's operation, or function.
 - There are no changes to the deployment region.
-- There is no impact to uptime or availability of your instance.
-- There is no impact to data transfer through the Secure Gateway.
+- There will be very short disruption if data is flowing through the Secure Gateway instance when you make the update. More details below.
 
 
 ## Timeline
@@ -50,10 +49,12 @@ subcollection: SecureGateway
 
 There are two methods below for this change to be made - one done by yourself and one done by the {{site.data.keyword.SecureGateway}} product team.
 
-Review the following sections for more information about your options.
+Review the following sections for more information about your options and impact.
 
 ## Manually selecting a resource group for your {{site.data.keyword.SecureGateway}} instances
 {: #rc-manual}
+
+Impact: When you execute the update of your Secure Gateway instance, there will be very short disruption similar to a normal Secure Gateway maintenance event
 
 Doing this change yourself allows you to control the name of the Resource Group into which you will place the Secure Gateway instance.
 
@@ -69,9 +70,9 @@ If you do not make the changes by the stated deadline, the {{site.data.keyword.S
 If you do not do the above step, the {{site.data.keyword.SecureGateway}} product team will make this update.
 However this can only be done if you have a single Secure Gateway instance in the same region. If you have more than one Secure Gateway instance in the same region, we are unable to make the update for you, and the previous step is required.
 
+Impact: When the Secure Gateway product team updates this for you, there will be very short disruption similar to a normal Secure Gateway maintenance event, but you will not have control over that disruption time frame. A maintenance notification will be posted prior to the ocurrance of the below steps.
+
 The product team will complete the following:
-
-
 - Move your {{site.data.keyword.SecureGateway}} instance into the resource group named 'Default' in your account
 - Only the account owner will retain admin privilages for the {{site.data.keyword.SecureGateway}} instance, all other users that previously had admin privilages for that {{site.data.keyword.SecureGateway}} instance will be removed
 - The {{site.data.keyword.SecureGateway}} instance account owner will then need to optionally add admin privlages back for other IBM Cloud users
