@@ -2,9 +2,9 @@
 
 copyright: 
   years: 2023, 2023
-lastupdated: "2023-10-09"
+lastupdated: "2023-10-23"
 
-keywords: secure gateway, deprecation, migration, resource controller, resource groups
+keywords: secure gateway, migration, resource controller, resource groups
 
 subcollection: SecureGateway
 
