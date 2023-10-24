@@ -2,7 +2,7 @@
 
 copyright: 
   years: 2023, 2023
-lastupdated: "2023-10-23"
+lastupdated: "2023-10-24"
 
 keywords: secure gateway, migration, resource controller, resource groups
 
@@ -21,7 +21,7 @@ subcollection: SecureGateway
 These are the steps needed for the resource group update needed for Secure Gateway instances introduced in the [Resource group update](/docs/SecureGateway?topic=SecureGateway-rc_resouce_groups) page. Please be sure to fully review that page befor proceeding here.
 
 
-Updating the Secure Gateway instance location from Cloud Foundry org/space to resource groups does not impact the Secure Gateway instance, function, or operation.
+Updating the Secure Gateway instance location from Cloud Foundry org/space to resource groups does not impact the Secure Gateway instance, function, or operation. There will be very short disruption similar to a normal Secure Gateway maintenance event.
 
 This update impacts only the Secure Gateway service resource group location, and the resulting authorization model will be updated to IBM Cloud Identity and access management (IAM). After the update, any creation or removal of Secure Gateway service instances will require IAM privileges. Using the Secure Gateway instances to pass data through a Gateway requires no new or different authorization, only for management of those instances.
 
