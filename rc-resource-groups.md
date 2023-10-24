@@ -30,7 +30,7 @@ subcollection: SecureGateway
 
 - There are no changes to the {{site.data.keyword.SecureGateway}} instance, it's operation, or function.
 - There are no changes to the deployment region.
-- There will be very short disruption if data is flowing through the Secure Gateway instance when you make the update. More details below.
+- There will be a very short disruption similar to a normal Secure Gateway maintenance event. More details below.
 
 
 ## Timeline
@@ -39,9 +39,10 @@ subcollection: SecureGateway
 
 | Date | Stage | Description | 
 | --- | --- | --- | 
-| 23 October 2023 | Announcement | Secure Gateway is announcing a change in the way it deploys and references instances of the service. This update will move away from Cloud Foundry organizations, and move to IBM Cloud Resource Groups |
-| 23 November 2023 | Deadline  | 30 days after the initial announcement is the deadline for the update of the Secure Gateway instances into Resource Groups. All steps listed below will be taken at that time based on each instance status. |
-| 30 November 2023 | Updates completed | All updates will have been completed for Secure Gateway instance resource group updates - either the users will have made them or the Secure Gateway Product team will have made them. |
+| 24 October 2023 | Announcement | Secure Gateway is announcing a change in the way it deploys and references instances of the service. This update will move away from Cloud Foundry organizations, and move to IBM Cloud Resource Groups |
+| 24 November 2023 | Deadline  | 30 days after the initial announcement is the deadline for the update of the Secure Gateway instances into Resource Groups. All steps listed below will be taken at that time based on each instance status. |
+| 30 November 2023 | Updates completed | All updates will have been completed for Secure Gateway instance resource group updates - either the user will have made the change themselves or the Secure Gateway Product team will have made the change for them. |
+
 
 
 ## What do I need to do?
@@ -54,7 +55,7 @@ Review the following sections for more information about your options and impact
 ## Manually selecting a resource group for your {{site.data.keyword.SecureGateway}} instances
 {: #rc-manual}
 
-Impact: When you execute the update of your Secure Gateway instance, there will be very short disruption similar to a normal Secure Gateway maintenance event
+Impact: When you execute the update of your Secure Gateway instance, there will be a very short disruption similar to a normal Secure Gateway maintenance event.
 
 Doing this change yourself allows you to control the name of the Resource Group into which you will place the Secure Gateway instance.
 
@@ -70,7 +71,7 @@ If you do not make the changes by the stated deadline, the {{site.data.keyword.S
 If you do not do the above step, the {{site.data.keyword.SecureGateway}} product team will make this update.
 However this can only be done if you have a single Secure Gateway instance in the same region. If you have more than one Secure Gateway instance in the same region, we are unable to make the update for you, and the previous step is required.
 
-Impact: When the Secure Gateway product team updates this for you, there will be very short disruption similar to a normal Secure Gateway maintenance event, but you will not have control over that disruption time frame. A maintenance notification will be posted prior to the ocurrance of the below steps.
+Impact: When the Secure Gateway product team updates this for you, there will be a very short disruption similar to a normal Secure Gateway maintenance event, but you will not have control over that disruption time frame. A maintenance notification will be posted prior to the ocurrance of the below steps.
 
 The product team will complete the following:
 - Move your {{site.data.keyword.SecureGateway}} instance into the resource group named 'Default' in your account
