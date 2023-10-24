@@ -2,7 +2,7 @@
 
 copyright: 
   years: 2023, 2023
-lastupdated: "2023-10-19"
+lastupdated: "2023-10-24"
 
 keywords: secure gateway, deprecation, migration, resource controller, resource groups
 
@@ -39,8 +39,8 @@ subcollection: SecureGateway
 
 | Date | Stage | Description | 
 | --- | --- | --- | 
-| 20 October 2023 | Announcement | Secure Gateway is announcing a change in the way it deploys and references instances of the service. This update will move away from Cloud Foundry organizations, and move to IBM Cloud Resource Groups |
-| 20 November 2023 | Deadline  | 30 days after the initial announcement is the deadline for the update of the Secure Gateway instances into Resource Groups. All steps listed below will be taken at that time based on each instance status. |
+| 23 October 2023 | Announcement | Secure Gateway is announcing a change in the way it deploys and references instances of the service. This update will move away from Cloud Foundry organizations, and move to IBM Cloud Resource Groups |
+| 23 November 2023 | Deadline  | 30 days after the initial announcement is the deadline for the update of the Secure Gateway instances into Resource Groups. All steps listed below will be taken at that time based on each instance status. |
 | 30 November 2023 | Updates completed | All updates will have been completed for Secure Gateway instance resource group updates - either the users will have made them or the Secure Gateway Product team will have made them. |
 
 
