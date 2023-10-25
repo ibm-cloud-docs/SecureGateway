@@ -27,5 +27,5 @@ content-type: release-note
 {: #SecureGateway-oct2523}
 {: release-note}
 
-{{site.data.keyword.service-name-full}} is deprecated.
+{{site.data.keyword.SecureGateway}} is deprecated.
 :   {{site.data.keyword.SecureGateway}} is deprecated. For more information, see the [deprecation details](/docs/SecureGateway?topic=SecureGateway-dep-overview).
