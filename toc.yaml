@@ -16,12 +16,17 @@ toc:
       id: learn
       topics:
       - topicgroup:
-          label: Resource controller changes
+          label: Deprecation
           topics:
-            - rc-resource-groups.md
-            - rc-update.md
+            - dep-overview.md
+            - dep-migration-options.md
+            - dep-understand-connector.md
+            - dep-gather-sg-details.md
+            - dep-test-connector.md
+            - dep-faq.md
       - index.md
       - securegateway_about.md
+      - release-notes.md
   - navgroup:
       id: tutorial
       topics:
