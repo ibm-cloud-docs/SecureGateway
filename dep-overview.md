@@ -67,13 +67,10 @@ Last step: Disable Secure Gateway
 :   The only step left after you have completely these three phases is to disable your Secure Gateway gateways and then delete your Secure Gateway instance from your account.
 
 
-## Migration assistance
+## Migration assistance with IBM Technology Expert Labs 
 {: #dep-migration-assistance}
 
 If your organization needs help with your IBM Cloud secure data communication migration, or wants to engage another organization to assist you, here are some partners that have a great deal of skill and experience with cloud application migrations and cloud native development improvements and transformations. Contact them if needed to discuss your specific requirements. These are for-pay migration assistance options and you will need to engage with those teams directly.
-
-### IBM Cloud Expert Labs
-{: #dep-migration-assistance}
 
 Technology Expert Labs for IBM Cloud is the IBM Cloud platform professional services team providing deep technical expertise and a proven approach to assist customers to quickly and confidently adopt IBM Cloud technologies. They provide two professional services offerings to either guide and enable customers to migrate to Satellite Connector themselves (Architect for IBM Cloud Satellite) or to perform the migrate for customers (Migrate to IBM Cloud Satellite).
 
