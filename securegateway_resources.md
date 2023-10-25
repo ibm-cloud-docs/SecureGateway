@@ -13,6 +13,9 @@ subcollection: SecureGateway
 # Resources
 {: #secure-gateway-resource}
 
+{{site.data.keyword.SecureGateway}} is deprecated. For more information, see the [deprecation details](/docs/SecureGateway?topic=SecureGateway-dep-overview).
+{: deprecated}
+
 ## Blogs and other resources
 {: #blogs-and-others}
 

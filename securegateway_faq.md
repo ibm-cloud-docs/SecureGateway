@@ -15,6 +15,9 @@ subcollection: SecureGateway
 # Frequently Asked Questions
 {: #sg-faq}
 
+{{site.data.keyword.SecureGateway}} is deprecated. For more information, see the [deprecation details](/docs/SecureGateway?topic=SecureGateway-dep-overview).
+{: deprecated}
+
 FAQs for Secure Gateway might include questions about automation or logs. To find all FAQs for {{site.data.keyword.cloud}}, see our FAQ library. {: shortdesc}
 
 ## What layer of the OSI model does the Secure Gateway service represent?

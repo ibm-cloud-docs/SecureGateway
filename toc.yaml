@@ -1,7 +1,3 @@
-#  Name your file `toc.yaml`
-#  Make sure you include all nav file coding requirements, as defined in https://test.cloud.ibm.com/docs/writing?topic=writing-code-nav
-#  Anything with a fully qualified URL with `http` or `https` will get an external link icon added to the nav entry
----
 toc:
   properties:
     subcollection: SecureGateway
@@ -9,61 +5,63 @@ toc:
     category: integration
     audience: service
     href: /docs/SecureGateway
-    console-page: /catalog/services/secure-gateway
-    product-page: https://ibm.com/cloud/secure-gateway
     path: SecureGateway
     label: Secure Gateway
-
-#  List your getting started tutorial (getting-started.md) as the first item in the Get started nav group. See https://test.cloud.ibm.com/docs/writing?topic=writing-navigation for more details on the toc design.
+    version: 2
+    console-page: /catalog/services/secure-gateway
+    product-page: https://ibm.com/cloud/secure-gateway
+    release-level: deprecated
   entries:
   - navgroup:
       id: learn
       topics:
+      - topicgroup:
+          label: Deprecation
+          topics:
+            - dep-overview.md
+            - dep-migration-options.md
+            - dep-understand-connector.md
+            - dep-gather-sg-details.md
+            - dep-test-connector.md
+            - dep-faq.md
       - index.md
       - securegateway_about.md
-
+      - release-notes.md
   - navgroup:
       id: tutorial
       topics:
-      - securegateway_gateway.md
-      - securegateway_client.md
-      - securegateway_destination.md
-
+        - securegateway_gateway.md
+        - securegateway_client.md
+        - securegateway_destination.md
   - navgroup:
       id: reference
       topics:
-      - securegateway_updates.md
-      - securegateway_requirements.md
-      - securegateway_install.md
-      - securegateway_auto-start.md
-      - securegateway_interaction.md
-      - securegateway_acl.md
-      - securegateway_managing.md
-      - securegateway_plans.md
-      - securegateway_uninstall.md
-
+        - securegateway_updates.md
+        - securegateway_requirements.md
+        - securegateway_install.md
+        - securegateway_auto-start.md
+        - securegateway_interaction.md
+        - securegateway_acl.md
+        - securegateway_managing.md
+        - securegateway_plans.md
+        - securegateway_uninstall.md
   - navgroup:
       id: howto
       topics:
-      - securegateway_tls-ma.md
-      - securegateway_iptables.md
-      - securegateway_acl-file.md
-      - securegateway_config-file.md
-      - securegateway_keygen.md
-
+        - securegateway_tls-ma.md
+        - securegateway_iptables.md
+        - securegateway_acl-file.md
+        - securegateway_config-file.md
+        - securegateway_keygen.md
   - navgroup:
       id: help
       topics:
-      - securegateway_faq.md
-      - securegateway_troubleshooting.md
-      - securegateway_resources.md
-
+        - securegateway_faq.md
+        - securegateway_troubleshooting.md
+        - securegateway_resources.md
   - navgroup:
       id: reference
       topics:
-      - topicgroup:
-          label: API reference
-          links:
-          - link:
-              label: Resources Management
-              href: https://cloud.ibm.com/apidocs/secure-gateway
+      - link:
+          label: Resources Management API reference
+          href: https://cloud.ibm.com/apidocs/secure-gateway

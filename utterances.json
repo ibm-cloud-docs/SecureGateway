@@ -108,16 +108,6 @@
         "ACL for SecureGateway",
         "access control list for Secure Gateway"
     ],
-    "faq-gateway-migration": [
-        "what's migrate button of Secure Gateway",
-        "SG domain change ",
-        "What is gateway migration",
-        "supported domain name for SecureGateway",
-        "migration within secure gateway",
-        "migrate button on the gateway panel for",
-        "domain migration for Secure Gateway",
-        "old domain work for SG"
-    ],
     "faq-notification": [
         "receive Secure Gateway notifications",
         "subscribe SG notifications",

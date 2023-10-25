@@ -13,6 +13,9 @@ subcollection: SecureGateway
 # Adding a Destination
 {: #add-dest}
 
+{{site.data.keyword.SecureGateway}} is deprecated. For more information, see the [deprecation details](/docs/SecureGateway?topic=SecureGateway-dep-overview).
+{: deprecated}
+
 A destination is a definition of how to connect to a specific on-premises or cloud resource. Once the destination has been created, the {{site.data.keyword.SecureGateway}} servers will provide it with a unique public endpoint where it will listen for connections while the gateway is connected.
 
 ![Dashboard with no destinations](./images/emptyDestinations.png?raw=true "Dashboard with no destinations")
@@ -176,6 +179,6 @@ Once your destination has been created, click the settings icon ![Setting Icon](
 After you [reactivate the gateway](/docs/SecureGateway?topic=SecureGateway-add-sg-gw#reactivate), you can reactivate the destination by clicking the wrench button ![Wrench Button](./images/wrenchIcon.png?raw=true "Wrench Button") in the destination panel, you can reactivate your destinations with the arrow button ![Arrow Button](./images/arrowIcon.png?raw=true "Arrow Button"), and the configuration will be applied after you click the `Apply` button. The reactivated On-premises destinations will obtain another cloud host and port.
 
 ## Import/Export gateway
-{: #import}
+{: #import-export-gateway}
 
 If you want to copy the destination configuration to another gateway, you can click the Export button ![Export Button](./images/exportIcon.png?raw=true "Export Button") on the destination tile to export the configuration of the destination in the destination panel of the original gateway, then click the Import button ![Import Button](./images/importIcon.png?raw=true "Import Button") to import the configuration in the destination panel of the target gateway. The imported On-premises destinations will obtain another cloud host and port.

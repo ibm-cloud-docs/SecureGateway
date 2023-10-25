@@ -16,6 +16,9 @@ subcollection: SecureGateway
 # Interacting with the Client
 {: #client-interacting}
 
+{{site.data.keyword.SecureGateway}} is deprecated. For more information, see the [deprecation details](/docs/SecureGateway?topic=SecureGateway-dep-overview).
+{: deprecated}
+
 There are a few ways to interact with the client:
 
 - Through terminal command line prior to startup

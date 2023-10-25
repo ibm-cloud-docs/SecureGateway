@@ -16,6 +16,9 @@ subcollection: SecureGateway
 # Troubleshooting
 {: #troubleshooting}
 
+{{site.data.keyword.SecureGateway}} is deprecated. For more information, see the [deprecation details](/docs/SecureGateway?topic=SecureGateway-dep-overview).
+{: deprecated}
+
 ## Best practices for running the Secure Gateway Client
 {: #best-practices}
 
@@ -30,7 +33,7 @@ subcollection: SecureGateway
 {: #initial-troubleshooting-disconnect}
 If the Secure Gateway Client have been disconnected, check the Secure Gateway Client logs
 - If there is error when fetching configuration:
-  ```
+  ```sh
   [DEBUG] The Secure Gateway client will fetch its configuration from https://sgmanager.<region>.securegateway.cloud.ibm.com/sgconfig/<gateway id>
   [ERROR] The response is code: <Error Code>, message: <Error details>
   ```

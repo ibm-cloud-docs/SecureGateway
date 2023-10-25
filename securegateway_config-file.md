@@ -17,6 +17,9 @@ subcollection: SecureGateway
 # Config File
 {: #config-files}
 
+{{site.data.keyword.SecureGateway}} is deprecated. For more information, see the [deprecation details](/docs/SecureGateway?topic=SecureGateway-dep-overview).
+{: deprecated}
+
 ## Linux
 {: #config-files-linux}
 

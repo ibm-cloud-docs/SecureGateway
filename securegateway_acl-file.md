@@ -17,6 +17,9 @@ subcollection: SecureGateway
 # ACL File
 {: #acl-files}
 
+{{site.data.keyword.SecureGateway}} is deprecated. For more information, see the [deprecation details](/docs/SecureGateway?topic=SecureGateway-dep-overview).
+{: deprecated}
+
 ```
 #Lines preceded by a # will be ignored as a comment
 #To allow specific port on a specific host:

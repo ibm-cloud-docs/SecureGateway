@@ -16,6 +16,9 @@ subcollection: SecureGateway
 # Cert/Key Management
 {: #cert-key-management}
 
+{{site.data.keyword.SecureGateway}} is deprecated. For more information, see the [deprecation details](/docs/SecureGateway?topic=SecureGateway-dep-overview).
+{: deprecated}
+
 ## Generating a self-signed certifiate/key pair
 {: #self-signed-cert-gen}
 

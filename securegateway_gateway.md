@@ -13,6 +13,9 @@ subcollection: SecureGateway
 # Adding a Gateway
 {: #add-sg-gw}
 
+{{site.data.keyword.SecureGateway}} is deprecated. For more information, see the [deprecation details](/docs/SecureGateway?topic=SecureGateway-dep-overview).
+{: deprecated}
+
 A gateway can be thought of as a way to identify a particular network or environment.  It is what a Secure Gateway Client will use to establish connectivity with the Secure Gateway servers and can contain multiple resource definitions, or destinations.
 
 ![Secure Gateway Dashboard](./images/newDashboard.png?raw=true "Secure Gateway Dashboard")

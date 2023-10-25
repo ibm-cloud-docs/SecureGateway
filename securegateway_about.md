@@ -13,6 +13,9 @@ subcollection: SecureGateway
 # About {{site.data.keyword.SecureGateway}}
 {: #about-sg}
 
+{{site.data.keyword.SecureGateway}} is deprecated. For more information, see the [deprecation details](/docs/SecureGateway?topic=SecureGateway-dep-overview).
+{: deprecated}
+
 ## How is it secure?
 {: #about-secure}
 {{site.data.keyword.SecureGatewayfull}} maintains a single persistent encrypted (TLS v1.2) connection between the {{site.data.keyword.SecureGateway}} Client (in the on-prem network) and the {{site.data.keyword.SecureGateway}} Servers.  With this bidirectional connection, we're able to securely transmit data between your cloud resources and your on-prem resources.  For the connections on either end (between cloud resource and SG Servers and between on-prem resources and SG Client), the user defines the protocol (TCP, TLS, HTTP, HTTPS, UDP) and security measures (mutual authentication, iptables) placed on them.  
