@@ -18,7 +18,7 @@ subcollection: SecureGateway
 
 
 
-These are the steps needed for the resource group update needed for Secure Gateway instances introduced in the [Resource group update](/docs/SecureGateway?topic=SecureGateway-rc_resouce_groups) page. Please be sure to fully review that page befor proceeding here.
+These are the steps needed for the resource group update needed for Secure Gateway instances introduced in the [Resource group update](/docs/SecureGateway?topic=SecureGateway-rc_resouce_groups) page. Please be sure to fully review the overview and timeline page before proceeding here.
 
 
 Updating the Secure Gateway instance location from Cloud Foundry org/space to resource groups does not impact the Secure Gateway instance, function, or operation. There will be very short disruption similar to a normal Secure Gateway maintenance event.

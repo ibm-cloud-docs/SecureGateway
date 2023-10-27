@@ -20,13 +20,13 @@ subcollection: SecureGateway
 ## Overview
 {: #overview}
 
-{{site.data.keyword.SecureGateway}} users need to make a change to how their {{site.data.keyword.SecureGateway}} instances are connected to by IBM Cloud.
+{{site.data.keyword.SecureGateway}} users need to make a change to how their {{site.data.keyword.SecureGateway}} instances are connected to IBM Cloud.
 {: shortdesc}
 
 ## What's changing?
 {: #rc_changes}
 
-{{site.data.keyword.SecureGateway}} is moving to IBM Cloud resource groups as a replacement for the deprecated Cloud Foundry organizations. As a result, any {{site.data.keyword.SecureGateway}} instances that are not in an IBM Cloud resource group need to be added to one before the below timeline deadline.
+{{site.data.keyword.SecureGateway}} is moving to IBM Cloud resource groups as a replacement for the deprecated Cloud Foundry organizations. As a result, any {{site.data.keyword.SecureGateway}} instances that are not in an IBM Cloud resource group need to be added to one before the following deadline.
 
 - There are no changes to the {{site.data.keyword.SecureGateway}} instance, it's operation, or function.
 - There are no changes to the deployment region.
