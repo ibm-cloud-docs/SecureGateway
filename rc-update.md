@@ -149,6 +149,7 @@ This update impacts only the Secure Gateway service resource group location, and
     name                offering        plan           bound apps       last operation     broker                upgrade available
     Secure Gateway-zv   SecureGateway   professional                    update succeeded   SecureGatewayBroker   no
     ```
+    {: screen}
 
 1. Run the following command to migrate the instance.
     ```sh
