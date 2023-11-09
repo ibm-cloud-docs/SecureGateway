@@ -2,7 +2,7 @@
 
 copyright: 
   years: 2023, 2023
-lastupdated: "2023-10-27"
+lastupdated: "2023-11-09"
 
 keywords: secure gateway, migration, resource controller, resource groups
 
@@ -16,7 +16,8 @@ subcollection: SecureGateway
 # Updating a Secure Gateway instance to resource group
 {: #rc-update}
 
-
+{{site.data.keyword.SecureGateway}} is deprecated. For more information, see the [deprecation details](/docs/SecureGateway?topic=SecureGateway-dep-overview).
+{: deprecated}
 
 These are the steps needed for the resource group update needed for Secure Gateway instances introduced in the [Resource group update](/docs/SecureGateway?topic=SecureGateway-rc_resouce_groups) page. Please be sure to fully review the overview and timeline page before proceeding here.
 

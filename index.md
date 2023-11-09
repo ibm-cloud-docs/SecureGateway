@@ -15,7 +15,7 @@ subcollection: SecureGateway
 # Getting started with {{site.data.keyword.SecureGateway}}
 {: #getting-started-with-sg}
 
-{{important-note}}
+{{site.data.keyword.SecureGateway}} is deprecated. For more information, see the [deprecation details](/docs/SecureGateway?topic=SecureGateway-dep-overview).
 {: deprecated}
 
 If you’re an existing {{site.data.keyword.SecureGateway}} user, you can continue to use the service until it is no longer supported.

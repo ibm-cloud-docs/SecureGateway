@@ -2,7 +2,7 @@
 
 copyright: 
   years: 2023, 2023
-lastupdated: "2023-10-27"
+lastupdated: "2023-11-09"
 
 keywords: secure gateway, deprecation, migration, resource controller, resource groups
 
@@ -15,6 +15,9 @@ subcollection: SecureGateway
 
 # Resource group update
 {: #rc_resouce_groups}
+
+{{site.data.keyword.SecureGateway}} is deprecated. For more information, see the [deprecation details](/docs/SecureGateway?topic=SecureGateway-dep-overview).
+{: deprecated}
 
 
 ## Overview
