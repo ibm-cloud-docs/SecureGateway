@@ -2,7 +2,7 @@
 
 copyright: 
   years: 2023, 2023
-lastupdated: "2023-11-20"
+lastupdated: "2023-11-21"
 
 keywords: secure gateway, migration, resource controller, resource groups
 
@@ -37,8 +37,9 @@ This update impacts only the Secure Gateway service resource group location, and
 - **Security Token Expirations**: During the processing to move the instance to a resource group, the resource controller will reset the gateway nodes for that service instance which triggers a drop and reconnect for any active Secure Gateway clients that are connected to those gateway nodes. These connections will be automatically re-established as long as there are no expired security tokens in use. If a Secure Gateway client connected a week ago with a security token that expired a day ago, it continues to run until it needs to reconnect. If the Secure Gateway client attempts to reconnect with that same token it will fail given that token has expired since the prior connection request.  If you have gateways with expired tokens you need to regenerate those security tokens and update the Secure Gateway client so it is using that new token before performing the Secure Gateway instance migration. Refer to these instructions on how to check and update that [security token] (https://cloud.ibm.com/docs/SecureGateway?topic=SecureGateway-add-sg-gw#regen-sectoken).
 
 - **Required permissions**: Before beginning the migration. Make sure you have the following permissions in IAM.
-    - `Developer` role of the CF space.
-    - `Operator` or `Editor` role of the Secure Gateway instance.
+    - **Developer** role or higher on the CF space
+    - **Viewer** role or higher on the resource group
+    - **Editor** role or higher on the Secure Gateway resource
 
 ## Best Practices
 {: #rc-update-bestpractices}
