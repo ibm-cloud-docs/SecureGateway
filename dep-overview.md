@@ -2,7 +2,7 @@
 
 copyright: 
   years: 2023, 2023
-lastupdated: "2023-10-25"
+lastupdated: "2023-12-05"
 
 keywords: secure gateway, deprecation, migration
 
@@ -29,7 +29,7 @@ The following table describes the details of the deprecation, possible migration
 
 | Date | Stage | Description |
 | --- | --- | --- |
-| 26 October 2023 | Deprecation announcement |  Announcement of the {{site.data.keyword.SecureGateway}} deprecation. All current {{site.data.keyword.SecureGateway}} users will receive an announcement email with information about the deprecation. Notification details will be put into the console and related screens. New deployments for the Secure Gateway service have been discontinued. Existing users as of this date will continue to be able to deploy Secure Gateway instances as needed for updates and replacement. For more information, see [Deprecation details](#deprecation_details). |
+| 26 October 2023 | Deprecation announcement |  Announcement of the {{site.data.keyword.SecureGateway}} deprecation. All current {{site.data.keyword.SecureGateway}} users will receive an announcement email with information about the deprecation. Notification details will be put into the console and related screens. New deployments for the Secure Gateway service have been discontinued - Existing IBM Cloud products that use Secure Gateway as part of a bundled solution will continue to be able to deploy Secure Gateway as part of their process. Existing users as of this date will continue to be able to deploy Secure Gateway instances as needed for updates and replacement. For more information, see [Deprecation details](#deprecation_details). |
 | Ongoing | Reminders | Periodic reminders will be sent to all users with running {{site.data.keyword.SecureGateway}} instances that the end of support date is coming.
 | 26 October 2024 | End of support and End of life | {{site.data.keyword.SecureGateway}} end of support. All remaining Secure Gateway instances will be deprovisioned and deleted. |
 
