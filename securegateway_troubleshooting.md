@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2023
-lastupdated: "2023-04-12"
+  years: 2015, 2024
+lastupdated: "2024-01-25"
 
 subcollection: SecureGateway
 
@@ -353,7 +353,9 @@ When you access the Secure Gateway instance via the url `https://cloud.ibm.com/s
 {: #gateway-ui-unauthorized-how-to-fix-it}
 - Allow sites `[*.]bluemix.net` and `[*.]cloud.ibm.com` to use third party cookies in your browser configuration.
 - Access Secure Gateway instance via the portal `https://cloud.ibm.com/resources`.
-- Secure Gateway cannot be accessed with space role `Auditor`, please confirm whether you have `Developer` access of the space.
+- Please confirm whether you have following accesses:
+    - **Viewer** role or higher on the resource group
+    - **Editor** role or higher on the Secure Gateway resource
 
 ## Getting additional help and support
 {: #getting-help-and-support}
