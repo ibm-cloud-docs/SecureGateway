@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2021
-lastupdated: "2022-11-30"
+  years: 2015, 2024
+lastupdated: "2024-01-29"
 
 subcollection: SecureGateway
 
@@ -19,21 +19,20 @@ subcollection: SecureGateway
 ## System Requirements
 {: #system-requirements}
 
-The Secure Gateway Client is supported in the following environments:
+Secure Gateway does not support a platform version if a vendor has expired support
+for it. In other words, Secure Gateway does not support running on End-of-Life (EoL)
+platforms. This is true regardless of entries in the table below.
 
-| Name | Versions          |
-| ------------- | ----------- |
-| Windows Desktop | 7, 8.1, 10 and greater |
-| Windows Server | 2012 R2 and greater |
-| Red Hat Linux | 7.3 and greater |
-| CentOS | 7.3 and greater |
-| SuSE Linux | 12 and greater |
-| Ubuntu Linux | 14.04 (LTS) and greater |
-| Power Machine | ppc64el architecture |
-| Ubuntu Z-Linux | - |
-| AIX | 7.1 TL5 and greater |
-| Mac OS X | 10.15 and greater |
-| Docker | 1.7.0 and greater, all supported operating systems |
+
+| Operating System | Architectures    | Versions                          |  Notes                                |
+| ---------------- | ---------------- | --------------------------------- |  ------------------------------------ |
+| GNU/Linux        | x64              | kernel >= 4.18, glibc >= 2.28     | e.g. Ubuntu 20.04, Debian 10, RHEL 8 |
+| GNU/Linux        | ppc64le >=power8 | kernel >= 4.18, glibc >= 2.28     | e.g. Ubuntu 20.04, RHEL 8            |
+| GNU/Linux        | s390x            | kernel >= 4.18, glibc >= 2.28     | e.g. RHEL 8                          |
+| Windows          | x64              | >= Windows 10/Server 2016         |                                      |
+| macOS            | x64              | >= 11.0                           |                                      |
+| AIX              | ppc64be >=power8 | >= 7.2 TL04                       |                                      |
+| Docker           |                  | >= 1.7.0                          | All supported operating systems      |
 
 <b>Note:</b> Only 64-bit environments are currently supported for native client installation.
 
