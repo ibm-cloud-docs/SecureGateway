@@ -32,7 +32,7 @@ platforms. This is true regardless of entries in the table below.
 | Windows          | x64              | >= Windows 10/Server 2016         |                                      |
 | macOS            | x64              | >= 11.0                           |                                      |
 | AIX              | ppc64be >=power8 | >= 7.2 TL04                       |                                      |
-| Docker           |                  | 1.7.0 and greater                 | All supported operating systems      |
+| Docker           |                  | >= 1.7.0                          | All supported operating systems      |
 
 <b>Note:</b> Only 64-bit environments are currently supported for native client installation.
 
