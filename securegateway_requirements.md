@@ -29,10 +29,10 @@ platforms. This is true regardless of entries in the table below.
 | GNU/Linux        | x64              | kernel >= 4.18, glibc >= 2.28     | e.g. Ubuntu 20.04, Debian 10, RHEL 8 |
 | GNU/Linux        | ppc64le >=power8 | kernel >= 4.18, glibc >= 2.28     | e.g. Ubuntu 20.04, RHEL 8            |
 | GNU/Linux        | s390x            | kernel >= 4.18, glibc >= 2.28     | e.g. RHEL 8                          |
-| Windows          | x64              | >= Windows 10/Server 2016         |                                      |
-| macOS            | x64              | >= 11.0                           |                                      |
-| AIX              | ppc64be >=power8 | >= 7.2 TL04                       |                                      |
-| Docker           |                  | >= 1.7.0                          | All supported operating systems      |
+| Windows          | x64              | version >= Windows 10/Server 2016 |                                      |
+| macOS            | x64              | version >= 11.0                   |                                      |
+| AIX              | ppc64be >=power8 | version >= 7.2 TL04               |                                      |
+| Docker           |                  | version >= 1.7.0                  | all supported operating systems      |
 
 <b>Note:</b> Only 64-bit environments are currently supported for native client installation.
 
