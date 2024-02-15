@@ -1,8 +1,8 @@
 ---
 
 copyright: 
-  years: 2023, 2023
-lastupdated: "2023-12-05"
+  years: 2023, 2024
+lastupdated: "2024-02-15"
 
 keywords: secure gateway, deprecation, migration
 
@@ -32,6 +32,22 @@ The following table describes the details of the deprecation, possible migration
 | 26 October 2023 | Deprecation announcement |  Announcement of the {{site.data.keyword.SecureGateway}} deprecation. All current {{site.data.keyword.SecureGateway}} users will receive an announcement email with information about the deprecation. Notification details will be put into the console and related screens. New deployments for the Secure Gateway service have been discontinued - Existing IBM Cloud products that use Secure Gateway as part of a bundled solution will continue to be able to deploy Secure Gateway as part of their process. Existing users as of this date will continue to be able to deploy Secure Gateway instances as needed for updates and replacement. For more information, see [Deprecation details](#deprecation_details). |
 | Ongoing | Reminders | Periodic reminders will be sent to all users with running {{site.data.keyword.SecureGateway}} instances that the end of support date is coming.
 | 26 October 2024 | End of support and End of life | {{site.data.keyword.SecureGateway}} end of support. All remaining Secure Gateway instances will be deprovisioned and deleted. |
+
+
+## {{site.data.keyword.SecureGateway}} deprecation changelog
+{: #deprecation_changelog}
+
+November 2023
+- All user instances have been converted to resource group service connections.
+
+December 2023
+- All user instance gateways have been disable that had no usage since November 2023.
+
+January 2024
+- Satellite Connecter now supports a new agent deployment method in Windows, allowing it to be run as an installer, not requiring direct docker interaction calls. Follow the instructions in [Running the agent on Windows] (https://cloud.ibm.com/docs/satellite?topic=satellite-run-agent-locally#run-agent-windows) to install and connect through that method.
+
+Februrary 2024
+- Reminder to all users with recent usage.
 
 
 ## {{site.data.keyword.SecureGateway}} deprecation details
