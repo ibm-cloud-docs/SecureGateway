@@ -2,7 +2,7 @@
 
 copyright: 
   years: 2023, 2024
-lastupdated: "2024-02-15"
+lastupdated: "2024-02-27"
 
 keywords: secure gateway, deprecation, migration
 
@@ -34,7 +34,7 @@ The following table describes the details of the deprecation, possible migration
 | 26 October 2024 | End of support and End of life | {{site.data.keyword.SecureGateway}} end of support. All remaining Secure Gateway instances will be deprovisioned and deleted. |
 
 
-## {{site.data.keyword.SecureGateway}} deprecation changelog
+## {{site.data.keyword.SecureGateway}} deprecation change log
 {: #deprecation_changelog}
 
 November 2023
@@ -44,9 +44,9 @@ December 2023
 - All user instance gateways have been disable that had no usage since November 2023.
 
 January 2024
-- Satellite Connecter now supports a new agent deployment method in Windows, allowing it to be run as an installer, not requiring direct docker interaction calls. Follow the instructions in [Running the agent on Windows] (https://cloud.ibm.com/docs/satellite?topic=satellite-run-agent-locally#run-agent-windows) to install and connect through that method.
+- Satellite Connector now supports a new agent deployment method in Windows, allowing it to be run as an installer, not requiring direct Docker interaction calls. Follow the instructions in [Running the agent on Windows](/docs/satellite?topic=satellite-run-agent-locally#run-agent-windows) to install and connect through that method.
 
-Februrary 2024
+February 2024
 - Reminder to all users with recent usage.
 
 
