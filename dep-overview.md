@@ -2,7 +2,7 @@
 
 copyright: 
   years: 2023, 2024
-lastupdated: "2024-02-27"
+lastupdated: "2024-03-05"
 
 keywords: secure gateway, deprecation, migration
 
@@ -46,7 +46,7 @@ December 2023
 January 2024
 - Satellite Connector now supports a new agent deployment method in Windows, allowing it to be run as an installer, not requiring direct Docker interaction calls. Follow the instructions in [Running the agent on Windows](/docs/satellite?topic=satellite-run-agent-locally#run-agent-windows) to install and connect through that method.
 
-February 2024
+March 2024
 - Reminder to all users with recent usage.
 
 
