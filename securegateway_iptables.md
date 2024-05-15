@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-02-22"
+lastupdated: "2024-05-15"
 
 subcollection: SecureGateway
 
@@ -23,21 +23,21 @@ To allow the enforcement of iptables rules on your destination, you must have th
 
 If you are creating your private destinations with cURL, you could use a command like:
 
-```
+```sh
 curl "https://sgmanager.us-south.securegateway.cloud.ibm.com/v1/sgconfig/<gateway_id>/destinations" -H "Authorization: Bearer <security_token>" -H "Content-type: application/json" -d '{"desc":"My Private Destination","ip":"1.1.1.1","port":8000,"private":true}'
 ```
 {: pre}
 
 Once your private destination is created, you can add IP table rules with commands like:
 
-```
+```sh
 curl -X PUT "https://sgmanager.us-south.securegateway.cloud.ibm.com/v1/sgconfig/<gateway_id>/destinations/<destination_id>/ipTableRule" -H "Authorization: Bearer <security_token>" -H "Content-type: application/json" -d '{"src":"192.0.0.1","spt":"9000"}' -k
 ```
 {: pre}
 
 and
 
-```
+```sh
 curl -X PUT "https://sgmanager.us-south.securegateway.cloud.ibm.com/v1/sgconfig/<gateway_id>/destinations/<destination_id>/ipTableRule" -H "Authorization: Bearer <security_token>" -H "Content-type: application/json" -d '{"src_range":"192.0.0.1-192.0.0.5","spt":"5000:5005"}' -k
 ```
 {: pre}
@@ -90,5 +90,3 @@ uniquely identifies each instance of the application using the `application_id` 
 is retrieved from `https://api.myip.com` and applied to the IP table rule.
 
 Note: The environment variable `CF_INSTANCE_IP` is changed to point to private IP now, if your script is still using `CF_INSTANCE_IP`, please update your script to retrieve the external IP from `https://api.myip.com`
-
-{: pre}
