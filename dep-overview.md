@@ -2,7 +2,7 @@
 
 copyright: 
   years: 2023, 2024
-lastupdated: "2024-03-05"
+lastupdated: "2024-06-03"
 
 keywords: secure gateway, deprecation, migration
 
@@ -46,8 +46,12 @@ December 2023
 January 2024
 - Satellite Connector now supports a new agent deployment method in Windows, allowing it to be run as an installer, not requiring direct Docker interaction calls. Follow the instructions in [Running the agent on Windows](/docs/satellite?topic=satellite-run-agent-locally#run-agent-windows) to install and connect through that method.
 
-March 2024
-- Reminder to all users with recent usage.
+June 2024
+- Reminder to all users with recent usage about deprecation details and timeline
+- A new migration assistance option has been added to the Satellite Connector documentation to assist with some migration tasks. Reference the section for additional information [Migrating resources from Secure Gateway to Satellite Connector](/docs/satellite?topic=satellite-connector-create-from-sg)
+
+
+
 
 
 ## {{site.data.keyword.SecureGateway}} deprecation details
@@ -79,7 +83,10 @@ Phase 2: Reviewing your {{site.data.keyword.SecureGateway}} deployment details
 Phase 3: Setting up {{site.data.keyword.satellitelong}} Connector
 :   The two previous phases involved learning about the new product, comparing it to your existing product, and gathering information needed to do the migration. Now you can use the knowledge and data collected to set it up in a similar way to your {{site.data.keyword.SecureGateway}} infrastructure. When you complete the steps in [Setting up {{site.data.keyword.satellitelong}} Connector](/docs/SecureGateway?topic=SecureGateway-testing-connector), you will know the migration is complete and the same data is flowing that you need into the IBM Cloud.
 
-Last step: Disable Secure Gateway
+There is a migration assistance option has been added to the Satellite Connector docuemntation to assist with some of the migration tasks. Reference the section for additional information [Migrating resources from Secure Gateway to Satellite Connector](/docs/satellite?topic=satellite-connector-create-from-sg).
+
+
+Phase 4 - Last step: Disable Secure Gateway
 :   The only step left after you have completely these three phases is to disable your Secure Gateway gateways and then delete your Secure Gateway instance from your account.
 
 
