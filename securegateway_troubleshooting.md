@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2024
-lastupdated: "2024-01-25"
+lastupdated: "2024-05-23"
 
 subcollection: SecureGateway
 
@@ -364,7 +364,7 @@ If you have technical questions about developing or deploying an application wit
 
 If you have question about the service or instructions on how to get started, use the [IBM developerWorks dW Answers](https://developer.ibm.com/answers/topics/securegateway){: external} forum along with the "ibm-cloud" and "securegateway" tags.
 
-For more details on on using these forums, check the [Getting help page here](https://cloud.ibm.com/docs/get-support?topic=get-support-getting-customer-support#using-avatar){: external}.
+For more details on on using these forums, check the [Getting help page here](/docs/get-support?topic=get-support-using-avatar){: external}.
 
 For information about opening an IBM support ticket, or about support levels and ticket severities, see [Contacting support](https://cloud.ibm.com/docs/get-support?topic=get-support-support-case-severity#support-case-severity){: external}.
 
