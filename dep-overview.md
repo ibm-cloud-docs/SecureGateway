@@ -19,17 +19,17 @@ subcollection: SecureGateway
 {{site.data.keyword.cloud}} is announcing the full deprecation of {{site.data.keyword.SecureGateway}}. See the deprecation dates, details, and specific implications.
 {: shortdesc}
 
-{{site.data.keyword.SecureGateway}} has provided secure communications for many IBM Cloud customers and workloads over many years. But as technology moves on, newer and more sophisticated technologies have become available for our {{site.data.keyword.cloud}} users. Details below will walk you through those details, migration steps, and reach out for assitance.
+{{site.data.keyword.SecureGateway}} has provided secure communications for many IBM Cloud customers and workloads over many years. But as technology moves on, newer and more sophisticated technologies have become available for our {{site.data.keyword.cloud}} users. Details below will walk you through those details, migration steps, and reach out for assistance.
 
 
 ## Timeline
 {: #deprecation_timeline}
 
-The following table describes the details of the deprecation, possible migration targets for your applications, and additional information.
+The following table describes the details of the deprecation, possible migration targets for your applications, and more information.
 
 | Date | Stage | Description |
 | --- | --- | --- |
-| 26 October 2023 | Deprecation announcement |  Announcement of the {{site.data.keyword.SecureGateway}} deprecation. All current {{site.data.keyword.SecureGateway}} users will receive an announcement email with information about the deprecation. Notification details will be put into the console and related screens. New deployments for the Secure Gateway service have been discontinued - Existing IBM Cloud products that use Secure Gateway as part of a bundled solution will continue to be able to deploy Secure Gateway as part of their process. Existing users as of this date will continue to be able to deploy Secure Gateway instances as needed for updates and replacement. For more information, see [Deprecation details](#deprecation_details). |
+| 26 October 2023 | Deprecation announcement |  Announcement of the {{site.data.keyword.SecureGateway}} deprecation. All current {{site.data.keyword.SecureGateway}} users will receive an announcement email with information about the deprecation. Notification details in are the console and related screens. New deployments for the Secure Gateway service have been discontinued - Existing IBM Cloud products that use Secure Gateway as part of a bundled solution will continue to be able to deploy Secure Gateway as part of their process. Existing users as of this date will continue to be able to deploy Secure Gateway instances as needed for updates and replacement. For more information, see [Deprecation details](#deprecation_details). |
 | Ongoing | Reminders | Periodic reminders will be sent to all users with running {{site.data.keyword.SecureGateway}} instances that the end of support date is coming.
 | 26 October 2024 | End of support and End of life | {{site.data.keyword.SecureGateway}} end of support. All remaining Secure Gateway instances will be deprovisioned and deleted. |
 
@@ -75,15 +75,15 @@ See [Reviewing your migration options](/docs/SecureGateway?topic=SecureGateway-d
 Of the listed migration options, the most similar to {{site.data.keyword.SecureGateway}} is {{site.data.keyword.satellitelong}} Connector. So here is a phased approach to moving to that solution.
 
 Phase 1: Investigate {{site.data.keyword.satellitelong}} Connector versus {{site.data.keyword.SecureGateway}}
-:   Understanding the product {{site.data.keyword.satellitelong}}, and its capability {{site.data.keyword.satellitelong}} Connector, is the first key step. This section [Reviewing Satellite Connector as a Secure Gateway replacement](/docs/SecureGateway?topic=SecureGateway-understanding-connector) will familiar you with that product. It will also explain through the differences and similarities between the two products. When done with this phase, you should understand the new product, how it relates to the existing {{site.data.keyword.SecureGateway}} product, and key information moving forward.
+:   Understanding the product {{site.data.keyword.satellitelong}}, and its capability {{site.data.keyword.satellitelong}} Connector, is the first key step. This section [Reviewing Satellite Connector as a Secure Gateway replacement](/docs/SecureGateway?topic=SecureGateway-understanding-connector) helps familiarize you with that product. It also explains the differences and similarities between the two products. When done with this phase, you should understand the new product, how it relates to the existing {{site.data.keyword.SecureGateway}} product, and key information moving forward.
 
 Phase 2: Reviewing your {{site.data.keyword.SecureGateway}} deployment details
-:   Some users may know everything they need to know about how their {{site.data.keyword.SecureGateway}} is deployed, what its layout details are, and ow it flows data. But in many cases not only is a review of this a good idea, but this will allow you to ensure you have all the key detailed noted and captured before the final migration phase. This section [Reviewing your Secure Gateway deployment details](/docs/SecureGateway?topic=SecureGateway-dep-gather-sg-details) is to help guide you through gathering the key information from your {{site.data.keyword.SecureGateway}} instances that you will need when you move forward with the migration.
+:   Some users may know everything they need to know about how their {{site.data.keyword.SecureGateway}} is deployed, what its layout details are, and ow it flows data. But in many cases not only is a review of this a good idea, but this allows you to ensure you have all the key detailed noted and captured before the final migration phase. This section [Reviewing your Secure Gateway deployment details](/docs/SecureGateway?topic=SecureGateway-dep-gather-sg-details) is to help guide you through gathering the key information from your {{site.data.keyword.SecureGateway}} instances that you will need when you move forward with the migration.
 
 Phase 3: Setting up {{site.data.keyword.satellitelong}} Connector
-:   The two previous phases involved learning about the new product, comparing it to your existing product, and gathering information needed to do the migration. Now you can use the knowledge and data collected to set it up in a similar way to your {{site.data.keyword.SecureGateway}} infrastructure. When you complete the steps in [Setting up {{site.data.keyword.satellitelong}} Connector](/docs/SecureGateway?topic=SecureGateway-testing-connector), you will know the migration is complete and the same data is flowing that you need into the IBM Cloud.
+:   The two previous phases involved learning about the new product, comparing it to your existing product, and gathering information needed to do the migration. Now you can use the knowledge and data collected to set it up in a similar way to your {{site.data.keyword.SecureGateway}} infrastructure. When you complete the steps in [Setting up {{site.data.keyword.satellitelong}} Connector](/docs/SecureGateway?topic=SecureGateway-testing-connector), you can validate the migration is complete and the same data is flowing that you need into the IBM Cloud.
 
-There is a migration assistance option has been added to the Satellite Connector docuemntation to assist with some of the migration tasks. Reference the section for additional information [Migrating resources from Secure Gateway to Satellite Connector](/docs/satellite?topic=satellite-connector-create-from-sg).
+There is a migration assistance option has been added to the Satellite Connector documentation to assist with some migration tasks. Reference the section for additional information [Migrating resources from Secure Gateway to Satellite Connector](/docs/satellite?topic=satellite-connector-create-from-sg).
 
 
 Phase 4 - Last step: Disable Secure Gateway
