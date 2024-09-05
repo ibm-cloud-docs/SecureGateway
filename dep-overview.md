@@ -2,7 +2,7 @@
 
 copyright: 
   years: 2023, 2024
-lastupdated: "2024-06-03"
+lastupdated: "2024-09-05"
 
 keywords: secure gateway, deprecation, migration
 
@@ -50,7 +50,8 @@ June 2024
 - Reminder to all users with recent usage about deprecation details and timeline
 - A new migration assistance option has been added to the Satellite Connector documentation to assist with some migration tasks. Reference the section for additional information [Migrating resources from Secure Gateway to Satellite Connector](/docs/satellite?topic=satellite-connector-create-from-sg)
 
-
+July 2024
+- Secure Gateway to Satellite Connector Migration Workbook. The Satellite Connector product team has a Secure Gateway to Satellite Connector Migration Workbook and accompanying migration video to assist with migration engagement and questions. See this Secure Gateway to [Satellite Connector Migration Workbook](https://ibm.box.com/v/sg-sc-migration-workbook){: external} if you would like to review this information for help with migration.
 
 
 
@@ -104,10 +105,3 @@ Technology Expert Labs for IBM Cloud is the IBM Cloud platform professional serv
 
 ## Customer Support
 These materials and resources should help you through your IBM Cloud Secure Gateway migration. If you have questions, or need help, contact [IBM Cloud® Customer Support](https://cloud.ibm.com/unifiedsupport/supportcenter){: external} for additional information and assistance.
-
-
-
-
-
-
-
