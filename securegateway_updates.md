@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2024
-lastupdated: "2024-04-23"
+lastupdated: "2024-06-20"
 
 subcollection: SecureGateway
 
@@ -23,6 +23,17 @@ Please ensure your Secure Gateway Client does not fall more than 3 versions behi
 If you are using DataPower as the Secure Gateway Client, please ensure it is a currently supported DataPower version as well.
 
 
+
+## v1.9.0fp3
+{: #v190fp3}
+
+Published date: 2024-06-20
+
+### Features
+{: #v190fp3-features}
+
+- Upgrade Node.js to 18.20.3
+- Resolve potential vulnerabilities
 
 ## v1.9.0fp2
 {: #v190fp2}
