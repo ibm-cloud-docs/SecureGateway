@@ -2,7 +2,7 @@
 
 copyright: 
   years: 2023, 2024
-lastupdated: "2024-09-05"
+lastupdated: "2024-10-24"
 
 keywords: secure gateway, deprecation, migration
 
@@ -52,6 +52,18 @@ June 2024
 
 July 2024
 - Secure Gateway to Satellite Connector Migration Workbook. The Satellite Connector product team has a Secure Gateway to Satellite Connector Migration Workbook and accompanying migration video to assist with migration engagement and questions. See this Secure Gateway to [Satellite Connector Migration Workbook](https://ibm.box.com/v/sg-sc-migration-workbook){: external} if you would like to review this information for help with migration.
+
+August & September 2024
+- Regular reminders to all users with continued usage
+
+October 2024
+- Regular reminders to all users with continued usage
+- October 27 - Secure Gateway reaches End of Support
+- October 28 (or sometime after at no specific time or date) - we will disable all non-extended Secure Gateway traffic through gateways
+- All Secure Gateway instances will continue to exist and be charged until you, or we, delete them
+  - all instances that exist on chargeable plans will continue to be billed regular instance fees, including any connected gateway fees - they exist, so they are charged like normal
+  - Any user that wants to end those charges, delete your Secure Gateway instances and from that point on billing stops => https://cloud.ibm.com/catalog/services/secure-gateway
+- Sometime in November we will delete all remaining non-extended Secure Gateway instances
 
 
 
