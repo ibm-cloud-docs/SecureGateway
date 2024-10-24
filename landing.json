@@ -3,7 +3,7 @@
   "title": "Secure Gateway",
   "introduction": "Secure Gateway is deprecated. Review the following links for more information.",
   "product_page": "https://www.ibm.com/products/secure-gateway",
-  "console_page": "catalog/services/secure-gateway",
+  "console_page": "/catalog/services/secure-gateway",
   "section_topics": {
     "links": [
       {
