@@ -1,0 +1,19 @@
+{
+  "version": 2,
+  "title": "Secure Gateway",
+  "introduction": "This is a description of what the user will be able to find in the content for your product.",
+  "product_page": "https://www.ibm.com/products/secure-gateway",
+  "console_page": "/relative/console/path",
+  "section_topics": {
+    "links": [
+      {
+        "title": "Deprecation overview",
+        "href": "/docs/SecureGateway?topic=SecureGateway-dep-overview"
+      },
+      {
+        "title": "Migration options",
+        "href": "/docs/SecureGateway?topic=SecureGateway-dep-migration-options"
+      }
+    ]
+  }
+}
