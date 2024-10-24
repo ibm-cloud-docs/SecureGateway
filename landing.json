@@ -1,9 +1,9 @@
 {
   "version": 2,
   "title": "Secure Gateway",
-  "introduction": "This is a description of what the user will be able to find in the content for your product.",
+  "introduction": "Secure Gateway is deprecated. Review the following links for more information.",
   "product_page": "https://www.ibm.com/products/secure-gateway",
-  "console_page": "/relative/console/path",
+  "console_page": "catalog/services/secure-gateway",
   "section_topics": {
     "links": [
       {
