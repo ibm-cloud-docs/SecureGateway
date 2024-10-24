@@ -13,6 +13,10 @@
       {
         "title": "Migration options",
         "href": "/docs/SecureGateway?topic=SecureGateway-dep-migration-options"
+      },
+      {
+        "title": "Deprecation and migration FAQ",
+        "href": "/docs/SecureGateway?topic=SecureGateway-dep-faq"
       }
     ]
   }
