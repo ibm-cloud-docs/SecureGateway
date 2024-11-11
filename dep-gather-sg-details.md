@@ -1,8 +1,8 @@
 ---
 
 copyright: 
-  years: 2023, 2023
-lastupdated: "2023-10-25"
+  years: 2023, 2024
+lastupdated: "2024-11-11"
 
 keywords: secure gateway, deprecation, migration
 
@@ -40,13 +40,15 @@ You might need to review the common terms and concepts of {{site.data.keyword.Se
     - [Destinations](/docs/SecureGateway?topic=SecureGateway-add-dest).
 
 ## Access your {{site.data.keyword.SecureGateway}} instances
-{: step}
+
 - The first step is to see what Secure Gateway instance(s) you have deployed. Most users only have a single instance, but some have multiple depending on the size of their deployment.
 - Access your list of [Secure Gateway service instances](https://cloud.ibm.com/resources?product=Secure) - see their names, what resource group they are in, what region they are deployed, their status, and any tags they might have
-- For each instance follow the next step to gather additional details.
+- For each instance follow the steps below to gather additional details, either via the UI or the CLI
 
+## Access your {{site.data.keyword.SecureGateway}} instance details in UI
+{: #dep-gather-sg-details-console-ui}
 
-## Access your {{site.data.keyword.SecureGateway}} instance details
+### Access your {{site.data.keyword.SecureGateway}} instance details
 {: #dep-gather-sg-details-console}
 {: step}
 
@@ -81,7 +83,7 @@ You might need to review the common terms and concepts of {{site.data.keyword.Se
 Keep in mind when reviewing your Secure Gateway details that each Gateway is similar to a {{site.data.keyword.satelliteshort}} Connector. So as you review your might have multiple Secure Gateway instances, and you might have multiple gateways and destinations set up within that instance. Also each of your Secure Gateaway Destinations are similar to Satellite Connector endpoints.
 {: note}
 
-## Parse the extracted {{site.data.keyword.SecureGateway}} gateway files to gather data
+### Parse the extracted {{site.data.keyword.SecureGateway}} gateway files to gather data
 {: #dep-gather-sg-details-parse}
 {: step}
 
@@ -137,10 +139,12 @@ In the previous step, if you extracted data about each Gateway, you can parse it
 
 ## Access your {{site.data.keyword.SecureGateway}} instance details in the CLI
 {: #dep-gather-sg-details-cli}
-{: step}
 
 If you prefer working in the command line, you can obtain a number of the above details, with even less usage of the IBM Cloud console.
 If you already gathered your instance information, you can continue with this step as you like. You will need to have the IBM Cloud CLI set up and the "Cloud Foundry plugin installed.
+
+These action are only available for installations with already have the cf plug-in installed!  If the cf plugin is not installed already, please use the UI option.
+{: deprecated}
 
 1. Enable the command line feature flag that will permit to use Cloud Foundry commands.
     ```sh
@@ -249,4 +253,3 @@ Let's summarize the information you have gathered about your {{site.data.keyword
 {: #dep-gather-sg-details-next-steps}
   
 You can now use the output from the previous steps to begin [Setting up Connector for testing {{site.data.keyword.SecureGateway}} migration](/docs/SecureGateway?topic=SecureGateway-testing-connector).
-
